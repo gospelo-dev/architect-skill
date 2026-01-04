@@ -291,12 +291,14 @@ Resources provide a mechanism for defining reusable icon and metadata definition
 
 | Property | Type   | Required | Description                            |
 | -------- | ------ | -------- | -------------------------------------- |
-| `icon`   | string | **Yes**  | Icon identifier (e.g., `"aws:lambda"`) |
+| `icon`   | string | No       | Icon identifier (e.g., `"aws:lambda"`) |
 | `desc`   | string | No       | Description of the resource's role     |
+
+**Note**: The `icon` property is optional. Resources without icons are used for composite nodes or other non-icon node types that still need to be tracked as resources.
 
 ### 7.3 ID Convention
 
-Resource IDs SHOULD start with `@` prefix for clarity:
+Resource IDs MUST start with `@` prefix for unique identification by AI:
 
 ```json
 {
@@ -332,8 +334,9 @@ Result: Node uses `aws:lambda` (explicit) instead of `aws:api_gateway` (resource
 
 ### 7.5 Validation Rules
 
+- **All nodes MUST have a corresponding resource entry** (for unique identification)
 - Each resource ID MUST be used by at most one node
-- Nodes without matching resources MUST have an explicit `icon` property
+- Resource `icon` is required for icon-type nodes, optional for text_box/group/label nodes
 
 ---
 
@@ -347,7 +350,7 @@ Nodes are the fundamental building blocks of diagrams.
 
 | Property      | Type             | Required | Description                                                    |
 | ------------- | ---------------- | -------- | -------------------------------------------------------------- |
-| `id`          | string           | **Yes**  | Unique identifier (SHOULD start with `@` when using resources) |
+| `id`          | string           | **Yes**  | Unique identifier (MUST start with `@` and match a resource)   |
 | `type`        | NodeType         | No       | Node type (default: `"icon"`)                                  |
 | `label`       | string           | No       | Primary label text                                             |
 | `sublabel`    | string           | No       | Secondary label text                                           |
