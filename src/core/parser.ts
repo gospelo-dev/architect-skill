@@ -247,16 +247,44 @@ function parseConnections(rawConnections: any[]): Connection[] {
 export function validateDiagram(diagram: DiagramDefinition): string[] {
   const errors: string[] = [];
 
-  // Check for duplicate node IDs
+  // Check resources is defined (required)
+  if (!diagram.resources || Object.keys(diagram.resources).length === 0) {
+    errors.push('Diagram must have resources defined. Resources are required.');
+  }
+
+  // Validate resource IDs have @ prefix
+  const resourceIds = new Set<string>();
+  if (diagram.resources) {
+    for (const resourceId of Object.keys(diagram.resources)) {
+      if (!resourceId.startsWith('@')) {
+        errors.push(`Resource ID "${resourceId}" must start with @ prefix`);
+      }
+      resourceIds.add(resourceId);
+    }
+  }
+
+  // Check for duplicate node IDs and validate node structure
   const nodeIds = new Set<string>();
-  const collectIds = (nodes: Node[]) => {
+  const collectIds = (nodes: Node[], isTopLevel: boolean = true) => {
     for (const node of nodes) {
       if (nodeIds.has(node.id)) {
         errors.push(`Duplicate node ID: ${node.id}`);
       }
       nodeIds.add(node.id);
+
+      // Validate node ID has @ prefix (for icon nodes that should reference resources)
+      if (node.type === 'icon' || node.type === undefined) {
+        if (!node.id.startsWith('@')) {
+          errors.push(`Node ID "${node.id}" must start with @ prefix`);
+        }
+        // Validate node ID matches a resource ID
+        if (node.id.startsWith('@') && !resourceIds.has(node.id)) {
+          errors.push(`Node "${node.id}" has no matching resource. Add resource with same ID.`);
+        }
+      }
+
       if (node.children) {
-        collectIds(node.children);
+        collectIds(node.children, false);
       }
     }
   };

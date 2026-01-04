@@ -315,69 +315,169 @@ describe('Parser', () => {
 });
 
 describe('validateDiagram', () => {
-  test('should return empty array for valid diagram', () => {
+  test('should return empty array for valid diagram with resources', () => {
     const diagram = parseDiagram({
       title: 'Test',
+      resources: {
+        '@a': { icon: 'aws:lambda', desc: 'Lambda function' },
+        '@b': { icon: 'aws:dynamodb', desc: 'Database' },
+      },
       nodes: [
-        { id: 'a', icon: 'aws:lambda' },
-        { id: 'b', icon: 'aws:dynamodb' },
+        { id: '@a', label: 'Lambda' },
+        { id: '@b', label: 'DynamoDB' },
       ],
-      connections: [{ from: 'a', to: 'b' }],
-    });
+      connections: [{ from: '@a', to: '@b' }],
+    } as any);
 
     const errors = validateDiagram(diagram);
     expect(errors).toHaveLength(0);
   });
 
-  test('should detect duplicate node IDs', () => {
+  test('should detect missing resources', () => {
     const diagram = {
       title: 'Test',
+      nodes: [{ id: '@a', icon: 'aws:lambda' }],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toContain('Diagram must have resources defined. Resources are required.');
+  });
+
+  test('should detect empty resources', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {},
+      nodes: [{ id: '@a', icon: 'aws:lambda' }],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toContain('Diagram must have resources defined. Resources are required.');
+  });
+
+  test('should detect resource ID without @ prefix', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {
+        'lambda': { icon: 'aws:lambda' },
+      },
+      nodes: [{ id: '@lambda', label: 'Lambda' }],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toContain('Resource ID "lambda" must start with @ prefix');
+  });
+
+  test('should detect node ID without @ prefix', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {
+        '@lambda': { icon: 'aws:lambda' },
+      },
+      nodes: [{ id: 'lambda', label: 'Lambda' }],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toContain('Node ID "lambda" must start with @ prefix');
+  });
+
+  test('should detect node without matching resource', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {
+        '@lambda': { icon: 'aws:lambda' },
+      },
       nodes: [
-        { id: 'dup', icon: 'aws:lambda' },
-        { id: 'dup', icon: 'aws:s3' },
+        { id: '@lambda', label: 'Lambda' },
+        { id: '@dynamodb', label: 'DynamoDB' },
       ],
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Duplicate node ID: dup');
+    expect(errors).toContain('Node "@dynamodb" has no matching resource. Add resource with same ID.');
   });
 
-  test('should detect duplicate IDs in nested nodes', () => {
+  test('should allow group nodes without @ prefix', () => {
     const diagram = {
       title: 'Test',
+      resources: {
+        '@ec2': { icon: 'aws:ec2' },
+      },
       nodes: [
-        { id: 'dup', icon: 'aws:lambda' },
         {
-          id: 'group',
+          id: 'vpc',
           type: 'group',
-          children: [{ id: 'dup', icon: 'aws:s3' }],
+          label: 'VPC',
+          children: [{ id: '@ec2', label: 'EC2', parentId: 'vpc' }],
         },
       ],
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Duplicate node ID: dup');
+    // Group nodes don't need @ prefix or matching resource
+    expect(errors.filter(e => e.includes('vpc'))).toHaveLength(0);
+  });
+
+  test('should detect duplicate node IDs', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {
+        '@dup': { icon: 'aws:lambda' },
+      },
+      nodes: [
+        { id: '@dup', label: 'Lambda' },
+        { id: '@dup', label: 'S3' },
+      ],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toContain('Duplicate node ID: @dup');
+  });
+
+  test('should detect duplicate IDs in nested nodes', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {
+        '@dup': { icon: 'aws:lambda' },
+      },
+      nodes: [
+        { id: '@dup', label: 'Lambda' },
+        {
+          id: 'group',
+          type: 'group',
+          children: [{ id: '@dup', label: 'S3', parentId: 'group' }],
+        },
+      ],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toContain('Duplicate node ID: @dup');
   });
 
   test('should detect invalid connection source', () => {
     const diagram = {
       title: 'Test',
-      nodes: [{ id: 'a', icon: 'aws:lambda' }],
-      connections: [{ from: 'unknown', to: 'a' }],
+      resources: {
+        '@a': { icon: 'aws:lambda' },
+      },
+      nodes: [{ id: '@a', label: 'Lambda' }],
+      connections: [{ from: '@unknown', to: '@a' }],
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Connection references unknown node: unknown');
+    expect(errors).toContain('Connection references unknown node: @unknown');
   });
 
   test('should detect invalid connection target', () => {
     const diagram = {
       title: 'Test',
-      nodes: [{ id: 'a', icon: 'aws:lambda' }],
-      connections: [{ from: 'a', to: 'unknown' }],
+      resources: {
+        '@a': { icon: 'aws:lambda' },
+      },
+      nodes: [{ id: '@a', label: 'Lambda' }],
+      connections: [{ from: '@a', to: '@unknown' }],
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Connection references unknown node: unknown');
+    expect(errors).toContain('Connection references unknown node: @unknown');
   });
 });
