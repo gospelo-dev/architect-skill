@@ -1121,6 +1121,22 @@ ${gradients.join('\n')}
     // Remove SVG <title> elements (we use JavaScript tooltip instead)
     embeddedSvg = embeddedSvg.replace(/<title>[^<]*<\/title>/g, '');
 
+    // Add selection UI elements before closing </svg> tag
+    // These elements are added at the end of SVG so they render on top (SVG z-order is document order)
+    const selectionUi = `
+  <rect id="selection-rect" x="0" y="0" width="0" height="0" fill="rgba(0, 120, 215, 0.1)" stroke="#0078D7" stroke-width="1" stroke-dasharray="4 2" style="display:none; pointer-events:none;"/>
+  <g id="copy-btn" style="display:none; cursor:pointer; pointer-events:all;">
+    <rect x="0" y="0" width="32" height="32" rx="6" fill="#E3F2FD" stroke="#0078D7" stroke-width="1.5" style="pointer-events:all;"/>
+    <g transform="translate(4, 4)" style="pointer-events:none;">
+      <rect width="8" height="4" x="8" y="2" rx="1" fill="none" stroke="#0078D7" stroke-width="2"/>
+      <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke="#0078D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M16 4h2a2 2 0 0 1 2 2v4" fill="none" stroke="#0078D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21 14H11" fill="none" stroke="#0078D7" stroke-width="2" stroke-linecap="round"/>
+      <path d="M15 10l-4 4 4 4" fill="none" stroke="#0078D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>`;
+    embeddedSvg = embeddedSvg.replace('</svg>', `${selectionUi}\n</svg>`);
+
     // License text for popup (preview HTML only - no redistribution)
     const licenseText = `CONFIDENTIAL - INTERNAL USE ONLY
 
@@ -1170,7 +1186,7 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
   }
 
   /**
-   * Get JavaScript for preview hover tooltip and copy functionality
+   * Get JavaScript for preview hover tooltip, copy functionality, and area selection
    */
   private getPreviewScript(): string {
     // Build node ID to icon/desc mapping (use computedNodes which has resolved icons from resources)
@@ -1207,18 +1223,42 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
     };
     collectNodes(this.computedNodes);
 
+    // Build node bounds map for area selection
+    const nodeBoundsMap: Record<string, { left: number; top: number; right: number; bottom: number }> = {};
+    for (const [id, node] of this.nodeMap) {
+      if (node.bounds) {
+        nodeBoundsMap[id] = {
+          left: node.bounds.left,
+          top: node.bounds.top,
+          right: node.bounds.right,
+          bottom: node.bounds.bottom,
+        };
+      }
+    }
+
     return `
 (function() {
   var nodeInfo = ${JSON.stringify(nodeIconMap)};
+  var nodeBounds = ${JSON.stringify(nodeBoundsMap)};
   var tooltip = document.getElementById('hover-tooltip');
   var toast = document.getElementById('copy-toast');
   var nodes = document.querySelectorAll('.node');
+  var svg = document.querySelector('.gospelo-svg');
+  var selectionRect = document.getElementById('selection-rect');
+  var copyBtn = document.getElementById('copy-btn');
 
+  // Area selection state
+  var isSelecting = false;
+  var startX = 0, startY = 0;
+  var selectedNodeIds = [];
+
+  // Tooltip and click-to-copy for individual nodes
   nodes.forEach(function(node) {
     var nodeId = node.id;
     var info = nodeInfo[nodeId];
 
     node.addEventListener('mouseenter', function(e) {
+      if (isSelecting) return;
       var html = '<strong>ID:</strong> ' + nodeId;
       if (info && info.icon) {
         html += '<br><strong>Icon:</strong> ' + info.icon;
@@ -1235,14 +1275,15 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
     });
 
     node.addEventListener('mousemove', function(e) {
-      updateTooltipPosition(e);
+      if (!isSelecting) updateTooltipPosition(e);
     });
 
     node.addEventListener('mouseleave', function() {
       tooltip.style.opacity = '0';
     });
 
-    node.addEventListener('click', function() {
+    node.addEventListener('click', function(e) {
+      if (selectedNodeIds.length > 0) return; // Don't copy single node if area selection is active
       navigator.clipboard.writeText(nodeId).then(function() {
         toast.textContent = 'Copied: ' + nodeId;
         toast.style.opacity = '1';
@@ -1263,6 +1304,124 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
     tooltip.style.left = x + 'px';
     tooltip.style.top = y + 'px';
   }
+
+  // Convert screen coordinates to SVG coordinates
+  function screenToSvg(clientX, clientY) {
+    var pt = svg.createSVGPoint();
+    pt.x = clientX;
+    pt.y = clientY;
+    var svgPt = pt.matrixTransform(svg.getScreenCTM().inverse());
+    return { x: svgPt.x, y: svgPt.y };
+  }
+
+  // Check if rectangle intersects with node bounds
+  function rectsIntersect(r1, r2) {
+    return !(r1.right < r2.left || r1.left > r2.right || r1.bottom < r2.top || r1.top > r2.bottom);
+  }
+
+  // Clear selection
+  function clearSelection() {
+    selectedNodeIds = [];
+    nodes.forEach(function(n) { n.classList.remove('selected'); });
+    copyBtn.style.display = 'none';
+    selectionRect.style.display = 'none';
+  }
+
+  // Show copy button near selection
+  function showCopyBtn(x, y) {
+    copyBtn.setAttribute('transform', 'translate(' + x + ',' + y + ')');
+    copyBtn.style.display = 'block';
+  }
+
+  // Area selection with Shift+drag
+  svg.addEventListener('mousedown', function(e) {
+    // Ignore if clicking on copy button
+    if (e.target === copyBtn || copyBtn.contains(e.target)) {
+      return;
+    }
+    if (!e.shiftKey) {
+      clearSelection();
+      return;
+    }
+    e.preventDefault();
+    isSelecting = true;
+    tooltip.style.opacity = '0';
+    var svgPt = screenToSvg(e.clientX, e.clientY);
+    startX = svgPt.x;
+    startY = svgPt.y;
+    selectionRect.setAttribute('x', startX);
+    selectionRect.setAttribute('y', startY);
+    selectionRect.setAttribute('width', 0);
+    selectionRect.setAttribute('height', 0);
+    selectionRect.style.display = 'block';
+    svg.style.cursor = 'crosshair';
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (!isSelecting) return;
+    var svgPt = screenToSvg(e.clientX, e.clientY);
+    var x = Math.min(startX, svgPt.x);
+    var y = Math.min(startY, svgPt.y);
+    var w = Math.abs(svgPt.x - startX);
+    var h = Math.abs(svgPt.y - startY);
+    selectionRect.setAttribute('x', x);
+    selectionRect.setAttribute('y', y);
+    selectionRect.setAttribute('width', w);
+    selectionRect.setAttribute('height', h);
+
+    // Highlight nodes in current selection rectangle (preview only, don't modify selectedNodeIds yet)
+    var selRect = { left: x, top: y, right: x + w, bottom: y + h };
+    nodes.forEach(function(n) {
+      var bounds = nodeBounds[n.id];
+      var inCurrentRect = bounds && rectsIntersect(selRect, bounds);
+      var alreadySelected = selectedNodeIds.indexOf(n.id) !== -1;
+      if (inCurrentRect || alreadySelected) {
+        n.classList.add('selected');
+      } else {
+        n.classList.remove('selected');
+      }
+    });
+  });
+
+  document.addEventListener('mouseup', function(e) {
+    if (!isSelecting) return;
+    isSelecting = false;
+    svg.style.cursor = '';
+
+    // Add newly selected nodes to accumulated selection (avoid duplicates)
+    nodes.forEach(function(n) {
+      if (n.classList.contains('selected') && selectedNodeIds.indexOf(n.id) === -1) {
+        selectedNodeIds.push(n.id);
+      }
+    });
+
+    if (selectedNodeIds.length > 0) {
+      // Show copy button at end of selection
+      var svgPt = screenToSvg(e.clientX, e.clientY);
+      showCopyBtn(svgPt.x + 10, svgPt.y - 16);
+    }
+    selectionRect.style.display = 'none';
+  });
+
+  // Copy button click
+  copyBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (selectedNodeIds.length === 0) return;
+    var text = selectedNodeIds.join('\\n');
+    navigator.clipboard.writeText(text).then(function() {
+      toast.textContent = 'Copied ' + selectedNodeIds.length + ' IDs';
+      toast.style.opacity = '1';
+      setTimeout(function() { toast.style.opacity = '0'; }, 1500);
+      clearSelection();
+    });
+  });
+
+  // Cancel selection on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      clearSelection();
+    }
+  });
 })();
 `;
   }
@@ -1297,6 +1456,8 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
 /* Node hover effect */
 .node { cursor: pointer; }
 .node:hover { filter: brightness(1.1); }
+/* Selected node highlight */
+.node.selected { filter: drop-shadow(0 0 6px #0078D7); }
 /* Copy toast */
 .copy-toast {
   position: fixed;
