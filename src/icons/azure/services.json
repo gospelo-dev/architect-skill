@@ -1,0 +1,21 @@
+{
+  "category": "Services",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "education",
+      "displayName": "Education",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Education.svg"
+    },
+    {
+      "slug": "learn",
+      "displayName": "Learn",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Learn.svg"
+    },
+    {
+      "slug": "universal_print",
+      "displayName": "Universal Print",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Universal-Print.svg"
+    }
+  ]
+}

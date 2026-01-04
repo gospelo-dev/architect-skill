@@ -1,0 +1,11 @@
+{
+  "category": "Satellite",
+  "count": 1,
+  "icons": [
+    {
+      "slug": "ground_station",
+      "displayName": "Ground Station",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Satellite/64/Arch_AWS-Ground-Station_64.svg"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "category": "Google Services",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "google_cloud_marketplace",
+      "displayName": "Google Cloud Marketplace",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/google_cloud_marketplace.svg"
+    },
+    {
+      "slug": "google_kubernetes_engine",
+      "displayName": "Google Kubernetes Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/google_kubernetes_engine.svg"
+    },
+    {
+      "slug": "google_maps_platform",
+      "displayName": "Google Maps Platform",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/google_maps_platform.svg"
+    }
+  ]
+}

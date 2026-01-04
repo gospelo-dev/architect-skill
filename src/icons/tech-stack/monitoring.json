@@ -1,0 +1,81 @@
+{
+  "category": "Monitoring",
+  "count": 15,
+  "icons": [
+    {
+      "slug": "prometheus",
+      "displayName": "Prometheus",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/prometheus.svg"
+    },
+    {
+      "slug": "grafana",
+      "displayName": "Grafana",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/grafana.svg"
+    },
+    {
+      "slug": "datadog",
+      "displayName": "Datadog",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/datadog.svg"
+    },
+    {
+      "slug": "newrelic",
+      "displayName": "New Relic",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/newrelic.svg"
+    },
+    {
+      "slug": "elastic",
+      "displayName": "Elastic",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/elastic.svg"
+    },
+    {
+      "slug": "splunk",
+      "displayName": "Splunk",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/splunk.svg"
+    },
+    {
+      "slug": "dynatrace",
+      "displayName": "Dynatrace",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/dynatrace.svg"
+    },
+    {
+      "slug": "sentry",
+      "displayName": "Sentry",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/sentry.svg"
+    },
+    {
+      "slug": "honeybadger",
+      "displayName": "Honeybadger",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/honeybadger.svg"
+    },
+    {
+      "slug": "jaeger",
+      "displayName": "Jaeger",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jaeger.svg"
+    },
+    {
+      "slug": "opentelemetry",
+      "displayName": "OpenTelemetry",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/opentelemetry.svg"
+    },
+    {
+      "slug": "logstash",
+      "displayName": "Logstash",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/logstash.svg"
+    },
+    {
+      "slug": "kibana",
+      "displayName": "Kibana",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/kibana.svg"
+    },
+    {
+      "slug": "fluentd",
+      "displayName": "Fluentd",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/fluentd.svg"
+    },
+    {
+      "slug": "uptimekuma",
+      "displayName": "Uptime Kuma",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/uptimekuma.svg"
+    }
+  ]
+}

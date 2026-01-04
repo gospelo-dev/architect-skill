@@ -1,0 +1,51 @@
+{
+  "category": "Package Managers",
+  "count": 9,
+  "icons": [
+    {
+      "slug": "npm",
+      "displayName": "npm",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/npm.svg"
+    },
+    {
+      "slug": "yarn",
+      "displayName": "Yarn",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/yarn.svg"
+    },
+    {
+      "slug": "pnpm",
+      "displayName": "pnpm",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/pnpm.svg"
+    },
+    {
+      "slug": "bun",
+      "displayName": "Bun",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/bun.svg"
+    },
+    {
+      "slug": "deno",
+      "displayName": "Deno",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/deno.svg"
+    },
+    {
+      "slug": "homebrew",
+      "displayName": "Homebrew",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/homebrew.svg"
+    },
+    {
+      "slug": "chocolatey",
+      "displayName": "Chocolatey",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/chocolatey.svg"
+    },
+    {
+      "slug": "snapcraft",
+      "displayName": "Snapcraft",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/snapcraft.svg"
+    },
+    {
+      "slug": "flatpak",
+      "displayName": "Flatpak",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/flatpak.svg"
+    }
+  ]
+}

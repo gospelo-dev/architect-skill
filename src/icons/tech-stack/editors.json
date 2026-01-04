@@ -1,0 +1,61 @@
+{
+  "category": "Editors",
+  "count": 11,
+  "icons": [
+    {
+      "slug": "vim",
+      "displayName": "Vim",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vim.svg"
+    },
+    {
+      "slug": "neovim",
+      "displayName": "Neovim",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/neovim.svg"
+    },
+    {
+      "slug": "jetbrains",
+      "displayName": "JetBrains",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jetbrains.svg"
+    },
+    {
+      "slug": "intellijidea",
+      "displayName": "IntelliJ IDEA",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/intellijidea.svg"
+    },
+    {
+      "slug": "pycharm",
+      "displayName": "PyCharm",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/pycharm.svg"
+    },
+    {
+      "slug": "webstorm",
+      "displayName": "WebStorm",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/webstorm.svg"
+    },
+    {
+      "slug": "goland",
+      "displayName": "GoLand",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/goland.svg"
+    },
+    {
+      "slug": "rider",
+      "displayName": "Rider",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/rider.svg"
+    },
+    {
+      "slug": "sublimetext",
+      "displayName": "Sublime Text",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/sublimetext.svg"
+    },
+    {
+      "slug": "eclipseide",
+      "displayName": "Eclipse IDE",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/eclipseide.svg"
+    },
+    {
+      "slug": "xcode",
+      "displayName": "Xcode",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/xcode.svg"
+    }
+  ]
+}

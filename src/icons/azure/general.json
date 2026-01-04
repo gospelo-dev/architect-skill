@@ -1,0 +1,1461 @@
+{
+  "category": "General",
+  "count": 291,
+  "icons": [
+    {
+      "slug": "abs_member",
+      "displayName": "Abs Member",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ABS-Member.svg"
+    },
+    {
+      "slug": "active_directory_connect_health",
+      "displayName": "Active Directory Connect Health",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Active-Directory-Connect-Health.svg"
+    },
+    {
+      "slug": "activity_log",
+      "displayName": "Activity Log",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Activity-Log.svg"
+    },
+    {
+      "slug": "advisor",
+      "displayName": "Advisor",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Advisor.svg"
+    },
+    {
+      "slug": "alerts",
+      "displayName": "Alerts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Alerts.svg"
+    },
+    {
+      "slug": "all_resources",
+      "displayName": "All Resources",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/All-Resources.svg"
+    },
+    {
+      "slug": "analysis_services",
+      "displayName": "Analysis Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Analysis-Services.svg"
+    },
+    {
+      "slug": "api_management_services",
+      "displayName": "Api Management Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/API-Management-Services.svg"
+    },
+    {
+      "slug": "app_registrations",
+      "displayName": "App Registrations",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Registrations.svg"
+    },
+    {
+      "slug": "app_service_certificates",
+      "displayName": "App Service Certificates",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Certificates.svg"
+    },
+    {
+      "slug": "app_service_domains",
+      "displayName": "App Service Domains",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Domains.svg"
+    },
+    {
+      "slug": "app_service_environments",
+      "displayName": "App Service Environments",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Environments.svg"
+    },
+    {
+      "slug": "app_service_plans",
+      "displayName": "App Service Plans",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Plans.svg"
+    },
+    {
+      "slug": "app_services",
+      "displayName": "App Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Services.svg"
+    },
+    {
+      "slug": "application_gateways",
+      "displayName": "Application Gateways",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Gateways.svg"
+    },
+    {
+      "slug": "application_insights",
+      "displayName": "Application Insights",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Insights.svg"
+    },
+    {
+      "slug": "application_security_groups",
+      "displayName": "Application Security Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Security-Groups.svg"
+    },
+    {
+      "slug": "automation_accounts",
+      "displayName": "Automation Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Automation-Accounts.svg"
+    },
+    {
+      "slug": "availability_sets",
+      "displayName": "Availability Sets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Availability-Sets.svg"
+    },
+    {
+      "slug": "avs",
+      "displayName": "Avs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/AVS.svg"
+    },
+    {
+      "slug": "azure_active_directory",
+      "displayName": "Azure Active Directory",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Active-Directory.svg"
+    },
+    {
+      "slug": "azure_ad_b2c",
+      "displayName": "Azure Ad B2c",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-B2C.svg"
+    },
+    {
+      "slug": "azure_ad_domain_services",
+      "displayName": "Azure Ad Domain Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-Domain-Services.svg"
+    },
+    {
+      "slug": "azure_ad_roles_and_administrators",
+      "displayName": "Azure Ad Roles And Administrators",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-Roles-and-Administrators.svg"
+    },
+    {
+      "slug": "azure_arc",
+      "displayName": "Azure Arc",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Arc.svg"
+    },
+    {
+      "slug": "azure_blockchain_service",
+      "displayName": "Azure Blockchain Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Blockchain-Service.svg"
+    },
+    {
+      "slug": "azure_cloud_shell",
+      "displayName": "Azure Cloud Shell",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Cloud-Shell.svg"
+    },
+    {
+      "slug": "azure_cosmos_db",
+      "displayName": "Azure Cosmos Db",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Cosmos-DB.svg"
+    },
+    {
+      "slug": "azure_data_catalog",
+      "displayName": "Azure Data Catalog",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Data-Catalog.svg"
+    },
+    {
+      "slug": "azure_data_explorer_clusters",
+      "displayName": "Azure Data Explorer Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Data-Explorer-Clusters.svg"
+    },
+    {
+      "slug": "azure_database_mariadb_server",
+      "displayName": "Azure Database Mariadb Server",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-MariaDB-Server.svg"
+    },
+    {
+      "slug": "azure_database_migration_services",
+      "displayName": "Azure Database Migration Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-Migration-Services.svg"
+    },
+    {
+      "slug": "azure_database_mysql_server",
+      "displayName": "Azure Database Mysql Server",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-MySQL-Server.svg"
+    },
+    {
+      "slug": "azure_database_postgresql_server",
+      "displayName": "Azure Database Postgresql Server",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-PostgreSQL-Server.svg"
+    },
+    {
+      "slug": "azure_devops",
+      "displayName": "Azure Devops",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-DevOps.svg"
+    },
+    {
+      "slug": "azure_firewall_manager",
+      "displayName": "Azure Firewall Manager",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Firewall-Manager.svg"
+    },
+    {
+      "slug": "azure_hcp_cache",
+      "displayName": "Azure Hcp Cache",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-HCP-Cache.svg"
+    },
+    {
+      "slug": "azure_lighthouse",
+      "displayName": "Azure Lighthouse",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Lighthouse.svg"
+    },
+    {
+      "slug": "azure_maps_accounts",
+      "displayName": "Azure Maps Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Maps-Accounts.svg"
+    },
+    {
+      "slug": "azure_media_service",
+      "displayName": "Azure Media Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Media-Service.svg"
+    },
+    {
+      "slug": "azure_migrate",
+      "displayName": "Azure Migrate",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Migrate.svg"
+    },
+    {
+      "slug": "azure_netapp_files",
+      "displayName": "Azure Netapp Files",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-NetApp-Files.svg"
+    },
+    {
+      "slug": "azure_sentinel",
+      "displayName": "Azure Sentinel",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Sentinel.svg"
+    },
+    {
+      "slug": "azure_sphere",
+      "displayName": "Azure Sphere",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Sphere.svg"
+    },
+    {
+      "slug": "azure_sql_server_stretch_databases",
+      "displayName": "Azure Sql Server Stretch Databases",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-SQL-Server-Stretch-Databases.svg"
+    },
+    {
+      "slug": "azure_sql_vm",
+      "displayName": "Azure Sql Vm",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-SQL-VM.svg"
+    },
+    {
+      "slug": "azure_stack",
+      "displayName": "Azure Stack",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Stack.svg"
+    },
+    {
+      "slug": "azure_stack_edge",
+      "displayName": "Azure Stack Edge",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Stack-Edge.svg"
+    },
+    {
+      "slug": "azure_synapse_analytics",
+      "displayName": "Azure Synapse Analytics",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Synapse-Analytics.svg"
+    },
+    {
+      "slug": "azure_token_service",
+      "displayName": "Azure Token Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Token-Service.svg"
+    },
+    {
+      "slug": "azure_workbooks",
+      "displayName": "Azure Workbooks",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Workbooks.svg"
+    },
+    {
+      "slug": "backlog",
+      "displayName": "Backlog",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Backlog.svg"
+    },
+    {
+      "slug": "batch_accounts",
+      "displayName": "Batch Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Batch-Accounts.svg"
+    },
+    {
+      "slug": "biz_talk",
+      "displayName": "Biz Talk",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Biz-Talk.svg"
+    },
+    {
+      "slug": "blob_block",
+      "displayName": "Blob Block",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blob-Block.svg"
+    },
+    {
+      "slug": "blob_page",
+      "displayName": "Blob Page",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blob-Page.svg"
+    },
+    {
+      "slug": "blueprints",
+      "displayName": "Blueprints",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blueprints.svg"
+    },
+    {
+      "slug": "bot_services",
+      "displayName": "Bot Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Bot-Services.svg"
+    },
+    {
+      "slug": "branch",
+      "displayName": "Branch",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Branch.svg"
+    },
+    {
+      "slug": "browser",
+      "displayName": "Browser",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Browser.svg"
+    },
+    {
+      "slug": "bug",
+      "displayName": "Bug",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Bug.svg"
+    },
+    {
+      "slug": "builds",
+      "displayName": "Builds",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Builds.svg"
+    },
+    {
+      "slug": "cache",
+      "displayName": "Cache",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cache.svg"
+    },
+    {
+      "slug": "cache_redis",
+      "displayName": "Cache Redis",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cache-Redis.svg"
+    },
+    {
+      "slug": "capacity",
+      "displayName": "Capacity",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Capacity.svg"
+    },
+    {
+      "slug": "cdn_profiles",
+      "displayName": "Cdn Profiles",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/CDN-Profiles.svg"
+    },
+    {
+      "slug": "cloud_services_(classic)",
+      "displayName": "Cloud Services (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cloud-Services-(Classic).svg"
+    },
+    {
+      "slug": "code",
+      "displayName": "Code",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Code.svg"
+    },
+    {
+      "slug": "cognitive_services",
+      "displayName": "Cognitive Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cognitive-Services.svg"
+    },
+    {
+      "slug": "commit",
+      "displayName": "Commit",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Commit.svg"
+    },
+    {
+      "slug": "compliance",
+      "displayName": "Compliance",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Compliance.svg"
+    },
+    {
+      "slug": "conditional_access",
+      "displayName": "Conditional Access",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Conditional-Access.svg"
+    },
+    {
+      "slug": "connections",
+      "displayName": "Connections",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Connections.svg"
+    },
+    {
+      "slug": "consortium",
+      "displayName": "Consortium",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Consortium.svg"
+    },
+    {
+      "slug": "container_instances",
+      "displayName": "Container Instances",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Instances.svg"
+    },
+    {
+      "slug": "container_registries",
+      "displayName": "Container Registries",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Registries.svg"
+    },
+    {
+      "slug": "container_services_(deprecated)",
+      "displayName": "Container Services (Deprecated)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Services-(Deprecated).svg"
+    },
+    {
+      "slug": "controls",
+      "displayName": "Controls",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Controls.svg"
+    },
+    {
+      "slug": "controls_horizontal",
+      "displayName": "Controls Horizontal",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Controls-Horizontal.svg"
+    },
+    {
+      "slug": "cost_alerts",
+      "displayName": "Cost Alerts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Alerts.svg"
+    },
+    {
+      "slug": "cost_analysis",
+      "displayName": "Cost Analysis",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Analysis.svg"
+    },
+    {
+      "slug": "cost_budgets",
+      "displayName": "Cost Budgets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Budgets.svg"
+    },
+    {
+      "slug": "cost_management",
+      "displayName": "Cost Management",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Management.svg"
+    },
+    {
+      "slug": "counter",
+      "displayName": "Counter",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Counter.svg"
+    },
+    {
+      "slug": "cubes",
+      "displayName": "Cubes",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cubes.svg"
+    },
+    {
+      "slug": "dashboard",
+      "displayName": "Dashboard",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Dashboard.svg"
+    },
+    {
+      "slug": "data_box",
+      "displayName": "Data Box",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Box.svg"
+    },
+    {
+      "slug": "data_box_edge",
+      "displayName": "Data Box Edge",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Box-Edge.svg"
+    },
+    {
+      "slug": "data_factory",
+      "displayName": "Data Factory",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Factory.svg"
+    },
+    {
+      "slug": "data_lake_storage_gen1",
+      "displayName": "Data Lake Storage Gen1",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Lake-Storage-Gen1.svg"
+    },
+    {
+      "slug": "data_lake_store_gen1",
+      "displayName": "Data Lake Store Gen1",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Lake-Store-Gen1.svg"
+    },
+    {
+      "slug": "data_share_invitations",
+      "displayName": "Data Share Invitations",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Share-Invitations.svg"
+    },
+    {
+      "slug": "data_shares",
+      "displayName": "Data Shares",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Shares.svg"
+    },
+    {
+      "slug": "ddos_protection_plans",
+      "displayName": "Ddos Protection Plans",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DDoS-Protection-Plans.svg"
+    },
+    {
+      "slug": "detonation",
+      "displayName": "Detonation",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Detonation.svg"
+    },
+    {
+      "slug": "dev_console",
+      "displayName": "Dev Console",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Dev-Console.svg"
+    },
+    {
+      "slug": "device_provisioning_services",
+      "displayName": "Device Provisioning Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Provisioning-Services.svg"
+    },
+    {
+      "slug": "device_security_apple",
+      "displayName": "Device Security Apple",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Apple.svg"
+    },
+    {
+      "slug": "device_security_google",
+      "displayName": "Device Security Google",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Google.svg"
+    },
+    {
+      "slug": "device_security_windows",
+      "displayName": "Device Security Windows",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Windows.svg"
+    },
+    {
+      "slug": "devtest_labs",
+      "displayName": "Devtest Labs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DevTest-Labs.svg"
+    },
+    {
+      "slug": "diagnostics_settings",
+      "displayName": "Diagnostics Settings",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Diagnostics-Settings.svg"
+    },
+    {
+      "slug": "digital_twins",
+      "displayName": "Digital Twins",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Digital-Twins.svg"
+    },
+    {
+      "slug": "disk_encryption_sets",
+      "displayName": "Disk Encryption Sets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disk-Encryption-Sets.svg"
+    },
+    {
+      "slug": "disks",
+      "displayName": "Disks",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks.svg"
+    },
+    {
+      "slug": "disks_(classic)",
+      "displayName": "Disks (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks-(Classic).svg"
+    },
+    {
+      "slug": "disks_snapshots",
+      "displayName": "Disks Snapshots",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks-Snapshots.svg"
+    },
+    {
+      "slug": "dns_zones",
+      "displayName": "Dns Zones",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DNS-Zones.svg"
+    },
+    {
+      "slug": "download",
+      "displayName": "Download",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Download.svg"
+    },
+    {
+      "slug": "education",
+      "displayName": "Education",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Education.svg"
+    },
+    {
+      "slug": "elastic_job_agents",
+      "displayName": "Elastic Job Agents",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Elastic-Job-Agents.svg"
+    },
+    {
+      "slug": "elixir_purple",
+      "displayName": "Elixir Purple",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Elixir-Purple.svg"
+    },
+    {
+      "slug": "enterprise_applications",
+      "displayName": "Enterprise Applications",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Enterprise-Applications.svg"
+    },
+    {
+      "slug": "error",
+      "displayName": "Error",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Error.svg"
+    },
+    {
+      "slug": "event_grid_domains",
+      "displayName": "Event Grid Domains",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Domains.svg"
+    },
+    {
+      "slug": "event_grid_subscriptions",
+      "displayName": "Event Grid Subscriptions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Subscriptions.svg"
+    },
+    {
+      "slug": "event_grid_topics",
+      "displayName": "Event Grid Topics",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Topics.svg"
+    },
+    {
+      "slug": "event_hub_clusters",
+      "displayName": "Event Hub Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Hub-Clusters.svg"
+    },
+    {
+      "slug": "event_hubs",
+      "displayName": "Event Hubs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Hubs.svg"
+    },
+    {
+      "slug": "expressroute_circuits",
+      "displayName": "Expressroute Circuits",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ExpressRoute-Circuits.svg"
+    },
+    {
+      "slug": "extendedsecurityupdates",
+      "displayName": "Extendedsecurityupdates",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ExtendedSecurityUpdates.svg"
+    },
+    {
+      "slug": "extensions",
+      "displayName": "Extensions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Extensions.svg"
+    },
+    {
+      "slug": "file",
+      "displayName": "File",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/File.svg"
+    },
+    {
+      "slug": "files",
+      "displayName": "Files",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Files.svg"
+    },
+    {
+      "slug": "firewalls",
+      "displayName": "Firewalls",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Firewalls.svg"
+    },
+    {
+      "slug": "folder_blank",
+      "displayName": "Folder Blank",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Folder-Blank.svg"
+    },
+    {
+      "slug": "folder_website",
+      "displayName": "Folder Website",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Folder-Website.svg"
+    },
+    {
+      "slug": "front_doors",
+      "displayName": "Front Doors",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Front-Doors.svg"
+    },
+    {
+      "slug": "ftp",
+      "displayName": "Ftp",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/FTP.svg"
+    },
+    {
+      "slug": "function_apps",
+      "displayName": "Function Apps",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Function-Apps.svg"
+    },
+    {
+      "slug": "gear",
+      "displayName": "Gear",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Gear.svg"
+    },
+    {
+      "slug": "globe",
+      "displayName": "Globe",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe.svg"
+    },
+    {
+      "slug": "globe_error",
+      "displayName": "Globe Error",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Error.svg"
+    },
+    {
+      "slug": "globe_success",
+      "displayName": "Globe Success",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Success.svg"
+    },
+    {
+      "slug": "globe_warning",
+      "displayName": "Globe Warning",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Warning.svg"
+    },
+    {
+      "slug": "groups",
+      "displayName": "Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Groups.svg"
+    },
+    {
+      "slug": "guide",
+      "displayName": "Guide",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Guide.svg"
+    },
+    {
+      "slug": "hd_insight_clusters",
+      "displayName": "Hd Insight Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/HD-Insight-Clusters.svg"
+    },
+    {
+      "slug": "heart",
+      "displayName": "Heart",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Heart.svg"
+    },
+    {
+      "slug": "help_and_support",
+      "displayName": "Help And Support",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Help-and-Support.svg"
+    },
+    {
+      "slug": "identity_governance",
+      "displayName": "Identity Governance",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Identity-Governance.svg"
+    },
+    {
+      "slug": "image",
+      "displayName": "Image",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image.svg"
+    },
+    {
+      "slug": "image_definitions",
+      "displayName": "Image Definitions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image-Definitions.svg"
+    },
+    {
+      "slug": "image_versions",
+      "displayName": "Image Versions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image-Versions.svg"
+    },
+    {
+      "slug": "images",
+      "displayName": "Images",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Images.svg"
+    },
+    {
+      "slug": "import_export_jobs",
+      "displayName": "Import Export Jobs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Import-Export-Jobs.svg"
+    },
+    {
+      "slug": "information",
+      "displayName": "Information",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Information.svg"
+    },
+    {
+      "slug": "infrastructure_backup",
+      "displayName": "Infrastructure Backup",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Infrastructure-Backup.svg"
+    },
+    {
+      "slug": "input_output",
+      "displayName": "Input Output",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Input-Output.svg"
+    },
+    {
+      "slug": "instance_pools",
+      "displayName": "Instance Pools",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Instance-Pools.svg"
+    },
+    {
+      "slug": "integration_accounts",
+      "displayName": "Integration Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Integration-Accounts.svg"
+    },
+    {
+      "slug": "internet_analyzer_profiles",
+      "displayName": "Internet Analyzer Profiles",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Internet-Analyzer-Profiles.svg"
+    },
+    {
+      "slug": "iot_central_applications",
+      "displayName": "Iot Central Applications",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Central-Applications.svg"
+    },
+    {
+      "slug": "iot_edge",
+      "displayName": "Iot Edge",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Edge.svg"
+    },
+    {
+      "slug": "iot_hub",
+      "displayName": "Iot Hub",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Hub.svg"
+    },
+    {
+      "slug": "ip_groups",
+      "displayName": "Ip Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IP-Groups.svg"
+    },
+    {
+      "slug": "journey_hub",
+      "displayName": "Journey Hub",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Journey-Hub.svg"
+    },
+    {
+      "slug": "key_vaults",
+      "displayName": "Key Vaults",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Key-Vaults.svg"
+    },
+    {
+      "slug": "keys",
+      "displayName": "Keys",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Keys.svg"
+    },
+    {
+      "slug": "kubernetes_services",
+      "displayName": "Kubernetes Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Kubernetes-Services.svg"
+    },
+    {
+      "slug": "lab_services",
+      "displayName": "Lab Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Lab-Services.svg"
+    },
+    {
+      "slug": "launch_portal",
+      "displayName": "Launch Portal",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Launch-Portal.svg"
+    },
+    {
+      "slug": "learn",
+      "displayName": "Learn",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Learn.svg"
+    },
+    {
+      "slug": "load_balancers",
+      "displayName": "Load Balancers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Load-Balancers.svg"
+    },
+    {
+      "slug": "load_test",
+      "displayName": "Load Test",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Load-Test.svg"
+    },
+    {
+      "slug": "location",
+      "displayName": "Location",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Location.svg"
+    },
+    {
+      "slug": "log_analytics_workspaces",
+      "displayName": "Log Analytics Workspaces",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Log-Analytics-Workspaces.svg"
+    },
+    {
+      "slug": "log_streaming",
+      "displayName": "Log Streaming",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Log-Streaming.svg"
+    },
+    {
+      "slug": "logic_apps",
+      "displayName": "Logic Apps",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Logic-Apps.svg"
+    },
+    {
+      "slug": "machinesazurearc",
+      "displayName": "Machinesazurearc",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/MachinesAzureArc.svg"
+    },
+    {
+      "slug": "managed_applications_center",
+      "displayName": "Managed Applications Center",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Managed-Applications-Center.svg"
+    },
+    {
+      "slug": "managed_database",
+      "displayName": "Managed Database",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Managed-Database.svg"
+    },
+    {
+      "slug": "management_groups",
+      "displayName": "Management Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Management-Groups.svg"
+    },
+    {
+      "slug": "management_portal",
+      "displayName": "Management Portal",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Management-Portal.svg"
+    },
+    {
+      "slug": "marketplace",
+      "displayName": "Marketplace",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Marketplace.svg"
+    },
+    {
+      "slug": "media",
+      "displayName": "Media",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Media.svg"
+    },
+    {
+      "slug": "media_file",
+      "displayName": "Media File",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Media-File.svg"
+    },
+    {
+      "slug": "mesh_applications",
+      "displayName": "Mesh Applications",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mesh-Applications.svg"
+    },
+    {
+      "slug": "metrics",
+      "displayName": "Metrics",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Metrics.svg"
+    },
+    {
+      "slug": "mobile",
+      "displayName": "Mobile",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mobile.svg"
+    },
+    {
+      "slug": "mobile_engagement",
+      "displayName": "Mobile Engagement",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mobile-Engagement.svg"
+    },
+    {
+      "slug": "module",
+      "displayName": "Module",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Module.svg"
+    },
+    {
+      "slug": "monitor",
+      "displayName": "Monitor",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Monitor.svg"
+    },
+    {
+      "slug": "multi_tenancy",
+      "displayName": "Multi Tenancy",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Multi-Tenancy.svg"
+    },
+    {
+      "slug": "my_customers",
+      "displayName": "My Customers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/My-Customers.svg"
+    },
+    {
+      "slug": "nat",
+      "displayName": "Nat",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/NAT.svg"
+    },
+    {
+      "slug": "network_interfaces",
+      "displayName": "Network Interfaces",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Interfaces.svg"
+    },
+    {
+      "slug": "network_security_groups",
+      "displayName": "Network Security Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Security-Groups.svg"
+    },
+    {
+      "slug": "network_watcher",
+      "displayName": "Network Watcher",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Watcher.svg"
+    },
+    {
+      "slug": "notification_hub_namespaces",
+      "displayName": "Notification Hub Namespaces",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Notification-Hub-Namespaces.svg"
+    },
+    {
+      "slug": "notification_hubs",
+      "displayName": "Notification Hubs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Notification-Hubs.svg"
+    },
+    {
+      "slug": "offers",
+      "displayName": "Offers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Offers.svg"
+    },
+    {
+      "slug": "operation_log_(classic)",
+      "displayName": "Operation Log (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Operation-Log-(Classic).svg"
+    },
+    {
+      "slug": "os_images_(classic)",
+      "displayName": "Os Images (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/OS-Images-(Classic).svg"
+    },
+    {
+      "slug": "outbound_connection",
+      "displayName": "Outbound Connection",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Outbound-Connection.svg"
+    },
+    {
+      "slug": "peering_service",
+      "displayName": "Peering Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Peering-Service.svg"
+    },
+    {
+      "slug": "plans",
+      "displayName": "Plans",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Plans.svg"
+    },
+    {
+      "slug": "policy",
+      "displayName": "Policy",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Policy.svg"
+    },
+    {
+      "slug": "power",
+      "displayName": "Power",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Power.svg"
+    },
+    {
+      "slug": "power_up",
+      "displayName": "Power Up",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Power-Up.svg"
+    },
+    {
+      "slug": "powershell",
+      "displayName": "Powershell",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Powershell.svg"
+    },
+    {
+      "slug": "preview",
+      "displayName": "Preview",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Preview.svg"
+    },
+    {
+      "slug": "private_link",
+      "displayName": "Private Link",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link.svg"
+    },
+    {
+      "slug": "private_link_hub",
+      "displayName": "Private Link Hub",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link-Hub.svg"
+    },
+    {
+      "slug": "private_link_service",
+      "displayName": "Private Link Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link-Service.svg"
+    },
+    {
+      "slug": "process_explorer",
+      "displayName": "Process Explorer",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Process-Explorer.svg"
+    },
+    {
+      "slug": "production_ready_database",
+      "displayName": "Production Ready Database",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Production-Ready-Database.svg"
+    },
+    {
+      "slug": "proximity_placement_groups",
+      "displayName": "Proximity Placement Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Proximity-Placement-Groups.svg"
+    },
+    {
+      "slug": "public_ip_addresses",
+      "displayName": "Public Ip Addresses",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Addresses.svg"
+    },
+    {
+      "slug": "public_ip_addresses_(classic)",
+      "displayName": "Public Ip Addresses (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Addresses-(Classic).svg"
+    },
+    {
+      "slug": "public_ip_prefixes",
+      "displayName": "Public Ip Prefixes",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Prefixes.svg"
+    },
+    {
+      "slug": "quickstart_center",
+      "displayName": "Quickstart Center",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Quickstart-Center.svg"
+    },
+    {
+      "slug": "recent",
+      "displayName": "Recent",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Recent.svg"
+    },
+    {
+      "slug": "recovery_services_vaults",
+      "displayName": "Recovery Services Vaults",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Recovery-Services-Vaults.svg"
+    },
+    {
+      "slug": "relays",
+      "displayName": "Relays",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Relays.svg"
+    },
+    {
+      "slug": "remote_rendering",
+      "displayName": "Remote Rendering",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Remote-Rendering.svg"
+    },
+    {
+      "slug": "reservations",
+      "displayName": "Reservations",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Reservations.svg"
+    },
+    {
+      "slug": "reserved_ip_addresses_(classic)",
+      "displayName": "Reserved Ip Addresses (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Reserved-IP-Addresses-(Classic).svg"
+    },
+    {
+      "slug": "resource_graph_explorer",
+      "displayName": "Resource Graph Explorer",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Graph-Explorer.svg"
+    },
+    {
+      "slug": "resource_group_list",
+      "displayName": "Resource Group List",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Group-List.svg"
+    },
+    {
+      "slug": "resource_groups",
+      "displayName": "Resource Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Groups.svg"
+    },
+    {
+      "slug": "resource_linked",
+      "displayName": "Resource Linked",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Linked.svg"
+    },
+    {
+      "slug": "route_filters",
+      "displayName": "Route Filters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Route-Filters.svg"
+    },
+    {
+      "slug": "route_tables",
+      "displayName": "Route Tables",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Route-Tables.svg"
+    },
+    {
+      "slug": "rtos",
+      "displayName": "Rtos",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/RTOS.svg"
+    },
+    {
+      "slug": "sap_azure_monitor",
+      "displayName": "Sap Azure Monitor",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SAP-Azure-Monitor.svg"
+    },
+    {
+      "slug": "scale",
+      "displayName": "Scale",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Scale.svg"
+    },
+    {
+      "slug": "scheduler",
+      "displayName": "Scheduler",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Scheduler.svg"
+    },
+    {
+      "slug": "search",
+      "displayName": "Search",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search.svg"
+    },
+    {
+      "slug": "search_grid",
+      "displayName": "Search Grid",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search-Grid.svg"
+    },
+    {
+      "slug": "search_services",
+      "displayName": "Search Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search-Services.svg"
+    },
+    {
+      "slug": "security_center",
+      "displayName": "Security Center",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Security-Center.svg"
+    },
+    {
+      "slug": "server_farm",
+      "displayName": "Server Farm",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Server-Farm.svg"
+    },
+    {
+      "slug": "service_bus",
+      "displayName": "Service Bus",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Bus.svg"
+    },
+    {
+      "slug": "service_endpoint_policies",
+      "displayName": "Service Endpoint Policies",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Endpoint-Policies.svg"
+    },
+    {
+      "slug": "service_fabric_clusters",
+      "displayName": "Service Fabric Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Fabric-Clusters.svg"
+    },
+    {
+      "slug": "service_health",
+      "displayName": "Service Health",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Health.svg"
+    },
+    {
+      "slug": "service_providers",
+      "displayName": "Service Providers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Providers.svg"
+    },
+    {
+      "slug": "shared_image_galleries",
+      "displayName": "Shared Image Galleries",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Shared-Image-Galleries.svg"
+    },
+    {
+      "slug": "software_as_a_service",
+      "displayName": "Software As A Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Software-as-a-Service.svg"
+    },
+    {
+      "slug": "solutions",
+      "displayName": "Solutions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Solutions.svg"
+    },
+    {
+      "slug": "sql_data_warehouses",
+      "displayName": "Sql Data Warehouses",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Data-Warehouses.svg"
+    },
+    {
+      "slug": "sql_database",
+      "displayName": "Sql Database",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Database.svg"
+    },
+    {
+      "slug": "sql_elastic_pools",
+      "displayName": "Sql Elastic Pools",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Elastic-Pools.svg"
+    },
+    {
+      "slug": "sql_managed_instance",
+      "displayName": "Sql Managed Instance",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Managed-Instance.svg"
+    },
+    {
+      "slug": "sql_server",
+      "displayName": "Sql Server",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Server.svg"
+    },
+    {
+      "slug": "ssd",
+      "displayName": "Ssd",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SSD.svg"
+    },
+    {
+      "slug": "static_apps",
+      "displayName": "Static Apps",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Static-Apps.svg"
+    },
+    {
+      "slug": "storage_accounts",
+      "displayName": "Storage Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Accounts.svg"
+    },
+    {
+      "slug": "storage_accounts_(classic)",
+      "displayName": "Storage Accounts (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Accounts-(Classic).svg"
+    },
+    {
+      "slug": "storage_azure_files",
+      "displayName": "Storage Azure Files",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Azure-Files.svg"
+    },
+    {
+      "slug": "storage_container",
+      "displayName": "Storage Container",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Container.svg"
+    },
+    {
+      "slug": "storage_queue",
+      "displayName": "Storage Queue",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Queue.svg"
+    },
+    {
+      "slug": "storage_sync_services",
+      "displayName": "Storage Sync Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Sync-Services.svg"
+    },
+    {
+      "slug": "storsimple_data_managers",
+      "displayName": "Storsimple Data Managers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/StorSimple-Data-Managers.svg"
+    },
+    {
+      "slug": "storsimple_device_managers",
+      "displayName": "Storsimple Device Managers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/StorSimple-Device-Managers.svg"
+    },
+    {
+      "slug": "stream_analytics_jobs",
+      "displayName": "Stream Analytics Jobs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Stream-Analytics-Jobs.svg"
+    },
+    {
+      "slug": "subscriptions",
+      "displayName": "Subscriptions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Subscriptions.svg"
+    },
+    {
+      "slug": "table",
+      "displayName": "Table",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Table.svg"
+    },
+    {
+      "slug": "tags",
+      "displayName": "Tags",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Tags.svg"
+    },
+    {
+      "slug": "tfs_vc_repository",
+      "displayName": "Tfs Vc Repository",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/TFS-VC-Repository.svg"
+    },
+    {
+      "slug": "time_series_data_sets",
+      "displayName": "Time Series Data Sets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Data-Sets.svg"
+    },
+    {
+      "slug": "time_series_insights_environments",
+      "displayName": "Time Series Insights Environments",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Insights-Environments.svg"
+    },
+    {
+      "slug": "time_series_insights_event_sources",
+      "displayName": "Time Series Insights Event Sources",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Insights-Event-Sources.svg"
+    },
+    {
+      "slug": "toolbox",
+      "displayName": "Toolbox",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Toolbox.svg"
+    },
+    {
+      "slug": "traffic_manager_profiles",
+      "displayName": "Traffic Manager Profiles",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Traffic-Manager-Profiles.svg"
+    },
+    {
+      "slug": "universal_print",
+      "displayName": "Universal Print",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Universal-Print.svg"
+    },
+    {
+      "slug": "updates",
+      "displayName": "Updates",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Updates.svg"
+    },
+    {
+      "slug": "user_privacy",
+      "displayName": "User Privacy",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/User-Privacy.svg"
+    },
+    {
+      "slug": "user_subscriptions",
+      "displayName": "User Subscriptions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/User-Subscriptions.svg"
+    },
+    {
+      "slug": "users",
+      "displayName": "Users",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Users.svg"
+    },
+    {
+      "slug": "versions",
+      "displayName": "Versions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Versions.svg"
+    },
+    {
+      "slug": "virtual_clusters",
+      "displayName": "Virtual Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Clusters.svg"
+    },
+    {
+      "slug": "virtual_machine",
+      "displayName": "Virtual Machine",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Machine.svg"
+    },
+    {
+      "slug": "virtual_machines_(classic)",
+      "displayName": "Virtual Machines (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Machines-(Classic).svg"
+    },
+    {
+      "slug": "virtual_network_gateways",
+      "displayName": "Virtual Network Gateways",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Network-Gateways.svg"
+    },
+    {
+      "slug": "virtual_networks",
+      "displayName": "Virtual Networks",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Networks.svg"
+    },
+    {
+      "slug": "virtual_networks_(classic)",
+      "displayName": "Virtual Networks (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Networks-(Classic).svg"
+    },
+    {
+      "slug": "virtual_wans",
+      "displayName": "Virtual Wans",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-WANs.svg"
+    },
+    {
+      "slug": "vm_images_(classic)",
+      "displayName": "Vm Images (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/VM-Images-(Classic).svg"
+    },
+    {
+      "slug": "vm_scale_sets",
+      "displayName": "Vm Scale Sets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/VM-Scale-Sets.svg"
+    },
+    {
+      "slug": "web_application_firewall_policies(waf)",
+      "displayName": "Web Application Firewall Policies(Waf)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Application-Firewall-Policies(WAF).svg"
+    },
+    {
+      "slug": "web_environment",
+      "displayName": "Web Environment",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Environment.svg"
+    },
+    {
+      "slug": "web_slots",
+      "displayName": "Web Slots",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Slots.svg"
+    },
+    {
+      "slug": "web_test",
+      "displayName": "Web Test",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Test.svg"
+    },
+    {
+      "slug": "website_power",
+      "displayName": "Website Power",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Website-Power.svg"
+    },
+    {
+      "slug": "website_staging",
+      "displayName": "Website Staging",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Website-Staging.svg"
+    },
+    {
+      "slug": "windows_virtual_desktop",
+      "displayName": "Windows Virtual Desktop",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Windows-Virtual-Desktop.svg"
+    },
+    {
+      "slug": "workbooks",
+      "displayName": "Workbooks",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workbooks.svg"
+    },
+    {
+      "slug": "workflow",
+      "displayName": "Workflow",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workflow.svg"
+    },
+    {
+      "slug": "workspaces",
+      "displayName": "Workspaces",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workspaces.svg"
+    }
+  ]
+}

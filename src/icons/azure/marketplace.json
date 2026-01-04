@@ -1,0 +1,21 @@
+{
+  "category": "Marketplace",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "marketplace",
+      "displayName": "Marketplace",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Marketplace.svg"
+    },
+    {
+      "slug": "offers",
+      "displayName": "Offers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Offers.svg"
+    },
+    {
+      "slug": "software_as_a_service",
+      "displayName": "Software As A Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Software-as-a-Service.svg"
+    }
+  ]
+}

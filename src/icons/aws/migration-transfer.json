@@ -1,0 +1,126 @@
+{
+  "category": "Migration & Transfer",
+  "count": 24,
+  "icons": [
+    {
+      "slug": "res_application_discovery_service_aws_agentless_collector",
+      "displayName": "Res Application Discovery Service Aws Agentless Collector",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Application-Discovery-Service_AWS-Agentless-Collector_48.svg"
+    },
+    {
+      "slug": "res_application_discovery_service_aws_discovery_agent",
+      "displayName": "Res Application Discovery Service Aws Discovery Agent",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Application-Discovery-Service_AWS-Discovery-Agent_48.svg"
+    },
+    {
+      "slug": "res_application_discovery_service_migration_evaluator_collector",
+      "displayName": "Res Application Discovery Service Migration Evaluator Collector",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Application-Discovery-Service_Migration-Evaluator-Collector_48.svg"
+    },
+    {
+      "slug": "res_datasync_agent",
+      "displayName": "Res Datasync Agent",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Datasync_Agent_48.svg"
+    },
+    {
+      "slug": "res_datasync_discovery",
+      "displayName": "Res Datasync Discovery",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-DataSync_Discovery_48.svg"
+    },
+    {
+      "slug": "res_mainframe_modernization_analyzer",
+      "displayName": "Res Mainframe Modernization Analyzer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Mainframe-Modernization_Analyzer_48.svg"
+    },
+    {
+      "slug": "res_mainframe_modernization_compiler",
+      "displayName": "Res Mainframe Modernization Compiler",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Mainframe-Modernization_Compiler_48.svg"
+    },
+    {
+      "slug": "res_mainframe_modernization_converter",
+      "displayName": "Res Mainframe Modernization Converter",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Mainframe-Modernization_Converter_48.svg"
+    },
+    {
+      "slug": "res_mainframe_modernization_developer",
+      "displayName": "Res Mainframe Modernization Developer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Mainframe-Modernization_Developer_48.svg"
+    },
+    {
+      "slug": "res_mainframe_modernization_runtime",
+      "displayName": "Res Mainframe Modernization Runtime",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Mainframe-Modernization_Runtime_48.svg"
+    },
+    {
+      "slug": "res_migration_hub_refactor_spaces_applications",
+      "displayName": "Res Migration Hub Refactor Spaces Applications",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Migration-Hub_Refactor-Spaces-Applications_48.svg"
+    },
+    {
+      "slug": "res_migration_hub_refactor_spaces_environments",
+      "displayName": "Res Migration Hub Refactor Spaces Environments",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Migration-Hub_Refactor-Spaces-Environments_48.svg"
+    },
+    {
+      "slug": "res_migration_hub_refactor_spaces_services",
+      "displayName": "Res Migration Hub Refactor Spaces Services",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Migration-Hub_Refactor-Spaces-Services_48.svg"
+    },
+    {
+      "slug": "res_transfer_family_aws_as2",
+      "displayName": "Res Transfer Family Aws As2",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Transfer-Family_AWS-AS2_48.svg"
+    },
+    {
+      "slug": "res_transfer_family_aws_ftp",
+      "displayName": "Res Transfer Family Aws Ftp",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Transfer-Family_AWS-FTP_48.svg"
+    },
+    {
+      "slug": "res_transfer_family_aws_ftps",
+      "displayName": "Res Transfer Family Aws Ftps",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Transfer-Family_AWS-FTPS_48.svg"
+    },
+    {
+      "slug": "res_transfer_family_aws_sftp",
+      "displayName": "Res Transfer Family Aws Sftp",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Migration-Transfer/Res_AWS-Transfer-Family_AWS-SFTP_48.svg"
+    },
+    {
+      "slug": "application_discovery_service",
+      "displayName": "Application Discovery Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Migration-Transfer/64/Arch_AWS-Application-Discovery-Service_64.svg"
+    },
+    {
+      "slug": "application_migration_service",
+      "displayName": "Application Migration Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Migration-Transfer/64/Arch_AWS-Application-Migration-Service_64.svg"
+    },
+    {
+      "slug": "datasync",
+      "displayName": "Datasync",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Migration-Transfer/64/Arch_AWS-DataSync_64.svg"
+    },
+    {
+      "slug": "mainframe_modernization",
+      "displayName": "Mainframe Modernization",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Migration-Transfer/64/Arch_AWS-Mainframe-Modernization_64.svg"
+    },
+    {
+      "slug": "migration_evaluator",
+      "displayName": "Migration Evaluator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Migration-Transfer/64/Arch_AWS-Migration-Evaluator_64.svg"
+    },
+    {
+      "slug": "migration_hub",
+      "displayName": "Migration Hub",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Migration-Transfer/64/Arch_AWS-Migration-Hub_64.svg"
+    },
+    {
+      "slug": "transfer_family",
+      "displayName": "Transfer Family",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Migration-Transfer/64/Arch_AWS-Transfer-Family_64.svg"
+    }
+  ]
+}

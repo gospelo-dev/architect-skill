@@ -1,0 +1,11 @@
+{
+  "category": "API Management",
+  "count": 1,
+  "icons": [
+    {
+      "slug": "api_management_services",
+      "displayName": "Api Management Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/API-Management-Services.svg"
+    }
+  ]
+}

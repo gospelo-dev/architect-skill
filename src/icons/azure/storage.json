@@ -1,0 +1,96 @@
+{
+  "category": "Storage",
+  "count": 18,
+  "icons": [
+    {
+      "slug": "blob_block",
+      "displayName": "Blob Block",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blob-Block.svg"
+    },
+    {
+      "slug": "blob_page",
+      "displayName": "Blob Page",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blob-Page.svg"
+    },
+    {
+      "slug": "disk_encryption_sets",
+      "displayName": "Disk Encryption Sets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disk-Encryption-Sets.svg"
+    },
+    {
+      "slug": "disks",
+      "displayName": "Disks",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks.svg"
+    },
+    {
+      "slug": "disks_(classic)",
+      "displayName": "Disks (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks-(Classic).svg"
+    },
+    {
+      "slug": "disks_snapshots",
+      "displayName": "Disks Snapshots",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks-Snapshots.svg"
+    },
+    {
+      "slug": "file",
+      "displayName": "File",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/File.svg"
+    },
+    {
+      "slug": "files",
+      "displayName": "Files",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Files.svg"
+    },
+    {
+      "slug": "ssd",
+      "displayName": "Ssd",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SSD.svg"
+    },
+    {
+      "slug": "storage_accounts",
+      "displayName": "Storage Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Accounts.svg"
+    },
+    {
+      "slug": "storage_accounts_(classic)",
+      "displayName": "Storage Accounts (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Accounts-(Classic).svg"
+    },
+    {
+      "slug": "storage_azure_files",
+      "displayName": "Storage Azure Files",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Azure-Files.svg"
+    },
+    {
+      "slug": "storage_container",
+      "displayName": "Storage Container",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Container.svg"
+    },
+    {
+      "slug": "storage_queue",
+      "displayName": "Storage Queue",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Queue.svg"
+    },
+    {
+      "slug": "storage_sync_services",
+      "displayName": "Storage Sync Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Sync-Services.svg"
+    },
+    {
+      "slug": "storsimple_data_managers",
+      "displayName": "Storsimple Data Managers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/StorSimple-Data-Managers.svg"
+    },
+    {
+      "slug": "storsimple_device_managers",
+      "displayName": "Storsimple Device Managers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/StorSimple-Device-Managers.svg"
+    },
+    {
+      "slug": "table",
+      "displayName": "Table",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Table.svg"
+    }
+  ]
+}

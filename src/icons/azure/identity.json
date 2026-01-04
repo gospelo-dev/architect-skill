@@ -1,0 +1,51 @@
+{
+  "category": "Identity",
+  "count": 9,
+  "icons": [
+    {
+      "slug": "active_directory_connect_health",
+      "displayName": "Active Directory Connect Health",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Active-Directory-Connect-Health.svg"
+    },
+    {
+      "slug": "conditional_access",
+      "displayName": "Conditional Access",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Conditional-Access.svg"
+    },
+    {
+      "slug": "enterprise_applications",
+      "displayName": "Enterprise Applications",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Enterprise-Applications.svg"
+    },
+    {
+      "slug": "groups",
+      "displayName": "Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Groups.svg"
+    },
+    {
+      "slug": "identity_governance",
+      "displayName": "Identity Governance",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Identity-Governance.svg"
+    },
+    {
+      "slug": "multi_tenancy",
+      "displayName": "Multi Tenancy",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Multi-Tenancy.svg"
+    },
+    {
+      "slug": "user_privacy",
+      "displayName": "User Privacy",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/User-Privacy.svg"
+    },
+    {
+      "slug": "user_subscriptions",
+      "displayName": "User Subscriptions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/User-Subscriptions.svg"
+    },
+    {
+      "slug": "users",
+      "displayName": "Users",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Users.svg"
+    }
+  ]
+}

@@ -1,0 +1,2581 @@
+{
+  "title": "Tech Stack Icon Catalog",
+  "subtitle": "All Services by Category (268 icons)",
+  "background": {
+    "type": "gradient",
+    "startColor": "#ffffff",
+    "endColor": "#f0fff0",
+    "direction": "south"
+  },
+  "nodes": [
+    {
+      "id": "cat_ai___ml",
+      "type": "label",
+      "label": "AI & ML (20)",
+      "position": [
+        50,
+        80
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_tensorflow",
+      "icon": "tech-stack:tensorflow",
+      "label": "tech-stack:t\nensorflow",
+      "position": [
+        50,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_pytorch",
+      "icon": "tech-stack:pytorch",
+      "label": "tech-stack:p\nytorch",
+      "position": [
+        145,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_huggingface",
+      "icon": "tech-stack:huggingface",
+      "label": "tech-stack:h\nuggingface",
+      "position": [
+        240,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_scikitlearn",
+      "icon": "tech-stack:scikitlearn",
+      "label": "tech-stack:s\ncikitlearn",
+      "position": [
+        335,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_keras",
+      "icon": "tech-stack:keras",
+      "label": "tech-stack:k\neras",
+      "position": [
+        430,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_mlflow",
+      "icon": "tech-stack:mlflow",
+      "label": "tech-stack:m\nlflow",
+      "position": [
+        525,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_jupyter",
+      "icon": "tech-stack:jupyter",
+      "label": "tech-stack:j\nupyter",
+      "position": [
+        620,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_pandas",
+      "icon": "tech-stack:pandas",
+      "label": "tech-stack:p\nandas",
+      "position": [
+        715,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_numpy",
+      "icon": "tech-stack:numpy",
+      "label": "tech-stack:n\numpy",
+      "position": [
+        810,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_opencv",
+      "icon": "tech-stack:opencv",
+      "label": "tech-stack:o\npencv",
+      "position": [
+        905,
+        115
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_langchain",
+      "icon": "tech-stack:langchain",
+      "label": "tech-stack:l\nangchain",
+      "position": [
+        50,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_weightsandbiases",
+      "icon": "tech-stack:weightsandbiases",
+      "label": "tech-stack:w\neightsandbia\nses",
+      "position": [
+        145,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_apacheairflow",
+      "icon": "tech-stack:apacheairflow",
+      "label": "tech-stack:a\npacheairflow",
+      "position": [
+        240,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_apachespark",
+      "icon": "tech-stack:apachespark",
+      "label": "tech-stack:a\npachespark",
+      "position": [
+        335,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_databricks",
+      "icon": "tech-stack:databricks",
+      "label": "tech-stack:d\natabricks",
+      "position": [
+        430,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_googlecolab",
+      "icon": "tech-stack:googlecolab",
+      "label": "tech-stack:g\nooglecolab",
+      "position": [
+        525,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_kaggle",
+      "icon": "tech-stack:kaggle",
+      "label": "tech-stack:k\naggle",
+      "position": [
+        620,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_anaconda",
+      "icon": "tech-stack:anaconda",
+      "label": "tech-stack:a\nnaconda",
+      "position": [
+        715,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_scipy",
+      "icon": "tech-stack:scipy",
+      "label": "tech-stack:s\ncipy",
+      "position": [
+        810,
+        255
+      ]
+    },
+    {
+      "id": "tech-stack_ai___ml_plotly",
+      "icon": "tech-stack:plotly",
+      "label": "tech-stack:p\nlotly",
+      "position": [
+        905,
+        255
+      ]
+    },
+    {
+      "id": "cat_backend",
+      "type": "label",
+      "label": "Backend (16)",
+      "position": [
+        50,
+        435
+      ]
+    },
+    {
+      "id": "tech-stack_backend_nodedotjs",
+      "icon": "tech-stack:nodedotjs",
+      "label": "tech-stack:n\nodedotjs",
+      "position": [
+        50,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_express",
+      "icon": "tech-stack:express",
+      "label": "tech-stack:e\nxpress",
+      "position": [
+        145,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_fastapi",
+      "icon": "tech-stack:fastapi",
+      "label": "tech-stack:f\nastapi",
+      "position": [
+        240,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_flask",
+      "icon": "tech-stack:flask",
+      "label": "tech-stack:f\nlask",
+      "position": [
+        335,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_django",
+      "icon": "tech-stack:django",
+      "label": "tech-stack:d\njango",
+      "position": [
+        430,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_springboot",
+      "icon": "tech-stack:springboot",
+      "label": "tech-stack:s\npringboot",
+      "position": [
+        525,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_laravel",
+      "icon": "tech-stack:laravel",
+      "label": "tech-stack:l\naravel",
+      "position": [
+        620,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_rubyonrails",
+      "icon": "tech-stack:rubyonrails",
+      "label": "tech-stack:r\nubyonrails",
+      "position": [
+        715,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_gin",
+      "icon": "tech-stack:gin",
+      "label": "tech-stack:g\nin",
+      "position": [
+        810,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_fastify",
+      "icon": "tech-stack:fastify",
+      "label": "tech-stack:f\nastify",
+      "position": [
+        905,
+        470
+      ]
+    },
+    {
+      "id": "tech-stack_backend_nestjs",
+      "icon": "tech-stack:nestjs",
+      "label": "tech-stack:n\nestjs",
+      "position": [
+        50,
+        610
+      ]
+    },
+    {
+      "id": "tech-stack_backend_koa",
+      "icon": "tech-stack:koa",
+      "label": "tech-stack:k\noa",
+      "position": [
+        145,
+        610
+      ]
+    },
+    {
+      "id": "tech-stack_backend_hono",
+      "icon": "tech-stack:hono",
+      "label": "tech-stack:h\nono",
+      "position": [
+        240,
+        610
+      ]
+    },
+    {
+      "id": "tech-stack_backend_adonisjs",
+      "icon": "tech-stack:adonisjs",
+      "label": "tech-stack:a\ndonisjs",
+      "position": [
+        335,
+        610
+      ]
+    },
+    {
+      "id": "tech-stack_backend_actix",
+      "icon": "tech-stack:actix",
+      "label": "tech-stack:a\nctix",
+      "position": [
+        430,
+        610
+      ]
+    },
+    {
+      "id": "tech-stack_backend_rocket",
+      "icon": "tech-stack:rocket",
+      "label": "tech-stack:r\nocket",
+      "position": [
+        525,
+        610
+      ]
+    },
+    {
+      "id": "cat_cloud",
+      "type": "label",
+      "label": "Cloud (14)",
+      "position": [
+        50,
+        790
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_googlecloud",
+      "icon": "tech-stack:googlecloud",
+      "label": "tech-stack:g\nooglecloud",
+      "position": [
+        50,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_digitalocean",
+      "icon": "tech-stack:digitalocean",
+      "label": "tech-stack:d\nigitalocean",
+      "position": [
+        145,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_vercel",
+      "icon": "tech-stack:vercel",
+      "label": "tech-stack:v\nercel",
+      "position": [
+        240,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_netlify",
+      "icon": "tech-stack:netlify",
+      "label": "tech-stack:n\netlify",
+      "position": [
+        335,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_cloudflare",
+      "icon": "tech-stack:cloudflare",
+      "label": "tech-stack:c\nloudflare",
+      "position": [
+        430,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_vultr",
+      "icon": "tech-stack:vultr",
+      "label": "tech-stack:v\nultr",
+      "position": [
+        525,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_render",
+      "icon": "tech-stack:render",
+      "label": "tech-stack:r\nender",
+      "position": [
+        620,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_railway",
+      "icon": "tech-stack:railway",
+      "label": "tech-stack:r\nailway",
+      "position": [
+        715,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_flydotio",
+      "icon": "tech-stack:flydotio",
+      "label": "tech-stack:f\nlydotio",
+      "position": [
+        810,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_upcloud",
+      "icon": "tech-stack:upcloud",
+      "label": "tech-stack:u\npcloud",
+      "position": [
+        905,
+        825
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_scaleway",
+      "icon": "tech-stack:scaleway",
+      "label": "tech-stack:s\ncaleway",
+      "position": [
+        50,
+        965
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_hetzner",
+      "icon": "tech-stack:hetzner",
+      "label": "tech-stack:h\netzner",
+      "position": [
+        145,
+        965
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_civo",
+      "icon": "tech-stack:civo",
+      "label": "tech-stack:c\nivo",
+      "position": [
+        240,
+        965
+      ]
+    },
+    {
+      "id": "tech-stack_cloud_akamai",
+      "icon": "tech-stack:akamai",
+      "label": "tech-stack:a\nkamai",
+      "position": [
+        335,
+        965
+      ]
+    },
+    {
+      "id": "cat_databases",
+      "type": "label",
+      "label": "Databases (23)",
+      "position": [
+        50,
+        1145
+      ]
+    },
+    {
+      "id": "tech-stack_databases_postgresql",
+      "icon": "tech-stack:postgresql",
+      "label": "tech-stack:p\nostgresql",
+      "position": [
+        50,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_mysql",
+      "icon": "tech-stack:mysql",
+      "label": "tech-stack:m\nysql",
+      "position": [
+        145,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_mongodb",
+      "icon": "tech-stack:mongodb",
+      "label": "tech-stack:m\nongodb",
+      "position": [
+        240,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_redis",
+      "icon": "tech-stack:redis",
+      "label": "tech-stack:r\nedis",
+      "position": [
+        335,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_elasticsearch",
+      "icon": "tech-stack:elasticsearch",
+      "label": "tech-stack:e\nlasticsearch",
+      "position": [
+        430,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_mariadb",
+      "icon": "tech-stack:mariadb",
+      "label": "tech-stack:m\nariadb",
+      "position": [
+        525,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_sqlite",
+      "icon": "tech-stack:sqlite",
+      "label": "tech-stack:s\nqlite",
+      "position": [
+        620,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_apachecassandra",
+      "icon": "tech-stack:apachecassandra",
+      "label": "tech-stack:a\npachecassand\nra",
+      "position": [
+        715,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_couchbase",
+      "icon": "tech-stack:couchbase",
+      "label": "tech-stack:c\nouchbase",
+      "position": [
+        810,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_neo4j",
+      "icon": "tech-stack:neo4j",
+      "label": "tech-stack:n\neo4j",
+      "position": [
+        905,
+        1180
+      ]
+    },
+    {
+      "id": "tech-stack_databases_influxdb",
+      "icon": "tech-stack:influxdb",
+      "label": "tech-stack:i\nnfluxdb",
+      "position": [
+        50,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_firebase",
+      "icon": "tech-stack:firebase",
+      "label": "tech-stack:f\nirebase",
+      "position": [
+        145,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_supabase",
+      "icon": "tech-stack:supabase",
+      "label": "tech-stack:s\nupabase",
+      "position": [
+        240,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_planetscale",
+      "icon": "tech-stack:planetscale",
+      "label": "tech-stack:p\nlanetscale",
+      "position": [
+        335,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_cockroachlabs",
+      "icon": "tech-stack:cockroachlabs",
+      "label": "tech-stack:c\nockroachlabs",
+      "position": [
+        430,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_timescale",
+      "icon": "tech-stack:timescale",
+      "label": "tech-stack:t\nimescale",
+      "position": [
+        525,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_surrealdb",
+      "icon": "tech-stack:surrealdb",
+      "label": "tech-stack:s\nurrealdb",
+      "position": [
+        620,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_clickhouse",
+      "icon": "tech-stack:clickhouse",
+      "label": "tech-stack:c\nlickhouse",
+      "position": [
+        715,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_duckdb",
+      "icon": "tech-stack:duckdb",
+      "label": "tech-stack:d\nuckdb",
+      "position": [
+        810,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_arangodb",
+      "icon": "tech-stack:arangodb",
+      "label": "tech-stack:a\nrangodb",
+      "position": [
+        905,
+        1320
+      ]
+    },
+    {
+      "id": "tech-stack_databases_dgraph",
+      "icon": "tech-stack:dgraph",
+      "label": "tech-stack:d\ngraph",
+      "position": [
+        50,
+        1460
+      ]
+    },
+    {
+      "id": "tech-stack_databases_fauna",
+      "icon": "tech-stack:fauna",
+      "label": "tech-stack:f\nauna",
+      "position": [
+        145,
+        1460
+      ]
+    },
+    {
+      "id": "tech-stack_databases_turso",
+      "icon": "tech-stack:turso",
+      "label": "tech-stack:t\nurso",
+      "position": [
+        240,
+        1460
+      ]
+    },
+    {
+      "id": "cat_devops",
+      "type": "label",
+      "label": "DevOps (27)",
+      "position": [
+        50,
+        1640
+      ]
+    },
+    {
+      "id": "tech-stack_devops_docker",
+      "icon": "tech-stack:docker",
+      "label": "tech-stack:d\nocker",
+      "position": [
+        50,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_kubernetes",
+      "icon": "tech-stack:kubernetes",
+      "label": "tech-stack:k\nubernetes",
+      "position": [
+        145,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_terraform",
+      "icon": "tech-stack:terraform",
+      "label": "tech-stack:t\nerraform",
+      "position": [
+        240,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_ansible",
+      "icon": "tech-stack:ansible",
+      "label": "tech-stack:a\nnsible",
+      "position": [
+        335,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_jenkins",
+      "icon": "tech-stack:jenkins",
+      "label": "tech-stack:j\nenkins",
+      "position": [
+        430,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_circleci",
+      "icon": "tech-stack:circleci",
+      "label": "tech-stack:c\nircleci",
+      "position": [
+        525,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_githubactions",
+      "icon": "tech-stack:githubactions",
+      "label": "tech-stack:g\nithubactions",
+      "position": [
+        620,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_gitlab",
+      "icon": "tech-stack:gitlab",
+      "label": "tech-stack:g\nitlab",
+      "position": [
+        715,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_bitbucket",
+      "icon": "tech-stack:bitbucket",
+      "label": "tech-stack:b\nitbucket",
+      "position": [
+        810,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_travisci",
+      "icon": "tech-stack:travisci",
+      "label": "tech-stack:t\nravisci",
+      "position": [
+        905,
+        1675
+      ]
+    },
+    {
+      "id": "tech-stack_devops_teamcity",
+      "icon": "tech-stack:teamcity",
+      "label": "tech-stack:t\neamcity",
+      "position": [
+        50,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_argo",
+      "icon": "tech-stack:argo",
+      "label": "tech-stack:a\nrgo",
+      "position": [
+        145,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_helm",
+      "icon": "tech-stack:helm",
+      "label": "tech-stack:h\nelm",
+      "position": [
+        240,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_puppet",
+      "icon": "tech-stack:puppet",
+      "label": "tech-stack:p\nuppet",
+      "position": [
+        335,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_chef",
+      "icon": "tech-stack:chef",
+      "label": "tech-stack:c\nhef",
+      "position": [
+        430,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_vagrant",
+      "icon": "tech-stack:vagrant",
+      "label": "tech-stack:v\nagrant",
+      "position": [
+        525,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_packer",
+      "icon": "tech-stack:packer",
+      "label": "tech-stack:p\nacker",
+      "position": [
+        620,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_pulumi",
+      "icon": "tech-stack:pulumi",
+      "label": "tech-stack:p\nulumi",
+      "position": [
+        715,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_rancher",
+      "icon": "tech-stack:rancher",
+      "label": "tech-stack:r\nancher",
+      "position": [
+        810,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_portainer",
+      "icon": "tech-stack:portainer",
+      "label": "tech-stack:p\nortainer",
+      "position": [
+        905,
+        1815
+      ]
+    },
+    {
+      "id": "tech-stack_devops_podman",
+      "icon": "tech-stack:podman",
+      "label": "tech-stack:p\nodman",
+      "position": [
+        50,
+        1955
+      ]
+    },
+    {
+      "id": "tech-stack_devops_containerd",
+      "icon": "tech-stack:containerd",
+      "label": "tech-stack:c\nontainerd",
+      "position": [
+        145,
+        1955
+      ]
+    },
+    {
+      "id": "tech-stack_devops_istio",
+      "icon": "tech-stack:istio",
+      "label": "tech-stack:i\nstio",
+      "position": [
+        240,
+        1955
+      ]
+    },
+    {
+      "id": "tech-stack_devops_linkerd",
+      "icon": "tech-stack:linkerd",
+      "label": "tech-stack:l\ninkerd",
+      "position": [
+        335,
+        1955
+      ]
+    },
+    {
+      "id": "tech-stack_devops_consul",
+      "icon": "tech-stack:consul",
+      "label": "tech-stack:c\nonsul",
+      "position": [
+        430,
+        1955
+      ]
+    },
+    {
+      "id": "tech-stack_devops_vault",
+      "icon": "tech-stack:vault",
+      "label": "tech-stack:v\nault",
+      "position": [
+        525,
+        1955
+      ]
+    },
+    {
+      "id": "tech-stack_devops_nomad",
+      "icon": "tech-stack:nomad",
+      "label": "tech-stack:n\nomad",
+      "position": [
+        620,
+        1955
+      ]
+    },
+    {
+      "id": "cat_editors",
+      "type": "label",
+      "label": "Editors (11)",
+      "position": [
+        50,
+        2135
+      ]
+    },
+    {
+      "id": "tech-stack_editors_vim",
+      "icon": "tech-stack:vim",
+      "label": "tech-stack:v\nim",
+      "position": [
+        50,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_neovim",
+      "icon": "tech-stack:neovim",
+      "label": "tech-stack:n\neovim",
+      "position": [
+        145,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_jetbrains",
+      "icon": "tech-stack:jetbrains",
+      "label": "tech-stack:j\netbrains",
+      "position": [
+        240,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_intellijidea",
+      "icon": "tech-stack:intellijidea",
+      "label": "tech-stack:i\nntellijidea",
+      "position": [
+        335,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_pycharm",
+      "icon": "tech-stack:pycharm",
+      "label": "tech-stack:p\nycharm",
+      "position": [
+        430,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_webstorm",
+      "icon": "tech-stack:webstorm",
+      "label": "tech-stack:w\nebstorm",
+      "position": [
+        525,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_goland",
+      "icon": "tech-stack:goland",
+      "label": "tech-stack:g\noland",
+      "position": [
+        620,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_rider",
+      "icon": "tech-stack:rider",
+      "label": "tech-stack:r\nider",
+      "position": [
+        715,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_sublimetext",
+      "icon": "tech-stack:sublimetext",
+      "label": "tech-stack:s\nublimetext",
+      "position": [
+        810,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_eclipseide",
+      "icon": "tech-stack:eclipseide",
+      "label": "tech-stack:e\nclipseide",
+      "position": [
+        905,
+        2170
+      ]
+    },
+    {
+      "id": "tech-stack_editors_xcode",
+      "icon": "tech-stack:xcode",
+      "label": "tech-stack:x\ncode",
+      "position": [
+        50,
+        2310
+      ]
+    },
+    {
+      "id": "cat_frontend",
+      "type": "label",
+      "label": "Frontend (28)",
+      "position": [
+        50,
+        2490
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_react",
+      "icon": "tech-stack:react",
+      "label": "tech-stack:r\neact",
+      "position": [
+        50,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_vuedotjs",
+      "icon": "tech-stack:vuedotjs",
+      "label": "tech-stack:v\nuedotjs",
+      "position": [
+        145,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_angular",
+      "icon": "tech-stack:angular",
+      "label": "tech-stack:a\nngular",
+      "position": [
+        240,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_svelte",
+      "icon": "tech-stack:svelte",
+      "label": "tech-stack:s\nvelte",
+      "position": [
+        335,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_nextdotjs",
+      "icon": "tech-stack:nextdotjs",
+      "label": "tech-stack:n\nextdotjs",
+      "position": [
+        430,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_gatsby",
+      "icon": "tech-stack:gatsby",
+      "label": "tech-stack:g\natsby",
+      "position": [
+        525,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_astro",
+      "icon": "tech-stack:astro",
+      "label": "tech-stack:a\nstro",
+      "position": [
+        620,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_solid",
+      "icon": "tech-stack:solid",
+      "label": "tech-stack:s\nolid",
+      "position": [
+        715,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_lit",
+      "icon": "tech-stack:lit",
+      "label": "tech-stack:l\nit",
+      "position": [
+        810,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_preact",
+      "icon": "tech-stack:preact",
+      "label": "tech-stack:p\nreact",
+      "position": [
+        905,
+        2525
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_remix",
+      "icon": "tech-stack:remix",
+      "label": "tech-stack:r\nemix",
+      "position": [
+        50,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_qwik",
+      "icon": "tech-stack:qwik",
+      "label": "tech-stack:q\nwik",
+      "position": [
+        145,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_alpinedotjs",
+      "icon": "tech-stack:alpinedotjs",
+      "label": "tech-stack:a\nlpinedotjs",
+      "position": [
+        240,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_storybook",
+      "icon": "tech-stack:storybook",
+      "label": "tech-stack:s\ntorybook",
+      "position": [
+        335,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_tailwindcss",
+      "icon": "tech-stack:tailwindcss",
+      "label": "tech-stack:t\nailwindcss",
+      "position": [
+        430,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_bootstrap",
+      "icon": "tech-stack:bootstrap",
+      "label": "tech-stack:b\nootstrap",
+      "position": [
+        525,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_sass",
+      "icon": "tech-stack:sass",
+      "label": "tech-stack:s\nass",
+      "position": [
+        620,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_less",
+      "icon": "tech-stack:less",
+      "label": "tech-stack:l\ness",
+      "position": [
+        715,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_postcss",
+      "icon": "tech-stack:postcss",
+      "label": "tech-stack:p\nostcss",
+      "position": [
+        810,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_vite",
+      "icon": "tech-stack:vite",
+      "label": "tech-stack:v\nite",
+      "position": [
+        905,
+        2665
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_webpack",
+      "icon": "tech-stack:webpack",
+      "label": "tech-stack:w\nebpack",
+      "position": [
+        50,
+        2805
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_esbuild",
+      "icon": "tech-stack:esbuild",
+      "label": "tech-stack:e\nsbuild",
+      "position": [
+        145,
+        2805
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_html5",
+      "icon": "tech-stack:html5",
+      "label": "tech-stack:h\ntml5",
+      "position": [
+        240,
+        2805
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_webcomponentsdotorg",
+      "icon": "tech-stack:webcomponentsdotorg",
+      "label": "tech-stack:w\nebcomponents\ndotorg",
+      "position": [
+        335,
+        2805
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_threedotjs",
+      "icon": "tech-stack:threedotjs",
+      "label": "tech-stack:t\nhreedotjs",
+      "position": [
+        430,
+        2805
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_babel",
+      "icon": "tech-stack:babel",
+      "label": "tech-stack:b\nabel",
+      "position": [
+        525,
+        2805
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_eslint",
+      "icon": "tech-stack:eslint",
+      "label": "tech-stack:e\nslint",
+      "position": [
+        620,
+        2805
+      ]
+    },
+    {
+      "id": "tech-stack_frontend_prettier",
+      "icon": "tech-stack:prettier",
+      "label": "tech-stack:p\nrettier",
+      "position": [
+        715,
+        2805
+      ]
+    },
+    {
+      "id": "cat_languages",
+      "type": "label",
+      "label": "Languages (28)",
+      "position": [
+        50,
+        2985
+      ]
+    },
+    {
+      "id": "tech-stack_languages_python",
+      "icon": "tech-stack:python",
+      "label": "tech-stack:p\nython",
+      "position": [
+        50,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_javascript",
+      "icon": "tech-stack:javascript",
+      "label": "tech-stack:j\navascript",
+      "position": [
+        145,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_typescript",
+      "icon": "tech-stack:typescript",
+      "label": "tech-stack:t\nypescript",
+      "position": [
+        240,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_go",
+      "icon": "tech-stack:go",
+      "label": "tech-stack:g\no",
+      "position": [
+        335,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_rust",
+      "icon": "tech-stack:rust",
+      "label": "tech-stack:r\nust",
+      "position": [
+        430,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_ruby",
+      "icon": "tech-stack:ruby",
+      "label": "tech-stack:r\nuby",
+      "position": [
+        525,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_php",
+      "icon": "tech-stack:php",
+      "label": "tech-stack:p\nhp",
+      "position": [
+        620,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_swift",
+      "icon": "tech-stack:swift",
+      "label": "tech-stack:s\nwift",
+      "position": [
+        715,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_kotlin",
+      "icon": "tech-stack:kotlin",
+      "label": "tech-stack:k\notlin",
+      "position": [
+        810,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_scala",
+      "icon": "tech-stack:scala",
+      "label": "tech-stack:s\ncala",
+      "position": [
+        905,
+        3020
+      ]
+    },
+    {
+      "id": "tech-stack_languages_elixir",
+      "icon": "tech-stack:elixir",
+      "label": "tech-stack:e\nlixir",
+      "position": [
+        50,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_dart",
+      "icon": "tech-stack:dart",
+      "label": "tech-stack:d\nart",
+      "position": [
+        145,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_perl",
+      "icon": "tech-stack:perl",
+      "label": "tech-stack:p\nerl",
+      "position": [
+        240,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_lua",
+      "icon": "tech-stack:lua",
+      "label": "tech-stack:l\nua",
+      "position": [
+        335,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_haskell",
+      "icon": "tech-stack:haskell",
+      "label": "tech-stack:h\naskell",
+      "position": [
+        430,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_julia",
+      "icon": "tech-stack:julia",
+      "label": "tech-stack:j\nulia",
+      "position": [
+        525,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_fortran",
+      "icon": "tech-stack:fortran",
+      "label": "tech-stack:f\nortran",
+      "position": [
+        620,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_c",
+      "icon": "tech-stack:c",
+      "label": "tech-stack:c",
+      "position": [
+        715,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_cplusplus",
+      "icon": "tech-stack:cplusplus",
+      "label": "tech-stack:c\nplusplus",
+      "position": [
+        810,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_r",
+      "icon": "tech-stack:r",
+      "label": "tech-stack:r",
+      "position": [
+        905,
+        3160
+      ]
+    },
+    {
+      "id": "tech-stack_languages_clojure",
+      "icon": "tech-stack:clojure",
+      "label": "tech-stack:c\nlojure",
+      "position": [
+        50,
+        3300
+      ]
+    },
+    {
+      "id": "tech-stack_languages_erlang",
+      "icon": "tech-stack:erlang",
+      "label": "tech-stack:e\nrlang",
+      "position": [
+        145,
+        3300
+      ]
+    },
+    {
+      "id": "tech-stack_languages_fsharp",
+      "icon": "tech-stack:fsharp",
+      "label": "tech-stack:f\nsharp",
+      "position": [
+        240,
+        3300
+      ]
+    },
+    {
+      "id": "tech-stack_languages_crystal",
+      "icon": "tech-stack:crystal",
+      "label": "tech-stack:c\nrystal",
+      "position": [
+        335,
+        3300
+      ]
+    },
+    {
+      "id": "tech-stack_languages_nim",
+      "icon": "tech-stack:nim",
+      "label": "tech-stack:n\nim",
+      "position": [
+        430,
+        3300
+      ]
+    },
+    {
+      "id": "tech-stack_languages_zig",
+      "icon": "tech-stack:zig",
+      "label": "tech-stack:z\nig",
+      "position": [
+        525,
+        3300
+      ]
+    },
+    {
+      "id": "tech-stack_languages_odin",
+      "icon": "tech-stack:odin",
+      "label": "tech-stack:o\ndin",
+      "position": [
+        620,
+        3300
+      ]
+    },
+    {
+      "id": "tech-stack_languages_v",
+      "icon": "tech-stack:v",
+      "label": "tech-stack:v",
+      "position": [
+        715,
+        3300
+      ]
+    },
+    {
+      "id": "cat_messaging",
+      "type": "label",
+      "label": "Messaging (4)",
+      "position": [
+        50,
+        3480
+      ]
+    },
+    {
+      "id": "tech-stack_messaging_apachekafka",
+      "icon": "tech-stack:apachekafka",
+      "label": "tech-stack:a\npachekafka",
+      "position": [
+        50,
+        3515
+      ]
+    },
+    {
+      "id": "tech-stack_messaging_rabbitmq",
+      "icon": "tech-stack:rabbitmq",
+      "label": "tech-stack:r\nabbitmq",
+      "position": [
+        145,
+        3515
+      ]
+    },
+    {
+      "id": "tech-stack_messaging_mqtt",
+      "icon": "tech-stack:mqtt",
+      "label": "tech-stack:m\nqtt",
+      "position": [
+        240,
+        3515
+      ]
+    },
+    {
+      "id": "tech-stack_messaging_apachepulsar",
+      "icon": "tech-stack:apachepulsar",
+      "label": "tech-stack:a\npachepulsar",
+      "position": [
+        335,
+        3515
+      ]
+    },
+    {
+      "id": "cat_monitoring",
+      "type": "label",
+      "label": "Monitoring (15)",
+      "position": [
+        50,
+        3695
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_prometheus",
+      "icon": "tech-stack:prometheus",
+      "label": "tech-stack:p\nrometheus",
+      "position": [
+        50,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_grafana",
+      "icon": "tech-stack:grafana",
+      "label": "tech-stack:g\nrafana",
+      "position": [
+        145,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_datadog",
+      "icon": "tech-stack:datadog",
+      "label": "tech-stack:d\natadog",
+      "position": [
+        240,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_newrelic",
+      "icon": "tech-stack:newrelic",
+      "label": "tech-stack:n\newrelic",
+      "position": [
+        335,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_elastic",
+      "icon": "tech-stack:elastic",
+      "label": "tech-stack:e\nlastic",
+      "position": [
+        430,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_splunk",
+      "icon": "tech-stack:splunk",
+      "label": "tech-stack:s\nplunk",
+      "position": [
+        525,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_dynatrace",
+      "icon": "tech-stack:dynatrace",
+      "label": "tech-stack:d\nynatrace",
+      "position": [
+        620,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_sentry",
+      "icon": "tech-stack:sentry",
+      "label": "tech-stack:s\nentry",
+      "position": [
+        715,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_honeybadger",
+      "icon": "tech-stack:honeybadger",
+      "label": "tech-stack:h\noneybadger",
+      "position": [
+        810,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_jaeger",
+      "icon": "tech-stack:jaeger",
+      "label": "tech-stack:j\naeger",
+      "position": [
+        905,
+        3730
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_opentelemetry",
+      "icon": "tech-stack:opentelemetry",
+      "label": "tech-stack:o\npentelemetry",
+      "position": [
+        50,
+        3870
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_logstash",
+      "icon": "tech-stack:logstash",
+      "label": "tech-stack:l\nogstash",
+      "position": [
+        145,
+        3870
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_kibana",
+      "icon": "tech-stack:kibana",
+      "label": "tech-stack:k\nibana",
+      "position": [
+        240,
+        3870
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_fluentd",
+      "icon": "tech-stack:fluentd",
+      "label": "tech-stack:f\nluentd",
+      "position": [
+        335,
+        3870
+      ]
+    },
+    {
+      "id": "tech-stack_monitoring_uptimekuma",
+      "icon": "tech-stack:uptimekuma",
+      "label": "tech-stack:u\nptimekuma",
+      "position": [
+        430,
+        3870
+      ]
+    },
+    {
+      "id": "cat_os",
+      "type": "label",
+      "label": "OS (18)",
+      "position": [
+        50,
+        4050
+      ]
+    },
+    {
+      "id": "tech-stack_os_linux",
+      "icon": "tech-stack:linux",
+      "label": "tech-stack:l\ninux",
+      "position": [
+        50,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_ubuntu",
+      "icon": "tech-stack:ubuntu",
+      "label": "tech-stack:u\nbuntu",
+      "position": [
+        145,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_debian",
+      "icon": "tech-stack:debian",
+      "label": "tech-stack:d\nebian",
+      "position": [
+        240,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_fedora",
+      "icon": "tech-stack:fedora",
+      "label": "tech-stack:f\nedora",
+      "position": [
+        335,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_archlinux",
+      "icon": "tech-stack:archlinux",
+      "label": "tech-stack:a\nrchlinux",
+      "position": [
+        430,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_centos",
+      "icon": "tech-stack:centos",
+      "label": "tech-stack:c\nentos",
+      "position": [
+        525,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_alpinelinux",
+      "icon": "tech-stack:alpinelinux",
+      "label": "tech-stack:a\nlpinelinux",
+      "position": [
+        620,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_apple",
+      "icon": "tech-stack:apple",
+      "label": "tech-stack:a\npple",
+      "position": [
+        715,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_ios",
+      "icon": "tech-stack:ios",
+      "label": "tech-stack:i\nos",
+      "position": [
+        810,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_android",
+      "icon": "tech-stack:android",
+      "label": "tech-stack:a\nndroid",
+      "position": [
+        905,
+        4085
+      ]
+    },
+    {
+      "id": "tech-stack_os_redhat",
+      "icon": "tech-stack:redhat",
+      "label": "tech-stack:r\nedhat",
+      "position": [
+        50,
+        4225
+      ]
+    },
+    {
+      "id": "tech-stack_os_opensuse",
+      "icon": "tech-stack:opensuse",
+      "label": "tech-stack:o\npensuse",
+      "position": [
+        145,
+        4225
+      ]
+    },
+    {
+      "id": "tech-stack_os_manjaro",
+      "icon": "tech-stack:manjaro",
+      "label": "tech-stack:m\nanjaro",
+      "position": [
+        240,
+        4225
+      ]
+    },
+    {
+      "id": "tech-stack_os_nixos",
+      "icon": "tech-stack:nixos",
+      "label": "tech-stack:n\nixos",
+      "position": [
+        335,
+        4225
+      ]
+    },
+    {
+      "id": "tech-stack_os_voidlinux",
+      "icon": "tech-stack:voidlinux",
+      "label": "tech-stack:v\noidlinux",
+      "position": [
+        430,
+        4225
+      ]
+    },
+    {
+      "id": "tech-stack_os_gentoo",
+      "icon": "tech-stack:gentoo",
+      "label": "tech-stack:g\nentoo",
+      "position": [
+        525,
+        4225
+      ]
+    },
+    {
+      "id": "tech-stack_os_freebsd",
+      "icon": "tech-stack:freebsd",
+      "label": "tech-stack:f\nreebsd",
+      "position": [
+        620,
+        4225
+      ]
+    },
+    {
+      "id": "tech-stack_os_openbsd",
+      "icon": "tech-stack:openbsd",
+      "label": "tech-stack:o\npenbsd",
+      "position": [
+        715,
+        4225
+      ]
+    },
+    {
+      "id": "cat_package_managers",
+      "type": "label",
+      "label": "Package Managers (9)",
+      "position": [
+        50,
+        4405
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_npm",
+      "icon": "tech-stack:npm",
+      "label": "tech-stack:n\npm",
+      "position": [
+        50,
+        4440
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_yarn",
+      "icon": "tech-stack:yarn",
+      "label": "tech-stack:y\narn",
+      "position": [
+        145,
+        4440
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_pnpm",
+      "icon": "tech-stack:pnpm",
+      "label": "tech-stack:p\nnpm",
+      "position": [
+        240,
+        4440
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_bun",
+      "icon": "tech-stack:bun",
+      "label": "tech-stack:b\nun",
+      "position": [
+        335,
+        4440
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_deno",
+      "icon": "tech-stack:deno",
+      "label": "tech-stack:d\neno",
+      "position": [
+        430,
+        4440
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_homebrew",
+      "icon": "tech-stack:homebrew",
+      "label": "tech-stack:h\nomebrew",
+      "position": [
+        525,
+        4440
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_chocolatey",
+      "icon": "tech-stack:chocolatey",
+      "label": "tech-stack:c\nhocolatey",
+      "position": [
+        620,
+        4440
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_snapcraft",
+      "icon": "tech-stack:snapcraft",
+      "label": "tech-stack:s\nnapcraft",
+      "position": [
+        715,
+        4440
+      ]
+    },
+    {
+      "id": "tech-stack_package_managers_flatpak",
+      "icon": "tech-stack:flatpak",
+      "label": "tech-stack:f\nlatpak",
+      "position": [
+        810,
+        4440
+      ]
+    },
+    {
+      "id": "cat_security",
+      "type": "label",
+      "label": "Security (7)",
+      "position": [
+        50,
+        4620
+      ]
+    },
+    {
+      "id": "tech-stack_security_letsencrypt",
+      "icon": "tech-stack:letsencrypt",
+      "label": "tech-stack:l\netsencrypt",
+      "position": [
+        50,
+        4655
+      ]
+    },
+    {
+      "id": "tech-stack_security_auth0",
+      "icon": "tech-stack:auth0",
+      "label": "tech-stack:a\nuth0",
+      "position": [
+        145,
+        4655
+      ]
+    },
+    {
+      "id": "tech-stack_security_okta",
+      "icon": "tech-stack:okta",
+      "label": "tech-stack:o\nkta",
+      "position": [
+        240,
+        4655
+      ]
+    },
+    {
+      "id": "tech-stack_security_snyk",
+      "icon": "tech-stack:snyk",
+      "label": "tech-stack:s\nnyk",
+      "position": [
+        335,
+        4655
+      ]
+    },
+    {
+      "id": "tech-stack_security_dependabot",
+      "icon": "tech-stack:dependabot",
+      "label": "tech-stack:d\nependabot",
+      "position": [
+        430,
+        4655
+      ]
+    },
+    {
+      "id": "tech-stack_security_owasp",
+      "icon": "tech-stack:owasp",
+      "label": "tech-stack:o\nwasp",
+      "position": [
+        525,
+        4655
+      ]
+    },
+    {
+      "id": "tech-stack_security_wireshark",
+      "icon": "tech-stack:wireshark",
+      "label": "tech-stack:w\nireshark",
+      "position": [
+        620,
+        4655
+      ]
+    },
+    {
+      "id": "cat_services",
+      "type": "label",
+      "label": "Services (15)",
+      "position": [
+        50,
+        4835
+      ]
+    },
+    {
+      "id": "tech-stack_services_stripe",
+      "icon": "tech-stack:stripe",
+      "label": "tech-stack:s\ntripe",
+      "position": [
+        50,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_paypal",
+      "icon": "tech-stack:paypal",
+      "label": "tech-stack:p\naypal",
+      "position": [
+        145,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_square",
+      "icon": "tech-stack:square",
+      "label": "tech-stack:s\nquare",
+      "position": [
+        240,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_shopify",
+      "icon": "tech-stack:shopify",
+      "label": "tech-stack:s\nhopify",
+      "position": [
+        335,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_mailchimp",
+      "icon": "tech-stack:mailchimp",
+      "label": "tech-stack:m\nailchimp",
+      "position": [
+        430,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_mapbox",
+      "icon": "tech-stack:mapbox",
+      "label": "tech-stack:m\napbox",
+      "position": [
+        525,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_algolia",
+      "icon": "tech-stack:algolia",
+      "label": "tech-stack:a\nlgolia",
+      "position": [
+        620,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_meilisearch",
+      "icon": "tech-stack:meilisearch",
+      "label": "tech-stack:m\neilisearch",
+      "position": [
+        715,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_contentful",
+      "icon": "tech-stack:contentful",
+      "label": "tech-stack:c\nontentful",
+      "position": [
+        810,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_strapi",
+      "icon": "tech-stack:strapi",
+      "label": "tech-stack:s\ntrapi",
+      "position": [
+        905,
+        4870
+      ]
+    },
+    {
+      "id": "tech-stack_services_sanity",
+      "icon": "tech-stack:sanity",
+      "label": "tech-stack:s\nanity",
+      "position": [
+        50,
+        5010
+      ]
+    },
+    {
+      "id": "tech-stack_services_ghost",
+      "icon": "tech-stack:ghost",
+      "label": "tech-stack:g\nhost",
+      "position": [
+        145,
+        5010
+      ]
+    },
+    {
+      "id": "tech-stack_services_wordpress",
+      "icon": "tech-stack:wordpress",
+      "label": "tech-stack:w\nordpress",
+      "position": [
+        240,
+        5010
+      ]
+    },
+    {
+      "id": "tech-stack_services_anthropic",
+      "icon": "tech-stack:anthropic",
+      "label": "tech-stack:a\nnthropic",
+      "position": [
+        335,
+        5010
+      ]
+    },
+    {
+      "id": "tech-stack_services_ollama",
+      "icon": "tech-stack:ollama",
+      "label": "tech-stack:o\nllama",
+      "position": [
+        430,
+        5010
+      ]
+    },
+    {
+      "id": "cat_testing",
+      "type": "label",
+      "label": "Testing (10)",
+      "position": [
+        50,
+        5190
+      ]
+    },
+    {
+      "id": "tech-stack_testing_jest",
+      "icon": "tech-stack:jest",
+      "label": "tech-stack:j\nest",
+      "position": [
+        50,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_mocha",
+      "icon": "tech-stack:mocha",
+      "label": "tech-stack:m\nocha",
+      "position": [
+        145,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_jasmine",
+      "icon": "tech-stack:jasmine",
+      "label": "tech-stack:j\nasmine",
+      "position": [
+        240,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_cypress",
+      "icon": "tech-stack:cypress",
+      "label": "tech-stack:c\nypress",
+      "position": [
+        335,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_selenium",
+      "icon": "tech-stack:selenium",
+      "label": "tech-stack:s\nelenium",
+      "position": [
+        430,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_puppeteer",
+      "icon": "tech-stack:puppeteer",
+      "label": "tech-stack:p\nuppeteer",
+      "position": [
+        525,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_pytest",
+      "icon": "tech-stack:pytest",
+      "label": "tech-stack:p\nytest",
+      "position": [
+        620,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_vitest",
+      "icon": "tech-stack:vitest",
+      "label": "tech-stack:v\nitest",
+      "position": [
+        715,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_testinglibrary",
+      "icon": "tech-stack:testinglibrary",
+      "label": "tech-stack:t\nestinglibrar\ny",
+      "position": [
+        810,
+        5225
+      ]
+    },
+    {
+      "id": "tech-stack_testing_cucumber",
+      "icon": "tech-stack:cucumber",
+      "label": "tech-stack:c\nucumber",
+      "position": [
+        905,
+        5225
+      ]
+    },
+    {
+      "id": "cat_tools",
+      "type": "label",
+      "label": "Tools (19)",
+      "position": [
+        50,
+        5405
+      ]
+    },
+    {
+      "id": "tech-stack_tools_git",
+      "icon": "tech-stack:git",
+      "label": "tech-stack:g\nit",
+      "position": [
+        50,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_github",
+      "icon": "tech-stack:github",
+      "label": "tech-stack:g\nithub",
+      "position": [
+        145,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_jira",
+      "icon": "tech-stack:jira",
+      "label": "tech-stack:j\nira",
+      "position": [
+        240,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_confluence",
+      "icon": "tech-stack:confluence",
+      "label": "tech-stack:c\nonfluence",
+      "position": [
+        335,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_discord",
+      "icon": "tech-stack:discord",
+      "label": "tech-stack:d\niscord",
+      "position": [
+        430,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_figma",
+      "icon": "tech-stack:figma",
+      "label": "tech-stack:f\nigma",
+      "position": [
+        525,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_notion",
+      "icon": "tech-stack:notion",
+      "label": "tech-stack:n\notion",
+      "position": [
+        620,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_trello",
+      "icon": "tech-stack:trello",
+      "label": "tech-stack:t\nrello",
+      "position": [
+        715,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_asana",
+      "icon": "tech-stack:asana",
+      "label": "tech-stack:a\nsana",
+      "position": [
+        810,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_linear",
+      "icon": "tech-stack:linear",
+      "label": "tech-stack:l\ninear",
+      "position": [
+        905,
+        5440
+      ]
+    },
+    {
+      "id": "tech-stack_tools_postman",
+      "icon": "tech-stack:postman",
+      "label": "tech-stack:p\nostman",
+      "position": [
+        50,
+        5580
+      ]
+    },
+    {
+      "id": "tech-stack_tools_insomnia",
+      "icon": "tech-stack:insomnia",
+      "label": "tech-stack:i\nnsomnia",
+      "position": [
+        145,
+        5580
+      ]
+    },
+    {
+      "id": "tech-stack_tools_swagger",
+      "icon": "tech-stack:swagger",
+      "label": "tech-stack:s\nwagger",
+      "position": [
+        240,
+        5580
+      ]
+    },
+    {
+      "id": "tech-stack_tools_graphql",
+      "icon": "tech-stack:graphql",
+      "label": "tech-stack:g\nraphql",
+      "position": [
+        335,
+        5580
+      ]
+    },
+    {
+      "id": "tech-stack_tools_curl",
+      "icon": "tech-stack:curl",
+      "label": "tech-stack:c\nurl",
+      "position": [
+        430,
+        5580
+      ]
+    },
+    {
+      "id": "tech-stack_tools_miro",
+      "icon": "tech-stack:miro",
+      "label": "tech-stack:m\niro",
+      "position": [
+        525,
+        5580
+      ]
+    },
+    {
+      "id": "tech-stack_tools_clickup",
+      "icon": "tech-stack:clickup",
+      "label": "tech-stack:c\nlickup",
+      "position": [
+        620,
+        5580
+      ]
+    },
+    {
+      "id": "tech-stack_tools_todoist",
+      "icon": "tech-stack:todoist",
+      "label": "tech-stack:t\nodoist",
+      "position": [
+        715,
+        5580
+      ]
+    },
+    {
+      "id": "tech-stack_tools_airtable",
+      "icon": "tech-stack:airtable",
+      "label": "tech-stack:a\nirtable",
+      "position": [
+        810,
+        5580
+      ]
+    },
+    {
+      "id": "cat_web_servers",
+      "type": "label",
+      "label": "Web Servers (4)",
+      "position": [
+        50,
+        5760
+      ]
+    },
+    {
+      "id": "tech-stack_web_servers_nginx",
+      "icon": "tech-stack:nginx",
+      "label": "tech-stack:n\nginx",
+      "position": [
+        50,
+        5795
+      ]
+    },
+    {
+      "id": "tech-stack_web_servers_apache",
+      "icon": "tech-stack:apache",
+      "label": "tech-stack:a\npache",
+      "position": [
+        145,
+        5795
+      ]
+    },
+    {
+      "id": "tech-stack_web_servers_caddy",
+      "icon": "tech-stack:caddy",
+      "label": "tech-stack:c\naddy",
+      "position": [
+        240,
+        5795
+      ]
+    },
+    {
+      "id": "tech-stack_web_servers_envoyproxy",
+      "icon": "tech-stack:envoyproxy",
+      "label": "tech-stack:e\nnvoyproxy",
+      "position": [
+        335,
+        5795
+      ]
+    }
+  ],
+  "render": {
+    "width": 1050,
+    "height": 6075
+  }
+}

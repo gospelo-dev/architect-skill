@@ -1,0 +1,11 @@
+{
+  "category": "Blockchain",
+  "count": 1,
+  "icons": [
+    {
+      "slug": "consortium",
+      "displayName": "Consortium",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Consortium.svg"
+    }
+  ]
+}

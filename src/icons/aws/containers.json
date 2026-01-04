@@ -1,0 +1,101 @@
+{
+  "category": "Containers",
+  "count": 19,
+  "icons": [
+    {
+      "slug": "res_elastic_container_registry_image",
+      "displayName": "Res Elastic Container Registry Image",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Registry_Image_48.svg"
+    },
+    {
+      "slug": "res_elastic_container_registry_registry",
+      "displayName": "Res Elastic Container Registry Registry",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Registry_Registry_48.svg"
+    },
+    {
+      "slug": "res_elastic_container_service_container_1",
+      "displayName": "Res Elastic Container Service Container 1",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Service_Container-1_48.svg"
+    },
+    {
+      "slug": "res_elastic_container_service_container_2",
+      "displayName": "Res Elastic Container Service Container 2",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Service_Container-2_48.svg"
+    },
+    {
+      "slug": "res_elastic_container_service_container_3",
+      "displayName": "Res Elastic Container Service Container 3",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Service_Container-3_48.svg"
+    },
+    {
+      "slug": "res_elastic_container_service_copiiot_cli",
+      "displayName": "Res Elastic Container Service Copiiot Cli",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Service_CopiIoT-CLI_48.svg"
+    },
+    {
+      "slug": "res_elastic_container_service_ecs_service_connect",
+      "displayName": "Res Elastic Container Service Ecs Service Connect",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Service_ECS-Service-Connect_48.svg"
+    },
+    {
+      "slug": "res_elastic_container_service_service",
+      "displayName": "Res Elastic Container Service Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Service_Service_48.svg"
+    },
+    {
+      "slug": "res_elastic_container_service_task",
+      "displayName": "Res Elastic Container Service Task",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Container-Service_Task_48.svg"
+    },
+    {
+      "slug": "res_elastic_kubernetes_service_eks_on_outposts",
+      "displayName": "Res Elastic Kubernetes Service Eks On Outposts",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Containers/Res_Amazon-Elastic-Kubernetes-Service_EKS-on-Outposts_48.svg"
+    },
+    {
+      "slug": "ecs_anywhere",
+      "displayName": "Ecs Anywhere",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_Amazon-ECS-Anywhere_64.svg"
+    },
+    {
+      "slug": "eks_anywhere",
+      "displayName": "Eks Anywhere",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_Amazon-EKS-Anywhere_64.svg"
+    },
+    {
+      "slug": "eks_cloud",
+      "displayName": "Eks Cloud",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_Amazon-EKS-Cloud_64.svg"
+    },
+    {
+      "slug": "eks_distro",
+      "displayName": "Eks Distro",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_Amazon-EKS-Distro_64.svg"
+    },
+    {
+      "slug": "elastic_container_registry",
+      "displayName": "Elastic Container Registry",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_Amazon-Elastic-Container-Registry_64.svg"
+    },
+    {
+      "slug": "elastic_container_service",
+      "displayName": "Elastic Container Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_Amazon-Elastic-Container-Service_64.svg"
+    },
+    {
+      "slug": "elastic_kubernetes_service",
+      "displayName": "Elastic Kubernetes Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_Amazon-Elastic-Kubernetes-Service_64.svg"
+    },
+    {
+      "slug": "fargate",
+      "displayName": "Fargate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_AWS-Fargate_64.svg"
+    },
+    {
+      "slug": "red_hat_openshift_service_on_aws",
+      "displayName": "Red Hat Openshift Service On Aws",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Containers/64/Arch_Red-Hat-OpenShift-Service-on-AWS_64.svg"
+    }
+  ]
+}

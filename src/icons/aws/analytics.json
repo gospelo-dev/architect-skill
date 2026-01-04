@@ -1,0 +1,276 @@
+{
+  "category": "Analytics",
+  "count": 54,
+  "icons": [
+    {
+      "slug": "res_athena_data_source_connectors",
+      "displayName": "Res Athena Data Source Connectors",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Athena_Data-Source-Connectors_48.svg"
+    },
+    {
+      "slug": "res_cloudsearch_search_documents",
+      "displayName": "Res Cloudsearch Search Documents",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-CloudSearch_Search-Documents_48.svg"
+    },
+    {
+      "slug": "res_data_exchange_for_apis",
+      "displayName": "Res Data Exchange For Apis",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_AWS-Data-Exchange-for-APIs_48.svg"
+    },
+    {
+      "slug": "res_datazone_business_data_catalog",
+      "displayName": "Res Datazone Business Data Catalog",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-DataZone_Business-Data-Catalog_48.svg"
+    },
+    {
+      "slug": "res_datazone_data_portal",
+      "displayName": "Res Datazone Data Portal",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-DataZone_Data-Portal_48.svg"
+    },
+    {
+      "slug": "res_datazone_data_projects",
+      "displayName": "Res Datazone Data Projects",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-DataZone_Data-Projects_48.svg"
+    },
+    {
+      "slug": "res_emr_cluster",
+      "displayName": "Res Emr Cluster",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-EMR_Cluster_48.svg"
+    },
+    {
+      "slug": "res_emr_emr_engine",
+      "displayName": "Res Emr Emr Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-EMR_EMR-Engine_48.svg"
+    },
+    {
+      "slug": "res_emr_hdfs_cluster",
+      "displayName": "Res Emr Hdfs Cluster",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-EMR_HDFS-Cluster_48.svg"
+    },
+    {
+      "slug": "res_glue_aws_glue_for_ray",
+      "displayName": "Res Glue Aws Glue For Ray",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_AWS-Glue_AWS-Glue-for-Ray_48.svg"
+    },
+    {
+      "slug": "res_glue_crawler",
+      "displayName": "Res Glue Crawler",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_AWS-Glue_Crawler_48.svg"
+    },
+    {
+      "slug": "res_glue_data_catalog",
+      "displayName": "Res Glue Data Catalog",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_AWS-Glue_Data-Catalog_48.svg"
+    },
+    {
+      "slug": "res_glue_data_quality",
+      "displayName": "Res Glue Data Quality",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_AWS-Glue_Data-Quality_48.svg"
+    },
+    {
+      "slug": "res_lake_formation_data_lake",
+      "displayName": "Res Lake Formation Data Lake",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_AWS-Lake-Formation_Data-Lake_48.svg"
+    },
+    {
+      "slug": "res_msk_amazon_msk_connect",
+      "displayName": "Res Msk Amazon Msk Connect",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-MSK_Amazon-MSK-Connect_48.svg"
+    },
+    {
+      "slug": "res_opensearch_service_cluster_administrator_node",
+      "displayName": "Res Opensearch Service Cluster Administrator Node",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-OpenSearch-Service_Cluster-Administrator-Node_48.svg"
+    },
+    {
+      "slug": "res_opensearch_service_data_node",
+      "displayName": "Res Opensearch Service Data Node",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-OpenSearch-Service_Data-Node_48.svg"
+    },
+    {
+      "slug": "res_opensearch_service_index",
+      "displayName": "Res Opensearch Service Index",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-OpenSearch-Service_Index_48.svg"
+    },
+    {
+      "slug": "res_opensearch_service_observability",
+      "displayName": "Res Opensearch Service Observability",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-OpenSearch-Service_Observability_48.svg"
+    },
+    {
+      "slug": "res_opensearch_service_opensearch_dashboards",
+      "displayName": "Res Opensearch Service Opensearch Dashboards",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-OpenSearch-Service_OpenSearch-Dashboards_48.svg"
+    },
+    {
+      "slug": "res_opensearch_service_opensearch_ingestion",
+      "displayName": "Res Opensearch Service Opensearch Ingestion",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-OpenSearch-Service_OpenSearch-Ingestion_48.svg"
+    },
+    {
+      "slug": "res_opensearch_service_traces",
+      "displayName": "Res Opensearch Service Traces",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-OpenSearch-Service_Traces_48.svg"
+    },
+    {
+      "slug": "res_opensearch_service_ultrawarm_node",
+      "displayName": "Res Opensearch Service Ultrawarm Node",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-OpenSearch-Service_UltraWarm-Node_48.svg"
+    },
+    {
+      "slug": "res_quicksight_paginated_reports",
+      "displayName": "Res Quicksight Paginated Reports",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Quicksight_Paginated-Reports_48.svg"
+    },
+    {
+      "slug": "res_redshift_auto_copy",
+      "displayName": "Res Redshift Auto Copy",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Redshift_Auto-copy_48.svg"
+    },
+    {
+      "slug": "res_redshift_data_sharing_governance",
+      "displayName": "Res Redshift Data Sharing Governance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Redshift_Data-Sharing-Governance_48.svg"
+    },
+    {
+      "slug": "res_redshift_dense_compute_node",
+      "displayName": "Res Redshift Dense Compute Node",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Redshift_Dense-Compute-Node_48.svg"
+    },
+    {
+      "slug": "res_redshift_dense_storage_node",
+      "displayName": "Res Redshift Dense Storage Node",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Redshift_Dense-Storage-Node_48.svg"
+    },
+    {
+      "slug": "res_redshift_ml",
+      "displayName": "Res Redshift Ml",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Redshift_ML_48.svg"
+    },
+    {
+      "slug": "res_redshift_query_editor_v2.0",
+      "displayName": "Res Redshift Query Editor V2.0",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Redshift_Query-Editor-v2.0_48.svg"
+    },
+    {
+      "slug": "res_redshift_ra3",
+      "displayName": "Res Redshift Ra3",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Redshift_RA3_48.svg"
+    },
+    {
+      "slug": "res_redshift_streaming_ingestion",
+      "displayName": "Res Redshift Streaming Ingestion",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Analytics/Res_Amazon-Redshift_Streaming-Ingestion_48.svg"
+    },
+    {
+      "slug": "athena",
+      "displayName": "Athena",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-Athena_64.svg"
+    },
+    {
+      "slug": "cloudsearch",
+      "displayName": "Cloudsearch",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-CloudSearch_64.svg"
+    },
+    {
+      "slug": "datazone",
+      "displayName": "Datazone",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-DataZone_64.svg"
+    },
+    {
+      "slug": "emr",
+      "displayName": "Emr",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-EMR_64.svg"
+    },
+    {
+      "slug": "finspace",
+      "displayName": "Finspace",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-FinSpace_64.svg"
+    },
+    {
+      "slug": "kinesis",
+      "displayName": "Kinesis",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-Kinesis_64.svg"
+    },
+    {
+      "slug": "kinesis_data_firehose",
+      "displayName": "Kinesis Data Firehose",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-Kinesis-Data-Firehose_64.svg"
+    },
+    {
+      "slug": "kinesis_data_streams",
+      "displayName": "Kinesis Data Streams",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-Kinesis-Data-Streams_64.svg"
+    },
+    {
+      "slug": "kinesis_video_streams",
+      "displayName": "Kinesis Video Streams",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-Kinesis-Video-Streams_64.svg"
+    },
+    {
+      "slug": "managed_service_for_apache_flink",
+      "displayName": "Managed Service For Apache Flink",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-Managed-Service-for-Apache-Flink_64.svg"
+    },
+    {
+      "slug": "managed_streaming_for_apache_kafka",
+      "displayName": "Managed Streaming For Apache Kafka",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-Managed-Streaming-for-Apache-Kafka_64.svg"
+    },
+    {
+      "slug": "opensearch_service",
+      "displayName": "Opensearch Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-OpenSearch-Service_64.svg"
+    },
+    {
+      "slug": "quicksight",
+      "displayName": "Quicksight",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-QuickSight_64.svg"
+    },
+    {
+      "slug": "redshift",
+      "displayName": "Redshift",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_Amazon-Redshift_64.svg"
+    },
+    {
+      "slug": "clean_rooms",
+      "displayName": "Clean Rooms",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_AWS-Clean-Rooms_64.svg"
+    },
+    {
+      "slug": "data_exchange",
+      "displayName": "Data Exchange",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_AWS-Data-Exchange_64.svg"
+    },
+    {
+      "slug": "data_pipeline",
+      "displayName": "Data Pipeline",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_AWS-Data-Pipeline_64.svg"
+    },
+    {
+      "slug": "entity_resolution",
+      "displayName": "Entity Resolution",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_AWS-Entity-Resolution_64.svg"
+    },
+    {
+      "slug": "glue",
+      "displayName": "Glue",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_AWS-Glue_64.svg"
+    },
+    {
+      "slug": "glue_databrew",
+      "displayName": "Glue Databrew",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_AWS-Glue-DataBrew_64.svg"
+    },
+    {
+      "slug": "glue_elastic_views",
+      "displayName": "Glue Elastic Views",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_AWS-Glue-Elastic-Views_64.svg"
+    },
+    {
+      "slug": "lake_formation",
+      "displayName": "Lake Formation",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Analytics/64/Arch_AWS-Lake-Formation_64.svg"
+    }
+  ]
+}

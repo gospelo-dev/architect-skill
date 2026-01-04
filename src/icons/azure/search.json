@@ -1,0 +1,21 @@
+{
+  "category": "Search",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "search",
+      "displayName": "Search",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search.svg"
+    },
+    {
+      "slug": "search_grid",
+      "displayName": "Search Grid",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search-Grid.svg"
+    },
+    {
+      "slug": "search_services",
+      "displayName": "Search Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search-Services.svg"
+    }
+  ]
+}

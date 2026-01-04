@@ -1,0 +1,16 @@
+{
+  "category": "Mobile",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "mobile",
+      "displayName": "Mobile",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mobile.svg"
+    },
+    {
+      "slug": "mobile_engagement",
+      "displayName": "Mobile Engagement",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mobile-Engagement.svg"
+    }
+  ]
+}

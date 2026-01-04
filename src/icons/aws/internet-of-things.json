@@ -1,0 +1,481 @@
+{
+  "category": "Internet of Things",
+  "count": 95,
+  "icons": [
+    {
+      "slug": "res_iot_action",
+      "displayName": "Res Iot Action",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Action_48.svg"
+    },
+    {
+      "slug": "res_iot_actuator",
+      "displayName": "Res Iot Actuator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Actuator_48.svg"
+    },
+    {
+      "slug": "res_iot_alexa_enabled_device",
+      "displayName": "Res Iot Alexa Enabled Device",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Alexa_Enabled-Device_48.svg"
+    },
+    {
+      "slug": "res_iot_alexa_skill",
+      "displayName": "Res Iot Alexa Skill",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Alexa_Skill_48.svg"
+    },
+    {
+      "slug": "res_iot_alexa_voice_service",
+      "displayName": "Res Iot Alexa Voice Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Alexa_Voice-Service_48.svg"
+    },
+    {
+      "slug": "res_iot_analytics_channel",
+      "displayName": "Res Iot Analytics Channel",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Analytics_Channel_48.svg"
+    },
+    {
+      "slug": "res_iot_analytics_data_store",
+      "displayName": "Res Iot Analytics Data Store",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Analytics_Data-Store_48.svg"
+    },
+    {
+      "slug": "res_iot_analytics_dataset",
+      "displayName": "Res Iot Analytics Dataset",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Analytics_Dataset_48.svg"
+    },
+    {
+      "slug": "res_iot_analytics_notebook",
+      "displayName": "Res Iot Analytics Notebook",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Analytics_Notebook_48.svg"
+    },
+    {
+      "slug": "res_iot_analytics_pipeline",
+      "displayName": "Res Iot Analytics Pipeline",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Analytics_Pipeline_48.svg"
+    },
+    {
+      "slug": "res_iot_certificate",
+      "displayName": "Res Iot Certificate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Certificate_48.svg"
+    },
+    {
+      "slug": "res_iot_core_device_advisor",
+      "displayName": "Res Iot Core Device Advisor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Core_Device-Advisor_48.svg"
+    },
+    {
+      "slug": "res_iot_core_device_location",
+      "displayName": "Res Iot Core Device Location",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Core_Device-Location_48.svg"
+    },
+    {
+      "slug": "res_iot_desired_state",
+      "displayName": "Res Iot Desired State",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Desired-State_48.svg"
+    },
+    {
+      "slug": "res_iot_device_defender_iot_device_jobs",
+      "displayName": "Res Iot Device Defender Iot Device Jobs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Device-Defender_IoT-Device-Jobs_48.svg"
+    },
+    {
+      "slug": "res_iot_device_gateway",
+      "displayName": "Res Iot Device Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Device-Gateway_48.svg"
+    },
+    {
+      "slug": "res_iot_device_management_fleet_hub",
+      "displayName": "Res Iot Device Management Fleet Hub",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Device-Management_Fleet-Hub_48.svg"
+    },
+    {
+      "slug": "res_iot_device_tester",
+      "displayName": "Res Iot Device Tester",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Device-Tester_48.svg"
+    },
+    {
+      "slug": "res_iot_echo",
+      "displayName": "Res Iot Echo",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Echo_48.svg"
+    },
+    {
+      "slug": "res_iot_fire_tv",
+      "displayName": "Res Iot Fire Tv",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Fire_TV_48.svg"
+    },
+    {
+      "slug": "res_iot_fire_tv_stick",
+      "displayName": "Res Iot Fire Tv Stick",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Fire-TV_Stick_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_artifact",
+      "displayName": "Res Iot Greengrass Artifact",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Artifact_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_component",
+      "displayName": "Res Iot Greengrass Component",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Component_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_component_machine_learning",
+      "displayName": "Res Iot Greengrass Component Machine Learning",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Component-Machine-Learning_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_component_nucleus",
+      "displayName": "Res Iot Greengrass Component Nucleus",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Component-Nucleus_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_component_private",
+      "displayName": "Res Iot Greengrass Component Private",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Component-Private_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_component_public",
+      "displayName": "Res Iot Greengrass Component Public",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Component-Public_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_connector",
+      "displayName": "Res Iot Greengrass Connector",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Connector_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_interprocess_communication",
+      "displayName": "Res Iot Greengrass Interprocess Communication",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Interprocess-Communication_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_protocol",
+      "displayName": "Res Iot Greengrass Protocol",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Protocol_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_recipe",
+      "displayName": "Res Iot Greengrass Recipe",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Recipe_48.svg"
+    },
+    {
+      "slug": "res_iot_greengrass_stream_manager",
+      "displayName": "Res Iot Greengrass Stream Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Greengrass_Stream-Manager_48.svg"
+    },
+    {
+      "slug": "res_iot_hardware_board",
+      "displayName": "Res Iot Hardware Board",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Hardware-Board_48.svg"
+    },
+    {
+      "slug": "res_iot_http_protocol",
+      "displayName": "Res Iot Http Protocol",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_HTTP_Protocol_48.svg"
+    },
+    {
+      "slug": "res_iot_http2_protocol",
+      "displayName": "Res Iot Http2 Protocol",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_HTTP2-Protocol_48.svg"
+    },
+    {
+      "slug": "res_iot_lambda_function",
+      "displayName": "Res Iot Lambda Function",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Lambda_Function_48.svg"
+    },
+    {
+      "slug": "res_iot_lorawan_protocol",
+      "displayName": "Res Iot Lorawan Protocol",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_LoRaWAN-Protocol_48.svg"
+    },
+    {
+      "slug": "res_iot_mqtt_protocol",
+      "displayName": "Res Iot Mqtt Protocol",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_MQTT_Protocol_48.svg"
+    },
+    {
+      "slug": "res_iot_over_air_update",
+      "displayName": "Res Iot Over Air Update",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Over-Air-Update_48.svg"
+    },
+    {
+      "slug": "res_iot_policy",
+      "displayName": "Res Iot Policy",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Policy_48.svg"
+    },
+    {
+      "slug": "res_iot_reported_state",
+      "displayName": "Res Iot Reported State",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Reported-State_48.svg"
+    },
+    {
+      "slug": "res_iot_rule",
+      "displayName": "Res Iot Rule",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-Rule_48.svg"
+    },
+    {
+      "slug": "res_iot_sailboat",
+      "displayName": "Res Iot Sailboat",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Sailboat_48.svg"
+    },
+    {
+      "slug": "res_iot_sensor",
+      "displayName": "Res Iot Sensor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Sensor_48.svg"
+    },
+    {
+      "slug": "res_iot_servo",
+      "displayName": "Res Iot Servo",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Servo_48.svg"
+    },
+    {
+      "slug": "res_iot_shadow",
+      "displayName": "Res Iot Shadow",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Shadow_48.svg"
+    },
+    {
+      "slug": "res_iot_simulator",
+      "displayName": "Res Iot Simulator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Simulator_48.svg"
+    },
+    {
+      "slug": "res_iot_sitewise_asset",
+      "displayName": "Res Iot Sitewise Asset",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-SiteWise_Asset_48.svg"
+    },
+    {
+      "slug": "res_iot_sitewise_asset_hierarchy",
+      "displayName": "Res Iot Sitewise Asset Hierarchy",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-SiteWise_Asset-Hierarchy_48.svg"
+    },
+    {
+      "slug": "res_iot_sitewise_asset_model",
+      "displayName": "Res Iot Sitewise Asset Model",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-SiteWise_Asset-Model_48.svg"
+    },
+    {
+      "slug": "res_iot_sitewise_asset_properties",
+      "displayName": "Res Iot Sitewise Asset Properties",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-SiteWise_Asset-Properties_48.svg"
+    },
+    {
+      "slug": "res_iot_sitewise_data_streams",
+      "displayName": "Res Iot Sitewise Data Streams",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT-SiteWise_Data-Streams_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_bank",
+      "displayName": "Res Iot Thing Bank",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Bank_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_bicycle",
+      "displayName": "Res Iot Thing Bicycle",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Bicycle_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_camera",
+      "displayName": "Res Iot Thing Camera",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Camera_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_car",
+      "displayName": "Res Iot Thing Car",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Car_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_cart",
+      "displayName": "Res Iot Thing Cart",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Cart_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_coffee_pot",
+      "displayName": "Res Iot Thing Coffee Pot",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Coffee-Pot_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_door_lock",
+      "displayName": "Res Iot Thing Door Lock",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Door-Lock_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_factory",
+      "displayName": "Res Iot Thing Factory",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Factory_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_freertos_device",
+      "displayName": "Res Iot Thing Freertos Device",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_FreeRTOS-Device_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_generic",
+      "displayName": "Res Iot Thing Generic",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Generic_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_house",
+      "displayName": "Res Iot Thing House",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_House_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_humidity_sensor",
+      "displayName": "Res Iot Thing Humidity Sensor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Humidity-Sensor_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_industrial_pc",
+      "displayName": "Res Iot Thing Industrial Pc",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Industrial-PC_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_lightbulb",
+      "displayName": "Res Iot Thing Lightbulb",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Lightbulb_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_medical_emergency",
+      "displayName": "Res Iot Thing Medical Emergency",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Medical-Emergency_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_plc",
+      "displayName": "Res Iot Thing Plc",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_PLC_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_police_emergency",
+      "displayName": "Res Iot Thing Police Emergency",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Police-Emergency_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_relay",
+      "displayName": "Res Iot Thing Relay",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Relay_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_stacklight",
+      "displayName": "Res Iot Thing Stacklight",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Stacklight_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_temperature_humidity_sensor",
+      "displayName": "Res Iot Thing Temperature Humidity Sensor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Temperature-Humidity-Sensor_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_temperature_sensor",
+      "displayName": "Res Iot Thing Temperature Sensor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Temperature-Sensor_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_temperature_vibration_sensor",
+      "displayName": "Res Iot Thing Temperature Vibration Sensor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Temperature-Vibration-Sensor_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_thermostat",
+      "displayName": "Res Iot Thing Thermostat",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Thermostat_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_travel",
+      "displayName": "Res Iot Thing Travel",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Travel_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_utility",
+      "displayName": "Res Iot Thing Utility",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Utility_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_vibration_sensor",
+      "displayName": "Res Iot Thing Vibration Sensor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Vibration-Sensor_48.svg"
+    },
+    {
+      "slug": "res_iot_thing_windfarm",
+      "displayName": "Res Iot Thing Windfarm",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Thing_Windfarm_48.svg"
+    },
+    {
+      "slug": "res_iot_topic",
+      "displayName": "Res Iot Topic",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_IoT/Res_AWS-IoT_Topic_48.svg"
+    },
+    {
+      "slug": "iot_1_click",
+      "displayName": "Iot 1 Click",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-1-Click_64.svg"
+    },
+    {
+      "slug": "iot_analytics",
+      "displayName": "Iot Analytics",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-Analytics_64.svg"
+    },
+    {
+      "slug": "iot_button",
+      "displayName": "Iot Button",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-Button_64.svg"
+    },
+    {
+      "slug": "iot_core",
+      "displayName": "Iot Core",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-Core_64.svg"
+    },
+    {
+      "slug": "iot_device_defender",
+      "displayName": "Iot Device Defender",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-Device-Defender_64.svg"
+    },
+    {
+      "slug": "iot_device_management",
+      "displayName": "Iot Device Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-Device-Management_64.svg"
+    },
+    {
+      "slug": "iot_events",
+      "displayName": "Iot Events",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-Events_64.svg"
+    },
+    {
+      "slug": "iot_expresslink",
+      "displayName": "Iot Expresslink",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-ExpressLink_64.svg"
+    },
+    {
+      "slug": "iot_fleetwise",
+      "displayName": "Iot Fleetwise",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-FleetWise_64.svg"
+    },
+    {
+      "slug": "iot_greengrass",
+      "displayName": "Iot Greengrass",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-Greengrass_64.svg"
+    },
+    {
+      "slug": "iot_roborunner",
+      "displayName": "Iot Roborunner",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-RoboRunner_64.svg"
+    },
+    {
+      "slug": "iot_sitewise",
+      "displayName": "Iot Sitewise",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-SiteWise_64.svg"
+    },
+    {
+      "slug": "iot_things_graph",
+      "displayName": "Iot Things Graph",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-Things-Graph_64.svg"
+    },
+    {
+      "slug": "iot_twinmaker",
+      "displayName": "Iot Twinmaker",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_AWS-IoT-TwinMaker_64.svg"
+    },
+    {
+      "slug": "freertos",
+      "displayName": "Freertos",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Internet-of-Things/64/Arch_FreeRTOS_64.svg"
+    }
+  ]
+}

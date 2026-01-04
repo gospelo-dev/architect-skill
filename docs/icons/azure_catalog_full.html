@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Icon Catalog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffffff, #e6f2ff);
+      min-height: 100vh;
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 16px 24px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+    }
+    .search-container {
+      flex: 1;
+      min-width: 250px;
+      max-width: 400px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 16px;
+      font-size: 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-input:focus {
+      border-color: #0078D4;
+      box-shadow: 0 0 0 3px #0078D433;
+    }
+    .search-info {
+      font-size: 13px;
+      color: #666;
+      white-space: nowrap;
+    }
+    .match-count {
+      font-weight: 600;
+      color: #0078D4;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .category {
+      margin-bottom: 32px;
+    }
+    .category-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #444;
+      margin: 0 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eee;
+    }
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 12px;
+    }
+    .icon-card {
+      background: white;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .icon-card:hover {
+      border-color: #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .icon-card.highlight {
+      border-color: #3B82F6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(59, 130, 246, 0.2);
+      background: white;
+    }
+    .icon-card.dimmed {
+      opacity: 0.3;
+    }
+    .icon-image {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-image img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+    .icon-id {
+      font-size: 10px;
+      color: #666;
+      word-break: break-all;
+      line-height: 1.3;
+    }
+    .icon-card.highlight .icon-id {
+      color: #1D4ED8;
+      font-weight: 500;
+    }
+    .copied-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    .copied-toast.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div>
+        <h1 class="title">Azure Icon Catalog</h1>
+        <div class="subtitle">291 icons</div>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search icons... (e.g. lambda, s3, storage)" id="searchInput">
+      </div>
+      <div class="search-info">
+        <span id="matchCount"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div class="category" data-category="AI &amp; Cognitive">
+      <h2 class="category-title">AI &amp; Cognitive (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:bot_services" data-display-name="Bot Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Bot-Services.svg" alt="Bot Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:bot_services</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:cognitive_services" data-display-name="Cognitive Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cognitive-Services.svg" alt="Cognitive Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cognitive_services</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Analytics">
+      <h2 class="category-title">Analytics (7)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:analysis_services" data-display-name="Analysis Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Analysis-Services.svg" alt="Analysis Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:analysis_services</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:hd_insight_clusters" data-display-name="Hd Insight Clusters">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/HD-Insight-Clusters.svg" alt="Hd Insight Clusters" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:hd_insight_clusters</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:stream_analytics_jobs" data-display-name="Stream Analytics Jobs">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Stream-Analytics-Jobs.svg" alt="Stream Analytics Jobs" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:stream_analytics_jobs</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:time_series_data_sets" data-display-name="Time Series Data Sets">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Data-Sets.svg" alt="Time Series Data Sets" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:time_series_data_sets</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:time_series_insights_environments" data-display-name="Time Series Insights Environments">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Insights-Environments.svg" alt="Time Series Insights Environments" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:time_series_insights_environments</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:time_series_insights_event_sources" data-display-name="Time Series Insights Event Sources">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Insights-Event-Sources.svg" alt="Time Series Insights Event Sources" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:time_series_insights_event_sources</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:workspaces" data-display-name="Workspaces">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workspaces.svg" alt="Workspaces" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:workspaces</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="API Management">
+      <h2 class="category-title">API Management (1)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:api_management_services" data-display-name="Api Management Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/API-Management-Services.svg" alt="Api Management Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:api_management_services</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="App Services">
+      <h2 class="category-title">App Services (6)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:app_registrations" data-display-name="App Registrations">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Registrations.svg" alt="App Registrations" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:app_registrations</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:app_service_certificates" data-display-name="App Service Certificates">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Certificates.svg" alt="App Service Certificates" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:app_service_certificates</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:app_service_domains" data-display-name="App Service Domains">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Domains.svg" alt="App Service Domains" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:app_service_domains</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:app_service_environments" data-display-name="App Service Environments">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Environments.svg" alt="App Service Environments" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:app_service_environments</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:app_service_plans" data-display-name="App Service Plans">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Plans.svg" alt="App Service Plans" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:app_service_plans</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:app_services" data-display-name="App Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Services.svg" alt="App Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:app_services</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Application">
+      <h2 class="category-title">Application (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:application_gateways" data-display-name="Application Gateways">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Gateways.svg" alt="Application Gateways" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:application_gateways</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:application_insights" data-display-name="Application Insights">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Insights.svg" alt="Application Insights" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:application_insights</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:application_security_groups" data-display-name="Application Security Groups">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Security-Groups.svg" alt="Application Security Groups" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:application_security_groups</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Automation">
+      <h2 class="category-title">Automation (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:automation_accounts" data-display-name="Automation Accounts">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Automation-Accounts.svg" alt="Automation Accounts" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:automation_accounts</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:module" data-display-name="Module">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Module.svg" alt="Module" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:module</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:scheduler" data-display-name="Scheduler">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Scheduler.svg" alt="Scheduler" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:scheduler</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Availability">
+      <h2 class="category-title">Availability (1)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:availability_sets" data-display-name="Availability Sets">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Availability-Sets.svg" alt="Availability Sets" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:availability_sets</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Azure Services">
+      <h2 class="category-title">Azure Services (32)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:abs_member" data-display-name="Abs Member">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ABS-Member.svg" alt="Abs Member" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:abs_member</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_active_directory" data-display-name="Azure Active Directory">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Active-Directory.svg" alt="Azure Active Directory" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_active_directory</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_ad_b2c" data-display-name="Azure Ad B2c">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-B2C.svg" alt="Azure Ad B2c" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_ad_b2c</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_ad_domain_services" data-display-name="Azure Ad Domain Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-Domain-Services.svg" alt="Azure Ad Domain Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_ad_domain_services</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_ad_roles_and_administrators" data-display-name="Azure Ad Roles And Administrators">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-Roles-and-Administrators.svg" alt="Azure Ad Roles And Administrators" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_ad_roles_and_administrators</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_arc" data-display-name="Azure Arc">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Arc.svg" alt="Azure Arc" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_arc</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_blockchain_service" data-display-name="Azure Blockchain Service">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Blockchain-Service.svg" alt="Azure Blockchain Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_blockchain_service</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_cloud_shell" data-display-name="Azure Cloud Shell">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Cloud-Shell.svg" alt="Azure Cloud Shell" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_cloud_shell</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_cosmos_db" data-display-name="Azure Cosmos Db">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Cosmos-DB.svg" alt="Azure Cosmos Db" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_cosmos_db</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_data_catalog" data-display-name="Azure Data Catalog">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Data-Catalog.svg" alt="Azure Data Catalog" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_data_catalog</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_data_explorer_clusters" data-display-name="Azure Data Explorer Clusters">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Data-Explorer-Clusters.svg" alt="Azure Data Explorer Clusters" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_data_explorer_clusters</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_database_mariadb_server" data-display-name="Azure Database Mariadb Server">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-MariaDB-Server.svg" alt="Azure Database Mariadb Server" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_database_mariadb_server</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_database_migration_services" data-display-name="Azure Database Migration Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-Migration-Services.svg" alt="Azure Database Migration Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_database_migration_services</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_database_mysql_server" data-display-name="Azure Database Mysql Server">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-MySQL-Server.svg" alt="Azure Database Mysql Server" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_database_mysql_server</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_database_postgresql_server" data-display-name="Azure Database Postgresql Server">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-PostgreSQL-Server.svg" alt="Azure Database Postgresql Server" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_database_postgresql_server</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_devops" data-display-name="Azure Devops">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-DevOps.svg" alt="Azure Devops" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_devops</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_firewall_manager" data-display-name="Azure Firewall Manager">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Firewall-Manager.svg" alt="Azure Firewall Manager" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_firewall_manager</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_hcp_cache" data-display-name="Azure Hcp Cache">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-HCP-Cache.svg" alt="Azure Hcp Cache" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_hcp_cache</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_lighthouse" data-display-name="Azure Lighthouse">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Lighthouse.svg" alt="Azure Lighthouse" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_lighthouse</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_maps_accounts" data-display-name="Azure Maps Accounts">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Maps-Accounts.svg" alt="Azure Maps Accounts" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_maps_accounts</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_media_service" data-display-name="Azure Media Service">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Media-Service.svg" alt="Azure Media Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_media_service</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_migrate" data-display-name="Azure Migrate">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Migrate.svg" alt="Azure Migrate" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_migrate</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_netapp_files" data-display-name="Azure Netapp Files">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-NetApp-Files.svg" alt="Azure Netapp Files" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_netapp_files</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_sentinel" data-display-name="Azure Sentinel">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Sentinel.svg" alt="Azure Sentinel" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_sentinel</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_sphere" data-display-name="Azure Sphere">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Sphere.svg" alt="Azure Sphere" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_sphere</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_sql_server_stretch_databases" data-display-name="Azure Sql Server Stretch Databases">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-SQL-Server-Stretch-Databases.svg" alt="Azure Sql Server Stretch Databases" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_sql_server_stretch_databases</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_sql_vm" data-display-name="Azure Sql Vm">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-SQL-VM.svg" alt="Azure Sql Vm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_sql_vm</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_stack" data-display-name="Azure Stack">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Stack.svg" alt="Azure Stack" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_stack</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_stack_edge" data-display-name="Azure Stack Edge">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Stack-Edge.svg" alt="Azure Stack Edge" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_stack_edge</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_synapse_analytics" data-display-name="Azure Synapse Analytics">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Synapse-Analytics.svg" alt="Azure Synapse Analytics" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_synapse_analytics</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_token_service" data-display-name="Azure Token Service">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Token-Service.svg" alt="Azure Token Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_token_service</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:azure_workbooks" data-display-name="Azure Workbooks">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Workbooks.svg" alt="Azure Workbooks" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:azure_workbooks</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Backup &amp; Recovery">
+      <h2 class="category-title">Backup &amp; Recovery (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:infrastructure_backup" data-display-name="Infrastructure Backup">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Infrastructure-Backup.svg" alt="Infrastructure Backup" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:infrastructure_backup</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:recovery_services_vaults" data-display-name="Recovery Services Vaults">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Recovery-Services-Vaults.svg" alt="Recovery Services Vaults" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:recovery_services_vaults</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Blockchain">
+      <h2 class="category-title">Blockchain (1)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:consortium" data-display-name="Consortium">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Consortium.svg" alt="Consortium" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:consortium</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Cache">
+      <h2 class="category-title">Cache (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:cache" data-display-name="Cache">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cache.svg" alt="Cache" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cache</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:cache_redis" data-display-name="Cache Redis">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cache-Redis.svg" alt="Cache Redis" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cache_redis</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="CDN">
+      <h2 class="category-title">CDN (1)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:cdn_profiles" data-display-name="Cdn Profiles">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/CDN-Profiles.svg" alt="Cdn Profiles" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cdn_profiles</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Compute">
+      <h2 class="category-title">Compute (26)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:avs" data-display-name="Avs">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/AVS.svg" alt="Avs" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:avs</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:batch_accounts" data-display-name="Batch Accounts">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Batch-Accounts.svg" alt="Batch Accounts" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:batch_accounts</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:cloud_services_(classic)" data-display-name="Cloud Services (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cloud-Services-(Classic).svg" alt="Cloud Services (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cloud_services_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:extensions" data-display-name="Extensions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Extensions.svg" alt="Extensions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:extensions</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:function_apps" data-display-name="Function Apps">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Function-Apps.svg" alt="Function Apps" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:function_apps</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:image" data-display-name="Image">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image.svg" alt="Image" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:image</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:image_definitions" data-display-name="Image Definitions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image-Definitions.svg" alt="Image Definitions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:image_definitions</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:image_versions" data-display-name="Image Versions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image-Versions.svg" alt="Image Versions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:image_versions</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:images" data-display-name="Images">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Images.svg" alt="Images" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:images</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:machinesazurearc" data-display-name="Machinesazurearc">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/MachinesAzureArc.svg" alt="Machinesazurearc" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:machinesazurearc</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:os_images_(classic)" data-display-name="Os Images (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/OS-Images-(Classic).svg" alt="Os Images (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:os_images_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:proximity_placement_groups" data-display-name="Proximity Placement Groups">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Proximity-Placement-Groups.svg" alt="Proximity Placement Groups" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:proximity_placement_groups</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:remote_rendering" data-display-name="Remote Rendering">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Remote-Rendering.svg" alt="Remote Rendering" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:remote_rendering</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:scale" data-display-name="Scale">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Scale.svg" alt="Scale" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:scale</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:server_farm" data-display-name="Server Farm">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Server-Farm.svg" alt="Server Farm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:server_farm</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:shared_image_galleries" data-display-name="Shared Image Galleries">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Shared-Image-Galleries.svg" alt="Shared Image Galleries" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:shared_image_galleries</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:virtual_clusters" data-display-name="Virtual Clusters">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Clusters.svg" alt="Virtual Clusters" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:virtual_clusters</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:virtual_machine" data-display-name="Virtual Machine">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Machine.svg" alt="Virtual Machine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:virtual_machine</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:virtual_machines_(classic)" data-display-name="Virtual Machines (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Machines-(Classic).svg" alt="Virtual Machines (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:virtual_machines_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:virtual_network_gateways" data-display-name="Virtual Network Gateways">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Network-Gateways.svg" alt="Virtual Network Gateways" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:virtual_network_gateways</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:virtual_networks" data-display-name="Virtual Networks">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Networks.svg" alt="Virtual Networks" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:virtual_networks</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:virtual_networks_(classic)" data-display-name="Virtual Networks (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Networks-(Classic).svg" alt="Virtual Networks (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:virtual_networks_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:virtual_wans" data-display-name="Virtual Wans">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-WANs.svg" alt="Virtual Wans" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:virtual_wans</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:vm_images_(classic)" data-display-name="Vm Images (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/VM-Images-(Classic).svg" alt="Vm Images (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:vm_images_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:vm_scale_sets" data-display-name="Vm Scale Sets">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/VM-Scale-Sets.svg" alt="Vm Scale Sets" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:vm_scale_sets</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:windows_virtual_desktop" data-display-name="Windows Virtual Desktop">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Windows-Virtual-Desktop.svg" alt="Windows Virtual Desktop" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:windows_virtual_desktop</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Containers">
+      <h2 class="category-title">Containers (5)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:container_instances" data-display-name="Container Instances">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Instances.svg" alt="Container Instances" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:container_instances</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:container_registries" data-display-name="Container Registries">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Registries.svg" alt="Container Registries" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:container_registries</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:container_services_(deprecated)" data-display-name="Container Services (Deprecated)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Services-(Deprecated).svg" alt="Container Services (Deprecated)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:container_services_(deprecated)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:kubernetes_services" data-display-name="Kubernetes Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Kubernetes-Services.svg" alt="Kubernetes Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:kubernetes_services</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:mesh_applications" data-display-name="Mesh Applications">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mesh-Applications.svg" alt="Mesh Applications" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:mesh_applications</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Cost Management">
+      <h2 class="category-title">Cost Management (4)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:cost_alerts" data-display-name="Cost Alerts">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Alerts.svg" alt="Cost Alerts" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cost_alerts</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:cost_analysis" data-display-name="Cost Analysis">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Analysis.svg" alt="Cost Analysis" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cost_analysis</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:cost_budgets" data-display-name="Cost Budgets">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Budgets.svg" alt="Cost Budgets" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cost_budgets</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:cost_management" data-display-name="Cost Management">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Management.svg" alt="Cost Management" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cost_management</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Data Services">
+      <h2 class="category-title">Data Services (8)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:data_box" data-display-name="Data Box">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Box.svg" alt="Data Box" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:data_box</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:data_box_edge" data-display-name="Data Box Edge">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Box-Edge.svg" alt="Data Box Edge" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:data_box_edge</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:data_factory" data-display-name="Data Factory">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Factory.svg" alt="Data Factory" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:data_factory</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:data_lake_storage_gen1" data-display-name="Data Lake Storage Gen1">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Lake-Storage-Gen1.svg" alt="Data Lake Storage Gen1" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:data_lake_storage_gen1</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:data_lake_store_gen1" data-display-name="Data Lake Store Gen1">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Lake-Store-Gen1.svg" alt="Data Lake Store Gen1" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:data_lake_store_gen1</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:data_share_invitations" data-display-name="Data Share Invitations">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Share-Invitations.svg" alt="Data Share Invitations" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:data_share_invitations</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:data_shares" data-display-name="Data Shares">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Shares.svg" alt="Data Shares" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:data_shares</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:import_export_jobs" data-display-name="Import Export Jobs">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Import-Export-Jobs.svg" alt="Import Export Jobs" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:import_export_jobs</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Databases">
+      <h2 class="category-title">Databases (8)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:elastic_job_agents" data-display-name="Elastic Job Agents">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Elastic-Job-Agents.svg" alt="Elastic Job Agents" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:elastic_job_agents</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:instance_pools" data-display-name="Instance Pools">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Instance-Pools.svg" alt="Instance Pools" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:instance_pools</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:production_ready_database" data-display-name="Production Ready Database">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Production-Ready-Database.svg" alt="Production Ready Database" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:production_ready_database</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:sql_data_warehouses" data-display-name="Sql Data Warehouses">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Data-Warehouses.svg" alt="Sql Data Warehouses" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:sql_data_warehouses</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:sql_database" data-display-name="Sql Database">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Database.svg" alt="Sql Database" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:sql_database</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:sql_elastic_pools" data-display-name="Sql Elastic Pools">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Elastic-Pools.svg" alt="Sql Elastic Pools" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:sql_elastic_pools</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:sql_managed_instance" data-display-name="Sql Managed Instance">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Managed-Instance.svg" alt="Sql Managed Instance" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:sql_managed_instance</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:sql_server" data-display-name="Sql Server">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Server.svg" alt="Sql Server" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:sql_server</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Developer Tools">
+      <h2 class="category-title">Developer Tools (12)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:backlog" data-display-name="Backlog">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Backlog.svg" alt="Backlog" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:backlog</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:branch" data-display-name="Branch">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Branch.svg" alt="Branch" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:branch</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:bug" data-display-name="Bug">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Bug.svg" alt="Bug" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:bug</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:builds" data-display-name="Builds">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Builds.svg" alt="Builds" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:builds</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:code" data-display-name="Code">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Code.svg" alt="Code" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:code</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:commit" data-display-name="Commit">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Commit.svg" alt="Commit" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:commit</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:dev_console" data-display-name="Dev Console">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Dev-Console.svg" alt="Dev Console" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:dev_console</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:devtest_labs" data-display-name="Devtest Labs">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DevTest-Labs.svg" alt="Devtest Labs" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:devtest_labs</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:lab_services" data-display-name="Lab Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Lab-Services.svg" alt="Lab Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:lab_services</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:powershell" data-display-name="Powershell">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Powershell.svg" alt="Powershell" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:powershell</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:process_explorer" data-display-name="Process Explorer">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Process-Explorer.svg" alt="Process Explorer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:process_explorer</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:tfs_vc_repository" data-display-name="Tfs Vc Repository">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/TFS-VC-Repository.svg" alt="Tfs Vc Repository" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:tfs_vc_repository</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Devices">
+      <h2 class="category-title">Devices (4)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:device_provisioning_services" data-display-name="Device Provisioning Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Provisioning-Services.svg" alt="Device Provisioning Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:device_provisioning_services</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:device_security_apple" data-display-name="Device Security Apple">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Apple.svg" alt="Device Security Apple" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:device_security_apple</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:device_security_google" data-display-name="Device Security Google">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Google.svg" alt="Device Security Google" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:device_security_google</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:device_security_windows" data-display-name="Device Security Windows">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Windows.svg" alt="Device Security Windows" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:device_security_windows</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Enterprise">
+      <h2 class="category-title">Enterprise (1)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:sap_azure_monitor" data-display-name="Sap Azure Monitor">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SAP-Azure-Monitor.svg" alt="Sap Azure Monitor" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:sap_azure_monitor</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Events &amp; Messaging">
+      <h2 class="category-title">Events &amp; Messaging (8)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:event_grid_domains" data-display-name="Event Grid Domains">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Domains.svg" alt="Event Grid Domains" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:event_grid_domains</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:event_grid_subscriptions" data-display-name="Event Grid Subscriptions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Subscriptions.svg" alt="Event Grid Subscriptions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:event_grid_subscriptions</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:event_grid_topics" data-display-name="Event Grid Topics">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Topics.svg" alt="Event Grid Topics" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:event_grid_topics</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:event_hub_clusters" data-display-name="Event Hub Clusters">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Hub-Clusters.svg" alt="Event Hub Clusters" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:event_hub_clusters</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:event_hubs" data-display-name="Event Hubs">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Hubs.svg" alt="Event Hubs" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:event_hubs</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:notification_hub_namespaces" data-display-name="Notification Hub Namespaces">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Notification-Hub-Namespaces.svg" alt="Notification Hub Namespaces" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:notification_hub_namespaces</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:notification_hubs" data-display-name="Notification Hubs">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Notification-Hubs.svg" alt="Notification Hubs" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:notification_hubs</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:relays" data-display-name="Relays">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Relays.svg" alt="Relays" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:relays</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Identity">
+      <h2 class="category-title">Identity (9)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:active_directory_connect_health" data-display-name="Active Directory Connect Health">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Active-Directory-Connect-Health.svg" alt="Active Directory Connect Health" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:active_directory_connect_health</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:conditional_access" data-display-name="Conditional Access">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Conditional-Access.svg" alt="Conditional Access" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:conditional_access</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:enterprise_applications" data-display-name="Enterprise Applications">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Enterprise-Applications.svg" alt="Enterprise Applications" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:enterprise_applications</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:groups" data-display-name="Groups">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Groups.svg" alt="Groups" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:groups</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:identity_governance" data-display-name="Identity Governance">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Identity-Governance.svg" alt="Identity Governance" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:identity_governance</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:multi_tenancy" data-display-name="Multi Tenancy">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Multi-Tenancy.svg" alt="Multi Tenancy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:multi_tenancy</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:user_privacy" data-display-name="User Privacy">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/User-Privacy.svg" alt="User Privacy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:user_privacy</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:user_subscriptions" data-display-name="User Subscriptions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/User-Subscriptions.svg" alt="User Subscriptions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:user_subscriptions</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:users" data-display-name="Users">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Users.svg" alt="Users" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:users</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Integration">
+      <h2 class="category-title">Integration (4)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:biz_talk" data-display-name="Biz Talk">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Biz-Talk.svg" alt="Biz Talk" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:biz_talk</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:integration_accounts" data-display-name="Integration Accounts">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Integration-Accounts.svg" alt="Integration Accounts" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:integration_accounts</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:logic_apps" data-display-name="Logic Apps">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Logic-Apps.svg" alt="Logic Apps" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:logic_apps</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:workflow" data-display-name="Workflow">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workflow.svg" alt="Workflow" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:workflow</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="IoT">
+      <h2 class="category-title">IoT (6)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:digital_twins" data-display-name="Digital Twins">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Digital-Twins.svg" alt="Digital Twins" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:digital_twins</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:iot_central_applications" data-display-name="Iot Central Applications">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Central-Applications.svg" alt="Iot Central Applications" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:iot_central_applications</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:iot_edge" data-display-name="Iot Edge">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Edge.svg" alt="Iot Edge" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:iot_edge</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:iot_hub" data-display-name="Iot Hub">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Hub.svg" alt="Iot Hub" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:iot_hub</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:journey_hub" data-display-name="Journey Hub">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Journey-Hub.svg" alt="Journey Hub" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:journey_hub</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:rtos" data-display-name="Rtos">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/RTOS.svg" alt="Rtos" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:rtos</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Managed Services">
+      <h2 class="category-title">Managed Services (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:managed_applications_center" data-display-name="Managed Applications Center">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Managed-Applications-Center.svg" alt="Managed Applications Center" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:managed_applications_center</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:managed_database" data-display-name="Managed Database">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Managed-Database.svg" alt="Managed Database" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:managed_database</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Management">
+      <h2 class="category-title">Management (13)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:advisor" data-display-name="Advisor">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Advisor.svg" alt="Advisor" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:advisor</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:blueprints" data-display-name="Blueprints">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blueprints.svg" alt="Blueprints" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:blueprints</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:capacity" data-display-name="Capacity">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Capacity.svg" alt="Capacity" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:capacity</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:management_groups" data-display-name="Management Groups">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Management-Groups.svg" alt="Management Groups" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:management_groups</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:management_portal" data-display-name="Management Portal">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Management-Portal.svg" alt="Management Portal" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:management_portal</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:my_customers" data-display-name="My Customers">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/My-Customers.svg" alt="My Customers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:my_customers</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:plans" data-display-name="Plans">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Plans.svg" alt="Plans" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:plans</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:policy" data-display-name="Policy">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Policy.svg" alt="Policy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:policy</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:reservations" data-display-name="Reservations">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Reservations.svg" alt="Reservations" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:reservations</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:solutions" data-display-name="Solutions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Solutions.svg" alt="Solutions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:solutions</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:subscriptions" data-display-name="Subscriptions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Subscriptions.svg" alt="Subscriptions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:subscriptions</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:tags" data-display-name="Tags">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Tags.svg" alt="Tags" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:tags</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:updates" data-display-name="Updates">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Updates.svg" alt="Updates" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:updates</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Marketplace">
+      <h2 class="category-title">Marketplace (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:marketplace" data-display-name="Marketplace">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Marketplace.svg" alt="Marketplace" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:marketplace</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:offers" data-display-name="Offers">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Offers.svg" alt="Offers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:offers</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:software_as_a_service" data-display-name="Software As A Service">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Software-as-a-Service.svg" alt="Software As A Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:software_as_a_service</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Media">
+      <h2 class="category-title">Media (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:media" data-display-name="Media">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Media.svg" alt="Media" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:media</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:media_file" data-display-name="Media File">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Media-File.svg" alt="Media File" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:media_file</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Mobile">
+      <h2 class="category-title">Mobile (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:mobile" data-display-name="Mobile">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mobile.svg" alt="Mobile" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:mobile</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:mobile_engagement" data-display-name="Mobile Engagement">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mobile-Engagement.svg" alt="Mobile Engagement" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:mobile_engagement</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Monitoring">
+      <h2 class="category-title">Monitoring (9)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:activity_log" data-display-name="Activity Log">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Activity-Log.svg" alt="Activity Log" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:activity_log</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:alerts" data-display-name="Alerts">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Alerts.svg" alt="Alerts" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:alerts</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:diagnostics_settings" data-display-name="Diagnostics Settings">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Diagnostics-Settings.svg" alt="Diagnostics Settings" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:diagnostics_settings</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:log_analytics_workspaces" data-display-name="Log Analytics Workspaces">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Log-Analytics-Workspaces.svg" alt="Log Analytics Workspaces" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:log_analytics_workspaces</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:log_streaming" data-display-name="Log Streaming">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Log-Streaming.svg" alt="Log Streaming" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:log_streaming</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:metrics" data-display-name="Metrics">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Metrics.svg" alt="Metrics" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:metrics</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:monitor" data-display-name="Monitor">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Monitor.svg" alt="Monitor" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:monitor</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:operation_log_(classic)" data-display-name="Operation Log (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Operation-Log-(Classic).svg" alt="Operation Log (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:operation_log_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:workbooks" data-display-name="Workbooks">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workbooks.svg" alt="Workbooks" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:workbooks</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Networking">
+      <h2 class="category-title">Networking (25)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:connections" data-display-name="Connections">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Connections.svg" alt="Connections" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:connections</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:dns_zones" data-display-name="Dns Zones">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DNS-Zones.svg" alt="Dns Zones" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:dns_zones</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:expressroute_circuits" data-display-name="Expressroute Circuits">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ExpressRoute-Circuits.svg" alt="Expressroute Circuits" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:expressroute_circuits</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:front_doors" data-display-name="Front Doors">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Front-Doors.svg" alt="Front Doors" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:front_doors</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:ftp" data-display-name="Ftp">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/FTP.svg" alt="Ftp" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:ftp</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:internet_analyzer_profiles" data-display-name="Internet Analyzer Profiles">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Internet-Analyzer-Profiles.svg" alt="Internet Analyzer Profiles" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:internet_analyzer_profiles</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:ip_groups" data-display-name="Ip Groups">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IP-Groups.svg" alt="Ip Groups" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:ip_groups</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:load_balancers" data-display-name="Load Balancers">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Load-Balancers.svg" alt="Load Balancers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:load_balancers</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:load_test" data-display-name="Load Test">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Load-Test.svg" alt="Load Test" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:load_test</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:nat" data-display-name="Nat">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/NAT.svg" alt="Nat" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:nat</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:network_interfaces" data-display-name="Network Interfaces">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Interfaces.svg" alt="Network Interfaces" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:network_interfaces</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:network_security_groups" data-display-name="Network Security Groups">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Security-Groups.svg" alt="Network Security Groups" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:network_security_groups</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:network_watcher" data-display-name="Network Watcher">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Watcher.svg" alt="Network Watcher" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:network_watcher</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:outbound_connection" data-display-name="Outbound Connection">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Outbound-Connection.svg" alt="Outbound Connection" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:outbound_connection</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:peering_service" data-display-name="Peering Service">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Peering-Service.svg" alt="Peering Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:peering_service</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:private_link" data-display-name="Private Link">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link.svg" alt="Private Link" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:private_link</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:private_link_hub" data-display-name="Private Link Hub">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link-Hub.svg" alt="Private Link Hub" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:private_link_hub</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:private_link_service" data-display-name="Private Link Service">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link-Service.svg" alt="Private Link Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:private_link_service</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:public_ip_addresses" data-display-name="Public Ip Addresses">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Addresses.svg" alt="Public Ip Addresses" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:public_ip_addresses</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:public_ip_addresses_(classic)" data-display-name="Public Ip Addresses (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Addresses-(Classic).svg" alt="Public Ip Addresses (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:public_ip_addresses_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:public_ip_prefixes" data-display-name="Public Ip Prefixes">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Prefixes.svg" alt="Public Ip Prefixes" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:public_ip_prefixes</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:reserved_ip_addresses_(classic)" data-display-name="Reserved Ip Addresses (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Reserved-IP-Addresses-(Classic).svg" alt="Reserved Ip Addresses (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:reserved_ip_addresses_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:route_filters" data-display-name="Route Filters">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Route-Filters.svg" alt="Route Filters" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:route_filters</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:route_tables" data-display-name="Route Tables">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Route-Tables.svg" alt="Route Tables" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:route_tables</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:traffic_manager_profiles" data-display-name="Traffic Manager Profiles">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Traffic-Manager-Profiles.svg" alt="Traffic Manager Profiles" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:traffic_manager_profiles</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Other">
+      <h2 class="category-title">Other (1)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:elixir_purple" data-display-name="Elixir Purple">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Elixir-Purple.svg" alt="Elixir Purple" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:elixir_purple</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Resources">
+      <h2 class="category-title">Resources (5)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:all_resources" data-display-name="All Resources">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/All-Resources.svg" alt="All Resources" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:all_resources</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:resource_graph_explorer" data-display-name="Resource Graph Explorer">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Graph-Explorer.svg" alt="Resource Graph Explorer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:resource_graph_explorer</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:resource_group_list" data-display-name="Resource Group List">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Group-List.svg" alt="Resource Group List" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:resource_group_list</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:resource_groups" data-display-name="Resource Groups">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Groups.svg" alt="Resource Groups" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:resource_groups</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:resource_linked" data-display-name="Resource Linked">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Linked.svg" alt="Resource Linked" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:resource_linked</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Search">
+      <h2 class="category-title">Search (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:search" data-display-name="Search">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search.svg" alt="Search" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:search</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:search_grid" data-display-name="Search Grid">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search-Grid.svg" alt="Search Grid" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:search_grid</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:search_services" data-display-name="Search Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Search-Services.svg" alt="Search Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:search_services</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Security">
+      <h2 class="category-title">Security (8)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:compliance" data-display-name="Compliance">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Compliance.svg" alt="Compliance" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:compliance</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:ddos_protection_plans" data-display-name="Ddos Protection Plans">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DDoS-Protection-Plans.svg" alt="Ddos Protection Plans" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:ddos_protection_plans</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:detonation" data-display-name="Detonation">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Detonation.svg" alt="Detonation" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:detonation</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:extendedsecurityupdates" data-display-name="Extendedsecurityupdates">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ExtendedSecurityUpdates.svg" alt="Extendedsecurityupdates" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:extendedsecurityupdates</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:firewalls" data-display-name="Firewalls">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Firewalls.svg" alt="Firewalls" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:firewalls</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:key_vaults" data-display-name="Key Vaults">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Key-Vaults.svg" alt="Key Vaults" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:key_vaults</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:keys" data-display-name="Keys">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Keys.svg" alt="Keys" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:keys</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:security_center" data-display-name="Security Center">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Security-Center.svg" alt="Security Center" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:security_center</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Service Bus">
+      <h2 class="category-title">Service Bus (5)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:service_bus" data-display-name="Service Bus">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Bus.svg" alt="Service Bus" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:service_bus</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:service_endpoint_policies" data-display-name="Service Endpoint Policies">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Endpoint-Policies.svg" alt="Service Endpoint Policies" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:service_endpoint_policies</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:service_fabric_clusters" data-display-name="Service Fabric Clusters">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Fabric-Clusters.svg" alt="Service Fabric Clusters" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:service_fabric_clusters</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:service_health" data-display-name="Service Health">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Health.svg" alt="Service Health" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:service_health</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:service_providers" data-display-name="Service Providers">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Providers.svg" alt="Service Providers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:service_providers</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Services">
+      <h2 class="category-title">Services (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:education" data-display-name="Education">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Education.svg" alt="Education" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:education</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:learn" data-display-name="Learn">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Learn.svg" alt="Learn" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:learn</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:universal_print" data-display-name="Universal Print">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Universal-Print.svg" alt="Universal Print" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:universal_print</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Storage">
+      <h2 class="category-title">Storage (18)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:blob_block" data-display-name="Blob Block">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blob-Block.svg" alt="Blob Block" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:blob_block</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:blob_page" data-display-name="Blob Page">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blob-Page.svg" alt="Blob Page" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:blob_page</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:disk_encryption_sets" data-display-name="Disk Encryption Sets">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disk-Encryption-Sets.svg" alt="Disk Encryption Sets" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:disk_encryption_sets</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:disks" data-display-name="Disks">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks.svg" alt="Disks" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:disks</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:disks_(classic)" data-display-name="Disks (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks-(Classic).svg" alt="Disks (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:disks_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:disks_snapshots" data-display-name="Disks Snapshots">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Disks-Snapshots.svg" alt="Disks Snapshots" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:disks_snapshots</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:file" data-display-name="File">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/File.svg" alt="File" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:file</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:files" data-display-name="Files">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Files.svg" alt="Files" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:files</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:ssd" data-display-name="Ssd">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SSD.svg" alt="Ssd" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:ssd</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:storage_accounts" data-display-name="Storage Accounts">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Accounts.svg" alt="Storage Accounts" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:storage_accounts</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:storage_accounts_(classic)" data-display-name="Storage Accounts (Classic)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Accounts-(Classic).svg" alt="Storage Accounts (Classic)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:storage_accounts_(classic)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:storage_azure_files" data-display-name="Storage Azure Files">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Azure-Files.svg" alt="Storage Azure Files" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:storage_azure_files</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:storage_container" data-display-name="Storage Container">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Container.svg" alt="Storage Container" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:storage_container</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:storage_queue" data-display-name="Storage Queue">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Queue.svg" alt="Storage Queue" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:storage_queue</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:storage_sync_services" data-display-name="Storage Sync Services">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Sync-Services.svg" alt="Storage Sync Services" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:storage_sync_services</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:storsimple_data_managers" data-display-name="Storsimple Data Managers">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/StorSimple-Data-Managers.svg" alt="Storsimple Data Managers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:storsimple_data_managers</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:storsimple_device_managers" data-display-name="Storsimple Device Managers">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/StorSimple-Device-Managers.svg" alt="Storsimple Device Managers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:storsimple_device_managers</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:table" data-display-name="Table">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Table.svg" alt="Table" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:table</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="UI Elements">
+      <h2 class="category-title">UI Elements (29)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:browser" data-display-name="Browser">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Browser.svg" alt="Browser" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:browser</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:controls" data-display-name="Controls">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Controls.svg" alt="Controls" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:controls</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:controls_horizontal" data-display-name="Controls Horizontal">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Controls-Horizontal.svg" alt="Controls Horizontal" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:controls_horizontal</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:counter" data-display-name="Counter">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Counter.svg" alt="Counter" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:counter</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:cubes" data-display-name="Cubes">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cubes.svg" alt="Cubes" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:cubes</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:dashboard" data-display-name="Dashboard">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Dashboard.svg" alt="Dashboard" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:dashboard</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:download" data-display-name="Download">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Download.svg" alt="Download" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:download</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:error" data-display-name="Error">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Error.svg" alt="Error" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:error</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:folder_blank" data-display-name="Folder Blank">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Folder-Blank.svg" alt="Folder Blank" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:folder_blank</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:folder_website" data-display-name="Folder Website">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Folder-Website.svg" alt="Folder Website" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:folder_website</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:gear" data-display-name="Gear">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Gear.svg" alt="Gear" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:gear</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:globe" data-display-name="Globe">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe.svg" alt="Globe" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:globe</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:globe_error" data-display-name="Globe Error">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Error.svg" alt="Globe Error" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:globe_error</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:globe_success" data-display-name="Globe Success">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Success.svg" alt="Globe Success" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:globe_success</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:globe_warning" data-display-name="Globe Warning">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Warning.svg" alt="Globe Warning" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:globe_warning</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:guide" data-display-name="Guide">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Guide.svg" alt="Guide" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:guide</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:heart" data-display-name="Heart">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Heart.svg" alt="Heart" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:heart</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:help_and_support" data-display-name="Help And Support">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Help-and-Support.svg" alt="Help And Support" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:help_and_support</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:information" data-display-name="Information">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Information.svg" alt="Information" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:information</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:input_output" data-display-name="Input Output">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Input-Output.svg" alt="Input Output" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:input_output</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:launch_portal" data-display-name="Launch Portal">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Launch-Portal.svg" alt="Launch Portal" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:launch_portal</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:location" data-display-name="Location">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Location.svg" alt="Location" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:location</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:power" data-display-name="Power">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Power.svg" alt="Power" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:power</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:power_up" data-display-name="Power Up">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Power-Up.svg" alt="Power Up" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:power_up</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:preview" data-display-name="Preview">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Preview.svg" alt="Preview" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:preview</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:quickstart_center" data-display-name="Quickstart Center">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Quickstart-Center.svg" alt="Quickstart Center" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:quickstart_center</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:recent" data-display-name="Recent">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Recent.svg" alt="Recent" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:recent</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:toolbox" data-display-name="Toolbox">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Toolbox.svg" alt="Toolbox" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:toolbox</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:versions" data-display-name="Versions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Versions.svg" alt="Versions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:versions</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Web Services">
+      <h2 class="category-title">Web Services (7)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="azure:static_apps" data-display-name="Static Apps">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Static-Apps.svg" alt="Static Apps" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:static_apps</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:web_application_firewall_policies(waf)" data-display-name="Web Application Firewall Policies(Waf)">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Application-Firewall-Policies(WAF).svg" alt="Web Application Firewall Policies(Waf)" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:web_application_firewall_policies(waf)</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:web_environment" data-display-name="Web Environment">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Environment.svg" alt="Web Environment" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:web_environment</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:web_slots" data-display-name="Web Slots">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Slots.svg" alt="Web Slots" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:web_slots</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:web_test" data-display-name="Web Test">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Test.svg" alt="Web Test" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:web_test</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:website_power" data-display-name="Website Power">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Website-Power.svg" alt="Website Power" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:website_power</div>
+        </div>
+        <div class="icon-card" data-icon-id="azure:website_staging" data-display-name="Website Staging">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Website-Staging.svg" alt="Website Staging" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">azure:website_staging</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copied-toast" id="copiedToast">Copied to clipboard!</div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const matchCountEl = document.getElementById('matchCount');
+    const copiedToast = document.getElementById('copiedToast');
+    const iconCards = document.querySelectorAll('.icon-card');
+
+    let toastTimeout;
+
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      let matchCount = 0;
+
+      iconCards.forEach(card => {
+        const iconId = card.dataset.iconId.toLowerCase();
+        const displayName = card.dataset.displayName.toLowerCase();
+
+        if (query === '') {
+          card.classList.remove('highlight', 'dimmed');
+        } else {
+          // AND search: all terms must match
+          const terms = query.split(/\s+/).filter(t => t.length > 0);
+          const text = iconId + ' ' + displayName;
+          const matches = terms.every(term => text.includes(term));
+          if (matches) {
+            card.classList.add('highlight');
+            card.classList.remove('dimmed');
+            matchCount++;
+          } else {
+            card.classList.remove('highlight');
+            card.classList.add('dimmed');
+          }
+        }
+      });
+
+      if (query === '') {
+        matchCountEl.textContent = '';
+      } else {
+        matchCountEl.innerHTML = '<span class="match-count">' + matchCount + '</span> matches';
+      }
+    });
+
+    // Click to copy
+    iconCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const iconId = this.dataset.iconId;
+        navigator.clipboard.writeText(iconId).then(() => {
+          copiedToast.textContent = 'Copied: ' + iconId;
+          copiedToast.classList.add('show');
+          clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+            copiedToast.classList.remove('show');
+          }, 2000);
+        });
+      });
+    });
+
+    // Focus search on page load
+    searchInput.focus();
+  </script>
+
+  <footer class="license-footer">
+    <p>Icon Attribution: Azure Icons - MIT License (Ben Coleman)</p>
+    <p>Version: e33ee71 (Updated: 2025-01-02)</p>
+    <p>Generated with gospelo-architect</p>
+  </footer>
+  <style>
+    .license-footer {
+      max-width: 1400px;
+      margin: 48px auto 24px;
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      border-top: 1px solid #ddd;
+    }
+    .license-footer p {
+      margin: 4px 0;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "category": "Blockchain",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "res_managed_blockchain_blockchain",
+      "displayName": "Res Managed Blockchain Blockchain",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Blockchain/Res_Amazon-Managed-Blockchain_Blockchain_48.svg"
+    },
+    {
+      "slug": "managed_blockchain",
+      "displayName": "Managed Blockchain",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Blockchain/64/Arch_Amazon-Managed-Blockchain_64.svg"
+    },
+    {
+      "slug": "quantum_ledger_database",
+      "displayName": "Quantum Ledger Database",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Blockchain/64/Arch_Amazon-Quantum-Ledger-Database_64.svg"
+    }
+  ]
+}

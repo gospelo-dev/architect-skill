@@ -1,0 +1,41 @@
+{
+  "category": "Security",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "letsencrypt",
+      "displayName": "Let's Encrypt",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/letsencrypt.svg"
+    },
+    {
+      "slug": "auth0",
+      "displayName": "Auth0",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/auth0.svg"
+    },
+    {
+      "slug": "okta",
+      "displayName": "Okta",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/okta.svg"
+    },
+    {
+      "slug": "snyk",
+      "displayName": "Snyk",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/snyk.svg"
+    },
+    {
+      "slug": "dependabot",
+      "displayName": "Dependabot",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/dependabot.svg"
+    },
+    {
+      "slug": "owasp",
+      "displayName": "OWASP",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/owasp.svg"
+    },
+    {
+      "slug": "wireshark",
+      "displayName": "Wireshark",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/wireshark.svg"
+    }
+  ]
+}

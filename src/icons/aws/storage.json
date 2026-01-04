@@ -1,0 +1,431 @@
+{
+  "category": "Storage",
+  "count": 85,
+  "icons": [
+    {
+      "slug": "res_backup_audit_manager",
+      "displayName": "Res Backup Audit Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Audit-Manager_48.svg"
+    },
+    {
+      "slug": "res_backup_aws_backup_for_aws_cloudformation",
+      "displayName": "Res Backup Aws Backup For Aws Cloudformation",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_AWS-Backup-for-AWS-CloudFormation_48.svg"
+    },
+    {
+      "slug": "res_backup_aws_backup_support_for_amazon_fsx_for_netapp_ontap",
+      "displayName": "Res Backup Aws Backup Support For Amazon Fsx For Netapp Ontap",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_AWS-Backup-support-for-Amazon-FSx-for-NetApp-ONTAP_48.svg"
+    },
+    {
+      "slug": "res_backup_aws_backup_support_for_amazon_s3",
+      "displayName": "Res Backup Aws Backup Support For Amazon S3",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_AWS-Backup-support-for-Amazon-S3_48.svg"
+    },
+    {
+      "slug": "res_backup_aws_backup_support_for_vmware_workloads",
+      "displayName": "Res Backup Aws Backup Support For Vmware Workloads",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_AWS-Backup-Support-for-VMware-Workloads_48.svg"
+    },
+    {
+      "slug": "res_backup_backup_plan",
+      "displayName": "Res Backup Backup Plan",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Backup-Plan_48.svg"
+    },
+    {
+      "slug": "res_backup_backup_restore",
+      "displayName": "Res Backup Backup Restore",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Backup-Restore_48.svg"
+    },
+    {
+      "slug": "res_backup_backup_vault",
+      "displayName": "Res Backup Backup Vault",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Backup-Vault_48.svg"
+    },
+    {
+      "slug": "res_backup_compliance_reporting",
+      "displayName": "Res Backup Compliance Reporting",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Compliance-Reporting_48.svg"
+    },
+    {
+      "slug": "res_backup_compute",
+      "displayName": "Res Backup Compute",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Compute_48.svg"
+    },
+    {
+      "slug": "res_backup_database",
+      "displayName": "Res Backup Database",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Database_48.svg"
+    },
+    {
+      "slug": "res_backup_gateway",
+      "displayName": "Res Backup Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Gateway_48.svg"
+    },
+    {
+      "slug": "res_backup_legal_hold",
+      "displayName": "Res Backup Legal Hold",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Legal-Hold_48.svg"
+    },
+    {
+      "slug": "res_backup_recovery_point_objective",
+      "displayName": "Res Backup Recovery Point Objective",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Recovery-Point-Objective_48.svg"
+    },
+    {
+      "slug": "res_backup_recovery_time_objective",
+      "displayName": "Res Backup Recovery Time Objective",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Recovery-Time-Objective_48.svg"
+    },
+    {
+      "slug": "res_backup_storage",
+      "displayName": "Res Backup Storage",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Storage_48.svg"
+    },
+    {
+      "slug": "res_backup_vault_lock",
+      "displayName": "Res Backup Vault Lock",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Vault-Lock_48.svg"
+    },
+    {
+      "slug": "res_backup_virtual_machine",
+      "displayName": "Res Backup Virtual Machine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Virtual-Machine_48.svg"
+    },
+    {
+      "slug": "res_backup_virtual_machine_monitor",
+      "displayName": "Res Backup Virtual Machine Monitor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Backup_Virtual-Machine-Monitor_48.svg"
+    },
+    {
+      "slug": "res_elastic_block_store_amazon_data_lifecycle_manager",
+      "displayName": "Res Elastic Block Store Amazon Data Lifecycle Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-Block-Store_Amazon-Data-Lifecycle-Manager_48.svg"
+    },
+    {
+      "slug": "res_elastic_block_store_multiple_volumes",
+      "displayName": "Res Elastic Block Store Multiple Volumes",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-Block-Store_Multiple-Volumes_48.svg"
+    },
+    {
+      "slug": "res_elastic_block_store_snapshot",
+      "displayName": "Res Elastic Block Store Snapshot",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-Block-Store_Snapshot_48.svg"
+    },
+    {
+      "slug": "res_elastic_block_store_volume",
+      "displayName": "Res Elastic Block Store Volume",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-Block-Store_Volume_48.svg"
+    },
+    {
+      "slug": "res_elastic_block_store_volume_gp3",
+      "displayName": "Res Elastic Block Store Volume Gp3",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-Block-Store_Volume-gp3_48.svg"
+    },
+    {
+      "slug": "res_elastic_file_system_efs_intelligent_tiering",
+      "displayName": "Res Elastic File System Efs Intelligent Tiering",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-File-System_EFS-Intelligent-Tiering_48.svg"
+    },
+    {
+      "slug": "res_elastic_file_system_efs_one_zone",
+      "displayName": "Res Elastic File System Efs One Zone",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-File-System_EFS-One-Zone_48.svg"
+    },
+    {
+      "slug": "res_elastic_file_system_efs_one_zone_infrequent_access",
+      "displayName": "Res Elastic File System Efs One Zone Infrequent Access",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-File-System_EFS-One-Zone-Infrequent-Access_48.svg"
+    },
+    {
+      "slug": "res_elastic_file_system_efs_standard",
+      "displayName": "Res Elastic File System Efs Standard",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-File-System_EFS-Standard_48.svg"
+    },
+    {
+      "slug": "res_elastic_file_system_efs_standard_infrequent_access",
+      "displayName": "Res Elastic File System Efs Standard Infrequent Access",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-File-System_EFS-Standard-Infrequent-Access_48.svg"
+    },
+    {
+      "slug": "res_elastic_file_system_elastic_throughput",
+      "displayName": "Res Elastic File System Elastic Throughput",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-File-System_Elastic-Throughput_48.svg"
+    },
+    {
+      "slug": "res_elastic_file_system_file_system",
+      "displayName": "Res Elastic File System File System",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-File-System_File-System_48.svg"
+    },
+    {
+      "slug": "res_file_cache_hybrid_nfs_linked_datasets",
+      "displayName": "Res File Cache Hybrid Nfs Linked Datasets",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-File-Cache_Hybrid-NFS-linked-datasets_48.svg"
+    },
+    {
+      "slug": "res_file_cache_on_premises_nfs_linked_datasets",
+      "displayName": "Res File Cache On Premises Nfs Linked Datasets",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-File-Cache_On-premises-NFS-linked-datasets_48.svg"
+    },
+    {
+      "slug": "res_file_cache_s3_linked_datasets",
+      "displayName": "Res File Cache S3 Linked Datasets",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-File-Cache_S3-linked-datasets_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_bucket",
+      "displayName": "Res Simple Storage Service Bucket",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_Bucket_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_bucket_with_objects",
+      "displayName": "Res Simple Storage Service Bucket With Objects",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_Bucket-With-Objects_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_general_access_points",
+      "displayName": "Res Simple Storage Service General Access Points",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_General-Access-Points_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_glacier_archive",
+      "displayName": "Res Simple Storage Service Glacier Archive",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service-Glacier_Archive_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_glacier_vault",
+      "displayName": "Res Simple Storage Service Glacier Vault",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service-Glacier_Vault_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_object",
+      "displayName": "Res Simple Storage Service Object",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_Object_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_batch_operations",
+      "displayName": "Res Simple Storage Service S3 Batch Operations",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Batch-Operations_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_glacier_deep_archive",
+      "displayName": "Res Simple Storage Service S3 Glacier Deep Archive",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Glacier-Deep-Archive_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_glacier_flexible_retrieval",
+      "displayName": "Res Simple Storage Service S3 Glacier Flexible Retrieval",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Glacier-Flexible-Retrieval_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_glacier_instant_retrieval",
+      "displayName": "Res Simple Storage Service S3 Glacier Instant Retrieval",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Glacier-Instant-Retrieval_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_intelligent_tiering",
+      "displayName": "Res Simple Storage Service S3 Intelligent Tiering",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Intelligent-Tiering_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_multi_region_access_points",
+      "displayName": "Res Simple Storage Service S3 Multi Region Access Points",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Multi-Region-Access-Points_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_object_lambda",
+      "displayName": "Res Simple Storage Service S3 Object Lambda",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Object-Lambda_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_object_lambda_access_points",
+      "displayName": "Res Simple Storage Service S3 Object Lambda Access Points",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Object-Lambda-Access-Points_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_object_lock",
+      "displayName": "Res Simple Storage Service S3 Object Lock",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Object-Lock_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_on_outposts",
+      "displayName": "Res Simple Storage Service S3 On Outposts",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-On-Outposts_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_one_zone_ia",
+      "displayName": "Res Simple Storage Service S3 One Zone Ia",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-One-Zone-IA_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_replication",
+      "displayName": "Res Simple Storage Service S3 Replication",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Replication_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_replication_time_control",
+      "displayName": "Res Simple Storage Service S3 Replication Time Control",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Replication-Time-Control_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_select",
+      "displayName": "Res Simple Storage Service S3 Select",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Select_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_standard",
+      "displayName": "Res Simple Storage Service S3 Standard",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Standard_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_standard_ia",
+      "displayName": "Res Simple Storage Service S3 Standard Ia",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Standard-IA_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_s3_storage_lens",
+      "displayName": "Res Simple Storage Service S3 Storage Lens",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_S3-Storage-Lens_48.svg"
+    },
+    {
+      "slug": "res_simple_storage_service_vpc_access_points",
+      "displayName": "Res Simple Storage Service Vpc Access Points",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_VPC-Access-Points_48.svg"
+    },
+    {
+      "slug": "res_snowball_snowball_import_export",
+      "displayName": "Res Snowball Snowball Import Export",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Snowball_Snowball-Import-Export_48.svg"
+    },
+    {
+      "slug": "res_storage_gateway_amazon_fsx_file_gateway",
+      "displayName": "Res Storage Gateway Amazon Fsx File Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Storage-Gateway_Amazon-FSx-File-Gateway_48.svg"
+    },
+    {
+      "slug": "res_storage_gateway_amazon_s3_file_gateway",
+      "displayName": "Res Storage Gateway Amazon S3 File Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Storage-Gateway_Amazon-S3-File-Gateway_48.svg"
+    },
+    {
+      "slug": "res_storage_gateway_cached_volume",
+      "displayName": "Res Storage Gateway Cached Volume",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Storage-Gateway_Cached-Volume_48.svg"
+    },
+    {
+      "slug": "res_storage_gateway_file_gateway",
+      "displayName": "Res Storage Gateway File Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Storage-Gateway_File-Gateway_48.svg"
+    },
+    {
+      "slug": "res_storage_gateway_noncached_volume",
+      "displayName": "Res Storage Gateway Noncached Volume",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Storage-Gateway_Noncached-Volume_48.svg"
+    },
+    {
+      "slug": "res_storage_gateway_tape_gateway",
+      "displayName": "Res Storage Gateway Tape Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Storage-Gateway_Tape-Gateway_48.svg"
+    },
+    {
+      "slug": "res_storage_gateway_virtual_tape_library",
+      "displayName": "Res Storage Gateway Virtual Tape Library",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Storage-Gateway_Virtual-Tape-Library_48.svg"
+    },
+    {
+      "slug": "res_storage_gateway_volume_gateway",
+      "displayName": "Res Storage Gateway Volume Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_AWS-Storage-Gateway_Volume-Gateway_48.svg"
+    },
+    {
+      "slug": "efs",
+      "displayName": "Efs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-EFS_64.svg"
+    },
+    {
+      "slug": "elastic_block_store",
+      "displayName": "Elastic Block Store",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-Elastic-Block-Store_64.svg"
+    },
+    {
+      "slug": "file_cache",
+      "displayName": "File Cache",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-File-Cache_64.svg"
+    },
+    {
+      "slug": "fsx",
+      "displayName": "Fsx",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-FSx_64.svg"
+    },
+    {
+      "slug": "fsx_for_lustre",
+      "displayName": "Fsx For Lustre",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-FSx-for-Lustre_64.svg"
+    },
+    {
+      "slug": "fsx_for_netapp_ontap",
+      "displayName": "Fsx For Netapp Ontap",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-FSx-for-NetApp-ONTAP_64.svg"
+    },
+    {
+      "slug": "fsx_for_openzfs",
+      "displayName": "Fsx For Openzfs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-FSx-for-OpenZFS_64.svg"
+    },
+    {
+      "slug": "fsx_for_wfs",
+      "displayName": "Fsx For Wfs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-FSx-for-WFS_64.svg"
+    },
+    {
+      "slug": "s3_on_outposts",
+      "displayName": "S3 On Outposts",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-S3-on-Outposts_64.svg"
+    },
+    {
+      "slug": "simple_storage_service",
+      "displayName": "Simple Storage Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-Simple-Storage-Service_64.svg"
+    },
+    {
+      "slug": "simple_storage_service_glacier",
+      "displayName": "Simple Storage Service Glacier",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_Amazon-Simple-Storage-Service-Glacier_64.svg"
+    },
+    {
+      "slug": "backup",
+      "displayName": "Backup",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_AWS-Backup_64.svg"
+    },
+    {
+      "slug": "elastic_disaster_recovery",
+      "displayName": "Elastic Disaster Recovery",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_AWS-Elastic-Disaster-Recovery_64.svg"
+    },
+    {
+      "slug": "snowball",
+      "displayName": "Snowball",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_AWS-Snowball_64.svg"
+    },
+    {
+      "slug": "snowball_edge",
+      "displayName": "Snowball Edge",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg"
+    },
+    {
+      "slug": "snowcone",
+      "displayName": "Snowcone",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_AWS-Snowcone_64.svg"
+    },
+    {
+      "slug": "snowmobile",
+      "displayName": "Snowmobile",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_AWS-Snowmobile_64.svg"
+    },
+    {
+      "slug": "storage_gateway",
+      "displayName": "Storage Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Storage/64/Arch_AWS-Storage-Gateway_64.svg"
+    }
+  ]
+}

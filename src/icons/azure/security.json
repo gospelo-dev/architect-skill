@@ -1,0 +1,46 @@
+{
+  "category": "Security",
+  "count": 8,
+  "icons": [
+    {
+      "slug": "compliance",
+      "displayName": "Compliance",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Compliance.svg"
+    },
+    {
+      "slug": "ddos_protection_plans",
+      "displayName": "Ddos Protection Plans",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DDoS-Protection-Plans.svg"
+    },
+    {
+      "slug": "detonation",
+      "displayName": "Detonation",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Detonation.svg"
+    },
+    {
+      "slug": "extendedsecurityupdates",
+      "displayName": "Extendedsecurityupdates",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ExtendedSecurityUpdates.svg"
+    },
+    {
+      "slug": "firewalls",
+      "displayName": "Firewalls",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Firewalls.svg"
+    },
+    {
+      "slug": "key_vaults",
+      "displayName": "Key Vaults",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Key-Vaults.svg"
+    },
+    {
+      "slug": "keys",
+      "displayName": "Keys",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Keys.svg"
+    },
+    {
+      "slug": "security_center",
+      "displayName": "Security Center",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Security-Center.svg"
+    }
+  ]
+}

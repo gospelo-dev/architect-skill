@@ -1,0 +1,21 @@
+{
+  "category": "Storage",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "cloud_storage",
+      "displayName": "Cloud Storage",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_storage.svg"
+    },
+    {
+      "slug": "filestore",
+      "displayName": "Filestore",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/filestore.svg"
+    },
+    {
+      "slug": "persistent_disk",
+      "displayName": "Persistent Disk",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/persistent_disk.svg"
+    }
+  ]
+}

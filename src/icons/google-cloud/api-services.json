@@ -1,0 +1,51 @@
+{
+  "category": "API Services",
+  "count": 9,
+  "icons": [
+    {
+      "slug": "api",
+      "displayName": "Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/api.svg"
+    },
+    {
+      "slug": "api_analytics",
+      "displayName": "Api Analytics",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/api_analytics.svg"
+    },
+    {
+      "slug": "api_monetization",
+      "displayName": "Api Monetization",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/api_monetization.svg"
+    },
+    {
+      "slug": "apigee_api_platform",
+      "displayName": "Apigee Api Platform",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/apigee_api_platform.svg"
+    },
+    {
+      "slug": "apigee_sense",
+      "displayName": "Apigee Sense",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/apigee_sense.svg"
+    },
+    {
+      "slug": "cloud_api_gateway",
+      "displayName": "Cloud Api Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_api_gateway.svg"
+    },
+    {
+      "slug": "cloud_apis",
+      "displayName": "Cloud Apis",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_apis.svg"
+    },
+    {
+      "slug": "cloud_endpoints",
+      "displayName": "Cloud Endpoints",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_endpoints.svg"
+    },
+    {
+      "slug": "producer_portal",
+      "displayName": "Producer Portal",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/producer_portal.svg"
+    }
+  ]
+}

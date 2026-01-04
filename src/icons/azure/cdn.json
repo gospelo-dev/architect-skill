@@ -1,0 +1,11 @@
+{
+  "category": "CDN",
+  "count": 1,
+  "icons": [
+    {
+      "slug": "cdn_profiles",
+      "displayName": "Cdn Profiles",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/CDN-Profiles.svg"
+    }
+  ]
+}

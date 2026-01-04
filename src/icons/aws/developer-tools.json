@@ -1,0 +1,91 @@
+{
+  "category": "Developer Tools",
+  "count": 17,
+  "icons": [
+    {
+      "slug": "res_cloud9_cloud9",
+      "displayName": "Res Cloud9 Cloud9",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Developer-Tools/Res_AWS-Cloud9_Cloud9_48.svg"
+    },
+    {
+      "slug": "codecatalyst",
+      "displayName": "Codecatalyst",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_Amazon-CodeCatalyst_64.svg"
+    },
+    {
+      "slug": "corretto",
+      "displayName": "Corretto",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_Amazon-Corretto_64.svg"
+    },
+    {
+      "slug": "application_composer",
+      "displayName": "Application Composer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-Application-Composer_64.svg"
+    },
+    {
+      "slug": "cloud_control_api",
+      "displayName": "Cloud Control Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-Cloud-Control-API_64.svg"
+    },
+    {
+      "slug": "cloud_development_kit",
+      "displayName": "Cloud Development Kit",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-Cloud-Development-Kit_64.svg"
+    },
+    {
+      "slug": "cloud9",
+      "displayName": "Cloud9",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-Cloud9_64.svg"
+    },
+    {
+      "slug": "cloudshell",
+      "displayName": "Cloudshell",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-CloudShell_64.svg"
+    },
+    {
+      "slug": "codeartifact",
+      "displayName": "Codeartifact",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-CodeArtifact_64.svg"
+    },
+    {
+      "slug": "codebuild",
+      "displayName": "Codebuild",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-CodeBuild_64.svg"
+    },
+    {
+      "slug": "codecommit",
+      "displayName": "Codecommit",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-CodeCommit_64.svg"
+    },
+    {
+      "slug": "codedeploy",
+      "displayName": "Codedeploy",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-CodeDeploy_64.svg"
+    },
+    {
+      "slug": "codepipeline",
+      "displayName": "Codepipeline",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-CodePipeline_64.svg"
+    },
+    {
+      "slug": "codestar",
+      "displayName": "Codestar",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-CodeStar_64.svg"
+    },
+    {
+      "slug": "command_line_interface",
+      "displayName": "Command Line Interface",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-Command-Line-Interface_64.svg"
+    },
+    {
+      "slug": "tools_and_sdks",
+      "displayName": "Tools And Sdks",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-Tools-and-SDKs_64.svg"
+    },
+    {
+      "slug": "x_ray",
+      "displayName": "X Ray",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Developer-Tools/64/Arch_AWS-X-Ray_64.svg"
+    }
+  ]
+}

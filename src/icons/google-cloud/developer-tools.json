@@ -1,0 +1,61 @@
+{
+  "category": "Developer Tools",
+  "count": 11,
+  "icons": [
+    {
+      "slug": "artifact_registry",
+      "displayName": "Artifact Registry",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/artifact_registry.svg"
+    },
+    {
+      "slug": "cloud_build",
+      "displayName": "Cloud Build",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_build.svg"
+    },
+    {
+      "slug": "cloud_code",
+      "displayName": "Cloud Code",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_code.svg"
+    },
+    {
+      "slug": "cloud_deploy",
+      "displayName": "Cloud Deploy",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_deploy.svg"
+    },
+    {
+      "slug": "cloud_shell",
+      "displayName": "Cloud Shell",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_shell.svg"
+    },
+    {
+      "slug": "cloud_test_lab",
+      "displayName": "Cloud Test Lab",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_test_lab.svg"
+    },
+    {
+      "slug": "debugger",
+      "displayName": "Debugger",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/debugger.svg"
+    },
+    {
+      "slug": "developer_portal",
+      "displayName": "Developer Portal",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/developer_portal.svg"
+    },
+    {
+      "slug": "profiler",
+      "displayName": "Profiler",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/profiler.svg"
+    },
+    {
+      "slug": "release_notes",
+      "displayName": "Release Notes",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/release_notes.svg"
+    },
+    {
+      "slug": "tools_for_powershell",
+      "displayName": "Tools For Powershell",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/tools_for_powershell.svg"
+    }
+  ]
+}

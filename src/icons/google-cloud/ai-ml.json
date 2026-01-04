@@ -1,0 +1,156 @@
+{
+  "category": "AI & ML",
+  "count": 30,
+  "icons": [
+    {
+      "slug": "advanced_agent_modeling",
+      "displayName": "Advanced Agent Modeling",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/advanced_agent_modeling.svg"
+    },
+    {
+      "slug": "advanced_solutions_lab",
+      "displayName": "Advanced Solutions Lab",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/advanced_solutions_lab.svg"
+    },
+    {
+      "slug": "agent_assist",
+      "displayName": "Agent Assist",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/agent_assist.svg"
+    },
+    {
+      "slug": "ai_hub",
+      "displayName": "Ai Hub",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/ai_hub.svg"
+    },
+    {
+      "slug": "ai_platform",
+      "displayName": "Ai Platform",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/ai_platform.svg"
+    },
+    {
+      "slug": "ai_platform_unified",
+      "displayName": "Ai Platform Unified",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/ai_platform_unified.svg"
+    },
+    {
+      "slug": "automl",
+      "displayName": "Automl",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl.svg"
+    },
+    {
+      "slug": "automl_natural_language",
+      "displayName": "Automl Natural Language",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_natural_language.svg"
+    },
+    {
+      "slug": "automl_tables",
+      "displayName": "Automl Tables",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_tables.svg"
+    },
+    {
+      "slug": "automl_translation",
+      "displayName": "Automl Translation",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_translation.svg"
+    },
+    {
+      "slug": "automl_video_intelligence",
+      "displayName": "Automl Video Intelligence",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_video_intelligence.svg"
+    },
+    {
+      "slug": "automl_vision",
+      "displayName": "Automl Vision",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_vision.svg"
+    },
+    {
+      "slug": "cloud_inference_api",
+      "displayName": "Cloud Inference Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_inference_api.svg"
+    },
+    {
+      "slug": "cloud_jobs_api",
+      "displayName": "Cloud Jobs Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_jobs_api.svg"
+    },
+    {
+      "slug": "cloud_natural_language_api",
+      "displayName": "Cloud Natural Language Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_natural_language_api.svg"
+    },
+    {
+      "slug": "cloud_optimization_ai",
+      "displayName": "Cloud Optimization Ai",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_optimization_ai.svg"
+    },
+    {
+      "slug": "cloud_optimization_ai_-_fleet_routing_api",
+      "displayName": "Cloud Optimization Ai - Fleet Routing Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_optimization_ai_-_fleet_routing_api.svg"
+    },
+    {
+      "slug": "cloud_translation_api",
+      "displayName": "Cloud Translation Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_translation_api.svg"
+    },
+    {
+      "slug": "cloud_vision_api",
+      "displayName": "Cloud Vision Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_vision_api.svg"
+    },
+    {
+      "slug": "dialogflow",
+      "displayName": "Dialogflow",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dialogflow.svg"
+    },
+    {
+      "slug": "dialogflow_cx",
+      "displayName": "Dialogflow Cx",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dialogflow_cx.svg"
+    },
+    {
+      "slug": "dialogflow_insights",
+      "displayName": "Dialogflow Insights",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dialogflow_insights.svg"
+    },
+    {
+      "slug": "document_ai",
+      "displayName": "Document Ai",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/document_ai.svg"
+    },
+    {
+      "slug": "recommendations_ai",
+      "displayName": "Recommendations Ai",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/recommendations_ai.svg"
+    },
+    {
+      "slug": "speech-to-text",
+      "displayName": "Speech-To-Text",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/speech-to-text.svg"
+    },
+    {
+      "slug": "tensorflow_enterprise",
+      "displayName": "Tensorflow Enterprise",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/tensorflow_enterprise.svg"
+    },
+    {
+      "slug": "text-to-speech",
+      "displayName": "Text-To-Speech",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/text-to-speech.svg"
+    },
+    {
+      "slug": "vertexai",
+      "displayName": "Vertexai",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/vertexai.svg"
+    },
+    {
+      "slug": "video_intelligence_api",
+      "displayName": "Video Intelligence Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/video_intelligence_api.svg"
+    },
+    {
+      "slug": "visual_inspection",
+      "displayName": "Visual Inspection",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/visual_inspection.svg"
+    }
+  ]
+}

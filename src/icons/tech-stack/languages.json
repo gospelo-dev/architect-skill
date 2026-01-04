@@ -1,0 +1,146 @@
+{
+  "category": "Languages",
+  "count": 28,
+  "icons": [
+    {
+      "slug": "python",
+      "displayName": "Python",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/python.svg"
+    },
+    {
+      "slug": "javascript",
+      "displayName": "JavaScript",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/javascript.svg"
+    },
+    {
+      "slug": "typescript",
+      "displayName": "TypeScript",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/typescript.svg"
+    },
+    {
+      "slug": "go",
+      "displayName": "Go",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/go.svg"
+    },
+    {
+      "slug": "rust",
+      "displayName": "Rust",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/rust.svg"
+    },
+    {
+      "slug": "ruby",
+      "displayName": "Ruby",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ruby.svg"
+    },
+    {
+      "slug": "php",
+      "displayName": "PHP",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/php.svg"
+    },
+    {
+      "slug": "swift",
+      "displayName": "Swift",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/swift.svg"
+    },
+    {
+      "slug": "kotlin",
+      "displayName": "Kotlin",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/kotlin.svg"
+    },
+    {
+      "slug": "scala",
+      "displayName": "Scala",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/scala.svg"
+    },
+    {
+      "slug": "elixir",
+      "displayName": "Elixir",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/elixir.svg"
+    },
+    {
+      "slug": "dart",
+      "displayName": "Dart",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/dart.svg"
+    },
+    {
+      "slug": "perl",
+      "displayName": "Perl",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/perl.svg"
+    },
+    {
+      "slug": "lua",
+      "displayName": "Lua",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/lua.svg"
+    },
+    {
+      "slug": "haskell",
+      "displayName": "Haskell",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/haskell.svg"
+    },
+    {
+      "slug": "julia",
+      "displayName": "Julia",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/julia.svg"
+    },
+    {
+      "slug": "fortran",
+      "displayName": "Fortran",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/fortran.svg"
+    },
+    {
+      "slug": "c",
+      "displayName": "C",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/c.svg"
+    },
+    {
+      "slug": "cplusplus",
+      "displayName": "C++",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/cplusplus.svg"
+    },
+    {
+      "slug": "r",
+      "displayName": "R",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/r.svg"
+    },
+    {
+      "slug": "clojure",
+      "displayName": "Clojure",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/clojure.svg"
+    },
+    {
+      "slug": "erlang",
+      "displayName": "Erlang",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/erlang.svg"
+    },
+    {
+      "slug": "fsharp",
+      "displayName": "F#",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/fsharp.svg"
+    },
+    {
+      "slug": "crystal",
+      "displayName": "Crystal",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/crystal.svg"
+    },
+    {
+      "slug": "nim",
+      "displayName": "Nim",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nim.svg"
+    },
+    {
+      "slug": "zig",
+      "displayName": "Zig",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/zig.svg"
+    },
+    {
+      "slug": "odin",
+      "displayName": "Odin",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/odin.svg"
+    },
+    {
+      "slug": "v",
+      "displayName": "V",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/v.svg"
+    }
+  ]
+}

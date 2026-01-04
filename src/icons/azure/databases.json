@@ -1,0 +1,46 @@
+{
+  "category": "Databases",
+  "count": 8,
+  "icons": [
+    {
+      "slug": "elastic_job_agents",
+      "displayName": "Elastic Job Agents",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Elastic-Job-Agents.svg"
+    },
+    {
+      "slug": "instance_pools",
+      "displayName": "Instance Pools",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Instance-Pools.svg"
+    },
+    {
+      "slug": "production_ready_database",
+      "displayName": "Production Ready Database",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Production-Ready-Database.svg"
+    },
+    {
+      "slug": "sql_data_warehouses",
+      "displayName": "Sql Data Warehouses",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Data-Warehouses.svg"
+    },
+    {
+      "slug": "sql_database",
+      "displayName": "Sql Database",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Database.svg"
+    },
+    {
+      "slug": "sql_elastic_pools",
+      "displayName": "Sql Elastic Pools",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Elastic-Pools.svg"
+    },
+    {
+      "slug": "sql_managed_instance",
+      "displayName": "Sql Managed Instance",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Managed-Instance.svg"
+    },
+    {
+      "slug": "sql_server",
+      "displayName": "Sql Server",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Server.svg"
+    }
+  ]
+}

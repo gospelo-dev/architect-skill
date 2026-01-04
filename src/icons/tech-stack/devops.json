@@ -1,0 +1,141 @@
+{
+  "category": "DevOps",
+  "count": 27,
+  "icons": [
+    {
+      "slug": "docker",
+      "displayName": "Docker",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/docker.svg"
+    },
+    {
+      "slug": "kubernetes",
+      "displayName": "Kubernetes",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/kubernetes.svg"
+    },
+    {
+      "slug": "terraform",
+      "displayName": "Terraform",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/terraform.svg"
+    },
+    {
+      "slug": "ansible",
+      "displayName": "Ansible",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ansible.svg"
+    },
+    {
+      "slug": "jenkins",
+      "displayName": "Jenkins",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jenkins.svg"
+    },
+    {
+      "slug": "circleci",
+      "displayName": "CircleCI",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/circleci.svg"
+    },
+    {
+      "slug": "githubactions",
+      "displayName": "GitHub Actions",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/githubactions.svg"
+    },
+    {
+      "slug": "gitlab",
+      "displayName": "GitLab",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/gitlab.svg"
+    },
+    {
+      "slug": "bitbucket",
+      "displayName": "Bitbucket",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/bitbucket.svg"
+    },
+    {
+      "slug": "travisci",
+      "displayName": "Travis CI",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/travisci.svg"
+    },
+    {
+      "slug": "teamcity",
+      "displayName": "TeamCity",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/teamcity.svg"
+    },
+    {
+      "slug": "argo",
+      "displayName": "Argo",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/argo.svg"
+    },
+    {
+      "slug": "helm",
+      "displayName": "Helm",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/helm.svg"
+    },
+    {
+      "slug": "puppet",
+      "displayName": "Puppet",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/puppet.svg"
+    },
+    {
+      "slug": "chef",
+      "displayName": "Chef",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/chef.svg"
+    },
+    {
+      "slug": "vagrant",
+      "displayName": "Vagrant",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vagrant.svg"
+    },
+    {
+      "slug": "packer",
+      "displayName": "Packer",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/packer.svg"
+    },
+    {
+      "slug": "pulumi",
+      "displayName": "Pulumi",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/pulumi.svg"
+    },
+    {
+      "slug": "rancher",
+      "displayName": "Rancher",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/rancher.svg"
+    },
+    {
+      "slug": "portainer",
+      "displayName": "Portainer",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/portainer.svg"
+    },
+    {
+      "slug": "podman",
+      "displayName": "Podman",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/podman.svg"
+    },
+    {
+      "slug": "containerd",
+      "displayName": "containerd",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/containerd.svg"
+    },
+    {
+      "slug": "istio",
+      "displayName": "Istio",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/istio.svg"
+    },
+    {
+      "slug": "linkerd",
+      "displayName": "Linkerd",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/linkerd.svg"
+    },
+    {
+      "slug": "consul",
+      "displayName": "Consul",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/consul.svg"
+    },
+    {
+      "slug": "vault",
+      "displayName": "Vault",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vault.svg"
+    },
+    {
+      "slug": "nomad",
+      "displayName": "Nomad",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nomad.svg"
+    }
+  ]
+}

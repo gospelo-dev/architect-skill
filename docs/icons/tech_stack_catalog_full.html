@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Stack Icon Catalog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffffff, #f0fff0);
+      min-height: 100vh;
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 16px 24px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+    }
+    .search-container {
+      flex: 1;
+      min-width: 250px;
+      max-width: 400px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 16px;
+      font-size: 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-input:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 0 3px #28a74533;
+    }
+    .search-info {
+      font-size: 13px;
+      color: #666;
+      white-space: nowrap;
+    }
+    .match-count {
+      font-weight: 600;
+      color: #28a745;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .category {
+      margin-bottom: 32px;
+    }
+    .category-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #444;
+      margin: 0 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eee;
+    }
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 12px;
+    }
+    .icon-card {
+      background: white;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .icon-card:hover {
+      border-color: #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .icon-card.highlight {
+      border-color: #3B82F6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(59, 130, 246, 0.2);
+      background: white;
+    }
+    .icon-card.dimmed {
+      opacity: 0.3;
+    }
+    .icon-image {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-image img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+    .icon-id {
+      font-size: 10px;
+      color: #666;
+      word-break: break-all;
+      line-height: 1.3;
+    }
+    .icon-card.highlight .icon-id {
+      color: #1D4ED8;
+      font-weight: 500;
+    }
+    .copied-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    .copied-toast.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div>
+        <h1 class="title">Tech Stack Icon Catalog</h1>
+        <div class="subtitle">268 icons</div>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search icons... (e.g. lambda, s3, storage)" id="searchInput">
+      </div>
+      <div class="search-info">
+        <span id="matchCount"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div class="category" data-category="AI &amp; ML">
+      <h2 class="category-title">AI &amp; ML (20)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:tensorflow" data-display-name="TensorFlow">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tensorflow.svg" alt="TensorFlow" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:tensorflow</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:pytorch" data-display-name="PyTorch">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/pytorch.svg" alt="PyTorch" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:pytorch</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:huggingface" data-display-name="Hugging Face">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/huggingface.svg" alt="Hugging Face" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:huggingface</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:scikitlearn" data-display-name="scikit-learn">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/scikitlearn.svg" alt="scikit-learn" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:scikitlearn</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:keras" data-display-name="Keras">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/keras.svg" alt="Keras" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:keras</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:mlflow" data-display-name="MLflow">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mlflow.svg" alt="MLflow" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:mlflow</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:jupyter" data-display-name="Jupyter">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/jupyter.svg" alt="Jupyter" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:jupyter</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:pandas" data-display-name="pandas">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/pandas.svg" alt="pandas" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:pandas</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:numpy" data-display-name="NumPy">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/numpy.svg" alt="NumPy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:numpy</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:opencv" data-display-name="OpenCV">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/opencv.svg" alt="OpenCV" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:opencv</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:langchain" data-display-name="LangChain">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/langchain.svg" alt="LangChain" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:langchain</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:weightsandbiases" data-display-name="Weights &amp; Biases">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/weightsandbiases.svg" alt="Weights &amp; Biases" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:weightsandbiases</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:apacheairflow" data-display-name="Apache Airflow">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/apacheairflow.svg" alt="Apache Airflow" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:apacheairflow</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:apachespark" data-display-name="Apache Spark">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/apachespark.svg" alt="Apache Spark" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:apachespark</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:databricks" data-display-name="Databricks">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/databricks.svg" alt="Databricks" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:databricks</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:googlecolab" data-display-name="Google Colab">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/googlecolab.svg" alt="Google Colab" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:googlecolab</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:kaggle" data-display-name="Kaggle">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/kaggle.svg" alt="Kaggle" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:kaggle</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:anaconda" data-display-name="Anaconda">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/anaconda.svg" alt="Anaconda" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:anaconda</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:scipy" data-display-name="SciPy">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/scipy.svg" alt="SciPy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:scipy</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:plotly" data-display-name="Plotly">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/plotly.svg" alt="Plotly" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:plotly</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Backend">
+      <h2 class="category-title">Backend (16)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:nodedotjs" data-display-name="Node.js">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/nodedotjs.svg" alt="Node.js" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:nodedotjs</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:express" data-display-name="Express">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/express.svg" alt="Express" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:express</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:fastapi" data-display-name="FastAPI">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/fastapi.svg" alt="FastAPI" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:fastapi</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:flask" data-display-name="Flask">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/flask.svg" alt="Flask" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:flask</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:django" data-display-name="Django">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/django.svg" alt="Django" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:django</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:springboot" data-display-name="Spring Boot">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/springboot.svg" alt="Spring Boot" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:springboot</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:laravel" data-display-name="Laravel">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/laravel.svg" alt="Laravel" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:laravel</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:rubyonrails" data-display-name="Ruby on Rails">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/rubyonrails.svg" alt="Ruby on Rails" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:rubyonrails</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:gin" data-display-name="Gin">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/gin.svg" alt="Gin" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:gin</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:fastify" data-display-name="Fastify">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/fastify.svg" alt="Fastify" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:fastify</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:nestjs" data-display-name="NestJS">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/nestjs.svg" alt="NestJS" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:nestjs</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:koa" data-display-name="Koa">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/koa.svg" alt="Koa" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:koa</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:hono" data-display-name="Hono">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/hono.svg" alt="Hono" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:hono</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:adonisjs" data-display-name="AdonisJS">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/adonisjs.svg" alt="AdonisJS" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:adonisjs</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:actix" data-display-name="Actix">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/actix.svg" alt="Actix" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:actix</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:rocket" data-display-name="Rocket">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/rocket.svg" alt="Rocket" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:rocket</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Cloud">
+      <h2 class="category-title">Cloud (14)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:googlecloud" data-display-name="Google Cloud">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/googlecloud.svg" alt="Google Cloud" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:googlecloud</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:digitalocean" data-display-name="DigitalOcean">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/digitalocean.svg" alt="DigitalOcean" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:digitalocean</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:vercel" data-display-name="Vercel">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/vercel.svg" alt="Vercel" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:vercel</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:netlify" data-display-name="Netlify">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/netlify.svg" alt="Netlify" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:netlify</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:cloudflare" data-display-name="Cloudflare">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/cloudflare.svg" alt="Cloudflare" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:cloudflare</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:vultr" data-display-name="Vultr">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/vultr.svg" alt="Vultr" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:vultr</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:render" data-display-name="Render">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/render.svg" alt="Render" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:render</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:railway" data-display-name="Railway">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/railway.svg" alt="Railway" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:railway</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:flydotio" data-display-name="Fly.io">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/flydotio.svg" alt="Fly.io" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:flydotio</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:upcloud" data-display-name="UpCloud">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/upcloud.svg" alt="UpCloud" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:upcloud</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:scaleway" data-display-name="Scaleway">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/scaleway.svg" alt="Scaleway" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:scaleway</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:hetzner" data-display-name="Hetzner">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/hetzner.svg" alt="Hetzner" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:hetzner</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:civo" data-display-name="Civo">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/civo.svg" alt="Civo" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:civo</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:akamai" data-display-name="Akamai">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/akamai.svg" alt="Akamai" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:akamai</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Databases">
+      <h2 class="category-title">Databases (23)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:postgresql" data-display-name="PostgreSQL">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/postgresql.svg" alt="PostgreSQL" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:postgresql</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:mysql" data-display-name="MySQL">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mysql.svg" alt="MySQL" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:mysql</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:mongodb" data-display-name="MongoDB">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mongodb.svg" alt="MongoDB" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:mongodb</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:redis" data-display-name="Redis">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/redis.svg" alt="Redis" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:redis</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:elasticsearch" data-display-name="Elasticsearch">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/elasticsearch.svg" alt="Elasticsearch" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:elasticsearch</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:mariadb" data-display-name="MariaDB">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mariadb.svg" alt="MariaDB" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:mariadb</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:sqlite" data-display-name="SQLite">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/sqlite.svg" alt="SQLite" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:sqlite</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:apachecassandra" data-display-name="Apache Cassandra">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/apachecassandra.svg" alt="Apache Cassandra" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:apachecassandra</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:couchbase" data-display-name="Couchbase">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/couchbase.svg" alt="Couchbase" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:couchbase</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:neo4j" data-display-name="Neo4j">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/neo4j.svg" alt="Neo4j" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:neo4j</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:influxdb" data-display-name="InfluxDB">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/influxdb.svg" alt="InfluxDB" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:influxdb</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:firebase" data-display-name="Firebase">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/firebase.svg" alt="Firebase" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:firebase</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:supabase" data-display-name="Supabase">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/supabase.svg" alt="Supabase" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:supabase</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:planetscale" data-display-name="PlanetScale">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/planetscale.svg" alt="PlanetScale" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:planetscale</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:cockroachlabs" data-display-name="Cockroach Labs">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/cockroachlabs.svg" alt="Cockroach Labs" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:cockroachlabs</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:timescale" data-display-name="Timescale">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/timescale.svg" alt="Timescale" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:timescale</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:surrealdb" data-display-name="SurrealDB">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/surrealdb.svg" alt="SurrealDB" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:surrealdb</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:clickhouse" data-display-name="ClickHouse">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/clickhouse.svg" alt="ClickHouse" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:clickhouse</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:duckdb" data-display-name="DuckDB">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/duckdb.svg" alt="DuckDB" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:duckdb</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:arangodb" data-display-name="ArangoDB">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/arangodb.svg" alt="ArangoDB" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:arangodb</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:dgraph" data-display-name="Dgraph">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/dgraph.svg" alt="Dgraph" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:dgraph</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:fauna" data-display-name="Fauna">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/fauna.svg" alt="Fauna" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:fauna</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:turso" data-display-name="Turso">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/turso.svg" alt="Turso" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:turso</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="DevOps">
+      <h2 class="category-title">DevOps (27)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:docker" data-display-name="Docker">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/docker.svg" alt="Docker" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:docker</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:kubernetes" data-display-name="Kubernetes">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/kubernetes.svg" alt="Kubernetes" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:kubernetes</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:terraform" data-display-name="Terraform">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/terraform.svg" alt="Terraform" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:terraform</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:ansible" data-display-name="Ansible">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/ansible.svg" alt="Ansible" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:ansible</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:jenkins" data-display-name="Jenkins">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/jenkins.svg" alt="Jenkins" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:jenkins</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:circleci" data-display-name="CircleCI">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/circleci.svg" alt="CircleCI" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:circleci</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:githubactions" data-display-name="GitHub Actions">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/githubactions.svg" alt="GitHub Actions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:githubactions</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:gitlab" data-display-name="GitLab">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/gitlab.svg" alt="GitLab" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:gitlab</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:bitbucket" data-display-name="Bitbucket">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/bitbucket.svg" alt="Bitbucket" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:bitbucket</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:travisci" data-display-name="Travis CI">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/travisci.svg" alt="Travis CI" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:travisci</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:teamcity" data-display-name="TeamCity">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/teamcity.svg" alt="TeamCity" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:teamcity</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:argo" data-display-name="Argo">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/argo.svg" alt="Argo" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:argo</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:helm" data-display-name="Helm">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/helm.svg" alt="Helm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:helm</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:puppet" data-display-name="Puppet">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/puppet.svg" alt="Puppet" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:puppet</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:chef" data-display-name="Chef">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/chef.svg" alt="Chef" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:chef</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:vagrant" data-display-name="Vagrant">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/vagrant.svg" alt="Vagrant" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:vagrant</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:packer" data-display-name="Packer">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/packer.svg" alt="Packer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:packer</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:pulumi" data-display-name="Pulumi">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/pulumi.svg" alt="Pulumi" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:pulumi</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:rancher" data-display-name="Rancher">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/rancher.svg" alt="Rancher" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:rancher</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:portainer" data-display-name="Portainer">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/portainer.svg" alt="Portainer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:portainer</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:podman" data-display-name="Podman">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/podman.svg" alt="Podman" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:podman</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:containerd" data-display-name="containerd">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/containerd.svg" alt="containerd" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:containerd</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:istio" data-display-name="Istio">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/istio.svg" alt="Istio" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:istio</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:linkerd" data-display-name="Linkerd">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/linkerd.svg" alt="Linkerd" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:linkerd</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:consul" data-display-name="Consul">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/consul.svg" alt="Consul" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:consul</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:vault" data-display-name="Vault">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/vault.svg" alt="Vault" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:vault</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:nomad" data-display-name="Nomad">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/nomad.svg" alt="Nomad" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:nomad</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Editors">
+      <h2 class="category-title">Editors (11)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:vim" data-display-name="Vim">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/vim.svg" alt="Vim" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:vim</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:neovim" data-display-name="Neovim">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/neovim.svg" alt="Neovim" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:neovim</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:jetbrains" data-display-name="JetBrains">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/jetbrains.svg" alt="JetBrains" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:jetbrains</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:intellijidea" data-display-name="IntelliJ IDEA">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/intellijidea.svg" alt="IntelliJ IDEA" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:intellijidea</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:pycharm" data-display-name="PyCharm">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/pycharm.svg" alt="PyCharm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:pycharm</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:webstorm" data-display-name="WebStorm">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/webstorm.svg" alt="WebStorm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:webstorm</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:goland" data-display-name="GoLand">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/goland.svg" alt="GoLand" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:goland</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:rider" data-display-name="Rider">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/rider.svg" alt="Rider" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:rider</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:sublimetext" data-display-name="Sublime Text">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/sublimetext.svg" alt="Sublime Text" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:sublimetext</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:eclipseide" data-display-name="Eclipse IDE">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/eclipseide.svg" alt="Eclipse IDE" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:eclipseide</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:xcode" data-display-name="Xcode">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/xcode.svg" alt="Xcode" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:xcode</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Frontend">
+      <h2 class="category-title">Frontend (28)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:react" data-display-name="React">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/react.svg" alt="React" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:react</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:vuedotjs" data-display-name="Vue.js">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/vuedotjs.svg" alt="Vue.js" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:vuedotjs</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:angular" data-display-name="Angular">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/angular.svg" alt="Angular" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:angular</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:svelte" data-display-name="Svelte">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/svelte.svg" alt="Svelte" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:svelte</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:nextdotjs" data-display-name="Next.js">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/nextdotjs.svg" alt="Next.js" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:nextdotjs</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:gatsby" data-display-name="Gatsby">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/gatsby.svg" alt="Gatsby" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:gatsby</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:astro" data-display-name="Astro">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/astro.svg" alt="Astro" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:astro</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:solid" data-display-name="Solid">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/solid.svg" alt="Solid" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:solid</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:lit" data-display-name="Lit">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/lit.svg" alt="Lit" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:lit</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:preact" data-display-name="Preact">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/preact.svg" alt="Preact" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:preact</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:remix" data-display-name="Remix">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/remix.svg" alt="Remix" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:remix</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:qwik" data-display-name="Qwik">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/qwik.svg" alt="Qwik" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:qwik</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:alpinedotjs" data-display-name="Alpine.js">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/alpinedotjs.svg" alt="Alpine.js" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:alpinedotjs</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:storybook" data-display-name="Storybook">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/storybook.svg" alt="Storybook" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:storybook</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:tailwindcss" data-display-name="Tailwind CSS">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tailwindcss.svg" alt="Tailwind CSS" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:tailwindcss</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:bootstrap" data-display-name="Bootstrap">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/bootstrap.svg" alt="Bootstrap" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:bootstrap</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:sass" data-display-name="Sass">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/sass.svg" alt="Sass" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:sass</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:less" data-display-name="Less">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/less.svg" alt="Less" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:less</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:postcss" data-display-name="PostCSS">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/postcss.svg" alt="PostCSS" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:postcss</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:vite" data-display-name="Vite">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/vite.svg" alt="Vite" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:vite</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:webpack" data-display-name="Webpack">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/webpack.svg" alt="Webpack" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:webpack</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:esbuild" data-display-name="esbuild">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/esbuild.svg" alt="esbuild" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:esbuild</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:html5" data-display-name="HTML5">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/html5.svg" alt="HTML5" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:html5</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:webcomponentsdotorg" data-display-name="webcomponents.org">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/webcomponentsdotorg.svg" alt="webcomponents.org" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:webcomponentsdotorg</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:threedotjs" data-display-name="Three.js">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/threedotjs.svg" alt="Three.js" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:threedotjs</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:babel" data-display-name="Babel">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/babel.svg" alt="Babel" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:babel</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:eslint" data-display-name="ESLint">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/eslint.svg" alt="ESLint" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:eslint</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:prettier" data-display-name="Prettier">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/prettier.svg" alt="Prettier" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:prettier</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Languages">
+      <h2 class="category-title">Languages (28)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:python" data-display-name="Python">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/python.svg" alt="Python" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:python</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:javascript" data-display-name="JavaScript">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/javascript.svg" alt="JavaScript" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:javascript</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:typescript" data-display-name="TypeScript">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/typescript.svg" alt="TypeScript" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:typescript</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:go" data-display-name="Go">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/go.svg" alt="Go" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:go</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:rust" data-display-name="Rust">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/rust.svg" alt="Rust" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:rust</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:ruby" data-display-name="Ruby">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/ruby.svg" alt="Ruby" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:ruby</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:php" data-display-name="PHP">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/php.svg" alt="PHP" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:php</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:swift" data-display-name="Swift">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/swift.svg" alt="Swift" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:swift</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:kotlin" data-display-name="Kotlin">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/kotlin.svg" alt="Kotlin" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:kotlin</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:scala" data-display-name="Scala">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/scala.svg" alt="Scala" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:scala</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:elixir" data-display-name="Elixir">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/elixir.svg" alt="Elixir" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:elixir</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:dart" data-display-name="Dart">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/dart.svg" alt="Dart" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:dart</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:perl" data-display-name="Perl">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/perl.svg" alt="Perl" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:perl</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:lua" data-display-name="Lua">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/lua.svg" alt="Lua" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:lua</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:haskell" data-display-name="Haskell">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/haskell.svg" alt="Haskell" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:haskell</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:julia" data-display-name="Julia">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/julia.svg" alt="Julia" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:julia</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:fortran" data-display-name="Fortran">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/fortran.svg" alt="Fortran" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:fortran</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:c" data-display-name="C">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/c.svg" alt="C" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:c</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:cplusplus" data-display-name="C++">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/cplusplus.svg" alt="C++" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:cplusplus</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:r" data-display-name="R">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/r.svg" alt="R" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:r</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:clojure" data-display-name="Clojure">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/clojure.svg" alt="Clojure" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:clojure</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:erlang" data-display-name="Erlang">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/erlang.svg" alt="Erlang" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:erlang</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:fsharp" data-display-name="F#">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/fsharp.svg" alt="F#" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:fsharp</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:crystal" data-display-name="Crystal">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/crystal.svg" alt="Crystal" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:crystal</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:nim" data-display-name="Nim">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/nim.svg" alt="Nim" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:nim</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:zig" data-display-name="Zig">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/zig.svg" alt="Zig" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:zig</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:odin" data-display-name="Odin">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/odin.svg" alt="Odin" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:odin</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:v" data-display-name="V">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/v.svg" alt="V" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:v</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Messaging">
+      <h2 class="category-title">Messaging (4)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:apachekafka" data-display-name="Apache Kafka">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/apachekafka.svg" alt="Apache Kafka" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:apachekafka</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:rabbitmq" data-display-name="RabbitMQ">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/rabbitmq.svg" alt="RabbitMQ" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:rabbitmq</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:mqtt" data-display-name="MQTT">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mqtt.svg" alt="MQTT" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:mqtt</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:apachepulsar" data-display-name="Apache Pulsar">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/apachepulsar.svg" alt="Apache Pulsar" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:apachepulsar</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Monitoring">
+      <h2 class="category-title">Monitoring (15)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:prometheus" data-display-name="Prometheus">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/prometheus.svg" alt="Prometheus" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:prometheus</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:grafana" data-display-name="Grafana">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/grafana.svg" alt="Grafana" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:grafana</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:datadog" data-display-name="Datadog">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/datadog.svg" alt="Datadog" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:datadog</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:newrelic" data-display-name="New Relic">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/newrelic.svg" alt="New Relic" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:newrelic</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:elastic" data-display-name="Elastic">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/elastic.svg" alt="Elastic" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:elastic</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:splunk" data-display-name="Splunk">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/splunk.svg" alt="Splunk" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:splunk</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:dynatrace" data-display-name="Dynatrace">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/dynatrace.svg" alt="Dynatrace" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:dynatrace</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:sentry" data-display-name="Sentry">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/sentry.svg" alt="Sentry" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:sentry</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:honeybadger" data-display-name="Honeybadger">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/honeybadger.svg" alt="Honeybadger" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:honeybadger</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:jaeger" data-display-name="Jaeger">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/jaeger.svg" alt="Jaeger" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:jaeger</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:opentelemetry" data-display-name="OpenTelemetry">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/opentelemetry.svg" alt="OpenTelemetry" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:opentelemetry</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:logstash" data-display-name="Logstash">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/logstash.svg" alt="Logstash" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:logstash</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:kibana" data-display-name="Kibana">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/kibana.svg" alt="Kibana" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:kibana</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:fluentd" data-display-name="Fluentd">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/fluentd.svg" alt="Fluentd" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:fluentd</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:uptimekuma" data-display-name="Uptime Kuma">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/uptimekuma.svg" alt="Uptime Kuma" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:uptimekuma</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="OS">
+      <h2 class="category-title">OS (18)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:linux" data-display-name="Linux">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/linux.svg" alt="Linux" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:linux</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:ubuntu" data-display-name="Ubuntu">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/ubuntu.svg" alt="Ubuntu" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:ubuntu</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:debian" data-display-name="Debian">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/debian.svg" alt="Debian" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:debian</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:fedora" data-display-name="Fedora">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/fedora.svg" alt="Fedora" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:fedora</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:archlinux" data-display-name="Arch Linux">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/archlinux.svg" alt="Arch Linux" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:archlinux</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:centos" data-display-name="CentOS">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/centos.svg" alt="CentOS" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:centos</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:alpinelinux" data-display-name="Alpine Linux">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/alpinelinux.svg" alt="Alpine Linux" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:alpinelinux</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:apple" data-display-name="Apple">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/apple.svg" alt="Apple" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:apple</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:ios" data-display-name="iOS">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/ios.svg" alt="iOS" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:ios</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:android" data-display-name="Android">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/android.svg" alt="Android" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:android</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:redhat" data-display-name="Red Hat">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/redhat.svg" alt="Red Hat" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:redhat</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:opensuse" data-display-name="openSUSE">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/opensuse.svg" alt="openSUSE" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:opensuse</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:manjaro" data-display-name="Manjaro">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/manjaro.svg" alt="Manjaro" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:manjaro</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:nixos" data-display-name="NixOS">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/nixos.svg" alt="NixOS" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:nixos</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:voidlinux" data-display-name="Void Linux">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/voidlinux.svg" alt="Void Linux" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:voidlinux</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:gentoo" data-display-name="Gentoo">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/gentoo.svg" alt="Gentoo" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:gentoo</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:freebsd" data-display-name="FreeBSD">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/freebsd.svg" alt="FreeBSD" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:freebsd</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:openbsd" data-display-name="OpenBSD">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/openbsd.svg" alt="OpenBSD" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:openbsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Package Managers">
+      <h2 class="category-title">Package Managers (9)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:npm" data-display-name="npm">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/npm.svg" alt="npm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:npm</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:yarn" data-display-name="Yarn">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/yarn.svg" alt="Yarn" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:yarn</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:pnpm" data-display-name="pnpm">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/pnpm.svg" alt="pnpm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:pnpm</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:bun" data-display-name="Bun">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/bun.svg" alt="Bun" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:bun</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:deno" data-display-name="Deno">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/deno.svg" alt="Deno" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:deno</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:homebrew" data-display-name="Homebrew">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/homebrew.svg" alt="Homebrew" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:homebrew</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:chocolatey" data-display-name="Chocolatey">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/chocolatey.svg" alt="Chocolatey" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:chocolatey</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:snapcraft" data-display-name="Snapcraft">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/snapcraft.svg" alt="Snapcraft" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:snapcraft</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:flatpak" data-display-name="Flatpak">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/flatpak.svg" alt="Flatpak" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:flatpak</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Security">
+      <h2 class="category-title">Security (7)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:letsencrypt" data-display-name="Let's Encrypt">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/letsencrypt.svg" alt="Let's Encrypt" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:letsencrypt</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:auth0" data-display-name="Auth0">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/auth0.svg" alt="Auth0" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:auth0</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:okta" data-display-name="Okta">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/okta.svg" alt="Okta" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:okta</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:snyk" data-display-name="Snyk">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/snyk.svg" alt="Snyk" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:snyk</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:dependabot" data-display-name="Dependabot">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/dependabot.svg" alt="Dependabot" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:dependabot</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:owasp" data-display-name="OWASP">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/owasp.svg" alt="OWASP" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:owasp</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:wireshark" data-display-name="Wireshark">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/wireshark.svg" alt="Wireshark" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:wireshark</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Services">
+      <h2 class="category-title">Services (15)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:stripe" data-display-name="Stripe">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/stripe.svg" alt="Stripe" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:stripe</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:paypal" data-display-name="PayPal">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/paypal.svg" alt="PayPal" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:paypal</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:square" data-display-name="Square">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/square.svg" alt="Square" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:square</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:shopify" data-display-name="Shopify">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/shopify.svg" alt="Shopify" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:shopify</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:mailchimp" data-display-name="MailChimp">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mailchimp.svg" alt="MailChimp" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:mailchimp</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:mapbox" data-display-name="Mapbox">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mapbox.svg" alt="Mapbox" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:mapbox</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:algolia" data-display-name="Algolia">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/algolia.svg" alt="Algolia" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:algolia</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:meilisearch" data-display-name="Meilisearch">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/meilisearch.svg" alt="Meilisearch" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:meilisearch</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:contentful" data-display-name="Contentful">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/contentful.svg" alt="Contentful" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:contentful</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:strapi" data-display-name="Strapi">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/strapi.svg" alt="Strapi" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:strapi</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:sanity" data-display-name="Sanity">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/sanity.svg" alt="Sanity" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:sanity</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:ghost" data-display-name="Ghost">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/ghost.svg" alt="Ghost" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:ghost</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:wordpress" data-display-name="WordPress">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/wordpress.svg" alt="WordPress" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:wordpress</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:anthropic" data-display-name="Anthropic">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/anthropic.svg" alt="Anthropic" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:anthropic</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:ollama" data-display-name="Ollama">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/ollama.svg" alt="Ollama" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:ollama</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Testing">
+      <h2 class="category-title">Testing (10)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:jest" data-display-name="Jest">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/jest.svg" alt="Jest" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:jest</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:mocha" data-display-name="Mocha">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mocha.svg" alt="Mocha" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:mocha</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:jasmine" data-display-name="Jasmine">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/jasmine.svg" alt="Jasmine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:jasmine</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:cypress" data-display-name="Cypress">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/cypress.svg" alt="Cypress" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:cypress</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:selenium" data-display-name="Selenium">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/selenium.svg" alt="Selenium" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:selenium</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:puppeteer" data-display-name="Puppeteer">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/puppeteer.svg" alt="Puppeteer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:puppeteer</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:pytest" data-display-name="Pytest">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/pytest.svg" alt="Pytest" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:pytest</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:vitest" data-display-name="Vitest">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/vitest.svg" alt="Vitest" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:vitest</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:testinglibrary" data-display-name="Testing Library">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/testinglibrary.svg" alt="Testing Library" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:testinglibrary</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:cucumber" data-display-name="Cucumber">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/cucumber.svg" alt="Cucumber" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:cucumber</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Tools">
+      <h2 class="category-title">Tools (19)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:git" data-display-name="Git">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/git.svg" alt="Git" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:git</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:github" data-display-name="GitHub">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg" alt="GitHub" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:github</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:jira" data-display-name="Jira">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/jira.svg" alt="Jira" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:jira</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:confluence" data-display-name="Confluence">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/confluence.svg" alt="Confluence" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:confluence</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:discord" data-display-name="Discord">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/discord.svg" alt="Discord" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:discord</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:figma" data-display-name="Figma">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/figma.svg" alt="Figma" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:figma</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:notion" data-display-name="Notion">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/notion.svg" alt="Notion" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:notion</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:trello" data-display-name="Trello">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/trello.svg" alt="Trello" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:trello</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:asana" data-display-name="Asana">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/asana.svg" alt="Asana" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:asana</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:linear" data-display-name="Linear">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/linear.svg" alt="Linear" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:linear</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:postman" data-display-name="Postman">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/postman.svg" alt="Postman" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:postman</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:insomnia" data-display-name="Insomnia">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/insomnia.svg" alt="Insomnia" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:insomnia</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:swagger" data-display-name="Swagger">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/swagger.svg" alt="Swagger" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:swagger</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:graphql" data-display-name="GraphQL">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/graphql.svg" alt="GraphQL" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:graphql</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:curl" data-display-name="curl">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/curl.svg" alt="curl" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:curl</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:miro" data-display-name="Miro">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/miro.svg" alt="Miro" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:miro</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:clickup" data-display-name="ClickUp">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/clickup.svg" alt="ClickUp" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:clickup</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:todoist" data-display-name="Todoist">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/todoist.svg" alt="Todoist" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:todoist</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:airtable" data-display-name="Airtable">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/airtable.svg" alt="Airtable" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:airtable</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Web Servers">
+      <h2 class="category-title">Web Servers (4)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="tech:nginx" data-display-name="NGINX">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/nginx.svg" alt="NGINX" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:nginx</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:apache" data-display-name="Apache">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/apache.svg" alt="Apache" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:apache</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:caddy" data-display-name="Caddy">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/caddy.svg" alt="Caddy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:caddy</div>
+        </div>
+        <div class="icon-card" data-icon-id="tech:envoyproxy" data-display-name="Envoy Proxy">
+          <div class="icon-image">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/envoyproxy.svg" alt="Envoy Proxy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">tech:envoyproxy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copied-toast" id="copiedToast">Copied to clipboard!</div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const matchCountEl = document.getElementById('matchCount');
+    const copiedToast = document.getElementById('copiedToast');
+    const iconCards = document.querySelectorAll('.icon-card');
+
+    let toastTimeout;
+
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      let matchCount = 0;
+
+      iconCards.forEach(card => {
+        const iconId = card.dataset.iconId.toLowerCase();
+        const displayName = card.dataset.displayName.toLowerCase();
+
+        if (query === '') {
+          card.classList.remove('highlight', 'dimmed');
+        } else {
+          // AND search: all terms must match
+          const terms = query.split(/\s+/).filter(t => t.length > 0);
+          const text = iconId + ' ' + displayName;
+          const matches = terms.every(term => text.includes(term));
+          if (matches) {
+            card.classList.add('highlight');
+            card.classList.remove('dimmed');
+            matchCount++;
+          } else {
+            card.classList.remove('highlight');
+            card.classList.add('dimmed');
+          }
+        }
+      });
+
+      if (query === '') {
+        matchCountEl.textContent = '';
+      } else {
+        matchCountEl.innerHTML = '<span class="match-count">' + matchCount + '</span> matches';
+      }
+    });
+
+    // Click to copy
+    iconCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const iconId = this.dataset.iconId;
+        navigator.clipboard.writeText(iconId).then(() => {
+          copiedToast.textContent = 'Copied: ' + iconId;
+          copiedToast.classList.add('show');
+          clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+            copiedToast.classList.remove('show');
+          }, 2000);
+        });
+      });
+    });
+
+    // Focus search on page load
+    searchInput.focus();
+  </script>
+
+  <footer class="license-footer">
+    <p>Icon Attribution: Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)</p>
+    <p>Version: a1c9241 (Updated: 2026-01-01)</p>
+    <p>Generated with gospelo-architect</p>
+  </footer>
+  <style>
+    .license-footer {
+      max-width: 1400px;
+      margin: 48px auto 24px;
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      border-top: 1px solid #ddd;
+    }
+    .license-footer p {
+      margin: 4px 0;
+    }
+  </style>
+</body>
+</html>

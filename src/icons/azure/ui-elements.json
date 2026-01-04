@@ -1,0 +1,151 @@
+{
+  "category": "UI Elements",
+  "count": 29,
+  "icons": [
+    {
+      "slug": "browser",
+      "displayName": "Browser",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Browser.svg"
+    },
+    {
+      "slug": "controls",
+      "displayName": "Controls",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Controls.svg"
+    },
+    {
+      "slug": "controls_horizontal",
+      "displayName": "Controls Horizontal",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Controls-Horizontal.svg"
+    },
+    {
+      "slug": "counter",
+      "displayName": "Counter",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Counter.svg"
+    },
+    {
+      "slug": "cubes",
+      "displayName": "Cubes",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cubes.svg"
+    },
+    {
+      "slug": "dashboard",
+      "displayName": "Dashboard",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Dashboard.svg"
+    },
+    {
+      "slug": "download",
+      "displayName": "Download",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Download.svg"
+    },
+    {
+      "slug": "error",
+      "displayName": "Error",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Error.svg"
+    },
+    {
+      "slug": "folder_blank",
+      "displayName": "Folder Blank",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Folder-Blank.svg"
+    },
+    {
+      "slug": "folder_website",
+      "displayName": "Folder Website",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Folder-Website.svg"
+    },
+    {
+      "slug": "gear",
+      "displayName": "Gear",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Gear.svg"
+    },
+    {
+      "slug": "globe",
+      "displayName": "Globe",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe.svg"
+    },
+    {
+      "slug": "globe_error",
+      "displayName": "Globe Error",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Error.svg"
+    },
+    {
+      "slug": "globe_success",
+      "displayName": "Globe Success",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Success.svg"
+    },
+    {
+      "slug": "globe_warning",
+      "displayName": "Globe Warning",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Globe-Warning.svg"
+    },
+    {
+      "slug": "guide",
+      "displayName": "Guide",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Guide.svg"
+    },
+    {
+      "slug": "heart",
+      "displayName": "Heart",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Heart.svg"
+    },
+    {
+      "slug": "help_and_support",
+      "displayName": "Help And Support",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Help-and-Support.svg"
+    },
+    {
+      "slug": "information",
+      "displayName": "Information",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Information.svg"
+    },
+    {
+      "slug": "input_output",
+      "displayName": "Input Output",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Input-Output.svg"
+    },
+    {
+      "slug": "launch_portal",
+      "displayName": "Launch Portal",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Launch-Portal.svg"
+    },
+    {
+      "slug": "location",
+      "displayName": "Location",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Location.svg"
+    },
+    {
+      "slug": "power",
+      "displayName": "Power",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Power.svg"
+    },
+    {
+      "slug": "power_up",
+      "displayName": "Power Up",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Power-Up.svg"
+    },
+    {
+      "slug": "preview",
+      "displayName": "Preview",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Preview.svg"
+    },
+    {
+      "slug": "quickstart_center",
+      "displayName": "Quickstart Center",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Quickstart-Center.svg"
+    },
+    {
+      "slug": "recent",
+      "displayName": "Recent",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Recent.svg"
+    },
+    {
+      "slug": "toolbox",
+      "displayName": "Toolbox",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Toolbox.svg"
+    },
+    {
+      "slug": "versions",
+      "displayName": "Versions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Versions.svg"
+    }
+  ]
+}

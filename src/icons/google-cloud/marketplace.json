@@ -1,0 +1,21 @@
+{
+  "category": "Marketplace",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "financial_services_marketplace",
+      "displayName": "Financial Services Marketplace",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/financial_services_marketplace.svg"
+    },
+    {
+      "slug": "partner_interconnect",
+      "displayName": "Partner Interconnect",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/partner_interconnect.svg"
+    },
+    {
+      "slug": "partner_portal",
+      "displayName": "Partner Portal",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/partner_portal.svg"
+    }
+  ]
+}

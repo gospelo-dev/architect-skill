@@ -1,0 +1,41 @@
+{
+  "category": "Identity",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "identity_and_access_management",
+      "displayName": "Identity And Access Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/identity_and_access_management.svg"
+    },
+    {
+      "slug": "identity_platform",
+      "displayName": "Identity Platform",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/identity_platform.svg"
+    },
+    {
+      "slug": "identity-aware_proxy",
+      "displayName": "Identity-Aware Proxy",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/identity-aware_proxy.svg"
+    },
+    {
+      "slug": "managed_service_for_microsoft_active_directory",
+      "displayName": "Managed Service For Microsoft Active Directory",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/managed_service_for_microsoft_active_directory.svg"
+    },
+    {
+      "slug": "permissions",
+      "displayName": "Permissions",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/permissions.svg"
+    },
+    {
+      "slug": "user_preferences",
+      "displayName": "User Preferences",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/user_preferences.svg"
+    },
+    {
+      "slug": "workload_identity_pool",
+      "displayName": "Workload Identity Pool",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/workload_identity_pool.svg"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "category": "Games",
+  "count": 4,
+  "icons": [
+    {
+      "slug": "gamelift",
+      "displayName": "Gamelift",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Games/64/Arch_Amazon-GameLift_64.svg"
+    },
+    {
+      "slug": "gamesparks",
+      "displayName": "Gamesparks",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Games/64/Arch_Amazon-GameSparks_64.svg"
+    },
+    {
+      "slug": "gamekit",
+      "displayName": "Gamekit",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Games/64/Arch_AWS-GameKit_64.svg"
+    },
+    {
+      "slug": "open_3d_engine",
+      "displayName": "Open 3d Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Games/64/Arch_Open-3D-Engine_64.svg"
+    }
+  ]
+}

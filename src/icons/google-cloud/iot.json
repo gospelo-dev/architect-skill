@@ -1,0 +1,16 @@
+{
+  "category": "IoT",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "iot_core",
+      "displayName": "Iot Core",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/iot_core.svg"
+    },
+    {
+      "slug": "iot_edge",
+      "displayName": "Iot Edge",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/iot_edge.svg"
+    }
+  ]
+}

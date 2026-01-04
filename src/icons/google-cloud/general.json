@@ -1,0 +1,41 @@
+{
+  "category": "General",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "cloud_generic",
+      "displayName": "Cloud Generic",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_generic.svg"
+    },
+    {
+      "slug": "early_access_center",
+      "displayName": "Early Access Center",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/early_access_center.svg"
+    },
+    {
+      "slug": "free_trial",
+      "displayName": "Free Trial",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/free_trial.svg"
+    },
+    {
+      "slug": "home",
+      "displayName": "Home",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/home.svg"
+    },
+    {
+      "slug": "launcher",
+      "displayName": "Launcher",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/launcher.svg"
+    },
+    {
+      "slug": "my_cloud",
+      "displayName": "My Cloud",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/my_cloud.svg"
+    },
+    {
+      "slug": "onboarding",
+      "displayName": "Onboarding",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/onboarding.svg"
+    }
+  ]
+}

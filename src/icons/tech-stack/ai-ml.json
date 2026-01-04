@@ -1,0 +1,106 @@
+{
+  "category": "AI & ML",
+  "count": 20,
+  "icons": [
+    {
+      "slug": "tensorflow",
+      "displayName": "TensorFlow",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/tensorflow.svg"
+    },
+    {
+      "slug": "pytorch",
+      "displayName": "PyTorch",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/pytorch.svg"
+    },
+    {
+      "slug": "huggingface",
+      "displayName": "Hugging Face",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/huggingface.svg"
+    },
+    {
+      "slug": "scikitlearn",
+      "displayName": "scikit-learn",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/scikitlearn.svg"
+    },
+    {
+      "slug": "keras",
+      "displayName": "Keras",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/keras.svg"
+    },
+    {
+      "slug": "mlflow",
+      "displayName": "MLflow",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mlflow.svg"
+    },
+    {
+      "slug": "jupyter",
+      "displayName": "Jupyter",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jupyter.svg"
+    },
+    {
+      "slug": "pandas",
+      "displayName": "pandas",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/pandas.svg"
+    },
+    {
+      "slug": "numpy",
+      "displayName": "NumPy",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/numpy.svg"
+    },
+    {
+      "slug": "opencv",
+      "displayName": "OpenCV",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/opencv.svg"
+    },
+    {
+      "slug": "langchain",
+      "displayName": "LangChain",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/langchain.svg"
+    },
+    {
+      "slug": "weightsandbiases",
+      "displayName": "Weights & Biases",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/weightsandbiases.svg"
+    },
+    {
+      "slug": "apacheairflow",
+      "displayName": "Apache Airflow",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apacheairflow.svg"
+    },
+    {
+      "slug": "apachespark",
+      "displayName": "Apache Spark",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachespark.svg"
+    },
+    {
+      "slug": "databricks",
+      "displayName": "Databricks",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/databricks.svg"
+    },
+    {
+      "slug": "googlecolab",
+      "displayName": "Google Colab",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/googlecolab.svg"
+    },
+    {
+      "slug": "kaggle",
+      "displayName": "Kaggle",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/kaggle.svg"
+    },
+    {
+      "slug": "anaconda",
+      "displayName": "Anaconda",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/anaconda.svg"
+    },
+    {
+      "slug": "scipy",
+      "displayName": "SciPy",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/scipy.svg"
+    },
+    {
+      "slug": "plotly",
+      "displayName": "Plotly",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/plotly.svg"
+    }
+  ]
+}

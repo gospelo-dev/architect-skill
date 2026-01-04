@@ -1,0 +1,32 @@
+{
+  "provider": "aws",
+  "totalIcons": 799,
+  "categories": [
+    "general.json",
+    "front-end-web-mobile.json",
+    "app-integration.json",
+    "networking-content-delivery.json",
+    "migration-transfer.json",
+    "analytics.json",
+    "database.json",
+    "storage.json",
+    "quantum-technologies.json",
+    "security-identity-compliance.json",
+    "media-services.json",
+    "developer-tools.json",
+    "management-governance.json",
+    "machine-learning.json",
+    "compute.json",
+    "containers.json",
+    "internet-of-things.json",
+    "blockchain.json",
+    "business-applications.json",
+    "robotics.json",
+    "end-user-computing.json",
+    "app-integration.json",
+    "customer-enablement.json",
+    "games.json",
+    "cloud-financial-management.json",
+    "satellite.json"
+  ]
+}

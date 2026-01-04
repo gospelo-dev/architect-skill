@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Cloud Icon Catalog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffffff, #fff3e0);
+      min-height: 100vh;
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 16px 24px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+    }
+    .search-container {
+      flex: 1;
+      min-width: 250px;
+      max-width: 400px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 16px;
+      font-size: 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-input:focus {
+      border-color: #4285F4;
+      box-shadow: 0 0 0 3px #4285F433;
+    }
+    .search-info {
+      font-size: 13px;
+      color: #666;
+      white-space: nowrap;
+    }
+    .match-count {
+      font-weight: 600;
+      color: #4285F4;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .category {
+      margin-bottom: 32px;
+    }
+    .category-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #444;
+      margin: 0 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eee;
+    }
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 12px;
+    }
+    .icon-card {
+      background: white;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .icon-card:hover {
+      border-color: #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .icon-card.highlight {
+      border-color: #3B82F6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(59, 130, 246, 0.2);
+      background: white;
+    }
+    .icon-card.dimmed {
+      opacity: 0.3;
+    }
+    .icon-image {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-image img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+    .icon-id {
+      font-size: 10px;
+      color: #666;
+      word-break: break-all;
+      line-height: 1.3;
+    }
+    .icon-card.highlight .icon-id {
+      color: #1D4ED8;
+      font-weight: 500;
+    }
+    .copied-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    .copied-toast.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div>
+        <h1 class="title">Google Cloud Icon Catalog</h1>
+        <div class="subtitle">216 icons</div>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search icons... (e.g. lambda, s3, storage)" id="searchInput">
+      </div>
+      <div class="search-info">
+        <span id="matchCount"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div class="category" data-category="AI &amp; ML">
+      <h2 class="category-title">AI &amp; ML (30)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:advanced_agent_modeling" data-display-name="Advanced Agent Modeling">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/advanced_agent_modeling.svg" alt="Advanced Agent Modeling" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:advanced_agent_modeling</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:advanced_solutions_lab" data-display-name="Advanced Solutions Lab">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/advanced_solutions_lab.svg" alt="Advanced Solutions Lab" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:advanced_solutions_lab</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:agent_assist" data-display-name="Agent Assist">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/agent_assist.svg" alt="Agent Assist" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:agent_assist</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:ai_hub" data-display-name="Ai Hub">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/ai_hub.svg" alt="Ai Hub" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:ai_hub</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:ai_platform" data-display-name="Ai Platform">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/ai_platform.svg" alt="Ai Platform" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:ai_platform</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:ai_platform_unified" data-display-name="Ai Platform Unified">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/ai_platform_unified.svg" alt="Ai Platform Unified" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:ai_platform_unified</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:automl" data-display-name="Automl">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl.svg" alt="Automl" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:automl</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:automl_natural_language" data-display-name="Automl Natural Language">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_natural_language.svg" alt="Automl Natural Language" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:automl_natural_language</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:automl_tables" data-display-name="Automl Tables">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_tables.svg" alt="Automl Tables" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:automl_tables</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:automl_translation" data-display-name="Automl Translation">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_translation.svg" alt="Automl Translation" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:automl_translation</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:automl_video_intelligence" data-display-name="Automl Video Intelligence">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_video_intelligence.svg" alt="Automl Video Intelligence" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:automl_video_intelligence</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:automl_vision" data-display-name="Automl Vision">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/automl_vision.svg" alt="Automl Vision" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:automl_vision</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_inference_api" data-display-name="Cloud Inference Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_inference_api.svg" alt="Cloud Inference Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_inference_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_jobs_api" data-display-name="Cloud Jobs Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_jobs_api.svg" alt="Cloud Jobs Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_jobs_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_natural_language_api" data-display-name="Cloud Natural Language Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_natural_language_api.svg" alt="Cloud Natural Language Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_natural_language_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_optimization_ai" data-display-name="Cloud Optimization Ai">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_optimization_ai.svg" alt="Cloud Optimization Ai" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_optimization_ai</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_optimization_ai_-_fleet_routing_api" data-display-name="Cloud Optimization Ai - Fleet Routing Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_optimization_ai_-_fleet_routing_api.svg" alt="Cloud Optimization Ai - Fleet Routing Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_optimization_ai_-_fleet_routing_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_translation_api" data-display-name="Cloud Translation Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_translation_api.svg" alt="Cloud Translation Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_translation_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_vision_api" data-display-name="Cloud Vision Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_vision_api.svg" alt="Cloud Vision Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_vision_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:dialogflow" data-display-name="Dialogflow">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dialogflow.svg" alt="Dialogflow" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:dialogflow</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:dialogflow_cx" data-display-name="Dialogflow Cx">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dialogflow_cx.svg" alt="Dialogflow Cx" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:dialogflow_cx</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:dialogflow_insights" data-display-name="Dialogflow Insights">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dialogflow_insights.svg" alt="Dialogflow Insights" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:dialogflow_insights</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:document_ai" data-display-name="Document Ai">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/document_ai.svg" alt="Document Ai" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:document_ai</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:recommendations_ai" data-display-name="Recommendations Ai">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/recommendations_ai.svg" alt="Recommendations Ai" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:recommendations_ai</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:speech-to-text" data-display-name="Speech-To-Text">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/speech-to-text.svg" alt="Speech-To-Text" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:speech-to-text</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:tensorflow_enterprise" data-display-name="Tensorflow Enterprise">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/tensorflow_enterprise.svg" alt="Tensorflow Enterprise" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:tensorflow_enterprise</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:text-to-speech" data-display-name="Text-To-Speech">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/text-to-speech.svg" alt="Text-To-Speech" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:text-to-speech</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:vertexai" data-display-name="Vertexai">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/vertexai.svg" alt="Vertexai" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:vertexai</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:video_intelligence_api" data-display-name="Video Intelligence Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/video_intelligence_api.svg" alt="Video Intelligence Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:video_intelligence_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:visual_inspection" data-display-name="Visual Inspection">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/visual_inspection.svg" alt="Visual Inspection" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:visual_inspection</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Analytics">
+      <h2 class="category-title">Analytics (5)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:analytics_hub" data-display-name="Analytics Hub">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/analytics_hub.svg" alt="Analytics Hub" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:analytics_hub</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:bigquery" data-display-name="Bigquery">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/bigquery.svg" alt="Bigquery" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:bigquery</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:looker" data-display-name="Looker">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/looker.svg" alt="Looker" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:looker</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:real-world_insights" data-display-name="Real-World Insights">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/real-world_insights.svg" alt="Real-World Insights" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:real-world_insights</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:stream_suite" data-display-name="Stream Suite">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/stream_suite.svg" alt="Stream Suite" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:stream_suite</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="API Services">
+      <h2 class="category-title">API Services (9)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:api" data-display-name="Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/api.svg" alt="Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:api_analytics" data-display-name="Api Analytics">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/api_analytics.svg" alt="Api Analytics" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:api_analytics</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:api_monetization" data-display-name="Api Monetization">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/api_monetization.svg" alt="Api Monetization" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:api_monetization</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:apigee_api_platform" data-display-name="Apigee Api Platform">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/apigee_api_platform.svg" alt="Apigee Api Platform" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:apigee_api_platform</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:apigee_sense" data-display-name="Apigee Sense">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/apigee_sense.svg" alt="Apigee Sense" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:apigee_sense</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_api_gateway" data-display-name="Cloud Api Gateway">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_api_gateway.svg" alt="Cloud Api Gateway" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_api_gateway</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_apis" data-display-name="Cloud Apis">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_apis.svg" alt="Cloud Apis" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_apis</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_endpoints" data-display-name="Cloud Endpoints">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_endpoints.svg" alt="Cloud Endpoints" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_endpoints</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:producer_portal" data-display-name="Producer Portal">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/producer_portal.svg" alt="Producer Portal" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:producer_portal</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Compute">
+      <h2 class="category-title">Compute (16)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:app_engine" data-display-name="App Engine">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/app_engine.svg" alt="App Engine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:app_engine</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:bare_metal_solutions" data-display-name="Bare Metal Solutions">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/bare_metal_solutions.svg" alt="Bare Metal Solutions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:bare_metal_solutions</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:batch" data-display-name="Batch">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/batch.svg" alt="Batch" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:batch</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_functions" data-display-name="Cloud Functions">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_functions.svg" alt="Cloud Functions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_functions</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_gpu" data-display-name="Cloud Gpu">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_gpu.svg" alt="Cloud Gpu" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_gpu</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_run" data-display-name="Cloud Run">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_run.svg" alt="Cloud Run" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_run</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_run_for_anthos" data-display-name="Cloud Run For Anthos">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_run_for_anthos.svg" alt="Cloud Run For Anthos" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_run_for_anthos</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_scheduler" data-display-name="Cloud Scheduler">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_scheduler.svg" alt="Cloud Scheduler" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_scheduler</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_tasks" data-display-name="Cloud Tasks">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_tasks.svg" alt="Cloud Tasks" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_tasks</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_tpu" data-display-name="Cloud Tpu">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_tpu.svg" alt="Cloud Tpu" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_tpu</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:compute_engine" data-display-name="Compute Engine">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/compute_engine.svg" alt="Compute Engine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:compute_engine</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:os_configuration_management" data-display-name="Os Configuration Management">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/os_configuration_management.svg" alt="Os Configuration Management" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:os_configuration_management</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:os_inventory_management" data-display-name="Os Inventory Management">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/os_inventory_management.svg" alt="Os Inventory Management" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:os_inventory_management</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:os_patch_management" data-display-name="Os Patch Management">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/os_patch_management.svg" alt="Os Patch Management" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:os_patch_management</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:quantum_engine" data-display-name="Quantum Engine">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/quantum_engine.svg" alt="Quantum Engine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:quantum_engine</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:vmware_engine" data-display-name="Vmware Engine">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/vmware_engine.svg" alt="Vmware Engine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:vmware_engine</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Containers">
+      <h2 class="category-title">Containers (7)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:anthos" data-display-name="Anthos">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/anthos.svg" alt="Anthos" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:anthos</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:anthos_config_management" data-display-name="Anthos Config Management">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/anthos_config_management.svg" alt="Anthos Config Management" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:anthos_config_management</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:anthos_service_mesh" data-display-name="Anthos Service Mesh">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/anthos_service_mesh.svg" alt="Anthos Service Mesh" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:anthos_service_mesh</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:container_optimized_os" data-display-name="Container Optimized Os">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/container_optimized_os.svg" alt="Container Optimized Os" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:container_optimized_os</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:container_registry" data-display-name="Container Registry">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/container_registry.svg" alt="Container Registry" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:container_registry</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:gke_on-prem" data-display-name="Gke On-Prem">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/gke_on-prem.svg" alt="Gke On-Prem" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:gke_on-prem</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:kuberun" data-display-name="Kuberun">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/kuberun.svg" alt="Kuberun" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:kuberun</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Data Services">
+      <h2 class="category-title">Data Services (20)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:catalog" data-display-name="Catalog">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/catalog.svg" alt="Catalog" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:catalog</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_composer" data-display-name="Cloud Composer">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_composer.svg" alt="Cloud Composer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_composer</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_data_fusion" data-display-name="Cloud Data Fusion">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_data_fusion.svg" alt="Cloud Data Fusion" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_data_fusion</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:data_catalog" data-display-name="Data Catalog">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_catalog.svg" alt="Data Catalog" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:data_catalog</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:data_labeling" data-display-name="Data Labeling">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_labeling.svg" alt="Data Labeling" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:data_labeling</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:data_layers" data-display-name="Data Layers">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_layers.svg" alt="Data Layers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:data_layers</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:data_loss_prevention_api" data-display-name="Data Loss Prevention Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_loss_prevention_api.svg" alt="Data Loss Prevention Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:data_loss_prevention_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:data_qna" data-display-name="Data Qna">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_qna.svg" alt="Data Qna" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:data_qna</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:data_studio" data-display-name="Data Studio">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_studio.svg" alt="Data Studio" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:data_studio</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:data_transfer" data-display-name="Data Transfer">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_transfer.svg" alt="Data Transfer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:data_transfer</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:dataflow" data-display-name="Dataflow">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataflow.svg" alt="Dataflow" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:dataflow</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:datalab" data-display-name="Datalab">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datalab.svg" alt="Datalab" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:datalab</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:dataplex" data-display-name="Dataplex">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataplex.svg" alt="Dataplex" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:dataplex</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:datapol" data-display-name="Datapol">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datapol.svg" alt="Datapol" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:datapol</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:dataprep" data-display-name="Dataprep">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataprep.svg" alt="Dataprep" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:dataprep</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:dataproc" data-display-name="Dataproc">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataproc.svg" alt="Dataproc" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:dataproc</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:dataproc_metastore" data-display-name="Dataproc Metastore">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataproc_metastore.svg" alt="Dataproc Metastore" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:dataproc_metastore</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:datashare" data-display-name="Datashare">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datashare.svg" alt="Datashare" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:datashare</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:datastream" data-display-name="Datastream">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datastream.svg" alt="Datastream" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:datastream</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:transfer" data-display-name="Transfer">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/transfer.svg" alt="Transfer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:transfer</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Databases">
+      <h2 class="category-title">Databases (7)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:bigtable" data-display-name="Bigtable">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/bigtable.svg" alt="Bigtable" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:bigtable</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_spanner" data-display-name="Cloud Spanner">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_spanner.svg" alt="Cloud Spanner" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_spanner</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_sql" data-display-name="Cloud Sql">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_sql.svg" alt="Cloud Sql" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_sql</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:database_migration_service" data-display-name="Database Migration Service">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/database_migration_service.svg" alt="Database Migration Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:database_migration_service</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:datastore" data-display-name="Datastore">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datastore.svg" alt="Datastore" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:datastore</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:firestore" data-display-name="Firestore">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/firestore.svg" alt="Firestore" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:firestore</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:memorystore" data-display-name="Memorystore">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/memorystore.svg" alt="Memorystore" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:memorystore</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Developer Tools">
+      <h2 class="category-title">Developer Tools (11)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:artifact_registry" data-display-name="Artifact Registry">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/artifact_registry.svg" alt="Artifact Registry" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:artifact_registry</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_build" data-display-name="Cloud Build">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_build.svg" alt="Cloud Build" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_build</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_code" data-display-name="Cloud Code">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_code.svg" alt="Cloud Code" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_code</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_deploy" data-display-name="Cloud Deploy">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_deploy.svg" alt="Cloud Deploy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_deploy</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_shell" data-display-name="Cloud Shell">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_shell.svg" alt="Cloud Shell" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_shell</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_test_lab" data-display-name="Cloud Test Lab">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_test_lab.svg" alt="Cloud Test Lab" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_test_lab</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:debugger" data-display-name="Debugger">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/debugger.svg" alt="Debugger" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:debugger</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:developer_portal" data-display-name="Developer Portal">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/developer_portal.svg" alt="Developer Portal" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:developer_portal</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:profiler" data-display-name="Profiler">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/profiler.svg" alt="Profiler" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:profiler</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:release_notes" data-display-name="Release Notes">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/release_notes.svg" alt="Release Notes" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:release_notes</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:tools_for_powershell" data-display-name="Tools For Powershell">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/tools_for_powershell.svg" alt="Tools For Powershell" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:tools_for_powershell</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Events">
+      <h2 class="category-title">Events (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:eventarc" data-display-name="Eventarc">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/eventarc.svg" alt="Eventarc" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:eventarc</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:pubsub" data-display-name="Pubsub">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/pubsub.svg" alt="Pubsub" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:pubsub</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Gaming">
+      <h2 class="category-title">Gaming (1)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:game_servers" data-display-name="Game Servers">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/game_servers.svg" alt="Game Servers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:game_servers</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="General">
+      <h2 class="category-title">General (7)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:cloud_generic" data-display-name="Cloud Generic">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_generic.svg" alt="Cloud Generic" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_generic</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:early_access_center" data-display-name="Early Access Center">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/early_access_center.svg" alt="Early Access Center" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:early_access_center</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:free_trial" data-display-name="Free Trial">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/free_trial.svg" alt="Free Trial" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:free_trial</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:home" data-display-name="Home">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/home.svg" alt="Home" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:home</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:launcher" data-display-name="Launcher">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/launcher.svg" alt="Launcher" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:launcher</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:my_cloud" data-display-name="My Cloud">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/my_cloud.svg" alt="My Cloud" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:my_cloud</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:onboarding" data-display-name="Onboarding">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/onboarding.svg" alt="Onboarding" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:onboarding</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Google Services">
+      <h2 class="category-title">Google Services (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:google_cloud_marketplace" data-display-name="Google Cloud Marketplace">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/google_cloud_marketplace.svg" alt="Google Cloud Marketplace" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:google_cloud_marketplace</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:google_kubernetes_engine" data-display-name="Google Kubernetes Engine">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/google_kubernetes_engine.svg" alt="Google Kubernetes Engine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:google_kubernetes_engine</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:google_maps_platform" data-display-name="Google Maps Platform">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/google_maps_platform.svg" alt="Google Maps Platform" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:google_maps_platform</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Healthcare">
+      <h2 class="category-title">Healthcare (4)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:cloud_healthcare_api" data-display-name="Cloud Healthcare Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_healthcare_api.svg" alt="Cloud Healthcare Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_healthcare_api</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_healthcare_marketplace" data-display-name="Cloud Healthcare Marketplace">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_healthcare_marketplace.svg" alt="Cloud Healthcare Marketplace" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_healthcare_marketplace</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:genomics" data-display-name="Genomics">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/genomics.svg" alt="Genomics" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:genomics</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:healthcare_nlp_api" data-display-name="Healthcare Nlp Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/healthcare_nlp_api.svg" alt="Healthcare Nlp Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:healthcare_nlp_api</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Identity">
+      <h2 class="category-title">Identity (7)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:identity_and_access_management" data-display-name="Identity And Access Management">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/identity_and_access_management.svg" alt="Identity And Access Management" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:identity_and_access_management</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:identity_platform" data-display-name="Identity Platform">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/identity_platform.svg" alt="Identity Platform" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:identity_platform</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:identity-aware_proxy" data-display-name="Identity-Aware Proxy">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/identity-aware_proxy.svg" alt="Identity-Aware Proxy" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:identity-aware_proxy</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:managed_service_for_microsoft_active_directory" data-display-name="Managed Service For Microsoft Active Directory">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/managed_service_for_microsoft_active_directory.svg" alt="Managed Service For Microsoft Active Directory" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:managed_service_for_microsoft_active_directory</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:permissions" data-display-name="Permissions">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/permissions.svg" alt="Permissions" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:permissions</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:user_preferences" data-display-name="User Preferences">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/user_preferences.svg" alt="User Preferences" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:user_preferences</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:workload_identity_pool" data-display-name="Workload Identity Pool">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/workload_identity_pool.svg" alt="Workload Identity Pool" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:workload_identity_pool</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Integration">
+      <h2 class="category-title">Integration (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:connectors" data-display-name="Connectors">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/connectors.svg" alt="Connectors" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:connectors</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:workflows" data-display-name="Workflows">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/workflows.svg" alt="Workflows" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:workflows</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="IoT">
+      <h2 class="category-title">IoT (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:iot_core" data-display-name="Iot Core">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/iot_core.svg" alt="Iot Core" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:iot_core</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:iot_edge" data-display-name="Iot Edge">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/iot_edge.svg" alt="Iot Edge" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:iot_edge</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Management">
+      <h2 class="category-title">Management (13)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:administration" data-display-name="Administration">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/administration.svg" alt="Administration" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:administration</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:asset_inventory" data-display-name="Asset Inventory">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/asset_inventory.svg" alt="Asset Inventory" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:asset_inventory</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:billing" data-display-name="Billing">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/billing.svg" alt="Billing" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:billing</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_asset_inventory" data-display-name="Cloud Asset Inventory">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_asset_inventory.svg" alt="Cloud Asset Inventory" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_asset_inventory</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_audit_logs" data-display-name="Cloud Audit Logs">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_audit_logs.svg" alt="Cloud Audit Logs" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_audit_logs</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_deployment_manager" data-display-name="Cloud Deployment Manager">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_deployment_manager.svg" alt="Cloud Deployment Manager" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_deployment_manager</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:configuration_management" data-display-name="Configuration Management">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/configuration_management.svg" alt="Configuration Management" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:configuration_management</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:gce_systems_management" data-display-name="Gce Systems Management">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/gce_systems_management.svg" alt="Gce Systems Management" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:gce_systems_management</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:policy_analyzer" data-display-name="Policy Analyzer">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/policy_analyzer.svg" alt="Policy Analyzer" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:policy_analyzer</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:project" data-display-name="Project">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/project.svg" alt="Project" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:project</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:quotas" data-display-name="Quotas">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/quotas.svg" alt="Quotas" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:quotas</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:runtime_config" data-display-name="Runtime Config">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/runtime_config.svg" alt="Runtime Config" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:runtime_config</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:service_discovery" data-display-name="Service Discovery">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/service_discovery.svg" alt="Service Discovery" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:service_discovery</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Marketplace">
+      <h2 class="category-title">Marketplace (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:financial_services_marketplace" data-display-name="Financial Services Marketplace">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/financial_services_marketplace.svg" alt="Financial Services Marketplace" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:financial_services_marketplace</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:partner_interconnect" data-display-name="Partner Interconnect">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/partner_interconnect.svg" alt="Partner Interconnect" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:partner_interconnect</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:partner_portal" data-display-name="Partner Portal">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/partner_portal.svg" alt="Partner Portal" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:partner_portal</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Media">
+      <h2 class="category-title">Media (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:cloud_media_edge" data-display-name="Cloud Media Edge">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_media_edge.svg" alt="Cloud Media Edge" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_media_edge</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:media_translation_api" data-display-name="Media Translation Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/media_translation_api.svg" alt="Media Translation Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:media_translation_api</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Migration">
+      <h2 class="category-title">Migration (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:migrate_for_anthos" data-display-name="Migrate For Anthos">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/migrate_for_anthos.svg" alt="Migrate For Anthos" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:migrate_for_anthos</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:migrate_for_compute_engine" data-display-name="Migrate For Compute Engine">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/migrate_for_compute_engine.svg" alt="Migrate For Compute Engine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:migrate_for_compute_engine</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:transfer_appliance" data-display-name="Transfer Appliance">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/transfer_appliance.svg" alt="Transfer Appliance" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:transfer_appliance</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Monitoring">
+      <h2 class="category-title">Monitoring (7)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:cloud_logging" data-display-name="Cloud Logging">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_logging.svg" alt="Cloud Logging" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_logging</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_monitoring" data-display-name="Cloud Monitoring">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_monitoring.svg" alt="Cloud Monitoring" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_monitoring</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_ops" data-display-name="Cloud Ops">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_ops.svg" alt="Cloud Ops" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_ops</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:error_reporting" data-display-name="Error Reporting">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/error_reporting.svg" alt="Error Reporting" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:error_reporting</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:performance_dashboard" data-display-name="Performance Dashboard">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/performance_dashboard.svg" alt="Performance Dashboard" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:performance_dashboard</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:stackdriver" data-display-name="Stackdriver">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/stackdriver.svg" alt="Stackdriver" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:stackdriver</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:trace" data-display-name="Trace">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/trace.svg" alt="Trace" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:trace</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Networking">
+      <h2 class="category-title">Networking (25)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:cloud_cdn" data-display-name="Cloud Cdn">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_cdn.svg" alt="Cloud Cdn" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_cdn</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_dns" data-display-name="Cloud Dns">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_dns.svg" alt="Cloud Dns" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_dns</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_domains" data-display-name="Cloud Domains">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_domains.svg" alt="Cloud Domains" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_domains</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_external_ip_addresses" data-display-name="Cloud External Ip Addresses">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_external_ip_addresses.svg" alt="Cloud External Ip Addresses" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_external_ip_addresses</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_firewall_rules" data-display-name="Cloud Firewall Rules">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_firewall_rules.svg" alt="Cloud Firewall Rules" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_firewall_rules</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_interconnect" data-display-name="Cloud Interconnect">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_interconnect.svg" alt="Cloud Interconnect" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_interconnect</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_load_balancing" data-display-name="Cloud Load Balancing">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_load_balancing.svg" alt="Cloud Load Balancing" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_load_balancing</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_nat" data-display-name="Cloud Nat">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_nat.svg" alt="Cloud Nat" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_nat</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_network" data-display-name="Cloud Network">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_network.svg" alt="Cloud Network" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_network</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_router" data-display-name="Cloud Router">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_router.svg" alt="Cloud Router" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_router</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_routes" data-display-name="Cloud Routes">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_routes.svg" alt="Cloud Routes" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_routes</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_vpn" data-display-name="Cloud Vpn">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_vpn.svg" alt="Cloud Vpn" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_vpn</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:connectivity_test" data-display-name="Connectivity Test">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/connectivity_test.svg" alt="Connectivity Test" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:connectivity_test</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:local_ssd" data-display-name="Local Ssd">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/local_ssd.svg" alt="Local Ssd" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:local_ssd</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:network_connectivity_center" data-display-name="Network Connectivity Center">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_connectivity_center.svg" alt="Network Connectivity Center" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:network_connectivity_center</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:network_intelligence_center" data-display-name="Network Intelligence Center">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_intelligence_center.svg" alt="Network Intelligence Center" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:network_intelligence_center</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:network_security" data-display-name="Network Security">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_security.svg" alt="Network Security" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:network_security</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:network_tiers" data-display-name="Network Tiers">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_tiers.svg" alt="Network Tiers" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:network_tiers</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:network_topology" data-display-name="Network Topology">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_topology.svg" alt="Network Topology" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:network_topology</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:premium_network_tier" data-display-name="Premium Network Tier">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/premium_network_tier.svg" alt="Premium Network Tier" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:premium_network_tier</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:private_connectivity" data-display-name="Private Connectivity">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/private_connectivity.svg" alt="Private Connectivity" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:private_connectivity</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:private_service_connect" data-display-name="Private Service Connect">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/private_service_connect.svg" alt="Private Service Connect" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:private_service_connect</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:standard_network_tier" data-display-name="Standard Network Tier">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/standard_network_tier.svg" alt="Standard Network Tier" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:standard_network_tier</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:traffic_director" data-display-name="Traffic Director">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/traffic_director.svg" alt="Traffic Director" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:traffic_director</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:virtual_private_cloud" data-display-name="Virtual Private Cloud">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/virtual_private_cloud.svg" alt="Virtual Private Cloud" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:virtual_private_cloud</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Security">
+      <h2 class="category-title">Security (22)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:access_context_manager" data-display-name="Access Context Manager">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/access_context_manager.svg" alt="Access Context Manager" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:access_context_manager</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:assured_workloads" data-display-name="Assured Workloads">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/assured_workloads.svg" alt="Assured Workloads" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:assured_workloads</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:beyondcorp" data-display-name="Beyondcorp">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/beyondcorp.svg" alt="Beyondcorp" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:beyondcorp</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:binary_authorization" data-display-name="Binary Authorization">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/binary_authorization.svg" alt="Binary Authorization" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:binary_authorization</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:certificate_authority_service" data-display-name="Certificate Authority Service">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/certificate_authority_service.svg" alt="Certificate Authority Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:certificate_authority_service</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:certificate_manager" data-display-name="Certificate Manager">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/certificate_manager.svg" alt="Certificate Manager" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:certificate_manager</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_armor" data-display-name="Cloud Armor">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_armor.svg" alt="Cloud Armor" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_armor</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_ekm" data-display-name="Cloud Ekm">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_ekm.svg" alt="Cloud Ekm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_ekm</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_hsm" data-display-name="Cloud Hsm">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_hsm.svg" alt="Cloud Hsm" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_hsm</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_ids" data-display-name="Cloud Ids">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_ids.svg" alt="Cloud Ids" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_ids</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:cloud_security_scanner" data-display-name="Cloud Security Scanner">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_security_scanner.svg" alt="Cloud Security Scanner" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_security_scanner</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:key_access_justifications" data-display-name="Key Access Justifications">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/key_access_justifications.svg" alt="Key Access Justifications" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:key_access_justifications</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:key_management_service" data-display-name="Key Management Service">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/key_management_service.svg" alt="Key Management Service" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:key_management_service</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:phishing_protection" data-display-name="Phishing Protection">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/phishing_protection.svg" alt="Phishing Protection" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:phishing_protection</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:risk_manager" data-display-name="Risk Manager">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/risk_manager.svg" alt="Risk Manager" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:risk_manager</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:secret_manager" data-display-name="Secret Manager">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/secret_manager.svg" alt="Secret Manager" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:secret_manager</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:security" data-display-name="Security">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/security.svg" alt="Security" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:security</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:security_command_center" data-display-name="Security Command Center">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/security_command_center.svg" alt="Security Command Center" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:security_command_center</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:security_health_advisor" data-display-name="Security Health Advisor">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/security_health_advisor.svg" alt="Security Health Advisor" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:security_health_advisor</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:security_key_enforcement" data-display-name="Security Key Enforcement">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/security_key_enforcement.svg" alt="Security Key Enforcement" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:security_key_enforcement</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:web_risk" data-display-name="Web Risk">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/web_risk.svg" alt="Web Risk" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:web_risk</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:web_security_scanner" data-display-name="Web Security Scanner">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/web_security_scanner.svg" alt="Web Security Scanner" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:web_security_scanner</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Services">
+      <h2 class="category-title">Services (2)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:contact_center_ai" data-display-name="Contact Center Ai">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/contact_center_ai.svg" alt="Contact Center Ai" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:contact_center_ai</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:support" data-display-name="Support">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/support.svg" alt="Support" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:support</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Solutions">
+      <h2 class="category-title">Solutions (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:cloud_for_marketing" data-display-name="Cloud For Marketing">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_for_marketing.svg" alt="Cloud For Marketing" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_for_marketing</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:fleet_engine" data-display-name="Fleet Engine">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/fleet_engine.svg" alt="Fleet Engine" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:fleet_engine</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:retail_api" data-display-name="Retail Api">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/retail_api.svg" alt="Retail Api" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:retail_api</div>
+        </div>
+      </div>
+    </div>
+    <div class="category" data-category="Storage">
+      <h2 class="category-title">Storage (3)</h2>
+      <div class="icons-grid">
+        <div class="icon-card" data-icon-id="gcp:cloud_storage" data-display-name="Cloud Storage">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_storage.svg" alt="Cloud Storage" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:cloud_storage</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:filestore" data-display-name="Filestore">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/filestore.svg" alt="Filestore" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:filestore</div>
+        </div>
+        <div class="icon-card" data-icon-id="gcp:persistent_disk" data-display-name="Persistent Disk">
+          <div class="icon-image">
+            <img src="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/persistent_disk.svg" alt="Persistent Disk" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="icon-id">gcp:persistent_disk</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copied-toast" id="copiedToast">Copied to clipboard!</div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const matchCountEl = document.getElementById('matchCount');
+    const copiedToast = document.getElementById('copiedToast');
+    const iconCards = document.querySelectorAll('.icon-card');
+
+    let toastTimeout;
+
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      let matchCount = 0;
+
+      iconCards.forEach(card => {
+        const iconId = card.dataset.iconId.toLowerCase();
+        const displayName = card.dataset.displayName.toLowerCase();
+
+        if (query === '') {
+          card.classList.remove('highlight', 'dimmed');
+        } else {
+          // AND search: all terms must match
+          const terms = query.split(/\s+/).filter(t => t.length > 0);
+          const text = iconId + ' ' + displayName;
+          const matches = terms.every(term => text.includes(term));
+          if (matches) {
+            card.classList.add('highlight');
+            card.classList.remove('dimmed');
+            matchCount++;
+          } else {
+            card.classList.remove('highlight');
+            card.classList.add('dimmed');
+          }
+        }
+      });
+
+      if (query === '') {
+        matchCountEl.textContent = '';
+      } else {
+        matchCountEl.innerHTML = '<span class="match-count">' + matchCount + '</span> matches';
+      }
+    });
+
+    // Click to copy
+    iconCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const iconId = this.dataset.iconId;
+        navigator.clipboard.writeText(iconId).then(() => {
+          copiedToast.textContent = 'Copied: ' + iconId;
+          copiedToast.classList.add('show');
+          clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+            copiedToast.classList.remove('show');
+          }, 2000);
+        });
+      });
+    });
+
+    // Focus search on page load
+    searchInput.focus();
+  </script>
+
+  <footer class="license-footer">
+    <p>Icon Attribution: Google Cloud Icons - Apache License 2.0 (Google LLC)</p>
+    <p>Version: 9fe9b31 (Updated: 2025-01-02)</p>
+    <p>Generated with gospelo-architect</p>
+  </footer>
+  <style>
+    .license-footer {
+      max-width: 1400px;
+      margin: 48px auto 24px;
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      border-top: 1px solid #ddd;
+    }
+    .license-footer p {
+      margin: 4px 0;
+    }
+  </style>
+</body>
+</html>

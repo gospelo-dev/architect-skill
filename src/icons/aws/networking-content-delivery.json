@@ -1,0 +1,316 @@
+{
+  "category": "Networking & Content Delivery",
+  "count": 62,
+  "icons": [
+    {
+      "slug": "res_app_mesh_mesh",
+      "displayName": "Res App Mesh Mesh",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-App-Mesh_Mesh_48.svg"
+    },
+    {
+      "slug": "res_app_mesh_virtual_gateway",
+      "displayName": "Res App Mesh Virtual Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-App-Mesh_Virtual-Gateway_48.svg"
+    },
+    {
+      "slug": "res_app_mesh_virtual_node",
+      "displayName": "Res App Mesh Virtual Node",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-App-Mesh_Virtual-Node_48.svg"
+    },
+    {
+      "slug": "res_app_mesh_virtual_router",
+      "displayName": "Res App Mesh Virtual Router",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-App-Mesh_Virtual-Router_48.svg"
+    },
+    {
+      "slug": "res_app_mesh_virtual_service",
+      "displayName": "Res App Mesh Virtual Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-App-Mesh_Virtual-Service_48.svg"
+    },
+    {
+      "slug": "res_cloud_map_namespace",
+      "displayName": "Res Cloud Map Namespace",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-Cloud-Map_Namespace_48.svg"
+    },
+    {
+      "slug": "res_cloud_map_resource",
+      "displayName": "Res Cloud Map Resource",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-Cloud-Map_Resource_48.svg"
+    },
+    {
+      "slug": "res_cloud_map_service",
+      "displayName": "Res Cloud Map Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-Cloud-Map_Service_48.svg"
+    },
+    {
+      "slug": "res_cloud_wan_core_network_edge",
+      "displayName": "Res Cloud Wan Core Network Edge",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-Cloud-WAN_Core-Network-Edge_48.svg"
+    },
+    {
+      "slug": "res_cloud_wan_segment_network",
+      "displayName": "Res Cloud Wan Segment Network",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-Cloud-WAN_Segment-Network_48.svg"
+    },
+    {
+      "slug": "res_cloud_wan_transit_gateway_route_table_attachment",
+      "displayName": "Res Cloud Wan Transit Gateway Route Table Attachment",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-Cloud-WAN_Transit-Gateway-Route-Table-Attachment_48.svg"
+    },
+    {
+      "slug": "res_cloudfront_download_distribution",
+      "displayName": "Res Cloudfront Download Distribution",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-CloudFront_Download-Distribution_48.svg"
+    },
+    {
+      "slug": "res_cloudfront_edge_location",
+      "displayName": "Res Cloudfront Edge Location",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-CloudFront_Edge-Location_48.svg"
+    },
+    {
+      "slug": "res_cloudfront_functions",
+      "displayName": "Res Cloudfront Functions",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-CloudFront_Functions_48.svg"
+    },
+    {
+      "slug": "res_cloudfront_streaming_distribution",
+      "displayName": "Res Cloudfront Streaming Distribution",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-CloudFront_Streaming-Distribution_48.svg"
+    },
+    {
+      "slug": "res_direct_connect_gateway",
+      "displayName": "Res Direct Connect Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-Direct-Connect_Gateway_48.svg"
+    },
+    {
+      "slug": "res_elastic_load_balancing_application_load_balancer",
+      "displayName": "Res Elastic Load Balancing Application Load Balancer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Elastic-Load-Balancing_Application-Load-Balancer_48.svg"
+    },
+    {
+      "slug": "res_elastic_load_balancing_classic_load_balancer",
+      "displayName": "Res Elastic Load Balancing Classic Load Balancer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Elastic-Load-Balancing_Classic-Load-Balancer_48.svg"
+    },
+    {
+      "slug": "res_elastic_load_balancing_gateway_load_balancer",
+      "displayName": "Res Elastic Load Balancing Gateway Load Balancer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Elastic-Load-Balancing_Gateway-Load-Balancer_48.svg"
+    },
+    {
+      "slug": "res_elastic_load_balancing_network_load_balancer",
+      "displayName": "Res Elastic Load Balancing Network Load Balancer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Elastic-Load-Balancing_Network-Load-Balancer_48.svg"
+    },
+    {
+      "slug": "res_route_53_hosted_zone",
+      "displayName": "Res Route 53 Hosted Zone",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-Route-53-Hosted-Zone_48.svg"
+    },
+    {
+      "slug": "res_route_53_readiness_checks",
+      "displayName": "Res Route 53 Readiness Checks",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-Route-53_Readiness-Checks_48.svg"
+    },
+    {
+      "slug": "res_route_53_resolver",
+      "displayName": "Res Route 53 Resolver",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-Route-53_Resolver_48.svg"
+    },
+    {
+      "slug": "res_route_53_resolver_dns_firewall",
+      "displayName": "Res Route 53 Resolver Dns Firewall",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-Route-53_Resolver-DNS-Firewall_48.svg"
+    },
+    {
+      "slug": "res_route_53_resolver_query_logging",
+      "displayName": "Res Route 53 Resolver Query Logging",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-Route-53_Resolver-Query-Logging_48.svg"
+    },
+    {
+      "slug": "res_route_53_route_53_application_recovery_controller",
+      "displayName": "Res Route 53 Route 53 Application Recovery Controller",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-Route-53_Route-53-Application-Recovery-Controller_48.svg"
+    },
+    {
+      "slug": "res_route_53_route_table",
+      "displayName": "Res Route 53 Route Table",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-Route-53_Route-Table_48.svg"
+    },
+    {
+      "slug": "res_route_53_routing_controls",
+      "displayName": "Res Route 53 Routing Controls",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-Route-53_Routing-Controls_48.svg"
+    },
+    {
+      "slug": "res_transit_gateway_attachment",
+      "displayName": "Res Transit Gateway Attachment",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_AWS-Transit-Gateway_Attachment_48.svg"
+    },
+    {
+      "slug": "res_vpc_carrier_gateway",
+      "displayName": "Res Vpc Carrier Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Carrier-Gateway_48.svg"
+    },
+    {
+      "slug": "res_vpc_customer_gateway",
+      "displayName": "Res Vpc Customer Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Customer-Gateway_48.svg"
+    },
+    {
+      "slug": "res_vpc_elastic_network_adapter",
+      "displayName": "Res Vpc Elastic Network Adapter",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Elastic-Network-Adapter_48.svg"
+    },
+    {
+      "slug": "res_vpc_elastic_network_interface",
+      "displayName": "Res Vpc Elastic Network Interface",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Elastic-Network-Interface_48.svg"
+    },
+    {
+      "slug": "res_vpc_endpoints",
+      "displayName": "Res Vpc Endpoints",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Endpoints_48.svg"
+    },
+    {
+      "slug": "res_vpc_flow_logs",
+      "displayName": "Res Vpc Flow Logs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Flow-Logs_48.svg"
+    },
+    {
+      "slug": "res_vpc_internet_gateway",
+      "displayName": "Res Vpc Internet Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Internet-Gateway_48.svg"
+    },
+    {
+      "slug": "res_vpc_nat_gateway",
+      "displayName": "Res Vpc Nat Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_NAT-Gateway_48.svg"
+    },
+    {
+      "slug": "res_vpc_network_access_analyzer",
+      "displayName": "Res Vpc Network Access Analyzer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Network-Access-Analyzer_48.svg"
+    },
+    {
+      "slug": "res_vpc_network_access_control_list",
+      "displayName": "Res Vpc Network Access Control List",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Network-Access-Control-List_48.svg"
+    },
+    {
+      "slug": "res_vpc_peering_connection",
+      "displayName": "Res Vpc Peering Connection",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Peering-Connection_48.svg"
+    },
+    {
+      "slug": "res_vpc_reachability_analyzer",
+      "displayName": "Res Vpc Reachability Analyzer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Reachability-Analyzer_48.svg"
+    },
+    {
+      "slug": "res_vpc_router",
+      "displayName": "Res Vpc Router",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Router_48.svg"
+    },
+    {
+      "slug": "res_vpc_traffic_mirroring",
+      "displayName": "Res Vpc Traffic Mirroring",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Traffic-Mirroring_48.svg"
+    },
+    {
+      "slug": "res_vpc_virtual_private_cloud_vpc",
+      "displayName": "Res Vpc Virtual Private Cloud Vpc",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_Virtual-private-cloud-VPC_48.svg"
+    },
+    {
+      "slug": "res_vpc_vpn_connection",
+      "displayName": "Res Vpc Vpn Connection",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_VPN-Connection_48.svg"
+    },
+    {
+      "slug": "res_vpc_vpn_gateway",
+      "displayName": "Res Vpc Vpn Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Networking-Content-Delivery/Res_Amazon-VPC_VPN-Gateway_48.svg"
+    },
+    {
+      "slug": "cloudfront",
+      "displayName": "Cloudfront",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_Amazon-CloudFront_64.svg"
+    },
+    {
+      "slug": "route_53",
+      "displayName": "Route 53",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_Amazon-Route-53_64.svg"
+    },
+    {
+      "slug": "virtual_private_cloud",
+      "displayName": "Virtual Private Cloud",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_Amazon-Virtual-Private-Cloud_64.svg"
+    },
+    {
+      "slug": "vpc_lattice",
+      "displayName": "Vpc Lattice",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_Amazon-VPC-Lattice_64.svg"
+    },
+    {
+      "slug": "app_mesh",
+      "displayName": "App Mesh",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-App-Mesh_64.svg"
+    },
+    {
+      "slug": "client_vpn",
+      "displayName": "Client Vpn",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Client-VPN_64.svg"
+    },
+    {
+      "slug": "cloud_map",
+      "displayName": "Cloud Map",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Cloud-Map_64.svg"
+    },
+    {
+      "slug": "cloud_wan",
+      "displayName": "Cloud Wan",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Cloud-WAN_64.svg"
+    },
+    {
+      "slug": "direct_connect",
+      "displayName": "Direct Connect",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Direct-Connect_64.svg"
+    },
+    {
+      "slug": "global_accelerator",
+      "displayName": "Global Accelerator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Global-Accelerator_64.svg"
+    },
+    {
+      "slug": "private_5g",
+      "displayName": "Private 5g",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Private-5G_64.svg"
+    },
+    {
+      "slug": "privatelink",
+      "displayName": "Privatelink",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-PrivateLink_64.svg"
+    },
+    {
+      "slug": "site_to_site_vpn",
+      "displayName": "Site To Site Vpn",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Site-to-Site-VPN_64.svg"
+    },
+    {
+      "slug": "transit_gateway",
+      "displayName": "Transit Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Transit-Gateway_64.svg"
+    },
+    {
+      "slug": "verified_access",
+      "displayName": "Verified Access",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_AWS-Verified-Access_64.svg"
+    },
+    {
+      "slug": "elastic_load_balancing",
+      "displayName": "Elastic Load Balancing",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Networking-Content-Delivery/64/Arch_Elastic-Load-Balancing_64.svg"
+    }
+  ]
+}

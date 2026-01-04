@@ -1,0 +1,76 @@
+{
+  "category": "Cloud",
+  "count": 14,
+  "icons": [
+    {
+      "slug": "googlecloud",
+      "displayName": "Google Cloud",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/googlecloud.svg"
+    },
+    {
+      "slug": "digitalocean",
+      "displayName": "DigitalOcean",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/digitalocean.svg"
+    },
+    {
+      "slug": "vercel",
+      "displayName": "Vercel",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vercel.svg"
+    },
+    {
+      "slug": "netlify",
+      "displayName": "Netlify",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/netlify.svg"
+    },
+    {
+      "slug": "cloudflare",
+      "displayName": "Cloudflare",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/cloudflare.svg"
+    },
+    {
+      "slug": "vultr",
+      "displayName": "Vultr",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vultr.svg"
+    },
+    {
+      "slug": "render",
+      "displayName": "Render",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/render.svg"
+    },
+    {
+      "slug": "railway",
+      "displayName": "Railway",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/railway.svg"
+    },
+    {
+      "slug": "flydotio",
+      "displayName": "Fly.io",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/flydotio.svg"
+    },
+    {
+      "slug": "upcloud",
+      "displayName": "UpCloud",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/upcloud.svg"
+    },
+    {
+      "slug": "scaleway",
+      "displayName": "Scaleway",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/scaleway.svg"
+    },
+    {
+      "slug": "hetzner",
+      "displayName": "Hetzner",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/hetzner.svg"
+    },
+    {
+      "slug": "civo",
+      "displayName": "Civo",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/civo.svg"
+    },
+    {
+      "slug": "akamai",
+      "displayName": "Akamai",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/akamai.svg"
+    }
+  ]
+}

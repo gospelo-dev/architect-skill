@@ -1,0 +1,21 @@
+{
+  "category": "Application",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "application_gateways",
+      "displayName": "Application Gateways",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Gateways.svg"
+    },
+    {
+      "slug": "application_insights",
+      "displayName": "Application Insights",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Insights.svg"
+    },
+    {
+      "slug": "application_security_groups",
+      "displayName": "Application Security Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Security-Groups.svg"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "category": "Analytics",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "analysis_services",
+      "displayName": "Analysis Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Analysis-Services.svg"
+    },
+    {
+      "slug": "hd_insight_clusters",
+      "displayName": "Hd Insight Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/HD-Insight-Clusters.svg"
+    },
+    {
+      "slug": "stream_analytics_jobs",
+      "displayName": "Stream Analytics Jobs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Stream-Analytics-Jobs.svg"
+    },
+    {
+      "slug": "time_series_data_sets",
+      "displayName": "Time Series Data Sets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Data-Sets.svg"
+    },
+    {
+      "slug": "time_series_insights_environments",
+      "displayName": "Time Series Insights Environments",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Insights-Environments.svg"
+    },
+    {
+      "slug": "time_series_insights_event_sources",
+      "displayName": "Time Series Insights Event Sources",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Time-Series-Insights-Event-Sources.svg"
+    },
+    {
+      "slug": "workspaces",
+      "displayName": "Workspaces",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workspaces.svg"
+    }
+  ]
+}

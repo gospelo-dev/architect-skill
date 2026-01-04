@@ -1,0 +1,11 @@
+{
+  "category": "Enterprise",
+  "count": 1,
+  "icons": [
+    {
+      "slug": "sap_azure_monitor",
+      "displayName": "Sap Azure Monitor",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SAP-Azure-Monitor.svg"
+    }
+  ]
+}

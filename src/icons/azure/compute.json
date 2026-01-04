@@ -1,0 +1,136 @@
+{
+  "category": "Compute",
+  "count": 26,
+  "icons": [
+    {
+      "slug": "avs",
+      "displayName": "Avs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/AVS.svg"
+    },
+    {
+      "slug": "batch_accounts",
+      "displayName": "Batch Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Batch-Accounts.svg"
+    },
+    {
+      "slug": "cloud_services_(classic)",
+      "displayName": "Cloud Services (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cloud-Services-(Classic).svg"
+    },
+    {
+      "slug": "extensions",
+      "displayName": "Extensions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Extensions.svg"
+    },
+    {
+      "slug": "function_apps",
+      "displayName": "Function Apps",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Function-Apps.svg"
+    },
+    {
+      "slug": "image",
+      "displayName": "Image",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image.svg"
+    },
+    {
+      "slug": "image_definitions",
+      "displayName": "Image Definitions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image-Definitions.svg"
+    },
+    {
+      "slug": "image_versions",
+      "displayName": "Image Versions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Image-Versions.svg"
+    },
+    {
+      "slug": "images",
+      "displayName": "Images",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Images.svg"
+    },
+    {
+      "slug": "machinesazurearc",
+      "displayName": "Machinesazurearc",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/MachinesAzureArc.svg"
+    },
+    {
+      "slug": "os_images_(classic)",
+      "displayName": "Os Images (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/OS-Images-(Classic).svg"
+    },
+    {
+      "slug": "proximity_placement_groups",
+      "displayName": "Proximity Placement Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Proximity-Placement-Groups.svg"
+    },
+    {
+      "slug": "remote_rendering",
+      "displayName": "Remote Rendering",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Remote-Rendering.svg"
+    },
+    {
+      "slug": "scale",
+      "displayName": "Scale",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Scale.svg"
+    },
+    {
+      "slug": "server_farm",
+      "displayName": "Server Farm",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Server-Farm.svg"
+    },
+    {
+      "slug": "shared_image_galleries",
+      "displayName": "Shared Image Galleries",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Shared-Image-Galleries.svg"
+    },
+    {
+      "slug": "virtual_clusters",
+      "displayName": "Virtual Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Clusters.svg"
+    },
+    {
+      "slug": "virtual_machine",
+      "displayName": "Virtual Machine",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Machine.svg"
+    },
+    {
+      "slug": "virtual_machines_(classic)",
+      "displayName": "Virtual Machines (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Machines-(Classic).svg"
+    },
+    {
+      "slug": "virtual_network_gateways",
+      "displayName": "Virtual Network Gateways",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Network-Gateways.svg"
+    },
+    {
+      "slug": "virtual_networks",
+      "displayName": "Virtual Networks",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Networks.svg"
+    },
+    {
+      "slug": "virtual_networks_(classic)",
+      "displayName": "Virtual Networks (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Networks-(Classic).svg"
+    },
+    {
+      "slug": "virtual_wans",
+      "displayName": "Virtual Wans",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-WANs.svg"
+    },
+    {
+      "slug": "vm_images_(classic)",
+      "displayName": "Vm Images (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/VM-Images-(Classic).svg"
+    },
+    {
+      "slug": "vm_scale_sets",
+      "displayName": "Vm Scale Sets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/VM-Scale-Sets.svg"
+    },
+    {
+      "slug": "windows_virtual_desktop",
+      "displayName": "Windows Virtual Desktop",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Windows-Virtual-Desktop.svg"
+    }
+  ]
+}

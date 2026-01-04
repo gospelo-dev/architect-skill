@@ -1,0 +1,121 @@
+{
+  "category": "Databases",
+  "count": 23,
+  "icons": [
+    {
+      "slug": "postgresql",
+      "displayName": "PostgreSQL",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/postgresql.svg"
+    },
+    {
+      "slug": "mysql",
+      "displayName": "MySQL",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mysql.svg"
+    },
+    {
+      "slug": "mongodb",
+      "displayName": "MongoDB",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mongodb.svg"
+    },
+    {
+      "slug": "redis",
+      "displayName": "Redis",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/redis.svg"
+    },
+    {
+      "slug": "elasticsearch",
+      "displayName": "Elasticsearch",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/elasticsearch.svg"
+    },
+    {
+      "slug": "mariadb",
+      "displayName": "MariaDB",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mariadb.svg"
+    },
+    {
+      "slug": "sqlite",
+      "displayName": "SQLite",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/sqlite.svg"
+    },
+    {
+      "slug": "apachecassandra",
+      "displayName": "Apache Cassandra",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachecassandra.svg"
+    },
+    {
+      "slug": "couchbase",
+      "displayName": "Couchbase",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/couchbase.svg"
+    },
+    {
+      "slug": "neo4j",
+      "displayName": "Neo4j",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/neo4j.svg"
+    },
+    {
+      "slug": "influxdb",
+      "displayName": "InfluxDB",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/influxdb.svg"
+    },
+    {
+      "slug": "firebase",
+      "displayName": "Firebase",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/firebase.svg"
+    },
+    {
+      "slug": "supabase",
+      "displayName": "Supabase",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/supabase.svg"
+    },
+    {
+      "slug": "planetscale",
+      "displayName": "PlanetScale",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/planetscale.svg"
+    },
+    {
+      "slug": "cockroachlabs",
+      "displayName": "Cockroach Labs",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/cockroachlabs.svg"
+    },
+    {
+      "slug": "timescale",
+      "displayName": "Timescale",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/timescale.svg"
+    },
+    {
+      "slug": "surrealdb",
+      "displayName": "SurrealDB",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/surrealdb.svg"
+    },
+    {
+      "slug": "clickhouse",
+      "displayName": "ClickHouse",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/clickhouse.svg"
+    },
+    {
+      "slug": "duckdb",
+      "displayName": "DuckDB",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/duckdb.svg"
+    },
+    {
+      "slug": "arangodb",
+      "displayName": "ArangoDB",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/arangodb.svg"
+    },
+    {
+      "slug": "dgraph",
+      "displayName": "Dgraph",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/dgraph.svg"
+    },
+    {
+      "slug": "fauna",
+      "displayName": "Fauna",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/fauna.svg"
+    },
+    {
+      "slug": "turso",
+      "displayName": "Turso",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/turso.svg"
+    }
+  ]
+}

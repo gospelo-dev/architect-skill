@@ -1,0 +1,226 @@
+{
+  "category": "Compute",
+  "count": 44,
+  "icons": [
+    {
+      "slug": "res_ec2_ami",
+      "displayName": "Res Ec2 Ami",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_AMI_48.svg"
+    },
+    {
+      "slug": "res_ec2_auto_scaling",
+      "displayName": "Res Ec2 Auto Scaling",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Auto-Scaling_48.svg"
+    },
+    {
+      "slug": "res_ec2_aws_microservice_extractor_for_.net",
+      "displayName": "Res Ec2 Aws Microservice Extractor For .Net",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_AWS-Microservice-Extractor-for-.NET_48.svg"
+    },
+    {
+      "slug": "res_ec2_db_instance",
+      "displayName": "Res Ec2 Db Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_DB-Instance_48.svg"
+    },
+    {
+      "slug": "res_ec2_elastic_ip_address",
+      "displayName": "Res Ec2 Elastic Ip Address",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Elastic-IP-Address_48.svg"
+    },
+    {
+      "slug": "res_ec2_instance",
+      "displayName": "Res Ec2 Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Instance_48.svg"
+    },
+    {
+      "slug": "res_ec2_instance_with_cloudwatch",
+      "displayName": "Res Ec2 Instance With Cloudwatch",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Instance-with-CloudWatch_48.svg"
+    },
+    {
+      "slug": "res_ec2_instances",
+      "displayName": "Res Ec2 Instances",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Instances_48.svg"
+    },
+    {
+      "slug": "res_ec2_rescue",
+      "displayName": "Res Ec2 Rescue",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Rescue_48.svg"
+    },
+    {
+      "slug": "res_ec2_spot_instance",
+      "displayName": "Res Ec2 Spot Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Spot-Instance_48.svg"
+    },
+    {
+      "slug": "res_elastic_beanstalk_application",
+      "displayName": "Res Elastic Beanstalk Application",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_AWS-Elastic-Beanstalk_Application_48.svg"
+    },
+    {
+      "slug": "res_elastic_beanstalk_deployment",
+      "displayName": "Res Elastic Beanstalk Deployment",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_AWS-Elastic-Beanstalk_Deployment_48.svg"
+    },
+    {
+      "slug": "res_lambda_lambda_function",
+      "displayName": "Res Lambda Lambda Function",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_AWS-Lambda_Lambda-Function_48.svg"
+    },
+    {
+      "slug": "ec2",
+      "displayName": "Ec2",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_Amazon-EC2_64.svg"
+    },
+    {
+      "slug": "ec2_auto_scaling",
+      "displayName": "Ec2 Auto Scaling",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_Amazon-EC2-Auto-Scaling_64.svg"
+    },
+    {
+      "slug": "ec2_image_builder",
+      "displayName": "Ec2 Image Builder",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_Amazon-EC2-Image-Builder_64.svg"
+    },
+    {
+      "slug": "genomics_cli",
+      "displayName": "Genomics Cli",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_Amazon-Genomics-CLI_64.svg"
+    },
+    {
+      "slug": "lightsail",
+      "displayName": "Lightsail",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_Amazon-Lightsail_64.svg"
+    },
+    {
+      "slug": "lightsail_for_research",
+      "displayName": "Lightsail For Research",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_Amazon-Lightsail-for-Research_64.svg"
+    },
+    {
+      "slug": "app_runner",
+      "displayName": "App Runner",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-App-Runner_64.svg"
+    },
+    {
+      "slug": "batch",
+      "displayName": "Batch",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Batch_64.svg"
+    },
+    {
+      "slug": "compute_optimizer",
+      "displayName": "Compute Optimizer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Compute-Optimizer_64.svg"
+    },
+    {
+      "slug": "elastic_beanstalk",
+      "displayName": "Elastic Beanstalk",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Elastic-Beanstalk_64.svg"
+    },
+    {
+      "slug": "lambda",
+      "displayName": "Lambda",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Lambda_64.svg"
+    },
+    {
+      "slug": "local_zones",
+      "displayName": "Local Zones",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Local-Zones_64.svg"
+    },
+    {
+      "slug": "nitro_enclaves",
+      "displayName": "Nitro Enclaves",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Nitro-Enclaves_64.svg"
+    },
+    {
+      "slug": "outposts_family",
+      "displayName": "Outposts Family",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Outposts-family_64.svg"
+    },
+    {
+      "slug": "outposts_rack",
+      "displayName": "Outposts Rack",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Outposts-rack_64.svg"
+    },
+    {
+      "slug": "outposts_servers",
+      "displayName": "Outposts Servers",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Outposts-servers_64.svg"
+    },
+    {
+      "slug": "parallel_cluster",
+      "displayName": "Parallel Cluster",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Parallel-Cluster_64.svg"
+    },
+    {
+      "slug": "serverless_application_repository",
+      "displayName": "Serverless Application Repository",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Serverless-Application-Repository_64.svg"
+    },
+    {
+      "slug": "simspace_weaver",
+      "displayName": "Simspace Weaver",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-SimSpace-Weaver_64.svg"
+    },
+    {
+      "slug": "thinkbox_deadline",
+      "displayName": "Thinkbox Deadline",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Thinkbox-Deadline_64.svg"
+    },
+    {
+      "slug": "thinkbox_frost",
+      "displayName": "Thinkbox Frost",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Thinkbox-Frost_64.svg"
+    },
+    {
+      "slug": "thinkbox_krakatoa",
+      "displayName": "Thinkbox Krakatoa",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Thinkbox-Krakatoa_64.svg"
+    },
+    {
+      "slug": "thinkbox_sequoia",
+      "displayName": "Thinkbox Sequoia",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Thinkbox-Sequoia_64.svg"
+    },
+    {
+      "slug": "thinkbox_stoke",
+      "displayName": "Thinkbox Stoke",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Thinkbox-Stoke_64.svg"
+    },
+    {
+      "slug": "thinkbox_xmesh",
+      "displayName": "Thinkbox Xmesh",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Thinkbox-XMesh_64.svg"
+    },
+    {
+      "slug": "wavelength",
+      "displayName": "Wavelength",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_AWS-Wavelength_64.svg"
+    },
+    {
+      "slug": "bottlerocket",
+      "displayName": "Bottlerocket",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_Bottlerocket_64.svg"
+    },
+    {
+      "slug": "elastic_fabric_adapter",
+      "displayName": "Elastic Fabric Adapter",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_Elastic-Fabric-Adapter_64.svg"
+    },
+    {
+      "slug": "nice_dcv",
+      "displayName": "Nice Dcv",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_NICE-DCV_64.svg"
+    },
+    {
+      "slug": "nice_enginframe",
+      "displayName": "Nice Enginframe",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_NICE-EnginFrame_64.svg"
+    },
+    {
+      "slug": "vmware_cloud_on_aws",
+      "displayName": "Vmware Cloud On Aws",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Compute/64/Arch_VMware-Cloud-on-AWS_64.svg"
+    }
+  ]
+}

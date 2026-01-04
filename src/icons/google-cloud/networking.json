@@ -1,0 +1,131 @@
+{
+  "category": "Networking",
+  "count": 25,
+  "icons": [
+    {
+      "slug": "cloud_cdn",
+      "displayName": "Cloud Cdn",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_cdn.svg"
+    },
+    {
+      "slug": "cloud_dns",
+      "displayName": "Cloud Dns",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_dns.svg"
+    },
+    {
+      "slug": "cloud_domains",
+      "displayName": "Cloud Domains",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_domains.svg"
+    },
+    {
+      "slug": "cloud_external_ip_addresses",
+      "displayName": "Cloud External Ip Addresses",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_external_ip_addresses.svg"
+    },
+    {
+      "slug": "cloud_firewall_rules",
+      "displayName": "Cloud Firewall Rules",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_firewall_rules.svg"
+    },
+    {
+      "slug": "cloud_interconnect",
+      "displayName": "Cloud Interconnect",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_interconnect.svg"
+    },
+    {
+      "slug": "cloud_load_balancing",
+      "displayName": "Cloud Load Balancing",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_load_balancing.svg"
+    },
+    {
+      "slug": "cloud_nat",
+      "displayName": "Cloud Nat",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_nat.svg"
+    },
+    {
+      "slug": "cloud_network",
+      "displayName": "Cloud Network",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_network.svg"
+    },
+    {
+      "slug": "cloud_router",
+      "displayName": "Cloud Router",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_router.svg"
+    },
+    {
+      "slug": "cloud_routes",
+      "displayName": "Cloud Routes",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_routes.svg"
+    },
+    {
+      "slug": "cloud_vpn",
+      "displayName": "Cloud Vpn",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_vpn.svg"
+    },
+    {
+      "slug": "connectivity_test",
+      "displayName": "Connectivity Test",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/connectivity_test.svg"
+    },
+    {
+      "slug": "local_ssd",
+      "displayName": "Local Ssd",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/local_ssd.svg"
+    },
+    {
+      "slug": "network_connectivity_center",
+      "displayName": "Network Connectivity Center",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_connectivity_center.svg"
+    },
+    {
+      "slug": "network_intelligence_center",
+      "displayName": "Network Intelligence Center",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_intelligence_center.svg"
+    },
+    {
+      "slug": "network_security",
+      "displayName": "Network Security",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_security.svg"
+    },
+    {
+      "slug": "network_tiers",
+      "displayName": "Network Tiers",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_tiers.svg"
+    },
+    {
+      "slug": "network_topology",
+      "displayName": "Network Topology",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/network_topology.svg"
+    },
+    {
+      "slug": "premium_network_tier",
+      "displayName": "Premium Network Tier",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/premium_network_tier.svg"
+    },
+    {
+      "slug": "private_connectivity",
+      "displayName": "Private Connectivity",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/private_connectivity.svg"
+    },
+    {
+      "slug": "private_service_connect",
+      "displayName": "Private Service Connect",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/private_service_connect.svg"
+    },
+    {
+      "slug": "standard_network_tier",
+      "displayName": "Standard Network Tier",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/standard_network_tier.svg"
+    },
+    {
+      "slug": "traffic_director",
+      "displayName": "Traffic Director",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/traffic_director.svg"
+    },
+    {
+      "slug": "virtual_private_cloud",
+      "displayName": "Virtual Private Cloud",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/virtual_private_cloud.svg"
+    }
+  ]
+}

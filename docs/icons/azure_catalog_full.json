@@ -1,0 +1,2995 @@
+{
+  "title": "Azure Icon Catalog",
+  "subtitle": "All Services by Category (291 icons)",
+  "background": {
+    "type": "gradient",
+    "startColor": "#ffffff",
+    "endColor": "#e6f2ff",
+    "direction": "south"
+  },
+  "nodes": [
+    {
+      "id": "cat_ai___cognitive",
+      "type": "label",
+      "label": "AI & Cognitive (2)",
+      "position": [
+        50,
+        80
+      ]
+    },
+    {
+      "id": "azure_ai___cognitive_bot_services",
+      "icon": "azure:bot_services",
+      "label": "azure:bot_se\nrvices",
+      "position": [
+        50,
+        115
+      ]
+    },
+    {
+      "id": "azure_ai___cognitive_cognitive_services",
+      "icon": "azure:cognitive_services",
+      "label": "azure:cognit\nive_services",
+      "position": [
+        145,
+        115
+      ]
+    },
+    {
+      "id": "cat_analytics",
+      "type": "label",
+      "label": "Analytics (7)",
+      "position": [
+        50,
+        295
+      ]
+    },
+    {
+      "id": "azure_analytics_analysis_services",
+      "icon": "azure:analysis_services",
+      "label": "azure:analys\nis_services",
+      "position": [
+        50,
+        330
+      ]
+    },
+    {
+      "id": "azure_analytics_hd_insight_clusters",
+      "icon": "azure:hd_insight_clusters",
+      "label": "azure:hd_ins\night_cluster\ns",
+      "position": [
+        145,
+        330
+      ]
+    },
+    {
+      "id": "azure_analytics_stream_analytics_jobs",
+      "icon": "azure:stream_analytics_jobs",
+      "label": "azure:stream\n_analytics_j\nobs",
+      "position": [
+        240,
+        330
+      ]
+    },
+    {
+      "id": "azure_analytics_time_series_data_sets",
+      "icon": "azure:time_series_data_sets",
+      "label": "azure:time_s\neries_data_s\nets",
+      "position": [
+        335,
+        330
+      ]
+    },
+    {
+      "id": "azure_analytics_time_series_insights_environments",
+      "icon": "azure:time_series_insights_environments",
+      "label": "azure:time_s\neries_insigh\nts_environme\nnts",
+      "position": [
+        430,
+        330
+      ]
+    },
+    {
+      "id": "azure_analytics_time_series_insights_event_sources",
+      "icon": "azure:time_series_insights_event_sources",
+      "label": "azure:time_s\neries_insigh\nts_event_sou\nrces",
+      "position": [
+        525,
+        330
+      ]
+    },
+    {
+      "id": "azure_analytics_workspaces",
+      "icon": "azure:workspaces",
+      "label": "azure:worksp\naces",
+      "position": [
+        620,
+        330
+      ]
+    },
+    {
+      "id": "cat_api_management",
+      "type": "label",
+      "label": "API Management (1)",
+      "position": [
+        50,
+        510
+      ]
+    },
+    {
+      "id": "azure_api_management_api_management_services",
+      "icon": "azure:api_management_services",
+      "label": "azure:api_ma\nnagement_ser\nvices",
+      "position": [
+        50,
+        545
+      ]
+    },
+    {
+      "id": "cat_app_services",
+      "type": "label",
+      "label": "App Services (6)",
+      "position": [
+        50,
+        725
+      ]
+    },
+    {
+      "id": "azure_app_services_app_registrations",
+      "icon": "azure:app_registrations",
+      "label": "azure:app_re\ngistrations",
+      "position": [
+        50,
+        760
+      ]
+    },
+    {
+      "id": "azure_app_services_app_service_certificates",
+      "icon": "azure:app_service_certificates",
+      "label": "azure:app_se\nrvice_certif\nicates",
+      "position": [
+        145,
+        760
+      ]
+    },
+    {
+      "id": "azure_app_services_app_service_domains",
+      "icon": "azure:app_service_domains",
+      "label": "azure:app_se\nrvice_domain\ns",
+      "position": [
+        240,
+        760
+      ]
+    },
+    {
+      "id": "azure_app_services_app_service_environments",
+      "icon": "azure:app_service_environments",
+      "label": "azure:app_se\nrvice_enviro\nnments",
+      "position": [
+        335,
+        760
+      ]
+    },
+    {
+      "id": "azure_app_services_app_service_plans",
+      "icon": "azure:app_service_plans",
+      "label": "azure:app_se\nrvice_plans",
+      "position": [
+        430,
+        760
+      ]
+    },
+    {
+      "id": "azure_app_services_app_services",
+      "icon": "azure:app_services",
+      "label": "azure:app_se\nrvices",
+      "position": [
+        525,
+        760
+      ]
+    },
+    {
+      "id": "cat_application",
+      "type": "label",
+      "label": "Application (3)",
+      "position": [
+        50,
+        940
+      ]
+    },
+    {
+      "id": "azure_application_application_gateways",
+      "icon": "azure:application_gateways",
+      "label": "azure:applic\nation_gatewa\nys",
+      "position": [
+        50,
+        975
+      ]
+    },
+    {
+      "id": "azure_application_application_insights",
+      "icon": "azure:application_insights",
+      "label": "azure:applic\nation_insigh\nts",
+      "position": [
+        145,
+        975
+      ]
+    },
+    {
+      "id": "azure_application_application_security_groups",
+      "icon": "azure:application_security_groups",
+      "label": "azure:applic\nation_securi\nty_groups",
+      "position": [
+        240,
+        975
+      ]
+    },
+    {
+      "id": "cat_automation",
+      "type": "label",
+      "label": "Automation (3)",
+      "position": [
+        50,
+        1155
+      ]
+    },
+    {
+      "id": "azure_automation_automation_accounts",
+      "icon": "azure:automation_accounts",
+      "label": "azure:automa\ntion_account\ns",
+      "position": [
+        50,
+        1190
+      ]
+    },
+    {
+      "id": "azure_automation_module",
+      "icon": "azure:module",
+      "label": "azure:module",
+      "position": [
+        145,
+        1190
+      ]
+    },
+    {
+      "id": "azure_automation_scheduler",
+      "icon": "azure:scheduler",
+      "label": "azure:schedu\nler",
+      "position": [
+        240,
+        1190
+      ]
+    },
+    {
+      "id": "cat_availability",
+      "type": "label",
+      "label": "Availability (1)",
+      "position": [
+        50,
+        1370
+      ]
+    },
+    {
+      "id": "azure_availability_availability_sets",
+      "icon": "azure:availability_sets",
+      "label": "azure:availa\nbility_sets",
+      "position": [
+        50,
+        1405
+      ]
+    },
+    {
+      "id": "cat_azure_services",
+      "type": "label",
+      "label": "Azure Services (32)",
+      "position": [
+        50,
+        1585
+      ]
+    },
+    {
+      "id": "azure_azure_services_abs_member",
+      "icon": "azure:abs_member",
+      "label": "azure:abs_me\nmber",
+      "position": [
+        50,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_active_directory",
+      "icon": "azure:azure_active_directory",
+      "label": "azure:azure_\nactive_direc\ntory",
+      "position": [
+        145,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_ad_b2c",
+      "icon": "azure:azure_ad_b2c",
+      "label": "azure:azure_\nad_b2c",
+      "position": [
+        240,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_ad_domain_services",
+      "icon": "azure:azure_ad_domain_services",
+      "label": "azure:azure_\nad_domain_se\nrvices",
+      "position": [
+        335,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_ad_roles_and_administrators",
+      "icon": "azure:azure_ad_roles_and_administrators",
+      "label": "azure:azure_\nad_roles_and\n_administrat\nors",
+      "position": [
+        430,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_arc",
+      "icon": "azure:azure_arc",
+      "label": "azure:azure_\narc",
+      "position": [
+        525,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_blockchain_service",
+      "icon": "azure:azure_blockchain_service",
+      "label": "azure:azure_\nblockchain_s\nervice",
+      "position": [
+        620,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_cloud_shell",
+      "icon": "azure:azure_cloud_shell",
+      "label": "azure:azure_\ncloud_shell",
+      "position": [
+        715,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_cosmos_db",
+      "icon": "azure:azure_cosmos_db",
+      "label": "azure:azure_\ncosmos_db",
+      "position": [
+        810,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_data_catalog",
+      "icon": "azure:azure_data_catalog",
+      "label": "azure:azure_\ndata_catalog",
+      "position": [
+        905,
+        1620
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_data_explorer_clusters",
+      "icon": "azure:azure_data_explorer_clusters",
+      "label": "azure:azure_\ndata_explore\nr_clusters",
+      "position": [
+        50,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_database_mariadb_server",
+      "icon": "azure:azure_database_mariadb_server",
+      "label": "azure:azure_\ndatabase_mar\niadb_server",
+      "position": [
+        145,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_database_migration_services",
+      "icon": "azure:azure_database_migration_services",
+      "label": "azure:azure_\ndatabase_mig\nration_servi\nces",
+      "position": [
+        240,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_database_mysql_server",
+      "icon": "azure:azure_database_mysql_server",
+      "label": "azure:azure_\ndatabase_mys\nql_server",
+      "position": [
+        335,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_database_postgresql_server",
+      "icon": "azure:azure_database_postgresql_server",
+      "label": "azure:azure_\ndatabase_pos\ntgresql_serv\ner",
+      "position": [
+        430,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_devops",
+      "icon": "azure:azure_devops",
+      "label": "azure:azure_\ndevops",
+      "position": [
+        525,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_firewall_manager",
+      "icon": "azure:azure_firewall_manager",
+      "label": "azure:azure_\nfirewall_man\nager",
+      "position": [
+        620,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_hcp_cache",
+      "icon": "azure:azure_hcp_cache",
+      "label": "azure:azure_\nhcp_cache",
+      "position": [
+        715,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_lighthouse",
+      "icon": "azure:azure_lighthouse",
+      "label": "azure:azure_\nlighthouse",
+      "position": [
+        810,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_maps_accounts",
+      "icon": "azure:azure_maps_accounts",
+      "label": "azure:azure_\nmaps_account\ns",
+      "position": [
+        905,
+        1760
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_media_service",
+      "icon": "azure:azure_media_service",
+      "label": "azure:azure_\nmedia_servic\ne",
+      "position": [
+        50,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_migrate",
+      "icon": "azure:azure_migrate",
+      "label": "azure:azure_\nmigrate",
+      "position": [
+        145,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_netapp_files",
+      "icon": "azure:azure_netapp_files",
+      "label": "azure:azure_\nnetapp_files",
+      "position": [
+        240,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_sentinel",
+      "icon": "azure:azure_sentinel",
+      "label": "azure:azure_\nsentinel",
+      "position": [
+        335,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_sphere",
+      "icon": "azure:azure_sphere",
+      "label": "azure:azure_\nsphere",
+      "position": [
+        430,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_sql_server_stretch_databases",
+      "icon": "azure:azure_sql_server_stretch_databases",
+      "label": "azure:azure_\nsql_server_s\ntretch_datab\nases",
+      "position": [
+        525,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_sql_vm",
+      "icon": "azure:azure_sql_vm",
+      "label": "azure:azure_\nsql_vm",
+      "position": [
+        620,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_stack",
+      "icon": "azure:azure_stack",
+      "label": "azure:azure_\nstack",
+      "position": [
+        715,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_stack_edge",
+      "icon": "azure:azure_stack_edge",
+      "label": "azure:azure_\nstack_edge",
+      "position": [
+        810,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_synapse_analytics",
+      "icon": "azure:azure_synapse_analytics",
+      "label": "azure:azure_\nsynapse_anal\nytics",
+      "position": [
+        905,
+        1900
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_token_service",
+      "icon": "azure:azure_token_service",
+      "label": "azure:azure_\ntoken_servic\ne",
+      "position": [
+        50,
+        2040
+      ]
+    },
+    {
+      "id": "azure_azure_services_azure_workbooks",
+      "icon": "azure:azure_workbooks",
+      "label": "azure:azure_\nworkbooks",
+      "position": [
+        145,
+        2040
+      ]
+    },
+    {
+      "id": "cat_backup___recovery",
+      "type": "label",
+      "label": "Backup & Recovery (2)",
+      "position": [
+        50,
+        2220
+      ]
+    },
+    {
+      "id": "azure_backup___recovery_infrastructure_backup",
+      "icon": "azure:infrastructure_backup",
+      "label": "azure:infras\ntructure_bac\nkup",
+      "position": [
+        50,
+        2255
+      ]
+    },
+    {
+      "id": "azure_backup___recovery_recovery_services_vaults",
+      "icon": "azure:recovery_services_vaults",
+      "label": "azure:recove\nry_services_\nvaults",
+      "position": [
+        145,
+        2255
+      ]
+    },
+    {
+      "id": "cat_blockchain",
+      "type": "label",
+      "label": "Blockchain (1)",
+      "position": [
+        50,
+        2435
+      ]
+    },
+    {
+      "id": "azure_blockchain_consortium",
+      "icon": "azure:consortium",
+      "label": "azure:consor\ntium",
+      "position": [
+        50,
+        2470
+      ]
+    },
+    {
+      "id": "cat_cache",
+      "type": "label",
+      "label": "Cache (2)",
+      "position": [
+        50,
+        2650
+      ]
+    },
+    {
+      "id": "azure_cache_cache",
+      "icon": "azure:cache",
+      "label": "azure:cache",
+      "position": [
+        50,
+        2685
+      ]
+    },
+    {
+      "id": "azure_cache_cache_redis",
+      "icon": "azure:cache_redis",
+      "label": "azure:cache_\nredis",
+      "position": [
+        145,
+        2685
+      ]
+    },
+    {
+      "id": "cat_cdn",
+      "type": "label",
+      "label": "CDN (1)",
+      "position": [
+        50,
+        2865
+      ]
+    },
+    {
+      "id": "azure_cdn_cdn_profiles",
+      "icon": "azure:cdn_profiles",
+      "label": "azure:cdn_pr\nofiles",
+      "position": [
+        50,
+        2900
+      ]
+    },
+    {
+      "id": "cat_compute",
+      "type": "label",
+      "label": "Compute (26)",
+      "position": [
+        50,
+        3080
+      ]
+    },
+    {
+      "id": "azure_compute_avs",
+      "icon": "azure:avs",
+      "label": "azure:avs",
+      "position": [
+        50,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_batch_accounts",
+      "icon": "azure:batch_accounts",
+      "label": "azure:batch_\naccounts",
+      "position": [
+        145,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_cloud_services_(classic)",
+      "icon": "azure:cloud_services_(classic)",
+      "label": "azure:cloud_\nservices_(cl\nassic)",
+      "position": [
+        240,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_extensions",
+      "icon": "azure:extensions",
+      "label": "azure:extens\nions",
+      "position": [
+        335,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_function_apps",
+      "icon": "azure:function_apps",
+      "label": "azure:functi\non_apps",
+      "position": [
+        430,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_image",
+      "icon": "azure:image",
+      "label": "azure:image",
+      "position": [
+        525,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_image_definitions",
+      "icon": "azure:image_definitions",
+      "label": "azure:image_\ndefinitions",
+      "position": [
+        620,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_image_versions",
+      "icon": "azure:image_versions",
+      "label": "azure:image_\nversions",
+      "position": [
+        715,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_images",
+      "icon": "azure:images",
+      "label": "azure:images",
+      "position": [
+        810,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_machinesazurearc",
+      "icon": "azure:machinesazurearc",
+      "label": "azure:machin\nesazurearc",
+      "position": [
+        905,
+        3115
+      ]
+    },
+    {
+      "id": "azure_compute_os_images_(classic)",
+      "icon": "azure:os_images_(classic)",
+      "label": "azure:os_ima\nges_(classic\n)",
+      "position": [
+        50,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_proximity_placement_groups",
+      "icon": "azure:proximity_placement_groups",
+      "label": "azure:proxim\nity_placemen\nt_groups",
+      "position": [
+        145,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_remote_rendering",
+      "icon": "azure:remote_rendering",
+      "label": "azure:remote\n_rendering",
+      "position": [
+        240,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_scale",
+      "icon": "azure:scale",
+      "label": "azure:scale",
+      "position": [
+        335,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_server_farm",
+      "icon": "azure:server_farm",
+      "label": "azure:server\n_farm",
+      "position": [
+        430,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_shared_image_galleries",
+      "icon": "azure:shared_image_galleries",
+      "label": "azure:shared\n_image_galle\nries",
+      "position": [
+        525,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_virtual_clusters",
+      "icon": "azure:virtual_clusters",
+      "label": "azure:virtua\nl_clusters",
+      "position": [
+        620,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_virtual_machine",
+      "icon": "azure:virtual_machine",
+      "label": "azure:virtua\nl_machine",
+      "position": [
+        715,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_virtual_machines_(classic)",
+      "icon": "azure:virtual_machines_(classic)",
+      "label": "azure:virtua\nl_machines_(\nclassic)",
+      "position": [
+        810,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_virtual_network_gateways",
+      "icon": "azure:virtual_network_gateways",
+      "label": "azure:virtua\nl_network_ga\nteways",
+      "position": [
+        905,
+        3255
+      ]
+    },
+    {
+      "id": "azure_compute_virtual_networks",
+      "icon": "azure:virtual_networks",
+      "label": "azure:virtua\nl_networks",
+      "position": [
+        50,
+        3395
+      ]
+    },
+    {
+      "id": "azure_compute_virtual_networks_(classic)",
+      "icon": "azure:virtual_networks_(classic)",
+      "label": "azure:virtua\nl_networks_(\nclassic)",
+      "position": [
+        145,
+        3395
+      ]
+    },
+    {
+      "id": "azure_compute_virtual_wans",
+      "icon": "azure:virtual_wans",
+      "label": "azure:virtua\nl_wans",
+      "position": [
+        240,
+        3395
+      ]
+    },
+    {
+      "id": "azure_compute_vm_images_(classic)",
+      "icon": "azure:vm_images_(classic)",
+      "label": "azure:vm_ima\nges_(classic\n)",
+      "position": [
+        335,
+        3395
+      ]
+    },
+    {
+      "id": "azure_compute_vm_scale_sets",
+      "icon": "azure:vm_scale_sets",
+      "label": "azure:vm_sca\nle_sets",
+      "position": [
+        430,
+        3395
+      ]
+    },
+    {
+      "id": "azure_compute_windows_virtual_desktop",
+      "icon": "azure:windows_virtual_desktop",
+      "label": "azure:window\ns_virtual_de\nsktop",
+      "position": [
+        525,
+        3395
+      ]
+    },
+    {
+      "id": "cat_containers",
+      "type": "label",
+      "label": "Containers (5)",
+      "position": [
+        50,
+        3575
+      ]
+    },
+    {
+      "id": "azure_containers_container_instances",
+      "icon": "azure:container_instances",
+      "label": "azure:contai\nner_instance\ns",
+      "position": [
+        50,
+        3610
+      ]
+    },
+    {
+      "id": "azure_containers_container_registries",
+      "icon": "azure:container_registries",
+      "label": "azure:contai\nner_registri\nes",
+      "position": [
+        145,
+        3610
+      ]
+    },
+    {
+      "id": "azure_containers_container_services_(deprecated)",
+      "icon": "azure:container_services_(deprecated)",
+      "label": "azure:contai\nner_services\n_(deprecated\n)",
+      "position": [
+        240,
+        3610
+      ]
+    },
+    {
+      "id": "azure_containers_kubernetes_services",
+      "icon": "azure:kubernetes_services",
+      "label": "azure:kubern\netes_service\ns",
+      "position": [
+        335,
+        3610
+      ]
+    },
+    {
+      "id": "azure_containers_mesh_applications",
+      "icon": "azure:mesh_applications",
+      "label": "azure:mesh_a\npplications",
+      "position": [
+        430,
+        3610
+      ]
+    },
+    {
+      "id": "cat_cost_management",
+      "type": "label",
+      "label": "Cost Management (4)",
+      "position": [
+        50,
+        3790
+      ]
+    },
+    {
+      "id": "azure_cost_management_cost_alerts",
+      "icon": "azure:cost_alerts",
+      "label": "azure:cost_a\nlerts",
+      "position": [
+        50,
+        3825
+      ]
+    },
+    {
+      "id": "azure_cost_management_cost_analysis",
+      "icon": "azure:cost_analysis",
+      "label": "azure:cost_a\nnalysis",
+      "position": [
+        145,
+        3825
+      ]
+    },
+    {
+      "id": "azure_cost_management_cost_budgets",
+      "icon": "azure:cost_budgets",
+      "label": "azure:cost_b\nudgets",
+      "position": [
+        240,
+        3825
+      ]
+    },
+    {
+      "id": "azure_cost_management_cost_management",
+      "icon": "azure:cost_management",
+      "label": "azure:cost_m\nanagement",
+      "position": [
+        335,
+        3825
+      ]
+    },
+    {
+      "id": "cat_data_services",
+      "type": "label",
+      "label": "Data Services (8)",
+      "position": [
+        50,
+        4005
+      ]
+    },
+    {
+      "id": "azure_data_services_data_box",
+      "icon": "azure:data_box",
+      "label": "azure:data_b\nox",
+      "position": [
+        50,
+        4040
+      ]
+    },
+    {
+      "id": "azure_data_services_data_box_edge",
+      "icon": "azure:data_box_edge",
+      "label": "azure:data_b\nox_edge",
+      "position": [
+        145,
+        4040
+      ]
+    },
+    {
+      "id": "azure_data_services_data_factory",
+      "icon": "azure:data_factory",
+      "label": "azure:data_f\nactory",
+      "position": [
+        240,
+        4040
+      ]
+    },
+    {
+      "id": "azure_data_services_data_lake_storage_gen1",
+      "icon": "azure:data_lake_storage_gen1",
+      "label": "azure:data_l\nake_storage_\ngen1",
+      "position": [
+        335,
+        4040
+      ]
+    },
+    {
+      "id": "azure_data_services_data_lake_store_gen1",
+      "icon": "azure:data_lake_store_gen1",
+      "label": "azure:data_l\nake_store_ge\nn1",
+      "position": [
+        430,
+        4040
+      ]
+    },
+    {
+      "id": "azure_data_services_data_share_invitations",
+      "icon": "azure:data_share_invitations",
+      "label": "azure:data_s\nhare_invitat\nions",
+      "position": [
+        525,
+        4040
+      ]
+    },
+    {
+      "id": "azure_data_services_data_shares",
+      "icon": "azure:data_shares",
+      "label": "azure:data_s\nhares",
+      "position": [
+        620,
+        4040
+      ]
+    },
+    {
+      "id": "azure_data_services_import_export_jobs",
+      "icon": "azure:import_export_jobs",
+      "label": "azure:import\n_export_jobs",
+      "position": [
+        715,
+        4040
+      ]
+    },
+    {
+      "id": "cat_databases",
+      "type": "label",
+      "label": "Databases (8)",
+      "position": [
+        50,
+        4220
+      ]
+    },
+    {
+      "id": "azure_databases_elastic_job_agents",
+      "icon": "azure:elastic_job_agents",
+      "label": "azure:elasti\nc_job_agents",
+      "position": [
+        50,
+        4255
+      ]
+    },
+    {
+      "id": "azure_databases_instance_pools",
+      "icon": "azure:instance_pools",
+      "label": "azure:instan\nce_pools",
+      "position": [
+        145,
+        4255
+      ]
+    },
+    {
+      "id": "azure_databases_production_ready_database",
+      "icon": "azure:production_ready_database",
+      "label": "azure:produc\ntion_ready_d\natabase",
+      "position": [
+        240,
+        4255
+      ]
+    },
+    {
+      "id": "azure_databases_sql_data_warehouses",
+      "icon": "azure:sql_data_warehouses",
+      "label": "azure:sql_da\nta_warehouse\ns",
+      "position": [
+        335,
+        4255
+      ]
+    },
+    {
+      "id": "azure_databases_sql_database",
+      "icon": "azure:sql_database",
+      "label": "azure:sql_da\ntabase",
+      "position": [
+        430,
+        4255
+      ]
+    },
+    {
+      "id": "azure_databases_sql_elastic_pools",
+      "icon": "azure:sql_elastic_pools",
+      "label": "azure:sql_el\nastic_pools",
+      "position": [
+        525,
+        4255
+      ]
+    },
+    {
+      "id": "azure_databases_sql_managed_instance",
+      "icon": "azure:sql_managed_instance",
+      "label": "azure:sql_ma\nnaged_instan\nce",
+      "position": [
+        620,
+        4255
+      ]
+    },
+    {
+      "id": "azure_databases_sql_server",
+      "icon": "azure:sql_server",
+      "label": "azure:sql_se\nrver",
+      "position": [
+        715,
+        4255
+      ]
+    },
+    {
+      "id": "cat_developer_tools",
+      "type": "label",
+      "label": "Developer Tools (12)",
+      "position": [
+        50,
+        4435
+      ]
+    },
+    {
+      "id": "azure_developer_tools_backlog",
+      "icon": "azure:backlog",
+      "label": "azure:backlo\ng",
+      "position": [
+        50,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_branch",
+      "icon": "azure:branch",
+      "label": "azure:branch",
+      "position": [
+        145,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_bug",
+      "icon": "azure:bug",
+      "label": "azure:bug",
+      "position": [
+        240,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_builds",
+      "icon": "azure:builds",
+      "label": "azure:builds",
+      "position": [
+        335,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_code",
+      "icon": "azure:code",
+      "label": "azure:code",
+      "position": [
+        430,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_commit",
+      "icon": "azure:commit",
+      "label": "azure:commit",
+      "position": [
+        525,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_dev_console",
+      "icon": "azure:dev_console",
+      "label": "azure:dev_co\nnsole",
+      "position": [
+        620,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_devtest_labs",
+      "icon": "azure:devtest_labs",
+      "label": "azure:devtes\nt_labs",
+      "position": [
+        715,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_lab_services",
+      "icon": "azure:lab_services",
+      "label": "azure:lab_se\nrvices",
+      "position": [
+        810,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_powershell",
+      "icon": "azure:powershell",
+      "label": "azure:powers\nhell",
+      "position": [
+        905,
+        4470
+      ]
+    },
+    {
+      "id": "azure_developer_tools_process_explorer",
+      "icon": "azure:process_explorer",
+      "label": "azure:proces\ns_explorer",
+      "position": [
+        50,
+        4610
+      ]
+    },
+    {
+      "id": "azure_developer_tools_tfs_vc_repository",
+      "icon": "azure:tfs_vc_repository",
+      "label": "azure:tfs_vc\n_repository",
+      "position": [
+        145,
+        4610
+      ]
+    },
+    {
+      "id": "cat_devices",
+      "type": "label",
+      "label": "Devices (4)",
+      "position": [
+        50,
+        4790
+      ]
+    },
+    {
+      "id": "azure_devices_device_provisioning_services",
+      "icon": "azure:device_provisioning_services",
+      "label": "azure:device\n_provisionin\ng_services",
+      "position": [
+        50,
+        4825
+      ]
+    },
+    {
+      "id": "azure_devices_device_security_apple",
+      "icon": "azure:device_security_apple",
+      "label": "azure:device\n_security_ap\nple",
+      "position": [
+        145,
+        4825
+      ]
+    },
+    {
+      "id": "azure_devices_device_security_google",
+      "icon": "azure:device_security_google",
+      "label": "azure:device\n_security_go\nogle",
+      "position": [
+        240,
+        4825
+      ]
+    },
+    {
+      "id": "azure_devices_device_security_windows",
+      "icon": "azure:device_security_windows",
+      "label": "azure:device\n_security_wi\nndows",
+      "position": [
+        335,
+        4825
+      ]
+    },
+    {
+      "id": "cat_enterprise",
+      "type": "label",
+      "label": "Enterprise (1)",
+      "position": [
+        50,
+        5005
+      ]
+    },
+    {
+      "id": "azure_enterprise_sap_azure_monitor",
+      "icon": "azure:sap_azure_monitor",
+      "label": "azure:sap_az\nure_monitor",
+      "position": [
+        50,
+        5040
+      ]
+    },
+    {
+      "id": "cat_events___messaging",
+      "type": "label",
+      "label": "Events & Messaging (8)",
+      "position": [
+        50,
+        5220
+      ]
+    },
+    {
+      "id": "azure_events___messaging_event_grid_domains",
+      "icon": "azure:event_grid_domains",
+      "label": "azure:event_\ngrid_domains",
+      "position": [
+        50,
+        5255
+      ]
+    },
+    {
+      "id": "azure_events___messaging_event_grid_subscriptions",
+      "icon": "azure:event_grid_subscriptions",
+      "label": "azure:event_\ngrid_subscri\nptions",
+      "position": [
+        145,
+        5255
+      ]
+    },
+    {
+      "id": "azure_events___messaging_event_grid_topics",
+      "icon": "azure:event_grid_topics",
+      "label": "azure:event_\ngrid_topics",
+      "position": [
+        240,
+        5255
+      ]
+    },
+    {
+      "id": "azure_events___messaging_event_hub_clusters",
+      "icon": "azure:event_hub_clusters",
+      "label": "azure:event_\nhub_clusters",
+      "position": [
+        335,
+        5255
+      ]
+    },
+    {
+      "id": "azure_events___messaging_event_hubs",
+      "icon": "azure:event_hubs",
+      "label": "azure:event_\nhubs",
+      "position": [
+        430,
+        5255
+      ]
+    },
+    {
+      "id": "azure_events___messaging_notification_hub_namespaces",
+      "icon": "azure:notification_hub_namespaces",
+      "label": "azure:notifi\ncation_hub_n\namespaces",
+      "position": [
+        525,
+        5255
+      ]
+    },
+    {
+      "id": "azure_events___messaging_notification_hubs",
+      "icon": "azure:notification_hubs",
+      "label": "azure:notifi\ncation_hubs",
+      "position": [
+        620,
+        5255
+      ]
+    },
+    {
+      "id": "azure_events___messaging_relays",
+      "icon": "azure:relays",
+      "label": "azure:relays",
+      "position": [
+        715,
+        5255
+      ]
+    },
+    {
+      "id": "cat_identity",
+      "type": "label",
+      "label": "Identity (9)",
+      "position": [
+        50,
+        5435
+      ]
+    },
+    {
+      "id": "azure_identity_active_directory_connect_health",
+      "icon": "azure:active_directory_connect_health",
+      "label": "azure:active\n_directory_c\nonnect_healt\nh",
+      "position": [
+        50,
+        5470
+      ]
+    },
+    {
+      "id": "azure_identity_conditional_access",
+      "icon": "azure:conditional_access",
+      "label": "azure:condit\nional_access",
+      "position": [
+        145,
+        5470
+      ]
+    },
+    {
+      "id": "azure_identity_enterprise_applications",
+      "icon": "azure:enterprise_applications",
+      "label": "azure:enterp\nrise_applica\ntions",
+      "position": [
+        240,
+        5470
+      ]
+    },
+    {
+      "id": "azure_identity_groups",
+      "icon": "azure:groups",
+      "label": "azure:groups",
+      "position": [
+        335,
+        5470
+      ]
+    },
+    {
+      "id": "azure_identity_identity_governance",
+      "icon": "azure:identity_governance",
+      "label": "azure:identi\nty_governanc\ne",
+      "position": [
+        430,
+        5470
+      ]
+    },
+    {
+      "id": "azure_identity_multi_tenancy",
+      "icon": "azure:multi_tenancy",
+      "label": "azure:multi_\ntenancy",
+      "position": [
+        525,
+        5470
+      ]
+    },
+    {
+      "id": "azure_identity_user_privacy",
+      "icon": "azure:user_privacy",
+      "label": "azure:user_p\nrivacy",
+      "position": [
+        620,
+        5470
+      ]
+    },
+    {
+      "id": "azure_identity_user_subscriptions",
+      "icon": "azure:user_subscriptions",
+      "label": "azure:user_s\nubscriptions",
+      "position": [
+        715,
+        5470
+      ]
+    },
+    {
+      "id": "azure_identity_users",
+      "icon": "azure:users",
+      "label": "azure:users",
+      "position": [
+        810,
+        5470
+      ]
+    },
+    {
+      "id": "cat_integration",
+      "type": "label",
+      "label": "Integration (4)",
+      "position": [
+        50,
+        5650
+      ]
+    },
+    {
+      "id": "azure_integration_biz_talk",
+      "icon": "azure:biz_talk",
+      "label": "azure:biz_ta\nlk",
+      "position": [
+        50,
+        5685
+      ]
+    },
+    {
+      "id": "azure_integration_integration_accounts",
+      "icon": "azure:integration_accounts",
+      "label": "azure:integr\nation_accoun\nts",
+      "position": [
+        145,
+        5685
+      ]
+    },
+    {
+      "id": "azure_integration_logic_apps",
+      "icon": "azure:logic_apps",
+      "label": "azure:logic_\napps",
+      "position": [
+        240,
+        5685
+      ]
+    },
+    {
+      "id": "azure_integration_workflow",
+      "icon": "azure:workflow",
+      "label": "azure:workfl\now",
+      "position": [
+        335,
+        5685
+      ]
+    },
+    {
+      "id": "cat_iot",
+      "type": "label",
+      "label": "IoT (6)",
+      "position": [
+        50,
+        5865
+      ]
+    },
+    {
+      "id": "azure_iot_digital_twins",
+      "icon": "azure:digital_twins",
+      "label": "azure:digita\nl_twins",
+      "position": [
+        50,
+        5900
+      ]
+    },
+    {
+      "id": "azure_iot_iot_central_applications",
+      "icon": "azure:iot_central_applications",
+      "label": "azure:iot_ce\nntral_applic\nations",
+      "position": [
+        145,
+        5900
+      ]
+    },
+    {
+      "id": "azure_iot_iot_edge",
+      "icon": "azure:iot_edge",
+      "label": "azure:iot_ed\nge",
+      "position": [
+        240,
+        5900
+      ]
+    },
+    {
+      "id": "azure_iot_iot_hub",
+      "icon": "azure:iot_hub",
+      "label": "azure:iot_hu\nb",
+      "position": [
+        335,
+        5900
+      ]
+    },
+    {
+      "id": "azure_iot_journey_hub",
+      "icon": "azure:journey_hub",
+      "label": "azure:journe\ny_hub",
+      "position": [
+        430,
+        5900
+      ]
+    },
+    {
+      "id": "azure_iot_rtos",
+      "icon": "azure:rtos",
+      "label": "azure:rtos",
+      "position": [
+        525,
+        5900
+      ]
+    },
+    {
+      "id": "cat_managed_services",
+      "type": "label",
+      "label": "Managed Services (2)",
+      "position": [
+        50,
+        6080
+      ]
+    },
+    {
+      "id": "azure_managed_services_managed_applications_center",
+      "icon": "azure:managed_applications_center",
+      "label": "azure:manage\nd_applicatio\nns_center",
+      "position": [
+        50,
+        6115
+      ]
+    },
+    {
+      "id": "azure_managed_services_managed_database",
+      "icon": "azure:managed_database",
+      "label": "azure:manage\nd_database",
+      "position": [
+        145,
+        6115
+      ]
+    },
+    {
+      "id": "cat_management",
+      "type": "label",
+      "label": "Management (13)",
+      "position": [
+        50,
+        6295
+      ]
+    },
+    {
+      "id": "azure_management_advisor",
+      "icon": "azure:advisor",
+      "label": "azure:adviso\nr",
+      "position": [
+        50,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_blueprints",
+      "icon": "azure:blueprints",
+      "label": "azure:bluepr\nints",
+      "position": [
+        145,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_capacity",
+      "icon": "azure:capacity",
+      "label": "azure:capaci\nty",
+      "position": [
+        240,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_management_groups",
+      "icon": "azure:management_groups",
+      "label": "azure:manage\nment_groups",
+      "position": [
+        335,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_management_portal",
+      "icon": "azure:management_portal",
+      "label": "azure:manage\nment_portal",
+      "position": [
+        430,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_my_customers",
+      "icon": "azure:my_customers",
+      "label": "azure:my_cus\ntomers",
+      "position": [
+        525,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_plans",
+      "icon": "azure:plans",
+      "label": "azure:plans",
+      "position": [
+        620,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_policy",
+      "icon": "azure:policy",
+      "label": "azure:policy",
+      "position": [
+        715,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_reservations",
+      "icon": "azure:reservations",
+      "label": "azure:reserv\nations",
+      "position": [
+        810,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_solutions",
+      "icon": "azure:solutions",
+      "label": "azure:soluti\nons",
+      "position": [
+        905,
+        6330
+      ]
+    },
+    {
+      "id": "azure_management_subscriptions",
+      "icon": "azure:subscriptions",
+      "label": "azure:subscr\niptions",
+      "position": [
+        50,
+        6470
+      ]
+    },
+    {
+      "id": "azure_management_tags",
+      "icon": "azure:tags",
+      "label": "azure:tags",
+      "position": [
+        145,
+        6470
+      ]
+    },
+    {
+      "id": "azure_management_updates",
+      "icon": "azure:updates",
+      "label": "azure:update\ns",
+      "position": [
+        240,
+        6470
+      ]
+    },
+    {
+      "id": "cat_marketplace",
+      "type": "label",
+      "label": "Marketplace (3)",
+      "position": [
+        50,
+        6650
+      ]
+    },
+    {
+      "id": "azure_marketplace_marketplace",
+      "icon": "azure:marketplace",
+      "label": "azure:market\nplace",
+      "position": [
+        50,
+        6685
+      ]
+    },
+    {
+      "id": "azure_marketplace_offers",
+      "icon": "azure:offers",
+      "label": "azure:offers",
+      "position": [
+        145,
+        6685
+      ]
+    },
+    {
+      "id": "azure_marketplace_software_as_a_service",
+      "icon": "azure:software_as_a_service",
+      "label": "azure:softwa\nre_as_a_serv\nice",
+      "position": [
+        240,
+        6685
+      ]
+    },
+    {
+      "id": "cat_media",
+      "type": "label",
+      "label": "Media (2)",
+      "position": [
+        50,
+        6865
+      ]
+    },
+    {
+      "id": "azure_media_media",
+      "icon": "azure:media",
+      "label": "azure:media",
+      "position": [
+        50,
+        6900
+      ]
+    },
+    {
+      "id": "azure_media_media_file",
+      "icon": "azure:media_file",
+      "label": "azure:media_\nfile",
+      "position": [
+        145,
+        6900
+      ]
+    },
+    {
+      "id": "cat_mobile",
+      "type": "label",
+      "label": "Mobile (2)",
+      "position": [
+        50,
+        7080
+      ]
+    },
+    {
+      "id": "azure_mobile_mobile",
+      "icon": "azure:mobile",
+      "label": "azure:mobile",
+      "position": [
+        50,
+        7115
+      ]
+    },
+    {
+      "id": "azure_mobile_mobile_engagement",
+      "icon": "azure:mobile_engagement",
+      "label": "azure:mobile\n_engagement",
+      "position": [
+        145,
+        7115
+      ]
+    },
+    {
+      "id": "cat_monitoring",
+      "type": "label",
+      "label": "Monitoring (9)",
+      "position": [
+        50,
+        7295
+      ]
+    },
+    {
+      "id": "azure_monitoring_activity_log",
+      "icon": "azure:activity_log",
+      "label": "azure:activi\nty_log",
+      "position": [
+        50,
+        7330
+      ]
+    },
+    {
+      "id": "azure_monitoring_alerts",
+      "icon": "azure:alerts",
+      "label": "azure:alerts",
+      "position": [
+        145,
+        7330
+      ]
+    },
+    {
+      "id": "azure_monitoring_diagnostics_settings",
+      "icon": "azure:diagnostics_settings",
+      "label": "azure:diagno\nstics_settin\ngs",
+      "position": [
+        240,
+        7330
+      ]
+    },
+    {
+      "id": "azure_monitoring_log_analytics_workspaces",
+      "icon": "azure:log_analytics_workspaces",
+      "label": "azure:log_an\nalytics_work\nspaces",
+      "position": [
+        335,
+        7330
+      ]
+    },
+    {
+      "id": "azure_monitoring_log_streaming",
+      "icon": "azure:log_streaming",
+      "label": "azure:log_st\nreaming",
+      "position": [
+        430,
+        7330
+      ]
+    },
+    {
+      "id": "azure_monitoring_metrics",
+      "icon": "azure:metrics",
+      "label": "azure:metric\ns",
+      "position": [
+        525,
+        7330
+      ]
+    },
+    {
+      "id": "azure_monitoring_monitor",
+      "icon": "azure:monitor",
+      "label": "azure:monito\nr",
+      "position": [
+        620,
+        7330
+      ]
+    },
+    {
+      "id": "azure_monitoring_operation_log_(classic)",
+      "icon": "azure:operation_log_(classic)",
+      "label": "azure:operat\nion_log_(cla\nssic)",
+      "position": [
+        715,
+        7330
+      ]
+    },
+    {
+      "id": "azure_monitoring_workbooks",
+      "icon": "azure:workbooks",
+      "label": "azure:workbo\noks",
+      "position": [
+        810,
+        7330
+      ]
+    },
+    {
+      "id": "cat_networking",
+      "type": "label",
+      "label": "Networking (25)",
+      "position": [
+        50,
+        7510
+      ]
+    },
+    {
+      "id": "azure_networking_connections",
+      "icon": "azure:connections",
+      "label": "azure:connec\ntions",
+      "position": [
+        50,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_dns_zones",
+      "icon": "azure:dns_zones",
+      "label": "azure:dns_zo\nnes",
+      "position": [
+        145,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_expressroute_circuits",
+      "icon": "azure:expressroute_circuits",
+      "label": "azure:expres\nsroute_circu\nits",
+      "position": [
+        240,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_front_doors",
+      "icon": "azure:front_doors",
+      "label": "azure:front_\ndoors",
+      "position": [
+        335,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_ftp",
+      "icon": "azure:ftp",
+      "label": "azure:ftp",
+      "position": [
+        430,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_internet_analyzer_profiles",
+      "icon": "azure:internet_analyzer_profiles",
+      "label": "azure:intern\net_analyzer_\nprofiles",
+      "position": [
+        525,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_ip_groups",
+      "icon": "azure:ip_groups",
+      "label": "azure:ip_gro\nups",
+      "position": [
+        620,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_load_balancers",
+      "icon": "azure:load_balancers",
+      "label": "azure:load_b\nalancers",
+      "position": [
+        715,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_load_test",
+      "icon": "azure:load_test",
+      "label": "azure:load_t\nest",
+      "position": [
+        810,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_nat",
+      "icon": "azure:nat",
+      "label": "azure:nat",
+      "position": [
+        905,
+        7545
+      ]
+    },
+    {
+      "id": "azure_networking_network_interfaces",
+      "icon": "azure:network_interfaces",
+      "label": "azure:networ\nk_interfaces",
+      "position": [
+        50,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_network_security_groups",
+      "icon": "azure:network_security_groups",
+      "label": "azure:networ\nk_security_g\nroups",
+      "position": [
+        145,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_network_watcher",
+      "icon": "azure:network_watcher",
+      "label": "azure:networ\nk_watcher",
+      "position": [
+        240,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_outbound_connection",
+      "icon": "azure:outbound_connection",
+      "label": "azure:outbou\nnd_connectio\nn",
+      "position": [
+        335,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_peering_service",
+      "icon": "azure:peering_service",
+      "label": "azure:peerin\ng_service",
+      "position": [
+        430,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_private_link",
+      "icon": "azure:private_link",
+      "label": "azure:privat\ne_link",
+      "position": [
+        525,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_private_link_hub",
+      "icon": "azure:private_link_hub",
+      "label": "azure:privat\ne_link_hub",
+      "position": [
+        620,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_private_link_service",
+      "icon": "azure:private_link_service",
+      "label": "azure:privat\ne_link_servi\nce",
+      "position": [
+        715,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_public_ip_addresses",
+      "icon": "azure:public_ip_addresses",
+      "label": "azure:public\n_ip_addresse\ns",
+      "position": [
+        810,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_public_ip_addresses_(classic)",
+      "icon": "azure:public_ip_addresses_(classic)",
+      "label": "azure:public\n_ip_addresse\ns_(classic)",
+      "position": [
+        905,
+        7685
+      ]
+    },
+    {
+      "id": "azure_networking_public_ip_prefixes",
+      "icon": "azure:public_ip_prefixes",
+      "label": "azure:public\n_ip_prefixes",
+      "position": [
+        50,
+        7825
+      ]
+    },
+    {
+      "id": "azure_networking_reserved_ip_addresses_(classic)",
+      "icon": "azure:reserved_ip_addresses_(classic)",
+      "label": "azure:reserv\ned_ip_addres\nses_(classic\n)",
+      "position": [
+        145,
+        7825
+      ]
+    },
+    {
+      "id": "azure_networking_route_filters",
+      "icon": "azure:route_filters",
+      "label": "azure:route_\nfilters",
+      "position": [
+        240,
+        7825
+      ]
+    },
+    {
+      "id": "azure_networking_route_tables",
+      "icon": "azure:route_tables",
+      "label": "azure:route_\ntables",
+      "position": [
+        335,
+        7825
+      ]
+    },
+    {
+      "id": "azure_networking_traffic_manager_profiles",
+      "icon": "azure:traffic_manager_profiles",
+      "label": "azure:traffi\nc_manager_pr\nofiles",
+      "position": [
+        430,
+        7825
+      ]
+    },
+    {
+      "id": "cat_other",
+      "type": "label",
+      "label": "Other (1)",
+      "position": [
+        50,
+        8005
+      ]
+    },
+    {
+      "id": "azure_other_elixir_purple",
+      "icon": "azure:elixir_purple",
+      "label": "azure:elixir\n_purple",
+      "position": [
+        50,
+        8040
+      ]
+    },
+    {
+      "id": "cat_resources",
+      "type": "label",
+      "label": "Resources (5)",
+      "position": [
+        50,
+        8220
+      ]
+    },
+    {
+      "id": "azure_resources_all_resources",
+      "icon": "azure:all_resources",
+      "label": "azure:all_re\nsources",
+      "position": [
+        50,
+        8255
+      ]
+    },
+    {
+      "id": "azure_resources_resource_graph_explorer",
+      "icon": "azure:resource_graph_explorer",
+      "label": "azure:resour\nce_graph_exp\nlorer",
+      "position": [
+        145,
+        8255
+      ]
+    },
+    {
+      "id": "azure_resources_resource_group_list",
+      "icon": "azure:resource_group_list",
+      "label": "azure:resour\nce_group_lis\nt",
+      "position": [
+        240,
+        8255
+      ]
+    },
+    {
+      "id": "azure_resources_resource_groups",
+      "icon": "azure:resource_groups",
+      "label": "azure:resour\nce_groups",
+      "position": [
+        335,
+        8255
+      ]
+    },
+    {
+      "id": "azure_resources_resource_linked",
+      "icon": "azure:resource_linked",
+      "label": "azure:resour\nce_linked",
+      "position": [
+        430,
+        8255
+      ]
+    },
+    {
+      "id": "cat_search",
+      "type": "label",
+      "label": "Search (3)",
+      "position": [
+        50,
+        8435
+      ]
+    },
+    {
+      "id": "azure_search_search",
+      "icon": "azure:search",
+      "label": "azure:search",
+      "position": [
+        50,
+        8470
+      ]
+    },
+    {
+      "id": "azure_search_search_grid",
+      "icon": "azure:search_grid",
+      "label": "azure:search\n_grid",
+      "position": [
+        145,
+        8470
+      ]
+    },
+    {
+      "id": "azure_search_search_services",
+      "icon": "azure:search_services",
+      "label": "azure:search\n_services",
+      "position": [
+        240,
+        8470
+      ]
+    },
+    {
+      "id": "cat_security",
+      "type": "label",
+      "label": "Security (8)",
+      "position": [
+        50,
+        8650
+      ]
+    },
+    {
+      "id": "azure_security_compliance",
+      "icon": "azure:compliance",
+      "label": "azure:compli\nance",
+      "position": [
+        50,
+        8685
+      ]
+    },
+    {
+      "id": "azure_security_ddos_protection_plans",
+      "icon": "azure:ddos_protection_plans",
+      "label": "azure:ddos_p\nrotection_pl\nans",
+      "position": [
+        145,
+        8685
+      ]
+    },
+    {
+      "id": "azure_security_detonation",
+      "icon": "azure:detonation",
+      "label": "azure:detona\ntion",
+      "position": [
+        240,
+        8685
+      ]
+    },
+    {
+      "id": "azure_security_extendedsecurityupdates",
+      "icon": "azure:extendedsecurityupdates",
+      "label": "azure:extend\nedsecurityup\ndates",
+      "position": [
+        335,
+        8685
+      ]
+    },
+    {
+      "id": "azure_security_firewalls",
+      "icon": "azure:firewalls",
+      "label": "azure:firewa\nlls",
+      "position": [
+        430,
+        8685
+      ]
+    },
+    {
+      "id": "azure_security_key_vaults",
+      "icon": "azure:key_vaults",
+      "label": "azure:key_va\nults",
+      "position": [
+        525,
+        8685
+      ]
+    },
+    {
+      "id": "azure_security_keys",
+      "icon": "azure:keys",
+      "label": "azure:keys",
+      "position": [
+        620,
+        8685
+      ]
+    },
+    {
+      "id": "azure_security_security_center",
+      "icon": "azure:security_center",
+      "label": "azure:securi\nty_center",
+      "position": [
+        715,
+        8685
+      ]
+    },
+    {
+      "id": "cat_service_bus",
+      "type": "label",
+      "label": "Service Bus (5)",
+      "position": [
+        50,
+        8865
+      ]
+    },
+    {
+      "id": "azure_service_bus_service_bus",
+      "icon": "azure:service_bus",
+      "label": "azure:servic\ne_bus",
+      "position": [
+        50,
+        8900
+      ]
+    },
+    {
+      "id": "azure_service_bus_service_endpoint_policies",
+      "icon": "azure:service_endpoint_policies",
+      "label": "azure:servic\ne_endpoint_p\nolicies",
+      "position": [
+        145,
+        8900
+      ]
+    },
+    {
+      "id": "azure_service_bus_service_fabric_clusters",
+      "icon": "azure:service_fabric_clusters",
+      "label": "azure:servic\ne_fabric_clu\nsters",
+      "position": [
+        240,
+        8900
+      ]
+    },
+    {
+      "id": "azure_service_bus_service_health",
+      "icon": "azure:service_health",
+      "label": "azure:servic\ne_health",
+      "position": [
+        335,
+        8900
+      ]
+    },
+    {
+      "id": "azure_service_bus_service_providers",
+      "icon": "azure:service_providers",
+      "label": "azure:servic\ne_providers",
+      "position": [
+        430,
+        8900
+      ]
+    },
+    {
+      "id": "cat_services",
+      "type": "label",
+      "label": "Services (3)",
+      "position": [
+        50,
+        9080
+      ]
+    },
+    {
+      "id": "azure_services_education",
+      "icon": "azure:education",
+      "label": "azure:educat\nion",
+      "position": [
+        50,
+        9115
+      ]
+    },
+    {
+      "id": "azure_services_learn",
+      "icon": "azure:learn",
+      "label": "azure:learn",
+      "position": [
+        145,
+        9115
+      ]
+    },
+    {
+      "id": "azure_services_universal_print",
+      "icon": "azure:universal_print",
+      "label": "azure:univer\nsal_print",
+      "position": [
+        240,
+        9115
+      ]
+    },
+    {
+      "id": "cat_storage",
+      "type": "label",
+      "label": "Storage (18)",
+      "position": [
+        50,
+        9295
+      ]
+    },
+    {
+      "id": "azure_storage_blob_block",
+      "icon": "azure:blob_block",
+      "label": "azure:blob_b\nlock",
+      "position": [
+        50,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_blob_page",
+      "icon": "azure:blob_page",
+      "label": "azure:blob_p\nage",
+      "position": [
+        145,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_disk_encryption_sets",
+      "icon": "azure:disk_encryption_sets",
+      "label": "azure:disk_e\nncryption_se\nts",
+      "position": [
+        240,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_disks",
+      "icon": "azure:disks",
+      "label": "azure:disks",
+      "position": [
+        335,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_disks_(classic)",
+      "icon": "azure:disks_(classic)",
+      "label": "azure:disks_\n(classic)",
+      "position": [
+        430,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_disks_snapshots",
+      "icon": "azure:disks_snapshots",
+      "label": "azure:disks_\nsnapshots",
+      "position": [
+        525,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_file",
+      "icon": "azure:file",
+      "label": "azure:file",
+      "position": [
+        620,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_files",
+      "icon": "azure:files",
+      "label": "azure:files",
+      "position": [
+        715,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_ssd",
+      "icon": "azure:ssd",
+      "label": "azure:ssd",
+      "position": [
+        810,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_storage_accounts",
+      "icon": "azure:storage_accounts",
+      "label": "azure:storag\ne_accounts",
+      "position": [
+        905,
+        9330
+      ]
+    },
+    {
+      "id": "azure_storage_storage_accounts_(classic)",
+      "icon": "azure:storage_accounts_(classic)",
+      "label": "azure:storag\ne_accounts_(\nclassic)",
+      "position": [
+        50,
+        9470
+      ]
+    },
+    {
+      "id": "azure_storage_storage_azure_files",
+      "icon": "azure:storage_azure_files",
+      "label": "azure:storag\ne_azure_file\ns",
+      "position": [
+        145,
+        9470
+      ]
+    },
+    {
+      "id": "azure_storage_storage_container",
+      "icon": "azure:storage_container",
+      "label": "azure:storag\ne_container",
+      "position": [
+        240,
+        9470
+      ]
+    },
+    {
+      "id": "azure_storage_storage_queue",
+      "icon": "azure:storage_queue",
+      "label": "azure:storag\ne_queue",
+      "position": [
+        335,
+        9470
+      ]
+    },
+    {
+      "id": "azure_storage_storage_sync_services",
+      "icon": "azure:storage_sync_services",
+      "label": "azure:storag\ne_sync_servi\nces",
+      "position": [
+        430,
+        9470
+      ]
+    },
+    {
+      "id": "azure_storage_storsimple_data_managers",
+      "icon": "azure:storsimple_data_managers",
+      "label": "azure:storsi\nmple_data_ma\nnagers",
+      "position": [
+        525,
+        9470
+      ]
+    },
+    {
+      "id": "azure_storage_storsimple_device_managers",
+      "icon": "azure:storsimple_device_managers",
+      "label": "azure:storsi\nmple_device_\nmanagers",
+      "position": [
+        620,
+        9470
+      ]
+    },
+    {
+      "id": "azure_storage_table",
+      "icon": "azure:table",
+      "label": "azure:table",
+      "position": [
+        715,
+        9470
+      ]
+    },
+    {
+      "id": "cat_ui_elements",
+      "type": "label",
+      "label": "UI Elements (29)",
+      "position": [
+        50,
+        9650
+      ]
+    },
+    {
+      "id": "azure_ui_elements_browser",
+      "icon": "azure:browser",
+      "label": "azure:browse\nr",
+      "position": [
+        50,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_controls",
+      "icon": "azure:controls",
+      "label": "azure:contro\nls",
+      "position": [
+        145,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_controls_horizontal",
+      "icon": "azure:controls_horizontal",
+      "label": "azure:contro\nls_horizonta\nl",
+      "position": [
+        240,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_counter",
+      "icon": "azure:counter",
+      "label": "azure:counte\nr",
+      "position": [
+        335,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_cubes",
+      "icon": "azure:cubes",
+      "label": "azure:cubes",
+      "position": [
+        430,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_dashboard",
+      "icon": "azure:dashboard",
+      "label": "azure:dashbo\nard",
+      "position": [
+        525,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_download",
+      "icon": "azure:download",
+      "label": "azure:downlo\nad",
+      "position": [
+        620,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_error",
+      "icon": "azure:error",
+      "label": "azure:error",
+      "position": [
+        715,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_folder_blank",
+      "icon": "azure:folder_blank",
+      "label": "azure:folder\n_blank",
+      "position": [
+        810,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_folder_website",
+      "icon": "azure:folder_website",
+      "label": "azure:folder\n_website",
+      "position": [
+        905,
+        9685
+      ]
+    },
+    {
+      "id": "azure_ui_elements_gear",
+      "icon": "azure:gear",
+      "label": "azure:gear",
+      "position": [
+        50,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_globe",
+      "icon": "azure:globe",
+      "label": "azure:globe",
+      "position": [
+        145,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_globe_error",
+      "icon": "azure:globe_error",
+      "label": "azure:globe_\nerror",
+      "position": [
+        240,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_globe_success",
+      "icon": "azure:globe_success",
+      "label": "azure:globe_\nsuccess",
+      "position": [
+        335,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_globe_warning",
+      "icon": "azure:globe_warning",
+      "label": "azure:globe_\nwarning",
+      "position": [
+        430,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_guide",
+      "icon": "azure:guide",
+      "label": "azure:guide",
+      "position": [
+        525,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_heart",
+      "icon": "azure:heart",
+      "label": "azure:heart",
+      "position": [
+        620,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_help_and_support",
+      "icon": "azure:help_and_support",
+      "label": "azure:help_a\nnd_support",
+      "position": [
+        715,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_information",
+      "icon": "azure:information",
+      "label": "azure:inform\nation",
+      "position": [
+        810,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_input_output",
+      "icon": "azure:input_output",
+      "label": "azure:input_\noutput",
+      "position": [
+        905,
+        9825
+      ]
+    },
+    {
+      "id": "azure_ui_elements_launch_portal",
+      "icon": "azure:launch_portal",
+      "label": "azure:launch\n_portal",
+      "position": [
+        50,
+        9965
+      ]
+    },
+    {
+      "id": "azure_ui_elements_location",
+      "icon": "azure:location",
+      "label": "azure:locati\non",
+      "position": [
+        145,
+        9965
+      ]
+    },
+    {
+      "id": "azure_ui_elements_power",
+      "icon": "azure:power",
+      "label": "azure:power",
+      "position": [
+        240,
+        9965
+      ]
+    },
+    {
+      "id": "azure_ui_elements_power_up",
+      "icon": "azure:power_up",
+      "label": "azure:power_\nup",
+      "position": [
+        335,
+        9965
+      ]
+    },
+    {
+      "id": "azure_ui_elements_preview",
+      "icon": "azure:preview",
+      "label": "azure:previe\nw",
+      "position": [
+        430,
+        9965
+      ]
+    },
+    {
+      "id": "azure_ui_elements_quickstart_center",
+      "icon": "azure:quickstart_center",
+      "label": "azure:quicks\ntart_center",
+      "position": [
+        525,
+        9965
+      ]
+    },
+    {
+      "id": "azure_ui_elements_recent",
+      "icon": "azure:recent",
+      "label": "azure:recent",
+      "position": [
+        620,
+        9965
+      ]
+    },
+    {
+      "id": "azure_ui_elements_toolbox",
+      "icon": "azure:toolbox",
+      "label": "azure:toolbo\nx",
+      "position": [
+        715,
+        9965
+      ]
+    },
+    {
+      "id": "azure_ui_elements_versions",
+      "icon": "azure:versions",
+      "label": "azure:versio\nns",
+      "position": [
+        810,
+        9965
+      ]
+    },
+    {
+      "id": "cat_web_services",
+      "type": "label",
+      "label": "Web Services (7)",
+      "position": [
+        50,
+        10145
+      ]
+    },
+    {
+      "id": "azure_web_services_static_apps",
+      "icon": "azure:static_apps",
+      "label": "azure:static\n_apps",
+      "position": [
+        50,
+        10180
+      ]
+    },
+    {
+      "id": "azure_web_services_web_application_firewall_policies(waf)",
+      "icon": "azure:web_application_firewall_policies(waf)",
+      "label": "azure:web_ap\nplication_fi\nrewall_polic\nies(waf)",
+      "position": [
+        145,
+        10180
+      ]
+    },
+    {
+      "id": "azure_web_services_web_environment",
+      "icon": "azure:web_environment",
+      "label": "azure:web_en\nvironment",
+      "position": [
+        240,
+        10180
+      ]
+    },
+    {
+      "id": "azure_web_services_web_slots",
+      "icon": "azure:web_slots",
+      "label": "azure:web_sl\nots",
+      "position": [
+        335,
+        10180
+      ]
+    },
+    {
+      "id": "azure_web_services_web_test",
+      "icon": "azure:web_test",
+      "label": "azure:web_te\nst",
+      "position": [
+        430,
+        10180
+      ]
+    },
+    {
+      "id": "azure_web_services_website_power",
+      "icon": "azure:website_power",
+      "label": "azure:websit\ne_power",
+      "position": [
+        525,
+        10180
+      ]
+    },
+    {
+      "id": "azure_web_services_website_staging",
+      "icon": "azure:website_staging",
+      "label": "azure:websit\ne_staging",
+      "position": [
+        620,
+        10180
+      ]
+    }
+  ],
+  "render": {
+    "width": 1050,
+    "height": 10460
+  }
+}

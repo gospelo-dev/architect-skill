@@ -1,0 +1,46 @@
+{
+  "category": "Customer Enablement",
+  "count": 8,
+  "icons": [
+    {
+      "slug": "activate",
+      "displayName": "Activate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Customer-Enablement/64/Arch_AWS-Activate_64.svg"
+    },
+    {
+      "slug": "iq",
+      "displayName": "Iq",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Customer-Enablement/64/Arch_AWS-IQ_64.svg"
+    },
+    {
+      "slug": "managed_services",
+      "displayName": "Managed Services",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Customer-Enablement/64/Arch_AWS-Managed-Services_64.svg"
+    },
+    {
+      "slug": "professional_services",
+      "displayName": "Professional Services",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Customer-Enablement/64/Arch_AWS-Professional-Services_64.svg"
+    },
+    {
+      "slug": "repost",
+      "displayName": "Repost",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Customer-Enablement/64/Arch_AWS-rePost_64.svg"
+    },
+    {
+      "slug": "repost_private",
+      "displayName": "Repost Private",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Customer-Enablement/64/Arch_AWS-rePost-Private_64.svg"
+    },
+    {
+      "slug": "support",
+      "displayName": "Support",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Customer-Enablement/64/Arch_AWS-Support_64.svg"
+    },
+    {
+      "slug": "training_certification",
+      "displayName": "Training Certification",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Customer-Enablement/64/Arch_AWS-Training-Certification_64.svg"
+    }
+  ]
+}

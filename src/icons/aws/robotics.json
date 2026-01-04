@@ -1,0 +1,31 @@
+{
+  "category": "Robotics",
+  "count": 5,
+  "icons": [
+    {
+      "slug": "res_robomaker_cloud_extensions_ros",
+      "displayName": "Res Robomaker Cloud Extensions Ros",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Robotics/Res_AWS-RoboMaker_Cloud-Extensions-ROS_48.svg"
+    },
+    {
+      "slug": "res_robomaker_development_environment",
+      "displayName": "Res Robomaker Development Environment",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Robotics/Res_AWS-RoboMaker_Development-Environment_48.svg"
+    },
+    {
+      "slug": "res_robomaker_fleet_management",
+      "displayName": "Res Robomaker Fleet Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Robotics/Res_AWS-RoboMaker_Fleet-Management_48.svg"
+    },
+    {
+      "slug": "res_robomaker_simulation",
+      "displayName": "Res Robomaker Simulation",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Robotics/Res_AWS-RoboMaker_Simulation_48.svg"
+    },
+    {
+      "slug": "robomaker",
+      "displayName": "Robomaker",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Robotics/64/Arch_AWS-RoboMaker_64.svg"
+    }
+  ]
+}

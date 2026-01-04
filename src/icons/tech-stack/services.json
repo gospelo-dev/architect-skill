@@ -1,0 +1,81 @@
+{
+  "category": "Services",
+  "count": 15,
+  "icons": [
+    {
+      "slug": "stripe",
+      "displayName": "Stripe",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/stripe.svg"
+    },
+    {
+      "slug": "paypal",
+      "displayName": "PayPal",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/paypal.svg"
+    },
+    {
+      "slug": "square",
+      "displayName": "Square",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/square.svg"
+    },
+    {
+      "slug": "shopify",
+      "displayName": "Shopify",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/shopify.svg"
+    },
+    {
+      "slug": "mailchimp",
+      "displayName": "MailChimp",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mailchimp.svg"
+    },
+    {
+      "slug": "mapbox",
+      "displayName": "Mapbox",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mapbox.svg"
+    },
+    {
+      "slug": "algolia",
+      "displayName": "Algolia",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/algolia.svg"
+    },
+    {
+      "slug": "meilisearch",
+      "displayName": "Meilisearch",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/meilisearch.svg"
+    },
+    {
+      "slug": "contentful",
+      "displayName": "Contentful",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/contentful.svg"
+    },
+    {
+      "slug": "strapi",
+      "displayName": "Strapi",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/strapi.svg"
+    },
+    {
+      "slug": "sanity",
+      "displayName": "Sanity",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/sanity.svg"
+    },
+    {
+      "slug": "ghost",
+      "displayName": "Ghost",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ghost.svg"
+    },
+    {
+      "slug": "wordpress",
+      "displayName": "WordPress",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/wordpress.svg"
+    },
+    {
+      "slug": "anthropic",
+      "displayName": "Anthropic",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/anthropic.svg"
+    },
+    {
+      "slug": "ollama",
+      "displayName": "Ollama",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ollama.svg"
+    }
+  ]
+}

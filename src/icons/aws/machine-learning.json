@@ -1,0 +1,256 @@
+{
+  "category": "Machine Learning",
+  "count": 50,
+  "icons": [
+    {
+      "slug": "res_devops_guru_insights",
+      "displayName": "Res Devops Guru Insights",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-DevOps-Guru_Insights_48.svg"
+    },
+    {
+      "slug": "res_rekognition_image",
+      "displayName": "Res Rekognition Image",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-Rekognition_Image_48.svg"
+    },
+    {
+      "slug": "res_rekognition_video",
+      "displayName": "Res Rekognition Video",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-Rekognition_Video_48.svg"
+    },
+    {
+      "slug": "res_sagemaker_canvas",
+      "displayName": "Res Sagemaker Canvas",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-SageMaker_Canvas_48.svg"
+    },
+    {
+      "slug": "res_sagemaker_geospatial_ml",
+      "displayName": "Res Sagemaker Geospatial Ml",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-SageMaker_Geospatial-ML_48.svg"
+    },
+    {
+      "slug": "res_sagemaker_model",
+      "displayName": "Res Sagemaker Model",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-SageMaker_Model_48.svg"
+    },
+    {
+      "slug": "res_sagemaker_notebook",
+      "displayName": "Res Sagemaker Notebook",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-SageMaker_Notebook_48.svg"
+    },
+    {
+      "slug": "res_sagemaker_shadow_testing",
+      "displayName": "Res Sagemaker Shadow Testing",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-SageMaker_Shadow-Testing_48.svg"
+    },
+    {
+      "slug": "res_sagemaker_train",
+      "displayName": "Res Sagemaker Train",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-SageMaker_Train_48.svg"
+    },
+    {
+      "slug": "res_textract_analyze_lending",
+      "displayName": "Res Textract Analyze Lending",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Machine-Learning/Res_Amazon-Textract_Analyze-Lending_48.svg"
+    },
+    {
+      "slug": "augmented_ai_a2i",
+      "displayName": "Augmented Ai A2i",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Augmented-AI-A2I_64.svg"
+    },
+    {
+      "slug": "bedrock",
+      "displayName": "Bedrock",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Bedrock_64.svg"
+    },
+    {
+      "slug": "codeguru",
+      "displayName": "Codeguru",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-CodeGuru_64.svg"
+    },
+    {
+      "slug": "codewhisperer",
+      "displayName": "Codewhisperer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-CodeWhisperer_64.svg"
+    },
+    {
+      "slug": "comprehend",
+      "displayName": "Comprehend",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Comprehend_64.svg"
+    },
+    {
+      "slug": "comprehend_medical",
+      "displayName": "Comprehend Medical",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Comprehend-Medical_64.svg"
+    },
+    {
+      "slug": "devops_guru",
+      "displayName": "Devops Guru",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-DevOps-Guru_64.svg"
+    },
+    {
+      "slug": "elastic_inference",
+      "displayName": "Elastic Inference",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Elastic-Inference_64.svg"
+    },
+    {
+      "slug": "forecast",
+      "displayName": "Forecast",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Forecast_64.svg"
+    },
+    {
+      "slug": "fraud_detector",
+      "displayName": "Fraud Detector",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Fraud-Detector_64.svg"
+    },
+    {
+      "slug": "kendra",
+      "displayName": "Kendra",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Kendra_64.svg"
+    },
+    {
+      "slug": "lex",
+      "displayName": "Lex",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Lex_64.svg"
+    },
+    {
+      "slug": "lookout_for_equipment",
+      "displayName": "Lookout For Equipment",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Lookout-for-Equipment_64.svg"
+    },
+    {
+      "slug": "lookout_for_metrics",
+      "displayName": "Lookout For Metrics",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Lookout-for-Metrics_64.svg"
+    },
+    {
+      "slug": "lookout_for_vision",
+      "displayName": "Lookout For Vision",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Lookout-for-Vision_64.svg"
+    },
+    {
+      "slug": "monitron",
+      "displayName": "Monitron",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Monitron_64.svg"
+    },
+    {
+      "slug": "personalize",
+      "displayName": "Personalize",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Personalize_64.svg"
+    },
+    {
+      "slug": "polly",
+      "displayName": "Polly",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Polly_64.svg"
+    },
+    {
+      "slug": "q",
+      "displayName": "Q",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Q_64.svg"
+    },
+    {
+      "slug": "rekognition",
+      "displayName": "Rekognition",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Rekognition_64.svg"
+    },
+    {
+      "slug": "sagemaker",
+      "displayName": "Sagemaker",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-SageMaker_64.svg"
+    },
+    {
+      "slug": "sagemaker_ground_truth",
+      "displayName": "Sagemaker Ground Truth",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-SageMaker-Ground-Truth_64.svg"
+    },
+    {
+      "slug": "sagemaker_studio_lab",
+      "displayName": "Sagemaker Studio Lab",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-SageMaker-Studio-Lab_64.svg"
+    },
+    {
+      "slug": "textract",
+      "displayName": "Textract",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Textract_64.svg"
+    },
+    {
+      "slug": "transcribe",
+      "displayName": "Transcribe",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Transcribe_64.svg"
+    },
+    {
+      "slug": "translate",
+      "displayName": "Translate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Amazon-Translate_64.svg"
+    },
+    {
+      "slug": "apache_mxnet_on_aws",
+      "displayName": "Apache Mxnet On Aws",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_Apache-MXNet-on-AWS_64.svg"
+    },
+    {
+      "slug": "deep_learning_amis",
+      "displayName": "Deep Learning Amis",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-Deep-Learning-AMIs_64.svg"
+    },
+    {
+      "slug": "deep_learning_containers",
+      "displayName": "Deep Learning Containers",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-Deep-Learning-Containers_64.svg"
+    },
+    {
+      "slug": "deepcomposer",
+      "displayName": "Deepcomposer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-DeepComposer_64.svg"
+    },
+    {
+      "slug": "deeplens",
+      "displayName": "Deeplens",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-DeepLens_64.svg"
+    },
+    {
+      "slug": "deepracer",
+      "displayName": "Deepracer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-DeepRacer_64.svg"
+    },
+    {
+      "slug": "healthimaging",
+      "displayName": "Healthimaging",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-HealthImaging_64.svg"
+    },
+    {
+      "slug": "healthlake",
+      "displayName": "Healthlake",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-HealthLake_64.svg"
+    },
+    {
+      "slug": "healthomics",
+      "displayName": "Healthomics",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-HealthOmics_64.svg"
+    },
+    {
+      "slug": "healthscribe",
+      "displayName": "Healthscribe",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-HealthScribe_64.svg"
+    },
+    {
+      "slug": "neuron",
+      "displayName": "Neuron",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-Neuron_64.svg"
+    },
+    {
+      "slug": "panorama",
+      "displayName": "Panorama",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_AWS-Panorama_64.svg"
+    },
+    {
+      "slug": "tensorflow_on_aws",
+      "displayName": "Tensorflow On Aws",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_TensorFlow-on-AWS_64.svg"
+    },
+    {
+      "slug": "torchserve",
+      "displayName": "Torchserve",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Machine-Learning/64/Arch_TorchServe_64.svg"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "category": "Media Services",
+  "count": 17,
+  "icons": [
+    {
+      "slug": "res_cloud_digital_interface",
+      "displayName": "Res Cloud Digital Interface",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Media-Services/Res_AWS-Cloud-Digital-Interface_48.svg"
+    },
+    {
+      "slug": "res_elemental_mediaconnect_mediaconnect_gateway",
+      "displayName": "Res Elemental Mediaconnect Mediaconnect Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Media-Services/Res_AWS-Elemental-MediaConnect_MediaConnect-Gateway_48.svg"
+    },
+    {
+      "slug": "elastic_transcoder",
+      "displayName": "Elastic Transcoder",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_Amazon-Elastic-Transcoder_64.svg"
+    },
+    {
+      "slug": "interactive_video_service",
+      "displayName": "Interactive Video Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_Amazon-Interactive-Video-Service_64.svg"
+    },
+    {
+      "slug": "nimble_studio",
+      "displayName": "Nimble Studio",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_Amazon-Nimble-Studio_64.svg"
+    },
+    {
+      "slug": "elemental_appliances_&_software",
+      "displayName": "Elemental Appliances & Software",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-Appliances-&-Software_64.svg"
+    },
+    {
+      "slug": "elemental_conductor",
+      "displayName": "Elemental Conductor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-Conductor_64.svg"
+    },
+    {
+      "slug": "elemental_delta",
+      "displayName": "Elemental Delta",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-Delta_64.svg"
+    },
+    {
+      "slug": "elemental_link",
+      "displayName": "Elemental Link",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-Link_64.svg"
+    },
+    {
+      "slug": "elemental_live",
+      "displayName": "Elemental Live",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-Live_64.svg"
+    },
+    {
+      "slug": "elemental_mediaconnect",
+      "displayName": "Elemental Mediaconnect",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-MediaConnect_64.svg"
+    },
+    {
+      "slug": "elemental_mediaconvert",
+      "displayName": "Elemental Mediaconvert",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-MediaConvert_64.svg"
+    },
+    {
+      "slug": "elemental_medialive",
+      "displayName": "Elemental Medialive",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-MediaLive_64.svg"
+    },
+    {
+      "slug": "elemental_mediapackage",
+      "displayName": "Elemental Mediapackage",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-MediaPackage_64.svg"
+    },
+    {
+      "slug": "elemental_mediastore",
+      "displayName": "Elemental Mediastore",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-MediaStore_64.svg"
+    },
+    {
+      "slug": "elemental_mediatailor",
+      "displayName": "Elemental Mediatailor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-MediaTailor_64.svg"
+    },
+    {
+      "slug": "elemental_server",
+      "displayName": "Elemental Server",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Media-Services/64/Arch_AWS-Elemental-Server_64.svg"
+    }
+  ]
+}

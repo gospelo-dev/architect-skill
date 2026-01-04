@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Azure Icon Catalog</title>
+  <style>.gospelo-diagram {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.gospelo-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+.node-label { font-weight: 500; }
+.group-box { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }
+.connection { stroke-linecap: round; stroke-linejoin: round; }
+.resize-handle { cursor: nwse-resize; }
+.resize-handle:hover { fill: #AAAAAA; }
+.meta-toggle:hover rect { fill: #E0E0E0; }
+
+/* Meta panel - right side slide */
+.meta-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: #FAFAFA;
+  border-left: 1px solid #DDD;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+.meta-panel.open {
+  transform: translateX(0);
+}
+.meta-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #DDD;
+  background: #F5F5F5;
+}
+.meta-panel-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+.meta-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.meta-panel-btn {
+  border: 1px solid #CCC;
+  background: #FFF;
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.meta-panel-btn:hover {
+  background: #F0F0F0;
+  color: #333;
+}
+.meta-panel-close {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 4px;
+}
+.meta-panel-close:hover {
+  color: #333;
+}
+.meta-panel-content {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  margin: 0;
+  font-size: 12px;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  line-height: 1.5;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}</style>
+</head>
+<body>
+  <div class="gospelo-diagram">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 700" width="1100" height="700" class="gospelo-svg">
+<defs>
+<marker id="arrow-0073BB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0073BB"/>
+</marker>
+<marker id="arrow-0073BB-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+  <path d="M 10 0 L 0 5 L 10 10 z" fill="#0073BB"/>
+</marker>
+<marker id="arrow-0073BB-end" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0073BB"/>
+</marker>
+<linearGradient id="bg-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#FFFFFF"/>
+  <stop offset="100%" stop-color="#E8E8E8"/>
+</linearGradient>
+</defs>
+<rect width="1100" height="700" fill="url(#bg-gradient)"/>
+<g class="boundary-box">
+  <rect class="boundary-frame" x="10" y="10" width="1080" height="680"
+    fill="none" stroke="#D0D0D0" stroke-width="1" rx="4"/>
+  <g class="meta-toggle" transform="translate(1046, 668)" style="cursor: pointer;">
+    <rect width="20" height="20" rx="3" fill="#F0F0F0" stroke="#CCCCCC" stroke-width="0.5"/>
+    <text x="10" y="14" text-anchor="middle" font-size="11" font-family="monospace" fill="#666666">{}</text>
+  </g>
+  <polygon class="resize-handle"
+    points="1090,674 1090,690 1074,690"
+    fill="#CCCCCC" stroke="#AAAAAA" stroke-width="0.5" style="cursor: nwse-resize;"/>
+</g>
+<text x="550" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#0073BB">Azure Icon Catalog</text>
+<text x="550" y="70" text-anchor="middle" font-size="16" fill="#666666">Popular Services</text>
+
+<g id="azure_app_services" class="node icon-node" transform="translate(100, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_app_services').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_app_services';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_app_services</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Services.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_app_services',icon:'azure:app_services',x:100,y:100,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Services.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_application_gateways" class="node icon-node" transform="translate(300, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_application_gateways').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_application_gateways';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_application_gateways</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Gateways.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_application_gateways',icon:'azure:application_gateways',x:300,y:100,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Application-Gateways.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_azure_active_directory" class="node icon-node" transform="translate(500, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_azure_active_directory').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_azure_active_directory';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_azure_active_directory</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Active-Directory.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_azure_active_directory',icon:'azure:azure_active_directory',x:500,y:100,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Active-Directory.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_azure_cosmos_db" class="node icon-node" transform="translate(700, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_azure_cosmos_db').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_azure_cosmos_db';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_azure_cosmos_db</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Cosmos-DB.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_azure_cosmos_db',icon:'azure:azure_cosmos_db',x:700,y:100,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Cosmos-DB.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_azure_devops" class="node icon-node" transform="translate(900, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_azure_devops').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_azure_devops';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_azure_devops</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-DevOps.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_azure_devops',icon:'azure:azure_devops',x:900,y:100,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-DevOps.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_azure_media_service" class="node icon-node" transform="translate(100, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_azure_media_service').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_azure_media_service';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_azure_media_service</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Media-Service.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_azure_media_service',icon:'azure:azure_media_service',x:100,y:220,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Media-Service.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_azure_sentinel" class="node icon-node" transform="translate(300, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_azure_sentinel').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_azure_sentinel';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_azure_sentinel</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Sentinel.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_azure_sentinel',icon:'azure:azure_sentinel',x:300,y:220,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Sentinel.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_azure_synapse_analytics" class="node icon-node" transform="translate(500, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_azure_synapse_analytics').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_azure_synapse_analytics';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_azure_synapse_analytics</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Synapse-Analytics.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_azure_synapse_analytics',icon:'azure:azure_synapse_analytics',x:500,y:220,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Synapse-Analytics.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_cdn_profiles" class="node icon-node" transform="translate(700, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_cdn_profiles').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_cdn_profiles';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_cdn_profiles</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/CDN-Profiles.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_cdn_profiles',icon:'azure:cdn_profiles',x:700,y:220,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/CDN-Profiles.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_cognitive_services" class="node icon-node" transform="translate(900, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_cognitive_services').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_cognitive_services';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_cognitive_services</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cognitive-Services.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_cognitive_services',icon:'azure:cognitive_services',x:900,y:220,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cognitive-Services.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_container_registries" class="node icon-node" transform="translate(100, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_container_registries').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_container_registries';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_container_registries</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Registries.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_container_registries',icon:'azure:container_registries',x:100,y:340,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Registries.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_event_hubs" class="node icon-node" transform="translate(300, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_event_hubs').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_event_hubs';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_event_hubs</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Hubs.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_event_hubs',icon:'azure:event_hubs',x:300,y:340,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Hubs.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_iot_hub" class="node icon-node" transform="translate(500, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_iot_hub').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_iot_hub';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_iot_hub</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Hub.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_iot_hub',icon:'azure:iot_hub',x:500,y:340,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Hub.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_key_vaults" class="node icon-node" transform="translate(700, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_key_vaults').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_key_vaults';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_key_vaults</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Key-Vaults.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_key_vaults',icon:'azure:key_vaults',x:700,y:340,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Key-Vaults.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_kubernetes_services" class="node icon-node" transform="translate(900, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_kubernetes_services').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_kubernetes_services';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_kubernetes_services</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Kubernetes-Services.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_kubernetes_services',icon:'azure:kubernetes_services',x:900,y:340,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Kubernetes-Services.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_load_balancers" class="node icon-node" transform="translate(100, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_load_balancers').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_load_balancers';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_load_balancers</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Load-Balancers.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_load_balancers',icon:'azure:load_balancers',x:100,y:460,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Load-Balancers.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_service_bus" class="node icon-node" transform="translate(300, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_service_bus').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_service_bus';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_service_bus</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Bus.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_service_bus',icon:'azure:service_bus',x:300,y:460,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Bus.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_sql_database" class="node icon-node" transform="translate(500, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_sql_database').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_sql_database';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_sql_database</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Database.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_sql_database',icon:'azure:sql_database',x:500,y:460,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/SQL-Database.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_storage_accounts" class="node icon-node" transform="translate(700, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_storage_accounts').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_storage_accounts';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_storage_accounts</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Accounts.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_storage_accounts',icon:'azure:storage_accounts',x:700,y:460,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Storage-Accounts.svg'}); this.style.display='none'"/>
+</g>
+<g id="azure_virtual_machine" class="node icon-node" transform="translate(900, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('azure_virtual_machine').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: azure_virtual_machine';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>azure_virtual_machine</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Machine.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'azure_virtual_machine',icon:'azure:virtual_machine',x:900,y:460,url:'https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Virtual-Machine.svg'}); this.style.display='none'"/>
+</g>
+<g class="node-label-group" data-node="azure_app_services"><text class="node-label" x="124" y="160" text-anchor="middle" font-size="11" fill="#232F3E">App Services</text></g>
+<g class="node-label-group" data-node="azure_application_gateways"><text class="node-label" x="324" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Application</text>
+<text class="node-label" x="324" y="173" text-anchor="middle" font-size="11" fill="#232F3E">Gateways</text></g>
+<g class="node-label-group" data-node="azure_azure_active_directory"><text class="node-label" x="524" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Azure Active</text>
+<text class="node-label" x="524" y="173" text-anchor="middle" font-size="11" fill="#232F3E">Directory</text></g>
+<g class="node-label-group" data-node="azure_azure_cosmos_db"><text class="node-label" x="724" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Azure Cosmos</text>
+<text class="node-label" x="724" y="173" text-anchor="middle" font-size="11" fill="#232F3E">Db</text></g>
+<g class="node-label-group" data-node="azure_azure_devops"><text class="node-label" x="924" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Azure Devops</text></g>
+<g class="node-label-group" data-node="azure_azure_media_service"><text class="node-label" x="124" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Azure Media</text>
+<text class="node-label" x="124" y="293" text-anchor="middle" font-size="11" fill="#232F3E">Service</text></g>
+<g class="node-label-group" data-node="azure_azure_sentinel"><text class="node-label" x="324" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Azure</text>
+<text class="node-label" x="324" y="293" text-anchor="middle" font-size="11" fill="#232F3E">Sentinel</text></g>
+<g class="node-label-group" data-node="azure_azure_synapse_analytics"><text class="node-label" x="524" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Azure</text>
+<text class="node-label" x="524" y="293" text-anchor="middle" font-size="11" fill="#232F3E">Synapse</text>
+<text class="node-label" x="524" y="306" text-anchor="middle" font-size="11" fill="#232F3E">Analytics</text></g>
+<g class="node-label-group" data-node="azure_cdn_profiles"><text class="node-label" x="724" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Cdn Profiles</text></g>
+<g class="node-label-group" data-node="azure_cognitive_services"><text class="node-label" x="924" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Cognitive</text>
+<text class="node-label" x="924" y="293" text-anchor="middle" font-size="11" fill="#232F3E">Services</text></g>
+<g class="node-label-group" data-node="azure_container_registries"><text class="node-label" x="124" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Container</text>
+<text class="node-label" x="124" y="413" text-anchor="middle" font-size="11" fill="#232F3E">Registries</text></g>
+<g class="node-label-group" data-node="azure_event_hubs"><text class="node-label" x="324" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Event Hubs</text></g>
+<g class="node-label-group" data-node="azure_iot_hub"><text class="node-label" x="524" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Iot Hub</text></g>
+<g class="node-label-group" data-node="azure_key_vaults"><text class="node-label" x="724" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Key Vaults</text></g>
+<g class="node-label-group" data-node="azure_kubernetes_services"><text class="node-label" x="924" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Kubernetes</text>
+<text class="node-label" x="924" y="413" text-anchor="middle" font-size="11" fill="#232F3E">Services</text></g>
+<g class="node-label-group" data-node="azure_load_balancers"><text class="node-label" x="124" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Load</text>
+<text class="node-label" x="124" y="533" text-anchor="middle" font-size="11" fill="#232F3E">Balancers</text></g>
+<g class="node-label-group" data-node="azure_service_bus"><text class="node-label" x="324" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Service Bus</text></g>
+<g class="node-label-group" data-node="azure_sql_database"><text class="node-label" x="524" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Sql Database</text></g>
+<g class="node-label-group" data-node="azure_storage_accounts"><text class="node-label" x="724" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Storage</text>
+<text class="node-label" x="724" y="533" text-anchor="middle" font-size="11" fill="#232F3E">Accounts</text></g>
+<g class="node-label-group" data-node="azure_virtual_machine"><text class="node-label" x="924" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Virtual</text>
+<text class="node-label" x="924" y="533" text-anchor="middle" font-size="11" fill="#232F3E">Machine</text></g>
+</svg>
+  </div>
+  <!-- Copy toast notification -->
+  <div id="copy-toast" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:10px 20px;border-radius:6px;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:9999;font-family:monospace;font-size:14px;"></div>
+  <!-- メタデータパネル（右側スライド） -->
+  <div class="meta-panel" id="meta-panel">
+    <div class="meta-panel-header">
+      <span class="meta-panel-title">Diagram Metadata</span>
+      <div class="meta-panel-actions">
+        <button class="meta-panel-btn" id="meta-panel-export" title="Export SVG">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 2v8M4 6l4-4 4 4M2 14h12"/>
+          </svg>
+        </button>
+        <button class="meta-panel-close" id="meta-panel-close">&times;</button>
+      </div>
+    </div>
+    <pre class="meta-panel-content" id="meta-panel-content"></pre>
+  </div>
+  <!-- AI調整用メタデータ: ノード位置・サイズ・接続情報 -->
+  <script type="application/json" id="gospelo-diagram-meta">
+{
+  "version": "1.0",
+  "canvas": {
+    "width": 1100,
+    "height": 700,
+    "gridSize": 50
+  },
+  "nodes": [
+    {
+      "id": "azure_app_services",
+      "label": "App Services",
+      "sublabel": "",
+      "icon": "azure:app_services",
+      "type": "icon",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 124,
+        "y": 124
+      }
+    },
+    {
+      "id": "azure_application_gateways",
+      "label": "Application Gateways",
+      "sublabel": "",
+      "icon": "azure:application_gateways",
+      "type": "icon",
+      "position": {
+        "x": 300,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 324,
+        "y": 124
+      }
+    },
+    {
+      "id": "azure_azure_active_directory",
+      "label": "Azure Active Directory",
+      "sublabel": "",
+      "icon": "azure:azure_active_directory",
+      "type": "icon",
+      "position": {
+        "x": 500,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 524,
+        "y": 124
+      }
+    },
+    {
+      "id": "azure_azure_cosmos_db",
+      "label": "Azure Cosmos Db",
+      "sublabel": "",
+      "icon": "azure:azure_cosmos_db",
+      "type": "icon",
+      "position": {
+        "x": 700,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 724,
+        "y": 124
+      }
+    },
+    {
+      "id": "azure_azure_devops",
+      "label": "Azure Devops",
+      "sublabel": "",
+      "icon": "azure:azure_devops",
+      "type": "icon",
+      "position": {
+        "x": 900,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 924,
+        "y": 124
+      }
+    },
+    {
+      "id": "azure_azure_media_service",
+      "label": "Azure Media Service",
+      "sublabel": "",
+      "icon": "azure:azure_media_service",
+      "type": "icon",
+      "position": {
+        "x": 100,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 124,
+        "y": 244
+      }
+    },
+    {
+      "id": "azure_azure_sentinel",
+      "label": "Azure Sentinel",
+      "sublabel": "",
+      "icon": "azure:azure_sentinel",
+      "type": "icon",
+      "position": {
+        "x": 300,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 324,
+        "y": 244
+      }
+    },
+    {
+      "id": "azure_azure_synapse_analytics",
+      "label": "Azure Synapse Analytics",
+      "sublabel": "",
+      "icon": "azure:azure_synapse_analytics",
+      "type": "icon",
+      "position": {
+        "x": 500,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 524,
+        "y": 244
+      }
+    },
+    {
+      "id": "azure_cdn_profiles",
+      "label": "Cdn Profiles",
+      "sublabel": "",
+      "icon": "azure:cdn_profiles",
+      "type": "icon",
+      "position": {
+        "x": 700,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 724,
+        "y": 244
+      }
+    },
+    {
+      "id": "azure_cognitive_services",
+      "label": "Cognitive Services",
+      "sublabel": "",
+      "icon": "azure:cognitive_services",
+      "type": "icon",
+      "position": {
+        "x": 900,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 924,
+        "y": 244
+      }
+    },
+    {
+      "id": "azure_container_registries",
+      "label": "Container Registries",
+      "sublabel": "",
+      "icon": "azure:container_registries",
+      "type": "icon",
+      "position": {
+        "x": 100,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 124,
+        "y": 364
+      }
+    },
+    {
+      "id": "azure_event_hubs",
+      "label": "Event Hubs",
+      "sublabel": "",
+      "icon": "azure:event_hubs",
+      "type": "icon",
+      "position": {
+        "x": 300,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 324,
+        "y": 364
+      }
+    },
+    {
+      "id": "azure_iot_hub",
+      "label": "Iot Hub",
+      "sublabel": "",
+      "icon": "azure:iot_hub",
+      "type": "icon",
+      "position": {
+        "x": 500,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 524,
+        "y": 364
+      }
+    },
+    {
+      "id": "azure_key_vaults",
+      "label": "Key Vaults",
+      "sublabel": "",
+      "icon": "azure:key_vaults",
+      "type": "icon",
+      "position": {
+        "x": 700,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 724,
+        "y": 364
+      }
+    },
+    {
+      "id": "azure_kubernetes_services",
+      "label": "Kubernetes Services",
+      "sublabel": "",
+      "icon": "azure:kubernetes_services",
+      "type": "icon",
+      "position": {
+        "x": 900,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 924,
+        "y": 364
+      }
+    },
+    {
+      "id": "azure_load_balancers",
+      "label": "Load Balancers",
+      "sublabel": "",
+      "icon": "azure:load_balancers",
+      "type": "icon",
+      "position": {
+        "x": 100,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 124,
+        "y": 484
+      }
+    },
+    {
+      "id": "azure_service_bus",
+      "label": "Service Bus",
+      "sublabel": "",
+      "icon": "azure:service_bus",
+      "type": "icon",
+      "position": {
+        "x": 300,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 324,
+        "y": 484
+      }
+    },
+    {
+      "id": "azure_sql_database",
+      "label": "Sql Database",
+      "sublabel": "",
+      "icon": "azure:sql_database",
+      "type": "icon",
+      "position": {
+        "x": 500,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 524,
+        "y": 484
+      }
+    },
+    {
+      "id": "azure_storage_accounts",
+      "label": "Storage Accounts",
+      "sublabel": "",
+      "icon": "azure:storage_accounts",
+      "type": "icon",
+      "position": {
+        "x": 700,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 724,
+        "y": 484
+      }
+    },
+    {
+      "id": "azure_virtual_machine",
+      "label": "Virtual Machine",
+      "sublabel": "",
+      "icon": "azure:virtual_machine",
+      "type": "icon",
+      "position": {
+        "x": 900,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 924,
+        "y": 484
+      }
+    }
+  ],
+  "connections": [],
+  "layout": {
+    "rows": [
+      {
+        "y": 124,
+        "nodes": [
+          "azure_app_services",
+          "azure_application_gateways",
+          "azure_azure_active_directory",
+          "azure_azure_cosmos_db",
+          "azure_azure_devops"
+        ]
+      },
+      {
+        "y": 244,
+        "nodes": [
+          "azure_azure_media_service",
+          "azure_azure_sentinel",
+          "azure_azure_synapse_analytics",
+          "azure_cdn_profiles",
+          "azure_cognitive_services"
+        ]
+      },
+      {
+        "y": 364,
+        "nodes": [
+          "azure_container_registries",
+          "azure_event_hubs",
+          "azure_iot_hub",
+          "azure_key_vaults",
+          "azure_kubernetes_services"
+        ]
+      },
+      {
+        "y": 484,
+        "nodes": [
+          "azure_load_balancers",
+          "azure_service_bus",
+          "azure_sql_database",
+          "azure_storage_accounts",
+          "azure_virtual_machine"
+        ]
+      }
+    ],
+    "columns": [
+      {
+        "x": 124,
+        "nodes": [
+          "azure_app_services",
+          "azure_azure_media_service",
+          "azure_container_registries",
+          "azure_load_balancers"
+        ]
+      },
+      {
+        "x": 324,
+        "nodes": [
+          "azure_application_gateways",
+          "azure_azure_sentinel",
+          "azure_event_hubs",
+          "azure_service_bus"
+        ]
+      },
+      {
+        "x": 524,
+        "nodes": [
+          "azure_azure_active_directory",
+          "azure_azure_synapse_analytics",
+          "azure_iot_hub",
+          "azure_sql_database"
+        ]
+      },
+      {
+        "x": 724,
+        "nodes": [
+          "azure_azure_cosmos_db",
+          "azure_cdn_profiles",
+          "azure_key_vaults",
+          "azure_storage_accounts"
+        ]
+      },
+      {
+        "x": 924,
+        "nodes": [
+          "azure_azure_devops",
+          "azure_cognitive_services",
+          "azure_kubernetes_services",
+          "azure_virtual_machine"
+        ]
+      }
+    ]
+  }
+}
+  </script>
+  <script>
+(function() {
+  const svg = document.querySelector('.gospelo-svg');
+  if (!svg) return;
+
+  const handle = svg.querySelector('.resize-handle');
+  if (!handle) return;
+
+  let isResizing = false;
+  let startX, startY, startWidth, startHeight;
+
+  // 元のviewBox値を保持（スケーリングの基準）
+  const viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+  const originalWidth = viewBox[2];
+  const originalHeight = viewBox[3];
+  const aspectRatio = originalWidth / originalHeight;
+
+  handle.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    isResizing = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    startWidth = parseFloat(svg.getAttribute('width'));
+    startHeight = parseFloat(svg.getAttribute('height'));
+    document.body.style.cursor = 'nwse-resize';
+    document.body.style.userSelect = 'none';
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (!isResizing) return;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    // アスペクト比を維持してリサイズ（対角線方向の移動量を使用）
+    const delta = (dx + dy) / 2;
+    let newWidth = Math.max(400, startWidth + delta);
+    let newHeight = newWidth / aspectRatio;
+
+    // 最小サイズ制限
+    if (newHeight < 300) {
+      newHeight = 300;
+      newWidth = newHeight * aspectRatio;
+    }
+
+    // viewBoxは固定のまま、width/heightのみ変更（スケーリング効果）
+    svg.setAttribute('width', newWidth);
+    svg.setAttribute('height', newHeight);
+  });
+
+  document.addEventListener('mouseup', function() {
+    if (isResizing) {
+      isResizing = false;
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    }
+  });
+
+  // Meta panel toggle
+  const metaToggle = svg.querySelector('.meta-toggle');
+  const metaPanel = document.getElementById('meta-panel');
+  const metaPanelClose = document.getElementById('meta-panel-close');
+  const metaPanelContent = document.getElementById('meta-panel-content');
+  const metaScript = document.getElementById('gospelo-diagram-meta');
+
+  if (metaToggle && metaPanel && metaPanelContent && metaScript) {
+    // Load metadata content
+    try {
+      const metaData = JSON.parse(metaScript.textContent || '{}');
+      metaPanelContent.textContent = JSON.stringify(metaData, null, 2);
+    } catch (e) {
+      metaPanelContent.textContent = 'Error loading metadata';
+    }
+
+    // Toggle panel
+    metaToggle.addEventListener('click', function() {
+      metaPanel.classList.toggle('open');
+    });
+
+    // Close button
+    if (metaPanelClose) {
+      metaPanelClose.addEventListener('click', function() {
+        metaPanel.classList.remove('open');
+      });
+    }
+
+    // Export SVG button
+    const exportBtn = document.getElementById('meta-panel-export');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', function() {
+        // Clone SVG and remove UI elements
+        const svgClone = svg.cloneNode(true);
+        const boundaryBox = svgClone.querySelector('.boundary-box');
+        if (boundaryBox) boundaryBox.remove();
+
+        // Add XML declaration and proper namespace
+        const serializer = new XMLSerializer();
+        let svgString = serializer.serializeToString(svgClone);
+        svgString = '<?xml version="1.0" encoding="UTF-8"?>\n' + svgString;
+
+        // Download as SVG file
+        const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'diagram.svg';
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+  }
+})();
+</script>
+</body>
+</html>

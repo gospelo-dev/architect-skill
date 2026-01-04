@@ -1,0 +1,66 @@
+{
+  "category": "App-Integration",
+  "count": 12,
+  "icons": [
+    {
+      "slug": "api_gateway",
+      "displayName": "Api Gateway",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_Amazon-API-Gateway_64.svg"
+    },
+    {
+      "slug": "appflow",
+      "displayName": "Appflow",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_Amazon-AppFlow_64.svg"
+    },
+    {
+      "slug": "eventbridge",
+      "displayName": "Eventbridge",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_Amazon-EventBridge_64.svg"
+    },
+    {
+      "slug": "managed_workflows_for_apache_airflow",
+      "displayName": "Managed Workflows For Apache Airflow",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_Amazon-Managed-Workflows-for-Apache-Airflow_64.svg"
+    },
+    {
+      "slug": "mq",
+      "displayName": "Mq",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_Amazon-MQ_64.svg"
+    },
+    {
+      "slug": "simple_notification_service",
+      "displayName": "Simple Notification Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_Amazon-Simple-Notification-Service_64.svg"
+    },
+    {
+      "slug": "simple_queue_service",
+      "displayName": "Simple Queue Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_Amazon-Simple-Queue-Service_64.svg"
+    },
+    {
+      "slug": "appsync",
+      "displayName": "Appsync",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_AWS-AppSync_64.svg"
+    },
+    {
+      "slug": "b2b_data_interchange",
+      "displayName": "B2b Data Interchange",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_AWS-B2B-Data-Interchange_64.svg"
+    },
+    {
+      "slug": "console_mobile_application",
+      "displayName": "Console Mobile Application",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_AWS-Console-Mobile-Application_64.svg"
+    },
+    {
+      "slug": "express_workflows",
+      "displayName": "Express Workflows",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_AWS-Express-Workflows_64.svg"
+    },
+    {
+      "slug": "step_functions",
+      "displayName": "Step Functions",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_App-Integration/64/Arch_AWS-Step-Functions_64.svg"
+    }
+  ]
+}

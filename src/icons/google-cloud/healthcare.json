@@ -1,0 +1,26 @@
+{
+  "category": "Healthcare",
+  "count": 4,
+  "icons": [
+    {
+      "slug": "cloud_healthcare_api",
+      "displayName": "Cloud Healthcare Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_healthcare_api.svg"
+    },
+    {
+      "slug": "cloud_healthcare_marketplace",
+      "displayName": "Cloud Healthcare Marketplace",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_healthcare_marketplace.svg"
+    },
+    {
+      "slug": "genomics",
+      "displayName": "Genomics",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/genomics.svg"
+    },
+    {
+      "slug": "healthcare_nlp_api",
+      "displayName": "Healthcare Nlp Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/healthcare_nlp_api.svg"
+    }
+  ]
+}

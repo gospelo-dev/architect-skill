@@ -1,0 +1,101 @@
+{
+  "category": "Tools",
+  "count": 19,
+  "icons": [
+    {
+      "slug": "git",
+      "displayName": "Git",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/git.svg"
+    },
+    {
+      "slug": "github",
+      "displayName": "GitHub",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg"
+    },
+    {
+      "slug": "jira",
+      "displayName": "Jira",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jira.svg"
+    },
+    {
+      "slug": "confluence",
+      "displayName": "Confluence",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/confluence.svg"
+    },
+    {
+      "slug": "discord",
+      "displayName": "Discord",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/discord.svg"
+    },
+    {
+      "slug": "figma",
+      "displayName": "Figma",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/figma.svg"
+    },
+    {
+      "slug": "notion",
+      "displayName": "Notion",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/notion.svg"
+    },
+    {
+      "slug": "trello",
+      "displayName": "Trello",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/trello.svg"
+    },
+    {
+      "slug": "asana",
+      "displayName": "Asana",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/asana.svg"
+    },
+    {
+      "slug": "linear",
+      "displayName": "Linear",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/linear.svg"
+    },
+    {
+      "slug": "postman",
+      "displayName": "Postman",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/postman.svg"
+    },
+    {
+      "slug": "insomnia",
+      "displayName": "Insomnia",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/insomnia.svg"
+    },
+    {
+      "slug": "swagger",
+      "displayName": "Swagger",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/swagger.svg"
+    },
+    {
+      "slug": "graphql",
+      "displayName": "GraphQL",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/graphql.svg"
+    },
+    {
+      "slug": "curl",
+      "displayName": "curl",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/curl.svg"
+    },
+    {
+      "slug": "miro",
+      "displayName": "Miro",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/miro.svg"
+    },
+    {
+      "slug": "clickup",
+      "displayName": "ClickUp",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/clickup.svg"
+    },
+    {
+      "slug": "todoist",
+      "displayName": "Todoist",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/todoist.svg"
+    },
+    {
+      "slug": "airtable",
+      "displayName": "Airtable",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/airtable.svg"
+    }
+  ]
+}

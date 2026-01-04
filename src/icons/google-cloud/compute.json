@@ -1,0 +1,86 @@
+{
+  "category": "Compute",
+  "count": 16,
+  "icons": [
+    {
+      "slug": "app_engine",
+      "displayName": "App Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/app_engine.svg"
+    },
+    {
+      "slug": "bare_metal_solutions",
+      "displayName": "Bare Metal Solutions",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/bare_metal_solutions.svg"
+    },
+    {
+      "slug": "batch",
+      "displayName": "Batch",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/batch.svg"
+    },
+    {
+      "slug": "cloud_functions",
+      "displayName": "Cloud Functions",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_functions.svg"
+    },
+    {
+      "slug": "cloud_gpu",
+      "displayName": "Cloud Gpu",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_gpu.svg"
+    },
+    {
+      "slug": "cloud_run",
+      "displayName": "Cloud Run",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_run.svg"
+    },
+    {
+      "slug": "cloud_run_for_anthos",
+      "displayName": "Cloud Run For Anthos",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_run_for_anthos.svg"
+    },
+    {
+      "slug": "cloud_scheduler",
+      "displayName": "Cloud Scheduler",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_scheduler.svg"
+    },
+    {
+      "slug": "cloud_tasks",
+      "displayName": "Cloud Tasks",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_tasks.svg"
+    },
+    {
+      "slug": "cloud_tpu",
+      "displayName": "Cloud Tpu",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_tpu.svg"
+    },
+    {
+      "slug": "compute_engine",
+      "displayName": "Compute Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/compute_engine.svg"
+    },
+    {
+      "slug": "os_configuration_management",
+      "displayName": "Os Configuration Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/os_configuration_management.svg"
+    },
+    {
+      "slug": "os_inventory_management",
+      "displayName": "Os Inventory Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/os_inventory_management.svg"
+    },
+    {
+      "slug": "os_patch_management",
+      "displayName": "Os Patch Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/os_patch_management.svg"
+    },
+    {
+      "slug": "quantum_engine",
+      "displayName": "Quantum Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/quantum_engine.svg"
+    },
+    {
+      "slug": "vmware_engine",
+      "displayName": "Vmware Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/vmware_engine.svg"
+    }
+  ]
+}

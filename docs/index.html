@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gospelo-architect - Icon Catalogs</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    h1 {
+      font-size: 32px;
+      color: #333;
+      margin: 0 0 8px 0;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin: 0 0 32px 0;
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .catalog-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+    .catalog-card:hover {
+      border-color: #0073BB;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .catalog-card h2 {
+      font-size: 18px;
+      margin: 0 0 8px 0;
+      color: #333;
+    }
+    .catalog-card .count {
+      font-size: 14px;
+      color: #666;
+    }
+    .catalog-card.aws { border-left: 4px solid #FF9900; }
+    .catalog-card.azure { border-left: 4px solid #0078D4; }
+    .catalog-card.gcp { border-left: 4px solid #4285F4; }
+    .catalog-card.tech { border-left: 4px solid #28a745; }
+    .footer {
+      text-align: center;
+      padding: 24px;
+      color: #888;
+      font-size: 14px;
+    }
+    .footer a {
+      color: #0073BB;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>gospelo-architect</h1>
+    <p class="subtitle">Icon Catalogs - Over 1,500 icons for system architecture diagrams</p>
+
+    <div class="catalog-grid">
+      <a href="icons/aws_catalog_full.html" class="catalog-card aws">
+        <h2>AWS</h2>
+        <div class="count">783 icons</div>
+      </a>
+      <a href="icons/azure_catalog_full.html" class="catalog-card azure">
+        <h2>Azure</h2>
+        <div class="count">291 icons</div>
+      </a>
+      <a href="icons/gcp_catalog_full.html" class="catalog-card gcp">
+        <h2>Google Cloud</h2>
+        <div class="count">216 icons</div>
+      </a>
+      <a href="icons/tech_stack_catalog_full.html" class="catalog-card tech">
+        <h2>Tech Stack</h2>
+        <div class="count">268 icons</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>
+      <a href="https://github.com/gorosun/gospelo-architect">GitHub Repository</a>
+    </p>
+  </div>
+</body>
+</html>

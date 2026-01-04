@@ -1,0 +1,71 @@
+{
+  "category": "Management",
+  "count": 13,
+  "icons": [
+    {
+      "slug": "administration",
+      "displayName": "Administration",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/administration.svg"
+    },
+    {
+      "slug": "asset_inventory",
+      "displayName": "Asset Inventory",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/asset_inventory.svg"
+    },
+    {
+      "slug": "billing",
+      "displayName": "Billing",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/billing.svg"
+    },
+    {
+      "slug": "cloud_asset_inventory",
+      "displayName": "Cloud Asset Inventory",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_asset_inventory.svg"
+    },
+    {
+      "slug": "cloud_audit_logs",
+      "displayName": "Cloud Audit Logs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_audit_logs.svg"
+    },
+    {
+      "slug": "cloud_deployment_manager",
+      "displayName": "Cloud Deployment Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_deployment_manager.svg"
+    },
+    {
+      "slug": "configuration_management",
+      "displayName": "Configuration Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/configuration_management.svg"
+    },
+    {
+      "slug": "gce_systems_management",
+      "displayName": "Gce Systems Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/gce_systems_management.svg"
+    },
+    {
+      "slug": "policy_analyzer",
+      "displayName": "Policy Analyzer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/policy_analyzer.svg"
+    },
+    {
+      "slug": "project",
+      "displayName": "Project",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/project.svg"
+    },
+    {
+      "slug": "quotas",
+      "displayName": "Quotas",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/quotas.svg"
+    },
+    {
+      "slug": "runtime_config",
+      "displayName": "Runtime Config",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/runtime_config.svg"
+    },
+    {
+      "slug": "service_discovery",
+      "displayName": "Service Discovery",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/service_discovery.svg"
+    }
+  ]
+}

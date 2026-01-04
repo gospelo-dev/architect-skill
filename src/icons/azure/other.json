@@ -1,0 +1,11 @@
+{
+  "category": "Other",
+  "count": 1,
+  "icons": [
+    {
+      "slug": "elixir_purple",
+      "displayName": "Elixir Purple",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Elixir-Purple.svg"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "category": "Media",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "cloud_media_edge",
+      "displayName": "Cloud Media Edge",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_media_edge.svg"
+    },
+    {
+      "slug": "media_translation_api",
+      "displayName": "Media Translation Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/media_translation_api.svg"
+    }
+  ]
+}

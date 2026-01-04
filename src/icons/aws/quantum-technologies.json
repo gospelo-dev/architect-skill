@@ -1,0 +1,76 @@
+{
+  "category": "Quantum Technologies",
+  "count": 14,
+  "icons": [
+    {
+      "slug": "res_braket_chandelier",
+      "displayName": "Res Braket Chandelier",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Chandelier_48.svg"
+    },
+    {
+      "slug": "res_braket_chip",
+      "displayName": "Res Braket Chip",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Chip_48.svg"
+    },
+    {
+      "slug": "res_braket_embedded_simulator",
+      "displayName": "Res Braket Embedded Simulator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Embedded-Simulator_48.svg"
+    },
+    {
+      "slug": "res_braket_managed_simulator",
+      "displayName": "Res Braket Managed Simulator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Managed-Simulator_48.svg"
+    },
+    {
+      "slug": "res_braket_noise_simulator",
+      "displayName": "Res Braket Noise Simulator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Noise-Simulator_48.svg"
+    },
+    {
+      "slug": "res_braket_qpu",
+      "displayName": "Res Braket Qpu",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_QPU_48.svg"
+    },
+    {
+      "slug": "res_braket_simulator",
+      "displayName": "Res Braket Simulator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Simulator_48.svg"
+    },
+    {
+      "slug": "res_braket_simulator_1",
+      "displayName": "Res Braket Simulator 1",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Simulator-1_48.svg"
+    },
+    {
+      "slug": "res_braket_simulator_2",
+      "displayName": "Res Braket Simulator 2",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Simulator-2_48.svg"
+    },
+    {
+      "slug": "res_braket_simulator_3",
+      "displayName": "Res Braket Simulator 3",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Simulator-3_48.svg"
+    },
+    {
+      "slug": "res_braket_simulator_4",
+      "displayName": "Res Braket Simulator 4",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Simulator-4_48.svg"
+    },
+    {
+      "slug": "res_braket_state_vector",
+      "displayName": "Res Braket State Vector",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_State-Vector_48.svg"
+    },
+    {
+      "slug": "res_braket_tensor_network",
+      "displayName": "Res Braket Tensor Network",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Quantum-Technologies/Res_Amazon-Braket_Tensor-Network_48.svg"
+    },
+    {
+      "slug": "braket",
+      "displayName": "Braket",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Quantum-Technologies/64/Arch_Amazon-Braket_64.svg"
+    }
+  ]
+}

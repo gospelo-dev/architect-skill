@@ -1,0 +1,26 @@
+{
+  "category": "Cost Management",
+  "count": 4,
+  "icons": [
+    {
+      "slug": "cost_alerts",
+      "displayName": "Cost Alerts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Alerts.svg"
+    },
+    {
+      "slug": "cost_analysis",
+      "displayName": "Cost Analysis",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Analysis.svg"
+    },
+    {
+      "slug": "cost_budgets",
+      "displayName": "Cost Budgets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Budgets.svg"
+    },
+    {
+      "slug": "cost_management",
+      "displayName": "Cost Management",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cost-Management.svg"
+    }
+  ]
+}

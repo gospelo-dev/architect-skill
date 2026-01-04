@@ -1,0 +1,116 @@
+{
+  "category": "Security",
+  "count": 22,
+  "icons": [
+    {
+      "slug": "access_context_manager",
+      "displayName": "Access Context Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/access_context_manager.svg"
+    },
+    {
+      "slug": "assured_workloads",
+      "displayName": "Assured Workloads",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/assured_workloads.svg"
+    },
+    {
+      "slug": "beyondcorp",
+      "displayName": "Beyondcorp",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/beyondcorp.svg"
+    },
+    {
+      "slug": "binary_authorization",
+      "displayName": "Binary Authorization",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/binary_authorization.svg"
+    },
+    {
+      "slug": "certificate_authority_service",
+      "displayName": "Certificate Authority Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/certificate_authority_service.svg"
+    },
+    {
+      "slug": "certificate_manager",
+      "displayName": "Certificate Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/certificate_manager.svg"
+    },
+    {
+      "slug": "cloud_armor",
+      "displayName": "Cloud Armor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_armor.svg"
+    },
+    {
+      "slug": "cloud_ekm",
+      "displayName": "Cloud Ekm",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_ekm.svg"
+    },
+    {
+      "slug": "cloud_hsm",
+      "displayName": "Cloud Hsm",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_hsm.svg"
+    },
+    {
+      "slug": "cloud_ids",
+      "displayName": "Cloud Ids",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_ids.svg"
+    },
+    {
+      "slug": "cloud_security_scanner",
+      "displayName": "Cloud Security Scanner",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_security_scanner.svg"
+    },
+    {
+      "slug": "key_access_justifications",
+      "displayName": "Key Access Justifications",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/key_access_justifications.svg"
+    },
+    {
+      "slug": "key_management_service",
+      "displayName": "Key Management Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/key_management_service.svg"
+    },
+    {
+      "slug": "phishing_protection",
+      "displayName": "Phishing Protection",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/phishing_protection.svg"
+    },
+    {
+      "slug": "risk_manager",
+      "displayName": "Risk Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/risk_manager.svg"
+    },
+    {
+      "slug": "secret_manager",
+      "displayName": "Secret Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/secret_manager.svg"
+    },
+    {
+      "slug": "security",
+      "displayName": "Security",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/security.svg"
+    },
+    {
+      "slug": "security_command_center",
+      "displayName": "Security Command Center",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/security_command_center.svg"
+    },
+    {
+      "slug": "security_health_advisor",
+      "displayName": "Security Health Advisor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/security_health_advisor.svg"
+    },
+    {
+      "slug": "security_key_enforcement",
+      "displayName": "Security Key Enforcement",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/security_key_enforcement.svg"
+    },
+    {
+      "slug": "web_risk",
+      "displayName": "Web Risk",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/web_risk.svg"
+    },
+    {
+      "slug": "web_security_scanner",
+      "displayName": "Web Security Scanner",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/web_security_scanner.svg"
+    }
+  ]
+}

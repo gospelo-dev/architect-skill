@@ -1,0 +1,32 @@
+{
+  "provider": "google-cloud",
+  "totalIcons": 216,
+  "categories": [
+    "ai-ml.json",
+    "analytics.json",
+    "api-services.json",
+    "compute.json",
+    "containers.json",
+    "data-services.json",
+    "databases.json",
+    "developer-tools.json",
+    "events.json",
+    "gaming.json",
+    "general.json",
+    "google-services.json",
+    "healthcare.json",
+    "identity.json",
+    "integration.json",
+    "iot.json",
+    "management.json",
+    "marketplace.json",
+    "media.json",
+    "migration.json",
+    "monitoring.json",
+    "networking.json",
+    "security.json",
+    "services.json",
+    "solutions.json",
+    "storage.json"
+  ]
+}

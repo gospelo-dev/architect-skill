@@ -1,0 +1,131 @@
+{
+  "category": "Networking",
+  "count": 25,
+  "icons": [
+    {
+      "slug": "connections",
+      "displayName": "Connections",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Connections.svg"
+    },
+    {
+      "slug": "dns_zones",
+      "displayName": "Dns Zones",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DNS-Zones.svg"
+    },
+    {
+      "slug": "expressroute_circuits",
+      "displayName": "Expressroute Circuits",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ExpressRoute-Circuits.svg"
+    },
+    {
+      "slug": "front_doors",
+      "displayName": "Front Doors",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Front-Doors.svg"
+    },
+    {
+      "slug": "ftp",
+      "displayName": "Ftp",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/FTP.svg"
+    },
+    {
+      "slug": "internet_analyzer_profiles",
+      "displayName": "Internet Analyzer Profiles",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Internet-Analyzer-Profiles.svg"
+    },
+    {
+      "slug": "ip_groups",
+      "displayName": "Ip Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IP-Groups.svg"
+    },
+    {
+      "slug": "load_balancers",
+      "displayName": "Load Balancers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Load-Balancers.svg"
+    },
+    {
+      "slug": "load_test",
+      "displayName": "Load Test",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Load-Test.svg"
+    },
+    {
+      "slug": "nat",
+      "displayName": "Nat",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/NAT.svg"
+    },
+    {
+      "slug": "network_interfaces",
+      "displayName": "Network Interfaces",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Interfaces.svg"
+    },
+    {
+      "slug": "network_security_groups",
+      "displayName": "Network Security Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Security-Groups.svg"
+    },
+    {
+      "slug": "network_watcher",
+      "displayName": "Network Watcher",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Network-Watcher.svg"
+    },
+    {
+      "slug": "outbound_connection",
+      "displayName": "Outbound Connection",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Outbound-Connection.svg"
+    },
+    {
+      "slug": "peering_service",
+      "displayName": "Peering Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Peering-Service.svg"
+    },
+    {
+      "slug": "private_link",
+      "displayName": "Private Link",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link.svg"
+    },
+    {
+      "slug": "private_link_hub",
+      "displayName": "Private Link Hub",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link-Hub.svg"
+    },
+    {
+      "slug": "private_link_service",
+      "displayName": "Private Link Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Private-Link-Service.svg"
+    },
+    {
+      "slug": "public_ip_addresses",
+      "displayName": "Public Ip Addresses",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Addresses.svg"
+    },
+    {
+      "slug": "public_ip_addresses_(classic)",
+      "displayName": "Public Ip Addresses (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Addresses-(Classic).svg"
+    },
+    {
+      "slug": "public_ip_prefixes",
+      "displayName": "Public Ip Prefixes",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Public-IP-Prefixes.svg"
+    },
+    {
+      "slug": "reserved_ip_addresses_(classic)",
+      "displayName": "Reserved Ip Addresses (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Reserved-IP-Addresses-(Classic).svg"
+    },
+    {
+      "slug": "route_filters",
+      "displayName": "Route Filters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Route-Filters.svg"
+    },
+    {
+      "slug": "route_tables",
+      "displayName": "Route Tables",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Route-Tables.svg"
+    },
+    {
+      "slug": "traffic_manager_profiles",
+      "displayName": "Traffic Manager Profiles",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Traffic-Manager-Profiles.svg"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "providers": [
+    "aws",
+    "azure",
+    "google-cloud",
+    "tech-stack"
+  ],
+  "sources": {
+    "aws": {
+      "repository": "https://github.com/AwesomeLogos/aws-icons",
+      "commitId": "b60dadba55b9a04faf334401114d529cd93d9748",
+      "commitDate": "2024-03-11",
+      "lastUpdated": "2025-01-02"
+    },
+    "azure": {
+      "repository": "https://github.com/benc-uk/icon-collection",
+      "commitId": "",
+      "commitDate": "",
+      "lastUpdated": "2025-01-02"
+    },
+    "google-cloud": {
+      "repository": "https://github.com/AwesomeLogos/google-cloud-icons",
+      "commitId": "",
+      "commitDate": "",
+      "lastUpdated": "2025-01-02"
+    },
+    "tech-stack": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commitId": "a1c92418865a14cc3b1f58a1731ad603785251bf",
+      "commitDate": "2025-12-31",
+      "lastUpdated": "2026-01-01"
+    }
+  }
+}

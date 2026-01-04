@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Google Cloud Icon Catalog</title>
+  <style>.gospelo-diagram {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.gospelo-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+.node-label { font-weight: 500; }
+.group-box { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }
+.connection { stroke-linecap: round; stroke-linejoin: round; }
+.resize-handle { cursor: nwse-resize; }
+.resize-handle:hover { fill: #AAAAAA; }
+.meta-toggle:hover rect { fill: #E0E0E0; }
+
+/* Meta panel - right side slide */
+.meta-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: #FAFAFA;
+  border-left: 1px solid #DDD;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+.meta-panel.open {
+  transform: translateX(0);
+}
+.meta-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #DDD;
+  background: #F5F5F5;
+}
+.meta-panel-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+.meta-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.meta-panel-btn {
+  border: 1px solid #CCC;
+  background: #FFF;
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.meta-panel-btn:hover {
+  background: #F0F0F0;
+  color: #333;
+}
+.meta-panel-close {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 4px;
+}
+.meta-panel-close:hover {
+  color: #333;
+}
+.meta-panel-content {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  margin: 0;
+  font-size: 12px;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  line-height: 1.5;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}</style>
+</head>
+<body>
+  <div class="gospelo-diagram">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 700" width="1100" height="700" class="gospelo-svg">
+<defs>
+<marker id="arrow-0073BB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0073BB"/>
+</marker>
+<marker id="arrow-0073BB-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+  <path d="M 10 0 L 0 5 L 10 10 z" fill="#0073BB"/>
+</marker>
+<marker id="arrow-0073BB-end" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0073BB"/>
+</marker>
+<linearGradient id="bg-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#FFFFFF"/>
+  <stop offset="100%" stop-color="#E8E8E8"/>
+</linearGradient>
+</defs>
+<rect width="1100" height="700" fill="url(#bg-gradient)"/>
+<g class="boundary-box">
+  <rect class="boundary-frame" x="10" y="10" width="1080" height="680"
+    fill="none" stroke="#D0D0D0" stroke-width="1" rx="4"/>
+  <g class="meta-toggle" transform="translate(1046, 668)" style="cursor: pointer;">
+    <rect width="20" height="20" rx="3" fill="#F0F0F0" stroke="#CCCCCC" stroke-width="0.5"/>
+    <text x="10" y="14" text-anchor="middle" font-size="11" font-family="monospace" fill="#666666">{}</text>
+  </g>
+  <polygon class="resize-handle"
+    points="1090,674 1090,690 1074,690"
+    fill="#CCCCCC" stroke="#AAAAAA" stroke-width="0.5" style="cursor: nwse-resize;"/>
+</g>
+<text x="550" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#0073BB">Google Cloud Icon Catalog</text>
+<text x="550" y="70" text-anchor="middle" font-size="16" fill="#666666">Popular Services</text>
+
+<g id="gcp_ai_platform" class="node icon-node" transform="translate(100, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_ai_platform').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_ai_platform';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_ai_platform</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/ai_platform.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_ai_platform',icon:'google-cloud:ai_platform',x:100,y:100,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/ai_platform.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_artifact_registry" class="node icon-node" transform="translate(300, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_artifact_registry').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_artifact_registry';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_artifact_registry</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/artifact_registry.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_artifact_registry',icon:'google-cloud:artifact_registry',x:300,y:100,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/artifact_registry.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_bigquery" class="node icon-node" transform="translate(500, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_bigquery').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_bigquery';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_bigquery</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/bigquery.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_bigquery',icon:'google-cloud:bigquery',x:500,y:100,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/bigquery.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_armor" class="node icon-node" transform="translate(700, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_armor').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_armor';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_armor</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_armor.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_armor',icon:'google-cloud:cloud_armor',x:700,y:100,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_armor.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_build" class="node icon-node" transform="translate(900, 100)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_build').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_build';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_build</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_build.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_build',icon:'google-cloud:cloud_build',x:900,y:100,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_build.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_cdn" class="node icon-node" transform="translate(100, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_cdn').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_cdn';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_cdn</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_cdn.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_cdn',icon:'google-cloud:cloud_cdn',x:100,y:220,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_cdn.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_composer" class="node icon-node" transform="translate(300, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_composer').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_composer';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_composer</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_composer.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_composer',icon:'google-cloud:cloud_composer',x:300,y:220,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_composer.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_dns" class="node icon-node" transform="translate(500, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_dns').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_dns';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_dns</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_dns.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_dns',icon:'google-cloud:cloud_dns',x:500,y:220,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_dns.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_functions" class="node icon-node" transform="translate(700, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_functions').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_functions';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_functions</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_functions.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_functions',icon:'google-cloud:cloud_functions',x:700,y:220,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_functions.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_logging" class="node icon-node" transform="translate(900, 220)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_logging').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_logging';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_logging</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_logging.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_logging',icon:'google-cloud:cloud_logging',x:900,y:220,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_logging.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_monitoring" class="node icon-node" transform="translate(100, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_monitoring').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_monitoring';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_monitoring</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_monitoring.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_monitoring',icon:'google-cloud:cloud_monitoring',x:100,y:340,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_monitoring.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_run" class="node icon-node" transform="translate(300, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_run').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_run';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_run</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_run.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_run',icon:'google-cloud:cloud_run',x:300,y:340,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_run.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_sql" class="node icon-node" transform="translate(500, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_sql').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_sql';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_sql</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_sql.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_sql',icon:'google-cloud:cloud_sql',x:500,y:340,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_sql.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_cloud_storage" class="node icon-node" transform="translate(700, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_cloud_storage').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_cloud_storage';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_cloud_storage</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_storage.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_cloud_storage',icon:'google-cloud:cloud_storage',x:700,y:340,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_storage.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_compute_engine" class="node icon-node" transform="translate(900, 340)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_compute_engine').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_compute_engine';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_compute_engine</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/compute_engine.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_compute_engine',icon:'google-cloud:compute_engine',x:900,y:340,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/compute_engine.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_dataflow" class="node icon-node" transform="translate(100, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_dataflow').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_dataflow';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_dataflow</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataflow.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_dataflow',icon:'google-cloud:dataflow',x:100,y:460,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataflow.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_identity_and_access_management" class="node icon-node" transform="translate(300, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_identity_and_access_management').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_identity_and_access_management';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_identity_and_access_management</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/identity_and_access_management.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_identity_and_access_management',icon:'google-cloud:identity_and_access_management',x:300,y:460,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/identity_and_access_management.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_iot_core" class="node icon-node" transform="translate(500, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_iot_core').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_iot_core';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_iot_core</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/iot_core.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_iot_core',icon:'google-cloud:iot_core',x:500,y:460,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/iot_core.svg'}); this.style.display='none'"/>
+</g>
+<g id="gcp_pubsub" class="node icon-node" transform="translate(700, 460)" style="cursor:pointer" onclick="navigator.clipboard.writeText('gcp_pubsub').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: gcp_pubsub';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>gcp_pubsub</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/pubsub.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'gcp_pubsub',icon:'google-cloud:pubsub',x:700,y:460,url:'https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/pubsub.svg'}); this.style.display='none'"/>
+</g>
+<g class="node-label-group" data-node="gcp_ai_platform"><text class="node-label" x="124" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Ai Platform</text></g>
+<g class="node-label-group" data-node="gcp_artifact_registry"><text class="node-label" x="324" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Artifact</text>
+<text class="node-label" x="324" y="173" text-anchor="middle" font-size="11" fill="#232F3E">Registry</text></g>
+<g class="node-label-group" data-node="gcp_bigquery"><text class="node-label" x="524" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Bigquery</text></g>
+<g class="node-label-group" data-node="gcp_cloud_armor"><text class="node-label" x="724" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Cloud Armor</text></g>
+<g class="node-label-group" data-node="gcp_cloud_build"><text class="node-label" x="924" y="160" text-anchor="middle" font-size="11" fill="#232F3E">Cloud Build</text></g>
+<g class="node-label-group" data-node="gcp_cloud_cdn"><text class="node-label" x="124" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Cloud Cdn</text></g>
+<g class="node-label-group" data-node="gcp_cloud_composer"><text class="node-label" x="324" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Cloud</text>
+<text class="node-label" x="324" y="293" text-anchor="middle" font-size="11" fill="#232F3E">Composer</text></g>
+<g class="node-label-group" data-node="gcp_cloud_dns"><text class="node-label" x="524" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Cloud Dns</text></g>
+<g class="node-label-group" data-node="gcp_cloud_functions"><text class="node-label" x="724" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Cloud</text>
+<text class="node-label" x="724" y="293" text-anchor="middle" font-size="11" fill="#232F3E">Functions</text></g>
+<g class="node-label-group" data-node="gcp_cloud_logging"><text class="node-label" x="924" y="280" text-anchor="middle" font-size="11" fill="#232F3E">Cloud</text>
+<text class="node-label" x="924" y="293" text-anchor="middle" font-size="11" fill="#232F3E">Logging</text></g>
+<g class="node-label-group" data-node="gcp_cloud_monitoring"><text class="node-label" x="124" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Cloud</text>
+<text class="node-label" x="124" y="413" text-anchor="middle" font-size="11" fill="#232F3E">Monitoring</text></g>
+<g class="node-label-group" data-node="gcp_cloud_run"><text class="node-label" x="324" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Cloud Run</text></g>
+<g class="node-label-group" data-node="gcp_cloud_sql"><text class="node-label" x="524" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Cloud Sql</text></g>
+<g class="node-label-group" data-node="gcp_cloud_storage"><text class="node-label" x="724" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Cloud</text>
+<text class="node-label" x="724" y="413" text-anchor="middle" font-size="11" fill="#232F3E">Storage</text></g>
+<g class="node-label-group" data-node="gcp_compute_engine"><text class="node-label" x="924" y="400" text-anchor="middle" font-size="11" fill="#232F3E">Compute</text>
+<text class="node-label" x="924" y="413" text-anchor="middle" font-size="11" fill="#232F3E">Engine</text></g>
+<g class="node-label-group" data-node="gcp_dataflow"><text class="node-label" x="124" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Dataflow</text></g>
+<g class="node-label-group" data-node="gcp_identity_and_access_management"><text class="node-label" x="324" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Identity And</text>
+<text class="node-label" x="324" y="533" text-anchor="middle" font-size="11" fill="#232F3E">Access Manag</text></g>
+<g class="node-label-group" data-node="gcp_iot_core"><text class="node-label" x="524" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Iot Core</text></g>
+<g class="node-label-group" data-node="gcp_pubsub"><text class="node-label" x="724" y="520" text-anchor="middle" font-size="11" fill="#232F3E">Pubsub</text></g>
+</svg>
+  </div>
+  <!-- Copy toast notification -->
+  <div id="copy-toast" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:10px 20px;border-radius:6px;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:9999;font-family:monospace;font-size:14px;"></div>
+  <!-- メタデータパネル（右側スライド） -->
+  <div class="meta-panel" id="meta-panel">
+    <div class="meta-panel-header">
+      <span class="meta-panel-title">Diagram Metadata</span>
+      <div class="meta-panel-actions">
+        <button class="meta-panel-btn" id="meta-panel-export" title="Export SVG">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 2v8M4 6l4-4 4 4M2 14h12"/>
+          </svg>
+        </button>
+        <button class="meta-panel-close" id="meta-panel-close">&times;</button>
+      </div>
+    </div>
+    <pre class="meta-panel-content" id="meta-panel-content"></pre>
+  </div>
+  <!-- AI調整用メタデータ: ノード位置・サイズ・接続情報 -->
+  <script type="application/json" id="gospelo-diagram-meta">
+{
+  "version": "1.0",
+  "canvas": {
+    "width": 1100,
+    "height": 700,
+    "gridSize": 50
+  },
+  "nodes": [
+    {
+      "id": "gcp_ai_platform",
+      "label": "Ai Platform",
+      "sublabel": "",
+      "icon": "google-cloud:ai_platform",
+      "type": "icon",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 124,
+        "y": 124
+      }
+    },
+    {
+      "id": "gcp_artifact_registry",
+      "label": "Artifact Registry",
+      "sublabel": "",
+      "icon": "google-cloud:artifact_registry",
+      "type": "icon",
+      "position": {
+        "x": 300,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 324,
+        "y": 124
+      }
+    },
+    {
+      "id": "gcp_bigquery",
+      "label": "Bigquery",
+      "sublabel": "",
+      "icon": "google-cloud:bigquery",
+      "type": "icon",
+      "position": {
+        "x": 500,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 524,
+        "y": 124
+      }
+    },
+    {
+      "id": "gcp_cloud_armor",
+      "label": "Cloud Armor",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_armor",
+      "type": "icon",
+      "position": {
+        "x": 700,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 724,
+        "y": 124
+      }
+    },
+    {
+      "id": "gcp_cloud_build",
+      "label": "Cloud Build",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_build",
+      "type": "icon",
+      "position": {
+        "x": 900,
+        "y": 100
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 924,
+        "y": 124
+      }
+    },
+    {
+      "id": "gcp_cloud_cdn",
+      "label": "Cloud Cdn",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_cdn",
+      "type": "icon",
+      "position": {
+        "x": 100,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 124,
+        "y": 244
+      }
+    },
+    {
+      "id": "gcp_cloud_composer",
+      "label": "Cloud Composer",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_composer",
+      "type": "icon",
+      "position": {
+        "x": 300,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 324,
+        "y": 244
+      }
+    },
+    {
+      "id": "gcp_cloud_dns",
+      "label": "Cloud Dns",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_dns",
+      "type": "icon",
+      "position": {
+        "x": 500,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 524,
+        "y": 244
+      }
+    },
+    {
+      "id": "gcp_cloud_functions",
+      "label": "Cloud Functions",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_functions",
+      "type": "icon",
+      "position": {
+        "x": 700,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 724,
+        "y": 244
+      }
+    },
+    {
+      "id": "gcp_cloud_logging",
+      "label": "Cloud Logging",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_logging",
+      "type": "icon",
+      "position": {
+        "x": 900,
+        "y": 220
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 924,
+        "y": 244
+      }
+    },
+    {
+      "id": "gcp_cloud_monitoring",
+      "label": "Cloud Monitoring",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_monitoring",
+      "type": "icon",
+      "position": {
+        "x": 100,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 124,
+        "y": 364
+      }
+    },
+    {
+      "id": "gcp_cloud_run",
+      "label": "Cloud Run",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_run",
+      "type": "icon",
+      "position": {
+        "x": 300,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 324,
+        "y": 364
+      }
+    },
+    {
+      "id": "gcp_cloud_sql",
+      "label": "Cloud Sql",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_sql",
+      "type": "icon",
+      "position": {
+        "x": 500,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 524,
+        "y": 364
+      }
+    },
+    {
+      "id": "gcp_cloud_storage",
+      "label": "Cloud Storage",
+      "sublabel": "",
+      "icon": "google-cloud:cloud_storage",
+      "type": "icon",
+      "position": {
+        "x": 700,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 724,
+        "y": 364
+      }
+    },
+    {
+      "id": "gcp_compute_engine",
+      "label": "Compute Engine",
+      "sublabel": "",
+      "icon": "google-cloud:compute_engine",
+      "type": "icon",
+      "position": {
+        "x": 900,
+        "y": 340
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 924,
+        "y": 364
+      }
+    },
+    {
+      "id": "gcp_dataflow",
+      "label": "Dataflow",
+      "sublabel": "",
+      "icon": "google-cloud:dataflow",
+      "type": "icon",
+      "position": {
+        "x": 100,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 124,
+        "y": 484
+      }
+    },
+    {
+      "id": "gcp_identity_and_access_management",
+      "label": "Identity And Access Manag",
+      "sublabel": "",
+      "icon": "google-cloud:identity_and_access_management",
+      "type": "icon",
+      "position": {
+        "x": 300,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 324,
+        "y": 484
+      }
+    },
+    {
+      "id": "gcp_iot_core",
+      "label": "Iot Core",
+      "sublabel": "",
+      "icon": "google-cloud:iot_core",
+      "type": "icon",
+      "position": {
+        "x": 500,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 524,
+        "y": 484
+      }
+    },
+    {
+      "id": "gcp_pubsub",
+      "label": "Pubsub",
+      "sublabel": "",
+      "icon": "google-cloud:pubsub",
+      "type": "icon",
+      "position": {
+        "x": 700,
+        "y": 460
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 724,
+        "y": 484
+      }
+    }
+  ],
+  "connections": [],
+  "layout": {
+    "rows": [
+      {
+        "y": 124,
+        "nodes": [
+          "gcp_ai_platform",
+          "gcp_artifact_registry",
+          "gcp_bigquery",
+          "gcp_cloud_armor",
+          "gcp_cloud_build"
+        ]
+      },
+      {
+        "y": 244,
+        "nodes": [
+          "gcp_cloud_cdn",
+          "gcp_cloud_composer",
+          "gcp_cloud_dns",
+          "gcp_cloud_functions",
+          "gcp_cloud_logging"
+        ]
+      },
+      {
+        "y": 364,
+        "nodes": [
+          "gcp_cloud_monitoring",
+          "gcp_cloud_run",
+          "gcp_cloud_sql",
+          "gcp_cloud_storage",
+          "gcp_compute_engine"
+        ]
+      },
+      {
+        "y": 484,
+        "nodes": [
+          "gcp_dataflow",
+          "gcp_identity_and_access_management",
+          "gcp_iot_core",
+          "gcp_pubsub"
+        ]
+      }
+    ],
+    "columns": [
+      {
+        "x": 124,
+        "nodes": [
+          "gcp_ai_platform",
+          "gcp_cloud_cdn",
+          "gcp_cloud_monitoring",
+          "gcp_dataflow"
+        ]
+      },
+      {
+        "x": 324,
+        "nodes": [
+          "gcp_artifact_registry",
+          "gcp_cloud_composer",
+          "gcp_cloud_run",
+          "gcp_identity_and_access_management"
+        ]
+      },
+      {
+        "x": 524,
+        "nodes": [
+          "gcp_bigquery",
+          "gcp_cloud_dns",
+          "gcp_cloud_sql",
+          "gcp_iot_core"
+        ]
+      },
+      {
+        "x": 724,
+        "nodes": [
+          "gcp_cloud_armor",
+          "gcp_cloud_functions",
+          "gcp_cloud_storage",
+          "gcp_pubsub"
+        ]
+      },
+      {
+        "x": 924,
+        "nodes": [
+          "gcp_cloud_build",
+          "gcp_cloud_logging",
+          "gcp_compute_engine"
+        ]
+      }
+    ]
+  }
+}
+  </script>
+  <script>
+(function() {
+  const svg = document.querySelector('.gospelo-svg');
+  if (!svg) return;
+
+  const handle = svg.querySelector('.resize-handle');
+  if (!handle) return;
+
+  let isResizing = false;
+  let startX, startY, startWidth, startHeight;
+
+  // 元のviewBox値を保持（スケーリングの基準）
+  const viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+  const originalWidth = viewBox[2];
+  const originalHeight = viewBox[3];
+  const aspectRatio = originalWidth / originalHeight;
+
+  handle.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    isResizing = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    startWidth = parseFloat(svg.getAttribute('width'));
+    startHeight = parseFloat(svg.getAttribute('height'));
+    document.body.style.cursor = 'nwse-resize';
+    document.body.style.userSelect = 'none';
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (!isResizing) return;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    // アスペクト比を維持してリサイズ（対角線方向の移動量を使用）
+    const delta = (dx + dy) / 2;
+    let newWidth = Math.max(400, startWidth + delta);
+    let newHeight = newWidth / aspectRatio;
+
+    // 最小サイズ制限
+    if (newHeight < 300) {
+      newHeight = 300;
+      newWidth = newHeight * aspectRatio;
+    }
+
+    // viewBoxは固定のまま、width/heightのみ変更（スケーリング効果）
+    svg.setAttribute('width', newWidth);
+    svg.setAttribute('height', newHeight);
+  });
+
+  document.addEventListener('mouseup', function() {
+    if (isResizing) {
+      isResizing = false;
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    }
+  });
+
+  // Meta panel toggle
+  const metaToggle = svg.querySelector('.meta-toggle');
+  const metaPanel = document.getElementById('meta-panel');
+  const metaPanelClose = document.getElementById('meta-panel-close');
+  const metaPanelContent = document.getElementById('meta-panel-content');
+  const metaScript = document.getElementById('gospelo-diagram-meta');
+
+  if (metaToggle && metaPanel && metaPanelContent && metaScript) {
+    // Load metadata content
+    try {
+      const metaData = JSON.parse(metaScript.textContent || '{}');
+      metaPanelContent.textContent = JSON.stringify(metaData, null, 2);
+    } catch (e) {
+      metaPanelContent.textContent = 'Error loading metadata';
+    }
+
+    // Toggle panel
+    metaToggle.addEventListener('click', function() {
+      metaPanel.classList.toggle('open');
+    });
+
+    // Close button
+    if (metaPanelClose) {
+      metaPanelClose.addEventListener('click', function() {
+        metaPanel.classList.remove('open');
+      });
+    }
+
+    // Export SVG button
+    const exportBtn = document.getElementById('meta-panel-export');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', function() {
+        // Clone SVG and remove UI elements
+        const svgClone = svg.cloneNode(true);
+        const boundaryBox = svgClone.querySelector('.boundary-box');
+        if (boundaryBox) boundaryBox.remove();
+
+        // Add XML declaration and proper namespace
+        const serializer = new XMLSerializer();
+        let svgString = serializer.serializeToString(svgClone);
+        svgString = '<?xml version="1.0" encoding="UTF-8"?>\n' + svgString;
+
+        // Download as SVG file
+        const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'diagram.svg';
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+  }
+})();
+</script>
+</body>
+</html>

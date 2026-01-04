@@ -1,0 +1,26 @@
+{
+  "category": "Web Servers",
+  "count": 4,
+  "icons": [
+    {
+      "slug": "nginx",
+      "displayName": "NGINX",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nginx.svg"
+    },
+    {
+      "slug": "apache",
+      "displayName": "Apache",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apache.svg"
+    },
+    {
+      "slug": "caddy",
+      "displayName": "Caddy",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/caddy.svg"
+    },
+    {
+      "slug": "envoyproxy",
+      "displayName": "Envoy Proxy",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/envoyproxy.svg"
+    }
+  ]
+}

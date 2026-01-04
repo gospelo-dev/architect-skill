@@ -1,0 +1,51 @@
+{
+  "category": "Front-End Web & Mobile",
+  "count": 9,
+  "icons": [
+    {
+      "slug": "res_amplify_aws_amplify_studio",
+      "displayName": "Res Amplify Aws Amplify Studio",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Front-End-Web-Mobile/Res_AWS-Amplify_AWS-Amplify-Studio_48.svg"
+    },
+    {
+      "slug": "res_location_service_geofence",
+      "displayName": "Res Location Service Geofence",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Front-End-Web-Mobile/Res_Amazon-Location-Service_Geofence_48.svg"
+    },
+    {
+      "slug": "res_location_service_map_",
+      "displayName": "Res Location Service Map ",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Front-End-Web-Mobile/Res_Amazon-Location-Service_Map _48.svg"
+    },
+    {
+      "slug": "res_location_service_place",
+      "displayName": "Res Location Service Place",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Front-End-Web-Mobile/Res_Amazon-Location-Service_Place_48.svg"
+    },
+    {
+      "slug": "res_location_service_routes",
+      "displayName": "Res Location Service Routes",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Front-End-Web-Mobile/Res_Amazon-Location-Service_Routes_48.svg"
+    },
+    {
+      "slug": "res_location_service_track_",
+      "displayName": "Res Location Service Track ",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Front-End-Web-Mobile/Res_Amazon-Location-Service_Track _48.svg"
+    },
+    {
+      "slug": "location_service",
+      "displayName": "Location Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Front-End-Web-Mobile/64/Arch_Amazon-Location-Service_64.svg"
+    },
+    {
+      "slug": "amplify",
+      "displayName": "Amplify",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Front-End-Web-Mobile/64/Arch_AWS-Amplify_64.svg"
+    },
+    {
+      "slug": "device_farm",
+      "displayName": "Device Farm",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Front-End-Web-Mobile/64/Arch_AWS-Device-Farm_64.svg"
+    }
+  ]
+}

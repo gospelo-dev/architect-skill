@@ -1,0 +1,276 @@
+{
+  "category": "Security, Identity & Compliance",
+  "count": 54,
+  "icons": [
+    {
+      "slug": "res_certificate_manager_certificate_authority",
+      "displayName": "Res Certificate Manager Certificate Authority",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Certificate-Manager_Certificate-Authority_48.svg"
+    },
+    {
+      "slug": "res_directory_service_ad_connector",
+      "displayName": "Res Directory Service Ad Connector",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Directory-Service_AD-Connector_48.svg"
+    },
+    {
+      "slug": "res_directory_service_aws_managed_microsoft_ad",
+      "displayName": "Res Directory Service Aws Managed Microsoft Ad",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Directory-Service_AWS-Managed-Microsoft-AD_48.svg"
+    },
+    {
+      "slug": "res_directory_service_simple_ad",
+      "displayName": "Res Directory Service Simple Ad",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Directory-Service_Simple-AD_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_add_on",
+      "displayName": "Res Identity Access Management Add On",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_Add-on_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_aws_sts",
+      "displayName": "Res Identity Access Management Aws Sts",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_AWS-STS_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_aws_sts_alternate",
+      "displayName": "Res Identity Access Management Aws Sts Alternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_AWS-STS-Alternate_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_data_encryption_key",
+      "displayName": "Res Identity Access Management Data Encryption Key",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_Data-Encryption-Key_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_encrypted_data",
+      "displayName": "Res Identity Access Management Encrypted Data",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_Encrypted-Data_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_iam_access_analyzer",
+      "displayName": "Res Identity Access Management Iam Access Analyzer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_IAM-Access-Analyzer_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_iam_roles_anywhere",
+      "displayName": "Res Identity Access Management Iam Roles Anywhere",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_IAM-Roles-Anywhere_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_long_term_security_credential",
+      "displayName": "Res Identity Access Management Long Term Security Credential",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_Long-Term-Security-Credential_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_mfa_token",
+      "displayName": "Res Identity Access Management Mfa Token",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_MFA-Token_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_permissions",
+      "displayName": "Res Identity Access Management Permissions",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_Permissions_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_role",
+      "displayName": "Res Identity Access Management Role",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_Role_48.svg"
+    },
+    {
+      "slug": "res_identity_access_management_temporary_security_credential",
+      "displayName": "Res Identity Access Management Temporary Security Credential",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Identity-Access-Management_Temporary-Security-Credential_48.svg"
+    },
+    {
+      "slug": "res_inspector_agent",
+      "displayName": "Res Inspector Agent",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_Amazon-Inspector_Agent_48.svg"
+    },
+    {
+      "slug": "res_key_management_service_external_key_store",
+      "displayName": "Res Key Management Service External Key Store",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Key-Management-Service_External-Key-Store_48.svg"
+    },
+    {
+      "slug": "res_network_firewall_endpoints",
+      "displayName": "Res Network Firewall Endpoints",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Network-Firewall_Endpoints_48.svg"
+    },
+    {
+      "slug": "res_security_hub_finding",
+      "displayName": "Res Security Hub Finding",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Security-Hub_Finding_48.svg"
+    },
+    {
+      "slug": "res_shield_aws_shield_advanced",
+      "displayName": "Res Shield Aws Shield Advanced",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-Shield_AWS-Shield-Advanced_48.svg"
+    },
+    {
+      "slug": "res_waf_bad_bot",
+      "displayName": "Res Waf Bad Bot",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-WAF_Bad-Bot_48.svg"
+    },
+    {
+      "slug": "res_waf_bot",
+      "displayName": "Res Waf Bot",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-WAF_Bot_48.svg"
+    },
+    {
+      "slug": "res_waf_bot_control",
+      "displayName": "Res Waf Bot Control",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-WAF_Bot-Control_48.svg"
+    },
+    {
+      "slug": "res_waf_filtering_rule",
+      "displayName": "Res Waf Filtering Rule",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-WAF_Filtering-Rule_48.svg"
+    },
+    {
+      "slug": "res_waf_labels",
+      "displayName": "Res Waf Labels",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-WAF_Labels_48.svg"
+    },
+    {
+      "slug": "res_waf_managed_rule",
+      "displayName": "Res Waf Managed Rule",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-WAF_Managed-Rule_48.svg"
+    },
+    {
+      "slug": "res_waf_rule",
+      "displayName": "Res Waf Rule",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Security-Identity-Compliance/Res_AWS-WAF_Rule_48.svg"
+    },
+    {
+      "slug": "cloud_directory",
+      "displayName": "Cloud Directory",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_Amazon-Cloud-Directory_64.svg"
+    },
+    {
+      "slug": "cognito",
+      "displayName": "Cognito",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_Amazon-Cognito_64.svg"
+    },
+    {
+      "slug": "detective",
+      "displayName": "Detective",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_Amazon-Detective_64.svg"
+    },
+    {
+      "slug": "guardduty",
+      "displayName": "Guardduty",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_Amazon-GuardDuty_64.svg"
+    },
+    {
+      "slug": "inspector",
+      "displayName": "Inspector",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_Amazon-Inspector_64.svg"
+    },
+    {
+      "slug": "macie",
+      "displayName": "Macie",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_Amazon-Macie_64.svg"
+    },
+    {
+      "slug": "security_lake",
+      "displayName": "Security Lake",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_Amazon-Security-Lake_64.svg"
+    },
+    {
+      "slug": "verified_permissions",
+      "displayName": "Verified Permissions",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_Amazon-Verified-Permissions_64.svg"
+    },
+    {
+      "slug": "artifact",
+      "displayName": "Artifact",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Artifact_64.svg"
+    },
+    {
+      "slug": "audit_manager",
+      "displayName": "Audit Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Audit-Manager_64.svg"
+    },
+    {
+      "slug": "certificate_manager",
+      "displayName": "Certificate Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Certificate-Manager_64.svg"
+    },
+    {
+      "slug": "cloudhsm",
+      "displayName": "Cloudhsm",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-CloudHSM_64.svg"
+    },
+    {
+      "slug": "directory_service",
+      "displayName": "Directory Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Directory-Service_64.svg"
+    },
+    {
+      "slug": "firewall_manager",
+      "displayName": "Firewall Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Firewall-Manager_64.svg"
+    },
+    {
+      "slug": "iam_identity_center",
+      "displayName": "Iam Identity Center",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-IAM-Identity-Center_64.svg"
+    },
+    {
+      "slug": "identity_and_access_management",
+      "displayName": "Identity And Access Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64.svg"
+    },
+    {
+      "slug": "key_management_service",
+      "displayName": "Key Management Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Key-Management-Service_64.svg"
+    },
+    {
+      "slug": "network_firewall",
+      "displayName": "Network Firewall",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Network-Firewall_64.svg"
+    },
+    {
+      "slug": "payment_cryptography",
+      "displayName": "Payment Cryptography",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Payment-Cryptography_64.svg"
+    },
+    {
+      "slug": "private_certificate_authority",
+      "displayName": "Private Certificate Authority",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Private-Certificate-Authority_64.svg"
+    },
+    {
+      "slug": "resource_access_manager",
+      "displayName": "Resource Access Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Resource-Access-Manager_64.svg"
+    },
+    {
+      "slug": "secrets_manager",
+      "displayName": "Secrets Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64.svg"
+    },
+    {
+      "slug": "security_hub",
+      "displayName": "Security Hub",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Security-Hub_64.svg"
+    },
+    {
+      "slug": "shield",
+      "displayName": "Shield",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Shield_64.svg"
+    },
+    {
+      "slug": "signer",
+      "displayName": "Signer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-Signer_64.svg"
+    },
+    {
+      "slug": "waf",
+      "displayName": "Waf",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Security-Identity-Compliance/64/Arch_AWS-WAF_64.svg"
+    }
+  ]
+}

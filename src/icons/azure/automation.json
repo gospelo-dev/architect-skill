@@ -1,0 +1,21 @@
+{
+  "category": "Automation",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "automation_accounts",
+      "displayName": "Automation Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Automation-Accounts.svg"
+    },
+    {
+      "slug": "module",
+      "displayName": "Module",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Module.svg"
+    },
+    {
+      "slug": "scheduler",
+      "displayName": "Scheduler",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Scheduler.svg"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "category": "Business Applications",
+  "count": 16,
+  "icons": [
+    {
+      "slug": "res_pinpoint_journey",
+      "displayName": "Res Pinpoint Journey",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Business-Applications/Res_Amazon-Pinpoint_Journey_48.svg"
+    },
+    {
+      "slug": "res_simple_email_service_email",
+      "displayName": "Res Simple Email Service Email",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Business-Applications/Res_Amazon-Simple-Email-Service_Email_48.svg"
+    },
+    {
+      "slug": "alexa_for_business",
+      "displayName": "Alexa For Business",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Alexa-For-Business_64.svg"
+    },
+    {
+      "slug": "chime",
+      "displayName": "Chime",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-Chime_64.svg"
+    },
+    {
+      "slug": "chime_sdk",
+      "displayName": "Chime Sdk",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-Chime-SDK_64.svg"
+    },
+    {
+      "slug": "connect",
+      "displayName": "Connect",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-Connect_64.svg"
+    },
+    {
+      "slug": "honeycode",
+      "displayName": "Honeycode",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-Honeycode_64.svg"
+    },
+    {
+      "slug": "pinpoint",
+      "displayName": "Pinpoint",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-Pinpoint_64.svg"
+    },
+    {
+      "slug": "pinpoint_apis",
+      "displayName": "Pinpoint Apis",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-Pinpoint-APIs_64.svg"
+    },
+    {
+      "slug": "simple_email_service",
+      "displayName": "Simple Email Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-Simple-Email-Service_64.svg"
+    },
+    {
+      "slug": "workdocs",
+      "displayName": "Workdocs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-WorkDocs_64.svg"
+    },
+    {
+      "slug": "workdocs_sdk",
+      "displayName": "Workdocs Sdk",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-WorkDocs-SDK_64.svg"
+    },
+    {
+      "slug": "workmail",
+      "displayName": "Workmail",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_Amazon-WorkMail_64.svg"
+    },
+    {
+      "slug": "appfabric",
+      "displayName": "Appfabric",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_AWS-AppFabric_64.svg"
+    },
+    {
+      "slug": "supply_chain",
+      "displayName": "Supply Chain",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_AWS-Supply-Chain_64.svg"
+    },
+    {
+      "slug": "wickr",
+      "displayName": "Wickr",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Business-Applications/64/Arch_AWS-Wickr_64.svg"
+    }
+  ]
+}

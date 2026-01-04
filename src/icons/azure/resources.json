@@ -1,0 +1,31 @@
+{
+  "category": "Resources",
+  "count": 5,
+  "icons": [
+    {
+      "slug": "all_resources",
+      "displayName": "All Resources",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/All-Resources.svg"
+    },
+    {
+      "slug": "resource_graph_explorer",
+      "displayName": "Resource Graph Explorer",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Graph-Explorer.svg"
+    },
+    {
+      "slug": "resource_group_list",
+      "displayName": "Resource Group List",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Group-List.svg"
+    },
+    {
+      "slug": "resource_groups",
+      "displayName": "Resource Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Groups.svg"
+    },
+    {
+      "slug": "resource_linked",
+      "displayName": "Resource Linked",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Resource-Linked.svg"
+    }
+  ]
+}

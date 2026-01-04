@@ -1,0 +1,16 @@
+{
+  "category": "Managed Services",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "managed_applications_center",
+      "displayName": "Managed Applications Center",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Managed-Applications-Center.svg"
+    },
+    {
+      "slug": "managed_database",
+      "displayName": "Managed Database",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Managed-Database.svg"
+    }
+  ]
+}

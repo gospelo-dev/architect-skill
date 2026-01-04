@@ -1,0 +1,46 @@
+{
+  "category": "Data Services",
+  "count": 8,
+  "icons": [
+    {
+      "slug": "data_box",
+      "displayName": "Data Box",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Box.svg"
+    },
+    {
+      "slug": "data_box_edge",
+      "displayName": "Data Box Edge",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Box-Edge.svg"
+    },
+    {
+      "slug": "data_factory",
+      "displayName": "Data Factory",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Factory.svg"
+    },
+    {
+      "slug": "data_lake_storage_gen1",
+      "displayName": "Data Lake Storage Gen1",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Lake-Storage-Gen1.svg"
+    },
+    {
+      "slug": "data_lake_store_gen1",
+      "displayName": "Data Lake Store Gen1",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Lake-Store-Gen1.svg"
+    },
+    {
+      "slug": "data_share_invitations",
+      "displayName": "Data Share Invitations",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Share-Invitations.svg"
+    },
+    {
+      "slug": "data_shares",
+      "displayName": "Data Shares",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Data-Shares.svg"
+    },
+    {
+      "slug": "import_export_jobs",
+      "displayName": "Import Export Jobs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Import-Export-Jobs.svg"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "category": "Azure Services",
+  "count": 32,
+  "icons": [
+    {
+      "slug": "abs_member",
+      "displayName": "Abs Member",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/ABS-Member.svg"
+    },
+    {
+      "slug": "azure_active_directory",
+      "displayName": "Azure Active Directory",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Active-Directory.svg"
+    },
+    {
+      "slug": "azure_ad_b2c",
+      "displayName": "Azure Ad B2c",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-B2C.svg"
+    },
+    {
+      "slug": "azure_ad_domain_services",
+      "displayName": "Azure Ad Domain Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-Domain-Services.svg"
+    },
+    {
+      "slug": "azure_ad_roles_and_administrators",
+      "displayName": "Azure Ad Roles And Administrators",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-AD-Roles-and-Administrators.svg"
+    },
+    {
+      "slug": "azure_arc",
+      "displayName": "Azure Arc",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Arc.svg"
+    },
+    {
+      "slug": "azure_blockchain_service",
+      "displayName": "Azure Blockchain Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Blockchain-Service.svg"
+    },
+    {
+      "slug": "azure_cloud_shell",
+      "displayName": "Azure Cloud Shell",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Cloud-Shell.svg"
+    },
+    {
+      "slug": "azure_cosmos_db",
+      "displayName": "Azure Cosmos Db",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Cosmos-DB.svg"
+    },
+    {
+      "slug": "azure_data_catalog",
+      "displayName": "Azure Data Catalog",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Data-Catalog.svg"
+    },
+    {
+      "slug": "azure_data_explorer_clusters",
+      "displayName": "Azure Data Explorer Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Data-Explorer-Clusters.svg"
+    },
+    {
+      "slug": "azure_database_mariadb_server",
+      "displayName": "Azure Database Mariadb Server",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-MariaDB-Server.svg"
+    },
+    {
+      "slug": "azure_database_migration_services",
+      "displayName": "Azure Database Migration Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-Migration-Services.svg"
+    },
+    {
+      "slug": "azure_database_mysql_server",
+      "displayName": "Azure Database Mysql Server",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-MySQL-Server.svg"
+    },
+    {
+      "slug": "azure_database_postgresql_server",
+      "displayName": "Azure Database Postgresql Server",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Database-PostgreSQL-Server.svg"
+    },
+    {
+      "slug": "azure_devops",
+      "displayName": "Azure Devops",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-DevOps.svg"
+    },
+    {
+      "slug": "azure_firewall_manager",
+      "displayName": "Azure Firewall Manager",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Firewall-Manager.svg"
+    },
+    {
+      "slug": "azure_hcp_cache",
+      "displayName": "Azure Hcp Cache",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-HCP-Cache.svg"
+    },
+    {
+      "slug": "azure_lighthouse",
+      "displayName": "Azure Lighthouse",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Lighthouse.svg"
+    },
+    {
+      "slug": "azure_maps_accounts",
+      "displayName": "Azure Maps Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Maps-Accounts.svg"
+    },
+    {
+      "slug": "azure_media_service",
+      "displayName": "Azure Media Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Media-Service.svg"
+    },
+    {
+      "slug": "azure_migrate",
+      "displayName": "Azure Migrate",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Migrate.svg"
+    },
+    {
+      "slug": "azure_netapp_files",
+      "displayName": "Azure Netapp Files",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-NetApp-Files.svg"
+    },
+    {
+      "slug": "azure_sentinel",
+      "displayName": "Azure Sentinel",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Sentinel.svg"
+    },
+    {
+      "slug": "azure_sphere",
+      "displayName": "Azure Sphere",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Sphere.svg"
+    },
+    {
+      "slug": "azure_sql_server_stretch_databases",
+      "displayName": "Azure Sql Server Stretch Databases",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-SQL-Server-Stretch-Databases.svg"
+    },
+    {
+      "slug": "azure_sql_vm",
+      "displayName": "Azure Sql Vm",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-SQL-VM.svg"
+    },
+    {
+      "slug": "azure_stack",
+      "displayName": "Azure Stack",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Stack.svg"
+    },
+    {
+      "slug": "azure_stack_edge",
+      "displayName": "Azure Stack Edge",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Stack-Edge.svg"
+    },
+    {
+      "slug": "azure_synapse_analytics",
+      "displayName": "Azure Synapse Analytics",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Synapse-Analytics.svg"
+    },
+    {
+      "slug": "azure_token_service",
+      "displayName": "Azure Token Service",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Token-Service.svg"
+    },
+    {
+      "slug": "azure_workbooks",
+      "displayName": "Azure Workbooks",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Azure-Workbooks.svg"
+    }
+  ]
+}

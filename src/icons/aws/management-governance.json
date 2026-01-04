@@ -1,0 +1,396 @@
+{
+  "category": "Management & Governance",
+  "count": 78,
+  "icons": [
+    {
+      "slug": "res_cloudformation_change_set",
+      "displayName": "Res Cloudformation Change Set",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-CloudFormation_Change-Set_48.svg"
+    },
+    {
+      "slug": "res_cloudformation_stack",
+      "displayName": "Res Cloudformation Stack",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-CloudFormation_Stack_48.svg"
+    },
+    {
+      "slug": "res_cloudformation_template",
+      "displayName": "Res Cloudformation Template",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-CloudFormation_Template_48.svg"
+    },
+    {
+      "slug": "res_cloudtrail_cloudtrail_lake",
+      "displayName": "Res Cloudtrail Cloudtrail Lake",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-CloudTrail_CloudTrail-Lake_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_alarm",
+      "displayName": "Res Cloudwatch Alarm",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Alarm_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_cross_account_observability",
+      "displayName": "Res Cloudwatch Cross Account Observability",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Cross-account-Observability_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_data_protection",
+      "displayName": "Res Cloudwatch Data Protection",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Data-Protection_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_event_event_based",
+      "displayName": "Res Cloudwatch Event Event Based",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Event-Event-Based_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_event_time_based",
+      "displayName": "Res Cloudwatch Event Time Based",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Event-Time-Based_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_evidently",
+      "displayName": "Res Cloudwatch Evidently",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Evidently_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_logs",
+      "displayName": "Res Cloudwatch Logs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Logs_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_metrics_insights",
+      "displayName": "Res Cloudwatch Metrics Insights",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Metrics-Insights_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_rule",
+      "displayName": "Res Cloudwatch Rule",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Rule_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_rum",
+      "displayName": "Res Cloudwatch Rum",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_RUM_48.svg"
+    },
+    {
+      "slug": "res_cloudwatch_synthetics",
+      "displayName": "Res Cloudwatch Synthetics",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_Amazon-CloudWatch_Synthetics_48.svg"
+    },
+    {
+      "slug": "res_license_manager_application_discovery",
+      "displayName": "Res License Manager Application Discovery",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-License-Manager_Application-Discovery_48.svg"
+    },
+    {
+      "slug": "res_license_manager_license_blending",
+      "displayName": "Res License Manager License Blending",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-License-Manager_License-Blending_48.svg"
+    },
+    {
+      "slug": "res_opsworks_apps",
+      "displayName": "Res Opsworks Apps",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-OpsWorks_Apps_48.svg"
+    },
+    {
+      "slug": "res_opsworks_deployments",
+      "displayName": "Res Opsworks Deployments",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-OpsWorks_Deployments_48.svg"
+    },
+    {
+      "slug": "res_opsworks_instances",
+      "displayName": "Res Opsworks Instances",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-OpsWorks_Instances_48.svg"
+    },
+    {
+      "slug": "res_opsworks_layers",
+      "displayName": "Res Opsworks Layers",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-OpsWorks_Layers_48.svg"
+    },
+    {
+      "slug": "res_opsworks_monitoring",
+      "displayName": "Res Opsworks Monitoring",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-OpsWorks_Monitoring_48.svg"
+    },
+    {
+      "slug": "res_opsworks_permissions",
+      "displayName": "Res Opsworks Permissions",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-OpsWorks_Permissions_48.svg"
+    },
+    {
+      "slug": "res_opsworks_resources",
+      "displayName": "Res Opsworks Resources",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-OpsWorks_Resources_48.svg"
+    },
+    {
+      "slug": "res_opsworks_stack2",
+      "displayName": "Res Opsworks Stack2",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-OpsWorks_Stack2_48.svg"
+    },
+    {
+      "slug": "res_organizations_account",
+      "displayName": "Res Organizations Account",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Organizations_Account_48.svg"
+    },
+    {
+      "slug": "res_organizations_management_account",
+      "displayName": "Res Organizations Management Account",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Organizations_Management-Account_48.svg"
+    },
+    {
+      "slug": "res_organizations_organizational_unit",
+      "displayName": "Res Organizations Organizational Unit",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Organizations_Organizational-Unit_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_application_manager",
+      "displayName": "Res Systems Manager Application Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Application-Manager_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_automation",
+      "displayName": "Res Systems Manager Automation",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Automation_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_change_calendar",
+      "displayName": "Res Systems Manager Change Calendar",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Change-Calendar_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_change_manager",
+      "displayName": "Res Systems Manager Change Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Change-Manager_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_compliance",
+      "displayName": "Res Systems Manager Compliance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Compliance_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_distributor",
+      "displayName": "Res Systems Manager Distributor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Distributor_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_documents",
+      "displayName": "Res Systems Manager Documents",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Documents_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_incident_manager",
+      "displayName": "Res Systems Manager Incident Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Incident-Manager_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_inventory",
+      "displayName": "Res Systems Manager Inventory",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Inventory_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_maintenance_windows",
+      "displayName": "Res Systems Manager Maintenance Windows",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Maintenance-Windows_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_opscenter",
+      "displayName": "Res Systems Manager Opscenter",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_OpsCenter_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_parameter_store",
+      "displayName": "Res Systems Manager Parameter Store",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Parameter-Store_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_patch_manager",
+      "displayName": "Res Systems Manager Patch Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Patch-Manager_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_run_command",
+      "displayName": "Res Systems Manager Run Command",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Run-Command_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_session_manager",
+      "displayName": "Res Systems Manager Session Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_Session-Manager_48.svg"
+    },
+    {
+      "slug": "res_systems_manager_state_manager",
+      "displayName": "Res Systems Manager State Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Systems-Manager_State-Manager_48.svg"
+    },
+    {
+      "slug": "res_trusted_advisor_checklist",
+      "displayName": "Res Trusted Advisor Checklist",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Trusted-Advisor_Checklist_48.svg"
+    },
+    {
+      "slug": "res_trusted_advisor_checklist_cost",
+      "displayName": "Res Trusted Advisor Checklist Cost",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Trusted-Advisor_Checklist-Cost_48.svg"
+    },
+    {
+      "slug": "res_trusted_advisor_checklist_fault_tolerant",
+      "displayName": "Res Trusted Advisor Checklist Fault Tolerant",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Trusted-Advisor_Checklist-Fault-Tolerant_48.svg"
+    },
+    {
+      "slug": "res_trusted_advisor_checklist_performance",
+      "displayName": "Res Trusted Advisor Checklist Performance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Trusted-Advisor_Checklist-Performance_48.svg"
+    },
+    {
+      "slug": "res_trusted_advisor_checklist_security",
+      "displayName": "Res Trusted Advisor Checklist Security",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Management-Governance/Res_AWS-Trusted-Advisor_Checklist-Security_48.svg"
+    },
+    {
+      "slug": "cloudwatch",
+      "displayName": "Cloudwatch",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_Amazon-CloudWatch_64.svg"
+    },
+    {
+      "slug": "managed_grafana",
+      "displayName": "Managed Grafana",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_Amazon-Managed-Grafana_64.svg"
+    },
+    {
+      "slug": "managed_service_for_prometheus",
+      "displayName": "Managed Service For Prometheus",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_Amazon-Managed-Service-for-Prometheus_64.svg"
+    },
+    {
+      "slug": "appconfig",
+      "displayName": "Appconfig",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-AppConfig_64.svg"
+    },
+    {
+      "slug": "application_auto_scaling",
+      "displayName": "Application Auto Scaling",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Application-Auto-Scaling_64.svg"
+    },
+    {
+      "slug": "auto_scaling",
+      "displayName": "Auto Scaling",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Auto-Scaling_64.svg"
+    },
+    {
+      "slug": "backint_agent",
+      "displayName": "Backint Agent",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Backint-Agent_64.svg"
+    },
+    {
+      "slug": "chatbot",
+      "displayName": "Chatbot",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Chatbot_64.svg"
+    },
+    {
+      "slug": "cloudformation",
+      "displayName": "Cloudformation",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64.svg"
+    },
+    {
+      "slug": "cloudtrail",
+      "displayName": "Cloudtrail",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-CloudTrail_64.svg"
+    },
+    {
+      "slug": "config",
+      "displayName": "Config",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Config_64.svg"
+    },
+    {
+      "slug": "control_tower",
+      "displayName": "Control Tower",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Control-Tower_64.svg"
+    },
+    {
+      "slug": "distro_for_opentelemetry",
+      "displayName": "Distro For Opentelemetry",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Distro-for-OpenTelemetry_64.svg"
+    },
+    {
+      "slug": "fault_injection_simulator",
+      "displayName": "Fault Injection Simulator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Fault-Injection-Simulator_64.svg"
+    },
+    {
+      "slug": "health_dashboard",
+      "displayName": "Health Dashboard",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Health-Dashboard_64.svg"
+    },
+    {
+      "slug": "launch_wizard",
+      "displayName": "Launch Wizard",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Launch-Wizard_64.svg"
+    },
+    {
+      "slug": "license_manager",
+      "displayName": "License Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-License-Manager_64.svg"
+    },
+    {
+      "slug": "management_console",
+      "displayName": "Management Console",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Management-Console_64.svg"
+    },
+    {
+      "slug": "opsworks",
+      "displayName": "Opsworks",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-OpsWorks_64.svg"
+    },
+    {
+      "slug": "organizations",
+      "displayName": "Organizations",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Organizations_64.svg"
+    },
+    {
+      "slug": "proton",
+      "displayName": "Proton",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Proton_64.svg"
+    },
+    {
+      "slug": "resilience_hub",
+      "displayName": "Resilience Hub",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Resilience-Hub_64.svg"
+    },
+    {
+      "slug": "resource_explorer",
+      "displayName": "Resource Explorer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Resource-Explorer_64.svg"
+    },
+    {
+      "slug": "service_catalog",
+      "displayName": "Service Catalog",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Service-Catalog_64.svg"
+    },
+    {
+      "slug": "service_management_connector",
+      "displayName": "Service Management Connector",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Service-Management-Connector_64.svg"
+    },
+    {
+      "slug": "systems_manager",
+      "displayName": "Systems Manager",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Systems-Manager_64.svg"
+    },
+    {
+      "slug": "telco_network_builder",
+      "displayName": "Telco Network Builder",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Telco-Network-Builder_64.svg"
+    },
+    {
+      "slug": "trusted_advisor",
+      "displayName": "Trusted Advisor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Trusted-Advisor_64.svg"
+    },
+    {
+      "slug": "well_architected_tool",
+      "displayName": "Well Architected Tool",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Management-Governance/64/Arch_AWS-Well-Architected-Tool_64.svg"
+    }
+  ]
+}

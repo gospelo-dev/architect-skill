@@ -1,0 +1,21 @@
+{
+  "category": "Migration",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "migrate_for_anthos",
+      "displayName": "Migrate For Anthos",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/migrate_for_anthos.svg"
+    },
+    {
+      "slug": "migrate_for_compute_engine",
+      "displayName": "Migrate For Compute Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/migrate_for_compute_engine.svg"
+    },
+    {
+      "slug": "transfer_appliance",
+      "displayName": "Transfer Appliance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/transfer_appliance.svg"
+    }
+  ]
+}

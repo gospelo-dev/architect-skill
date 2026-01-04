@@ -1,0 +1,86 @@
+{
+  "category": "Backend",
+  "count": 16,
+  "icons": [
+    {
+      "slug": "nodedotjs",
+      "displayName": "Node.js",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nodedotjs.svg"
+    },
+    {
+      "slug": "express",
+      "displayName": "Express",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/express.svg"
+    },
+    {
+      "slug": "fastapi",
+      "displayName": "FastAPI",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/fastapi.svg"
+    },
+    {
+      "slug": "flask",
+      "displayName": "Flask",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/flask.svg"
+    },
+    {
+      "slug": "django",
+      "displayName": "Django",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/django.svg"
+    },
+    {
+      "slug": "springboot",
+      "displayName": "Spring Boot",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/springboot.svg"
+    },
+    {
+      "slug": "laravel",
+      "displayName": "Laravel",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/laravel.svg"
+    },
+    {
+      "slug": "rubyonrails",
+      "displayName": "Ruby on Rails",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/rubyonrails.svg"
+    },
+    {
+      "slug": "gin",
+      "displayName": "Gin",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/gin.svg"
+    },
+    {
+      "slug": "fastify",
+      "displayName": "Fastify",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/fastify.svg"
+    },
+    {
+      "slug": "nestjs",
+      "displayName": "NestJS",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nestjs.svg"
+    },
+    {
+      "slug": "koa",
+      "displayName": "Koa",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/koa.svg"
+    },
+    {
+      "slug": "hono",
+      "displayName": "Hono",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/hono.svg"
+    },
+    {
+      "slug": "adonisjs",
+      "displayName": "AdonisJS",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/adonisjs.svg"
+    },
+    {
+      "slug": "actix",
+      "displayName": "Actix",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/actix.svg"
+    },
+    {
+      "slug": "rocket",
+      "displayName": "Rocket",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/rocket.svg"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "category": "App Services",
+  "count": 6,
+  "icons": [
+    {
+      "slug": "app_registrations",
+      "displayName": "App Registrations",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Registrations.svg"
+    },
+    {
+      "slug": "app_service_certificates",
+      "displayName": "App Service Certificates",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Certificates.svg"
+    },
+    {
+      "slug": "app_service_domains",
+      "displayName": "App Service Domains",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Domains.svg"
+    },
+    {
+      "slug": "app_service_environments",
+      "displayName": "App Service Environments",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Environments.svg"
+    },
+    {
+      "slug": "app_service_plans",
+      "displayName": "App Service Plans",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Service-Plans.svg"
+    },
+    {
+      "slug": "app_services",
+      "displayName": "App Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/App-Services.svg"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "category": "Containers",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "anthos",
+      "displayName": "Anthos",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/anthos.svg"
+    },
+    {
+      "slug": "anthos_config_management",
+      "displayName": "Anthos Config Management",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/anthos_config_management.svg"
+    },
+    {
+      "slug": "anthos_service_mesh",
+      "displayName": "Anthos Service Mesh",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/anthos_service_mesh.svg"
+    },
+    {
+      "slug": "container_optimized_os",
+      "displayName": "Container Optimized Os",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/container_optimized_os.svg"
+    },
+    {
+      "slug": "container_registry",
+      "displayName": "Container Registry",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/container_registry.svg"
+    },
+    {
+      "slug": "gke_on-prem",
+      "displayName": "Gke On-Prem",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/gke_on-prem.svg"
+    },
+    {
+      "slug": "kuberun",
+      "displayName": "Kuberun",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/kuberun.svg"
+    }
+  ]
+}

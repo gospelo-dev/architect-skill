@@ -1,0 +1,16 @@
+{
+  "category": "Events",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "eventarc",
+      "displayName": "Eventarc",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/eventarc.svg"
+    },
+    {
+      "slug": "pubsub",
+      "displayName": "Pubsub",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/pubsub.svg"
+    }
+  ]
+}

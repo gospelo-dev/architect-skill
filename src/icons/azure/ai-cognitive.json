@@ -1,0 +1,16 @@
+{
+  "category": "AI & Cognitive",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "bot_services",
+      "displayName": "Bot Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Bot-Services.svg"
+    },
+    {
+      "slug": "cognitive_services",
+      "displayName": "Cognitive Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cognitive-Services.svg"
+    }
+  ]
+}

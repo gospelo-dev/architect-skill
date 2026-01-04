@@ -1,0 +1,251 @@
+{
+  "category": "Database",
+  "count": 49,
+  "icons": [
+    {
+      "slug": "res_aurora_amazon_aurora_instance_alternate",
+      "displayName": "Res Aurora Amazon Aurora Instance Alternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora_Amazon-Aurora-Instance-alternate_48.svg"
+    },
+    {
+      "slug": "res_aurora_amazon_rds_instance",
+      "displayName": "Res Aurora Amazon Rds Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora_Amazon-RDS-Instance_48.svg"
+    },
+    {
+      "slug": "res_aurora_amazon_rds_instance_aternate",
+      "displayName": "Res Aurora Amazon Rds Instance Aternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora_Amazon-RDS-Instance-Aternate_48.svg"
+    },
+    {
+      "slug": "res_aurora_instance",
+      "displayName": "Res Aurora Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-Instance_48.svg"
+    },
+    {
+      "slug": "res_aurora_mariadb_instance",
+      "displayName": "Res Aurora Mariadb Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-MariaDB-Instance_48.svg"
+    },
+    {
+      "slug": "res_aurora_mariadb_instance_alternate",
+      "displayName": "Res Aurora Mariadb Instance Alternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-MariaDB-Instance-Alternate_48.svg"
+    },
+    {
+      "slug": "res_aurora_mysql_instance",
+      "displayName": "Res Aurora Mysql Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-MySQL-Instance_48.svg"
+    },
+    {
+      "slug": "res_aurora_mysql_instance_alternate",
+      "displayName": "Res Aurora Mysql Instance Alternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-MySQL-Instance-Alternate_48.svg"
+    },
+    {
+      "slug": "res_aurora_oracle_instance",
+      "displayName": "Res Aurora Oracle Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-Oracle-Instance_48.svg"
+    },
+    {
+      "slug": "res_aurora_oracle_instance_alternate",
+      "displayName": "Res Aurora Oracle Instance Alternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-Oracle-Instance-Alternate_48.svg"
+    },
+    {
+      "slug": "res_aurora_piops_instance",
+      "displayName": "Res Aurora Piops Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-PIOPS-Instance_48.svg"
+    },
+    {
+      "slug": "res_aurora_postgresql_instance",
+      "displayName": "Res Aurora Postgresql Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-PostgreSQL-Instance_48.svg"
+    },
+    {
+      "slug": "res_aurora_postgresql_instance_alternate",
+      "displayName": "Res Aurora Postgresql Instance Alternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-PostgreSQL-Instance-Alternate_48.svg"
+    },
+    {
+      "slug": "res_aurora_sql_server_instance",
+      "displayName": "Res Aurora Sql Server Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-SQL-Server-Instance_48.svg"
+    },
+    {
+      "slug": "res_aurora_sql_server_instance_alternate",
+      "displayName": "Res Aurora Sql Server Instance Alternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora-SQL-Server-Instance-Alternate_48.svg"
+    },
+    {
+      "slug": "res_aurora_trusted_language_extensions_for_postgresql",
+      "displayName": "Res Aurora Trusted Language Extensions For Postgresql",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-Aurora_Trusted-Language-Extensions-for-PostgreSQL_48.svg"
+    },
+    {
+      "slug": "res_database_migration_service_database_migration_workflow_or_job",
+      "displayName": "Res Database Migration Service Database Migration Workflow Or Job",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_AWS-Database-Migration-Service_Database-migration-workflow-or-job_48.svg"
+    },
+    {
+      "slug": "res_documentdb_elastic_clusters",
+      "displayName": "Res Documentdb Elastic Clusters",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DocumentDB_Elastic-Clusters_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_amazon_dynamodb_accelerator",
+      "displayName": "Res Dynamodb Amazon Dynamodb Accelerator",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Amazon-DynamoDB-Accelerator_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_attribute",
+      "displayName": "Res Dynamodb Attribute",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Attribute_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_attributes",
+      "displayName": "Res Dynamodb Attributes",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Attributes_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_global_secondary_index",
+      "displayName": "Res Dynamodb Global Secondary Index",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Global-secondary-index_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_item",
+      "displayName": "Res Dynamodb Item",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Item_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_items",
+      "displayName": "Res Dynamodb Items",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Items_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_standard_access_table_class",
+      "displayName": "Res Dynamodb Standard Access Table Class",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Standard-Access-Table-Class_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_standard_infrequent_access_table_class",
+      "displayName": "Res Dynamodb Standard Infrequent Access Table Class",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Standard-Infrequent-Access-Table-Class_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_stream",
+      "displayName": "Res Dynamodb Stream",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Stream_48.svg"
+    },
+    {
+      "slug": "res_dynamodb_table",
+      "displayName": "Res Dynamodb Table",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-DynamoDB_Table_48.svg"
+    },
+    {
+      "slug": "res_elasticache_cache_node",
+      "displayName": "Res Elasticache Cache Node",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-ElastiCache_Cache-Node_48.svg"
+    },
+    {
+      "slug": "res_elasticache_elasticache_for_memcached",
+      "displayName": "Res Elasticache Elasticache For Memcached",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-ElastiCache_ElastiCache-for-Memcached_48.svg"
+    },
+    {
+      "slug": "res_elasticache_elasticache_for_redis",
+      "displayName": "Res Elasticache Elasticache For Redis",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-ElastiCache_ElastiCache-for-Redis_48.svg"
+    },
+    {
+      "slug": "res_rds_blue_green_deployments",
+      "displayName": "Res Rds Blue Green Deployments",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-RDS_Blue-Green-Deployments_48.svg"
+    },
+    {
+      "slug": "res_rds_multi_az",
+      "displayName": "Res Rds Multi Az",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-RDS_Multi-AZ_48.svg"
+    },
+    {
+      "slug": "res_rds_multi_az_db_cluster",
+      "displayName": "Res Rds Multi Az Db Cluster",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-RDS_Multi-AZ-DB-Cluster_48.svg"
+    },
+    {
+      "slug": "res_rds_optimized_writes",
+      "displayName": "Res Rds Optimized Writes",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-RDS_Optimized-Writes_48.svg"
+    },
+    {
+      "slug": "res_rds_proxy_instance",
+      "displayName": "Res Rds Proxy Instance",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-RDS-Proxy-Instance_48.svg"
+    },
+    {
+      "slug": "res_rds_proxy_instance_alternate",
+      "displayName": "Res Rds Proxy Instance Alternate",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-RDS-Proxy-Instance-Alternate_48.svg"
+    },
+    {
+      "slug": "res_rds_trusted_language_extensions_for_postgresql",
+      "displayName": "Res Rds Trusted Language Extensions For Postgresql",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Database/Res_Amazon-RDS_Trusted-Language-Extensions-for-PostgreSQL_48.svg"
+    },
+    {
+      "slug": "aurora",
+      "displayName": "Aurora",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-Aurora_64.svg"
+    },
+    {
+      "slug": "documentdb",
+      "displayName": "Documentdb",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-DocumentDB_64.svg"
+    },
+    {
+      "slug": "dynamodb",
+      "displayName": "Dynamodb",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-DynamoDB_64.svg"
+    },
+    {
+      "slug": "elasticache",
+      "displayName": "Elasticache",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-ElastiCache_64.svg"
+    },
+    {
+      "slug": "keyspaces",
+      "displayName": "Keyspaces",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-Keyspaces_64.svg"
+    },
+    {
+      "slug": "memorydb_for_redis",
+      "displayName": "Memorydb For Redis",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-MemoryDB-for-Redis_64.svg"
+    },
+    {
+      "slug": "neptune",
+      "displayName": "Neptune",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-Neptune_64.svg"
+    },
+    {
+      "slug": "rds",
+      "displayName": "Rds",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-RDS_64.svg"
+    },
+    {
+      "slug": "rds_on_vmware",
+      "displayName": "Rds On Vmware",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-RDS-on-VMware_64.svg"
+    },
+    {
+      "slug": "timestream",
+      "displayName": "Timestream",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_Amazon-Timestream_64.svg"
+    },
+    {
+      "slug": "database_migration_service",
+      "displayName": "Database Migration Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Database/64/Arch_AWS-Database-Migration-Service_64.svg"
+    }
+  ]
+}

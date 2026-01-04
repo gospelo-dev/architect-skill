@@ -1,0 +1,11 @@
+{
+  "category": "Gaming",
+  "count": 1,
+  "icons": [
+    {
+      "slug": "game_servers",
+      "displayName": "Game Servers",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/game_servers.svg"
+    }
+  ]
+}

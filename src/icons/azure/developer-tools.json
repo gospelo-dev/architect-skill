@@ -1,0 +1,66 @@
+{
+  "category": "Developer Tools",
+  "count": 12,
+  "icons": [
+    {
+      "slug": "backlog",
+      "displayName": "Backlog",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Backlog.svg"
+    },
+    {
+      "slug": "branch",
+      "displayName": "Branch",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Branch.svg"
+    },
+    {
+      "slug": "bug",
+      "displayName": "Bug",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Bug.svg"
+    },
+    {
+      "slug": "builds",
+      "displayName": "Builds",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Builds.svg"
+    },
+    {
+      "slug": "code",
+      "displayName": "Code",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Code.svg"
+    },
+    {
+      "slug": "commit",
+      "displayName": "Commit",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Commit.svg"
+    },
+    {
+      "slug": "dev_console",
+      "displayName": "Dev Console",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Dev-Console.svg"
+    },
+    {
+      "slug": "devtest_labs",
+      "displayName": "Devtest Labs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/DevTest-Labs.svg"
+    },
+    {
+      "slug": "lab_services",
+      "displayName": "Lab Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Lab-Services.svg"
+    },
+    {
+      "slug": "powershell",
+      "displayName": "Powershell",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Powershell.svg"
+    },
+    {
+      "slug": "process_explorer",
+      "displayName": "Process Explorer",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Process-Explorer.svg"
+    },
+    {
+      "slug": "tfs_vc_repository",
+      "displayName": "Tfs Vc Repository",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/TFS-VC-Repository.svg"
+    }
+  ]
+}

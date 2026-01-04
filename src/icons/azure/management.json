@@ -1,0 +1,71 @@
+{
+  "category": "Management",
+  "count": 13,
+  "icons": [
+    {
+      "slug": "advisor",
+      "displayName": "Advisor",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Advisor.svg"
+    },
+    {
+      "slug": "blueprints",
+      "displayName": "Blueprints",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Blueprints.svg"
+    },
+    {
+      "slug": "capacity",
+      "displayName": "Capacity",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Capacity.svg"
+    },
+    {
+      "slug": "management_groups",
+      "displayName": "Management Groups",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Management-Groups.svg"
+    },
+    {
+      "slug": "management_portal",
+      "displayName": "Management Portal",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Management-Portal.svg"
+    },
+    {
+      "slug": "my_customers",
+      "displayName": "My Customers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/My-Customers.svg"
+    },
+    {
+      "slug": "plans",
+      "displayName": "Plans",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Plans.svg"
+    },
+    {
+      "slug": "policy",
+      "displayName": "Policy",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Policy.svg"
+    },
+    {
+      "slug": "reservations",
+      "displayName": "Reservations",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Reservations.svg"
+    },
+    {
+      "slug": "solutions",
+      "displayName": "Solutions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Solutions.svg"
+    },
+    {
+      "slug": "subscriptions",
+      "displayName": "Subscriptions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Subscriptions.svg"
+    },
+    {
+      "slug": "tags",
+      "displayName": "Tags",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Tags.svg"
+    },
+    {
+      "slug": "updates",
+      "displayName": "Updates",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Updates.svg"
+    }
+  ]
+}

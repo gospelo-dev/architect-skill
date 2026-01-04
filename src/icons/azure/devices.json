@@ -1,0 +1,26 @@
+{
+  "category": "Devices",
+  "count": 4,
+  "icons": [
+    {
+      "slug": "device_provisioning_services",
+      "displayName": "Device Provisioning Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Provisioning-Services.svg"
+    },
+    {
+      "slug": "device_security_apple",
+      "displayName": "Device Security Apple",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Apple.svg"
+    },
+    {
+      "slug": "device_security_google",
+      "displayName": "Device Security Google",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Google.svg"
+    },
+    {
+      "slug": "device_security_windows",
+      "displayName": "Device Security Windows",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Device-Security-Windows.svg"
+    }
+  ]
+}

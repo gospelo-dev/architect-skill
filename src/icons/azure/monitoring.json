@@ -1,0 +1,51 @@
+{
+  "category": "Monitoring",
+  "count": 9,
+  "icons": [
+    {
+      "slug": "activity_log",
+      "displayName": "Activity Log",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Activity-Log.svg"
+    },
+    {
+      "slug": "alerts",
+      "displayName": "Alerts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Alerts.svg"
+    },
+    {
+      "slug": "diagnostics_settings",
+      "displayName": "Diagnostics Settings",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Diagnostics-Settings.svg"
+    },
+    {
+      "slug": "log_analytics_workspaces",
+      "displayName": "Log Analytics Workspaces",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Log-Analytics-Workspaces.svg"
+    },
+    {
+      "slug": "log_streaming",
+      "displayName": "Log Streaming",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Log-Streaming.svg"
+    },
+    {
+      "slug": "metrics",
+      "displayName": "Metrics",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Metrics.svg"
+    },
+    {
+      "slug": "monitor",
+      "displayName": "Monitor",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Monitor.svg"
+    },
+    {
+      "slug": "operation_log_(classic)",
+      "displayName": "Operation Log (Classic)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Operation-Log-(Classic).svg"
+    },
+    {
+      "slug": "workbooks",
+      "displayName": "Workbooks",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workbooks.svg"
+    }
+  ]
+}

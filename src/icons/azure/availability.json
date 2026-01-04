@@ -1,0 +1,11 @@
+{
+  "category": "Availability",
+  "count": 1,
+  "icons": [
+    {
+      "slug": "availability_sets",
+      "displayName": "Availability Sets",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Availability-Sets.svg"
+    }
+  ]
+}

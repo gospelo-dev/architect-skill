@@ -1,0 +1,36 @@
+{
+  "category": "IoT",
+  "count": 6,
+  "icons": [
+    {
+      "slug": "digital_twins",
+      "displayName": "Digital Twins",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Digital-Twins.svg"
+    },
+    {
+      "slug": "iot_central_applications",
+      "displayName": "Iot Central Applications",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Central-Applications.svg"
+    },
+    {
+      "slug": "iot_edge",
+      "displayName": "Iot Edge",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Edge.svg"
+    },
+    {
+      "slug": "iot_hub",
+      "displayName": "Iot Hub",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/IoT-Hub.svg"
+    },
+    {
+      "slug": "journey_hub",
+      "displayName": "Journey Hub",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Journey-Hub.svg"
+    },
+    {
+      "slug": "rtos",
+      "displayName": "Rtos",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/RTOS.svg"
+    }
+  ]
+}

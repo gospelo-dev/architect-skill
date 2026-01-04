@@ -1,0 +1,16 @@
+{
+  "category": "Integration",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "connectors",
+      "displayName": "Connectors",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/connectors.svg"
+    },
+    {
+      "slug": "workflows",
+      "displayName": "Workflows",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/workflows.svg"
+    }
+  ]
+}

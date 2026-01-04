@@ -1,0 +1,41 @@
+{
+  "category": "Web Services",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "static_apps",
+      "displayName": "Static Apps",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Static-Apps.svg"
+    },
+    {
+      "slug": "web_application_firewall_policies(waf)",
+      "displayName": "Web Application Firewall Policies(Waf)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Application-Firewall-Policies(WAF).svg"
+    },
+    {
+      "slug": "web_environment",
+      "displayName": "Web Environment",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Environment.svg"
+    },
+    {
+      "slug": "web_slots",
+      "displayName": "Web Slots",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Slots.svg"
+    },
+    {
+      "slug": "web_test",
+      "displayName": "Web Test",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Web-Test.svg"
+    },
+    {
+      "slug": "website_power",
+      "displayName": "Website Power",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Website-Power.svg"
+    },
+    {
+      "slug": "website_staging",
+      "displayName": "Website Staging",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Website-Staging.svg"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "category": "Solutions",
+  "count": 3,
+  "icons": [
+    {
+      "slug": "cloud_for_marketing",
+      "displayName": "Cloud For Marketing",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_for_marketing.svg"
+    },
+    {
+      "slug": "fleet_engine",
+      "displayName": "Fleet Engine",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/fleet_engine.svg"
+    },
+    {
+      "slug": "retail_api",
+      "displayName": "Retail Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/retail_api.svg"
+    }
+  ]
+}

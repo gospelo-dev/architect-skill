@@ -1,0 +1,2194 @@
+{
+  "title": "Google Cloud Icon Catalog",
+  "subtitle": "All Services by Category (216 icons)",
+  "background": {
+    "type": "gradient",
+    "startColor": "#ffffff",
+    "endColor": "#fff3e0",
+    "direction": "south"
+  },
+  "nodes": [
+    {
+      "id": "cat_ai___ml",
+      "type": "label",
+      "label": "AI & ML (30)",
+      "position": [
+        50,
+        80
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_advanced_agent_modeling",
+      "icon": "google-cloud:advanced_agent_modeling",
+      "label": "google-cloud\n:advanced_ag\nent_modeling",
+      "position": [
+        50,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_advanced_solutions_lab",
+      "icon": "google-cloud:advanced_solutions_lab",
+      "label": "google-cloud\n:advanced_so\nlutions_lab",
+      "position": [
+        145,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_agent_assist",
+      "icon": "google-cloud:agent_assist",
+      "label": "google-cloud\n:agent_assis\nt",
+      "position": [
+        240,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_ai_hub",
+      "icon": "google-cloud:ai_hub",
+      "label": "google-cloud\n:ai_hub",
+      "position": [
+        335,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_ai_platform",
+      "icon": "google-cloud:ai_platform",
+      "label": "google-cloud\n:ai_platform",
+      "position": [
+        430,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_ai_platform_unified",
+      "icon": "google-cloud:ai_platform_unified",
+      "label": "google-cloud\n:ai_platform\n_unified",
+      "position": [
+        525,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_automl",
+      "icon": "google-cloud:automl",
+      "label": "google-cloud\n:automl",
+      "position": [
+        620,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_automl_natural_language",
+      "icon": "google-cloud:automl_natural_language",
+      "label": "google-cloud\n:automl_natu\nral_language",
+      "position": [
+        715,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_automl_tables",
+      "icon": "google-cloud:automl_tables",
+      "label": "google-cloud\n:automl_tabl\nes",
+      "position": [
+        810,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_automl_translation",
+      "icon": "google-cloud:automl_translation",
+      "label": "google-cloud\n:automl_tran\nslation",
+      "position": [
+        905,
+        115
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_automl_video_intelligence",
+      "icon": "google-cloud:automl_video_intelligence",
+      "label": "google-cloud\n:automl_vide\no_intelligen\nce",
+      "position": [
+        50,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_automl_vision",
+      "icon": "google-cloud:automl_vision",
+      "label": "google-cloud\n:automl_visi\non",
+      "position": [
+        145,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_cloud_inference_api",
+      "icon": "google-cloud:cloud_inference_api",
+      "label": "google-cloud\n:cloud_infer\nence_api",
+      "position": [
+        240,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_cloud_jobs_api",
+      "icon": "google-cloud:cloud_jobs_api",
+      "label": "google-cloud\n:cloud_jobs_\napi",
+      "position": [
+        335,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_cloud_natural_language_api",
+      "icon": "google-cloud:cloud_natural_language_api",
+      "label": "google-cloud\n:cloud_natur\nal_language_\napi",
+      "position": [
+        430,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_cloud_optimization_ai",
+      "icon": "google-cloud:cloud_optimization_ai",
+      "label": "google-cloud\n:cloud_optim\nization_ai",
+      "position": [
+        525,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_cloud_optimization_ai_-_fleet_routing_api",
+      "icon": "google-cloud:cloud_optimization_ai_-_fleet_routing_api",
+      "label": "google-cloud\n:cloud_optim\nization_ai_-\n_fleet_routi\nng_api",
+      "position": [
+        620,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_cloud_translation_api",
+      "icon": "google-cloud:cloud_translation_api",
+      "label": "google-cloud\n:cloud_trans\nlation_api",
+      "position": [
+        715,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_cloud_vision_api",
+      "icon": "google-cloud:cloud_vision_api",
+      "label": "google-cloud\n:cloud_visio\nn_api",
+      "position": [
+        810,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_dialogflow",
+      "icon": "google-cloud:dialogflow",
+      "label": "google-cloud\n:dialogflow",
+      "position": [
+        905,
+        255
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_dialogflow_cx",
+      "icon": "google-cloud:dialogflow_cx",
+      "label": "google-cloud\n:dialogflow_\ncx",
+      "position": [
+        50,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_dialogflow_insights",
+      "icon": "google-cloud:dialogflow_insights",
+      "label": "google-cloud\n:dialogflow_\ninsights",
+      "position": [
+        145,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_document_ai",
+      "icon": "google-cloud:document_ai",
+      "label": "google-cloud\n:document_ai",
+      "position": [
+        240,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_recommendations_ai",
+      "icon": "google-cloud:recommendations_ai",
+      "label": "google-cloud\n:recommendat\nions_ai",
+      "position": [
+        335,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_speech-to-text",
+      "icon": "google-cloud:speech-to-text",
+      "label": "google-cloud\n:speech-to-t\next",
+      "position": [
+        430,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_tensorflow_enterprise",
+      "icon": "google-cloud:tensorflow_enterprise",
+      "label": "google-cloud\n:tensorflow_\nenterprise",
+      "position": [
+        525,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_text-to-speech",
+      "icon": "google-cloud:text-to-speech",
+      "label": "google-cloud\n:text-to-spe\nech",
+      "position": [
+        620,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_vertexai",
+      "icon": "google-cloud:vertexai",
+      "label": "google-cloud\n:vertexai",
+      "position": [
+        715,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_video_intelligence_api",
+      "icon": "google-cloud:video_intelligence_api",
+      "label": "google-cloud\n:video_intel\nligence_api",
+      "position": [
+        810,
+        395
+      ]
+    },
+    {
+      "id": "google-cloud_ai___ml_visual_inspection",
+      "icon": "google-cloud:visual_inspection",
+      "label": "google-cloud\n:visual_insp\nection",
+      "position": [
+        905,
+        395
+      ]
+    },
+    {
+      "id": "cat_analytics",
+      "type": "label",
+      "label": "Analytics (5)",
+      "position": [
+        50,
+        575
+      ]
+    },
+    {
+      "id": "google-cloud_analytics_analytics_hub",
+      "icon": "google-cloud:analytics_hub",
+      "label": "google-cloud\n:analytics_h\nub",
+      "position": [
+        50,
+        610
+      ]
+    },
+    {
+      "id": "google-cloud_analytics_bigquery",
+      "icon": "google-cloud:bigquery",
+      "label": "google-cloud\n:bigquery",
+      "position": [
+        145,
+        610
+      ]
+    },
+    {
+      "id": "google-cloud_analytics_looker",
+      "icon": "google-cloud:looker",
+      "label": "google-cloud\n:looker",
+      "position": [
+        240,
+        610
+      ]
+    },
+    {
+      "id": "google-cloud_analytics_real-world_insights",
+      "icon": "google-cloud:real-world_insights",
+      "label": "google-cloud\n:real-world_\ninsights",
+      "position": [
+        335,
+        610
+      ]
+    },
+    {
+      "id": "google-cloud_analytics_stream_suite",
+      "icon": "google-cloud:stream_suite",
+      "label": "google-cloud\n:stream_suit\ne",
+      "position": [
+        430,
+        610
+      ]
+    },
+    {
+      "id": "cat_api_services",
+      "type": "label",
+      "label": "API Services (9)",
+      "position": [
+        50,
+        790
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_api",
+      "icon": "google-cloud:api",
+      "label": "google-cloud\n:api",
+      "position": [
+        50,
+        825
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_api_analytics",
+      "icon": "google-cloud:api_analytics",
+      "label": "google-cloud\n:api_analyti\ncs",
+      "position": [
+        145,
+        825
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_api_monetization",
+      "icon": "google-cloud:api_monetization",
+      "label": "google-cloud\n:api_monetiz\nation",
+      "position": [
+        240,
+        825
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_apigee_api_platform",
+      "icon": "google-cloud:apigee_api_platform",
+      "label": "google-cloud\n:apigee_api_\nplatform",
+      "position": [
+        335,
+        825
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_apigee_sense",
+      "icon": "google-cloud:apigee_sense",
+      "label": "google-cloud\n:apigee_sens\ne",
+      "position": [
+        430,
+        825
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_cloud_api_gateway",
+      "icon": "google-cloud:cloud_api_gateway",
+      "label": "google-cloud\n:cloud_api_g\nateway",
+      "position": [
+        525,
+        825
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_cloud_apis",
+      "icon": "google-cloud:cloud_apis",
+      "label": "google-cloud\n:cloud_apis",
+      "position": [
+        620,
+        825
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_cloud_endpoints",
+      "icon": "google-cloud:cloud_endpoints",
+      "label": "google-cloud\n:cloud_endpo\nints",
+      "position": [
+        715,
+        825
+      ]
+    },
+    {
+      "id": "google-cloud_api_services_producer_portal",
+      "icon": "google-cloud:producer_portal",
+      "label": "google-cloud\n:producer_po\nrtal",
+      "position": [
+        810,
+        825
+      ]
+    },
+    {
+      "id": "cat_compute",
+      "type": "label",
+      "label": "Compute (16)",
+      "position": [
+        50,
+        1005
+      ]
+    },
+    {
+      "id": "google-cloud_compute_app_engine",
+      "icon": "google-cloud:app_engine",
+      "label": "google-cloud\n:app_engine",
+      "position": [
+        50,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_bare_metal_solutions",
+      "icon": "google-cloud:bare_metal_solutions",
+      "label": "google-cloud\n:bare_metal_\nsolutions",
+      "position": [
+        145,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_batch",
+      "icon": "google-cloud:batch",
+      "label": "google-cloud\n:batch",
+      "position": [
+        240,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_cloud_functions",
+      "icon": "google-cloud:cloud_functions",
+      "label": "google-cloud\n:cloud_funct\nions",
+      "position": [
+        335,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_cloud_gpu",
+      "icon": "google-cloud:cloud_gpu",
+      "label": "google-cloud\n:cloud_gpu",
+      "position": [
+        430,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_cloud_run",
+      "icon": "google-cloud:cloud_run",
+      "label": "google-cloud\n:cloud_run",
+      "position": [
+        525,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_cloud_run_for_anthos",
+      "icon": "google-cloud:cloud_run_for_anthos",
+      "label": "google-cloud\n:cloud_run_f\nor_anthos",
+      "position": [
+        620,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_cloud_scheduler",
+      "icon": "google-cloud:cloud_scheduler",
+      "label": "google-cloud\n:cloud_sched\nuler",
+      "position": [
+        715,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_cloud_tasks",
+      "icon": "google-cloud:cloud_tasks",
+      "label": "google-cloud\n:cloud_tasks",
+      "position": [
+        810,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_cloud_tpu",
+      "icon": "google-cloud:cloud_tpu",
+      "label": "google-cloud\n:cloud_tpu",
+      "position": [
+        905,
+        1040
+      ]
+    },
+    {
+      "id": "google-cloud_compute_compute_engine",
+      "icon": "google-cloud:compute_engine",
+      "label": "google-cloud\n:compute_eng\nine",
+      "position": [
+        50,
+        1180
+      ]
+    },
+    {
+      "id": "google-cloud_compute_os_configuration_management",
+      "icon": "google-cloud:os_configuration_management",
+      "label": "google-cloud\n:os_configur\nation_manage\nment",
+      "position": [
+        145,
+        1180
+      ]
+    },
+    {
+      "id": "google-cloud_compute_os_inventory_management",
+      "icon": "google-cloud:os_inventory_management",
+      "label": "google-cloud\n:os_inventor\ny_management",
+      "position": [
+        240,
+        1180
+      ]
+    },
+    {
+      "id": "google-cloud_compute_os_patch_management",
+      "icon": "google-cloud:os_patch_management",
+      "label": "google-cloud\n:os_patch_ma\nnagement",
+      "position": [
+        335,
+        1180
+      ]
+    },
+    {
+      "id": "google-cloud_compute_quantum_engine",
+      "icon": "google-cloud:quantum_engine",
+      "label": "google-cloud\n:quantum_eng\nine",
+      "position": [
+        430,
+        1180
+      ]
+    },
+    {
+      "id": "google-cloud_compute_vmware_engine",
+      "icon": "google-cloud:vmware_engine",
+      "label": "google-cloud\n:vmware_engi\nne",
+      "position": [
+        525,
+        1180
+      ]
+    },
+    {
+      "id": "cat_containers",
+      "type": "label",
+      "label": "Containers (7)",
+      "position": [
+        50,
+        1360
+      ]
+    },
+    {
+      "id": "google-cloud_containers_anthos",
+      "icon": "google-cloud:anthos",
+      "label": "google-cloud\n:anthos",
+      "position": [
+        50,
+        1395
+      ]
+    },
+    {
+      "id": "google-cloud_containers_anthos_config_management",
+      "icon": "google-cloud:anthos_config_management",
+      "label": "google-cloud\n:anthos_conf\nig_managemen\nt",
+      "position": [
+        145,
+        1395
+      ]
+    },
+    {
+      "id": "google-cloud_containers_anthos_service_mesh",
+      "icon": "google-cloud:anthos_service_mesh",
+      "label": "google-cloud\n:anthos_serv\nice_mesh",
+      "position": [
+        240,
+        1395
+      ]
+    },
+    {
+      "id": "google-cloud_containers_container_optimized_os",
+      "icon": "google-cloud:container_optimized_os",
+      "label": "google-cloud\n:container_o\nptimized_os",
+      "position": [
+        335,
+        1395
+      ]
+    },
+    {
+      "id": "google-cloud_containers_container_registry",
+      "icon": "google-cloud:container_registry",
+      "label": "google-cloud\n:container_r\negistry",
+      "position": [
+        430,
+        1395
+      ]
+    },
+    {
+      "id": "google-cloud_containers_gke_on-prem",
+      "icon": "google-cloud:gke_on-prem",
+      "label": "google-cloud\n:gke_on-prem",
+      "position": [
+        525,
+        1395
+      ]
+    },
+    {
+      "id": "google-cloud_containers_kuberun",
+      "icon": "google-cloud:kuberun",
+      "label": "google-cloud\n:kuberun",
+      "position": [
+        620,
+        1395
+      ]
+    },
+    {
+      "id": "cat_data_services",
+      "type": "label",
+      "label": "Data Services (20)",
+      "position": [
+        50,
+        1575
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_catalog",
+      "icon": "google-cloud:catalog",
+      "label": "google-cloud\n:catalog",
+      "position": [
+        50,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_cloud_composer",
+      "icon": "google-cloud:cloud_composer",
+      "label": "google-cloud\n:cloud_compo\nser",
+      "position": [
+        145,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_cloud_data_fusion",
+      "icon": "google-cloud:cloud_data_fusion",
+      "label": "google-cloud\n:cloud_data_\nfusion",
+      "position": [
+        240,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_data_catalog",
+      "icon": "google-cloud:data_catalog",
+      "label": "google-cloud\n:data_catalo\ng",
+      "position": [
+        335,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_data_labeling",
+      "icon": "google-cloud:data_labeling",
+      "label": "google-cloud\n:data_labeli\nng",
+      "position": [
+        430,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_data_layers",
+      "icon": "google-cloud:data_layers",
+      "label": "google-cloud\n:data_layers",
+      "position": [
+        525,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_data_loss_prevention_api",
+      "icon": "google-cloud:data_loss_prevention_api",
+      "label": "google-cloud\n:data_loss_p\nrevention_ap\ni",
+      "position": [
+        620,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_data_qna",
+      "icon": "google-cloud:data_qna",
+      "label": "google-cloud\n:data_qna",
+      "position": [
+        715,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_data_studio",
+      "icon": "google-cloud:data_studio",
+      "label": "google-cloud\n:data_studio",
+      "position": [
+        810,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_data_transfer",
+      "icon": "google-cloud:data_transfer",
+      "label": "google-cloud\n:data_transf\ner",
+      "position": [
+        905,
+        1610
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_dataflow",
+      "icon": "google-cloud:dataflow",
+      "label": "google-cloud\n:dataflow",
+      "position": [
+        50,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_datalab",
+      "icon": "google-cloud:datalab",
+      "label": "google-cloud\n:datalab",
+      "position": [
+        145,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_dataplex",
+      "icon": "google-cloud:dataplex",
+      "label": "google-cloud\n:dataplex",
+      "position": [
+        240,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_datapol",
+      "icon": "google-cloud:datapol",
+      "label": "google-cloud\n:datapol",
+      "position": [
+        335,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_dataprep",
+      "icon": "google-cloud:dataprep",
+      "label": "google-cloud\n:dataprep",
+      "position": [
+        430,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_dataproc",
+      "icon": "google-cloud:dataproc",
+      "label": "google-cloud\n:dataproc",
+      "position": [
+        525,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_dataproc_metastore",
+      "icon": "google-cloud:dataproc_metastore",
+      "label": "google-cloud\n:dataproc_me\ntastore",
+      "position": [
+        620,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_datashare",
+      "icon": "google-cloud:datashare",
+      "label": "google-cloud\n:datashare",
+      "position": [
+        715,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_datastream",
+      "icon": "google-cloud:datastream",
+      "label": "google-cloud\n:datastream",
+      "position": [
+        810,
+        1750
+      ]
+    },
+    {
+      "id": "google-cloud_data_services_transfer",
+      "icon": "google-cloud:transfer",
+      "label": "google-cloud\n:transfer",
+      "position": [
+        905,
+        1750
+      ]
+    },
+    {
+      "id": "cat_databases",
+      "type": "label",
+      "label": "Databases (7)",
+      "position": [
+        50,
+        1930
+      ]
+    },
+    {
+      "id": "google-cloud_databases_bigtable",
+      "icon": "google-cloud:bigtable",
+      "label": "google-cloud\n:bigtable",
+      "position": [
+        50,
+        1965
+      ]
+    },
+    {
+      "id": "google-cloud_databases_cloud_spanner",
+      "icon": "google-cloud:cloud_spanner",
+      "label": "google-cloud\n:cloud_spann\ner",
+      "position": [
+        145,
+        1965
+      ]
+    },
+    {
+      "id": "google-cloud_databases_cloud_sql",
+      "icon": "google-cloud:cloud_sql",
+      "label": "google-cloud\n:cloud_sql",
+      "position": [
+        240,
+        1965
+      ]
+    },
+    {
+      "id": "google-cloud_databases_database_migration_service",
+      "icon": "google-cloud:database_migration_service",
+      "label": "google-cloud\n:database_mi\ngration_serv\nice",
+      "position": [
+        335,
+        1965
+      ]
+    },
+    {
+      "id": "google-cloud_databases_datastore",
+      "icon": "google-cloud:datastore",
+      "label": "google-cloud\n:datastore",
+      "position": [
+        430,
+        1965
+      ]
+    },
+    {
+      "id": "google-cloud_databases_firestore",
+      "icon": "google-cloud:firestore",
+      "label": "google-cloud\n:firestore",
+      "position": [
+        525,
+        1965
+      ]
+    },
+    {
+      "id": "google-cloud_databases_memorystore",
+      "icon": "google-cloud:memorystore",
+      "label": "google-cloud\n:memorystore",
+      "position": [
+        620,
+        1965
+      ]
+    },
+    {
+      "id": "cat_developer_tools",
+      "type": "label",
+      "label": "Developer Tools (11)",
+      "position": [
+        50,
+        2145
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_artifact_registry",
+      "icon": "google-cloud:artifact_registry",
+      "label": "google-cloud\n:artifact_re\ngistry",
+      "position": [
+        50,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_cloud_build",
+      "icon": "google-cloud:cloud_build",
+      "label": "google-cloud\n:cloud_build",
+      "position": [
+        145,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_cloud_code",
+      "icon": "google-cloud:cloud_code",
+      "label": "google-cloud\n:cloud_code",
+      "position": [
+        240,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_cloud_deploy",
+      "icon": "google-cloud:cloud_deploy",
+      "label": "google-cloud\n:cloud_deplo\ny",
+      "position": [
+        335,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_cloud_shell",
+      "icon": "google-cloud:cloud_shell",
+      "label": "google-cloud\n:cloud_shell",
+      "position": [
+        430,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_cloud_test_lab",
+      "icon": "google-cloud:cloud_test_lab",
+      "label": "google-cloud\n:cloud_test_\nlab",
+      "position": [
+        525,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_debugger",
+      "icon": "google-cloud:debugger",
+      "label": "google-cloud\n:debugger",
+      "position": [
+        620,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_developer_portal",
+      "icon": "google-cloud:developer_portal",
+      "label": "google-cloud\n:developer_p\nortal",
+      "position": [
+        715,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_profiler",
+      "icon": "google-cloud:profiler",
+      "label": "google-cloud\n:profiler",
+      "position": [
+        810,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_release_notes",
+      "icon": "google-cloud:release_notes",
+      "label": "google-cloud\n:release_not\nes",
+      "position": [
+        905,
+        2180
+      ]
+    },
+    {
+      "id": "google-cloud_developer_tools_tools_for_powershell",
+      "icon": "google-cloud:tools_for_powershell",
+      "label": "google-cloud\n:tools_for_p\nowershell",
+      "position": [
+        50,
+        2320
+      ]
+    },
+    {
+      "id": "cat_events",
+      "type": "label",
+      "label": "Events (2)",
+      "position": [
+        50,
+        2500
+      ]
+    },
+    {
+      "id": "google-cloud_events_eventarc",
+      "icon": "google-cloud:eventarc",
+      "label": "google-cloud\n:eventarc",
+      "position": [
+        50,
+        2535
+      ]
+    },
+    {
+      "id": "google-cloud_events_pubsub",
+      "icon": "google-cloud:pubsub",
+      "label": "google-cloud\n:pubsub",
+      "position": [
+        145,
+        2535
+      ]
+    },
+    {
+      "id": "cat_gaming",
+      "type": "label",
+      "label": "Gaming (1)",
+      "position": [
+        50,
+        2715
+      ]
+    },
+    {
+      "id": "google-cloud_gaming_game_servers",
+      "icon": "google-cloud:game_servers",
+      "label": "google-cloud\n:game_server\ns",
+      "position": [
+        50,
+        2750
+      ]
+    },
+    {
+      "id": "cat_general",
+      "type": "label",
+      "label": "General (7)",
+      "position": [
+        50,
+        2930
+      ]
+    },
+    {
+      "id": "google-cloud_general_cloud_generic",
+      "icon": "google-cloud:cloud_generic",
+      "label": "google-cloud\n:cloud_gener\nic",
+      "position": [
+        50,
+        2965
+      ]
+    },
+    {
+      "id": "google-cloud_general_early_access_center",
+      "icon": "google-cloud:early_access_center",
+      "label": "google-cloud\n:early_acces\ns_center",
+      "position": [
+        145,
+        2965
+      ]
+    },
+    {
+      "id": "google-cloud_general_free_trial",
+      "icon": "google-cloud:free_trial",
+      "label": "google-cloud\n:free_trial",
+      "position": [
+        240,
+        2965
+      ]
+    },
+    {
+      "id": "google-cloud_general_home",
+      "icon": "google-cloud:home",
+      "label": "google-cloud\n:home",
+      "position": [
+        335,
+        2965
+      ]
+    },
+    {
+      "id": "google-cloud_general_launcher",
+      "icon": "google-cloud:launcher",
+      "label": "google-cloud\n:launcher",
+      "position": [
+        430,
+        2965
+      ]
+    },
+    {
+      "id": "google-cloud_general_my_cloud",
+      "icon": "google-cloud:my_cloud",
+      "label": "google-cloud\n:my_cloud",
+      "position": [
+        525,
+        2965
+      ]
+    },
+    {
+      "id": "google-cloud_general_onboarding",
+      "icon": "google-cloud:onboarding",
+      "label": "google-cloud\n:onboarding",
+      "position": [
+        620,
+        2965
+      ]
+    },
+    {
+      "id": "cat_google_services",
+      "type": "label",
+      "label": "Google Services (3)",
+      "position": [
+        50,
+        3145
+      ]
+    },
+    {
+      "id": "google-cloud_google_services_google_cloud_marketplace",
+      "icon": "google-cloud:google_cloud_marketplace",
+      "label": "google-cloud\n:google_clou\nd_marketplac\ne",
+      "position": [
+        50,
+        3180
+      ]
+    },
+    {
+      "id": "google-cloud_google_services_google_kubernetes_engine",
+      "icon": "google-cloud:google_kubernetes_engine",
+      "label": "google-cloud\n:google_kube\nrnetes_engin\ne",
+      "position": [
+        145,
+        3180
+      ]
+    },
+    {
+      "id": "google-cloud_google_services_google_maps_platform",
+      "icon": "google-cloud:google_maps_platform",
+      "label": "google-cloud\n:google_maps\n_platform",
+      "position": [
+        240,
+        3180
+      ]
+    },
+    {
+      "id": "cat_healthcare",
+      "type": "label",
+      "label": "Healthcare (4)",
+      "position": [
+        50,
+        3360
+      ]
+    },
+    {
+      "id": "google-cloud_healthcare_cloud_healthcare_api",
+      "icon": "google-cloud:cloud_healthcare_api",
+      "label": "google-cloud\n:cloud_healt\nhcare_api",
+      "position": [
+        50,
+        3395
+      ]
+    },
+    {
+      "id": "google-cloud_healthcare_cloud_healthcare_marketplace",
+      "icon": "google-cloud:cloud_healthcare_marketplace",
+      "label": "google-cloud\n:cloud_healt\nhcare_market\nplace",
+      "position": [
+        145,
+        3395
+      ]
+    },
+    {
+      "id": "google-cloud_healthcare_genomics",
+      "icon": "google-cloud:genomics",
+      "label": "google-cloud\n:genomics",
+      "position": [
+        240,
+        3395
+      ]
+    },
+    {
+      "id": "google-cloud_healthcare_healthcare_nlp_api",
+      "icon": "google-cloud:healthcare_nlp_api",
+      "label": "google-cloud\n:healthcare_\nnlp_api",
+      "position": [
+        335,
+        3395
+      ]
+    },
+    {
+      "id": "cat_identity",
+      "type": "label",
+      "label": "Identity (7)",
+      "position": [
+        50,
+        3575
+      ]
+    },
+    {
+      "id": "google-cloud_identity_identity_and_access_management",
+      "icon": "google-cloud:identity_and_access_management",
+      "label": "google-cloud\n:identity_an\nd_access_man\nagement",
+      "position": [
+        50,
+        3610
+      ]
+    },
+    {
+      "id": "google-cloud_identity_identity_platform",
+      "icon": "google-cloud:identity_platform",
+      "label": "google-cloud\n:identity_pl\natform",
+      "position": [
+        145,
+        3610
+      ]
+    },
+    {
+      "id": "google-cloud_identity_identity-aware_proxy",
+      "icon": "google-cloud:identity-aware_proxy",
+      "label": "google-cloud\n:identity-aw\nare_proxy",
+      "position": [
+        240,
+        3610
+      ]
+    },
+    {
+      "id": "google-cloud_identity_managed_service_for_microsoft_active_directory",
+      "icon": "google-cloud:managed_service_for_microsoft_active_directory",
+      "label": "google-cloud\n:managed_ser\nvice_for_mic\nrosoft_activ\ne_directory",
+      "position": [
+        335,
+        3610
+      ]
+    },
+    {
+      "id": "google-cloud_identity_permissions",
+      "icon": "google-cloud:permissions",
+      "label": "google-cloud\n:permissions",
+      "position": [
+        430,
+        3610
+      ]
+    },
+    {
+      "id": "google-cloud_identity_user_preferences",
+      "icon": "google-cloud:user_preferences",
+      "label": "google-cloud\n:user_prefer\nences",
+      "position": [
+        525,
+        3610
+      ]
+    },
+    {
+      "id": "google-cloud_identity_workload_identity_pool",
+      "icon": "google-cloud:workload_identity_pool",
+      "label": "google-cloud\n:workload_id\nentity_pool",
+      "position": [
+        620,
+        3610
+      ]
+    },
+    {
+      "id": "cat_integration",
+      "type": "label",
+      "label": "Integration (2)",
+      "position": [
+        50,
+        3790
+      ]
+    },
+    {
+      "id": "google-cloud_integration_connectors",
+      "icon": "google-cloud:connectors",
+      "label": "google-cloud\n:connectors",
+      "position": [
+        50,
+        3825
+      ]
+    },
+    {
+      "id": "google-cloud_integration_workflows",
+      "icon": "google-cloud:workflows",
+      "label": "google-cloud\n:workflows",
+      "position": [
+        145,
+        3825
+      ]
+    },
+    {
+      "id": "cat_iot",
+      "type": "label",
+      "label": "IoT (2)",
+      "position": [
+        50,
+        4005
+      ]
+    },
+    {
+      "id": "google-cloud_iot_iot_core",
+      "icon": "google-cloud:iot_core",
+      "label": "google-cloud\n:iot_core",
+      "position": [
+        50,
+        4040
+      ]
+    },
+    {
+      "id": "google-cloud_iot_iot_edge",
+      "icon": "google-cloud:iot_edge",
+      "label": "google-cloud\n:iot_edge",
+      "position": [
+        145,
+        4040
+      ]
+    },
+    {
+      "id": "cat_management",
+      "type": "label",
+      "label": "Management (13)",
+      "position": [
+        50,
+        4220
+      ]
+    },
+    {
+      "id": "google-cloud_management_administration",
+      "icon": "google-cloud:administration",
+      "label": "google-cloud\n:administrat\nion",
+      "position": [
+        50,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_asset_inventory",
+      "icon": "google-cloud:asset_inventory",
+      "label": "google-cloud\n:asset_inven\ntory",
+      "position": [
+        145,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_billing",
+      "icon": "google-cloud:billing",
+      "label": "google-cloud\n:billing",
+      "position": [
+        240,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_cloud_asset_inventory",
+      "icon": "google-cloud:cloud_asset_inventory",
+      "label": "google-cloud\n:cloud_asset\n_inventory",
+      "position": [
+        335,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_cloud_audit_logs",
+      "icon": "google-cloud:cloud_audit_logs",
+      "label": "google-cloud\n:cloud_audit\n_logs",
+      "position": [
+        430,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_cloud_deployment_manager",
+      "icon": "google-cloud:cloud_deployment_manager",
+      "label": "google-cloud\n:cloud_deplo\nyment_manage\nr",
+      "position": [
+        525,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_configuration_management",
+      "icon": "google-cloud:configuration_management",
+      "label": "google-cloud\n:configurati\non_managemen\nt",
+      "position": [
+        620,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_gce_systems_management",
+      "icon": "google-cloud:gce_systems_management",
+      "label": "google-cloud\n:gce_systems\n_management",
+      "position": [
+        715,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_policy_analyzer",
+      "icon": "google-cloud:policy_analyzer",
+      "label": "google-cloud\n:policy_anal\nyzer",
+      "position": [
+        810,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_project",
+      "icon": "google-cloud:project",
+      "label": "google-cloud\n:project",
+      "position": [
+        905,
+        4255
+      ]
+    },
+    {
+      "id": "google-cloud_management_quotas",
+      "icon": "google-cloud:quotas",
+      "label": "google-cloud\n:quotas",
+      "position": [
+        50,
+        4395
+      ]
+    },
+    {
+      "id": "google-cloud_management_runtime_config",
+      "icon": "google-cloud:runtime_config",
+      "label": "google-cloud\n:runtime_con\nfig",
+      "position": [
+        145,
+        4395
+      ]
+    },
+    {
+      "id": "google-cloud_management_service_discovery",
+      "icon": "google-cloud:service_discovery",
+      "label": "google-cloud\n:service_dis\ncovery",
+      "position": [
+        240,
+        4395
+      ]
+    },
+    {
+      "id": "cat_marketplace",
+      "type": "label",
+      "label": "Marketplace (3)",
+      "position": [
+        50,
+        4575
+      ]
+    },
+    {
+      "id": "google-cloud_marketplace_financial_services_marketplace",
+      "icon": "google-cloud:financial_services_marketplace",
+      "label": "google-cloud\n:financial_s\nervices_mark\netplace",
+      "position": [
+        50,
+        4610
+      ]
+    },
+    {
+      "id": "google-cloud_marketplace_partner_interconnect",
+      "icon": "google-cloud:partner_interconnect",
+      "label": "google-cloud\n:partner_int\nerconnect",
+      "position": [
+        145,
+        4610
+      ]
+    },
+    {
+      "id": "google-cloud_marketplace_partner_portal",
+      "icon": "google-cloud:partner_portal",
+      "label": "google-cloud\n:partner_por\ntal",
+      "position": [
+        240,
+        4610
+      ]
+    },
+    {
+      "id": "cat_media",
+      "type": "label",
+      "label": "Media (2)",
+      "position": [
+        50,
+        4790
+      ]
+    },
+    {
+      "id": "google-cloud_media_cloud_media_edge",
+      "icon": "google-cloud:cloud_media_edge",
+      "label": "google-cloud\n:cloud_media\n_edge",
+      "position": [
+        50,
+        4825
+      ]
+    },
+    {
+      "id": "google-cloud_media_media_translation_api",
+      "icon": "google-cloud:media_translation_api",
+      "label": "google-cloud\n:media_trans\nlation_api",
+      "position": [
+        145,
+        4825
+      ]
+    },
+    {
+      "id": "cat_migration",
+      "type": "label",
+      "label": "Migration (3)",
+      "position": [
+        50,
+        5005
+      ]
+    },
+    {
+      "id": "google-cloud_migration_migrate_for_anthos",
+      "icon": "google-cloud:migrate_for_anthos",
+      "label": "google-cloud\n:migrate_for\n_anthos",
+      "position": [
+        50,
+        5040
+      ]
+    },
+    {
+      "id": "google-cloud_migration_migrate_for_compute_engine",
+      "icon": "google-cloud:migrate_for_compute_engine",
+      "label": "google-cloud\n:migrate_for\n_compute_eng\nine",
+      "position": [
+        145,
+        5040
+      ]
+    },
+    {
+      "id": "google-cloud_migration_transfer_appliance",
+      "icon": "google-cloud:transfer_appliance",
+      "label": "google-cloud\n:transfer_ap\npliance",
+      "position": [
+        240,
+        5040
+      ]
+    },
+    {
+      "id": "cat_monitoring",
+      "type": "label",
+      "label": "Monitoring (7)",
+      "position": [
+        50,
+        5220
+      ]
+    },
+    {
+      "id": "google-cloud_monitoring_cloud_logging",
+      "icon": "google-cloud:cloud_logging",
+      "label": "google-cloud\n:cloud_loggi\nng",
+      "position": [
+        50,
+        5255
+      ]
+    },
+    {
+      "id": "google-cloud_monitoring_cloud_monitoring",
+      "icon": "google-cloud:cloud_monitoring",
+      "label": "google-cloud\n:cloud_monit\noring",
+      "position": [
+        145,
+        5255
+      ]
+    },
+    {
+      "id": "google-cloud_monitoring_cloud_ops",
+      "icon": "google-cloud:cloud_ops",
+      "label": "google-cloud\n:cloud_ops",
+      "position": [
+        240,
+        5255
+      ]
+    },
+    {
+      "id": "google-cloud_monitoring_error_reporting",
+      "icon": "google-cloud:error_reporting",
+      "label": "google-cloud\n:error_repor\nting",
+      "position": [
+        335,
+        5255
+      ]
+    },
+    {
+      "id": "google-cloud_monitoring_performance_dashboard",
+      "icon": "google-cloud:performance_dashboard",
+      "label": "google-cloud\n:performance\n_dashboard",
+      "position": [
+        430,
+        5255
+      ]
+    },
+    {
+      "id": "google-cloud_monitoring_stackdriver",
+      "icon": "google-cloud:stackdriver",
+      "label": "google-cloud\n:stackdriver",
+      "position": [
+        525,
+        5255
+      ]
+    },
+    {
+      "id": "google-cloud_monitoring_trace",
+      "icon": "google-cloud:trace",
+      "label": "google-cloud\n:trace",
+      "position": [
+        620,
+        5255
+      ]
+    },
+    {
+      "id": "cat_networking",
+      "type": "label",
+      "label": "Networking (25)",
+      "position": [
+        50,
+        5435
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_cdn",
+      "icon": "google-cloud:cloud_cdn",
+      "label": "google-cloud\n:cloud_cdn",
+      "position": [
+        50,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_dns",
+      "icon": "google-cloud:cloud_dns",
+      "label": "google-cloud\n:cloud_dns",
+      "position": [
+        145,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_domains",
+      "icon": "google-cloud:cloud_domains",
+      "label": "google-cloud\n:cloud_domai\nns",
+      "position": [
+        240,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_external_ip_addresses",
+      "icon": "google-cloud:cloud_external_ip_addresses",
+      "label": "google-cloud\n:cloud_exter\nnal_ip_addre\nsses",
+      "position": [
+        335,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_firewall_rules",
+      "icon": "google-cloud:cloud_firewall_rules",
+      "label": "google-cloud\n:cloud_firew\nall_rules",
+      "position": [
+        430,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_interconnect",
+      "icon": "google-cloud:cloud_interconnect",
+      "label": "google-cloud\n:cloud_inter\nconnect",
+      "position": [
+        525,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_load_balancing",
+      "icon": "google-cloud:cloud_load_balancing",
+      "label": "google-cloud\n:cloud_load_\nbalancing",
+      "position": [
+        620,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_nat",
+      "icon": "google-cloud:cloud_nat",
+      "label": "google-cloud\n:cloud_nat",
+      "position": [
+        715,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_network",
+      "icon": "google-cloud:cloud_network",
+      "label": "google-cloud\n:cloud_netwo\nrk",
+      "position": [
+        810,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_router",
+      "icon": "google-cloud:cloud_router",
+      "label": "google-cloud\n:cloud_route\nr",
+      "position": [
+        905,
+        5470
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_routes",
+      "icon": "google-cloud:cloud_routes",
+      "label": "google-cloud\n:cloud_route\ns",
+      "position": [
+        50,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_cloud_vpn",
+      "icon": "google-cloud:cloud_vpn",
+      "label": "google-cloud\n:cloud_vpn",
+      "position": [
+        145,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_connectivity_test",
+      "icon": "google-cloud:connectivity_test",
+      "label": "google-cloud\n:connectivit\ny_test",
+      "position": [
+        240,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_local_ssd",
+      "icon": "google-cloud:local_ssd",
+      "label": "google-cloud\n:local_ssd",
+      "position": [
+        335,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_network_connectivity_center",
+      "icon": "google-cloud:network_connectivity_center",
+      "label": "google-cloud\n:network_con\nnectivity_ce\nnter",
+      "position": [
+        430,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_network_intelligence_center",
+      "icon": "google-cloud:network_intelligence_center",
+      "label": "google-cloud\n:network_int\nelligence_ce\nnter",
+      "position": [
+        525,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_network_security",
+      "icon": "google-cloud:network_security",
+      "label": "google-cloud\n:network_sec\nurity",
+      "position": [
+        620,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_network_tiers",
+      "icon": "google-cloud:network_tiers",
+      "label": "google-cloud\n:network_tie\nrs",
+      "position": [
+        715,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_network_topology",
+      "icon": "google-cloud:network_topology",
+      "label": "google-cloud\n:network_top\nology",
+      "position": [
+        810,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_premium_network_tier",
+      "icon": "google-cloud:premium_network_tier",
+      "label": "google-cloud\n:premium_net\nwork_tier",
+      "position": [
+        905,
+        5610
+      ]
+    },
+    {
+      "id": "google-cloud_networking_private_connectivity",
+      "icon": "google-cloud:private_connectivity",
+      "label": "google-cloud\n:private_con\nnectivity",
+      "position": [
+        50,
+        5750
+      ]
+    },
+    {
+      "id": "google-cloud_networking_private_service_connect",
+      "icon": "google-cloud:private_service_connect",
+      "label": "google-cloud\n:private_ser\nvice_connect",
+      "position": [
+        145,
+        5750
+      ]
+    },
+    {
+      "id": "google-cloud_networking_standard_network_tier",
+      "icon": "google-cloud:standard_network_tier",
+      "label": "google-cloud\n:standard_ne\ntwork_tier",
+      "position": [
+        240,
+        5750
+      ]
+    },
+    {
+      "id": "google-cloud_networking_traffic_director",
+      "icon": "google-cloud:traffic_director",
+      "label": "google-cloud\n:traffic_dir\nector",
+      "position": [
+        335,
+        5750
+      ]
+    },
+    {
+      "id": "google-cloud_networking_virtual_private_cloud",
+      "icon": "google-cloud:virtual_private_cloud",
+      "label": "google-cloud\n:virtual_pri\nvate_cloud",
+      "position": [
+        430,
+        5750
+      ]
+    },
+    {
+      "id": "cat_security",
+      "type": "label",
+      "label": "Security (22)",
+      "position": [
+        50,
+        5930
+      ]
+    },
+    {
+      "id": "google-cloud_security_access_context_manager",
+      "icon": "google-cloud:access_context_manager",
+      "label": "google-cloud\n:access_cont\next_manager",
+      "position": [
+        50,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_assured_workloads",
+      "icon": "google-cloud:assured_workloads",
+      "label": "google-cloud\n:assured_wor\nkloads",
+      "position": [
+        145,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_beyondcorp",
+      "icon": "google-cloud:beyondcorp",
+      "label": "google-cloud\n:beyondcorp",
+      "position": [
+        240,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_binary_authorization",
+      "icon": "google-cloud:binary_authorization",
+      "label": "google-cloud\n:binary_auth\norization",
+      "position": [
+        335,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_certificate_authority_service",
+      "icon": "google-cloud:certificate_authority_service",
+      "label": "google-cloud\n:certificate\n_authority_s\nervice",
+      "position": [
+        430,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_certificate_manager",
+      "icon": "google-cloud:certificate_manager",
+      "label": "google-cloud\n:certificate\n_manager",
+      "position": [
+        525,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_cloud_armor",
+      "icon": "google-cloud:cloud_armor",
+      "label": "google-cloud\n:cloud_armor",
+      "position": [
+        620,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_cloud_ekm",
+      "icon": "google-cloud:cloud_ekm",
+      "label": "google-cloud\n:cloud_ekm",
+      "position": [
+        715,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_cloud_hsm",
+      "icon": "google-cloud:cloud_hsm",
+      "label": "google-cloud\n:cloud_hsm",
+      "position": [
+        810,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_cloud_ids",
+      "icon": "google-cloud:cloud_ids",
+      "label": "google-cloud\n:cloud_ids",
+      "position": [
+        905,
+        5965
+      ]
+    },
+    {
+      "id": "google-cloud_security_cloud_security_scanner",
+      "icon": "google-cloud:cloud_security_scanner",
+      "label": "google-cloud\n:cloud_secur\nity_scanner",
+      "position": [
+        50,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_key_access_justifications",
+      "icon": "google-cloud:key_access_justifications",
+      "label": "google-cloud\n:key_access_\njustificatio\nns",
+      "position": [
+        145,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_key_management_service",
+      "icon": "google-cloud:key_management_service",
+      "label": "google-cloud\n:key_managem\nent_service",
+      "position": [
+        240,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_phishing_protection",
+      "icon": "google-cloud:phishing_protection",
+      "label": "google-cloud\n:phishing_pr\notection",
+      "position": [
+        335,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_risk_manager",
+      "icon": "google-cloud:risk_manager",
+      "label": "google-cloud\n:risk_manage\nr",
+      "position": [
+        430,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_secret_manager",
+      "icon": "google-cloud:secret_manager",
+      "label": "google-cloud\n:secret_mana\nger",
+      "position": [
+        525,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_security",
+      "icon": "google-cloud:security",
+      "label": "google-cloud\n:security",
+      "position": [
+        620,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_security_command_center",
+      "icon": "google-cloud:security_command_center",
+      "label": "google-cloud\n:security_co\nmmand_center",
+      "position": [
+        715,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_security_health_advisor",
+      "icon": "google-cloud:security_health_advisor",
+      "label": "google-cloud\n:security_he\nalth_advisor",
+      "position": [
+        810,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_security_key_enforcement",
+      "icon": "google-cloud:security_key_enforcement",
+      "label": "google-cloud\n:security_ke\ny_enforcemen\nt",
+      "position": [
+        905,
+        6105
+      ]
+    },
+    {
+      "id": "google-cloud_security_web_risk",
+      "icon": "google-cloud:web_risk",
+      "label": "google-cloud\n:web_risk",
+      "position": [
+        50,
+        6245
+      ]
+    },
+    {
+      "id": "google-cloud_security_web_security_scanner",
+      "icon": "google-cloud:web_security_scanner",
+      "label": "google-cloud\n:web_securit\ny_scanner",
+      "position": [
+        145,
+        6245
+      ]
+    },
+    {
+      "id": "cat_services",
+      "type": "label",
+      "label": "Services (2)",
+      "position": [
+        50,
+        6425
+      ]
+    },
+    {
+      "id": "google-cloud_services_contact_center_ai",
+      "icon": "google-cloud:contact_center_ai",
+      "label": "google-cloud\n:contact_cen\nter_ai",
+      "position": [
+        50,
+        6460
+      ]
+    },
+    {
+      "id": "google-cloud_services_support",
+      "icon": "google-cloud:support",
+      "label": "google-cloud\n:support",
+      "position": [
+        145,
+        6460
+      ]
+    },
+    {
+      "id": "cat_solutions",
+      "type": "label",
+      "label": "Solutions (3)",
+      "position": [
+        50,
+        6640
+      ]
+    },
+    {
+      "id": "google-cloud_solutions_cloud_for_marketing",
+      "icon": "google-cloud:cloud_for_marketing",
+      "label": "google-cloud\n:cloud_for_m\narketing",
+      "position": [
+        50,
+        6675
+      ]
+    },
+    {
+      "id": "google-cloud_solutions_fleet_engine",
+      "icon": "google-cloud:fleet_engine",
+      "label": "google-cloud\n:fleet_engin\ne",
+      "position": [
+        145,
+        6675
+      ]
+    },
+    {
+      "id": "google-cloud_solutions_retail_api",
+      "icon": "google-cloud:retail_api",
+      "label": "google-cloud\n:retail_api",
+      "position": [
+        240,
+        6675
+      ]
+    },
+    {
+      "id": "cat_storage",
+      "type": "label",
+      "label": "Storage (3)",
+      "position": [
+        50,
+        6855
+      ]
+    },
+    {
+      "id": "google-cloud_storage_cloud_storage",
+      "icon": "google-cloud:cloud_storage",
+      "label": "google-cloud\n:cloud_stora\nge",
+      "position": [
+        50,
+        6890
+      ]
+    },
+    {
+      "id": "google-cloud_storage_filestore",
+      "icon": "google-cloud:filestore",
+      "label": "google-cloud\n:filestore",
+      "position": [
+        145,
+        6890
+      ]
+    },
+    {
+      "id": "google-cloud_storage_persistent_disk",
+      "icon": "google-cloud:persistent_disk",
+      "label": "google-cloud\n:persistent_\ndisk",
+      "position": [
+        240,
+        6890
+      ]
+    }
+  ],
+  "render": {
+    "width": 1050,
+    "height": 7170
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "category": "Integration",
+  "count": 4,
+  "icons": [
+    {
+      "slug": "biz_talk",
+      "displayName": "Biz Talk",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Biz-Talk.svg"
+    },
+    {
+      "slug": "integration_accounts",
+      "displayName": "Integration Accounts",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Integration-Accounts.svg"
+    },
+    {
+      "slug": "logic_apps",
+      "displayName": "Logic Apps",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Logic-Apps.svg"
+    },
+    {
+      "slug": "workflow",
+      "displayName": "Workflow",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Workflow.svg"
+    }
+  ]
+}

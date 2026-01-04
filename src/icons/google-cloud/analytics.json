@@ -1,0 +1,31 @@
+{
+  "category": "Analytics",
+  "count": 5,
+  "icons": [
+    {
+      "slug": "analytics_hub",
+      "displayName": "Analytics Hub",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/analytics_hub.svg"
+    },
+    {
+      "slug": "bigquery",
+      "displayName": "Bigquery",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/bigquery.svg"
+    },
+    {
+      "slug": "looker",
+      "displayName": "Looker",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/looker.svg"
+    },
+    {
+      "slug": "real-world_insights",
+      "displayName": "Real-World Insights",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/real-world_insights.svg"
+    },
+    {
+      "slug": "stream_suite",
+      "displayName": "Stream Suite",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/stream_suite.svg"
+    }
+  ]
+}

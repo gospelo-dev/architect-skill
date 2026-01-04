@@ -1,0 +1,41 @@
+{
+  "category": "Databases",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "bigtable",
+      "displayName": "Bigtable",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/bigtable.svg"
+    },
+    {
+      "slug": "cloud_spanner",
+      "displayName": "Cloud Spanner",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_spanner.svg"
+    },
+    {
+      "slug": "cloud_sql",
+      "displayName": "Cloud Sql",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_sql.svg"
+    },
+    {
+      "slug": "database_migration_service",
+      "displayName": "Database Migration Service",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/database_migration_service.svg"
+    },
+    {
+      "slug": "datastore",
+      "displayName": "Datastore",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datastore.svg"
+    },
+    {
+      "slug": "firestore",
+      "displayName": "Firestore",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/firestore.svg"
+    },
+    {
+      "slug": "memorystore",
+      "displayName": "Memorystore",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/memorystore.svg"
+    }
+  ]
+}

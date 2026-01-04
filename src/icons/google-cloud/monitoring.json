@@ -1,0 +1,41 @@
+{
+  "category": "Monitoring",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "cloud_logging",
+      "displayName": "Cloud Logging",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_logging.svg"
+    },
+    {
+      "slug": "cloud_monitoring",
+      "displayName": "Cloud Monitoring",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_monitoring.svg"
+    },
+    {
+      "slug": "cloud_ops",
+      "displayName": "Cloud Ops",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_ops.svg"
+    },
+    {
+      "slug": "error_reporting",
+      "displayName": "Error Reporting",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/error_reporting.svg"
+    },
+    {
+      "slug": "performance_dashboard",
+      "displayName": "Performance Dashboard",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/performance_dashboard.svg"
+    },
+    {
+      "slug": "stackdriver",
+      "displayName": "Stackdriver",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/stackdriver.svg"
+    },
+    {
+      "slug": "trace",
+      "displayName": "Trace",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/trace.svg"
+    }
+  ]
+}

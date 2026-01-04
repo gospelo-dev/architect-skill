@@ -1,0 +1,31 @@
+{
+  "category": "Service Bus",
+  "count": 5,
+  "icons": [
+    {
+      "slug": "service_bus",
+      "displayName": "Service Bus",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Bus.svg"
+    },
+    {
+      "slug": "service_endpoint_policies",
+      "displayName": "Service Endpoint Policies",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Endpoint-Policies.svg"
+    },
+    {
+      "slug": "service_fabric_clusters",
+      "displayName": "Service Fabric Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Fabric-Clusters.svg"
+    },
+    {
+      "slug": "service_health",
+      "displayName": "Service Health",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Health.svg"
+    },
+    {
+      "slug": "service_providers",
+      "displayName": "Service Providers",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Service-Providers.svg"
+    }
+  ]
+}

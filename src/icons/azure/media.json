@@ -1,0 +1,16 @@
+{
+  "category": "Media",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "media",
+      "displayName": "Media",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Media.svg"
+    },
+    {
+      "slug": "media_file",
+      "displayName": "Media File",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Media-File.svg"
+    }
+  ]
+}

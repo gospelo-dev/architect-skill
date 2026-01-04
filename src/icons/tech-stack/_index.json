@@ -1,0 +1,23 @@
+{
+  "provider": "tech-stack",
+  "totalIcons": 268,
+  "categories": [
+    "languages.json",
+    "frontend.json",
+    "backend.json",
+    "cloud.json",
+    "databases.json",
+    "devops.json",
+    "messaging.json",
+    "monitoring.json",
+    "web-servers.json",
+    "tools.json",
+    "os.json",
+    "ai-ml.json",
+    "security.json",
+    "testing.json",
+    "editors.json",
+    "package-managers.json",
+    "services.json"
+  ]
+}

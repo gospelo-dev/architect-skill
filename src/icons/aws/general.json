@@ -1,0 +1,251 @@
+{
+  "category": "General",
+  "count": 49,
+  "icons": [
+    {
+      "slug": "marketplace_dark",
+      "displayName": "Marketplace Dark",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_General-Icons/64/Arch_AWS-Marketplace_Dark_64.svg"
+    },
+    {
+      "slug": "marketplace_light",
+      "displayName": "Marketplace Light",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_General-Icons/64/Arch_AWS-Marketplace_Light_64.svg"
+    },
+    {
+      "slug": "res_alert",
+      "displayName": "Res Alert",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Alert_48_Light.svg"
+    },
+    {
+      "slug": "res_authenticated_user",
+      "displayName": "Res Authenticated User",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Authenticated-User_48_Light.svg"
+    },
+    {
+      "slug": "res_camera",
+      "displayName": "Res Camera",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Camera_48_Light.svg"
+    },
+    {
+      "slug": "res_chat",
+      "displayName": "Res Chat",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Chat_48_Light.svg"
+    },
+    {
+      "slug": "res_client",
+      "displayName": "Res Client",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Client_48_Light.svg"
+    },
+    {
+      "slug": "res_cold_storage",
+      "displayName": "Res Cold Storage",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Cold-Storage_48_Light.svg"
+    },
+    {
+      "slug": "res_credentials",
+      "displayName": "Res Credentials",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Credentials_48_Light.svg"
+    },
+    {
+      "slug": "res_data_stream",
+      "displayName": "Res Data Stream",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Data-Stream_48_Light.svg"
+    },
+    {
+      "slug": "res_data_table",
+      "displayName": "Res Data Table",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Data-Table_48_Light.svg"
+    },
+    {
+      "slug": "res_database",
+      "displayName": "Res Database",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Database_48_Light.svg"
+    },
+    {
+      "slug": "res_disk",
+      "displayName": "Res Disk",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Disk_48_Light.svg"
+    },
+    {
+      "slug": "res_document",
+      "displayName": "Res Document",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Document_48_Light.svg"
+    },
+    {
+      "slug": "res_documents",
+      "displayName": "Res Documents",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Documents_48_Light.svg"
+    },
+    {
+      "slug": "res_email",
+      "displayName": "Res Email",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Email_48_Light.svg"
+    },
+    {
+      "slug": "res_firewall",
+      "displayName": "Res Firewall",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Firewall_48_Light.svg"
+    },
+    {
+      "slug": "res_folder",
+      "displayName": "Res Folder",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Folder_48_Light.svg"
+    },
+    {
+      "slug": "res_folders",
+      "displayName": "Res Folders",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Folders_48_Light.svg"
+    },
+    {
+      "slug": "res_forums",
+      "displayName": "Res Forums",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Forums_48_Light.svg"
+    },
+    {
+      "slug": "res_gear",
+      "displayName": "Res Gear",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Gear_48_Light.svg"
+    },
+    {
+      "slug": "res_generic_application",
+      "displayName": "Res Generic Application",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Generic-Application_48_Light.svg"
+    },
+    {
+      "slug": "res_git_repository",
+      "displayName": "Res Git Repository",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Git-Repository_48_Light.svg"
+    },
+    {
+      "slug": "res_globe",
+      "displayName": "Res Globe",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Globe_48_Light.svg"
+    },
+    {
+      "slug": "res_internet",
+      "displayName": "Res Internet",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Internet_48_Light.svg"
+    },
+    {
+      "slug": "res_internet_alt1",
+      "displayName": "Res Internet Alt1",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Internet-alt1_48_Light.svg"
+    },
+    {
+      "slug": "res_internet_alt2",
+      "displayName": "Res Internet Alt2",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Internet-alt2_48_Light.svg"
+    },
+    {
+      "slug": "res_json_script",
+      "displayName": "Res Json Script",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_JSON-Script_48_Light.svg"
+    },
+    {
+      "slug": "res_logs",
+      "displayName": "Res Logs",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Logs_48_Light.svg"
+    },
+    {
+      "slug": "res_magnifying_glass",
+      "displayName": "Res Magnifying Glass",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Magnifying-Glass_48_Light.svg"
+    },
+    {
+      "slug": "res_management_console",
+      "displayName": "Res Management Console",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_AWS-Management-Console_48_Light.svg"
+    },
+    {
+      "slug": "res_metrics",
+      "displayName": "Res Metrics",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Metrics_48_Light.svg"
+    },
+    {
+      "slug": "res_mobile_client",
+      "displayName": "Res Mobile Client",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Mobile-client_48_Light.svg"
+    },
+    {
+      "slug": "res_multimedia",
+      "displayName": "Res Multimedia",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Multimedia_48_Light.svg"
+    },
+    {
+      "slug": "res_office_building",
+      "displayName": "Res Office Building",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Office-building_48_Light.svg"
+    },
+    {
+      "slug": "res_programming_language",
+      "displayName": "Res Programming Language",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Programming-Language_48_Light.svg"
+    },
+    {
+      "slug": "res_question",
+      "displayName": "Res Question",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Question_48_Light.svg"
+    },
+    {
+      "slug": "res_recover",
+      "displayName": "Res Recover",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Recover_48_Light.svg"
+    },
+    {
+      "slug": "res_saml_token",
+      "displayName": "Res Saml Token",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_SAML-token_48_Light.svg"
+    },
+    {
+      "slug": "res_sdk",
+      "displayName": "Res Sdk",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_SDK_48_Light.svg"
+    },
+    {
+      "slug": "res_server",
+      "displayName": "Res Server",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Server_48_Light.svg"
+    },
+    {
+      "slug": "res_servers",
+      "displayName": "Res Servers",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Servers_48_Light.svg"
+    },
+    {
+      "slug": "res_shield",
+      "displayName": "Res Shield",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Shield_48_Light.svg"
+    },
+    {
+      "slug": "res_source_code",
+      "displayName": "Res Source Code",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Source-Code_48_Light.svg"
+    },
+    {
+      "slug": "res_ssl_padlock",
+      "displayName": "Res Ssl Padlock",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_SSL-padlock_48_Light.svg"
+    },
+    {
+      "slug": "res_tape_storage",
+      "displayName": "Res Tape Storage",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Tape-storage_48_Light.svg"
+    },
+    {
+      "slug": "res_toolkit",
+      "displayName": "Res Toolkit",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Toolkit_48_Light.svg"
+    },
+    {
+      "slug": "res_user",
+      "displayName": "Res User",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_User_48_Light.svg"
+    },
+    {
+      "slug": "res_users",
+      "displayName": "Res Users",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Users_48_Light.svg"
+    }
+  ]
+}

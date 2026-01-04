@@ -1,0 +1,16 @@
+{
+  "category": "Backup & Recovery",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "infrastructure_backup",
+      "displayName": "Infrastructure Backup",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Infrastructure-Backup.svg"
+    },
+    {
+      "slug": "recovery_services_vaults",
+      "displayName": "Recovery Services Vaults",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Recovery-Services-Vaults.svg"
+    }
+  ]
+}

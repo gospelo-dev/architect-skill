@@ -1,0 +1,96 @@
+{
+  "category": "OS",
+  "count": 18,
+  "icons": [
+    {
+      "slug": "linux",
+      "displayName": "Linux",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/linux.svg"
+    },
+    {
+      "slug": "ubuntu",
+      "displayName": "Ubuntu",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ubuntu.svg"
+    },
+    {
+      "slug": "debian",
+      "displayName": "Debian",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/debian.svg"
+    },
+    {
+      "slug": "fedora",
+      "displayName": "Fedora",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/fedora.svg"
+    },
+    {
+      "slug": "archlinux",
+      "displayName": "Arch Linux",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/archlinux.svg"
+    },
+    {
+      "slug": "centos",
+      "displayName": "CentOS",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/centos.svg"
+    },
+    {
+      "slug": "alpinelinux",
+      "displayName": "Alpine Linux",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/alpinelinux.svg"
+    },
+    {
+      "slug": "apple",
+      "displayName": "Apple",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apple.svg"
+    },
+    {
+      "slug": "ios",
+      "displayName": "iOS",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ios.svg"
+    },
+    {
+      "slug": "android",
+      "displayName": "Android",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/android.svg"
+    },
+    {
+      "slug": "redhat",
+      "displayName": "Red Hat",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/redhat.svg"
+    },
+    {
+      "slug": "opensuse",
+      "displayName": "openSUSE",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/opensuse.svg"
+    },
+    {
+      "slug": "manjaro",
+      "displayName": "Manjaro",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/manjaro.svg"
+    },
+    {
+      "slug": "nixos",
+      "displayName": "NixOS",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nixos.svg"
+    },
+    {
+      "slug": "voidlinux",
+      "displayName": "Void Linux",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/voidlinux.svg"
+    },
+    {
+      "slug": "gentoo",
+      "displayName": "Gentoo",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/gentoo.svg"
+    },
+    {
+      "slug": "freebsd",
+      "displayName": "FreeBSD",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/freebsd.svg"
+    },
+    {
+      "slug": "openbsd",
+      "displayName": "OpenBSD",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/openbsd.svg"
+    }
+  ]
+}

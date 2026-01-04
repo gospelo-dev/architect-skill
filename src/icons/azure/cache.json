@@ -1,0 +1,16 @@
+{
+  "category": "Cache",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "cache",
+      "displayName": "Cache",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cache.svg"
+    },
+    {
+      "slug": "cache_redis",
+      "displayName": "Cache Redis",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Cache-Redis.svg"
+    }
+  ]
+}

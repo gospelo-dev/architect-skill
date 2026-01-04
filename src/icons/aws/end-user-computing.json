@@ -1,0 +1,41 @@
+{
+  "category": "End User Computing",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "res_workspaces_family_amazon_workspaces",
+      "displayName": "Res Workspaces Family Amazon Workspaces",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_End-User-Computing/Res_Amazon-WorkSpaces-Family_Amazon-WorkSpaces_48.svg"
+    },
+    {
+      "slug": "res_workspaces_family_amazon_workspaces_core",
+      "displayName": "Res Workspaces Family Amazon Workspaces Core",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_End-User-Computing/Res_Amazon-WorkSpaces-Family_Amazon-WorkSpaces-Core_48.svg"
+    },
+    {
+      "slug": "res_workspaces_family_amazon_workspaces_web",
+      "displayName": "Res Workspaces Family Amazon Workspaces Web",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_End-User-Computing/Res_Amazon-WorkSpaces-Family_Amazon-WorkSpaces-Web_48.svg"
+    },
+    {
+      "slug": "appstream",
+      "displayName": "Appstream",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_End-User-Computing/64/Arch_Amazon-AppStream_64.svg"
+    },
+    {
+      "slug": "worklink",
+      "displayName": "Worklink",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_End-User-Computing/64/Arch_Amazon-WorkLink_64.svg"
+    },
+    {
+      "slug": "workspaces_family",
+      "displayName": "Workspaces Family",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_End-User-Computing/64/Arch_Amazon-WorkSpaces-Family_64.svg"
+    },
+    {
+      "slug": "workspaces_thin_client",
+      "displayName": "Workspaces Thin Client",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_End-User-Computing/64/Arch_Amazon-WorkSpaces-Thin-Client_64.svg"
+    }
+  ]
+}

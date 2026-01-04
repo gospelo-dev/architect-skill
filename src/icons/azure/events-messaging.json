@@ -1,0 +1,46 @@
+{
+  "category": "Events & Messaging",
+  "count": 8,
+  "icons": [
+    {
+      "slug": "event_grid_domains",
+      "displayName": "Event Grid Domains",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Domains.svg"
+    },
+    {
+      "slug": "event_grid_subscriptions",
+      "displayName": "Event Grid Subscriptions",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Subscriptions.svg"
+    },
+    {
+      "slug": "event_grid_topics",
+      "displayName": "Event Grid Topics",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Grid-Topics.svg"
+    },
+    {
+      "slug": "event_hub_clusters",
+      "displayName": "Event Hub Clusters",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Hub-Clusters.svg"
+    },
+    {
+      "slug": "event_hubs",
+      "displayName": "Event Hubs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Event-Hubs.svg"
+    },
+    {
+      "slug": "notification_hub_namespaces",
+      "displayName": "Notification Hub Namespaces",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Notification-Hub-Namespaces.svg"
+    },
+    {
+      "slug": "notification_hubs",
+      "displayName": "Notification Hubs",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Notification-Hubs.svg"
+    },
+    {
+      "slug": "relays",
+      "displayName": "Relays",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Relays.svg"
+    }
+  ]
+}

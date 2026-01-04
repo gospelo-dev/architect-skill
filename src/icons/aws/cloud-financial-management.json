@@ -1,0 +1,41 @@
+{
+  "category": "Cloud Financial Management",
+  "count": 7,
+  "icons": [
+    {
+      "slug": "application_cost_profiler",
+      "displayName": "Application Cost Profiler",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Cloud-Financial-Management/64/Arch_AWS-Application-Cost-Profiler_64.svg"
+    },
+    {
+      "slug": "billing_conductor",
+      "displayName": "Billing Conductor",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Cloud-Financial-Management/64/Arch_AWS-Billing-Conductor_64.svg"
+    },
+    {
+      "slug": "budgets",
+      "displayName": "Budgets",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Cloud-Financial-Management/64/Arch_AWS-Budgets_64.svg"
+    },
+    {
+      "slug": "cost_and_usage_report",
+      "displayName": "Cost And Usage Report",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Cloud-Financial-Management/64/Arch_AWS-Cost-and-Usage-Report_64.svg"
+    },
+    {
+      "slug": "cost_explorer",
+      "displayName": "Cost Explorer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Cloud-Financial-Management/64/Arch_AWS-Cost-Explorer_64.svg"
+    },
+    {
+      "slug": "reserved_instance_reporting",
+      "displayName": "Reserved Instance Reporting",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Cloud-Financial-Management/64/Arch_Reserved-Instance-Reporting_64.svg"
+    },
+    {
+      "slug": "savings_plans",
+      "displayName": "Savings Plans",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Architecture-Service-Icons/Arch_Cloud-Financial-Management/64/Arch_Savings-Plans_64.svg"
+    }
+  ]
+}

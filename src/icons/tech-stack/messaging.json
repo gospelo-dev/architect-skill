@@ -1,0 +1,26 @@
+{
+  "category": "Messaging",
+  "count": 4,
+  "icons": [
+    {
+      "slug": "apachekafka",
+      "displayName": "Apache Kafka",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachekafka.svg"
+    },
+    {
+      "slug": "rabbitmq",
+      "displayName": "RabbitMQ",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/rabbitmq.svg"
+    },
+    {
+      "slug": "mqtt",
+      "displayName": "MQTT",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mqtt.svg"
+    },
+    {
+      "slug": "apachepulsar",
+      "displayName": "Apache Pulsar",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachepulsar.svg"
+    }
+  ]
+}

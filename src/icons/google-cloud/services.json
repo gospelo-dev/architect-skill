@@ -1,0 +1,16 @@
+{
+  "category": "Services",
+  "count": 2,
+  "icons": [
+    {
+      "slug": "contact_center_ai",
+      "displayName": "Contact Center Ai",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/contact_center_ai.svg"
+    },
+    {
+      "slug": "support",
+      "displayName": "Support",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/support.svg"
+    }
+  ]
+}

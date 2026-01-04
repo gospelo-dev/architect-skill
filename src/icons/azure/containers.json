@@ -1,0 +1,31 @@
+{
+  "category": "Containers",
+  "count": 5,
+  "icons": [
+    {
+      "slug": "container_instances",
+      "displayName": "Container Instances",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Instances.svg"
+    },
+    {
+      "slug": "container_registries",
+      "displayName": "Container Registries",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Registries.svg"
+    },
+    {
+      "slug": "container_services_(deprecated)",
+      "displayName": "Container Services (Deprecated)",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Container-Services-(Deprecated).svg"
+    },
+    {
+      "slug": "kubernetes_services",
+      "displayName": "Kubernetes Services",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Kubernetes-Services.svg"
+    },
+    {
+      "slug": "mesh_applications",
+      "displayName": "Mesh Applications",
+      "url": "https://cdn.jsdelivr.net/gh/benc-uk/icon-collection/azure-icons/Mesh-Applications.svg"
+    }
+  ]
+}

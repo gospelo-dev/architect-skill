@@ -1,0 +1,106 @@
+{
+  "category": "Data Services",
+  "count": 20,
+  "icons": [
+    {
+      "slug": "catalog",
+      "displayName": "Catalog",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/catalog.svg"
+    },
+    {
+      "slug": "cloud_composer",
+      "displayName": "Cloud Composer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_composer.svg"
+    },
+    {
+      "slug": "cloud_data_fusion",
+      "displayName": "Cloud Data Fusion",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/cloud_data_fusion.svg"
+    },
+    {
+      "slug": "data_catalog",
+      "displayName": "Data Catalog",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_catalog.svg"
+    },
+    {
+      "slug": "data_labeling",
+      "displayName": "Data Labeling",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_labeling.svg"
+    },
+    {
+      "slug": "data_layers",
+      "displayName": "Data Layers",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_layers.svg"
+    },
+    {
+      "slug": "data_loss_prevention_api",
+      "displayName": "Data Loss Prevention Api",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_loss_prevention_api.svg"
+    },
+    {
+      "slug": "data_qna",
+      "displayName": "Data Qna",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_qna.svg"
+    },
+    {
+      "slug": "data_studio",
+      "displayName": "Data Studio",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_studio.svg"
+    },
+    {
+      "slug": "data_transfer",
+      "displayName": "Data Transfer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/data_transfer.svg"
+    },
+    {
+      "slug": "dataflow",
+      "displayName": "Dataflow",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataflow.svg"
+    },
+    {
+      "slug": "datalab",
+      "displayName": "Datalab",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datalab.svg"
+    },
+    {
+      "slug": "dataplex",
+      "displayName": "Dataplex",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataplex.svg"
+    },
+    {
+      "slug": "datapol",
+      "displayName": "Datapol",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datapol.svg"
+    },
+    {
+      "slug": "dataprep",
+      "displayName": "Dataprep",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataprep.svg"
+    },
+    {
+      "slug": "dataproc",
+      "displayName": "Dataproc",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataproc.svg"
+    },
+    {
+      "slug": "dataproc_metastore",
+      "displayName": "Dataproc Metastore",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/dataproc_metastore.svg"
+    },
+    {
+      "slug": "datashare",
+      "displayName": "Datashare",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datashare.svg"
+    },
+    {
+      "slug": "datastream",
+      "displayName": "Datastream",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/datastream.svg"
+    },
+    {
+      "slug": "transfer",
+      "displayName": "Transfer",
+      "url": "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/main/docs/images/transfer.svg"
+    }
+  ]
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resource Icons Test</title>
+  <style>.gospelo-diagram {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.gospelo-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+.node-label { font-weight: 500; }
+.group-box { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }
+.connection { stroke-linecap: round; stroke-linejoin: round; }
+.resize-handle { cursor: nwse-resize; }
+.resize-handle:hover { fill: #AAAAAA; }
+.meta-toggle:hover rect { fill: #E0E0E0; }
+
+/* Meta panel - right side slide */
+.meta-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: #FAFAFA;
+  border-left: 1px solid #DDD;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+.meta-panel.open {
+  transform: translateX(0);
+}
+.meta-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #DDD;
+  background: #F5F5F5;
+}
+.meta-panel-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+.meta-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.meta-panel-btn {
+  border: 1px solid #CCC;
+  background: #FFF;
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.meta-panel-btn:hover {
+  background: #F0F0F0;
+  color: #333;
+}
+.meta-panel-close {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 4px;
+}
+.meta-panel-close:hover {
+  color: #333;
+}
+.meta-panel-content {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  margin: 0;
+  font-size: 12px;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  line-height: 1.5;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}</style>
+</head>
+<body>
+  <div class="gospelo-diagram">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 600" width="1100" height="600" class="gospelo-svg">
+<defs>
+<marker id="arrow-0073BB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0073BB"/>
+</marker>
+<marker id="arrow-0073BB-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+  <path d="M 10 0 L 0 5 L 10 10 z" fill="#0073BB"/>
+</marker>
+<marker id="arrow-0073BB-end" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0073BB"/>
+</marker>
+<linearGradient id="bg-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#FFFFFF"/>
+  <stop offset="100%" stop-color="#E8E8E8"/>
+</linearGradient>
+</defs>
+<rect width="1100" height="600" fill="url(#bg-gradient)"/>
+<g class="boundary-box">
+  <rect class="boundary-frame" x="10" y="10" width="1080" height="580"
+    fill="none" stroke="#D0D0D0" stroke-width="1" rx="4"/>
+  <g class="meta-toggle" transform="translate(1046, 568)" style="cursor: pointer;">
+    <rect width="20" height="20" rx="3" fill="#F0F0F0" stroke="#CCCCCC" stroke-width="0.5"/>
+    <text x="10" y="14" text-anchor="middle" font-size="11" font-family="monospace" fill="#666666">{}</text>
+  </g>
+  <polygon class="resize-handle"
+    points="1090,574 1090,590 1074,590"
+    fill="#CCCCCC" stroke="#AAAAAA" stroke-width="0.5" style="cursor: nwse-resize;"/>
+</g>
+<text x="550" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#0073BB">Resource Icons Test</text>
+
+<g id="label1" class="node label-node" transform="translate(50, 30)">
+  <text x="0" y="14" font-size="14" font-weight="bold" fill="#232F3E">General Resource Icons</text>
+</g>
+<g id="res_alert" class="node icon-node" transform="translate(50, 80)" style="cursor:pointer" onclick="navigator.clipboard.writeText('res_alert').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: res_alert';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>res_alert</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Alert_48_Light.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'res_alert',icon:'aws:res_alert',x:50,y:80,url:'https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Alert_48_Light.svg'}); this.style.display='none'"/>
+</g>
+<g id="res_user" class="node icon-node" transform="translate(150, 80)" style="cursor:pointer" onclick="navigator.clipboard.writeText('res_user').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: res_user';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>res_user</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_User_48_Light.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'res_user',icon:'aws:res_user',x:150,y:80,url:'https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_User_48_Light.svg'}); this.style.display='none'"/>
+</g>
+<g id="res_database" class="node icon-node" transform="translate(250, 80)" style="cursor:pointer" onclick="navigator.clipboard.writeText('res_database').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: res_database';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>res_database</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Database_48_Light.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'res_database',icon:'aws:res_database',x:250,y:80,url:'https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_General-Icons/Res_48_Light/Res_Database_48_Light.svg'}); this.style.display='none'"/>
+</g>
+<g id="label2" class="node label-node" transform="translate(50, 180)">
+  <text x="0" y="14" font-size="14" font-weight="bold" fill="#232F3E">Compute Resource Icons</text>
+</g>
+<g id="res_ec2_instance" class="node icon-node" transform="translate(50, 230)" style="cursor:pointer" onclick="navigator.clipboard.writeText('res_ec2_instance').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: res_ec2_instance';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>res_ec2_instance</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Instance_48.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'res_ec2_instance',icon:'aws:res_ec2_instance',x:50,y:230,url:'https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_Amazon-EC2_Instance_48.svg'}); this.style.display='none'"/>
+</g>
+<g id="res_lambda_function" class="node icon-node" transform="translate(150, 230)" style="cursor:pointer" onclick="navigator.clipboard.writeText('res_lambda_function').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: res_lambda_function';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>res_lambda_function</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_AWS-Lambda_Lambda-Function_48.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'res_lambda_function',icon:'aws:res_lambda_lambda_function',x:150,y:230,url:'https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Compute/Res_AWS-Lambda_Lambda-Function_48.svg'}); this.style.display='none'"/>
+</g>
+<g id="label3" class="node label-node" transform="translate(50, 330)">
+  <text x="0" y="14" font-size="14" font-weight="bold" fill="#232F3E">Storage Resource Icons</text>
+</g>
+<g id="res_s3_bucket" class="node icon-node" transform="translate(50, 380)" style="cursor:pointer" onclick="navigator.clipboard.writeText('res_s3_bucket').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: res_s3_bucket';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>res_s3_bucket</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_Bucket_48.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'res_s3_bucket',icon:'aws:res_simple_storage_service_bucket',x:50,y:380,url:'https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Simple-Storage-Service_Bucket_48.svg'}); this.style.display='none'"/>
+</g>
+<g id="res_ebs" class="node icon-node" transform="translate(150, 380)" style="cursor:pointer" onclick="navigator.clipboard.writeText('res_ebs').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: res_ebs';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})">
+  <title>res_ebs</title>
+  <rect class="node-bg" width="48" height="48" fill="transparent"/>
+  <image href="https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-Block-Store_Volume_48.svg" width="48" height="48" onerror="console.error('[gospelo-architect] Icon load failed:', {id:'res_ebs',icon:'aws:res_elastic_block_store_volume',x:150,y:380,url:'https://raw.githubusercontent.com/AwesomeLogos/aws-icons/main/docs/images/Resource-Icons/Res_Storage/Res_Amazon-Elastic-Block-Store_Volume_48.svg'}); this.style.display='none'"/>
+</g>
+<g class="node-label-group" data-node="res_alert"><text class="node-label" x="74" y="140" text-anchor="middle" font-size="11" fill="#232F3E">Alert</text></g>
+<g class="node-label-group" data-node="res_user"><text class="node-label" x="174" y="140" text-anchor="middle" font-size="11" fill="#232F3E">User</text></g>
+<g class="node-label-group" data-node="res_database"><text class="node-label" x="274" y="140" text-anchor="middle" font-size="11" fill="#232F3E">Database</text></g>
+<g class="node-label-group" data-node="res_ec2_instance"><text class="node-label" x="74" y="290" text-anchor="middle" font-size="11" fill="#232F3E">EC2 Instance</text></g>
+<g class="node-label-group" data-node="res_lambda_function"><text class="node-label" x="174" y="290" text-anchor="middle" font-size="11" fill="#232F3E">Lambda</text>
+<text class="node-label" x="174" y="303" text-anchor="middle" font-size="11" fill="#232F3E">Function</text></g>
+<g class="node-label-group" data-node="res_s3_bucket"><text class="node-label" x="74" y="440" text-anchor="middle" font-size="11" fill="#232F3E">S3 Bucket</text></g>
+<g class="node-label-group" data-node="res_ebs"><text class="node-label" x="174" y="440" text-anchor="middle" font-size="11" fill="#232F3E">EBS Volume</text></g>
+</svg>
+  </div>
+  <!-- Copy toast notification -->
+  <div id="copy-toast" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:10px 20px;border-radius:6px;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:9999;font-family:monospace;font-size:14px;"></div>
+  <!-- メタデータパネル（右側スライド） -->
+  <div class="meta-panel" id="meta-panel">
+    <div class="meta-panel-header">
+      <span class="meta-panel-title">Diagram Metadata</span>
+      <div class="meta-panel-actions">
+        <button class="meta-panel-btn" id="meta-panel-export" title="Export SVG">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 2v8M4 6l4-4 4 4M2 14h12"/>
+          </svg>
+        </button>
+        <button class="meta-panel-close" id="meta-panel-close">&times;</button>
+      </div>
+    </div>
+    <pre class="meta-panel-content" id="meta-panel-content"></pre>
+  </div>
+  <!-- AI調整用メタデータ: ノード位置・サイズ・接続情報 -->
+  <script type="application/json" id="gospelo-diagram-meta">
+{
+  "version": "1.0",
+  "canvas": {
+    "width": 1100,
+    "height": 600,
+    "gridSize": 50
+  },
+  "nodes": [
+    {
+      "id": "label1",
+      "label": "General Resource Icons",
+      "sublabel": "",
+      "type": "label",
+      "position": {
+        "x": 50,
+        "y": 30
+      },
+      "size": {
+        "width": 48,
+        "height": 128
+      },
+      "center": {
+        "x": 74,
+        "y": 94
+      }
+    },
+    {
+      "id": "res_alert",
+      "label": "Alert",
+      "sublabel": "",
+      "icon": "aws:res_alert",
+      "type": "icon",
+      "position": {
+        "x": 50,
+        "y": 80
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 74,
+        "y": 104
+      }
+    },
+    {
+      "id": "res_user",
+      "label": "User",
+      "sublabel": "",
+      "icon": "aws:res_user",
+      "type": "icon",
+      "position": {
+        "x": 150,
+        "y": 80
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 174,
+        "y": 104
+      }
+    },
+    {
+      "id": "res_database",
+      "label": "Database",
+      "sublabel": "",
+      "icon": "aws:res_database",
+      "type": "icon",
+      "position": {
+        "x": 250,
+        "y": 80
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 274,
+        "y": 104
+      }
+    },
+    {
+      "id": "label2",
+      "label": "Compute Resource Icons",
+      "sublabel": "",
+      "type": "label",
+      "position": {
+        "x": 50,
+        "y": 180
+      },
+      "size": {
+        "width": 48,
+        "height": 128
+      },
+      "center": {
+        "x": 74,
+        "y": 244
+      }
+    },
+    {
+      "id": "res_ec2_instance",
+      "label": "EC2 Instance",
+      "sublabel": "",
+      "icon": "aws:res_ec2_instance",
+      "type": "icon",
+      "position": {
+        "x": 50,
+        "y": 230
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 74,
+        "y": 254
+      }
+    },
+    {
+      "id": "res_lambda_function",
+      "label": "Lambda Function",
+      "sublabel": "",
+      "icon": "aws:res_lambda_lambda_function",
+      "type": "icon",
+      "position": {
+        "x": 150,
+        "y": 230
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 174,
+        "y": 254
+      }
+    },
+    {
+      "id": "label3",
+      "label": "Storage Resource Icons",
+      "sublabel": "",
+      "type": "label",
+      "position": {
+        "x": 50,
+        "y": 330
+      },
+      "size": {
+        "width": 48,
+        "height": 128
+      },
+      "center": {
+        "x": 74,
+        "y": 394
+      }
+    },
+    {
+      "id": "res_s3_bucket",
+      "label": "S3 Bucket",
+      "sublabel": "",
+      "icon": "aws:res_simple_storage_service_bucket",
+      "type": "icon",
+      "position": {
+        "x": 50,
+        "y": 380
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 74,
+        "y": 404
+      }
+    },
+    {
+      "id": "res_ebs",
+      "label": "EBS Volume",
+      "sublabel": "",
+      "icon": "aws:res_elastic_block_store_volume",
+      "type": "icon",
+      "position": {
+        "x": 150,
+        "y": 380
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "center": {
+        "x": 174,
+        "y": 404
+      }
+    }
+  ],
+  "connections": [],
+  "layout": {
+    "rows": [
+      {
+        "y": 94,
+        "nodes": [
+          "label1",
+          "res_alert",
+          "res_user",
+          "res_database"
+        ]
+      },
+      {
+        "y": 244,
+        "nodes": [
+          "label2",
+          "res_ec2_instance",
+          "res_lambda_function"
+        ]
+      },
+      {
+        "y": 394,
+        "nodes": [
+          "label3",
+          "res_s3_bucket",
+          "res_ebs"
+        ]
+      }
+    ],
+    "columns": [
+      {
+        "x": 74,
+        "nodes": [
+          "label1",
+          "res_alert",
+          "label2",
+          "res_ec2_instance",
+          "label3",
+          "res_s3_bucket"
+        ]
+      },
+      {
+        "x": 174,
+        "nodes": [
+          "res_user",
+          "res_lambda_function",
+          "res_ebs"
+        ]
+      },
+      {
+        "x": 274,
+        "nodes": [
+          "res_database"
+        ]
+      }
+    ]
+  }
+}
+  </script>
+  <script>
+(function() {
+  const svg = document.querySelector('.gospelo-svg');
+  if (!svg) return;
+
+  const handle = svg.querySelector('.resize-handle');
+  if (!handle) return;
+
+  let isResizing = false;
+  let startX, startY, startWidth, startHeight;
+
+  // 元のviewBox値を保持（スケーリングの基準）
+  const viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+  const originalWidth = viewBox[2];
+  const originalHeight = viewBox[3];
+  const aspectRatio = originalWidth / originalHeight;
+
+  handle.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    isResizing = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    startWidth = parseFloat(svg.getAttribute('width'));
+    startHeight = parseFloat(svg.getAttribute('height'));
+    document.body.style.cursor = 'nwse-resize';
+    document.body.style.userSelect = 'none';
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (!isResizing) return;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    // アスペクト比を維持してリサイズ（対角線方向の移動量を使用）
+    const delta = (dx + dy) / 2;
+    let newWidth = Math.max(400, startWidth + delta);
+    let newHeight = newWidth / aspectRatio;
+
+    // 最小サイズ制限
+    if (newHeight < 300) {
+      newHeight = 300;
+      newWidth = newHeight * aspectRatio;
+    }
+
+    // viewBoxは固定のまま、width/heightのみ変更（スケーリング効果）
+    svg.setAttribute('width', newWidth);
+    svg.setAttribute('height', newHeight);
+  });
+
+  document.addEventListener('mouseup', function() {
+    if (isResizing) {
+      isResizing = false;
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    }
+  });
+
+  // Meta panel toggle
+  const metaToggle = svg.querySelector('.meta-toggle');
+  const metaPanel = document.getElementById('meta-panel');
+  const metaPanelClose = document.getElementById('meta-panel-close');
+  const metaPanelContent = document.getElementById('meta-panel-content');
+  const metaScript = document.getElementById('gospelo-diagram-meta');
+
+  if (metaToggle && metaPanel && metaPanelContent && metaScript) {
+    // Load metadata content
+    try {
+      const metaData = JSON.parse(metaScript.textContent || '{}');
+      metaPanelContent.textContent = JSON.stringify(metaData, null, 2);
+    } catch (e) {
+      metaPanelContent.textContent = 'Error loading metadata';
+    }
+
+    // Toggle panel
+    metaToggle.addEventListener('click', function() {
+      metaPanel.classList.toggle('open');
+    });
+
+    // Close button
+    if (metaPanelClose) {
+      metaPanelClose.addEventListener('click', function() {
+        metaPanel.classList.remove('open');
+      });
+    }
+
+    // Export SVG button
+    const exportBtn = document.getElementById('meta-panel-export');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', function() {
+        // Clone SVG and remove UI elements
+        const svgClone = svg.cloneNode(true);
+        const boundaryBox = svgClone.querySelector('.boundary-box');
+        if (boundaryBox) boundaryBox.remove();
+
+        // Add XML declaration and proper namespace
+        const serializer = new XMLSerializer();
+        let svgString = serializer.serializeToString(svgClone);
+        svgString = '<?xml version="1.0" encoding="UTF-8"?>\n' + svgString;
+
+        // Download as SVG file
+        const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'diagram.svg';
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+  }
+})();
+</script>
+</body>
+</html>
