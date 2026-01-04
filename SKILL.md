@@ -250,11 +250,11 @@ bun bin/cli.ts render diagram.json /tmp/diagram.html
 
 # または直接Bunスクリプトで
 bun -e '
-import { renderStandalone } from "./src/index.ts";
+import { renderShareable } from "./src/index.ts";
 import { readFileSync } from "fs";
 
 const diagram = JSON.parse(readFileSync("diagram.json", "utf-8"));
-const html = renderStandalone(diagram);
+const html = renderShareable(diagram);
 await Bun.write("/tmp/diagram.html", html);
 console.log("Created: /tmp/diagram.html");
 '

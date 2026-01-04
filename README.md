@@ -21,6 +21,38 @@ Built for the AI Agent era. While traditional diagramming tools require humans t
 - **Cloud Icons**: Built-in support for AWS, Azure, Google Cloud, and Tech Stack icons (1,500+ icons)
 - **CLI Tool**: Full-featured command-line interface
 
+## Output Formats
+
+gospelo-architect supports multiple output formats for different use cases:
+
+| Format | Command | Description |
+|--------|---------|-------------|
+| **HTML (Shareable)** | `render` | Interactive HTML with hover tooltips and Shift+drag area selection for copying resource IDs (requires CDN) |
+| **HTML (Preview)** | `preview` | Read-only HTML with Base64 embedded icons, Shift+drag multi-select for copying resource IDs (offline-capable) |
+| **SVG** | `svg` | Clean SVG output for embedding in documents |
+| **SVG (Embedded)** | `embed` | Base64 embedded icons + Confidential badge for GitHub README |
+| **ZIP (Embed Bundle)** | `embed --zip` | SVG + Markdown bundle with Japanese filename support |
+| **JSON (Enriched)** | `enrich` | Original JSON + computed metadata (positions, sizes) |
+| **JSON (Meta only)** | `meta` | Metadata only for AI consumption |
+
+### Embed Command
+
+Generate GitHub-ready SVG with embedded icons:
+
+```bash
+# Generate embedded SVG only
+gospelo-architect embed diagram.json
+
+# Generate ZIP bundle (SVG + Markdown)
+gospelo-architect embed --zip diagram.json
+```
+
+The `--zip` option creates a ZIP file containing:
+- `{title}.svg` - SVG with Base64 embedded icons and Confidential badge
+- `{title}.md` - Markdown file with SVG reference
+
+ZIP files use UTF-8 encoding flag (bit 11) for Windows Japanese filename compatibility.
+
 ## Installation
 
 ```bash
@@ -52,7 +84,7 @@ gospelo-architect meta diagram.json --pretty
 ### Programmatic Usage
 
 ```typescript
-import { renderStandalone, renderSvg, enrichDiagram } from "gospelo-architect";
+import { renderShareable, renderSvg, enrichDiagram } from "gospelo-architect";
 
 const diagram = {
   title: "My Architecture",
@@ -69,7 +101,7 @@ const diagram = {
 };
 
 // Render to HTML
-const html = renderStandalone(diagram, { width: 800, height: 600 });
+const html = renderShareable(diagram, { width: 800, height: 600 });
 
 // Render to SVG
 const svg = renderSvg(diagram);
@@ -221,8 +253,8 @@ See the [Icon Catalog](docs/references/ICON_CATALOG.md) for browsing and searchi
 ### Core Functions
 
 ```typescript
-// Render to standalone HTML with embedded SVG and CSS
-renderStandalone(diagram: DiagramDefinition, options?: RenderOptions): string
+// Render to shareable HTML with embedded SVG and CSS (requires CDN for icons)
+renderShareable(diagram: DiagramDefinition, options?: RenderOptions): string
 
 // Render to SVG only
 renderSvg(diagram: DiagramDefinition, options?: RenderOptions): string

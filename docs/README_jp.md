@@ -52,7 +52,7 @@ gospelo-architect meta diagram.json --pretty
 ### プログラマティック使用
 
 ```typescript
-import { renderStandalone, renderSvg, enrichDiagram } from "gospelo-architect";
+import { renderShareable, renderSvg, enrichDiagram } from "gospelo-architect";
 
 const diagram = {
   title: "マイアーキテクチャ",
@@ -69,7 +69,7 @@ const diagram = {
 };
 
 // HTMLにレンダリング
-const html = renderStandalone(diagram, { width: 800, height: 600 });
+const html = renderShareable(diagram, { width: 800, height: 600 });
 
 // SVGにレンダリング
 const svg = renderSvg(diagram);
@@ -221,8 +221,8 @@ AWS、Azure、Google Cloud、Tech Stack の各プロバイダーで 1,500 以上
 ### コア関数
 
 ```typescript
-// 埋め込みSVGとCSSを持つスタンドアロンHTMLにレンダリング
-renderStandalone(diagram: DiagramDefinition, options?: RenderOptions): string
+// 共有可能なHTMLにレンダリング（アイコンはCDNから取得）
+renderShareable(diagram: DiagramDefinition, options?: RenderOptions): string
 
 // SVGのみにレンダリング
 renderSvg(diagram: DiagramDefinition, options?: RenderOptions): string

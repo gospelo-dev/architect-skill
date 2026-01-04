@@ -172,7 +172,7 @@ In `Edit.tsx`, remove the `window.GospeloDiagrams` polling logic since the packa
 
 ```typescript
 // Rendering
-export { render, renderStandalone, renderSvg, renderPreviewHtml } from './index';
+export { render, renderShareable, renderSvg, renderPreviewHtml } from './index';
 export { Renderer } from './renderer/Renderer';
 
 // Types
