@@ -465,4 +465,100 @@ describe('Connection Path Generation', () => {
       expect(collisions).toHaveLength(0);
     });
   });
+
+  describe('minY constraint', () => {
+    /**
+     * Helper to extract minimum Y coordinate from path
+     */
+    function getMinY(path: string): number {
+      const segments = parsePathSegments(path);
+      return Math.min(...segments.map(s => s.y));
+    }
+
+    test('should respect minY constraint when avoiding obstacles upward', () => {
+      /**
+       * Layout:
+       *
+       * Title area: Y < 60 should be avoided
+       *
+       *   [from] ---> [obs] ---> [to]
+       *
+       * Connection should not go above minY when routing around obstacle
+       */
+      const from = createNode('from', 100, 100);
+      const obs = createNode('obs', 300, 100);
+      const to = createNode('to', 500, 100);
+
+      const conn: Connection = { from: 'from', to: 'to' };
+      const anchor: ConnectionAnchorInfo = {
+        fromSide: 'right',
+        toSide: 'left',
+        fromIndex: 0,
+        fromTotal: 1,
+        toIndex: 0,
+        toTotal: 1,
+      };
+
+      const minY = 60; // Simulating title constraint
+      const path = generateConnectionPath(conn, from, to, anchor, [obs], minY);
+      const pathMinY = getMinY(path);
+
+      // Path should not go above minY
+      expect(pathMinY).toBeGreaterThanOrEqual(minY);
+    });
+
+    test('should go below obstacle when minY prevents going above', () => {
+      /**
+       * Layout with tight minY constraint:
+       *
+       * minY = 90 (subtitle area)
+       * obstacles at Y = 100
+       *
+       * Connection must go below obstacles, not above
+       */
+      const from = createNode('from', 100, 100);
+      const obs = createNode('obs', 300, 100);
+      const to = createNode('to', 500, 100);
+
+      const conn: Connection = { from: 'from', to: 'to' };
+      const anchor: ConnectionAnchorInfo = {
+        fromSide: 'right',
+        toSide: 'left',
+        fromIndex: 0,
+        fromTotal: 1,
+        toIndex: 0,
+        toTotal: 1,
+      };
+
+      const minY = 90; // Tight constraint (near obstacle top)
+      const path = generateConnectionPath(conn, from, to, anchor, [obs], minY);
+      const pathMinY = getMinY(path);
+
+      // Path should respect minY and go below instead
+      expect(pathMinY).toBeGreaterThanOrEqual(minY);
+    });
+
+    test('should work without minY constraint (backward compatible)', () => {
+      const from = createNode('from', 100, 100);
+      const obs = createNode('obs', 300, 100);
+      const to = createNode('to', 500, 100);
+
+      const conn: Connection = { from: 'from', to: 'to' };
+      const anchor: ConnectionAnchorInfo = {
+        fromSide: 'right',
+        toSide: 'left',
+        fromIndex: 0,
+        fromTotal: 1,
+        toIndex: 0,
+        toTotal: 1,
+      };
+
+      // No minY constraint
+      const path = generateConnectionPath(conn, from, to, anchor, [obs]);
+
+      // Should still avoid obstacle
+      const collisions = pathPassesThroughObstacles(path, [obs]);
+      expect(collisions).toHaveLength(0);
+    });
+  });
 });

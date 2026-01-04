@@ -93,13 +93,20 @@ export interface ConnectionAnchorInfo {
 
 /**
  * Generate SVG path for a connection with distributed anchor points
+ * @param connection - The connection definition
+ * @param fromNode - Source node
+ * @param toNode - Target node
+ * @param anchorInfo - Anchor distribution information
+ * @param allNodes - All nodes for obstacle avoidance
+ * @param minY - Minimum Y coordinate for connection paths (to avoid title/subtitle overlap)
  */
 export function generateConnectionPath(
   connection: Connection,
   fromNode: ComputedNode,
   toNode: ComputedNode,
   anchorInfo?: ConnectionAnchorInfo,
-  allNodes?: ComputedNode[]
+  allNodes?: ComputedNode[],
+  minY?: number
 ): string {
   const style = connection.style || 'orthogonal';
 
@@ -114,7 +121,7 @@ export function generateConnectionPath(
     const toSide = anchorInfo?.toSide;
     // 接続元・先以外のノードを除外リストとして渡す
     const obstacles = allNodes?.filter(n => n.id !== fromNode.id && n.id !== toNode.id);
-    return generateOrthogonalPath(from, to, fromSide, toSide, obstacles, anchorInfo);
+    return generateOrthogonalPath(from, to, fromSide, toSide, obstacles, anchorInfo, minY);
   }
 }
 
@@ -417,6 +424,7 @@ function findSafeVerticalX(
  * @param obstacles - Nodes to avoid
  * @param _fromY - Original fromY (unused, kept for API compatibility)
  * @param _toY - Original toY (unused, kept for API compatibility)
+ * @param minY - Minimum Y coordinate constraint (to avoid title/subtitle overlap)
  */
 function findSafeHorizontalY(
   preferredY: number,
@@ -424,17 +432,21 @@ function findSafeHorizontalY(
   x2: number,
   obstacles: ComputedNode[],
   _fromY: number,
-  _toY: number
+  _toY: number,
+  minY?: number
 ): number {
   const margin = 10;
 
+  // Apply minY constraint to preferred position
+  const constrainedPreferredY = minY !== undefined ? Math.max(preferredY, minY) : preferredY;
+
   // Check if preferred position is safe
   const hasCollision = obstacles.some(node =>
-    horizontalLineIntersectsNode(preferredY, x1, x2, node, margin)
+    horizontalLineIntersectsNode(constrainedPreferredY, x1, x2, node, margin)
   );
 
   if (!hasCollision) {
-    return preferredY;
+    return constrainedPreferredY;
   }
 
   // Find all obstacles that intersect with the X range
@@ -451,7 +463,7 @@ function findSafeHorizontalY(
   });
 
   if (relevantNodes.length === 0) {
-    return preferredY;
+    return constrainedPreferredY;
   }
 
   // Collect all candidate Y positions (above and below each obstacle)
@@ -465,20 +477,26 @@ function findSafeHorizontalY(
       bottom: node.computedY + (node.computedHeight || 48),
     };
 
-    // Try just above this node
+    // Try just above this node (only if above minY constraint)
     const aboveY = bounds.top - margin - 5;
-    candidates.push({ y: aboveY, distance: Math.abs(aboveY - preferredY) });
+    if (minY === undefined || aboveY >= minY) {
+      candidates.push({ y: aboveY, distance: Math.abs(aboveY - constrainedPreferredY) });
+    }
 
     // Try just below this node
     const belowY = bounds.bottom + margin + 5;
-    candidates.push({ y: belowY, distance: Math.abs(belowY - preferredY) });
+    candidates.push({ y: belowY, distance: Math.abs(belowY - constrainedPreferredY) });
   }
 
   // Sort candidates by distance from preferred position
   candidates.sort((a, b) => a.distance - b.distance);
 
-  // Find the first safe candidate
+  // Find the first safe candidate that respects minY constraint
   for (const candidate of candidates) {
+    // Skip candidates that violate minY constraint
+    if (minY !== undefined && candidate.y < minY) {
+      continue;
+    }
     const isSafe = !obstacles.some(n =>
       horizontalLineIntersectsNode(candidate.y, x1, x2, n, margin)
     );
@@ -487,8 +505,8 @@ function findSafeHorizontalY(
     }
   }
 
-  // Fallback: return preferred (will have collision but better than nothing)
-  return preferredY;
+  // Fallback: return constrained preferred (will have collision but better than nothing)
+  return constrainedPreferredY;
 }
 
 /**
@@ -573,6 +591,13 @@ function findSafeVerticalXAfterObstacle(
 
 /**
  * Generate orthogonal (right-angle) path based on connector type
+ * @param from - Start point
+ * @param to - End point
+ * @param fromSide - Which side of from node the connection exits
+ * @param toSide - Which side of to node the connection enters
+ * @param obstacles - Nodes to avoid
+ * @param anchorInfo - Connection anchor distribution info
+ * @param minY - Minimum Y coordinate constraint (to avoid title/subtitle overlap)
  */
 function generateOrthogonalPath(
   from: Point,
@@ -580,7 +605,8 @@ function generateOrthogonalPath(
   fromSide?: AnchorSide,
   toSide?: AnchorSide,
   obstacles?: ComputedNode[],
-  anchorInfo?: ConnectionAnchorInfo
+  anchorInfo?: ConnectionAnchorInfo,
+  minY?: number
 ): string {
   // アンカー情報がない場合は従来のロジック
   if (!fromSide || !toSide) {
@@ -609,7 +635,7 @@ function generateOrthogonalPath(
           if (hasCollision) {
             // 障害物がある場合は上または下に迂回するパスを生成
             const firstMidX = findSafeVerticalXBeforeObstacle(from.x, from.y, obstacles);
-            const safeY = findSafeHorizontalY(from.y, firstMidX, to.x, obstacles, from.y, to.y);
+            const safeY = findSafeHorizontalY(from.y, firstMidX, to.x, obstacles, from.y, to.y, minY);
             const lastMidX = findSafeVerticalXAfterObstacle(to.x, to.y, obstacles);
             return `M ${from.x} ${from.y} L ${firstMidX} ${from.y} L ${firstMidX} ${safeY} L ${lastMidX} ${safeY} L ${lastMidX} ${to.y} L ${to.x} ${to.y}`;
           }
@@ -713,7 +739,8 @@ function generateOrthogonalPath(
               afterObstacleX,
               obstacles,
               Math.min(from.y, to.y) - 80,
-              Math.max(from.y, to.y) + 80
+              Math.max(from.y, to.y) + 80,
+              minY
             );
 
             // X座標も少しだけ分散（控えめに）
@@ -771,14 +798,14 @@ function generateOrthogonalPath(
           );
 
           // 水平セグメントのY座標も安全な位置を見つける
-          const safeY = findSafeHorizontalY(midY, from.x, safeX, obstacles, from.y, to.y);
+          const safeY = findSafeHorizontalY(midY, from.x, safeX, obstacles, from.y, to.y, minY);
 
           // 5セグメントパス: from → 下/上 → 左/右に迂回 → 下/上 → to
           return `M ${from.x} ${from.y} L ${from.x} ${safeY} L ${safeX} ${safeY} L ${safeX} ${to.y} L ${to.x} ${to.y}`;
         }
 
         // 水平セグメントだけに障害物がある場合
-        midY = findSafeHorizontalY(midY, from.x, to.x, obstacles, from.y, to.y);
+        midY = findSafeHorizontalY(midY, from.x, to.x, obstacles, from.y, to.y, minY);
       }
 
       return `M ${from.x} ${from.y} L ${from.x} ${midY} L ${to.x} ${midY} L ${to.x} ${to.y}`;

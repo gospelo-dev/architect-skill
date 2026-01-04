@@ -632,6 +632,21 @@ ${gradients.join('\n')}
   }
 
   /**
+   * Calculate minimum Y coordinate for connection paths
+   * to avoid overlapping with title and subtitle
+   */
+  private calculateMinYForConnections(): number {
+    // Title is rendered at Y=40, subtitle at Y=70
+    // Add margin to ensure connection paths don't overlap
+    if (this.diagram.subtitle) {
+      return 90; // Below subtitle with margin
+    } else if (this.diagram.title) {
+      return 60; // Below title with margin
+    }
+    return 0; // No constraint
+  }
+
+  /**
    * Render all connections with distributed anchor points
    */
   private renderConnections(): string {
@@ -643,6 +658,9 @@ ${gradients.join('\n')}
     // Get all computed nodes for obstacle avoidance
     const allNodes = Array.from(this.nodeMap.values());
 
+    // Calculate minY to avoid title/subtitle overlap
+    const minY = this.calculateMinYForConnections();
+
     return this.diagram.connections.map((conn, index) => {
       const fromNode = this.nodeMap.get(conn.from);
       const toNode = this.nodeMap.get(conn.to);
@@ -650,7 +668,7 @@ ${gradients.join('\n')}
       if (!fromNode || !toNode) return '';
 
       const anchorInfo = anchorInfoMap.get(index);
-      return this.renderConnection(conn, fromNode, toNode, anchorInfo, allNodes);
+      return this.renderConnection(conn, fromNode, toNode, anchorInfo, allNodes, minY);
     }).join('\n');
   }
 
@@ -766,9 +784,10 @@ ${gradients.join('\n')}
     fromNode: ComputedNode,
     toNode: ComputedNode,
     anchorInfo?: ConnectionAnchorInfo,
-    allNodes?: ComputedNode[]
+    allNodes?: ComputedNode[],
+    minY?: number
   ): string {
-    const path = generateConnectionPath(conn, fromNode, toNode, anchorInfo, allNodes);
+    const path = generateConnectionPath(conn, fromNode, toNode, anchorInfo, allNodes, minY);
     const color = this.resolveColor(conn.color) ||
       (conn.type === 'auth' ? DEFAULT_COLORS.orange : DEFAULT_COLORS.blue);
     const width = conn.width || 2;
