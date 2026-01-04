@@ -20,7 +20,7 @@ import {
   ConnectionMeta,
   LayoutMeta,
 } from '../core/types';
-import { resolveIconUrl, generateFallbackSvg } from '../core/icons';
+import { resolveIconUrl, generateFallbackSvg, loadIconUrlMap } from '../core/icons';
 import { computeLayout, getNodeCenter } from '../layout/layout';
 import {
   generateConnectionPath,
@@ -1049,6 +1049,8 @@ ${gradients.join('\n')}
    * No edit functionality, icons are fetched and embedded as data URIs
    */
   async renderPreviewHtml(): Promise<string> {
+    // Preload icon catalog from CDN before rendering
+    await loadIconUrlMap();
     const svg = this.renderSvg();
 
     // Collect all icon URLs from SVG

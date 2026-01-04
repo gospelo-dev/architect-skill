@@ -33,7 +33,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, basename, join } from 'path';
-import { enrichDiagram, generateMeta, renderStandalone, renderSvg, renderPreviewHtml, createBuilder, IconCatalogClient } from '../src/index';
+import { enrichDiagram, generateMeta, renderStandalone, renderSvg, renderPreviewHtml, createBuilder, IconCatalogClient, loadIconUrlMap } from '../src/index';
 import type { RenderOptions } from '../src/core/types';
 import type { DiagramPatch, NodeInput, NodeUpdate } from '../src/core/builder';
 
@@ -697,6 +697,9 @@ if (options.output && options.diagram) {
     outputPath = join(dirname(options.diagram), inputBaseName + ext);
   }
 
+  // Preload icon catalog from CDN before rendering
+  await loadIconUrlMap();
+
   if (options.output === 'html') {
     const html = renderStandalone(diagram, effectiveOptions, options.diagram);
     writeFile(outputPath, html);
@@ -937,6 +940,8 @@ switch (command) {
     // Save render options to JSON if specified via CLI
     saveRenderOptionsIfSpecified(diagram, inputPath);
 
+    // Preload icon catalog from CDN before rendering
+    await loadIconUrlMap();
     const html = renderStandalone(diagram, effectiveOptions, inputPath);
 
     writeFile(outputPath, html);
@@ -959,6 +964,8 @@ switch (command) {
     // Save render options to JSON if specified via CLI
     saveRenderOptionsIfSpecified(diagram, inputPath);
 
+    // Preload icon catalog from CDN before rendering
+    await loadIconUrlMap();
     const svg = renderSvg(diagram, effectiveOptions);
 
     writeFile(outputPath, svg);
