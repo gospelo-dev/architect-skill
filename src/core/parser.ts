@@ -265,26 +265,35 @@ export function validateDiagram(diagram: DiagramDefinition): string[] {
 
   // Check for duplicate node IDs and validate node structure
   const nodeIds = new Set<string>();
-  const collectIds = (nodes: Node[], isTopLevel: boolean = true) => {
+  const collectIds = (nodes: Node[]) => {
     for (const node of nodes) {
       if (nodeIds.has(node.id)) {
         errors.push(`Duplicate node ID: ${node.id}`);
       }
       nodeIds.add(node.id);
 
-      // Validate node ID has @ prefix (for icon nodes that should reference resources)
-      if (node.type === 'icon' || node.type === undefined) {
-        if (!node.id.startsWith('@')) {
-          errors.push(`Node ID "${node.id}" must start with @ prefix`);
-        }
-        // Validate node ID matches a resource ID
-        if (node.id.startsWith('@') && !resourceIds.has(node.id)) {
-          errors.push(`Node "${node.id}" has no matching resource. Add resource with same ID.`);
-        }
+      // All nodes MUST have @ prefix and matching resource entry
+      if (!node.id.startsWith('@')) {
+        errors.push(`Node ID "${node.id}" must start with @ prefix`);
+      }
+      if (node.id.startsWith('@') && !resourceIds.has(node.id)) {
+        errors.push(`Node "${node.id}" has no matching resource. Add resource with same ID.`);
       }
 
       if (node.children) {
-        collectIds(node.children, false);
+        collectIds(node.children);
+      }
+
+      // Validate composite node icons reference resources
+      if (node.icons) {
+        for (const iconRef of node.icons) {
+          if (!iconRef.id.startsWith('@')) {
+            errors.push(`Composite icon ID "${iconRef.id}" must start with @ prefix`);
+          }
+          if (iconRef.id.startsWith('@') && !resourceIds.has(iconRef.id)) {
+            errors.push(`Composite icon "${iconRef.id}" has no matching resource. Add resource with same ID.`);
+          }
+        }
       }
     }
   };

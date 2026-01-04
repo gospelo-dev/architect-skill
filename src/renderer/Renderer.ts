@@ -433,6 +433,18 @@ ${gradients.join('\n')}
   private renderGroupNode(node: ComputedNode): string {
     const { computedX: x, computedY: y, computedWidth: w, computedHeight: h } = node;
     const borderColor = this.resolveColor(node.borderColor) || DEFAULT_COLORS.orange;
+    const resources = this.diagram.resources || {};
+
+    // Render group node's icon in top-left corner (from resource or explicit icon property)
+    const groupIconId = node.icon || resources[node.id]?.icon;
+    const groupIconUrl = groupIconId ? resolveIconUrl(groupIconId) : null;
+    const groupIconSize = 24;
+    const groupIconPadding = 8;
+    let groupIconSvg = '';
+    if (groupIconUrl) {
+      const onerrorHandler = `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${groupIconId}',url:'${groupIconUrl}'}); this.style.display='none'"`;
+      groupIconSvg = `<image href="${groupIconUrl}" x="${groupIconPadding}" y="${groupIconPadding}" width="${groupIconSize}" height="${groupIconSize}" ${onerrorHandler}/>`;
+    }
 
     const children = node.children
       ? (node.children as ComputedNode[]).map(child => this.renderNode(child)).join('\n')
@@ -444,6 +456,7 @@ ${gradients.join('\n')}
 
     return `<g id="${node.id}" class="node group-node" transform="translate(${x}, ${y})">
   <rect class="group-box" width="${w}" height="${h}" rx="8" stroke="${borderColor}" stroke-width="2" fill="white" style="cursor:pointer" ${copyHandler}>${tooltip}</rect>
+  ${groupIconSvg}
   <text class="group-label" data-node-id="${node.id}" data-field="label" x="${w / 2}" y="-8" text-anchor="middle" fill="${borderColor}" font-size="14" font-weight="bold" style="cursor:pointer" ${copyHandler}>${this.escapeHtml(node.label || '')}</text>
   <g class="children" transform="translate(0, 0)">
     ${children}
@@ -461,8 +474,23 @@ ${gradients.join('\n')}
     const iconSize = 36;
     const labelHeight = 14;
     const iconGap = 12;
+    const resources = this.diagram.resources || {};
+
+    // Render composite node's own icon in top-left corner (from resource or explicit icon property)
+    const compositeIconId = node.icon || resources[node.id]?.icon;
+    const compositeIconUrl = compositeIconId ? resolveIconUrl(compositeIconId) : null;
+    const compositeIconSize = 24;
+    const compositeIconPadding = 6;
+    let compositeIconSvg = '';
+    if (compositeIconUrl) {
+      const onerrorHandler = `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${compositeIconId}',url:'${compositeIconUrl}'}); this.style.display='none'"`;
+      compositeIconSvg = `<image href="${compositeIconUrl}" x="${compositeIconPadding}" y="${compositeIconPadding}" width="${compositeIconSize}" height="${compositeIconSize}" ${onerrorHandler}/>`;
+    }
+
     const icons = (node.icons || []).map((iconRef, i) => {
-      const iconUrl = resolveIconUrl(iconRef.icon);
+      // Resolve icon from resources if iconRef.icon is not set
+      const iconId = iconRef.icon || resources[iconRef.id]?.icon;
+      const iconUrl = iconId ? resolveIconUrl(iconId) : null;
       const iconY = 20 + i * (iconSize + labelHeight + iconGap);
       const iconX = (w - iconSize) / 2;
       const labelY = iconY + iconSize + 12;
@@ -475,7 +503,7 @@ ${gradients.join('\n')}
       parts.push(`<g id="${iconRef.id}" class="composite-icon" style="cursor:pointer" ${iconCopyHandler}>`);
       parts.push(iconTooltip);
       if (iconUrl) {
-        const onerrorHandler = `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${iconRef.icon}',x:${x + iconX},y:${y + iconY},url:'${iconUrl}'}); this.style.display='none'"`;
+        const onerrorHandler = `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${iconId}',x:${x + iconX},y:${y + iconY},url:'${iconUrl}'}); this.style.display='none'"`;
         parts.push(`<image href="${iconUrl}" x="${iconX}" y="${iconY}" width="${iconSize}" height="${iconSize}" ${onerrorHandler}/>`);
       }
       if (iconRef.label) {
@@ -501,6 +529,7 @@ ${gradients.join('\n')}
     return `<g id="${node.id}" class="node composite-node" transform="translate(${x}, ${y})">
   ${labelParts.join('\n')}
   <rect class="composite-box" width="${w}" height="${h}" rx="4" stroke="${borderColor}" stroke-width="1" fill="white" style="cursor:pointer" ${copyHandler}>${tooltip}</rect>
+  ${compositeIconSvg}
   ${icons}
 </g>`;
   }
@@ -1216,6 +1245,20 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
             license: getLicense(node.icon),
           };
         }
+        // Collect composite node's icons
+        if (node.type === 'composite' && node.icons) {
+          for (const iconRef of node.icons) {
+            // Resolve icon from resources if iconRef.icon is not set
+            const iconId = iconRef.icon || resources[iconRef.id]?.icon;
+            if (iconId) {
+              nodeIconMap[iconRef.id] = {
+                icon: iconId,
+                desc: resources[iconRef.id]?.desc ? truncate(resources[iconRef.id].desc!, 50) : undefined,
+                license: getLicense(iconId),
+              };
+            }
+          }
+        }
         if (node.children) {
           collectNodes(node.children as ComputedNode[]);
         }
@@ -1234,6 +1277,26 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
           bottom: node.bounds.bottom,
         };
       }
+      // Add composite node's icons bounds
+      if (node.type === 'composite' && node.icons) {
+        const iconSize = 36;
+        const labelHeight = 14;
+        const iconGap = 12;
+        const nodeAbsX = node.computedX;
+        const nodeAbsY = node.computedY;
+        const w = node.computedWidth || 100;
+        for (let i = 0; i < node.icons.length; i++) {
+          const iconRef = node.icons[i];
+          const iconY = 20 + i * (iconSize + labelHeight + iconGap);
+          const iconX = (w - iconSize) / 2;
+          nodeBoundsMap[iconRef.id] = {
+            left: nodeAbsX + iconX,
+            top: nodeAbsY + iconY,
+            right: nodeAbsX + iconX + iconSize,
+            bottom: nodeAbsY + iconY + iconSize,
+          };
+        }
+      }
     }
 
     return `
@@ -1242,7 +1305,7 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
   var nodeBounds = ${JSON.stringify(nodeBoundsMap)};
   var tooltip = document.getElementById('hover-tooltip');
   var toast = document.getElementById('copy-toast');
-  var nodes = document.querySelectorAll('.node');
+  var nodes = document.querySelectorAll('.node, .composite-icon');
   var svg = document.querySelector('.gospelo-svg');
   var selectionRect = document.getElementById('selection-rect');
   var copyBtn = document.getElementById('copy-btn');
@@ -1454,10 +1517,10 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
 /* Hide UI elements in preview */
 .boundary-box { display: none; }
 /* Node hover effect */
-.node { cursor: pointer; }
-.node:hover { filter: brightness(1.1); }
+.node, .composite-icon { cursor: pointer; }
+.node:hover, .composite-icon:hover { filter: brightness(1.1); }
 /* Selected node highlight */
-.node.selected { filter: drop-shadow(0 0 6px #0078D7); }
+.node.selected, .composite-icon.selected { filter: drop-shadow(0 0 6px #0078D7); }
 /* Copy toast */
 .copy-toast {
   position: fixed;
