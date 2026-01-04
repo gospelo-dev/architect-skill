@@ -640,6 +640,9 @@ ${gradients.join('\n')}
     // First pass: calculate anchor info for all connections
     const anchorInfoMap = this.calculateAnchorDistribution();
 
+    // Get all computed nodes for obstacle avoidance
+    const allNodes = Array.from(this.nodeMap.values());
+
     return this.diagram.connections.map((conn, index) => {
       const fromNode = this.nodeMap.get(conn.from);
       const toNode = this.nodeMap.get(conn.to);
@@ -647,7 +650,7 @@ ${gradients.join('\n')}
       if (!fromNode || !toNode) return '';
 
       const anchorInfo = anchorInfoMap.get(index);
-      return this.renderConnection(conn, fromNode, toNode, anchorInfo);
+      return this.renderConnection(conn, fromNode, toNode, anchorInfo, allNodes);
     }).join('\n');
   }
 
@@ -762,9 +765,10 @@ ${gradients.join('\n')}
     conn: Connection,
     fromNode: ComputedNode,
     toNode: ComputedNode,
-    anchorInfo?: ConnectionAnchorInfo
+    anchorInfo?: ConnectionAnchorInfo,
+    allNodes?: ComputedNode[]
   ): string {
-    const path = generateConnectionPath(conn, fromNode, toNode, anchorInfo);
+    const path = generateConnectionPath(conn, fromNode, toNode, anchorInfo, allNodes);
     const color = this.resolveColor(conn.color) ||
       (conn.type === 'auth' ? DEFAULT_COLORS.orange : DEFAULT_COLORS.blue);
     const width = conn.width || 2;
