@@ -396,25 +396,26 @@ describe('validateDiagram', () => {
     expect(errors).toContain('Node "@dynamodb" has no matching resource. Add resource with same ID.');
   });
 
-  test('should allow group nodes without @ prefix', () => {
+  test('should require all nodes including groups to have @ prefix and resource', () => {
     const diagram = {
       title: 'Test',
       resources: {
+        '@vpc': { desc: 'Virtual Private Cloud' },
         '@ec2': { icon: 'aws:ec2' },
       },
       nodes: [
         {
-          id: 'vpc',
+          id: '@vpc',
           type: 'group',
           label: 'VPC',
-          children: [{ id: '@ec2', label: 'EC2', parentId: 'vpc' }],
+          children: [{ id: '@ec2', label: 'EC2', parentId: '@vpc' }],
         },
       ],
     };
 
     const errors = validateDiagram(diagram as any);
-    // Group nodes don't need @ prefix or matching resource
-    expect(errors.filter(e => e.includes('vpc'))).toHaveLength(0);
+    // All nodes including groups must have @ prefix and matching resource
+    expect(errors).toHaveLength(0);
   });
 
   test('should detect duplicate node IDs', () => {
@@ -438,13 +439,14 @@ describe('validateDiagram', () => {
       title: 'Test',
       resources: {
         '@dup': { icon: 'aws:lambda' },
+        '@group': { desc: 'Container' },
       },
       nodes: [
         { id: '@dup', label: 'Lambda' },
         {
-          id: 'group',
+          id: '@group',
           type: 'group',
-          children: [{ id: '@dup', label: 'S3', parentId: 'group' }],
+          children: [{ id: '@dup', label: 'S3', parentId: '@group' }],
         },
       ],
     };
@@ -479,5 +481,78 @@ describe('validateDiagram', () => {
 
     const errors = validateDiagram(diagram as any);
     expect(errors).toContain('Connection references unknown node: @unknown');
+  });
+
+  test('should detect composite icon without @ prefix', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {
+        '@frontend': { icon: 'aws:amplify' },
+        '@astro': { icon: 'tech-stack:astro' },
+      },
+      nodes: [
+        {
+          id: '@frontend',
+          type: 'composite',
+          label: 'Frontend',
+          icons: [
+            { id: '@astro', label: 'Astro' },
+            { id: 'react', label: 'React' }, // Missing @ prefix
+          ],
+        },
+      ],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toContain('Composite icon ID "react" must start with @ prefix');
+  });
+
+  test('should detect composite icon without matching resource', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {
+        '@frontend': { icon: 'aws:amplify' },
+        '@astro': { icon: 'tech-stack:astro' },
+      },
+      nodes: [
+        {
+          id: '@frontend',
+          type: 'composite',
+          label: 'Frontend',
+          icons: [
+            { id: '@astro', label: 'Astro' },
+            { id: '@react', label: 'React' }, // No matching resource
+          ],
+        },
+      ],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toContain('Composite icon "@react" has no matching resource. Add resource with same ID.');
+  });
+
+  test('should validate composite node with all icons having resources', () => {
+    const diagram = {
+      title: 'Test',
+      resources: {
+        '@frontend': { icon: 'aws:amplify' },
+        '@astro': { icon: 'tech-stack:astro' },
+        '@react': { icon: 'tech-stack:react' },
+      },
+      nodes: [
+        {
+          id: '@frontend',
+          type: 'composite',
+          label: 'Frontend',
+          icons: [
+            { id: '@astro', label: 'Astro' },
+            { id: '@react', label: 'React' },
+          ],
+        },
+      ],
+    };
+
+    const errors = validateDiagram(diagram as any);
+    expect(errors).toHaveLength(0);
   });
 });

@@ -40,36 +40,51 @@ describe('Resources', () => {
       expect(computed[0].icon).toBe('aws:lambda');
     });
 
-    test('should work without resources (backward compatible)', () => {
+    test('should resolve icon from resource for all node types', () => {
       const diagram: DiagramDefinition = {
         title: 'Test',
+        resources: {
+          '@group': { desc: 'Container group' },
+          '@api': { icon: 'aws:api_gateway', desc: 'API endpoint' },
+        },
         nodes: [
-          { id: 'api', icon: 'aws:api_gateway', label: 'API', position: [100, 100] },
+          {
+            id: '@group',
+            type: 'group',
+            label: 'VPC',
+            position: [50, 50],
+            size: [300, 200],
+            children: [
+              { id: '@api', label: 'API', position: [100, 100], parentId: '@group' },
+            ],
+          },
         ],
       };
 
       const computed = computeLayout(diagram);
 
-      expect(computed[0].icon).toBe('aws:api_gateway');
+      expect(computed[0].id).toBe('@group');
+      expect(computed[0].children?.[0].icon).toBe('aws:api_gateway');
     });
 
     test('should resolve icons for child nodes', () => {
       const diagram: DiagramDefinition = {
         title: 'Test',
         resources: {
+          '@group': { desc: 'Container' },
           '@child1': { icon: 'aws:lambda' },
           '@child2': { icon: 'aws:dynamodb' },
         },
         nodes: [
           {
-            id: 'group',
+            id: '@group',
             type: 'group',
             label: 'VPC',
             position: [100, 100],
             size: [400, 300],
             children: [
-              { id: '@child1', label: 'Lambda', position: [50, 50], parentId: 'group' },
-              { id: '@child2', label: 'DynamoDB', position: [200, 50], parentId: 'group' },
+              { id: '@child1', label: 'Lambda', position: [50, 50], parentId: '@group' },
+              { id: '@child2', label: 'DynamoDB', position: [200, 50], parentId: '@group' },
             ],
           },
         ],
@@ -100,15 +115,16 @@ describe('Resources', () => {
       );
     });
 
-    test('should allow nodes without matching resource', () => {
+    test('should require all nodes to have matching resource', () => {
       const diagram: DiagramDefinition = {
         title: 'Test',
         resources: {
           '@api': { icon: 'aws:api_gateway' },
+          '@other': { icon: 'aws:lambda' },
         },
         nodes: [
           { id: '@api', label: 'API', position: [100, 100] },
-          { id: 'other', icon: 'aws:lambda', label: 'Other', position: [300, 100] },
+          { id: '@other', icon: 'aws:lambda', label: 'Other', position: [300, 100] },
         ],
       };
 
@@ -150,15 +166,32 @@ describe('Resources', () => {
       expect(diagram.resources?.['@lambda'].icon).toBe('aws:lambda');
     });
 
-    test('should work without resources field', () => {
+    test('should parse resources with optional icon (text_box support)', () => {
       const json = {
         title: 'Test',
-        nodes: [{ id: 'api', icon: 'aws:api_gateway', position: [100, 100] }],
+        resources: {
+          '@group': { desc: 'AI Models container' },
+          '@model': { desc: 'Claude model - no icon needed' },
+        },
+        nodes: [
+          {
+            id: '@group',
+            type: 'group',
+            label: 'AI Models',
+            position: [50, 50],
+            size: [200, 100],
+            children: [
+              { id: '@model', type: 'text_box', label: 'Claude', parentId: '@group', position: [50, 30] },
+            ],
+          },
+        ],
       };
 
       const diagram = parseDiagram(json as any);
 
-      expect(diagram.resources).toBeUndefined();
+      expect(diagram.resources?.['@group'].icon).toBeUndefined();
+      expect(diagram.resources?.['@group'].desc).toBe('AI Models container');
+      expect(diagram.resources?.['@model'].desc).toBe('Claude model - no icon needed');
     });
   });
 
@@ -183,15 +216,16 @@ describe('Resources', () => {
       expect(computed[1].id).toBe('@db');
     });
 
-    test('should allow mixed IDs (with and without @)', () => {
+    test('should require all nodes to have @ prefix and matching resource', () => {
       const diagram: DiagramDefinition = {
         title: 'Test',
         resources: {
           '@api': { icon: 'aws:api_gateway' },
+          '@lambda': { icon: 'aws:lambda' },
         },
         nodes: [
           { id: '@api', label: 'API', position: [100, 100] },
-          { id: 'lambda', icon: 'aws:lambda', label: 'Lambda', position: [300, 100] },
+          { id: '@lambda', label: 'Lambda', position: [300, 100] },
         ],
       };
 
@@ -199,7 +233,7 @@ describe('Resources', () => {
 
       expect(computed[0].id).toBe('@api');
       expect(computed[0].icon).toBe('aws:api_gateway');
-      expect(computed[1].id).toBe('lambda');
+      expect(computed[1].id).toBe('@lambda');
       expect(computed[1].icon).toBe('aws:lambda');
     });
   });
