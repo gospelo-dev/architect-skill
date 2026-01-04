@@ -36,3 +36,6 @@ bin/editor-cli.ts
 
 # Claude files
 .claude/
+
+# Roo Code Files
+.roo/
