@@ -164,6 +164,19 @@ export function renderSvg(
 }
 
 /**
+ * Render to SVG with Base64 embedded icons
+ * すべてのアイコンをBase64データURIとして埋め込んだSVGを生成
+ */
+export async function renderSvgEmbed(
+  input: DiagramInput,
+  options?: RenderOptions
+): Promise<string> {
+  const diagram = _parseDiagram(input);
+  const renderer = new _Renderer(diagram, options);
+  return renderer.renderSvgEmbed();
+}
+
+/**
  * Enrich diagram JSON with computed metadata
  * メタデータを含むダイアグラムJSONを生成
  *

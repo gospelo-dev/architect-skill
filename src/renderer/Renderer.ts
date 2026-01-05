@@ -130,6 +130,57 @@ export class Renderer {
   }
 
   /**
+   * Get license text for an icon based on its provider
+   */
+  private getIconLicense(iconId: string | undefined): string {
+    if (!iconId) return '';
+    const provider = iconId.split(':')[0];
+    switch (provider) {
+      case 'aws':
+        return 'AWS Architecture Icons (Apache 2.0)';
+      case 'azure':
+        return 'Azure Icons (MIT)';
+      case 'google-cloud':
+        return 'Google Cloud Icons (Apache 2.0)';
+      case 'tech-stack':
+        return 'Simple Icons (CC0 1.0)';
+      default:
+        return '';
+    }
+  }
+
+  /**
+   * Build rich title content for icon tooltip
+   * Includes: Resource ID, Description, Icon name, License
+   */
+  private buildIconTitle(nodeId: string, iconId: string | undefined): string {
+    const resources = this.diagram.resources || {};
+    const resource = resources[nodeId];
+    const parts: string[] = [];
+
+    // Resource ID
+    parts.push(`ID: ${nodeId}`);
+
+    // Description from resource
+    if (resource?.desc) {
+      parts.push(`Desc: ${resource.desc}`);
+    }
+
+    // Icon identifier
+    if (iconId) {
+      parts.push(`Icon: ${iconId}`);
+    }
+
+    // License
+    const license = this.getIconLicense(iconId);
+    if (license) {
+      parts.push(`License: ${license}`);
+    }
+
+    return this.escapeHtml(parts.join('\n'));
+  }
+
+  /**
    * Render complete SVG diagram
    * Z-order: コネクター → ノード（アイコン） → ラベル
    */
@@ -434,8 +485,8 @@ ${gradients.join('\n')}
       ? `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${node.icon}',x:${x},y:${y},url:'${iconUrl}'}); this.style.display='none'"`
       : '';
 
-    // Tooltip and click-to-copy for node ID
-    const tooltip = `<title>${this.escapeHtml(node.id)}</title>`;
+    // Rich tooltip with resource info and click-to-copy for node ID
+    const tooltip = `<title>${this.buildIconTitle(node.id, node.icon)}</title>`;
     const copyHandler = `onclick="navigator.clipboard.writeText('${node.id}').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: ${node.id}';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})"`;
 
 
@@ -464,7 +515,8 @@ ${gradients.join('\n')}
     let groupIconSvg = '';
     if (groupIconUrl) {
       const onerrorHandler = `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${groupIconId}',url:'${groupIconUrl}'}); this.style.display='none'"`;
-      groupIconSvg = `<image href="${groupIconUrl}" x="${groupIconPadding}" y="${groupIconPadding}" width="${groupIconSize}" height="${groupIconSize}" ${onerrorHandler}/>`;
+      const iconTitle = `<title>${this.buildIconTitle(node.id, groupIconId)}</title>`;
+      groupIconSvg = `<g class="group-icon">${iconTitle}<image href="${groupIconUrl}" x="${groupIconPadding}" y="${groupIconPadding}" width="${groupIconSize}" height="${groupIconSize}" ${onerrorHandler}/></g>`;
     }
 
     const children = node.children
@@ -473,7 +525,7 @@ ${gradients.join('\n')}
 
     // Click-to-copy for group node ID
     const copyHandler = `onclick="event.stopPropagation();navigator.clipboard.writeText('${node.id}').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: ${node.id}';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})"`;
-    const tooltip = `<title>${this.escapeHtml(node.id)}</title>`;
+    const tooltip = `<title>${this.buildIconTitle(node.id, groupIconId)}</title>`;
 
     return `<g id="${node.id}" class="node group-node" transform="translate(${x}, ${y})">
   <rect class="group-box" width="${w}" height="${h}" rx="8" stroke="${borderColor}" stroke-width="2" fill="white" style="cursor:pointer" ${copyHandler}>${tooltip}</rect>
@@ -505,7 +557,8 @@ ${gradients.join('\n')}
     let compositeIconSvg = '';
     if (compositeIconUrl) {
       const onerrorHandler = `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${compositeIconId}',url:'${compositeIconUrl}'}); this.style.display='none'"`;
-      compositeIconSvg = `<image href="${compositeIconUrl}" x="${compositeIconPadding}" y="${compositeIconPadding}" width="${compositeIconSize}" height="${compositeIconSize}" ${onerrorHandler}/>`;
+      const iconTitle = `<title>${this.buildIconTitle(node.id, compositeIconId)}</title>`;
+      compositeIconSvg = `<g class="composite-main-icon">${iconTitle}<image href="${compositeIconUrl}" x="${compositeIconPadding}" y="${compositeIconPadding}" width="${compositeIconSize}" height="${compositeIconSize}" ${onerrorHandler}/></g>`;
     }
 
     const icons = (node.icons || []).map((iconRef, i) => {
@@ -516,8 +569,8 @@ ${gradients.join('\n')}
       const iconX = (w - iconSize) / 2;
       const labelY = iconY + iconSize + 12;
 
-      // Tooltip and click-to-copy for icon ID
-      const iconTooltip = `<title>${this.escapeHtml(iconRef.id)}</title>`;
+      // Rich tooltip and click-to-copy for icon ID
+      const iconTooltip = `<title>${this.buildIconTitle(iconRef.id, iconId)}</title>`;
       const iconCopyHandler = `onclick="event.stopPropagation();navigator.clipboard.writeText('${iconRef.id}').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: ${iconRef.id}';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})"`;
 
       const parts: string[] = [];
@@ -545,7 +598,7 @@ ${gradients.join('\n')}
 
     // Click-to-copy for composite node ID
     const copyHandler = `onclick="event.stopPropagation();navigator.clipboard.writeText('${node.id}').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: ${node.id}';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})"`;
-    const tooltip = `<title>${this.escapeHtml(node.id)}</title>`;
+    const tooltip = `<title>${this.buildIconTitle(node.id, compositeIconId)}</title>`;
 
     return `<g id="${node.id}" class="node composite-node" transform="translate(${x}, ${y})">
   ${labelParts.join('\n')}
@@ -562,8 +615,8 @@ ${gradients.join('\n')}
     const { computedX: x, computedY: y, computedWidth: w, computedHeight: h } = node;
     const borderColor = this.resolveColor(node.borderColor) || DEFAULT_COLORS.blue;
 
-    // Tooltip and click-to-copy for text box node ID
-    const tooltip = `<title>${this.escapeHtml(node.id)}</title>`;
+    // Rich tooltip and click-to-copy for text box node ID
+    const tooltip = `<title>${this.buildIconTitle(node.id, undefined)}</title>`;
     const copyHandler = `onclick="navigator.clipboard.writeText('${node.id}').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: ${node.id}';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})"`;
 
     return `<g id="${node.id}" class="node text-box-node" transform="translate(${x}, ${y})" style="cursor:pointer" ${copyHandler}>
@@ -597,8 +650,8 @@ ${gradients.join('\n')}
     // Simple placeholder for device icons
     const deviceSvg = this.getDeviceSvg(node.type || 'pc', size);
 
-    // Tooltip and click-to-copy for device node ID
-    const tooltip = `<title>${this.escapeHtml(node.id)}</title>`;
+    // Rich tooltip and click-to-copy for device node ID
+    const tooltip = `<title>${this.buildIconTitle(node.id, undefined)}</title>`;
     const copyHandler = `onclick="navigator.clipboard.writeText('${node.id}').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: ${node.id}';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})"`;
 
     return `<g id="${node.id}" class="node device-node" transform="translate(${x}, ${y})" style="cursor:pointer" ${copyHandler}>
@@ -1564,6 +1617,93 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
   <script>${this.getPreviewScript()}</script>
 </body>
 </html>`;
+  }
+
+  /**
+   * Render SVG with Base64 embedded icons
+   * Pure SVG output with all icons embedded as data URIs
+   * Fullscreen display with preserved aspect ratio
+   */
+  async renderSvgEmbed(): Promise<string> {
+    // Preload icon catalog from CDN before rendering
+    await loadIconUrlMap();
+    const svg = this.renderSvg();
+
+    // Collect all icon URLs from SVG
+    const urlRegex = /<image href="([^"]+)"/g;
+    const urls = new Set<string>();
+    let match;
+    while ((match = urlRegex.exec(svg)) !== null) {
+      urls.add(match[1]);
+    }
+
+    // Fetch all icons and convert to Base64
+    const iconDataMap = new Map<string, string>();
+    await Promise.all(
+      Array.from(urls).map(async (url) => {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            console.error(`[gospelo-architect] Failed to fetch icon: ${url} (${response.status})`);
+            return;
+          }
+          const arrayBuffer = await response.arrayBuffer();
+          const base64 = Buffer.from(arrayBuffer).toString('base64');
+
+          // Determine MIME type
+          let mimeType = 'image/svg+xml';
+          if (url.endsWith('.png')) {
+            mimeType = 'image/png';
+          } else if (url.endsWith('.jpg') || url.endsWith('.jpeg')) {
+            mimeType = 'image/jpeg';
+          }
+
+          iconDataMap.set(url, `data:${mimeType};base64,${base64}`);
+        } catch (error) {
+          console.error(`[gospelo-architect] Error fetching icon: ${url}`, error);
+        }
+      })
+    );
+
+    // Replace all icon URLs with Base64 data URIs
+    let embeddedSvg = svg;
+    for (const [url, dataUri] of iconDataMap) {
+      embeddedSvg = embeddedSvg.split(`href="${url}"`).join(`href="${dataUri}"`);
+    }
+
+    // Make SVG fullscreen: remove fixed width/height, keep viewBox for aspect ratio
+    const { width, height } = this.options;
+    embeddedSvg = embeddedSvg.replace(
+      /width="\d+" height="\d+"/,
+      `width="100%" height="100%" preserveAspectRatio="xMidYMid meet"`
+    );
+
+    // Add Confidential badge with hover tooltip (bottom-right corner)
+    const badgeX = width - 90;
+    const badgeY = height - 30;
+    const licenseText = `CONFIDENTIAL - INTERNAL USE ONLY
+
+This file is for internal review purposes only.
+Redistribution is strictly prohibited.
+
+Generated with gospelo-architect
+
+Third-Party Icon Attributions:
+- AWS Architecture Icons (Apache 2.0)
+- Azure Icons (MIT)
+- Google Cloud Icons (Apache 2.0)
+- Simple Icons (CC0 1.0)`;
+
+    const confidentialBadge = `
+  <g id="confidential-badge" transform="translate(${badgeX}, ${badgeY})" style="cursor:pointer;">
+    <title>${this.escapeHtml(licenseText)}</title>
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+    <text x="40" y="16" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#666">Confidential</text>
+  </g>`;
+
+    embeddedSvg = embeddedSvg.replace('</svg>', `${confidentialBadge}\n</svg>`);
+
+    return embeddedSvg;
   }
 
   /**

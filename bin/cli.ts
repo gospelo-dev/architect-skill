@@ -33,7 +33,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, basename, join } from 'path';
-import { enrichDiagram, generateMeta, renderStandalone, renderSvg, renderPreviewHtml, createBuilder, IconCatalogClient, loadIconUrlMap } from '../src/index';
+import { enrichDiagram, generateMeta, renderStandalone, renderSvg, renderSvgEmbed, renderPreviewHtml, createBuilder, IconCatalogClient, loadIconUrlMap } from '../src/index';
 import type { RenderOptions } from '../src/core/types';
 import type { DiagramPatch, NodeInput, NodeUpdate } from '../src/core/builder';
 
@@ -991,6 +991,27 @@ switch (command) {
     writeFile(outputPath, html);
     console.log('Icons are embedded as Base64 data URIs.');
     console.log('[AI] Display in Artifact, then ask user: "Would you like to edit anything?"');
+    break;
+  }
+
+  case 'svg-embed': {
+    if (positionalArgs.length < 1) {
+      console.error('Error: Input file required');
+      console.error('Usage: gospelo-architect svg-embed <input.json> [output.svg]');
+      process.exit(1);
+    }
+
+    const inputPath = positionalArgs[0];
+    const outputPath = positionalArgs[1] || inputPath.replace('.json', '_embed.svg');
+
+    const diagram = readJsonFile(inputPath) as any;
+    const effectiveOptions = getEffectiveRenderOptions(diagram);
+
+    console.log('Fetching icons and generating embedded SVG...');
+    const svg = await renderSvgEmbed(diagram, effectiveOptions);
+
+    writeFile(outputPath, svg);
+    console.log('Icons are embedded as Base64 data URIs.');
     break;
   }
 
