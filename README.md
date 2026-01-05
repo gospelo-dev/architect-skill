@@ -16,9 +16,10 @@ Built for the AI Agent era. While traditional diagramming tools require humans t
 ## Features
 
 - **Zero Dependencies**: Pure TypeScript with no external runtime dependencies
-- **Multiple Output Formats**: SVG, standalone HTML, SVG-embedded Markdown, enriched JSON with metadata
+- **Multiple Output Formats**: SVG, HTML, Markdown+SVG ZIP, enriched JSON with metadata
 - **Incremental Editing**: Fluent builder API for programmatic diagram modifications
 - **Cloud Icons**: Built-in support for AWS, Azure, Google Cloud, and Tech Stack icons (1,500+ icons)
+- **Rich Tooltips**: Hover to see resource ID, icon name, license, and description
 - **CLI Tool**: Full-featured command-line interface
 
 ## Output Formats
@@ -27,31 +28,13 @@ gospelo-architect supports multiple output formats for different use cases:
 
 | Format | Command | Description |
 |--------|---------|-------------|
-| **HTML (Shareable)** | `render` | Interactive HTML with hover tooltips and Shift+drag area selection for copying resource IDs (requires CDN) |
-| **HTML (Preview)** | `preview` | Read-only HTML with Base64 embedded icons, Shift+drag multi-select for copying resource IDs (offline-capable) |
-| **SVG** | `svg` | Clean SVG output for embedding in documents |
-| **SVG (Embedded)** | `embed` | Base64 embedded icons + Confidential badge for GitHub README |
-| **ZIP (Embed Bundle)** | `embed --zip` | SVG + Markdown bundle with Japanese filename support |
+| **HTML** | `html` | Interactive HTML with hover tooltips and Shift+drag multi-select (CDN icons) |
+| **SVG** | `svg` | Clean SVG with CDN icon references |
+| **SVG (Embedded)** | `svg-embed` | SVG with Base64 embedded icons (offline-capable) |
+| **Preview HTML** | `preview` | HTML with Base64 embedded icons for offline viewing |
+| **Markdown ZIP** | `markdown` | ZIP containing Markdown + embedded SVG |
 | **JSON (Enriched)** | `enrich` | Original JSON + computed metadata (positions, sizes) |
 | **JSON (Meta only)** | `meta` | Metadata only for AI consumption |
-
-### Embed Command
-
-Generate GitHub-ready SVG with embedded icons:
-
-```bash
-# Generate embedded SVG only
-gospelo-architect embed diagram.json
-
-# Generate ZIP bundle (SVG + Markdown)
-gospelo-architect embed --zip diagram.json
-```
-
-The `--zip` option creates a ZIP file containing:
-- `{title}.svg` - SVG with Base64 embedded icons and Confidential badge
-- `{title}.md` - Markdown file with SVG reference
-
-ZIP files use UTF-8 encoding flag (bit 11) for Windows Japanese filename compatibility.
 
 ## Installation
 
@@ -69,42 +52,50 @@ npm install gospelo-architect
 
 ```bash
 # Render diagram to HTML
-gospelo-architect render diagram.json output.html
+bun bin/cli.ts html diagram.json output.html
 
-# Render to SVG only
-gospelo-architect svg diagram.json output.svg
+# Render to SVG (CDN icons)
+bun bin/cli.ts svg diagram.json output.svg
+
+# Render to SVG with embedded icons (offline-capable)
+bun bin/cli.ts svg-embed diagram.json output.svg
+
+# Generate Markdown + SVG ZIP bundle
+bun bin/cli.ts markdown diagram.json output.zip
 
 # Add metadata for AI consumption
-gospelo-architect enrich diagram.json enriched.json
+bun bin/cli.ts enrich diagram.json enriched.json
 
 # Output metadata only
-gospelo-architect meta diagram.json --pretty
+bun bin/cli.ts meta diagram.json --pretty
 ```
 
 ### Programmatic Usage
 
 ```typescript
-import { renderShareable, renderSvg, enrichDiagram } from "gospelo-architect";
+import { renderStandalone, renderSvg, renderSvgEmbed, enrichDiagram } from "gospelo-architect";
 
 const diagram = {
   title: "My Architecture",
+  resources: {
+    "@lambda": { icon: "aws:lambda", desc: "Processing function" },
+    "@db": { icon: "aws:dynamodb", desc: "Data storage" }
+  },
   nodes: [
-    {
-      id: "lambda",
-      icon: "aws:lambda",
-      label: "Function",
-      position: [100, 100],
-    },
-    { id: "db", icon: "aws:dynamodb", label: "Database", position: [300, 100] },
+    { id: "@lambda", label: "Function", position: [100, 100] },
+    { id: "@db", label: "Database", position: [300, 100] }
   ],
-  connections: [{ from: "lambda", to: "db", type: "data" }],
+  connections: [{ from: "@lambda", to: "@db", type: "data" }]
 };
 
 // Render to HTML
-const html = renderShareable(diagram, { width: 800, height: 600 });
+const html = renderStandalone(diagram, { width: 800, height: 600 });
 
 // Render to SVG
 const svg = renderSvg(diagram);
+
+// Render to SVG with embedded icons
+const embeddedSvg = await renderSvgEmbed(diagram);
 
 // Enrich with metadata
 const enriched = enrichDiagram(diagram);
@@ -112,12 +103,18 @@ const enriched = enrichDiagram(diagram);
 
 ## Diagram Definition Format
 
-Diagrams are defined in JSON format:
+All nodes must have a corresponding resource entry with `@` prefix:
 
 ```json
 {
   "title": "System Architecture",
   "subtitle": "Production Environment",
+  "resources": {
+    "@api": { "icon": "aws:api_gateway", "desc": "API endpoint" },
+    "@backend": { "desc": "Backend service group" },
+    "@lambda": { "icon": "aws:lambda", "desc": "Processing function" },
+    "@db": { "icon": "aws:dynamodb", "desc": "Data storage" }
+  },
   "background": {
     "type": "gradient",
     "startColor": "#f5f5f5",
@@ -126,26 +123,25 @@ Diagrams are defined in JSON format:
   },
   "nodes": [
     {
-      "id": "api",
-      "icon": "aws:api_gateway",
+      "id": "@api",
       "label": "API Gateway",
       "position": [200, 100]
     },
     {
-      "id": "backend",
+      "id": "@backend",
       "type": "group",
       "label": "Backend Services",
       "position": [100, 200],
       "size": [400, 300],
       "children": [
-        { "id": "lambda", "icon": "aws:lambda", "label": "Function" },
-        { "id": "db", "icon": "aws:dynamodb", "label": "Database" }
+        { "id": "@lambda", "label": "Function", "parentId": "@backend" },
+        { "id": "@db", "label": "Database", "parentId": "@backend" }
       ]
     }
   ],
   "connections": [
-    { "from": "api", "to": "lambda", "type": "data" },
-    { "from": "lambda", "to": "db", "type": "data", "bidirectional": true }
+    { "from": "@api", "to": "@lambda", "type": "data" },
+    { "from": "@lambda", "to": "@db", "type": "data", "bidirectional": true }
   ]
 }
 ```
@@ -154,33 +150,35 @@ Diagrams are defined in JSON format:
 
 ### Render Commands
 
-| Command                             | Description                                      |
-| ----------------------------------- | ------------------------------------------------ |
-| `render <input.json> [output.html]` | Render diagram to standalone HTML                |
-| `svg <input.json> [output.svg]`     | Render diagram to SVG only                       |
-| `enrich <input.json> [output.json]` | Add computed metadata to diagram JSON            |
-| `meta <input.json>`                 | Output metadata only (JSON to stdout)            |
-| `preview <input.json>`              | Generate SVG and output file path for AI viewing |
+| Command | Description |
+|---------|-------------|
+| `html <input.json> [output.html]` | Render diagram to standalone HTML |
+| `svg <input.json> [output.svg]` | Render diagram to SVG (CDN icons) |
+| `svg-embed <input.json> [output.svg]` | Render SVG with Base64 embedded icons |
+| `preview <input.json> [output.html]` | Generate preview HTML with embedded icons |
+| `markdown <input.json> [output.zip]` | Generate ZIP with Markdown + embedded SVG |
+| `enrich <input.json> [output.json]` | Add computed metadata to diagram JSON |
+| `meta <input.json>` | Output metadata only (JSON to stdout) |
 
 ### Edit Commands
 
-| Command                                             | Description                             |
-| --------------------------------------------------- | --------------------------------------- |
-| `eval <input.json> '<expr>' [output.json]`          | Evaluate JS expression with builder 'b' |
-| `edit <input.json> <patch.json> [output.json]`      | Apply patch to diagram                  |
-| `add-node <input.json> <node.json> [output.json]`   | Add a node from JSON                    |
-| `remove-node <input.json> <node-id> [output.json]`  | Remove a node by ID                     |
-| `move-node <input.json> <node-id> <x> <y> [output]` | Move node to position                   |
-| `add-connection <input.json> <from> <to> [output]`  | Add a connection                        |
+| Command | Description |
+|---------|-------------|
+| `eval <input.json> '<expr>' [output.json]` | Evaluate JS expression with builder 'b' |
+| `edit <input.json> <patch.json> [output.json]` | Apply patch to diagram |
+| `add-node <input.json> <node.json> [output.json]` | Add a node from JSON |
+| `remove-node <input.json> <node-id> [output.json]` | Remove a node by ID |
+| `move-node <input.json> <node-id> <x> <y> [output]` | Move node to position |
+| `add-connection <input.json> <from> <to> [output]` | Add a connection |
 
 ### Options
 
-| Option              | Description                   |
-| ------------------- | ----------------------------- |
-| `--width <number>`  | Diagram width (default: 800)  |
+| Option | Description |
+|--------|-------------|
+| `--width <number>` | Diagram width (default: 800) |
 | `--height <number>` | Diagram height (default: 600) |
-| `--pretty`          | Pretty-print JSON output      |
-| `--in-place`        | Modify input file in place    |
+| `--pretty` | Pretty-print JSON output |
+| `--in-place` | Modify input file in place |
 
 ## Incremental Editing with Builder
 
@@ -188,27 +186,27 @@ The `eval` command provides a fluent builder API for diagram modifications:
 
 ```bash
 # Add a new node
-bun bin/cli.ts eval diagram.json 'b.addNode({id:"new",icon:"aws:lambda",label:"New",position:[400,300]})'
+bun bin/cli.ts eval diagram.json 'b.addNode({id:"@new",icon:"aws:lambda",label:"New",position:[400,300]})'
 
 # Chain multiple operations
-bun bin/cli.ts eval diagram.json 'b.removeNode("old").addConnection({from:"a",to:"b"})'
+bun bin/cli.ts eval diagram.json 'b.removeNode("@old").addConnection({from:"@a",to:"@b"})'
 
 # Move and update nodes
-bun bin/cli.ts eval diagram.json 'b.moveNode("lambda",500,400).setNodeLabel("lambda","Updated")' --pretty
+bun bin/cli.ts eval diagram.json 'b.moveNode("@lambda",500,400).setNodeLabel("@lambda","Updated")' --pretty
 ```
 
 ### Builder Methods
 
-| Method                                         | Description                    |
-| ---------------------------------------------- | ------------------------------ |
-| `addNode(node)`                                | Add a new node                 |
-| `removeNode(id)`                               | Remove a node by ID            |
-| `moveNode(id, x, y)` or `moveNode(id, [x, y])` | Move node to position          |
-| `setNodeLabel(id, label)`                      | Update node label              |
-| `addConnection({from, to, ...})`               | Add a connection               |
-| `removeConnection(from, to)`                   | Remove a connection            |
-| `applyPatch(patch)`                            | Apply multiple changes at once |
-| `build()`                                      | Get the modified diagram       |
+| Method | Description |
+|--------|-------------|
+| `addNode(node)` | Add a new node |
+| `removeNode(id)` | Remove a node by ID |
+| `moveNode(id, x, y)` or `moveNode(id, [x, y])` | Move node to position |
+| `setNodeLabel(id, label)` | Update node label |
+| `addConnection({from, to, ...})` | Add a connection |
+| `removeConnection(from, to)` | Remove a connection |
+| `applyPatch(patch)` | Apply multiple changes at once |
+| `build()` | Get the modified diagram |
 
 ## Icon Reference
 
@@ -230,21 +228,21 @@ See the [Icon Catalog](docs/references/ICON_CATALOG.md) for browsing and searchi
 
 ## Node Types
 
-| Type               | Description                      |
-| ------------------ | -------------------------------- |
-| `icon`             | Single icon with label (default) |
-| `group`            | Container for child nodes        |
-| `composite`        | Multiple icons in a single node  |
-| `text_box`         | Text-only node                   |
-| `person`           | Person icon                      |
-| `person_pc_mobile` | Person with PC and mobile        |
-| `pc_mobile`        | PC and mobile devices            |
-| `pc`               | PC device                        |
+| Type | Description |
+|------|-------------|
+| `icon` | Single icon with label (default) |
+| `group` | Container for child nodes |
+| `composite` | Multiple icons in a single node |
+| `text_box` | Text-only node (no icon required) |
+| `person` | Person icon |
+| `person_pc_mobile` | Person with PC and mobile |
+| `pc_mobile` | PC and mobile devices |
+| `pc` | PC device |
 
 ## Connection Types
 
-| Type   | Description                       |
-| ------ | --------------------------------- |
+| Type | Description |
+|------|-------------|
 | `data` | Data flow (solid line with arrow) |
 | `auth` | Authentication flow (dashed line) |
 
@@ -253,11 +251,14 @@ See the [Icon Catalog](docs/references/ICON_CATALOG.md) for browsing and searchi
 ### Core Functions
 
 ```typescript
-// Render to shareable HTML with embedded SVG and CSS (requires CDN for icons)
-renderShareable(diagram: DiagramDefinition, options?: RenderOptions): string
+// Render to standalone HTML (requires CDN for icons)
+renderStandalone(diagram: DiagramDefinition, options?: RenderOptions): string
 
-// Render to SVG only
+// Render to SVG only (CDN icons)
 renderSvg(diagram: DiagramDefinition, options?: RenderOptions): string
+
+// Render to SVG with Base64 embedded icons (async)
+renderSvgEmbed(diagram: DiagramDefinition, options?: RenderOptions): Promise<string>
 
 // Add computed metadata to diagram
 enrichDiagram(diagram: unknown, options?: RenderOptions): object
@@ -273,11 +274,11 @@ createBuilder(diagram: DiagramDefinition): DiagramBuilder
 
 ```typescript
 interface RenderOptions {
-  width?: number; // Default: 1200
-  height?: number; // Default: 800
-  iconSize?: number; // Default: 48
-  fontSize?: number; // Default: 11
-  embedCss?: boolean; // Default: true
+  width?: number;        // Default: 1200
+  height?: number;       // Default: 800
+  iconSize?: number;     // Default: 48
+  fontSize?: number;     // Default: 11
+  embedCss?: boolean;    // Default: true
   externalIcons?: boolean; // Default: true
 }
 ```
@@ -290,7 +291,7 @@ When using with Web Claude, the diagram can be rendered and viewed using the AI'
 2. The AI can then read and display the SVG file
 
 ```bash
-gospelo-architect preview diagram.json
+bun bin/cli.ts preview diagram.json
 # Output: Preview SVG generated: /tmp/diagram_preview_xxx.svg
 ```
 

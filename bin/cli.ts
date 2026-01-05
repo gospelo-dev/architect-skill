@@ -34,58 +34,12 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, basename, join } from 'path';
 import { enrichDiagram, generateMeta, renderStandalone, renderSvg, renderSvgEmbed, renderPreviewHtml, createBuilder, IconCatalogClient, loadIconUrlMap } from '../src/index';
+import { createZip } from '../src/utils/zip';
 import type { RenderOptions } from '../src/core/types';
 import type { DiagramPatch, NodeInput, NodeUpdate } from '../src/core/builder';
 
 // CDN client for icon search
 const catalogClient = new IconCatalogClient();
-
-// Simple obfuscation using XOR (deobfuscation happens in browser via inline script)
-function obfuscate(input: string): string {
-  const key = 42;
-  let result = '';
-  for (let i = 0; i < input.length; i++) {
-    result += String.fromCharCode(input.charCodeAt(i) ^ key);
-  }
-  return Buffer.from(result).toString('base64');
-}
-
-// Generate embed code for markdown
-function generateEmbedCode(html: string, options: { obfuscate?: boolean; width?: number; height?: number }): string {
-  const { width = 1200, height = 600 } = options;
-
-  // sandbox属性: allow-scripts + allow-same-origin で外部リソース読み込みを許可
-  // ただしdata URIではCORSの制限があるため、srcdocを使用
-  const sandboxAttr = 'sandbox="allow-scripts allow-same-origin"';
-  const iframeStyle = `style="width:100%;height:${height}px;border:1px solid #ddd;border-radius:4px;"`;
-
-  if (options.obfuscate) {
-    // Obfuscated version with deobfuscation script
-    const obfuscatedHtml = obfuscate(html);
-    const deobfuscateScript = `
-(function(){
-  var k=42,d=atob('${obfuscatedHtml}'),r='';
-  for(var i=0;i<d.length;i++)r+=String.fromCharCode(d.charCodeAt(i)^k);
-  var f=document.currentScript.parentElement.querySelector('iframe');
-  f.srcdoc=r;
-})();`;
-
-    return `<div style="width:100%;max-width:${width}px;">
-<iframe ${iframeStyle} ${sandboxAttr}></iframe>
-<script>${deobfuscateScript.replace(/\n/g, '')}</script>
-</div>`;
-  } else {
-    // srcdoc版: 外部リソース読み込みが可能
-    // HTMLをエスケープしてsrcdoc属性に直接埋め込み
-    const escapedHtml = html
-      .replace(/&/g, '&amp;')
-      .replace(/"/g, '&quot;');
-
-    return `<div style="width:100%;max-width:${width}px;">
-<iframe srcdoc="${escapedHtml}" ${iframeStyle} ${sandboxAttr}></iframe>
-</div>`;
-  }
-}
 
 // Parse arguments
 const args = process.argv.slice(2);
@@ -135,11 +89,11 @@ Usage:
 === Traditional Commands ===
 
   enrich <input.json> [output.json]  Add computed metadata to diagram JSON
-  render <input.json> [output.html]  Render diagram to standalone HTML
+  html <input.json> [output.html]    Render diagram to standalone HTML
   svg <input.json> [output.svg]      Render diagram to SVG only
   meta <input.json>                  Output metadata only (JSON to stdout)
   preview <input.json> [output.html] Generate HTML with Base64 embedded icons ({name}_preview.html)
-  embed <input.json|html|svg> [--obfuscate]  Generate markdown embed code for diagram
+  markdown <input.json> [output.zip]  Generate ZIP with markdown and Base64 SVG
 
 Edit Commands:
   eval <input.json> '<expr>' [output.json]           Evaluate JS expression with builder 'b'
@@ -924,10 +878,10 @@ switch (command) {
     break;
   }
 
-  case 'render': {
+  case 'html': {
     if (positionalArgs.length < 1) {
       console.error('Error: Input file required');
-      console.error('Usage: gospelo-architect render <input.json> [output.html]');
+      console.error('Usage: gospelo-architect html <input.json> [output.html]');
       process.exit(1);
     }
 
@@ -1201,55 +1155,49 @@ switch (command) {
     break;
   }
 
-  case 'embed': {
+  case 'markdown': {
     if (positionalArgs.length < 1) {
       console.error('Error: Input file required');
-      console.error('Usage: gospelo-architect embed <input.json|input.html|input.svg> [--obfuscate]');
-      console.error('  Generates markdown embed code for the diagram');
-      console.error('  --obfuscate: Obfuscate the embedded HTML to prevent easy copying');
+      console.error('Usage: gospelo-architect markdown <input.json> [output.zip]');
+      console.error('  Generates a ZIP file containing markdown and Base64 embedded SVG');
       process.exit(1);
     }
 
     const inputPath = positionalArgs[0];
-    let html: string;
 
-    if (inputPath.endsWith('.html')) {
-      // Read existing HTML file
-      html = readFileSync(inputPath, 'utf-8');
-    } else if (inputPath.endsWith('.svg')) {
-      // Wrap SVG in minimal HTML for iframe embedding
-      const svg = readFileSync(inputPath, 'utf-8');
-      html = `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<style>body{margin:0;display:flex;justify-content:center;align-items:center;min-height:100vh;background:#f5f5f5}svg{max-width:100%;height:auto}</style>
-</head>
-<body>${svg}</body>
-</html>`;
-    } else if (inputPath.endsWith('.json')) {
-      // Render from JSON
-      const diagram = readJsonFile(inputPath) as any;
-      const effectiveOptions = getEffectiveRenderOptions(diagram);
-      html = renderStandalone(diagram, effectiveOptions, inputPath);
-    } else {
-      console.error('Error: Input must be .json, .html, or .svg file');
+    if (!inputPath.endsWith('.json')) {
+      console.error('Error: Input must be a .json file');
       process.exit(1);
     }
 
-    // Extract dimensions from HTML or use defaults
-    const widthMatch = html.match(/viewBox="0 0 (\d+)/);
-    const heightMatch = html.match(/viewBox="0 0 \d+ (\d+)/);
-    const embedWidth = options.width || (widthMatch ? parseInt(widthMatch[1], 10) : 1200);
-    const embedHeight = options.height || (heightMatch ? parseInt(heightMatch[1], 10) : 600);
+    // Generate SVG with Base64 embedded icons
+    const diagram = readJsonFile(inputPath) as any;
+    const effectiveOptions = getEffectiveRenderOptions(diagram);
+    const svgContent = await renderSvgEmbed(diagram, effectiveOptions);
 
-    const embedCode = generateEmbedCode(html, {
-      obfuscate: options.embedObfuscate,
-      width: embedWidth,
-      height: embedHeight,
-    });
+    // Get diagram title for filenames
+    const diagramTitle = diagram.title || basename(inputPath, '.json');
+    const safeTitle = diagramTitle.replace(/[^a-zA-Z0-9_-]/g, '_');
 
-    console.log(embedCode);
+    // Create markdown content with relative SVG link
+    const mdContent = `# ${diagramTitle}
+
+${diagram.subtitle ? `> ${diagram.subtitle}\n\n` : ''}![${diagramTitle}](./${safeTitle}.svg)
+`;
+
+    // Create ZIP with markdown and SVG
+    const zipData = createZip([
+      { name: `${safeTitle}.md`, content: mdContent },
+      { name: `${safeTitle}.svg`, content: svgContent },
+    ]);
+
+    // Determine output path
+    const outputPath = positionalArgs[1] || inputPath.replace('.json', '.zip');
+
+    writeFileSync(outputPath, zipData);
+    console.log(`Written: ${outputPath}`);
+    console.log(`  - ${safeTitle}.md`);
+    console.log(`  - ${safeTitle}.svg (Base64 embedded icons)`);
     break;
   }
 
