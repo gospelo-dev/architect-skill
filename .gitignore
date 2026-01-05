@@ -39,3 +39,7 @@ bin/editor-cli.ts
 
 # Roo Code Files
 .roo/
+
+# Example files
+examples/
+examples_ja/
