@@ -142,11 +142,61 @@ bun bin/cli.ts edit <input.json> <patch.json> [output.json]
 
 | Option             | Description                          |
 | ------------------ | ------------------------------------ |
-| `--width <number>` | Diagram width (default: 800)         |
-| `--height <number>`| Diagram height (default: 600)        |
+| `--width <number>` | Diagram width (default: 1920)        |
+| `--height <number>`| Diagram height (default: 1080)       |
+| `--paper <size>`   | Paper/screen size for print output   |
 | `--pretty`         | Pretty-print JSON output             |
 | `--in-place`       | Modify input file in place           |
 | `--help`           | Show help                            |
+
+## Print Settings
+
+印刷に最適化された出力を生成するには `--paper` オプションを使用します。
+
+### Available `--paper` options
+
+**Paper sizes**: `a1-landscape`, `a1-portrait`, `a2-landscape`, `a2-portrait`, `a3-landscape`, `a3-portrait`, `a4-landscape`, `a4-portrait`, `b1-landscape`, `b1-portrait`, `b2-landscape`, `b2-portrait`, `b3-landscape`, `b3-portrait`, `b4-landscape`, `b4-portrait`
+
+**Screen sizes**: `hd-landscape`, `hd-portrait`, `fhd-landscape`, `fhd-portrait`, `4k-landscape`, `4k-portrait`, `8k-landscape`, `8k-portrait`
+
+### Usage Examples
+
+```bash
+# A4横向きで出力（オフィス印刷向け）
+bun bin/cli.ts html diagram.json output.html --paper a4-landscape
+
+# A3縦向きで出力（プレゼン資料向け）
+bun bin/cli.ts html diagram.json output.html --paper a3-portrait
+
+# B2横向きで出力（ポスター向け）
+bun bin/cli.ts html diagram.json output.html --paper b2-landscape
+
+# 4K横向きで出力（大型ディスプレイ向け）
+bun bin/cli.ts html diagram.json output.html --paper 4k-landscape
+
+# Full HD縦向きで出力（縦型モニター向け）
+bun bin/cli.ts html diagram.json output.html --paper fhd-portrait
+```
+
+### Behavior
+
+- **ViewBox**: 指定した用紙サイズに設定
+- **コンテンツフィット**: 用紙範囲内に自動フィット（縮小のみ、拡大なし）
+- **アスペクト比維持**: 縦横比を保持
+- **配置**: 上揃え、横中央配置
+- **アイコンサイズ**: viewBox座標で48px固定
+
+### High-DPI Display Support
+
+96 DPIで定義された図は、高解像度ディスプレイでも鮮明に表示されます：
+
+| ディスプレイ | レンダリング |
+|--------------|--------------|
+| 通常 | 96 DPI |
+| Retina 2x | 192 DPI |
+| Retina 3x | 288 DPI |
+
+SVG（ベクター形式）出力のため、どのディスプレイでも品質劣化なし。
 
 ## Diagram JSON Schema
 

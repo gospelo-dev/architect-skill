@@ -1,25 +1,40 @@
 # gospelo-architect
 
-**あなたが説明する。AIがデザインする。ダイアグラムが現れる。**
+**あなたが説明する。AI がデザインする。図が現れる。**
 
-システムアーキテクチャ図を作成する新しいパラダイム：人間が意図を伝え、AIエージェントがデザインとレイアウトを担当。手動でのドラッグや細かい調整は不要 - 欲しいものを説明するだけで、あとはAIにお任せ。
+システムアーキテクチャ図を作成する新しいパラダイム：人間が意図を伝え、AI エージェントがデザインとレイアウトを担当します。手動でドラッグしたり、ピクセル単位で調整したりする必要はありません。欲しいものを説明するだけで、あとは AI にお任せください。
 
-AIエージェント時代のために構築されています。従来のダイアグラムツールは人間が手動でアイコンを配置し線を引く必要がありますが、gospelo-architectはAIエージェントが自律的に操作できるよう一から設計されています - JSON定義を読み取り、プロフェッショナルなダイアグラムを生成し、人間のフィードバックに基づいて改善します。
+AI エージェント時代のために構築されています。従来の図作成ツールでは、人間が手動でアイコンを配置し線を引く必要がありましたが、gospelo-architect は AI エージェントが自律的に動作できるようにゼロから設計されています。JSON 定義を読み取り、プロフェッショナルな図を生成し、人間のフィードバックに基づいて反復的に改善します。
 
-## gospelo-architectを選ぶ理由
+## なぜ gospelo-architect なのか？
 
-- **AI ネイティブ設計**: AIエージェントが読み書き・修正できるJSON形式の定義
-- **反復的ワークフロー**: 自然言語で変更を説明すると、AIがダイアグラムを更新
-- **プロフェッショナルな出力**: 1,500以上のクラウドアイコンを使用した本番対応のSVGとHTML
-- **必要に応じた微調整**: 正確な調整が必要な場合はビジュアルエディタも利用可能
+- **AI ネイティブ設計**: AI エージェントが読み書き・修正できる JSON 形式の定義
+- **反復的ワークフロー**: 自然言語で変更を説明し、AI が図を更新
+- **プロフェッショナルな出力**: 1,500 以上のクラウドアイコンを備えた本番環境対応の SVG と HTML
+- **必要に応じて微調整**: 必要な場合はビジュアルエディタで精密な調整が可能
 
-## 機能
+## 特徴
 
-- **依存関係ゼロ**: 外部ランタイム依存のない純粋なTypeScript
-- **複数の出力形式**: SVG、スタンドアロンHTML、SVG埋め込みマークダウン、メタデータ付きエンリッチJSON
-- **インクリメンタル編集**: プログラムによるダイアグラム修正のためのフルエントビルダーAPI
-- **クラウドアイコン**: AWS、Azure、Google Cloud、Tech Stackアイコンの組み込みサポート（1,500以上のアイコン）
-- **CLIツール**: フル機能のコマンドラインインターフェース
+- **依存関係ゼロ**: 外部ランタイム依存関係のない純粋な TypeScript
+- **複数の出力フォーマット**: SVG、HTML、Markdown+SVG ZIP、メタデータ付き JSON
+- **増分編集**: プログラムによる図の修正のための流暢なビルダー API
+- **クラウドアイコン**: AWS、Azure、Google Cloud、Tech Stack アイコン（1,500 以上）をビルトインサポート
+- **リッチツールチップ**: ホバーでリソース ID、アイコン名、ライセンス、説明を表示
+- **CLI ツール**: フル機能のコマンドラインインターフェース
+
+## 出力フォーマット
+
+gospelo-architect は様々なユースケースに対応した複数の出力フォーマットをサポートしています：
+
+| フォーマット           | コマンド    | 説明                                                                                   |
+| ---------------------- | ----------- | -------------------------------------------------------------------------------------- |
+| **HTML**               | `html`      | ホバーツールチップと Shift+ドラッグ複数選択対応のインタラクティブ HTML（CDN アイコン） |
+| **SVG**                | `svg`       | CDN アイコン参照のクリーンな SVG                                                       |
+| **SVG（埋め込み）**    | `svg-embed` | Base64 埋め込みアイコンの SVG（オフライン対応）                                        |
+| **プレビュー HTML**    | `preview`   | オフライン表示用の Base64 埋め込みアイコン HTML                                        |
+| **Markdown ZIP**       | `markdown`  | Markdown + 埋め込み SVG を含む ZIP                                                     |
+| **JSON（エンリッチ）** | `enrich`    | オリジナル JSON + 計算されたメタデータ（位置、サイズ）                                 |
+| **JSON（メタのみ）**   | `meta`      | AI 消費用のメタデータのみ                                                              |
 
 ## インストール
 
@@ -33,238 +48,144 @@ npm install gospelo-architect
 
 ## クイックスタート
 
-### CLIの使用
+AI に欲しいものを説明するだけです：
 
-```bash
-# ダイアグラムをHTMLにレンダリング
-gospelo-architect render diagram.json output.html
-
-# SVGのみにレンダリング
-gospelo-architect svg diagram.json output.svg
-
-# AI利用のためのメタデータを追加
-gospelo-architect enrich diagram.json enriched.json
-
-# メタデータのみを出力
-gospelo-architect meta diagram.json --pretty
+```
+API Gateway、Lambda、DynamoDB を使った AWS アーキテクチャ図を作成して
 ```
 
-### プログラムからの使用
-
-```typescript
-import { renderShareable, renderSvg, enrichDiagram } from "gospelo-architect";
-
-const diagram = {
-  title: "My Architecture",
-  nodes: [
-    {
-      id: "lambda",
-      icon: "aws:lambda",
-      label: "Function",
-      position: [100, 100],
-    },
-    { id: "db", icon: "aws:dynamodb", label: "Database", position: [300, 100] },
-  ],
-  connections: [{ from: "lambda", to: "db", type: "data" }],
-};
-
-// HTMLにレンダリング
-const html = renderShareable(diagram, { width: 800, height: 600 });
-
-// SVGにレンダリング
-const svg = renderSvg(diagram);
-
-// メタデータでエンリッチ
-const enriched = enrichDiagram(diagram);
+```
+静的アセット用の S3 バケットを図に追加して
 ```
 
-## ダイアグラム定義形式
-
-ダイアグラムはJSON形式で定義します：
-
-```json
-{
-  "title": "System Architecture",
-  "subtitle": "Production Environment",
-  "background": {
-    "type": "gradient",
-    "startColor": "#f5f5f5",
-    "endColor": "#ffffff",
-    "direction": "south"
-  },
-  "nodes": [
-    {
-      "id": "api",
-      "icon": "aws:api_gateway",
-      "label": "API Gateway",
-      "position": [200, 100]
-    },
-    {
-      "id": "backend",
-      "type": "group",
-      "label": "Backend Services",
-      "position": [100, 200],
-      "size": [400, 300],
-      "children": [
-        { "id": "lambda", "icon": "aws:lambda", "label": "Function" },
-        { "id": "db", "icon": "aws:dynamodb", "label": "Database" }
-      ]
-    }
-  ],
-  "connections": [
-    { "from": "api", "to": "lambda", "type": "data" },
-    { "from": "lambda", "to": "db", "type": "data", "bidirectional": true }
-  ]
-}
+```
+Lambda 関数と S3 バケットを接続して
 ```
 
-## CLIコマンド
-
-### レンダリングコマンド
-
-| コマンド | 説明 |
-| -------- | ---- |
-| `render <input.json> [output.html]` | ダイアグラムをスタンドアロンHTMLにレンダリング |
-| `svg <input.json> [output.svg]` | ダイアグラムをSVGのみにレンダリング |
-| `enrich <input.json> [output.json]` | ダイアグラムJSONに計算されたメタデータを追加 |
-| `meta <input.json>` | メタデータのみを出力（JSONを標準出力へ） |
-| `preview <input.json>` | SVGを生成しAI閲覧用のファイルパスを出力 |
-
-### 編集コマンド
-
-| コマンド | 説明 |
-| -------- | ---- |
-| `eval <input.json> '<expr>' [output.json]` | ビルダー 'b' を使ってJS式を評価 |
-| `edit <input.json> <patch.json> [output.json]` | ダイアグラムにパッチを適用 |
-| `add-node <input.json> <node.json> [output.json]` | JSONからノードを追加 |
-| `remove-node <input.json> <node-id> [output.json]` | IDでノードを削除 |
-| `move-node <input.json> <node-id> <x> <y> [output]` | ノードを指定位置に移動 |
-| `add-connection <input.json> <from> <to> [output]` | コネクションを追加 |
-
-### オプション
-
-| オプション | 説明 |
-| ---------- | ---- |
-| `--width <number>` | ダイアグラムの幅（デフォルト: 800） |
-| `--height <number>` | ダイアグラムの高さ（デフォルト: 600） |
-| `--pretty` | JSON出力を整形 |
-| `--in-place` | 入力ファイルを直接変更 |
-
-## ビルダーによるインクリメンタル編集
-
-`eval` コマンドはダイアグラム修正のためのフルエントビルダーAPIを提供します：
-
-```bash
-# 新しいノードを追加
-bun bin/cli.ts eval diagram.json 'b.addNode({id:"new",icon:"aws:lambda",label:"New",position:[400,300]})'
-
-# 複数の操作を連鎖
-bun bin/cli.ts eval diagram.json 'b.removeNode("old").addConnection({from:"a",to:"b"})'
-
-# ノードを移動・更新
-bun bin/cli.ts eval diagram.json 'b.moveNode("lambda",500,400).setNodeLabel("lambda","Updated")' --pretty
+```
+A4 横向き印刷用に HTML をエクスポートして
 ```
 
-### ビルダーメソッド
+AI が JSON 定義、配置、接続、レンダリングなど、すべての技術的な詳細を処理します。
 
-| メソッド | 説明 |
-| -------- | ---- |
-| `addNode(node)` | 新しいノードを追加 |
-| `removeNode(id)` | IDでノードを削除 |
-| `moveNode(id, x, y)` または `moveNode(id, [x, y])` | ノードを指定位置に移動 |
-| `setNodeLabel(id, label)` | ノードのラベルを更新 |
-| `addConnection({from, to, ...})` | コネクションを追加 |
-| `removeConnection(from, to)` | コネクションを削除 |
-| `applyPatch(patch)` | 複数の変更を一度に適用 |
-| `build()` | 変更されたダイアグラムを取得 |
+## 図定義
+
+JSON スキーマの詳細は [Gospelo Model 1.0 仕様](docs/specs/ja/1.0/GOSPELO_MODEL.md) を参照してください。
+
+## こんなことができます
+
+### 図の作成
+
+```
+AWS Lambda、API Gateway、DynamoDB を使ったサーバーレスアーキテクチャを作成して
+```
+
+```
+3 つのサービスとメッセージキューを持つマイクロサービスアーキテクチャを設計して
+```
+
+```
+ロードバランサー、アプリサーバー、データベースの典型的な Web アプリ構成を見せて
+```
+
+### 図の編集
+
+```
+API とデータベースの間にキャッシュレイヤーを追加して
+```
+
+```
+レガシーサービスを図から削除して
+```
+
+```
+Lambda 関数を API Gateway の下に移動して
+```
+
+### エクスポート
+
+```
+A4 用紙印刷用に HTML をエクスポートして
+```
+
+```
+ドキュメント用に SVG ファイルを生成して
+```
+
+```
+プレゼンテーション用に 4K バージョンを作成して
+```
+
+CLI コマンドの詳細は [CLI リファレンス](docs/references/ja/CLI_REFERENCE.md) を参照してください。
+
+## 印刷・エクスポートオプション
+
+様々なサイズで図をエクスポートできます：
+
+| 用途               | プロンプト例                             |
+| ------------------ | ---------------------------------------- |
+| オフィス印刷       | 「A4 横向き印刷用にエクスポートして」    |
+| プレゼンテーション | 「会議用に A3 バージョンを作成して」     |
+| 大型ディスプレイ   | 「モニター用に 4K バージョンを生成して」 |
+| ポスター           | 「印刷用に B2 縦向きでエクスポートして」 |
+
+### 高解像度ディスプレイ対応
+
+MacBook や iPhone の Retina ディスプレイ、4K/8K モニターなど、どんな高解像度画面でも**くっきり鮮明**に表示されます。拡大してもぼやけません。
+
+詳細は [印刷設定リファレンス](docs/references/ja/PRINT_SETTINGS.md) を参照してください。
+
+## 反復的な編集
+
+AI は自然な言葉での反復的な編集をサポートしています：
+
+```
+Lambda と DynamoDB の間に Redis キャッシュを追加して
+```
+
+```
+Lambda のラベルを「注文処理」に変更して
+```
+
+```
+新しいキャッシュを両方のサービスに双方向矢印で接続して
+```
+
+プログラムによる編集については [CLI リファレンス](docs/references/ja/CLI_REFERENCE.md) を参照してください。
 
 ## アイコンリファレンス
 
-アイコンは `provider:name` 形式を使用します（例：`aws:lambda`、`azure:functions`、`gcp:cloud_run`、`tech:python`）。
+<a href="https://architect.gospelo.dev/icons/v1/"><img src="https://architect.gospelo.dev/icons/v1/og-image.png" alt="" onerror="this.style.display='none'"></a>
 
-AWS、Azure、Google Cloud、Tech Stackプロバイダー全体で1,500以上のアイコンが利用可能です。
+アイコンは`provider:name`形式を使用します（例：`aws:lambda`、`azure:functions`、`gcp:cloud_run`、`heroicons:star`）。
 
-アイコンの参照と検索については[アイコンカタログ](docs/references/ICON_CATALOG.md)をご覧ください。
+AWS、Azure、Google Cloud、Tech Stack、Heroicons、Lucide プロバイダー全体で 3,500 以上のアイコンが利用可能です。
 
-### 一般的なアイコン
-
-**AWS**: `aws:lambda`, `aws:ec2`, `aws:s3`, `aws:rds`, `aws:dynamodb`, `aws:api_gateway`, `aws:cloudfront`, `aws:cognito`, `aws:sqs`, `aws:sns`
-
-**Azure**: `azure:virtual_machines`, `azure:app_service`, `azure:functions`, `azure:blob_storage`, `azure:cosmos_db`, `azure:sql_database`
-
-**Google Cloud**: `gcp:cloud_run`, `gcp:cloud_functions`, `gcp:compute_engine`, `gcp:cloud_storage`
-
-**Tech Stack**: `tech:python`, `tech:typescript`, `tech:react`, `tech:docker`, `tech:kubernetes`
+全アイコンを閲覧: [GOSPELO ICONS](https://architect.gospelo.dev/icons/v1/)
 
 ## ノードタイプ
 
-| タイプ | 説明 |
-| ------ | ---- |
-| `icon` | ラベル付きの単一アイコン（デフォルト） |
-| `group` | 子ノードのコンテナ |
-| `composite` | 単一ノード内の複数アイコン |
-| `text_box` | テキストのみのノード |
-| `person` | 人物アイコン |
-| `person_pc_mobile` | PCとモバイルを持つ人物 |
-| `pc_mobile` | PCとモバイルデバイス |
-| `pc` | PCデバイス |
+| タイプ             | 説明                                   |
+| ------------------ | -------------------------------------- |
+| `icon`             | ラベル付きの単一アイコン（デフォルト） |
+| `group`            | 子ノードのコンテナ                     |
+| `composite`        | 単一ノード内の複数アイコン             |
+| `text_box`         | テキストのみのノード（アイコン不要）   |
+| `person`           | 人物アイコン                           |
+| `person_pc_mobile` | PC とモバイルを持つ人物                |
+| `pc_mobile`        | PC とモバイルデバイス                  |
+| `pc`               | PC デバイス                            |
 
-## コネクションタイプ
+## 接続タイプ
 
-| タイプ | 説明 |
-| ------ | ---- |
+| タイプ | 説明                         |
+| ------ | ---------------------------- |
 | `data` | データフロー（矢印付き実線） |
-| `auth` | 認証フロー（破線） |
+| `auth` | 認証フロー（破線）           |
 
-## APIリファレンス
+## Web Claude のセットアップ
 
-### コア関数
-
-```typescript
-// 共有可能なHTMLにレンダリング（アイコンはCDNから取得）
-renderShareable(diagram: DiagramDefinition, options?: RenderOptions): string
-
-// SVGのみにレンダリング
-renderSvg(diagram: DiagramDefinition, options?: RenderOptions): string
-
-// ダイアグラムに計算されたメタデータを追加
-enrichDiagram(diagram: unknown, options?: RenderOptions): object
-
-// AI利用のためのメタデータを生成
-generateMeta(diagram: unknown, options?: RenderOptions): DiagramMeta
-
-// インクリメンタル編集用のビルダーを作成
-createBuilder(diagram: DiagramDefinition): DiagramBuilder
-```
-
-### レンダリングオプション
-
-```typescript
-interface RenderOptions {
-  width?: number; // デフォルト: 1200
-  height?: number; // デフォルト: 800
-  iconSize?: number; // デフォルト: 48
-  fontSize?: number; // デフォルト: 11
-  embedCss?: boolean; // デフォルト: true
-  externalIcons?: boolean; // デフォルト: true
-}
-```
-
-## Web Claude互換性
-
-Web Claudeで使用する場合、AIのファイルプレビュー機能を使用してダイアグラムをレンダリングおよび表示できます：
-
-1. `preview` コマンドを使用してSVGを一時的な場所に生成
-2. AIがSVGファイルを読み取って表示
-
-```bash
-gospelo-architect preview diagram.json
-# 出力: Preview SVG generated: /tmp/diagram_preview_xxx.svg
-```
-
-### 必要なドメイン
-
-Web Claudeでgospelo-architectを使用するには、以下のドメインを **Capabilities > Additional allowed domains** に追加してください：
+Web Claude で gospelo-architect を使用するには、以下のドメインを**機能 > 追加の許可ドメイン**に追加してください：
 
 ```
 raw.githubusercontent.com
@@ -273,33 +194,27 @@ architect.gospelo.dev
 w3.org
 ```
 
-| ドメイン | 用途 |
-|----------|------|
-| `raw.githubusercontent.com` | AWSおよびGoogle CloudアイコンSVG |
-| `cdn.jsdelivr.net` | AzureおよびTech StackアイコンSVG |
-| `architect.gospelo.dev` | アイコンカタログCDN（メタデータ） |
-| `w3.org` | SVG名前空間定義 |
+## エージェントスキル（Claude）
 
-## Agent Skills (Claude)
+gospelo-architect は Claude Agent Skill として使用できます。事前構築されたスキルパッケージは`.github/skills/gospelo-architect/`にあります。
 
-gospelo-architectはClaude Agent Skillとして使用できます。ビルド済みのスキルパッケージは `.github/skills/gospelo-architect/` にあります。
-
-### スキルZIPのビルド
+### スキル ZIP のビルド
 
 ```bash
-# Agent Skills用ZIPを生成
+# Agent Skills ZIPを生成
 bun run build:skill
 # または
 npm run build:skill
 ```
 
-**出力**: `dist/skills/gospelo-architect-skill.zip` (~7KB)
+**出力**: `dist/skills/gospelo-architect-skill.zip`（約 7KB）
 
 **内容**:
-- `SKILL.md` - スキル定義（ルートに配置）
-- `references/` - CLIリファレンス、Builder API、スキーマドキュメント
 
-### スキルZIPの構造
+- `SKILL.md` - スキル定義（ルートに配置）
+- `references/` - CLI リファレンス、Builder API、スキーマドキュメント
+
+### スキル ZIP 構造
 
 ```
 gospelo-architect-skill.zip
@@ -307,15 +222,16 @@ gospelo-architect-skill.zip
 └── references/
     ├── builder-api.md    # DiagramBuilder APIリファレンス
     ├── cli-reference.md  # CLIコマンドリファレンス
-    └── schema.md         # TypeScript型定義 & JSON例
+    └── schema.md         # TypeScript型とJSONサンプル
 ```
 
-### スキルZIPのライセンス
+### スキル ZIP ライセンス
 
-生成される `gospelo-architect-skill.zip` は、メインパッケージと同じMITライセンスの下で提供されます。以下のことが可能です：
-- Claudeプロジェクトでのスキル使用
-- スキル定義の変更
-- スキルの再配布（帰属表示付き）
+生成された`gospelo-architect-skill.zip`はメインパッケージと同じ MIT ライセンスでライセンスされています。以下のことが自由にできます：
+
+- Claude プロジェクトでスキルを使用
+- スキル定義を修正
+- スキルを再配布（帰属表示付き）
 
 ## ライセンス
 
@@ -324,7 +240,3 @@ gospelo-architect-skill.zip
 ## リポジトリ
 
 https://github.com/gospelo-dev/architect-skill
-
----
-
-**注意**: 本ドキュメントは参考のための日本語訳です。正式な仕様は英語版 [README.md](README.md) を参照してください。

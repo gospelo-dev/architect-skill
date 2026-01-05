@@ -26,15 +26,15 @@ Built for the AI Agent era. While traditional diagramming tools require humans t
 
 gospelo-architect supports multiple output formats for different use cases:
 
-| Format | Command | Description |
-|--------|---------|-------------|
-| **HTML** | `html` | Interactive HTML with hover tooltips and Shift+drag multi-select (CDN icons) |
-| **SVG** | `svg` | Clean SVG with CDN icon references |
-| **SVG (Embedded)** | `svg-embed` | SVG with Base64 embedded icons (offline-capable) |
-| **Preview HTML** | `preview` | HTML with Base64 embedded icons for offline viewing |
-| **Markdown ZIP** | `markdown` | ZIP containing Markdown + embedded SVG |
-| **JSON (Enriched)** | `enrich` | Original JSON + computed metadata (positions, sizes) |
-| **JSON (Meta only)** | `meta` | Metadata only for AI consumption |
+| Format               | Command     | Description                                                                  |
+| -------------------- | ----------- | ---------------------------------------------------------------------------- |
+| **HTML**             | `html`      | Interactive HTML with hover tooltips and Shift+drag multi-select (CDN icons) |
+| **SVG**              | `svg`       | Clean SVG with CDN icon references                                           |
+| **SVG (Embedded)**   | `svg-embed` | SVG with Base64 embedded icons (offline-capable)                             |
+| **Preview HTML**     | `preview`   | HTML with Base64 embedded icons for offline viewing                          |
+| **Markdown ZIP**     | `markdown`  | ZIP containing Markdown + embedded SVG                                       |
+| **JSON (Enriched)**  | `enrich`    | Original JSON + computed metadata (positions, sizes)                         |
+| **JSON (Meta only)** | `meta`      | Metadata only for AI consumption                                             |
 
 ## Installation
 
@@ -48,254 +48,142 @@ npm install gospelo-architect
 
 ## Quick Start
 
-### CLI Usage
+Just describe what you want to the AI:
 
-```bash
-# Render diagram to HTML
-bun bin/cli.ts html diagram.json output.html
-
-# Render to SVG (CDN icons)
-bun bin/cli.ts svg diagram.json output.svg
-
-# Render to SVG with embedded icons (offline-capable)
-bun bin/cli.ts svg-embed diagram.json output.svg
-
-# Generate Markdown + SVG ZIP bundle
-bun bin/cli.ts markdown diagram.json output.zip
-
-# Add metadata for AI consumption
-bun bin/cli.ts enrich diagram.json enriched.json
-
-# Output metadata only
-bun bin/cli.ts meta diagram.json --pretty
+```
+Create an AWS architecture diagram with API Gateway, Lambda, and DynamoDB
 ```
 
-### Programmatic Usage
-
-```typescript
-import { renderStandalone, renderSvg, renderSvgEmbed, enrichDiagram } from "gospelo-architect";
-
-const diagram = {
-  title: "My Architecture",
-  resources: {
-    "@lambda": { icon: "aws:lambda", desc: "Processing function" },
-    "@db": { icon: "aws:dynamodb", desc: "Data storage" }
-  },
-  nodes: [
-    { id: "@lambda", label: "Function", position: [100, 100] },
-    { id: "@db", label: "Database", position: [300, 100] }
-  ],
-  connections: [{ from: "@lambda", to: "@db", type: "data" }]
-};
-
-// Render to HTML
-const html = renderStandalone(diagram, { width: 800, height: 600 });
-
-// Render to SVG
-const svg = renderSvg(diagram);
-
-// Render to SVG with embedded icons
-const embeddedSvg = await renderSvgEmbed(diagram);
-
-// Enrich with metadata
-const enriched = enrichDiagram(diagram);
+```
+Add an S3 bucket for static assets to the diagram
 ```
 
-## Diagram Definition Format
-
-All nodes must have a corresponding resource entry with `@` prefix:
-
-```json
-{
-  "title": "System Architecture",
-  "subtitle": "Production Environment",
-  "resources": {
-    "@api": { "icon": "aws:api_gateway", "desc": "API endpoint" },
-    "@backend": { "desc": "Backend service group" },
-    "@lambda": { "icon": "aws:lambda", "desc": "Processing function" },
-    "@db": { "icon": "aws:dynamodb", "desc": "Data storage" }
-  },
-  "background": {
-    "type": "gradient",
-    "startColor": "#f5f5f5",
-    "endColor": "#ffffff",
-    "direction": "south"
-  },
-  "nodes": [
-    {
-      "id": "@api",
-      "label": "API Gateway",
-      "position": [200, 100]
-    },
-    {
-      "id": "@backend",
-      "type": "group",
-      "label": "Backend Services",
-      "position": [100, 200],
-      "size": [400, 300],
-      "children": [
-        { "id": "@lambda", "label": "Function", "parentId": "@backend" },
-        { "id": "@db", "label": "Database", "parentId": "@backend" }
-      ]
-    }
-  ],
-  "connections": [
-    { "from": "@api", "to": "@lambda", "type": "data" },
-    { "from": "@lambda", "to": "@db", "type": "data", "bidirectional": true }
-  ]
-}
+```
+Connect the Lambda function to the S3 bucket
 ```
 
-## CLI Commands
-
-### Render Commands
-
-| Command | Description |
-|---------|-------------|
-| `html <input.json> [output.html]` | Render diagram to standalone HTML |
-| `svg <input.json> [output.svg]` | Render diagram to SVG (CDN icons) |
-| `svg-embed <input.json> [output.svg]` | Render SVG with Base64 embedded icons |
-| `preview <input.json> [output.html]` | Generate preview HTML with embedded icons |
-| `markdown <input.json> [output.zip]` | Generate ZIP with Markdown + embedded SVG |
-| `enrich <input.json> [output.json]` | Add computed metadata to diagram JSON |
-| `meta <input.json>` | Output metadata only (JSON to stdout) |
-
-### Edit Commands
-
-| Command | Description |
-|---------|-------------|
-| `eval <input.json> '<expr>' [output.json]` | Evaluate JS expression with builder 'b' |
-| `edit <input.json> <patch.json> [output.json]` | Apply patch to diagram |
-| `add-node <input.json> <node.json> [output.json]` | Add a node from JSON |
-| `remove-node <input.json> <node-id> [output.json]` | Remove a node by ID |
-| `move-node <input.json> <node-id> <x> <y> [output]` | Move node to position |
-| `add-connection <input.json> <from> <to> [output]` | Add a connection |
-
-### Options
-
-| Option | Description |
-|--------|-------------|
-| `--width <number>` | Diagram width (default: 800) |
-| `--height <number>` | Diagram height (default: 600) |
-| `--pretty` | Pretty-print JSON output |
-| `--in-place` | Modify input file in place |
-
-## Incremental Editing with Builder
-
-The `eval` command provides a fluent builder API for diagram modifications:
-
-```bash
-# Add a new node
-bun bin/cli.ts eval diagram.json 'b.addNode({id:"@new",icon:"aws:lambda",label:"New",position:[400,300]})'
-
-# Chain multiple operations
-bun bin/cli.ts eval diagram.json 'b.removeNode("@old").addConnection({from:"@a",to:"@b"})'
-
-# Move and update nodes
-bun bin/cli.ts eval diagram.json 'b.moveNode("@lambda",500,400).setNodeLabel("@lambda","Updated")' --pretty
+```
+Export the diagram as HTML for A4 landscape printing
 ```
 
-### Builder Methods
+The AI handles all the technical details - JSON definitions, positioning, connections, and rendering.
 
-| Method | Description |
-|--------|-------------|
-| `addNode(node)` | Add a new node |
-| `removeNode(id)` | Remove a node by ID |
-| `moveNode(id, x, y)` or `moveNode(id, [x, y])` | Move node to position |
-| `setNodeLabel(id, label)` | Update node label |
-| `addConnection({from, to, ...})` | Add a connection |
-| `removeConnection(from, to)` | Remove a connection |
-| `applyPatch(patch)` | Apply multiple changes at once |
-| `build()` | Get the modified diagram |
+## Diagram Definition
+
+For JSON schema details, see [Gospelo Model 1.0 Specification](docs/specs/1.0/GOSPELO_MODEL.md).
+
+## What You Can Ask
+
+### Creating Diagrams
+
+```
+Create a serverless architecture with AWS Lambda, API Gateway, and DynamoDB
+```
+
+```
+Design a microservices architecture with 3 services and a message queue
+```
+
+```
+Show me a typical web application stack with load balancer, app servers, and database
+```
+
+### Modifying Diagrams
+
+```
+Add a caching layer between the API and database
+```
+
+```
+Remove the legacy service from the diagram
+```
+
+```
+Move the Lambda function below the API Gateway
+```
+
+### Exporting
+
+```
+Export as HTML for printing on A4 paper
+```
+
+```
+Generate an SVG file for the documentation
+```
+
+```
+Create a 4K version for the presentation
+```
+
+For CLI command details, see [CLI Reference](docs/references/CLI_REFERENCE.md).
+
+## Print & Export Options
+
+Diagrams can be exported in various sizes for different purposes:
+
+| Use Case        | Example Prompt                          |
+| --------------- | --------------------------------------- |
+| Office printing | "Export for A4 landscape printing"      |
+| Presentation    | "Create an A3 version for the meeting"  |
+| Large display   | "Generate a 4K version for the monitor" |
+| Poster          | "Export as B2 portrait for printing"    |
+
+### High-DPI Display Support
+
+Diagrams look **sharp and crisp** on any screen - MacBook Retina, iPhone, 4K/8K monitors. Zoom in without blur.
+
+See [Print Settings Reference](docs/references/PRINT_SETTINGS.md) for detailed documentation.
+
+## Iterative Editing
+
+The AI supports natural iterative editing:
+
+```
+Add a Redis cache between Lambda and DynamoDB
+```
+
+```
+Change the Lambda label to "Order Processor"
+```
+
+```
+Connect the new cache to both services with bidirectional arrows
+```
+
+For programmatic editing, see [CLI Reference](docs/references/CLI_REFERENCE.md).
 
 ## Icon Reference
 
-Icons use the format `provider:name` (e.g., `aws:lambda`, `azure:functions`, `gcp:cloud_run`, `tech:python`).
+<a href="https://architect.gospelo.dev/icons/v1/"><img src="https://architect.gospelo.dev/icons/v1/og-image.png" alt="" onerror="this.style.display='none'"></a>
 
-Over 1,500 icons available across AWS, Azure, Google Cloud, and Tech Stack providers.
+Icons use the format `provider:name` (e.g., `aws:lambda`, `azure:functions`, `gcp:cloud_run`, `heroicons:star`).
 
-See the [Icon Catalog](docs/references/ICON_CATALOG.md) for browsing and searching icons.
+Over 3,500 icons available across AWS, Azure, Google Cloud, Tech Stack, Heroicons, and Lucide providers.
 
-### Common Icons
-
-**AWS**: `aws:lambda`, `aws:ec2`, `aws:s3`, `aws:rds`, `aws:dynamodb`, `aws:api_gateway`, `aws:cloudfront`, `aws:cognito`, `aws:sqs`, `aws:sns`
-
-**Azure**: `azure:virtual_machines`, `azure:app_service`, `azure:functions`, `azure:blob_storage`, `azure:cosmos_db`, `azure:sql_database`
-
-**Google Cloud**: `gcp:cloud_run`, `gcp:cloud_functions`, `gcp:compute_engine`, `gcp:cloud_storage`
-
-**Tech Stack**: `tech:python`, `tech:typescript`, `tech:react`, `tech:docker`, `tech:kubernetes`
+Browse all icons: [GOSPELO ICONS](https://architect.gospelo.dev/icons/v1/)
 
 ## Node Types
 
-| Type | Description |
-|------|-------------|
-| `icon` | Single icon with label (default) |
-| `group` | Container for child nodes |
-| `composite` | Multiple icons in a single node |
-| `text_box` | Text-only node (no icon required) |
-| `person` | Person icon |
-| `person_pc_mobile` | Person with PC and mobile |
-| `pc_mobile` | PC and mobile devices |
-| `pc` | PC device |
+| Type               | Description                       |
+| ------------------ | --------------------------------- |
+| `icon`             | Single icon with label (default)  |
+| `group`            | Container for child nodes         |
+| `composite`        | Multiple icons in a single node   |
+| `text_box`         | Text-only node (no icon required) |
+| `person`           | Person icon                       |
+| `person_pc_mobile` | Person with PC and mobile         |
+| `pc_mobile`        | PC and mobile devices             |
+| `pc`               | PC device                         |
 
 ## Connection Types
 
-| Type | Description |
-|------|-------------|
+| Type   | Description                       |
+| ------ | --------------------------------- |
 | `data` | Data flow (solid line with arrow) |
 | `auth` | Authentication flow (dashed line) |
 
-## API Reference
-
-### Core Functions
-
-```typescript
-// Render to standalone HTML (requires CDN for icons)
-renderStandalone(diagram: DiagramDefinition, options?: RenderOptions): string
-
-// Render to SVG only (CDN icons)
-renderSvg(diagram: DiagramDefinition, options?: RenderOptions): string
-
-// Render to SVG with Base64 embedded icons (async)
-renderSvgEmbed(diagram: DiagramDefinition, options?: RenderOptions): Promise<string>
-
-// Add computed metadata to diagram
-enrichDiagram(diagram: unknown, options?: RenderOptions): object
-
-// Generate metadata for AI consumption
-generateMeta(diagram: unknown, options?: RenderOptions): DiagramMeta
-
-// Create a builder for incremental editing
-createBuilder(diagram: DiagramDefinition): DiagramBuilder
-```
-
-### Render Options
-
-```typescript
-interface RenderOptions {
-  width?: number;        // Default: 1200
-  height?: number;       // Default: 800
-  iconSize?: number;     // Default: 48
-  fontSize?: number;     // Default: 11
-  embedCss?: boolean;    // Default: true
-  externalIcons?: boolean; // Default: true
-}
-```
-
-## Web Claude Compatibility
-
-When using with Web Claude, the diagram can be rendered and viewed using the AI's file preview capabilities:
-
-1. Use the `preview` command to generate an SVG in a temporary location
-2. The AI can then read and display the SVG file
-
-```bash
-bun bin/cli.ts preview diagram.json
-# Output: Preview SVG generated: /tmp/diagram_preview_xxx.svg
-```
-
-### Required Domains
+## Web Claude Setup
 
 To use gospelo-architect with Web Claude, add the following domains to **Capabilities > Additional allowed domains**:
 
@@ -305,13 +193,6 @@ cdn.jsdelivr.net
 architect.gospelo.dev
 w3.org
 ```
-
-| Domain | Purpose |
-|--------|---------|
-| `raw.githubusercontent.com` | AWS and Google Cloud icon SVGs |
-| `cdn.jsdelivr.net` | Azure and Tech Stack icon SVGs |
-| `architect.gospelo.dev` | Icon catalog CDN (metadata) |
-| `w3.org` | SVG namespace definitions |
 
 ## Agent Skills (Claude)
 
@@ -329,6 +210,7 @@ npm run build:skill
 **Output**: `dist/skills/gospelo-architect-skill.zip` (~7KB)
 
 **Contents**:
+
 - `SKILL.md` - Skill definition (placed at root)
 - `references/` - CLI reference, Builder API, Schema documentation
 
@@ -346,6 +228,7 @@ gospelo-architect-skill.zip
 ### Skill ZIP License
 
 The generated `gospelo-architect-skill.zip` is licensed under MIT License, same as the main package. You are free to:
+
 - Use the skill in your Claude projects
 - Modify the skill definition
 - Redistribute the skill (with attribution)
