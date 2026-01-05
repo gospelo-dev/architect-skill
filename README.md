@@ -77,15 +77,43 @@ For JSON schema details, see [Gospelo Model 1.0 Specification](docs/specs/1.0/GO
 ### Creating Diagrams
 
 ```
-Create a serverless architecture with AWS Lambda, API Gateway, and DynamoDB
+Create a serverless REST API with API Gateway, Lambda, and DynamoDB
 ```
 
 ```
-Design a microservices architecture with 3 services and a message queue
+Create a typical web app architecture with ALB, EC2, and RDS
 ```
 
 ```
-Show me a typical web application stack with load balancer, app servers, and database
+Create a static site hosting setup with CloudFront and S3
+```
+
+```
+Design a container app architecture with ECS Fargate, ALB, and RDS Aurora
+```
+
+```
+Create an API Gateway and Lambda setup with Cognito authentication
+```
+
+```
+Create an async message processing architecture with SQS and Lambda
+```
+
+```
+Design a workflow architecture with EventBridge and Step Functions
+```
+
+```
+Create a caching architecture with ElastiCache Redis
+```
+
+```
+Create a data lake architecture with S3, Glue, and Athena
+```
+
+```
+Create a streaming data processing architecture with Kinesis and Lambda
 ```
 
 ### Modifying Diagrams

@@ -77,15 +77,43 @@ JSON スキーマの詳細は [Gospelo Model 1.0 仕様](docs/specs/ja/1.0/GOSPE
 ### 図の作成
 
 ```
-AWS Lambda、API Gateway、DynamoDB を使ったサーバーレスアーキテクチャを作成して
+API Gateway、Lambda、DynamoDB を使ったサーバーレス REST API を作成して
 ```
 
 ```
-3 つのサービスとメッセージキューを持つマイクロサービスアーキテクチャを設計して
+ALB、EC2、RDS を使った典型的な Web アプリ構成を作成して
 ```
 
 ```
-ロードバランサー、アプリサーバー、データベースの典型的な Web アプリ構成を見せて
+CloudFront と S3 を使った静的サイトホスティング構成を作成して
+```
+
+```
+ECS Fargate、ALB、RDS Aurora を使ったコンテナアプリ構成を設計して
+```
+
+```
+新しくCognito 認証付きの API Gateway と Lambda 構成を作成して
+```
+
+```
+新しくSQS と Lambda を使った非同期メッセージ処理構成を作成して
+```
+
+```
+新しくEventBridge と Step Functions を使ったワークフロー構成を設計して
+```
+
+```
+新しくElastiCache Redis を使ったキャッシング構成を作成して
+```
+
+```
+新しくS3、Glue、Athena を使ったデータレイク構成を作成して
+```
+
+```
+新しくKinesis と Lambda を使ったストリーミングデータ処理構成を作成して
 ```
 
 ### 図の編集

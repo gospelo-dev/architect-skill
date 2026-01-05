@@ -6,7 +6,7 @@ allowed-tools: Read, Bash(bun:*)
 
 # System Diagram Generator Skill
 
-JSON定義からシステムアーキテクチャ図を生成・編集するスキルです。AWS、Azure、GCP、その他テックスタックのアイコンをサポートしています。
+A skill for generating and editing system architecture diagrams from JSON definitions. Supports AWS, Azure, GCP, and other tech stack icons.
 
 ## When to Use
 
@@ -24,45 +24,45 @@ Activate this skill when the user asks to:
 
 ## Quick Start - Flag-style Commands (Recommended)
 
-Agent Skill向けのフラグスタイルコマンドです。`--diagram` オプションで対象ファイルを指定します。
+Flag-style commands for Agent Skills. Use `--diagram` option to specify the target file.
 
 ```bash
-# ダイアグラムの構造を確認
+# Show diagram structure
 gospelo-architect --open --diagram system.json
 
-# HTML/SVG出力
+# HTML/SVG output
 gospelo-architect --output html --diagram system.json
 gospelo-architect --output svg --diagram system.json
 
-# 出力先ディレクトリを指定（ディレクトリは自動作成）
+# Specify output directory (auto-created)
 gospelo-architect --output html --diagram system.json --output-dir ./output
 
-# ノード追加（基準ノードの上/下に配置）
+# Add node (positioned above/below reference node)
 gospelo-architect --insert-above api_gateway --node '{"id":"waf","icon":"aws:waf","label":"WAF"}' --diagram system.json
 gospelo-architect --insert-below lambda --node '{"id":"db","icon":"aws:dynamodb","label":"DynamoDB"}' --diagram system.json
 
-# ノード更新
+# Update node
 gospelo-architect --update-node lambda --node '{"label":"Updated Lambda","sublabel":"Python 3.12"}' --diagram system.json
 
-# ノード削除
+# Remove node
 gospelo-architect --remove-node old_node --diagram system.json
 ```
 
 ## Eval Command (Advanced)
 
-最も柔軟な方法は `eval` コマンドです。`b` はDiagramBuilderインスタンスとして使えます。
+The most flexible method is the `eval` command. `b` is available as a DiagramBuilder instance.
 
 ```bash
-# ノードを追加
+# Add node
 bun bin/cli.ts eval diagram.json 'b.addNode({id:"lambda",icon:"aws:lambda",label:"Lambda",position:[400,300]})'
 
-# ノードを移動
+# Move node
 bun bin/cli.ts eval diagram.json 'b.moveNode("lambda",[500,400])'
 
-# 複数操作をチェーン
+# Chain multiple operations
 bun bin/cli.ts eval diagram.json 'b.addNode({...}).addConnection({from:"a",to:"b"}).removeNode("old")'
 
-# ラベル変更
+# Change label
 bun bin/cli.ts eval diagram.json 'b.setNodeLabel("lambda","New Label","New Sublabel")'
 ```
 
@@ -71,14 +71,14 @@ bun bin/cli.ts eval diagram.json 'b.setNodeLabel("lambda","New Label","New Subla
 ### Flag-style Commands (for Agent Skills)
 
 ```bash
-# ダイアグラム構造を表示
+# Show diagram structure
 gospelo-architect --open --diagram <file.json>
 
-# HTML/SVG出力
+# HTML/SVG output
 gospelo-architect --output html --diagram <file.json>
 gospelo-architect --output svg --diagram <file.json>
 
-# ノード操作（基準ノードの上/下に自動配置）
+# Node operations (auto-positioned above/below reference node)
 gospelo-architect --insert-above <ref-node-id> --node '<json>' --diagram <file.json>
 gospelo-architect --insert-below <ref-node-id> --node '<json>' --diagram <file.json>
 gospelo-architect --update-node <node-id> --node '<json>' --diagram <file.json>
@@ -88,26 +88,26 @@ gospelo-architect --remove-node <node-id> --diagram <file.json>
 ### Traditional Render Commands
 
 ```bash
-# メタデータ付きJSONを生成
+# Generate JSON with metadata
 bun bin/cli.ts enrich diagram.json output.json --pretty
 
-# スタンドアロンHTMLを生成
+# Generate standalone HTML
 bun bin/cli.ts render diagram.json output.html
 
-# SVGファイルを生成
+# Generate SVG file
 bun bin/cli.ts svg diagram.json output.svg
 
-# メタデータのみを表示
+# Show metadata only
 bun bin/cli.ts meta diagram.json --pretty
 ```
 
 ### Traditional Edit Commands
 
 ```bash
-# eval - 最も柔軟（JS式を実行）
+# eval - Most flexible (execute JS expression)
 bun bin/cli.ts eval <input.json> '<expression>' [output.json]
 
-# 個別コマンド
+# Individual commands
 bun bin/cli.ts add-node <input.json> '<node-json>' [output.json]
 bun bin/cli.ts remove-node <input.json> <node-id> [output.json]
 bun bin/cli.ts move-node <input.json> <node-id> <x> <y> [output.json]
@@ -118,25 +118,25 @@ bun bin/cli.ts edit <input.json> <patch.json> [output.json]
 
 ## DiagramBuilder Methods
 
-`eval`コマンドで使えるメソッド:
+Methods available in `eval` command:
 
 | Method | Description |
 | ------ | ----------- |
-| `addNode({id, icon, label, position, ...})` | ノードを追加 |
-| `insertAbove(refNodeId, nodeInput, offsetY?)` | 基準ノードの上にノードを追加 |
-| `insertBelow(refNodeId, nodeInput, offsetY?)` | 基準ノードの下にノードを追加 |
-| `insertLeft(refNodeId, nodeInput, offsetX?)` | 基準ノードの左にノードを追加 |
-| `insertRight(refNodeId, nodeInput, offsetX?)` | 基準ノードの右にノードを追加 |
-| `removeNode(id)` | ノードと関連接続を削除 |
-| `updateNode(id, {label, icon, ...})` | ノードを更新 |
-| `moveNode(id, [x, y])` | ノードを移動 |
-| `setNodeLabel(id, label, sublabel?)` | ラベルを変更 |
-| `setNodeIcon(id, icon)` | アイコンを変更 |
-| `addConnection({from, to, type?, color?})` | 接続を追加 |
-| `removeConnection(from, to)` | 接続を削除 |
-| `updateConnection(from, to, {...})` | 接続を更新 |
-| `setTitle(title)` | タイトルを設定 |
-| `setSubtitle(subtitle)` | サブタイトルを設定 |
+| `addNode({id, icon, label, position, ...})` | Add a node |
+| `insertAbove(refNodeId, nodeInput, offsetY?)` | Add node above reference node |
+| `insertBelow(refNodeId, nodeInput, offsetY?)` | Add node below reference node |
+| `insertLeft(refNodeId, nodeInput, offsetX?)` | Add node left of reference node |
+| `insertRight(refNodeId, nodeInput, offsetX?)` | Add node right of reference node |
+| `removeNode(id)` | Remove node and related connections |
+| `updateNode(id, {label, icon, ...})` | Update a node |
+| `moveNode(id, [x, y])` | Move a node |
+| `setNodeLabel(id, label, sublabel?)` | Change label |
+| `setNodeIcon(id, icon)` | Change icon |
+| `addConnection({from, to, type?, color?, bidirectional?})` | Add connection (bidirectional: true for two-way arrows) |
+| `removeConnection(from, to)` | Remove connection |
+| `updateConnection(from, to, {...})` | Update connection |
+| `setTitle(title)` | Set title |
+| `setSubtitle(subtitle)` | Set subtitle |
 
 ## Options
 
@@ -151,7 +151,7 @@ bun bin/cli.ts edit <input.json> <patch.json> [output.json]
 
 ## Print Settings
 
-印刷に最適化された出力を生成するには `--paper` オプションを使用します。
+Use the `--paper` option to generate print-optimized output.
 
 ### Available `--paper` options
 
@@ -162,41 +162,41 @@ bun bin/cli.ts edit <input.json> <patch.json> [output.json]
 ### Usage Examples
 
 ```bash
-# A4横向きで出力（オフィス印刷向け）
+# A4 landscape output (for office printing)
 bun bin/cli.ts html diagram.json output.html --paper a4-landscape
 
-# A3縦向きで出力（プレゼン資料向け）
+# A3 portrait output (for presentations)
 bun bin/cli.ts html diagram.json output.html --paper a3-portrait
 
-# B2横向きで出力（ポスター向け）
+# B2 landscape output (for posters)
 bun bin/cli.ts html diagram.json output.html --paper b2-landscape
 
-# 4K横向きで出力（大型ディスプレイ向け）
+# 4K landscape output (for large displays)
 bun bin/cli.ts html diagram.json output.html --paper 4k-landscape
 
-# Full HD縦向きで出力（縦型モニター向け）
+# Full HD portrait output (for vertical monitors)
 bun bin/cli.ts html diagram.json output.html --paper fhd-portrait
 ```
 
 ### Behavior
 
-- **ViewBox**: 指定した用紙サイズに設定
-- **コンテンツフィット**: 用紙範囲内に自動フィット（縮小のみ、拡大なし）
-- **アスペクト比維持**: 縦横比を保持
-- **配置**: 上揃え、横中央配置
-- **アイコンサイズ**: viewBox座標で48px固定
+- **ViewBox**: Set to specified paper size
+- **Content fit**: Auto-fit within paper bounds (shrink only, no enlargement)
+- **Aspect ratio**: Preserved
+- **Alignment**: Top-aligned, horizontally centered
+- **Icon size**: Fixed at 48px in viewBox coordinates
 
 ### High-DPI Display Support
 
-96 DPIで定義された図は、高解像度ディスプレイでも鮮明に表示されます：
+Diagrams defined at 96 DPI display sharply on high-resolution screens:
 
-| ディスプレイ | レンダリング |
-|--------------|--------------|
-| 通常 | 96 DPI |
+| Display | Rendering |
+|---------|-----------|
+| Normal | 96 DPI |
 | Retina 2x | 192 DPI |
 | Retina 3x | 288 DPI |
 
-SVG（ベクター形式）出力のため、どのディスプレイでも品質劣化なし。
+SVG (vector format) output ensures no quality loss on any display.
 
 ## Diagram JSON Schema
 
@@ -223,6 +223,11 @@ SVG（ベクター形式）出力のため、どのディスプレイでも品�
       "to": "lambda",
       "type": "data",
       "color": "orange"
+    },
+    {
+      "from": "client",
+      "to": "cognito",
+      "bidirectional": true
     }
   ]
 }
@@ -242,18 +247,18 @@ SVG（ベクター形式）出力のため、どのディスプレイでも品�
 ### Create a new diagram from scratch
 
 ```bash
-# 空のダイアグラムを作成
+# Create empty diagram
 echo '{"title":"New Diagram","nodes":[],"connections":[]}' > diagram.json
 
-# ノードを追加
+# Add nodes
 bun bin/cli.ts eval diagram.json 'b.addNode({id:"api",icon:"aws:api_gateway",label:"API Gateway",position:[200,150]})' diagram.json --in-place
 bun bin/cli.ts eval diagram.json 'b.addNode({id:"lambda",icon:"aws:lambda",label:"Lambda",position:[400,150]})' diagram.json --in-place
 bun bin/cli.ts eval diagram.json 'b.addNode({id:"db",icon:"aws:dynamodb",label:"DynamoDB",position:[600,150]})' diagram.json --in-place
 
-# 接続を追加
+# Add connections
 bun bin/cli.ts eval diagram.json 'b.addConnection({from:"api",to:"lambda"}).addConnection({from:"lambda",to:"db"})' diagram.json --in-place
 
-# HTMLにレンダリング
+# Render to HTML
 bun bin/cli.ts render diagram.json output.html
 ```
 
@@ -283,22 +288,22 @@ bun bin/cli.ts edit diagram.json patch.json updated.json --pretty
 ### Claude Code (CLI)
 
 ```bash
-# プレビュー用SVGを生成（tempディレクトリに出力）
+# Generate preview SVG (output to temp directory)
 bun bin/cli.ts preview diagram.json
 
-# 出力例: Preview SVG generated: /tmp/diagram_preview_diagram_1234567890.svg
-# → Read toolでSVGファイルを読み取り、内容を確認
+# Output example: Preview SVG generated: /tmp/diagram_preview_diagram_1234567890.svg
+# → Read SVG file with Read tool to check contents
 ```
 
 ### Web Claude
 
-Web版Claudeでは「Presented file」機能でHTMLをプレビュー表示できます：
+In Web Claude, you can preview HTML using the "Presented file" feature:
 
 ```bash
-# HTMLを生成して /tmp に出力
+# Generate HTML and output to /tmp
 bun bin/cli.ts render diagram.json /tmp/diagram.html
 
-# または直接Bunスクリプトで
+# Or directly with Bun script
 bun -e '
 import { renderShareable } from "./src/index.ts";
 import { readFileSync } from "fs";
@@ -310,4 +315,4 @@ console.log("Created: /tmp/diagram.html");
 '
 ```
 
-生成されたHTMLファイルを「Presented file」として表示すると、ダイアグラムをビジュアルで確認できます。
+Display the generated HTML file as "Presented file" to visually verify the diagram.
