@@ -25,7 +25,7 @@
     "lint": "eslint src/**/*.ts",
     "clean": "rm -rf dist",
     "prepublishOnly": "bun run build",
-    "build:skill": "mkdir -p dist/skills && cd .github/skills/gospelo-architect && zip -r ../../../dist/skills/gospelo-architect-skill.zip . -x '*.DS_Store' && cd ../../.. && echo 'Created: dist/skills/gospelo-architect-skill.zip'"
+    "build:skill": "mkdir -p dist/skills && cd .claude/skills/gospelo-architect && zip -r ../../../dist/skills/gospelo-architect-skill.zip . -x '*.DS_Store' && cd ../../.. && echo 'Created: dist/skills/gospelo-architect-skill.zip'"
   },
   "keywords": [
     "diagram",

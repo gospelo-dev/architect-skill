@@ -36,6 +36,9 @@ bin/editor-cli.ts
 
 # Claude files
 .claude/
+!.claude/skills/
+!.claude/skills/gospelo-architect/
+!.claude/skills/gospelo-architect/**
 
 # Roo Code Files
 .roo/
