@@ -213,22 +213,43 @@ export class Renderer {
     const meta = this.generateDiagramMeta(sourceFile, renderOptions, originalSource);
     const metaJson = JSON.stringify(meta, null, 2);
 
+    // Get SVG and add selection UI elements
+    let svg = this.renderSvg();
+    // Remove SVG <title> elements (we use JavaScript tooltip instead)
+    svg = svg.replace(/<title>[^<]*<\/title>/g, '');
+    // Add selection UI elements before closing </svg> tag
+    const selectionUi = `
+  <rect id="selection-rect" x="0" y="0" width="0" height="0" fill="rgba(0, 120, 215, 0.1)" stroke="#0078D7" stroke-width="1" stroke-dasharray="4 2" style="display:none; pointer-events:none;"/>
+  <g id="copy-btn" style="display:none; cursor:pointer; pointer-events:all;">
+    <rect x="0" y="0" width="32" height="32" rx="6" fill="#E3F2FD" stroke="#0078D7" stroke-width="1.5" style="pointer-events:all;"/>
+    <g transform="translate(4, 4)" style="pointer-events:none;">
+      <rect width="8" height="4" x="8" y="2" rx="1" fill="none" stroke="#0078D7" stroke-width="2"/>
+      <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke="#0078D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M16 4h2a2 2 0 0 1 2 2v4" fill="none" stroke="#0078D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21 14H11" fill="none" stroke="#0078D7" stroke-width="2" stroke-linecap="round"/>
+      <path d="M15 10l-4 4 4 4" fill="none" stroke="#0078D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>`;
+    svg = svg.replace('</svg>', `${selectionUi}\n</svg>`);
+
     return `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>${this.escapeHtml(this.diagram.title)}</title>
-  <style>${this.getCss()}</style>
+  <style>${this.getShareableCss()}</style>
 </head>
 <body>
   <div class="gospelo-diagram">
-    ${this.renderSvg()}
+    ${svg}
   </div>
+  <div id="copy-toast" class="copy-toast"></div>
+  <div id="hover-tooltip" class="hover-tooltip"></div>
   <!-- AI調整用メタデータ: ノード位置・サイズ・接続情報 -->
   <script type="application/json" id="gospelo-diagram-meta">
 ${metaJson}
   </script>
-  <script>${this.getViewerScript()}</script>
+  <script>${this.getShareableScript()}</script>
 </body>
 </html>`;
   }
@@ -908,6 +929,337 @@ ${gradients.join('\n')}
       isResizing = false;
       document.body.style.cursor = '';
       document.body.style.userSelect = '';
+    }
+  });
+})();
+`;
+  }
+
+  /**
+   * Get CSS for shareable HTML (interactive features)
+   */
+  private getShareableCss(): string {
+    return `body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.gospelo-diagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+.gospelo-diagram svg {
+  max-width: 100%;
+  height: auto;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+.node-label { font-weight: 500; }
+.group-box { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }
+.connection { stroke-linecap: round; stroke-linejoin: round; }
+/* Hide UI elements */
+.boundary-box { display: none; }
+/* Node hover effect */
+.node, .composite-icon { cursor: pointer; }
+.node:hover, .composite-icon:hover { filter: brightness(1.1); }
+/* Selected node highlight */
+.node.selected, .composite-icon.selected { filter: drop-shadow(0 0 6px #0078D7); }
+/* Copy toast */
+.copy-toast {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1001;
+  pointer-events: none;
+}
+/* Hover tooltip */
+.hover-tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 1002;
+  pointer-events: none;
+  max-width: 300px;
+}`;
+  }
+
+  /**
+   * Get JavaScript for shareable HTML (hover, click-to-copy, area selection)
+   */
+  private getShareableScript(): string {
+    // Build node ID to icon/desc mapping (use computedNodes which has resolved icons from resources)
+    const nodeIconMap: Record<string, { icon: string; desc?: string; license: string }> = {};
+    const resources = this.diagram.resources || {};
+
+    const getLicense = (icon: string): string => {
+      if (icon.startsWith('aws:')) return 'AWS Architecture Icons - Apache License 2.0';
+      if (icon.startsWith('azure:')) return 'Azure Icons - MIT License';
+      if (icon.startsWith('gcp:')) return 'Google Cloud Icons - Apache License 2.0';
+      if (icon.startsWith('tech-stack:')) return 'Simple Icons - CC0 1.0 Universal';
+      return '';
+    };
+
+    const truncate = (text: string, maxLen: number): string => {
+      if (text.length <= maxLen) return text;
+      return text.slice(0, maxLen - 3) + '...';
+    };
+
+    const collectNodes = (nodes: ComputedNode[]) => {
+      for (const node of nodes) {
+        if (node.icon) {
+          const resource = resources[node.id];
+          nodeIconMap[node.id] = {
+            icon: node.icon,
+            desc: resource?.desc ? truncate(resource.desc, 50) : undefined,
+            license: getLicense(node.icon),
+          };
+        }
+        // Collect composite node's icons
+        if (node.type === 'composite' && node.icons) {
+          for (const iconRef of node.icons) {
+            const iconId = iconRef.icon || resources[iconRef.id]?.icon;
+            if (iconId) {
+              nodeIconMap[iconRef.id] = {
+                icon: iconId,
+                desc: resources[iconRef.id]?.desc ? truncate(resources[iconRef.id].desc!, 50) : undefined,
+                license: getLicense(iconId),
+              };
+            }
+          }
+        }
+        if (node.children) {
+          collectNodes(node.children as ComputedNode[]);
+        }
+      }
+    };
+    collectNodes(this.computedNodes);
+
+    // Build node bounds map for area selection
+    const nodeBoundsMap: Record<string, { left: number; top: number; right: number; bottom: number }> = {};
+    for (const [id, node] of this.nodeMap) {
+      if (node.bounds) {
+        nodeBoundsMap[id] = {
+          left: node.bounds.left,
+          top: node.bounds.top,
+          right: node.bounds.right,
+          bottom: node.bounds.bottom,
+        };
+      }
+      // Add composite node's icons bounds
+      if (node.type === 'composite' && node.icons) {
+        const iconSize = 36;
+        const labelHeight = 14;
+        const iconGap = 12;
+        const nodeAbsX = node.computedX;
+        const nodeAbsY = node.computedY;
+        const w = node.computedWidth || 100;
+        for (let i = 0; i < node.icons.length; i++) {
+          const iconRef = node.icons[i];
+          const iconY = 20 + i * (iconSize + labelHeight + iconGap);
+          const iconX = (w - iconSize) / 2;
+          nodeBoundsMap[iconRef.id] = {
+            left: nodeAbsX + iconX,
+            top: nodeAbsY + iconY,
+            right: nodeAbsX + iconX + iconSize,
+            bottom: nodeAbsY + iconY + iconSize,
+          };
+        }
+      }
+    }
+
+    return `
+(function() {
+  var nodeInfo = ${JSON.stringify(nodeIconMap)};
+  var nodeBounds = ${JSON.stringify(nodeBoundsMap)};
+  var tooltip = document.getElementById('hover-tooltip');
+  var toast = document.getElementById('copy-toast');
+  var nodes = document.querySelectorAll('.node, .composite-icon');
+  var svg = document.querySelector('.gospelo-svg');
+  var selectionRect = document.getElementById('selection-rect');
+  var copyBtn = document.getElementById('copy-btn');
+
+  // Area selection state
+  var isSelecting = false;
+  var startX = 0, startY = 0;
+  var selectedNodeIds = [];
+
+  // Tooltip and click-to-copy for individual nodes
+  nodes.forEach(function(node) {
+    var nodeId = node.id;
+    var info = nodeInfo[nodeId];
+
+    node.addEventListener('mouseenter', function(e) {
+      if (isSelecting) return;
+      var html = '<strong>ID:</strong> ' + nodeId;
+      if (info && info.icon) {
+        html += '<br><strong>Icon:</strong> ' + info.icon;
+      }
+      if (info && info.license) {
+        html += '<br><strong>License:</strong> ' + info.license;
+      }
+      if (info && info.desc) {
+        html += '<br><strong>Desc:</strong> ' + info.desc;
+      }
+      tooltip.innerHTML = html;
+      tooltip.style.opacity = '1';
+      updateTooltipPosition(e);
+    });
+
+    node.addEventListener('mousemove', function(e) {
+      if (!isSelecting) updateTooltipPosition(e);
+    });
+
+    node.addEventListener('mouseleave', function() {
+      tooltip.style.opacity = '0';
+    });
+
+    node.addEventListener('click', function(e) {
+      if (selectedNodeIds.length > 0) return;
+      navigator.clipboard.writeText(nodeId).then(function() {
+        toast.textContent = 'Copied: ' + nodeId;
+        toast.style.opacity = '1';
+        setTimeout(function() { toast.style.opacity = '0'; }, 1500);
+      });
+    });
+  });
+
+  function updateTooltipPosition(e) {
+    var x = e.clientX + 15;
+    var y = e.clientY + 15;
+    if (x + tooltip.offsetWidth > window.innerWidth - 10) {
+      x = e.clientX - tooltip.offsetWidth - 15;
+    }
+    if (y + tooltip.offsetHeight > window.innerHeight - 10) {
+      y = e.clientY - tooltip.offsetHeight - 15;
+    }
+    tooltip.style.left = x + 'px';
+    tooltip.style.top = y + 'px';
+  }
+
+  function screenToSvg(clientX, clientY) {
+    var pt = svg.createSVGPoint();
+    pt.x = clientX;
+    pt.y = clientY;
+    var svgPt = pt.matrixTransform(svg.getScreenCTM().inverse());
+    return { x: svgPt.x, y: svgPt.y };
+  }
+
+  function rectsIntersect(r1, r2) {
+    return !(r1.right < r2.left || r1.left > r2.right || r1.bottom < r2.top || r1.top > r2.bottom);
+  }
+
+  function clearSelection() {
+    selectedNodeIds = [];
+    nodes.forEach(function(n) { n.classList.remove('selected'); });
+    copyBtn.style.display = 'none';
+    selectionRect.style.display = 'none';
+  }
+
+  function showCopyBtn(x, y) {
+    copyBtn.setAttribute('transform', 'translate(' + x + ',' + y + ')');
+    copyBtn.style.display = 'block';
+  }
+
+  svg.addEventListener('mousedown', function(e) {
+    if (e.target === copyBtn || copyBtn.contains(e.target)) {
+      return;
+    }
+    if (!e.shiftKey) {
+      clearSelection();
+      return;
+    }
+    e.preventDefault();
+    isSelecting = true;
+    tooltip.style.opacity = '0';
+    var svgPt = screenToSvg(e.clientX, e.clientY);
+    startX = svgPt.x;
+    startY = svgPt.y;
+    selectionRect.setAttribute('x', startX);
+    selectionRect.setAttribute('y', startY);
+    selectionRect.setAttribute('width', 0);
+    selectionRect.setAttribute('height', 0);
+    selectionRect.style.display = 'block';
+    svg.style.cursor = 'crosshair';
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (!isSelecting) return;
+    var svgPt = screenToSvg(e.clientX, e.clientY);
+    var x = Math.min(startX, svgPt.x);
+    var y = Math.min(startY, svgPt.y);
+    var w = Math.abs(svgPt.x - startX);
+    var h = Math.abs(svgPt.y - startY);
+    selectionRect.setAttribute('x', x);
+    selectionRect.setAttribute('y', y);
+    selectionRect.setAttribute('width', w);
+    selectionRect.setAttribute('height', h);
+
+    var selRect = { left: x, top: y, right: x + w, bottom: y + h };
+    nodes.forEach(function(n) {
+      var bounds = nodeBounds[n.id];
+      var inCurrentRect = bounds && rectsIntersect(selRect, bounds);
+      var alreadySelected = selectedNodeIds.indexOf(n.id) !== -1;
+      if (inCurrentRect || alreadySelected) {
+        n.classList.add('selected');
+      } else {
+        n.classList.remove('selected');
+      }
+    });
+  });
+
+  document.addEventListener('mouseup', function(e) {
+    if (!isSelecting) return;
+    isSelecting = false;
+    svg.style.cursor = '';
+
+    nodes.forEach(function(n) {
+      if (n.classList.contains('selected') && selectedNodeIds.indexOf(n.id) === -1) {
+        selectedNodeIds.push(n.id);
+      }
+    });
+
+    if (selectedNodeIds.length > 0) {
+      var svgPt = screenToSvg(e.clientX, e.clientY);
+      showCopyBtn(svgPt.x + 10, svgPt.y - 16);
+    }
+    selectionRect.style.display = 'none';
+  });
+
+  copyBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (selectedNodeIds.length === 0) return;
+    var text = selectedNodeIds.join('\\n');
+    navigator.clipboard.writeText(text).then(function() {
+      toast.textContent = 'Copied ' + selectedNodeIds.length + ' IDs';
+      toast.style.opacity = '1';
+      setTimeout(function() { toast.style.opacity = '0'; }, 1500);
+      clearSelection();
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      clearSelection();
     }
   });
 })();
