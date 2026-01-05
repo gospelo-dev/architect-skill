@@ -181,6 +181,46 @@ export class Renderer {
   }
 
   /**
+   * Calculate content bounding box from all nodes
+   */
+  private calculateContentBounds(): { minX: number; minY: number; maxX: number; maxY: number } {
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    const iconSize = this.options.iconSize;
+    const labelPadding = 20; // Extra padding for labels below icons
+
+    for (const node of this.nodeMap.values()) {
+      const bounds = node.bounds;
+      if (bounds && bounds.right > 0) {
+        // BoundingBox uses left/right/top/bottom
+        minX = Math.min(minX, bounds.left);
+        minY = Math.min(minY, bounds.top);
+        maxX = Math.max(maxX, bounds.right);
+        maxY = Math.max(maxY, bounds.bottom + labelPadding);
+      } else {
+        // Fallback for nodes without bounds
+        minX = Math.min(minX, node.computedX - iconSize / 2);
+        minY = Math.min(minY, node.computedY - iconSize / 2);
+        maxX = Math.max(maxX, node.computedX + iconSize / 2);
+        maxY = Math.max(maxY, node.computedY + iconSize / 2 + labelPadding);
+      }
+    }
+
+    // If no nodes found, return default bounds
+    if (minX === Infinity) {
+      return { minX: 0, minY: 0, maxX: this.options.width, maxY: this.options.height };
+    }
+
+    // Add some padding
+    const padding = 20;
+    return {
+      minX: Math.max(0, minX - padding),
+      minY: Math.max(0, minY - padding),
+      maxX: maxX + padding,
+      maxY: maxY + padding,
+    };
+  }
+
+  /**
    * Render complete SVG diagram
    * Z-order: コネクター → ノード（アイコン） → ラベル
    * Fullscreen display with preserved aspect ratio
@@ -188,15 +228,46 @@ export class Renderer {
   renderSvg(): string {
     const { width, height } = this.options;
 
+    // Calculate content bounds and scaling if needed
+    const contentBounds = this.calculateContentBounds();
+    const contentWidth = contentBounds.maxX;
+    const contentHeight = contentBounds.maxY;
+
+    // Calculate scale to fit content within target dimensions
+    // Leave room for title (80px top margin)
+    const titleMargin = this.diagram.title ? 80 : 20;
+    const availableWidth = width - 20; // 10px padding on each side
+    const availableHeight = height - titleMargin - 20;
+
+    // Larger paper = larger drawing area (no scale up)
+    // Only scale down if content doesn't fit
+    const scaleX = availableWidth / contentWidth;
+    const scaleY = availableHeight / contentHeight;
+    const scale = Math.min(scaleX, scaleY, 1); // Don't scale up, only down
+
+    // Calculate translation (horizontally centered, vertically top-aligned)
+    // Account for content minX/minY offset
+    const translateX = -contentBounds.minX * scale + (width - (contentWidth - contentBounds.minX) * scale) / 2;
+    const translateY = titleMargin - contentBounds.minY * scale; // Top-aligned after title
+
+    // Apply transform when paper size is specified and (scale down needed OR content has offset)
+    const hasPaperSize = this.options.paperOrientation !== undefined;
+    const needsTransform = hasPaperSize && (scale < 1 || contentBounds.minX > 0 || contentBounds.minY > 0);
+    const transform = needsTransform
+      ? `transform="translate(${translateX.toFixed(2)}, ${translateY.toFixed(2)}) scale(${scale.toFixed(4)})"`
+      : '';
+
     const parts: string[] = [
       `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${width} ${height}" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" class="gospelo-svg">`,
       this.renderDefs(),
       this.renderBackground(),
       this.renderBoundaryBox(width, height),
       this.renderTitle(),
+      needsTransform ? `<g ${transform}>` : '',
       this.renderConnections(),        // 1. コネクター（一番下）
       this.renderNodes(this.computedNodes),  // 2. ノード（アイコン部分）
       this.renderNodeLabels(this.computedNodes),  // 3. ラベル（一番上）
+      needsTransform ? '</g>' : '',
       '</svg>',
     ];
 
@@ -978,6 +1049,10 @@ ${gradients.join('\n')}
    * Get CSS for shareable HTML (interactive features)
    */
   private getShareableCss(): string {
+    // Determine @page size based on paperOrientation option
+    const orientation = this.options.paperOrientation;
+    const pageSize = orientation ? `A4 ${orientation}` : 'auto';
+
     return `body {
   margin: 0;
   padding: 0;
@@ -986,18 +1061,54 @@ ${gradients.join('\n')}
 .gospelo-diagram {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
   background: #f5f5f5;
 }
 .gospelo-diagram svg {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   background: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 4px;
+}
+/* Print styles */
+@media print {
+  @page {
+    margin: 0;
+    size: ${pageSize};
+  }
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .gospelo-diagram {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: white;
+    display: block;
+    overflow: hidden;
+  }
+  .gospelo-diagram svg {
+    display: block;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    width: auto !important;
+    height: auto !important;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .copy-toast, .hover-tooltip, .selection-rect, .copy-btn { display: none !important; }
 }
 .node-label { font-weight: 500; }
 .group-box { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }

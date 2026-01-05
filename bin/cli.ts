@@ -104,14 +104,16 @@ Edit Commands:
   add-connection <input.json> <from> <to> [output]   Add a connection
 
 Options:
-  --width <number>   Diagram width (default: 800)
-  --height <number>  Diagram height (default: 600)
+  --width <number>   Diagram width (default: 1920)
+  --height <number>  Diagram height (default: 1080)
+  --paper <size>     Paper/screen size (a1-a4, b1-b4, hd, fhd, 4k, 8k with -landscape or -portrait)
+  --fit-width <n%>   Fit to percentage of paper width (e.g., 100%, 80%)
+  --fit-height <n%>  Fit to percentage of paper height (e.g., 100%, 80%)
   --pretty           Pretty-print JSON output
   --in-place         Modify input file in place
   --diagram <file>   Target diagram file (for flag-style commands)
   --output-dir <dir> Output directory (creates if not exists)
   --node '<json>'    Node data as JSON string
-  --obfuscate        Obfuscate embedded HTML (for embed command)
   --help             Show this help
 
 Examples:
@@ -150,6 +152,40 @@ Patch JSON Format:
 `);
 }
 
+// Paper sizes in pixels at 96 DPI (CSS pixels)
+// A series: A1 594x841mm, A2 420x594mm, A3 297x420mm, A4 210x297mm
+// B series (JIS): B1 728x1030mm, B2 515x728mm, B3 364x515mm, B4 257x364mm
+// Screen sizes: HD 1280x720, FHD 1920x1080, 4K 3840x2160, 8K 7680x4320
+const PAPER_SIZES: Record<string, { width: number; height: number }> = {
+  // A series (96 DPI)
+  'a1-landscape': { width: 3179, height: 2245 },  // A1 landscape (841mm x 594mm)
+  'a1-portrait': { width: 2245, height: 3179 },   // A1 portrait (594mm x 841mm)
+  'a2-landscape': { width: 2245, height: 1587 },  // A2 landscape (594mm x 420mm)
+  'a2-portrait': { width: 1587, height: 2245 },   // A2 portrait (420mm x 594mm)
+  'a3-landscape': { width: 1587, height: 1123 },  // A3 landscape (420mm x 297mm)
+  'a3-portrait': { width: 1123, height: 1587 },   // A3 portrait (297mm x 420mm)
+  'a4-landscape': { width: 1123, height: 794 },   // A4 landscape (297mm x 210mm)
+  'a4-portrait': { width: 794, height: 1123 },    // A4 portrait (210mm x 297mm)
+  // B series - JIS (96 DPI)
+  'b1-landscape': { width: 3893, height: 2752 },  // B1 landscape (1030mm x 728mm)
+  'b1-portrait': { width: 2752, height: 3893 },   // B1 portrait (728mm x 1030mm)
+  'b2-landscape': { width: 2752, height: 1947 },  // B2 landscape (728mm x 515mm)
+  'b2-portrait': { width: 1947, height: 2752 },   // B2 portrait (515mm x 728mm)
+  'b3-landscape': { width: 1947, height: 1376 },  // B3 landscape (515mm x 364mm)
+  'b3-portrait': { width: 1376, height: 1947 },   // B3 portrait (364mm x 515mm)
+  'b4-landscape': { width: 1376, height: 971 },   // B4 landscape (364mm x 257mm)
+  'b4-portrait': { width: 971, height: 1376 },    // B4 portrait (257mm x 364mm)
+  // Screen sizes
+  'hd-landscape': { width: 1280, height: 720 },   // HD 720p landscape
+  'hd-portrait': { width: 720, height: 1280 },    // HD 720p portrait
+  'fhd-landscape': { width: 1920, height: 1080 }, // Full HD 1080p landscape
+  'fhd-portrait': { width: 1080, height: 1920 },  // Full HD 1080p portrait
+  '4k-landscape': { width: 3840, height: 2160 },  // 4K UHD landscape
+  '4k-portrait': { width: 2160, height: 3840 },   // 4K UHD portrait
+  '8k-landscape': { width: 7680, height: 4320 },  // 8K Super Hi-Vision landscape
+  '8k-portrait': { width: 4320, height: 7680 },   // 8K Super Hi-Vision portrait
+};
+
 interface Options {
   width?: number;
   height?: number;
@@ -157,6 +193,10 @@ interface Options {
   heightSpecified: boolean;
   pretty: boolean;
   inPlace: boolean;
+  // Paper/print options
+  paper?: string;
+  fitWidth?: number;  // percentage (0-100)
+  fitHeight?: number; // percentage (0-100)
   // Flag-style options
   output?: 'html' | 'svg';
   diagram?: string;
@@ -210,6 +250,22 @@ function parseOptions(args: string[]): Options {
     } else if (arg === '--height' && next) {
       options.height = parseInt(next, 10);
       options.heightSpecified = true;
+      i++;
+    } else if (arg === '--paper' && next) {
+      options.paper = next.toLowerCase();
+      i++;
+    } else if (arg === '--fit-width' && next) {
+      // Parse percentage (e.g., "100%", "80%", or just "80")
+      const match = next.match(/^(\d+)%?$/);
+      if (match) {
+        options.fitWidth = parseInt(match[1], 10);
+      }
+      i++;
+    } else if (arg === '--fit-height' && next) {
+      const match = next.match(/^(\d+)%?$/);
+      if (match) {
+        options.fitHeight = parseInt(match[1], 10);
+      }
       i++;
     } else if (arg === '--pretty') {
       options.pretty = true;
@@ -365,14 +421,43 @@ function extractRenderOptions(diagram: any): { width?: number; height?: number }
 // Helper to get effective render options from diagram + CLI options
 function getEffectiveRenderOptions(diagram: any): RenderOptions {
   const diagramRender = extractRenderOptions(diagram);
-  // Priority: CLI options > diagram.render > defaults
-  const width = options.widthSpecified
-    ? options.width!
-    : (diagramRender.width ?? DEFAULT_WIDTH);
-  const height = options.heightSpecified
-    ? options.height!
-    : (diagramRender.height ?? DEFAULT_HEIGHT);
-  return { width, height };
+
+  let width: number;
+  let height: number;
+  let paperOrientation: 'landscape' | 'portrait' | undefined;
+
+  // Check if paper size is specified
+  if (options.paper && PAPER_SIZES[options.paper]) {
+    const paperSize = PAPER_SIZES[options.paper];
+
+    // Use paper size dimensions directly (viewBox will match paper aspect ratio)
+    width = paperSize.width;
+    height = paperSize.height;
+
+    // Determine paper orientation from paper name
+    paperOrientation = options.paper.includes('landscape') ? 'landscape' : 'portrait';
+
+    // Apply fit percentage if specified (scales proportionally)
+    if (options.fitWidth) {
+      const scale = options.fitWidth / 100;
+      width = Math.round(paperSize.width * scale);
+      height = Math.round(paperSize.height * scale);
+    } else if (options.fitHeight) {
+      const scale = options.fitHeight / 100;
+      width = Math.round(paperSize.width * scale);
+      height = Math.round(paperSize.height * scale);
+    }
+  } else {
+    // Priority: CLI options > diagram.render > defaults
+    width = options.widthSpecified
+      ? options.width!
+      : (diagramRender.width ?? DEFAULT_WIDTH);
+    height = options.heightSpecified
+      ? options.height!
+      : (diagramRender.height ?? DEFAULT_HEIGHT);
+  }
+
+  return { width, height, paperOrientation };
 }
 
 // Helper to save render options to diagram JSON if CLI specified them
@@ -890,6 +975,15 @@ switch (command) {
 
     const diagram = readJsonFile(inputPath) as any;
     const effectiveOptions = getEffectiveRenderOptions(diagram);
+
+    // Override diagram.render with paper size if specified
+    if (options.paper && PAPER_SIZES[options.paper]) {
+      diagram.render = {
+        ...diagram.render,
+        width: effectiveOptions.width,
+        height: effectiveOptions.height,
+      };
+    }
 
     // Save render options to JSON if specified via CLI
     saveRenderOptionsIfSpecified(diagram, inputPath);

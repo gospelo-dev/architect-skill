@@ -274,6 +274,12 @@ export interface RenderOptions {
   fontSize?: number;
   embedCss?: boolean;
   externalIcons?: boolean;
+  /** Original diagram width before paper size scaling (for content fitting) */
+  originalWidth?: number;
+  /** Original diagram height before paper size scaling (for content fitting) */
+  originalHeight?: number;
+  /** Paper orientation for print: 'landscape' or 'portrait' */
+  paperOrientation?: 'landscape' | 'portrait';
 }
 
 /**
@@ -290,8 +296,8 @@ export const DEFAULT_COLORS: ColorMap = {
  * Default render options
  */
 export const DEFAULT_RENDER_OPTIONS: Required<RenderOptions> = {
-  width: 1200,
-  height: 800,
+  width: 1920,
+  height: 1080,
   iconSize: 48,
   fontSize: 11,
   embedCss: true,
