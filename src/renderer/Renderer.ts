@@ -158,23 +158,23 @@ export class Renderer {
     const resource = resources[nodeId];
     const parts: string[] = [];
 
-    // Resource ID
+    // 1. Resource ID
     parts.push(`ID: ${nodeId}`);
 
-    // Description from resource
-    if (resource?.desc) {
-      parts.push(`Desc: ${resource.desc}`);
-    }
-
-    // Icon identifier
+    // 2. Icon identifier
     if (iconId) {
       parts.push(`Icon: ${iconId}`);
     }
 
-    // License
+    // 3. License
     const license = this.getIconLicense(iconId);
     if (license) {
       parts.push(`License: ${license}`);
+    }
+
+    // 4. Description from resource
+    if (resource?.desc) {
+      parts.push(`Desc: ${resource.desc}`);
     }
 
     return this.escapeHtml(parts.join('\n'));
