@@ -127,6 +127,58 @@ When using gospelo-architect, gospelo-architect-editor, or related tools, users 
 
 ---
 
+## Additional Licenses for cli-ext.sh
+
+The `cli-ext.sh` script provides HTML to image/PDF conversion functionality using Puppeteer.
+When using this feature, the following additional software is automatically downloaded and used:
+
+### Puppeteer
+
+- **Website**: https://pptr.dev/
+- **Source**: https://github.com/puppeteer/puppeteer
+- **License**: Apache License 2.0
+- **Copyright**: Google Inc.
+
+### Chromium
+
+Puppeteer automatically downloads a compatible version of Chromium for headless browser rendering.
+
+- **Website**: https://www.chromium.org/
+- **Source**: https://chromium.googlesource.com/chromium/src
+- **License**: BSD-style licenses (varies by component)
+- **Copyright**: The Chromium Authors
+
+**Note**: Chromium includes components under various open-source licenses including:
+- BSD 3-Clause License
+- MIT License
+- Apache License 2.0
+- LGPL (for some media codecs, if enabled)
+
+For the complete list of Chromium licenses, see:
+https://source.chromium.org/chromium/chromium/src/+/main:LICENSE
+
+**Important**: When using `cli-ext.sh`, you are responsible for complying with the Puppeteer and Chromium licenses in addition to this project's MIT license.
+
+### Image/PDF Output Restrictions
+
+The `cli-ext.sh` commands (`html2png`, `html2jpg`, `html2pdf`) generate image and PDF files from HTML input. The distribution rights of these outputs depend on the source HTML:
+
+**From `preview` command (Base64-embedded icons):**
+- **INTERNAL USE ONLY** - Same restrictions as Preview HTML
+- Redistribution is strictly prohibited
+- Generated images/PDFs contain embedded icon data, which may conflict with third-party icon licenses
+
+**From `html`/`svg` command (CDN-referenced icons):**
+- Distribution is permitted, subject to third-party icon license compliance
+- Users must ensure compliance with the respective icon licenses (AWS, Azure, GCP, etc.)
+- For commercial use, verify each icon's trademark guidelines
+
+**User Responsibility:**
+- Users are solely responsible for ensuring their generated images/PDFs comply with all applicable licenses
+- NoStudio LLC is not liable for any license violations arising from the distribution of generated outputs
+
+---
+
 ## Usage Notes
 
 - Icons are loaded dynamically from CDN (jsDelivr, GitHub Raw) at runtime

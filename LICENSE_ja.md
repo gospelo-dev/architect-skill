@@ -115,6 +115,58 @@ gospelo-architect、gospelo-architect-editor、または関連ツールを使用
 
 ---
 
+## cli-ext.sh の追加ライセンス
+
+`cli-ext.sh` スクリプトは、Puppeteer を使用した HTML から画像/PDF への変換機能を提供します。
+この機能を使用すると、以下の追加ソフトウェアが自動的にダウンロードされ使用されます：
+
+### Puppeteer
+
+- **ウェブサイト**: https://pptr.dev/
+- **ソース**: https://github.com/puppeteer/puppeteer
+- **ライセンス**: Apache License 2.0
+- **著作権**: Google Inc.
+
+### Chromium
+
+Puppeteer はヘッドレスブラウザレンダリング用に、互換性のある Chromium のバージョンを自動的にダウンロードします。
+
+- **ウェブサイト**: https://www.chromium.org/
+- **ソース**: https://chromium.googlesource.com/chromium/src
+- **ライセンス**: BSD スタイルライセンス（コンポーネントにより異なる）
+- **著作権**: The Chromium Authors
+
+**注記**: Chromium には以下を含む様々なオープンソースライセンスのコンポーネントが含まれています：
+- BSD 3-Clause License
+- MIT License
+- Apache License 2.0
+- LGPL（一部メディアコーデック、有効な場合）
+
+Chromium のライセンス一覧については以下を参照してください：
+https://source.chromium.org/chromium/chromium/src/+/main:LICENSE
+
+**重要**: `cli-ext.sh` を使用する際は、本プロジェクトの MIT ライセンスに加えて、Puppeteer および Chromium のライセンスにも準拠する必要があります。
+
+### 画像/PDF 出力の制限
+
+`cli-ext.sh` のコマンド（`html2png`、`html2jpg`、`html2pdf`）は、HTML 入力から画像および PDF ファイルを生成します。これらの出力の配布権は、ソース HTML によって異なります：
+
+**`preview` コマンドから生成した場合（Base64 埋め込みアイコン）：**
+- **内部使用のみ** - プレビュー HTML と同じ制限が適用されます
+- 再配布は厳禁です
+- 生成された画像/PDF には埋め込みアイコンデータが含まれており、サードパーティアイコンのライセンスと抵触する可能性があります
+
+**`html`/`svg` コマンドから生成した場合（CDN 参照アイコン）：**
+- サードパーティアイコンのライセンス準拠を条件に、配布が許可されます
+- ユーザーは各アイコンのライセンス（AWS、Azure、GCP 等）に準拠する必要があります
+- 商用利用の場合、各アイコンの商標ガイドラインを確認してください
+
+**ユーザーの責任：**
+- ユーザーは、生成した画像/PDF がすべての適用されるライセンスに準拠していることを確認する責任を単独で負います
+- NoStudio LLC は、生成物の配布に起因するライセンス違反について責任を負いません
+
+---
+
 ## 使用上の注意
 
 - アイコンは実行時に CDN（jsDelivr、GitHub Raw）から動的に読み込まれます
