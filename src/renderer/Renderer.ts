@@ -183,12 +183,13 @@ export class Renderer {
   /**
    * Render complete SVG diagram
    * Z-order: コネクター → ノード（アイコン） → ラベル
+   * Fullscreen display with preserved aspect ratio
    */
   renderSvg(): string {
     const { width, height } = this.options;
 
     const parts: string[] = [
-      `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" class="gospelo-svg">`,
+      `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${width} ${height}" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" class="gospelo-svg">`,
       this.renderDefs(),
       this.renderBackground(),
       this.renderBoundaryBox(width, height),
@@ -203,29 +204,14 @@ export class Renderer {
   }
 
   /**
-   * Render boundary box with resize handle and meta toggle button
+   * Render boundary box (frame only, no interactive elements for pure SVG output)
    */
   private renderBoundaryBox(width: number, height: number): string {
     const padding = 10;
-    const handleSize = 16;
-    const btnSize = 20;
-    const btnX = width - padding - handleSize - btnSize - 8;
-    const btnY = height - padding - btnSize - 2;
 
     return `<g class="boundary-box">
   <rect class="boundary-frame" x="${padding}" y="${padding}" width="${width - padding * 2}" height="${height - padding * 2}"
     fill="none" stroke="#D0D0D0" stroke-width="1" rx="4"/>
-  <g class="meta-toggle" transform="translate(${btnX}, ${btnY})" style="cursor: pointer;">
-    <rect width="${btnSize}" height="${btnSize}" rx="3" fill="#F0F0F0" stroke="#CCCCCC" stroke-width="0.5"/>
-    <g transform="translate(3, 3)">
-      <rect x="0" y="0" width="14" height="14" rx="2" fill="none" stroke="#666666" stroke-width="1.2"/>
-      <line x1="9" y1="0" x2="9" y2="14" stroke="#666666" stroke-width="1.2"/>
-      <path d="M5 5 L7 7 L5 9" fill="none" stroke="#666666" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-  </g>
-  <polygon class="resize-handle"
-    points="${width - padding},${height - padding - handleSize} ${width - padding},${height - padding} ${width - padding - handleSize},${height - padding}"
-    fill="#CCCCCC" stroke="#AAAAAA" stroke-width="0.5" style="cursor: nwse-resize;"/>
 </g><!-- /boundary-box -->`;
   }
 
@@ -1671,14 +1657,8 @@ Simple Icons - CC0 1.0 Universal (Simple Icons Collaborators)`;
       embeddedSvg = embeddedSvg.split(`href="${url}"`).join(`href="${dataUri}"`);
     }
 
-    // Make SVG fullscreen: remove fixed width/height, keep viewBox for aspect ratio
-    const { width, height } = this.options;
-    embeddedSvg = embeddedSvg.replace(
-      /width="\d+" height="\d+"/,
-      `width="100%" height="100%" preserveAspectRatio="xMidYMid meet"`
-    );
-
     // Add Confidential badge with hover tooltip (bottom-right corner)
+    const { width, height } = this.options;
     const badgeX = width - 90;
     const badgeY = height - 30;
     const licenseText = `CONFIDENTIAL - INTERNAL USE ONLY
