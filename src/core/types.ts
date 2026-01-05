@@ -302,6 +302,9 @@ export const DEFAULT_RENDER_OPTIONS: Required<RenderOptions> = {
   fontSize: 11,
   embedCss: true,
   externalIcons: true,
+  originalWidth: 1920,
+  originalHeight: 1080,
+  paperOrientation: 'landscape',
 };
 
 /**

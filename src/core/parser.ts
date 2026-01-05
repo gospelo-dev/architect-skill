@@ -249,7 +249,10 @@ export function validateDiagram(diagram: DiagramDefinition): string[] {
 
   // Check resources is defined (required)
   if (!diagram.resources || Object.keys(diagram.resources).length === 0) {
-    errors.push('Diagram must have resources defined. Resources are required.');
+    errors.push(
+      `[AI Hint] No resources defined. Add a "resources" object with icon definitions. ` +
+      `Example: "resources": { "@mynode": { "icon": "aws:lambda", "desc": "Description" } }`
+    );
   }
 
   // Validate resource IDs have @ prefix
@@ -257,7 +260,10 @@ export function validateDiagram(diagram: DiagramDefinition): string[] {
   if (diagram.resources) {
     for (const resourceId of Object.keys(diagram.resources)) {
       if (!resourceId.startsWith('@')) {
-        errors.push(`Resource ID "${resourceId}" must start with @ prefix`);
+        errors.push(
+          `[AI Hint] Resource ID "${resourceId}" must start with @. ` +
+          `Fix: Rename to "@${resourceId}" in both resources and nodes.`
+        );
       }
       resourceIds.add(resourceId);
     }
@@ -268,16 +274,25 @@ export function validateDiagram(diagram: DiagramDefinition): string[] {
   const collectIds = (nodes: Node[]) => {
     for (const node of nodes) {
       if (nodeIds.has(node.id)) {
-        errors.push(`Duplicate node ID: ${node.id}`);
+        errors.push(
+          `[AI Hint] Duplicate node ID "${node.id}". Each node must have a unique ID. ` +
+          `Fix: Rename one of the nodes to a different ID.`
+        );
       }
       nodeIds.add(node.id);
 
       // All nodes MUST have @ prefix and matching resource entry
       if (!node.id.startsWith('@')) {
-        errors.push(`Node ID "${node.id}" must start with @ prefix`);
+        errors.push(
+          `[AI Hint] Node ID "${node.id}" must start with @. ` +
+          `Fix: Rename to "@${node.id}" and add matching resource entry.`
+        );
       }
       if (node.id.startsWith('@') && !resourceIds.has(node.id)) {
-        errors.push(`Node "${node.id}" has no matching resource. Add resource with same ID.`);
+        errors.push(
+          `[AI Hint] Node "${node.id}" has no matching resource. ` +
+          `Fix: Add to resources: "${node.id}": { "icon": "<icon-id>", "desc": "<description>" }`
+        );
       }
 
       if (node.children) {
@@ -288,10 +303,16 @@ export function validateDiagram(diagram: DiagramDefinition): string[] {
       if (node.icons) {
         for (const iconRef of node.icons) {
           if (!iconRef.id.startsWith('@')) {
-            errors.push(`Composite icon ID "${iconRef.id}" must start with @ prefix`);
+            errors.push(
+              `[AI Hint] Composite icon ID "${iconRef.id}" must start with @. ` +
+              `Fix: Rename to "@${iconRef.id}".`
+            );
           }
           if (iconRef.id.startsWith('@') && !resourceIds.has(iconRef.id)) {
-            errors.push(`Composite icon "${iconRef.id}" has no matching resource. Add resource with same ID.`);
+            errors.push(
+              `[AI Hint] Composite icon "${iconRef.id}" has no matching resource. ` +
+              `Fix: Add to resources: "${iconRef.id}": { "icon": "<icon-id>", "desc": "<description>" }`
+            );
           }
         }
       }
@@ -302,10 +323,52 @@ export function validateDiagram(diagram: DiagramDefinition): string[] {
   // Validate connections reference existing nodes
   for (const conn of diagram.connections || []) {
     if (!nodeIds.has(conn.from)) {
-      errors.push(`Connection references unknown node: ${conn.from}`);
+      errors.push(
+        `[AI Hint] Connection "from" references unknown node "${conn.from}". ` +
+        `Fix: Add a node with id "${conn.from}" or correct the connection's "from" value.`
+      );
     }
     if (!nodeIds.has(conn.to)) {
-      errors.push(`Connection references unknown node: ${conn.to}`);
+      errors.push(
+        `[AI Hint] Connection "to" references unknown node "${conn.to}". ` +
+        `Fix: Add a node with id "${conn.to}" or correct the connection's "to" value.`
+      );
+    }
+  }
+
+  // Detect duplicate and bidirectional connections
+  const connections = diagram.connections || [];
+  const connectionPairs = new Map<string, { conn: Connection; index: number; count: number }>();
+
+  for (let i = 0; i < connections.length; i++) {
+    const conn = connections[i];
+    const key = `${conn.from}->${conn.to}`;
+    const reverseKey = `${conn.to}->${conn.from}`;
+
+    // Check for duplicate connections (same from->to)
+    if (connectionPairs.has(key)) {
+      const existing = connectionPairs.get(key)!;
+      existing.count++;
+      if (existing.count === 2) {
+        errors.push(
+          `[AI Hint] Duplicate connection from ${conn.from} to ${conn.to}. ` +
+          `Fix: Remove the duplicate connection. Each pair of nodes should have at most one connection.`
+        );
+      }
+    } else {
+      connectionPairs.set(key, { conn, index: i, count: 1 });
+
+      // Check for bidirectional that should use bidirectional: true (only on first occurrence)
+      if (connectionPairs.has(reverseKey)) {
+        const reverse = connectionPairs.get(reverseKey)!;
+        // Only warn if neither connection is already bidirectional
+        if (!conn.bidirectional && !reverse.conn.bidirectional) {
+          errors.push(
+            `[AI Hint] Found separate connections between ${conn.from} and ${conn.to}. ` +
+            `Fix: Use a single connection with "bidirectional": true instead of two separate connections.`
+          );
+        }
+      }
     }
   }
 

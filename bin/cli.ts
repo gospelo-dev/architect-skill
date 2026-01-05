@@ -33,7 +33,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, basename, join } from 'path';
-import { enrichDiagram, generateMeta, renderStandalone, renderSvg, renderSvgEmbed, renderPreviewHtml, createBuilder, IconCatalogClient, loadIconUrlMap } from '../src/index';
+import { enrichDiagram, generateMeta, renderStandalone, renderSvg, renderSvgEmbed, renderPreviewHtml, createBuilder, IconCatalogClient, loadIconUrlMap, validateDiagram, parseDiagram } from '../src/index';
 import { createZip } from '../src/utils/zip';
 import type { RenderOptions } from '../src/core/types';
 import type { DiagramPatch, NodeInput, NodeUpdate } from '../src/core/builder';
@@ -1032,6 +1032,18 @@ switch (command) {
 
     const diagram = readJsonFile(inputPath) as any;
     const effectiveOptions = getEffectiveRenderOptions(diagram);
+
+    // Run validation and show warnings/hints for AI
+    const parsed = parseDiagram(diagram);
+    const validationMessages = validateDiagram(parsed);
+
+    if (validationMessages.length > 0) {
+      console.log('\n💡 AI Hints:');
+      for (const msg of validationMessages) {
+        console.log(`   - ${msg.replace('[AI Hint] ', '')}`);
+      }
+      console.log('');
+    }
 
     console.log('Fetching icons and generating preview HTML...');
     const html = await renderPreviewHtml(diagram, effectiveOptions);
