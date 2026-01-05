@@ -1,4 +1,4 @@
-# gospelo-architect
+# Gospelo Architect
 
 **あなたが説明する。AI がデザインする。図が現れる。**
 
@@ -6,7 +6,7 @@
 
 AI エージェント時代のために構築されています。従来の図作成ツールでは、人間が手動でアイコンを配置し線を引く必要がありましたが、gospelo-architect は AI エージェントが自律的に動作できるようにゼロから設計されています。JSON 定義を読み取り、プロフェッショナルな図を生成し、人間のフィードバックに基づいて反復的に改善します。
 
-## なぜ gospelo-architect なのか？
+## なぜ Gospelo Architect なのか？
 
 - **AI ネイティブ設計**: AI エージェントが読み書き・修正できる JSON 形式の定義
 - **反復的ワークフロー**: 自然言語で変更を説明し、AI が図を更新
@@ -76,45 +76,24 @@ JSON スキーマの詳細は [Gospelo Model 1.0 仕様](docs/specs/ja/1.0/GOSPE
 
 ### 図の作成
 
-```
-API Gateway、Lambda、DynamoDB を使ったサーバーレス REST API を作成して
-```
-
-```
-ALB、EC2、RDS を使った典型的な Web アプリ構成を作成して
-```
-
-```
-CloudFront と S3 を使った静的サイトホスティング構成を作成して
-```
-
-```
-ECS Fargate、ALB、RDS Aurora を使ったコンテナアプリ構成を設計して
-```
-
-```
-新しくCognito 認証付きの API Gateway と Lambda 構成を作成して
-```
-
-```
-新しくSQS と Lambda を使った非同期メッセージ処理構成を作成して
-```
-
-```
-新しくEventBridge と Step Functions を使ったワークフロー構成を設計して
-```
-
-```
-新しくElastiCache Redis を使ったキャッシング構成を作成して
-```
-
-```
-新しくS3、Glue、Athena を使ったデータレイク構成を作成して
-```
-
-```
-新しくKinesis と Lambda を使ったストリーミングデータ処理構成を作成して
-```
+| ID  | 難易度 | 構成                           | 例                                       | プロンプト例                                                                                                                                                                                                              |
+| :-: | :----: | ------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  1  |   ★    | サーバーレス REST API          | EC サイト API、モバイル BFF              | `API Gateway から複数の Lambda（ユーザー API、注文 API、商品 API）にルーティングし、それぞれ DynamoDB にアクセス、CloudWatch Logs でログ収集する構成を作成して`                                                           |
+|  2  |   ★    | 典型的な Web アプリ            | 社内ポータル、CMS                        | `ALB から複数の EC2 に分散、RDS（プライマリ・リードレプリカ）と ElastiCache に接続、CloudWatch でメトリクス監視する構成を作成して`                                                                                        |
+|  3  |   ★    | コンテナアプリ                 | SaaS バックエンド、API サーバー          | `ALB から ECS Fargate の複数タスクに分散、RDS Aurora と Secrets Manager に接続、CloudWatch Container Insights で監視する構成を設計して`                                                                                   |
+|  4  |   ★★   | 認証付き API                   | 会員制サービス、マイページ               | `Cognito で認証後、API Gateway から複数の Lambda にルーティング、DynamoDB と S3 にアクセス、CloudWatch でログ・メトリクス収集する構成を作成して`                                                                          |
+|  5  |   ★★   | 非同期メッセージ処理           | 注文処理、通知配信                       | `API Gateway → Lambda → SNS → 複数の SQS キューにファンアウト、各キューを別々の Lambda で処理、DLQ でエラー処理、CloudWatch でキュー監視する構成を作成して`                                                               |
+|  6  |   ★★   | ワークフロー                   | 承認フロー、バッチ処理                   | `EventBridge から Step Functions を起動、並列で複数の Lambda を実行、成功時は DynamoDB に保存・SNS で通知、失敗時は SQS に退避する構成を設計して`                                                                         |
+|  7  |   ★★   | キャッシング                   | 商品検索、ランキング表示                 | `API Gateway → Lambda → ElastiCache（キャッシュヒット時は即返却）、キャッシュミス時は RDS から取得して ElastiCache に書き込み、CloudWatch でヒット率監視する構成を作成して`                                               |
+|  8  |   ★★   | データレイク                   | ログ分析、BI ダッシュボード              | `S3 にデータ投入 → Glue Crawler でカタログ化 → Athena と QuickSight の両方からクエリ、Glue ETL で別の S3 に変換出力、CloudWatch でジョブ監視する構成を作成して`                                                           |
+|  9  |   ★★   | ストリーミング処理             | クリックストリーム分析、リアルタイム集計 | `Kinesis Data Streams → Lambda で変換 → DynamoDB と S3 の両方に出力、Kinesis Data Analytics で集計、CloudWatch でストリーム監視・SNS でアラート通知する構成を作成して`                                                    |
+| 10  |   ★★   | CI/CD パイプライン             | 自動デプロイ、継続的デリバリー           | `CodeCommit → CodeBuild（並列でテスト・ビルド・セキュリティスキャン）→ ECR にプッシュ → CodePipeline で承認後 ECS にデプロイ、失敗時は SNS 通知する構成を設計して`                                                        |
+| 11  |  ★★★   | リアルタイム IoT 分析          | スマート工場、車両テレマティクス         | `IoT Core → Kinesis Data Streams → Lambda で変換、Timestream と S3 の両方に保存、Grafana でリアルタイム可視化、CloudWatch でデバイス監視・SNS で異常アラートする構成を作成して`                                           |
+| 12  |  ★★★   | マルチリージョン災害対策       | グローバル EC、金融システム              | `Route 53 で複数リージョンにルーティング、各リージョンに CloudFront → ALB → ECS Fargate、Aurora Global Database でレプリケーション、CloudWatch でヘルスチェック・SNS でフェイルオーバー通知する構成を作成して`            |
+| 13  |  ★★★   | マイクロサービス＋イベント駆動 | EC サイト全体、予約システム              | `API Gateway → 複数の Lambda マイクロサービス、各サービスが DynamoDB に書き込み → DynamoDB Streams → EventBridge → 別のサービスに連携、SQS で非同期処理、X-Ray でトレーシングする構成を設計して`                          |
+| 14  |  ★★★   | ゼロトラストセキュリティ       | AI チャットボット、社内 LLM              | `WAF → CloudFront → Cognito で認証 → API Gateway → VPC 内の Lambda、Secrets Manager から認証情報取得、VPC Endpoint 経由で Bedrock と DynamoDB にアクセス、CloudTrail で監査ログする構成を作成して`                        |
+| 15  |  ★★★   | イベントソーシング＋ CQRS      | 在庫管理、取引履歴                       | `API Gateway から書き込み用 Lambda → Kinesis → イベント保存 Lambda → DynamoDB、DynamoDB Streams → 読み取りモデル更新 Lambda → ElastiCache、別の API Gateway から読み取り専用 Lambda でキャッシュクエリする構成を設計して` |
+| 16  |  ★★★   | 分岐する ML パイプライン       | レコメンド、感情分析                     | `S3 アップロード → Lambda で前処理 → Step Functions で SageMaker 学習と Comprehend 分析を並列実行、結果を S3 に集約、Athena で両方の出力をクエリ、CloudWatch でパイプライン監視・SNS で完了通知する構成を作成して`        |
 
 ### 図の編集
 

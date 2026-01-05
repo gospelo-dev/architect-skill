@@ -1,4 +1,4 @@
-# gospelo-architect
+# Gospelo Architect
 
 **You describe. AI designs. Diagrams appear.**
 
@@ -6,7 +6,7 @@ A new paradigm for creating system architecture diagrams: humans provide intent,
 
 Built for the AI Agent era. While traditional diagramming tools require humans to manually place icons and draw lines, gospelo-architect is designed from the ground up for AI agents to operate autonomously - reading JSON definitions, generating professional diagrams, and iterating based on human feedback.
 
-## Why gospelo-architect?
+## Why Gospelo Architect?
 
 - **AI-Native Design**: JSON-based definitions that AI agents can read, write, and modify
 - **Iterative Workflow**: Describe changes in natural language, AI updates the diagram
@@ -76,45 +76,24 @@ For JSON schema details, see [Gospelo Model 1.0 Specification](docs/specs/1.0/GO
 
 ### Creating Diagrams
 
-```
-Create a serverless REST API with API Gateway, Lambda, and DynamoDB
-```
-
-```
-Create a typical web app architecture with ALB, EC2, and RDS
-```
-
-```
-Create a static site hosting setup with CloudFront and S3
-```
-
-```
-Design a container app architecture with ECS Fargate, ALB, and RDS Aurora
-```
-
-```
-Create an API Gateway and Lambda setup with Cognito authentication
-```
-
-```
-Create an async message processing architecture with SQS and Lambda
-```
-
-```
-Design a workflow architecture with EventBridge and Step Functions
-```
-
-```
-Create a caching architecture with ElastiCache Redis
-```
-
-```
-Create a data lake architecture with S3, Glue, and Athena
-```
-
-```
-Create a streaming data processing architecture with Kinesis and Lambda
-```
+| ID | Difficulty | Architecture | Use Cases | Prompt Example |
+|:--:|:----------:|--------------|-----------|----------------|
+| 1 | ★ | Serverless REST API | E-commerce API, Mobile BFF | `Create an API Gateway routing to multiple Lambda functions (User API, Order API, Product API), each accessing DynamoDB, with CloudWatch Logs for log collection` |
+| 2 | ★ | Typical Web App | Internal Portal, CMS | `Create an ALB distributing to multiple EC2 instances, connecting to RDS (primary and read replica) and ElastiCache, with CloudWatch for metrics monitoring` |
+| 3 | ★ | Container App | SaaS Backend, API Server | `Design an ALB distributing to multiple ECS Fargate tasks, connecting to RDS Aurora and Secrets Manager, with CloudWatch Container Insights for monitoring` |
+| 4 | ★★ | Authenticated API | Membership Service, User Portal | `Create a Cognito-authenticated API Gateway routing to multiple Lambda functions, accessing DynamoDB and S3, with CloudWatch for logs and metrics` |
+| 5 | ★★ | Async Message Processing | Order Processing, Notification Delivery | `Create API Gateway → Lambda → SNS → fan-out to multiple SQS queues, each processed by separate Lambda functions, with DLQ for error handling and CloudWatch for queue monitoring` |
+| 6 | ★★ | Workflow Orchestration | Approval Flow, Batch Processing | `Design EventBridge triggering Step Functions, executing multiple Lambda functions in parallel, saving to DynamoDB and notifying via SNS on success, falling back to SQS on failure` |
+| 7 | ★★ | Caching | Product Search, Ranking Display | `Create API Gateway → Lambda → ElastiCache (return immediately on cache hit), on cache miss fetch from RDS and write to ElastiCache, with CloudWatch monitoring hit rate` |
+| 8 | ★★ | Data Lake | Log Analytics, BI Dashboard | `Create S3 data ingestion → Glue Crawler for cataloging → query from both Athena and QuickSight, Glue ETL transforming to another S3, with CloudWatch for job monitoring` |
+| 9 | ★★ | Streaming Processing | Clickstream Analytics, Real-time Aggregation | `Create Kinesis Data Streams → Lambda for transformation → output to both DynamoDB and S3, Kinesis Data Analytics for aggregation, CloudWatch for stream monitoring with SNS alerts` |
+| 10 | ★★ | CI/CD Pipeline | Auto Deploy, Continuous Delivery | `Design CodeCommit → CodeBuild (parallel test, build, security scan) → push to ECR → CodePipeline with approval gate → deploy to ECS, SNS notification on failure` |
+| 11 | ★★★ | Real-time IoT Analytics | Smart Factory, Vehicle Telematics | `Create IoT Core → Kinesis Data Streams → Lambda for transformation, saving to both Timestream and S3, Grafana for real-time visualization, CloudWatch for device monitoring with SNS alerts` |
+| 12 | ★★★ | Multi-Region Disaster Recovery | Global E-commerce, Financial Systems | `Create Route 53 routing to multiple regions, each region with CloudFront → ALB → ECS Fargate, Aurora Global Database for replication, CloudWatch for health checks with SNS failover notification` |
+| 13 | ★★★ | Microservices + Event-Driven | E-commerce Platform, Reservation System | `Design API Gateway → multiple Lambda microservices, each writing to DynamoDB → DynamoDB Streams → EventBridge → routing to other services, SQS for async processing, X-Ray for distributed tracing` |
+| 14 | ★★★ | Zero-Trust Security | AI Chatbot, Internal LLM | `Create WAF → CloudFront → Cognito authentication → API Gateway → Lambda in VPC, fetching credentials from Secrets Manager, accessing Bedrock and DynamoDB via VPC Endpoints, CloudTrail for audit logging` |
+| 15 | ★★★ | Event Sourcing + CQRS | Inventory Management, Transaction History | `Design API Gateway for writes → Lambda → Kinesis → event store Lambda → DynamoDB, DynamoDB Streams → read model updater Lambda → ElastiCache, separate API Gateway for reads → read-only Lambda querying cache` |
+| 16 | ★★★ | ML Pipeline with Branching | Recommendations, Sentiment Analysis | `Create S3 upload → Lambda preprocessing → Step Functions running SageMaker training and Comprehend analysis in parallel, results aggregated to S3, Athena querying both outputs, CloudWatch for pipeline monitoring with SNS completion notification` |
 
 ### Modifying Diagrams
 
