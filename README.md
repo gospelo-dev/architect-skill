@@ -26,15 +26,16 @@ Built for the AI Agent era. While traditional diagramming tools require humans t
 
 gospelo-architect supports multiple output formats for different use cases:
 
-| Format               | Command     | Description                                                                  |
-| -------------------- | ----------- | ---------------------------------------------------------------------------- |
-| **HTML**             | `html`      | Interactive HTML with hover tooltips and Shift+drag multi-select (CDN icons) |
-| **SVG**              | `svg`       | Clean SVG with CDN icon references                                           |
-| **SVG (Embedded)**   | `svg-embed` | SVG with Base64 embedded icons (offline-capable)                             |
-| **Preview HTML**     | `preview`   | HTML with Base64 embedded icons for offline viewing                          |
-| **Markdown ZIP**     | `markdown`  | ZIP containing Markdown + embedded SVG                                       |
-| **JSON (Enriched)**  | `enrich`    | Original JSON + computed metadata (positions, sizes)                         |
-| **JSON (Meta only)** | `meta`      | Metadata only for AI consumption                                             |
+| Format               | Command         | Description                                                                  |
+| -------------------- | --------------- | ---------------------------------------------------------------------------- |
+| **HTML**             | `html`          | Interactive HTML with hover tooltips and Shift+drag multi-select (CDN icons) |
+| **SVG**              | `svg`           | Clean SVG with CDN icon references                                           |
+| **SVG (Embedded)**   | `svg-embed`     | SVG with Base64 embedded icons (offline-capable)                             |
+| **Preview HTML**     | `preview`       | HTML with Base64 embedded icons for offline viewing                          |
+| **Preview PNG**      | `preview --png` | PNG with Base64 embedded icons for offline viewing                           |
+| **Markdown ZIP**     | `markdown`      | ZIP containing Markdown + embedded SVG                                       |
+| **JSON (Enriched)**  | `enrich`        | Original JSON + computed metadata (positions, sizes)                         |
+| **JSON (Meta only)** | `meta`          | Metadata only for AI consumption                                             |
 
 ## Installation
 
