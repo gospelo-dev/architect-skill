@@ -115,8 +115,13 @@ export type ReservedHorizontalLines = ReservedHorizontalLine[];
 
 /**
  * 縦線が既存の予約と重なるかチェック
+ * @param x - チェックするX座標
+ * @param yMin - Y区間の最小値
+ * @param yMax - Y区間の最大値
+ * @param reserved - 予約済み縦線リスト
+ * @returns 重なりがある場合true
  */
-function isVerticalLineConflict(
+export function isVerticalLineConflict(
   x: number,
   yMin: number,
   yMax: number,
@@ -136,8 +141,13 @@ function isVerticalLineConflict(
 
 /**
  * 水平線が既存の予約と重なるかチェック
+ * @param y - チェックするY座標
+ * @param xMin - X区間の最小値
+ * @param xMax - X区間の最大値
+ * @param reserved - 予約済み水平線リスト
+ * @returns 重なりがある場合true
  */
-function isHorizontalLineConflict(
+export function isHorizontalLineConflict(
   y: number,
   xMin: number,
   xMax: number,
