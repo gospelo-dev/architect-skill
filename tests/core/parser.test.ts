@@ -340,7 +340,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Diagram must have resources defined. Resources are required.');
+    expect(errors.some(e => e.includes('No resources defined'))).toBe(true);
   });
 
   test('should detect empty resources', () => {
@@ -351,7 +351,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Diagram must have resources defined. Resources are required.');
+    expect(errors.some(e => e.includes('No resources defined'))).toBe(true);
   });
 
   test('should detect resource ID without @ prefix', () => {
@@ -364,7 +364,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Resource ID "lambda" must start with @ prefix');
+    expect(errors.some(e => e.includes('Resource ID "lambda" must start with @'))).toBe(true);
   });
 
   test('should detect node ID without @ prefix', () => {
@@ -377,7 +377,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Node ID "lambda" must start with @ prefix');
+    expect(errors.some(e => e.includes('Node ID "lambda" must start with @'))).toBe(true);
   });
 
   test('should detect node without matching resource', () => {
@@ -393,7 +393,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Node "@dynamodb" has no matching resource. Add resource with same ID.');
+    expect(errors.some(e => e.includes('Node "@dynamodb" has no matching resource'))).toBe(true);
   });
 
   test('should require all nodes including groups to have @ prefix and resource', () => {
@@ -431,7 +431,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Duplicate node ID: @dup');
+    expect(errors.some(e => e.includes('Duplicate node ID "@dup"'))).toBe(true);
   });
 
   test('should detect duplicate IDs in nested nodes', () => {
@@ -452,7 +452,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Duplicate node ID: @dup');
+    expect(errors.some(e => e.includes('Duplicate node ID "@dup"'))).toBe(true);
   });
 
   test('should detect invalid connection source', () => {
@@ -466,7 +466,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Connection references unknown node: @unknown');
+    expect(errors.some(e => e.includes('references unknown node "@unknown"'))).toBe(true);
   });
 
   test('should detect invalid connection target', () => {
@@ -480,7 +480,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Connection references unknown node: @unknown');
+    expect(errors.some(e => e.includes('references unknown node "@unknown"'))).toBe(true);
   });
 
   test('should detect composite icon without @ prefix', () => {
@@ -504,7 +504,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Composite icon ID "react" must start with @ prefix');
+    expect(errors.some(e => e.includes('Composite icon ID "react" must start with @'))).toBe(true);
   });
 
   test('should detect composite icon without matching resource', () => {
@@ -528,7 +528,7 @@ describe('validateDiagram', () => {
     };
 
     const errors = validateDiagram(diagram as any);
-    expect(errors).toContain('Composite icon "@react" has no matching resource. Add resource with same ID.');
+    expect(errors.some(e => e.includes('Composite icon "@react" has no matching resource'))).toBe(true);
   });
 
   test('should validate composite node with all icons having resources', () => {
