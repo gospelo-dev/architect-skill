@@ -172,6 +172,33 @@ gospelo-architect --remove-node @old --diagram system.json
 - ❌ Adding nodes without connections (orphaned)
 - ❌ Skipping best practices research for unfamiliar architectures
 
+## Advanced Topics
+
+### Grouping Nodes (VPC, Region, AZ)
+
+Use group nodes to organize related components:
+
+```json
+{
+  "id": "@vpc",
+  "type": "group",
+  "label": "VPC",
+  "borderColor": "blue",
+  "position": [100, 100],
+  "size": [500, 300],
+  "children": [
+    { "id": "@subnet", "label": "Subnet", "parentId": "@vpc", "position": [200, 200] }
+  ]
+}
+```
+
+**Key points**:
+- Group nodes need `type: "group"` and `children` array
+- Each child MUST have `parentId` set to the group's `id`
+- Groups can be nested (Region > VPC > AZ > Subnet)
+
+See [Grouping Guide](references/grouping-guide.md) for detailed examples.
+
 ---
 
 ## Optional Extension: Image/PDF Export
