@@ -7,6 +7,7 @@
 
 import {
   DiagramDefinition,
+  DiagramLayout,
   Node,
   Connection,
   Background,
@@ -124,6 +125,7 @@ function parseLegacyDiagram(raw: RawDiagramInput): DiagramDefinition {
     resources: (raw as any).resources,
     nodes: parseNodes(raw.nodes || []),
     connections: parseConnections(raw.connections || []),
+    layout: ((raw as any).layout || 'landscape') as DiagramLayout,
   };
 
   return diagram;

@@ -4,6 +4,7 @@
  */
 
 import { Node, DiagramDefinition, ComputedNode, LayoutDirection, ResourceMap } from '../core/types';
+import { applyAutoLayout, needsAutoLayout } from './auto-layout';
 
 // Layout constants
 const DEFAULT_ICON_SIZE = 48;
@@ -12,11 +13,18 @@ const DEFAULT_SPACING = 30;
 const DEFAULT_LABEL_HEIGHT = 80; // 6 lines max (13px per line)
 
 /**
+ * Layout options for computeLayout
+ */
+export interface LayoutOptions {
+  viewportWidth?: number;  // For horizontal centering in portrait mode
+}
+
+/**
  * Compute layout for all nodes in the diagram
  * Resolves icon from resources if not specified on node
  * Validates that each resource ID is used only once
  */
-export function computeLayout(diagram: DiagramDefinition): ComputedNode[] {
+export function computeLayout(diagram: DiagramDefinition, options?: LayoutOptions): ComputedNode[] {
   const resources = diagram.resources || {};
 
   // Validate: each resource ID should be used by exactly one node
@@ -38,7 +46,17 @@ export function computeLayout(diagram: DiagramDefinition): ComputedNode[] {
     collectNodeIds(diagram.nodes);
   }
 
-  return diagram.nodes.map((node, index) => computeNodeLayout(node, index, null, resources));
+  const computed = diagram.nodes.map((node, index) => computeNodeLayout(node, index, null, resources));
+
+  // Apply auto-layout if any top-level node needs positioning
+  if (needsAutoLayout(computed)) {
+    applyAutoLayout(computed, diagram.connections || [], {
+      layout: diagram.layout || 'landscape',
+      viewportWidth: options?.viewportWidth,
+    });
+  }
+
+  return computed;
 }
 
 /**

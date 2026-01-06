@@ -94,7 +94,7 @@ import { Renderer as _Renderer } from './renderer/Renderer';
 export { Renderer } from './renderer/Renderer';
 
 // Layout utilities
-export { computeLayout, getNodeCenter, getNodeAnchors } from './layout/layout';
+export { computeLayout, getNodeCenter, getNodeAnchors, type LayoutOptions } from './layout/layout';
 export { generateConnectionPath } from './layout/connections';
 
 // Types for function signatures

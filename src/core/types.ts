@@ -234,6 +234,9 @@ export interface ResourceMap {
   [nodeId: string]: Resource;
 }
 
+/** Diagram layout direction for auto-layout */
+export type DiagramLayout = 'landscape' | 'portrait';
+
 /**
  * Complete diagram definition
  */
@@ -248,6 +251,8 @@ export interface DiagramDefinition {
   connections?: Connection[];
   /** Connection routing sort strategy (auto-selected if not specified) */
   connectionSortStrategy?: ConnectionSortStrategy;
+  /** Diagram layout direction (landscape=left-to-right, portrait=top-to-bottom) */
+  layout?: DiagramLayout;
 }
 
 /**
