@@ -343,7 +343,6 @@ export function validateDiagram(diagram: DiagramDefinition): string[] {
   for (let i = 0; i < connections.length; i++) {
     const conn = connections[i];
     const key = `${conn.from}->${conn.to}`;
-    const reverseKey = `${conn.to}->${conn.from}`;
 
     // Check for duplicate connections (same from->to)
     if (connectionPairs.has(key)) {
@@ -358,17 +357,8 @@ export function validateDiagram(diagram: DiagramDefinition): string[] {
     } else {
       connectionPairs.set(key, { conn, index: i, count: 1 });
 
-      // Check for bidirectional that should use bidirectional: true (only on first occurrence)
-      if (connectionPairs.has(reverseKey)) {
-        const reverse = connectionPairs.get(reverseKey)!;
-        // Only warn if neither connection is already bidirectional
-        if (!conn.bidirectional && !reverse.conn.bidirectional) {
-          errors.push(
-            `[AI Hint] Found separate connections between ${conn.from} and ${conn.to}. ` +
-            `Fix: Use a single connection with "bidirectional": true instead of two separate connections.`
-          );
-        }
-      }
+      // Note: Bidirectional connections (A→B and B→A) are now automatically
+      // detected and merged at render time, so no validation error is needed.
     }
   }
 
