@@ -114,6 +114,17 @@ export type ConnectionType = 'data' | 'auth' | 'flow';
 // Connection line styles
 export type ConnectionStyle = 'orthogonal' | 'curved' | 'solid' | 'dashed' | 'dotted';
 
+// Connection sort strategy for routing optimization
+export type ConnectionSortStrategy =
+  | 'original'              // JSON定義順
+  | 'vertical_length_desc'  // 縦線の長さが長い順
+  | 'vertical_length_asc'   // 縦線の長さが短い順
+  | 'target_y_asc'          // 目的地のY座標が小さい順（上から下）
+  | 'target_y_desc'         // 目的地のY座標が大きい順（下から上）
+  | 'source_x_asc'          // 出発地のX座標が小さい順（左から右）
+  | 'source_x_desc'         // 出発地のX座標が大きい順（右から左）
+  | 'bounding_box_aware';   // バウンディングボックス形状に基づく（横長→左X優先、縦長→上Y優先）
+
 // Anchor side for connections
 export type AnchorSide = 'top' | 'bottom' | 'left' | 'right';
 
@@ -235,6 +246,8 @@ export interface DiagramDefinition {
   resources?: ResourceMap;
   nodes: Node[];
   connections?: Connection[];
+  /** Connection routing sort strategy (auto-selected if not specified) */
+  connectionSortStrategy?: ConnectionSortStrategy;
 }
 
 /**

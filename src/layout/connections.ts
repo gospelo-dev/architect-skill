@@ -92,6 +92,47 @@ export interface ConnectionAnchorInfo {
 }
 
 /**
+ * 予約済み縦線のX座標を管理するセット
+ * 同じ縦線を複数の接続が使用しないようにする（横長ダイアグラム向け）
+ */
+export type ReservedVerticalLines = Set<number>;
+
+/**
+ * 予約済み水平線のY座標を管理するセット
+ * 同じ水平線を複数の接続が使用しないようにする（縦長ダイアグラム向け）
+ */
+export type ReservedHorizontalLines = Set<number>;
+
+/**
+ * 接続処理順序のソート戦略
+ */
+export type ConnectionSortStrategy =
+  | 'original'           // JSON定義順
+  | 'vertical_length_desc'  // 縦線の長さが長い順
+  | 'vertical_length_asc'   // 縦線の長さが短い順
+  | 'target_y_asc'          // 目的地のY座標が小さい順（上から下）
+  | 'target_y_desc';        // 目的地のY座標が大きい順（下から上）
+
+/**
+ * SVGパスの総長を計算する
+ * M x y L x y L x y ... 形式のパスを解析
+ */
+export function calculatePathLength(path: string): number {
+  const coords = path.match(/[\d.]+/g);
+  if (!coords || coords.length < 4) return 0;
+
+  let totalLength = 0;
+  for (let i = 2; i < coords.length; i += 2) {
+    const x1 = parseFloat(coords[i - 2]);
+    const y1 = parseFloat(coords[i - 1]);
+    const x2 = parseFloat(coords[i]);
+    const y2 = parseFloat(coords[i + 1]);
+    totalLength += Math.abs(x2 - x1) + Math.abs(y2 - y1); // マンハッタン距離
+  }
+  return totalLength;
+}
+
+/**
  * Generate SVG path for a connection with distributed anchor points
  * @param connection - The connection definition
  * @param fromNode - Source node
@@ -99,6 +140,8 @@ export interface ConnectionAnchorInfo {
  * @param anchorInfo - Anchor distribution information
  * @param allNodes - All nodes for obstacle avoidance
  * @param minY - Minimum Y coordinate for connection paths (to avoid title/subtitle overlap)
+ * @param reservedVerticalLines - Set of reserved vertical line X coordinates (mutated to add used lines)
+ * @param reservedHorizontalLines - Set of reserved horizontal line Y coordinates (mutated to add used lines)
  */
 export function generateConnectionPath(
   connection: Connection,
@@ -106,7 +149,9 @@ export function generateConnectionPath(
   toNode: ComputedNode,
   anchorInfo?: ConnectionAnchorInfo,
   allNodes?: ComputedNode[],
-  minY?: number
+  minY?: number,
+  reservedVerticalLines?: ReservedVerticalLines,
+  reservedHorizontalLines?: ReservedHorizontalLines
 ): string {
   const style = connection.style || 'orthogonal';
 
@@ -121,7 +166,7 @@ export function generateConnectionPath(
     const toSide = anchorInfo?.toSide;
     // 接続元・先以外のノードを除外リストとして渡す
     const obstacles = allNodes?.filter(n => n.id !== fromNode.id && n.id !== toNode.id);
-    return generateOrthogonalPath(from, to, fromSide, toSide, obstacles, anchorInfo, minY);
+    return generateOrthogonalPath(from, to, fromSide, toSide, obstacles, anchorInfo, minY, reservedVerticalLines, reservedHorizontalLines);
   }
 }
 
@@ -156,33 +201,330 @@ function getNodeBounds(node: ComputedNode): BoundingBox {
 }
 
 /**
+ * Calculate actual orthogonal path length for a given anchor combination
+ * Considers the connector type and actual path geometry
+ */
+function calculateActualPathLength(
+  from: Point,
+  to: Point,
+  fromSide: AnchorSide,
+  toSide: AnchorSide
+): number {
+  // Determine connector type
+  const connectorType = determineConnectorType(fromSide, toSide, from, to);
+
+  switch (connectorType) {
+    case 'straight':
+      // Direct line (either horizontal or vertical)
+      return Math.abs(to.x - from.x) + Math.abs(to.y - from.y);
+
+    case 'L_horizontal':
+    case 'L_vertical':
+      // L-shape: horizontal + vertical or vice versa
+      return Math.abs(to.x - from.x) + Math.abs(to.y - from.y);
+
+    case 'Z_horizontal': {
+      // Z-shape: horizontal-vertical-horizontal
+      // Path: from → midX → to
+      const midX = (from.x + to.x) / 2;
+      return Math.abs(midX - from.x) + Math.abs(to.y - from.y) + Math.abs(to.x - midX);
+    }
+
+    case 'Z_vertical': {
+      // Z-shape: vertical-horizontal-vertical
+      // Path: from → midY → to
+      const midY = (from.y + to.y) / 2;
+      return Math.abs(midY - from.y) + Math.abs(to.x - from.x) + Math.abs(to.y - midY);
+    }
+
+    case 'U_horizontal': {
+      // U-shape: horizontal detour
+      const detourX = fromSide === 'right'
+        ? Math.max(from.x, to.x) + 40
+        : Math.min(from.x, to.x) - 40;
+      return Math.abs(detourX - from.x) + Math.abs(to.y - from.y) + Math.abs(to.x - detourX);
+    }
+
+    case 'U_vertical': {
+      // U-shape: vertical detour
+      const detourY = fromSide === 'bottom'
+        ? Math.max(from.y, to.y) + 40
+        : Math.min(from.y, to.y) - 40;
+      return Math.abs(detourY - from.y) + Math.abs(to.x - from.x) + Math.abs(to.y - detourY);
+    }
+
+    default:
+      return Math.abs(to.x - from.x) + Math.abs(to.y - from.y);
+  }
+}
+
+/**
  * Determine which side a connection should use for a node
+ * Calculates actual path length for all valid combinations and selects the shortest
  */
 export function determineAnchorSide(
   fromNode: ComputedNode,
-  toNode: ComputedNode
+  toNode: ComputedNode,
+  siblingNodes?: ComputedNode[],
+  parentGroupBounds?: { top: number; bottom: number; left: number; right: number }
 ): { fromSide: AnchorSide; toSide: AnchorSide } {
   const fromBounds = getNodeBounds(fromNode);
   const toBounds = getNodeBounds(toNode);
 
+  // グループ内ノードからグループ外ノードへの接続の場合、
+  // 親グループの境界を考慮して最短でグループを出るルートを選択
+  if (parentGroupBounds && siblingNodes && siblingNodes.length > 0) {
+    // toNodeがグループ外にある場合（toNodeの中心が親グループ外）
+    const toCenter = { x: toBounds.centerX, y: toBounds.centerY };
+    const isToOutside =
+      toCenter.x < parentGroupBounds.left ||
+      toCenter.x > parentGroupBounds.right ||
+      toCenter.y < parentGroupBounds.top ||
+      toCenter.y > parentGroupBounds.bottom;
+
+    if (isToOutside) {
+      // グループの各辺までの距離を計算し、兄弟ノードを避ける最短ルートを選択
+      return determineCrossGroupAnchorSide(fromNode, toNode, fromBounds, toBounds, siblingNodes, parentGroupBounds);
+    }
+  }
+
+  type AnchorOption = {
+    fromSide: AnchorSide;
+    toSide: AnchorSide;
+    pathLength: number;
+    penalty: number;
+  };
+  const options: AnchorOption[] = [];
+
+  // All four sides
+  const sides: AnchorSide[] = ['top', 'bottom', 'left', 'right'];
+
+  // Calculate anchor positions
+  const fromAnchors: Record<AnchorSide, Point> = {
+    top: { x: fromBounds.centerX, y: fromBounds.top },
+    bottom: { x: fromBounds.centerX, y: fromBounds.bottom },
+    left: { x: fromBounds.left, y: fromBounds.centerY },
+    right: { x: fromBounds.right, y: fromBounds.centerY },
+  };
+
+  const toAnchors: Record<AnchorSide, Point> = {
+    top: { x: toBounds.centerX, y: toBounds.top },
+    bottom: { x: toBounds.centerX, y: toBounds.bottom },
+    left: { x: toBounds.left, y: toBounds.centerY },
+    right: { x: toBounds.right, y: toBounds.centerY },
+  };
+
+  // Direction from source to target center
   const dx = toBounds.centerX - fromBounds.centerX;
   const dy = toBounds.centerY - fromBounds.centerY;
 
-  if (Math.abs(dx) > Math.abs(dy)) {
-    // Horizontal dominant
-    if (dx > 0) {
-      return { fromSide: 'right', toSide: 'left' };
-    } else {
-      return { fromSide: 'left', toSide: 'right' };
-    }
-  } else {
-    // Vertical dominant
-    if (dy > 0) {
-      return { fromSide: 'bottom', toSide: 'top' };
-    } else {
-      return { fromSide: 'top', toSide: 'bottom' };
+  // Test all 16 combinations (4 from × 4 to)
+  for (const fromSide of sides) {
+    for (const toSide of sides) {
+      const from = fromAnchors[fromSide];
+      const to = toAnchors[toSide];
+
+      // Calculate actual path length based on connector type
+      const pathLength = calculateActualPathLength(from, to, fromSide, toSide);
+
+      // Apply penalties for unnatural directions
+      let penalty = 0;
+
+      // Penalty for exiting opposite to target direction
+      if (fromSide === 'left' && dx > 0) penalty += 100;
+      if (fromSide === 'right' && dx < 0) penalty += 100;
+      if (fromSide === 'top' && dy > 0) penalty += 100;
+      if (fromSide === 'bottom' && dy < 0) penalty += 100;
+
+      // Penalty for entering from the wrong side
+      if (toSide === 'right' && dx > 0) penalty += 100;
+      if (toSide === 'left' && dx < 0) penalty += 100;
+      if (toSide === 'bottom' && dy > 0) penalty += 100;
+      if (toSide === 'top' && dy < 0) penalty += 100;
+
+      // Bonus for straight-through paths (opposite sides aligned)
+      // Give extra bonus when the path aligns with the dominant direction
+      const isHorizontalDominant = Math.abs(dx) > Math.abs(dy);
+      const isVerticalDominant = Math.abs(dy) > Math.abs(dx);
+
+      if (fromSide === 'right' && toSide === 'left' && dx > 0) {
+        penalty -= isHorizontalDominant ? 15 : 5; // Extra bonus for dominant direction
+      }
+      if (fromSide === 'left' && toSide === 'right' && dx < 0) {
+        penalty -= isHorizontalDominant ? 15 : 5;
+      }
+      if (fromSide === 'bottom' && toSide === 'top' && dy > 0) {
+        penalty -= isVerticalDominant ? 15 : 5;
+      }
+      if (fromSide === 'top' && toSide === 'bottom' && dy < 0) {
+        penalty -= isVerticalDominant ? 15 : 5;
+      }
+
+      // Bonus for L-shape paths (simpler than Z-shape, only 1 bend)
+      // But only when the target is close (within ~100px in the secondary direction)
+      // For distant targets, prefer Z-shape (right→left or bottom→top) to avoid crossing other nodes
+      const isLShape = (
+        (fromSide === 'bottom' && (toSide === 'left' || toSide === 'right')) ||
+        (fromSide === 'top' && (toSide === 'left' || toSide === 'right')) ||
+        (fromSide === 'left' && (toSide === 'top' || toSide === 'bottom')) ||
+        (fromSide === 'right' && (toSide === 'top' || toSide === 'bottom'))
+      );
+      if (isLShape) {
+        // Only apply bonus if the L-shape goes in the natural direction
+        // AND the target is relatively close (to avoid crossing intermediate nodes)
+        const naturalL = (
+          (fromSide === 'bottom' && dy > 0 && toSide === 'left' && dx > 0) ||
+          (fromSide === 'bottom' && dy > 0 && toSide === 'right' && dx < 0) ||
+          (fromSide === 'top' && dy < 0 && toSide === 'left' && dx > 0) ||
+          (fromSide === 'top' && dy < 0 && toSide === 'right' && dx < 0) ||
+          (fromSide === 'right' && dx > 0 && toSide === 'top' && dy < 0) ||
+          (fromSide === 'right' && dx > 0 && toSide === 'bottom' && dy > 0) ||
+          (fromSide === 'left' && dx < 0 && toSide === 'top' && dy < 0) ||
+          (fromSide === 'left' && dx < 0 && toSide === 'bottom' && dy > 0)
+        );
+        // Only apply L-shape bonus for nearby targets (within ~150px in primary direction)
+        const isNearby = Math.abs(dx) < 150 && Math.abs(dy) < 150;
+        if (naturalL && isNearby) {
+          penalty -= 10; // Prefer L-shape over Z-shape for nearby targets
+        }
+      }
+
+      options.push({ fromSide, toSide, pathLength, penalty });
     }
   }
+
+  // Sort by total score (path length + penalty)
+  options.sort((a, b) => (a.pathLength + a.penalty) - (b.pathLength + b.penalty));
+
+  return { fromSide: options[0].fromSide, toSide: options[0].toSide };
+}
+
+/**
+ * グループ内ノードからグループ外ノードへの接続時、
+ * 兄弟ノードを避けて親グループの境界から出る最短ルートを決定
+ */
+function determineCrossGroupAnchorSide(
+  fromNode: ComputedNode,
+  toNode: ComputedNode,
+  fromBounds: ReturnType<typeof getNodeBounds>,
+  toBounds: ReturnType<typeof getNodeBounds>,
+  siblingNodes: ComputedNode[],
+  parentGroupBounds: { top: number; bottom: number; left: number; right: number }
+): { fromSide: AnchorSide; toSide: AnchorSide } {
+  // 親グループの各辺からの最短距離を計算
+  // 兄弟ノードがその方向にある場合はペナルティを追加
+
+  const sides: AnchorSide[] = ['top', 'bottom', 'left', 'right'];
+  const toCenter = { x: toBounds.centerX, y: toBounds.centerY };
+
+  type RouteOption = {
+    fromSide: AnchorSide;
+    toSide: AnchorSide;
+    score: number;
+  };
+  const routeOptions: RouteOption[] = [];
+
+  for (const fromSide of sides) {
+    // この方向に兄弟ノードがあるかチェック
+    let hasSiblingInDirection = false;
+    for (const sibling of siblingNodes) {
+      if (sibling.id === fromNode.id) continue;
+      const sibBounds = getNodeBounds(sibling);
+
+      switch (fromSide) {
+        case 'right':
+          // 右方向に兄弟があるか（兄弟の左端がfromNodeの右端より右）
+          if (sibBounds.left > fromBounds.right - 10 &&
+              sibBounds.centerY > fromBounds.top && sibBounds.centerY < fromBounds.bottom) {
+            hasSiblingInDirection = true;
+          }
+          break;
+        case 'left':
+          // 左方向に兄弟があるか
+          if (sibBounds.right < fromBounds.left + 10 &&
+              sibBounds.centerY > fromBounds.top && sibBounds.centerY < fromBounds.bottom) {
+            hasSiblingInDirection = true;
+          }
+          break;
+        case 'bottom':
+          // 下方向に兄弟があるか
+          if (sibBounds.top > fromBounds.bottom - 10 &&
+              sibBounds.centerX > fromBounds.left && sibBounds.centerX < fromBounds.right) {
+            hasSiblingInDirection = true;
+          }
+          break;
+        case 'top':
+          // 上方向に兄弟があるか
+          if (sibBounds.bottom < fromBounds.top + 10 &&
+              sibBounds.centerX > fromBounds.left && sibBounds.centerX < fromBounds.right) {
+            hasSiblingInDirection = true;
+          }
+          break;
+      }
+    }
+
+    // 兄弟がある方向は大きなペナルティ
+    const siblingPenalty = hasSiblingInDirection ? 500 : 0;
+
+    // グループ境界までの距離
+    let distToGroupEdge = 0;
+    switch (fromSide) {
+      case 'top':
+        distToGroupEdge = fromBounds.top - parentGroupBounds.top;
+        break;
+      case 'bottom':
+        distToGroupEdge = parentGroupBounds.bottom - fromBounds.bottom;
+        break;
+      case 'left':
+        distToGroupEdge = fromBounds.left - parentGroupBounds.left;
+        break;
+      case 'right':
+        distToGroupEdge = parentGroupBounds.right - fromBounds.right;
+        break;
+    }
+
+    // toNodeへの方向を考慮したtoSideを決定
+    const dx = toCenter.x - fromBounds.centerX;
+    const dy = toCenter.y - fromBounds.centerY;
+
+    let bestToSide: AnchorSide;
+    if (Math.abs(dx) > Math.abs(dy)) {
+      // 水平方向が優勢
+      bestToSide = dx > 0 ? 'left' : 'right';
+    } else {
+      // 垂直方向が優勢
+      bestToSide = dy > 0 ? 'top' : 'bottom';
+    }
+
+    // グループ境界から出た後、toNodeまでの距離
+    let exitPoint: Point;
+    switch (fromSide) {
+      case 'top':
+        exitPoint = { x: fromBounds.centerX, y: parentGroupBounds.top };
+        break;
+      case 'bottom':
+        exitPoint = { x: fromBounds.centerX, y: parentGroupBounds.bottom };
+        break;
+      case 'left':
+        exitPoint = { x: parentGroupBounds.left, y: fromBounds.centerY };
+        break;
+      case 'right':
+        exitPoint = { x: parentGroupBounds.right, y: fromBounds.centerY };
+        break;
+    }
+
+    const distToTarget = Math.abs(exitPoint.x - toCenter.x) + Math.abs(exitPoint.y - toCenter.y);
+
+    // 合計スコア（小さい方が良い）
+    const score = siblingPenalty + distToGroupEdge + distToTarget;
+
+    routeOptions.push({ fromSide, toSide: bestToSide, score });
+  }
+
+  // スコアでソートし、最良のルートを選択
+  routeOptions.sort((a, b) => a.score - b.score);
+
+  return { fromSide: routeOptions[0].fromSide, toSide: routeOptions[0].toSide };
 }
 
 /**
@@ -598,6 +940,8 @@ function findSafeVerticalXAfterObstacle(
  * @param obstacles - Nodes to avoid
  * @param anchorInfo - Connection anchor distribution info
  * @param minY - Minimum Y coordinate constraint (to avoid title/subtitle overlap)
+ * @param reservedVerticalLines - Set of reserved vertical line X coordinates
+ * @param reservedHorizontalLines - Set of reserved horizontal line Y coordinates
  */
 function generateOrthogonalPath(
   from: Point,
@@ -606,7 +950,9 @@ function generateOrthogonalPath(
   toSide?: AnchorSide,
   obstacles?: ComputedNode[],
   anchorInfo?: ConnectionAnchorInfo,
-  minY?: number
+  minY?: number,
+  reservedVerticalLines?: ReservedVerticalLines,
+  reservedHorizontalLines?: ReservedHorizontalLines
 ): string {
   // アンカー情報がない場合は従来のロジック
   if (!fromSide || !toSide) {
@@ -624,191 +970,152 @@ function generateOrthogonalPath(
   const DETOUR_DISTANCE = 40;
 
   switch (connectorType) {
-    case 'straight':
-      // 直線でも障害物チェック
-      if (obstacles && obstacles.length > 0) {
-        // 水平直線の場合
-        if (Math.abs(from.y - to.y) < 10) {
-          const hasCollision = obstacles.some(node =>
-            horizontalLineIntersectsNode(from.y, from.x, to.x, node, 5)
-          );
-          if (hasCollision) {
-            // 障害物がある場合は上または下に迂回するパスを生成
-            const firstMidX = findSafeVerticalXBeforeObstacle(from.x, from.y, obstacles);
-            const safeY = findSafeHorizontalY(from.y, firstMidX, to.x, obstacles, from.y, to.y, minY);
-            const lastMidX = findSafeVerticalXAfterObstacle(to.x, to.y, obstacles);
-            return `M ${from.x} ${from.y} L ${firstMidX} ${from.y} L ${firstMidX} ${safeY} L ${lastMidX} ${safeY} L ${lastMidX} ${to.y} L ${to.x} ${to.y}`;
-          }
-        }
-        // 垂直直線の場合
-        if (Math.abs(from.x - to.x) < 10) {
-          const hasCollision = obstacles.some(node =>
-            verticalLineIntersectsNode(from.x, from.y, to.y, node, 5)
-          );
-          if (hasCollision) {
-            // 障害物がある場合は左または右に迂回するパスを生成
-            const safeX = findSafeVerticalX(
-              from.x,
-              from.y,
-              to.y,
-              obstacles,
-              from.x - 100, // 左右に探索範囲を広げる
-              from.x + 100
-            );
-            // 5セグメントパス: from → 横 → 下 → 横 → to
-            const firstMidY = from.y + 15;
-            const lastMidY = to.y - 15;
-            return `M ${from.x} ${from.y} L ${from.x} ${firstMidY} L ${safeX} ${firstMidY} L ${safeX} ${lastMidY} L ${to.x} ${lastMidY} L ${to.x} ${to.y}`;
-          }
-        }
-      }
+    case 'straight': {
+      // シンプルな直線パスを生成（障害物回避なし - グループ内の接続で問題を起こすため）
       // 水平直線の場合はY座標を揃える（斜めにならないように）
       if (Math.abs(from.y - to.y) < 10) {
-        return `M ${from.x} ${from.y} L ${to.x} ${from.y}`;
+        let lineY = from.y;
+        // 水平線予約
+        if (reservedHorizontalLines) {
+          const HORIZONTAL_LINE_SPACING = 15;
+          let roundedY = Math.round(lineY);
+          while (reservedHorizontalLines.has(roundedY)) {
+            roundedY += HORIZONTAL_LINE_SPACING;
+          }
+          lineY = roundedY;
+          reservedHorizontalLines.add(roundedY);
+        }
+        return `M ${from.x} ${lineY} L ${to.x} ${lineY}`;
       }
       // 垂直直線の場合はX座標を揃える
       if (Math.abs(from.x - to.x) < 10) {
-        return `M ${from.x} ${from.y} L ${from.x} ${to.y}`;
+        let lineX = from.x;
+        // 縦線予約
+        if (reservedVerticalLines) {
+          const VERTICAL_LINE_SPACING = 15;
+          let roundedX = Math.round(lineX);
+          while (reservedVerticalLines.has(roundedX)) {
+            roundedX += VERTICAL_LINE_SPACING;
+          }
+          lineX = roundedX;
+          reservedVerticalLines.add(roundedX);
+        }
+        return `M ${lineX} ${from.y} L ${lineX} ${to.y}`;
       }
-      // 斜め検出 - straightケースなのに水平でも垂直でもない
-      console.error('[connections] Diagonal line detected in straight case:', {
-        from: { x: from.x, y: from.y },
-        to: { x: to.x, y: to.y },
-        deltaX: Math.abs(from.x - to.x),
-        deltaY: Math.abs(from.y - to.y),
-        fromSide,
-        toSide,
-      });
+      // フォールバック（斜め）
       return `M ${from.x} ${from.y} L ${to.x} ${to.y}`;
+    }
 
-    case 'L_horizontal':
+    case 'L_horizontal': {
       // 水平→垂直のL字: まず水平に進み、次に垂直
-      return `M ${from.x} ${from.y} L ${to.x} ${from.y} L ${to.x} ${to.y}`;
+      // 最初の水平線のY座標を予約
+      let lineY = from.y;
+      if (reservedHorizontalLines) {
+        const HORIZONTAL_LINE_SPACING = 15;
+        let roundedY = Math.round(lineY);
+        while (reservedHorizontalLines.has(roundedY)) {
+          roundedY += HORIZONTAL_LINE_SPACING;
+        }
+        lineY = roundedY;
+        reservedHorizontalLines.add(roundedY);
+      }
+      return `M ${from.x} ${lineY} L ${to.x} ${lineY} L ${to.x} ${to.y}`;
+    }
 
-    case 'L_vertical':
+    case 'L_vertical': {
       // 垂直→水平のL字: まず垂直に進み、次に水平
-      return `M ${from.x} ${from.y} L ${from.x} ${to.y} L ${to.x} ${to.y}`;
+      // 最後の水平線のY座標を予約
+      let lineY = to.y;
+      if (reservedHorizontalLines) {
+        const HORIZONTAL_LINE_SPACING = 15;
+        let roundedY = Math.round(lineY);
+        while (reservedHorizontalLines.has(roundedY)) {
+          roundedY += HORIZONTAL_LINE_SPACING;
+        }
+        lineY = roundedY;
+        reservedHorizontalLines.add(roundedY);
+      }
+      return `M ${from.x} ${from.y} L ${from.x} ${lineY} L ${to.x} ${lineY}`;
+    }
 
     case 'Z_horizontal': {
-      // 水平-垂直-水平のZ字
+      // 水平-垂直-水平のZ字: from.yで水平 → midXで垂直 → to.yで水平
       let midX = (from.x + to.x) / 2;
+      let startY = from.y;
+      let endY = to.y;
 
-      // 障害物回避: 垂直セグメントが障害物と交差しないか確認
-      if (obstacles && obstacles.length > 0) {
-        midX = findSafeVerticalX(midX, from.y, to.y, obstacles, from.x, to.x);
-
-        // 2番目の水平セグメント (midX, to.y) → (to.x, to.y) も障害物チェック
-        const hasHorizontalCollision = obstacles.some(node =>
-          horizontalLineIntersectsNode(to.y, midX, to.x, node, 5)
-        );
-
-        if (hasHorizontalCollision) {
-          // 障害物がある場合は、ターゲットノードの後ろで垂直に曲がる（5セグメントパス）
-          // aws/azure/gcp の後ろを通って techstack/heroicons/lucide へ
-          const afterObstacleX = findSafeVerticalX(
-            (midX + to.x) / 2,  // midX と to.x の中間を候補に
-            from.y,
-            to.y,
-            obstacles,
-            midX,
-            to.x
-          );
-
-          if (afterObstacleX !== midX) {
-            // 5セグメントパス: from → midX → 上/下に回避 → afterObstacleX → to
-            // 接続インデックスに基づいて分散させる（控えめに）
-            const connectionSpread = 10; // 接続間の間隔（小さめ）
-            const fromIndex = anchorInfo?.fromIndex ?? 0;
-            const fromTotal = anchorInfo?.fromTotal ?? 1;
-
-            // ターゲットが上にあるか下にあるかで回避方向を決定
-            const goUp = to.y < from.y;
-
-            // インデックスに基づくオフセット
-            // 同じ方向に回避する接続だけをカウントして分散
-            const indexOffset = fromIndex * connectionSpread;
-
-            // 基準Y座標
-            const baseY = goUp
-              ? Math.min(from.y, to.y) - 20
-              : Math.max(from.y, to.y) + 20;
-
-            const safeY = findSafeHorizontalY(
-              goUp ? baseY - indexOffset : baseY + indexOffset,
-              midX,
-              afterObstacleX,
-              obstacles,
-              Math.min(from.y, to.y) - 80,
-              Math.max(from.y, to.y) + 80,
-              minY
-            );
-
-            // X座標も少しだけ分散（控えめに）
-            const spreadOffset = indexOffset * 0.5;
-            const spreadMidX = midX - spreadOffset;
-            const spreadAfterX = afterObstacleX - spreadOffset;
-
-            return `M ${from.x} ${from.y} L ${spreadMidX} ${from.y} L ${spreadMidX} ${safeY} L ${spreadAfterX} ${safeY} L ${spreadAfterX} ${to.y} L ${to.x} ${to.y}`;
-          }
+      // 縦線予約: 同じX座標を複数の接続が使用しないようにずらす
+      if (reservedVerticalLines) {
+        const VERTICAL_LINE_SPACING = 15;
+        let roundedMidX = Math.round(midX);
+        while (reservedVerticalLines.has(roundedMidX)) {
+          roundedMidX += VERTICAL_LINE_SPACING;
         }
+        midX = roundedMidX;
+        reservedVerticalLines.add(roundedMidX);
       }
 
-      // 接続インデックスに基づいてmidXを分散（重なり防止）
-      if (anchorInfo && anchorInfo.fromTotal > 1) {
-        const connectionSpread = 10;
-        const centerIndex = (anchorInfo.fromTotal - 1) / 2;
-        const indexOffset = (anchorInfo.fromIndex - centerIndex) * connectionSpread;
-        midX = midX + indexOffset;
+      // 水平線予約: 開始と終了の水平線も予約
+      if (reservedHorizontalLines) {
+        const HORIZONTAL_LINE_SPACING = 15;
+        // 開始水平線（from.y）
+        let roundedStartY = Math.round(startY);
+        while (reservedHorizontalLines.has(roundedStartY)) {
+          roundedStartY += HORIZONTAL_LINE_SPACING;
+        }
+        startY = roundedStartY;
+        reservedHorizontalLines.add(roundedStartY);
+
+        // 終了水平線（to.y）
+        let roundedEndY = Math.round(endY);
+        while (reservedHorizontalLines.has(roundedEndY)) {
+          roundedEndY += HORIZONTAL_LINE_SPACING;
+        }
+        endY = roundedEndY;
+        reservedHorizontalLines.add(roundedEndY);
       }
 
-      return `M ${from.x} ${from.y} L ${midX} ${from.y} L ${midX} ${to.y} L ${to.x} ${to.y}`;
+      return `M ${from.x} ${startY} L ${midX} ${startY} L ${midX} ${endY} L ${to.x} ${endY}`;
     }
 
     case 'Z_vertical': {
-      // 垂直-水平-垂直のZ字
+      // 垂直-水平-垂直のZ字: from.xで垂直 → midYで水平 → to.xで垂直
       let midY = (from.y + to.y) / 2;
+      let startX = from.x;
+      let endX = to.x;
 
-      // 障害物回避
-      if (obstacles && obstacles.length > 0) {
-        // 最初の垂直セグメント (from.x, from.y → from.x, midY) のチェック
-        const hasFirstVerticalCollision = obstacles.some(node =>
-          verticalLineIntersectsNode(from.x, from.y, midY, node, 5)
-        );
-
-        // 水平セグメント (from.x, midY → to.x, midY) のチェック
-        const hasHorizontalCollision = obstacles.some(node =>
-          horizontalLineIntersectsNode(midY, from.x, to.x, node, 5)
-        );
-
-        // 2番目の垂直セグメント (to.x, midY → to.x, to.y) のチェック
-        const hasSecondVerticalCollision = obstacles.some(node =>
-          verticalLineIntersectsNode(to.x, midY, to.y, node, 5)
-        );
-
-        if (hasFirstVerticalCollision || hasHorizontalCollision || hasSecondVerticalCollision) {
-          // 障害物がある場合は、左右どちらかに迂回する5セグメントパス
-          // 障害物の左側または右側を通る安全なX座標を見つける
-          const safeX = findSafeVerticalX(
-            (from.x + to.x) / 2,
-            Math.min(from.y, to.y),
-            Math.max(from.y, to.y),
-            obstacles,
-            from.x,
-            to.x
-          );
-
-          // 水平セグメントのY座標も安全な位置を見つける
-          const safeY = findSafeHorizontalY(midY, from.x, safeX, obstacles, from.y, to.y, minY);
-
-          // 5セグメントパス: from → 下/上 → 左/右に迂回 → 下/上 → to
-          return `M ${from.x} ${from.y} L ${from.x} ${safeY} L ${safeX} ${safeY} L ${safeX} ${to.y} L ${to.x} ${to.y}`;
+      // 水平線予約: 同じY座標を複数の接続が使用しないようにずらす
+      if (reservedHorizontalLines) {
+        const HORIZONTAL_LINE_SPACING = 15;
+        let roundedMidY = Math.round(midY);
+        while (reservedHorizontalLines.has(roundedMidY)) {
+          roundedMidY += HORIZONTAL_LINE_SPACING;
         }
-
-        // 水平セグメントだけに障害物がある場合
-        midY = findSafeHorizontalY(midY, from.x, to.x, obstacles, from.y, to.y, minY);
+        midY = roundedMidY;
+        reservedHorizontalLines.add(roundedMidY);
       }
 
-      return `M ${from.x} ${from.y} L ${from.x} ${midY} L ${to.x} ${midY} L ${to.x} ${to.y}`;
+      // 縦線予約: 開始と終了の縦線も予約
+      if (reservedVerticalLines) {
+        const VERTICAL_LINE_SPACING = 15;
+        // 開始縦線（from.x）
+        let roundedStartX = Math.round(startX);
+        while (reservedVerticalLines.has(roundedStartX)) {
+          roundedStartX += VERTICAL_LINE_SPACING;
+        }
+        startX = roundedStartX;
+        reservedVerticalLines.add(roundedStartX);
+
+        // 終了縦線（to.x）
+        let roundedEndX = Math.round(endX);
+        while (reservedVerticalLines.has(roundedEndX)) {
+          roundedEndX += VERTICAL_LINE_SPACING;
+        }
+        endX = roundedEndX;
+        reservedVerticalLines.add(roundedEndX);
+      }
+
+      return `M ${startX} ${from.y} L ${startX} ${midY} L ${endX} ${midY} L ${endX} ${to.y}`;
     }
 
     case 'U_horizontal': {

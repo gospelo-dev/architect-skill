@@ -19,6 +19,7 @@ import {
   NodeMeta,
   ConnectionMeta,
   LayoutMeta,
+  ConnectionSortStrategy,
 } from '../core/types';
 import { resolveIconUrl, generateFallbackSvg, loadIconUrlMap } from '../core/icons';
 import { computeLayout, getNodeCenter } from '../layout/layout';
@@ -28,6 +29,9 @@ import {
   generateBidirectionalMarkers,
   determineAnchorSide,
   ConnectionAnchorInfo,
+  ReservedVerticalLines,
+  ReservedHorizontalLines,
+  calculatePathLength,
 } from '../layout/connections';
 
 /**
@@ -264,9 +268,10 @@ export class Renderer {
       this.renderBoundaryBox(width, height),
       this.renderTitle(),
       needsTransform ? `<g ${transform}>` : '',
-      this.renderConnections(),        // 1. コネクター（一番下）
-      this.renderNodes(this.computedNodes),  // 2. ノード（アイコン部分）
-      this.renderNodeLabels(this.computedNodes),  // 3. ラベル（一番上）
+      this.renderGroupBackgrounds(this.computedNodes),  // 1. グループ背景（一番下）
+      this.renderConnections(),        // 2. コネクター
+      this.renderNodes(this.computedNodes),  // 3. ノード（アイコン部分）
+      this.renderNodeLabels(this.computedNodes),  // 4. ラベル（一番上）
       needsTransform ? '</g>' : '',
       '</svg>',
     ];
@@ -448,6 +453,65 @@ ${gradients.join('\n')}
   }
 
   /**
+   * Render group backgrounds only (for z-order: below connections)
+   */
+  private renderGroupBackgrounds(nodes: ComputedNode[]): string {
+    const backgrounds: string[] = [];
+    this.collectGroupBackgrounds(nodes, backgrounds, 0, 0);
+    return backgrounds.join('\n');
+  }
+
+  /**
+   * Recursively collect group backgrounds
+   */
+  private collectGroupBackgrounds(nodes: ComputedNode[], backgrounds: string[], parentX: number, parentY: number): void {
+    for (const node of nodes) {
+      if (node.type === 'group') {
+        const absX = parentX + node.computedX;
+        const absY = parentY + node.computedY;
+        backgrounds.push(this.renderGroupBackground(node, absX, absY));
+        // Recursively collect nested group backgrounds
+        if (node.children) {
+          this.collectGroupBackgrounds(node.children as ComputedNode[], backgrounds, absX, absY);
+        }
+      }
+    }
+  }
+
+  /**
+   * Render group background (box and label only)
+   */
+  private renderGroupBackground(node: ComputedNode, absX: number, absY: number): string {
+    const { computedWidth: w, computedHeight: h } = node;
+    const borderColor = this.resolveColor(node.borderColor) || DEFAULT_COLORS.orange;
+    const resources = this.diagram.resources || {};
+
+    // Group icon in top-left corner
+    const groupIconId = node.icon || resources[node.id]?.icon;
+    const groupIconUrl = groupIconId ? resolveIconUrl(groupIconId) : null;
+    const groupIconSize = 24;
+    const groupIconPadding = 8;
+    let groupIconSvg = '';
+    if (groupIconUrl) {
+      const onerrorHandler = `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${groupIconId}',url:'${groupIconUrl}'}); this.style.display='none'"`;
+      const iconTitle = `<title>${this.buildIconTitle(node.id, groupIconId)}</title>`;
+      groupIconSvg = `<g class="group-icon">${iconTitle}<image href="${groupIconUrl}" x="${groupIconPadding}" y="${groupIconPadding}" width="${groupIconSize}" height="${groupIconSize}" ${onerrorHandler}/></g>`;
+    }
+
+    const copyHandler = `onclick="event.stopPropagation();navigator.clipboard.writeText('${node.id}').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: ${node.id}';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})"`;
+    const tooltip = `<title>${this.buildIconTitle(node.id, groupIconId)}</title>`;
+
+    // Create transparent fill with same color as border (10% opacity)
+    const fillColor = `${borderColor}1A`; // 1A = 10% opacity in hex
+
+    return `<g id="${node.id}-bg" class="group-background" transform="translate(${absX}, ${absY})">
+  <rect class="group-box" width="${w}" height="${h}" rx="8" stroke="${borderColor}" stroke-width="2" fill="${fillColor}" style="cursor:pointer" ${copyHandler}>${tooltip}</rect>
+  ${groupIconSvg}
+  <text class="group-label" data-node-id="${node.id}" data-field="label" x="${w / 2}" y="-8" text-anchor="middle" fill="${borderColor}" font-size="14" font-weight="bold" style="cursor:pointer" ${copyHandler}>${this.escapeHtml(node.label || '')}</text>
+</g>`;
+  }
+
+  /**
    * Render all nodes (icons only, no labels)
    */
   private renderNodes(nodes: ComputedNode[]): string {
@@ -557,37 +621,17 @@ ${gradients.join('\n')}
   }
 
   /**
-   * Render group node
+   * Render group node (children only - background is rendered separately for z-order)
    */
   private renderGroupNode(node: ComputedNode): string {
-    const { computedX: x, computedY: y, computedWidth: w, computedHeight: h } = node;
-    const borderColor = this.resolveColor(node.borderColor) || DEFAULT_COLORS.orange;
-    const resources = this.diagram.resources || {};
+    const { computedX: x, computedY: y } = node;
 
-    // Render group node's icon in top-left corner (from resource or explicit icon property)
-    const groupIconId = node.icon || resources[node.id]?.icon;
-    const groupIconUrl = groupIconId ? resolveIconUrl(groupIconId) : null;
-    const groupIconSize = 24;
-    const groupIconPadding = 8;
-    let groupIconSvg = '';
-    if (groupIconUrl) {
-      const onerrorHandler = `onerror="console.error('[gospelo-architect] Icon load failed:', {id:'${node.id}',icon:'${groupIconId}',url:'${groupIconUrl}'}); this.style.display='none'"`;
-      const iconTitle = `<title>${this.buildIconTitle(node.id, groupIconId)}</title>`;
-      groupIconSvg = `<g class="group-icon">${iconTitle}<image href="${groupIconUrl}" x="${groupIconPadding}" y="${groupIconPadding}" width="${groupIconSize}" height="${groupIconSize}" ${onerrorHandler}/></g>`;
-    }
-
+    // Render children only (background already rendered in renderGroupBackgrounds)
     const children = node.children
       ? (node.children as ComputedNode[]).map(child => this.renderNode(child)).join('\n')
       : '';
 
-    // Click-to-copy for group node ID
-    const copyHandler = `onclick="event.stopPropagation();navigator.clipboard.writeText('${node.id}').then(()=>{const t=document.getElementById('copy-toast');t.textContent='Copied: ${node.id}';t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1500)})"`;
-    const tooltip = `<title>${this.buildIconTitle(node.id, groupIconId)}</title>`;
-
     return `<g id="${node.id}" class="node group-node" transform="translate(${x}, ${y})">
-  <rect class="group-box" width="${w}" height="${h}" rx="8" stroke="${borderColor}" stroke-width="2" fill="white" style="cursor:pointer" ${copyHandler}>${tooltip}</rect>
-  ${groupIconSvg}
-  <text class="group-label" data-node-id="${node.id}" data-field="label" x="${w / 2}" y="-8" text-anchor="middle" fill="${borderColor}" font-size="14" font-weight="bold" style="cursor:pointer" ${copyHandler}>${this.escapeHtml(node.label || '')}</text>
   <g class="children" transform="translate(0, 0)">
     ${children}
   </g>
@@ -808,12 +852,10 @@ ${gradients.join('\n')}
 
   /**
    * Render all connections with distributed anchor points
+   * If connectionSortStrategy is not specified, tries all strategies and selects the optimal one
    */
   private renderConnections(): string {
     if (!this.diagram.connections) return '';
-
-    // First pass: calculate anchor info for all connections
-    const anchorInfoMap = this.calculateAnchorDistribution();
 
     // Get all computed nodes for obstacle avoidance
     const allNodes = Array.from(this.nodeMap.values());
@@ -821,15 +863,262 @@ ${gradients.join('\n')}
     // Calculate minY to avoid title/subtitle overlap
     const minY = this.calculateMinYForConnections();
 
-    return this.diagram.connections.map((conn, index) => {
+    // If strategy is specified, use it directly
+    if (this.diagram.connectionSortStrategy) {
+      return this.renderConnectionsWithStrategy(
+        this.diagram.connectionSortStrategy,
+        allNodes,
+        minY
+      );
+    }
+
+    // Auto-select: try all strategies and pick the shortest total path length
+    const strategies: ConnectionSortStrategy[] = [
+      'original',
+      'vertical_length_desc',
+      'vertical_length_asc',
+      'target_y_asc',
+      'target_y_desc',
+      'source_x_asc',
+      'source_x_desc',
+      'bounding_box_aware',
+    ];
+
+    let bestStrategy: ConnectionSortStrategy = 'original';
+    let bestLength = Infinity;
+    let bestResult = '';
+
+    for (const strategy of strategies) {
+      const result = this.renderConnectionsWithStrategy(strategy, allNodes, minY);
+      const totalLength = this.calculateTotalPathLength(result);
+
+      if (totalLength < bestLength) {
+        bestLength = totalLength;
+        bestStrategy = strategy;
+        bestResult = result;
+      }
+    }
+
+    // Store the selected strategy in the diagram for reference
+    this.diagram.connectionSortStrategy = bestStrategy;
+
+    return bestResult;
+  }
+
+  /**
+   * Calculate total path length from SVG content (connection paths only)
+   */
+  private calculateTotalPathLength(svgContent: string): number {
+    // Extract path d attributes from connection elements only
+    // Format: <path class="connection" ... d="M x y L x y ..." .../>
+    // Use non-greedy [^>]*? and word boundary \b to match the first d= attribute
+    const pathMatches = svgContent.matchAll(/<path class="connection"[^>]*?\bd="([^"]+)"/g);
+    let totalLength = 0;
+
+    for (const match of pathMatches) {
+      totalLength += calculatePathLength(match[1]);
+    }
+
+    return totalLength;
+  }
+
+  /**
+   * Render connections with a specific sort strategy
+   */
+  private renderConnectionsWithStrategy(
+    strategy: ConnectionSortStrategy,
+    allNodes: ComputedNode[],
+    minY: number
+  ): string {
+    if (!this.diagram.connections) return '';
+
+    // Sort connections based on strategy
+    const sortedConnections = this.sortConnectionsByStrategy(
+      this.diagram.connections,
+      strategy
+    );
+
+    // First pass: calculate anchor info for all connections
+    const anchorInfoMap = this.calculateAnchorDistribution();
+
+    // 双方向接続の検出: A→B と B→A が両方存在する場合、1つの双方向接続として扱う
+    const bidirectionalPairs = this.detectBidirectionalConnections(sortedConnections);
+    // スキップすべき逆方向接続のセット (例: B→A をスキップして A→B を双方向として描画)
+    const skipConnections = new Set<Connection>();
+    for (const [, reverseConn] of bidirectionalPairs) {
+      skipConnections.add(reverseConn);
+    }
+
+    // 縦線予約セット: 同じ縦線を複数の接続が使用しないようにする（横長ダイアグラム向け）
+    const reservedVerticalLines: ReservedVerticalLines = new Set();
+    // 水平線予約セット: 同じ水平線を複数の接続が使用しないようにする（縦長ダイアグラム向け）
+    const reservedHorizontalLines: ReservedHorizontalLines = new Set();
+
+    return sortedConnections.map((conn) => {
+      // スキップすべき逆方向接続は描画しない
+      if (skipConnections.has(conn)) return '';
+
       const fromNode = this.nodeMap.get(conn.from);
       const toNode = this.nodeMap.get(conn.to);
 
       if (!fromNode || !toNode) return '';
 
-      const anchorInfo = anchorInfoMap.get(index);
-      return this.renderConnection(conn, fromNode, toNode, anchorInfo, allNodes, minY);
+      // 双方向接続かどうかチェック
+      const isBidirectional = bidirectionalPairs.has(conn);
+      const effectiveConn = isBidirectional ? { ...conn, bidirectional: true } : conn;
+
+      // Find original index for anchor info lookup
+      const originalIndex = this.diagram.connections!.indexOf(conn);
+      const anchorInfo = anchorInfoMap.get(originalIndex);
+      return this.renderConnection(effectiveConn, fromNode, toNode, anchorInfo, allNodes, minY, reservedVerticalLines, reservedHorizontalLines);
     }).join('\n');
+  }
+
+  /**
+   * Detect bidirectional connections (A→B and B→A pairs)
+   * Returns a Map where key is the first connection and value is its reverse
+   */
+  private detectBidirectionalConnections(connections: Connection[]): Map<Connection, Connection> {
+    const result = new Map<Connection, Connection>();
+    const processed = new Set<Connection>();
+
+    for (const conn of connections) {
+      if (processed.has(conn)) continue;
+
+      // Find reverse connection (B→A for A→B)
+      const reverse = connections.find(
+        c => c !== conn && c.from === conn.to && c.to === conn.from && !processed.has(c)
+      );
+
+      if (reverse) {
+        result.set(conn, reverse);
+        processed.add(conn);
+        processed.add(reverse);
+      }
+    }
+
+    return result;
+  }
+
+  /**
+   * Sort connections based on the specified strategy
+   */
+  private sortConnectionsByStrategy(
+    connections: Connection[],
+    strategy: ConnectionSortStrategy
+  ): Connection[] {
+    const sorted = [...connections];
+
+    switch (strategy) {
+      case 'original':
+        // No sorting, keep original order
+        return sorted;
+
+      case 'vertical_length_desc':
+        // Sort by vertical distance (longest first)
+        return sorted.sort((a, b) => {
+          const fromA = this.nodeMap.get(a.from);
+          const toA = this.nodeMap.get(a.to);
+          const fromB = this.nodeMap.get(b.from);
+          const toB = this.nodeMap.get(b.to);
+          if (!fromA || !toA || !fromB || !toB) return 0;
+
+          const lengthA = Math.abs(toA.computedY - fromA.computedY);
+          const lengthB = Math.abs(toB.computedY - fromB.computedY);
+          return lengthB - lengthA;
+        });
+
+      case 'vertical_length_asc':
+        // Sort by vertical distance (shortest first)
+        return sorted.sort((a, b) => {
+          const fromA = this.nodeMap.get(a.from);
+          const toA = this.nodeMap.get(a.to);
+          const fromB = this.nodeMap.get(b.from);
+          const toB = this.nodeMap.get(b.to);
+          if (!fromA || !toA || !fromB || !toB) return 0;
+
+          const lengthA = Math.abs(toA.computedY - fromA.computedY);
+          const lengthB = Math.abs(toB.computedY - fromB.computedY);
+          return lengthA - lengthB;
+        });
+
+      case 'target_y_asc':
+        // Sort by target Y coordinate (top to bottom)
+        return sorted.sort((a, b) => {
+          const toA = this.nodeMap.get(a.to);
+          const toB = this.nodeMap.get(b.to);
+          if (!toA || !toB) return 0;
+          return toA.computedY - toB.computedY;
+        });
+
+      case 'target_y_desc':
+        // Sort by target Y coordinate (bottom to top)
+        return sorted.sort((a, b) => {
+          const toA = this.nodeMap.get(a.to);
+          const toB = this.nodeMap.get(b.to);
+          if (!toA || !toB) return 0;
+          return toB.computedY - toA.computedY;
+        });
+
+      case 'source_x_asc':
+        // Sort by source X coordinate (left to right)
+        return sorted.sort((a, b) => {
+          const fromA = this.nodeMap.get(a.from);
+          const fromB = this.nodeMap.get(b.from);
+          if (!fromA || !fromB) return 0;
+          return fromA.computedX - fromB.computedX;
+        });
+
+      case 'source_x_desc':
+        // Sort by source X coordinate (right to left)
+        return sorted.sort((a, b) => {
+          const fromA = this.nodeMap.get(a.from);
+          const fromB = this.nodeMap.get(b.from);
+          if (!fromA || !fromB) return 0;
+          return fromB.computedX - fromA.computedX;
+        });
+
+      case 'bounding_box_aware':
+        // Sort based on bounding box shape:
+        // - If bounding box is horizontally long (width > height), prioritize left X (source_x_asc)
+        // - If bounding box is vertically long (height > width), prioritize top Y (target_y_asc)
+        return sorted.sort((a, b) => {
+          const fromA = this.nodeMap.get(a.from);
+          const toA = this.nodeMap.get(a.to);
+          const fromB = this.nodeMap.get(b.from);
+          const toB = this.nodeMap.get(b.to);
+          if (!fromA || !toA || !fromB || !toB) return 0;
+
+          // Calculate bounding box for each connection
+          const bboxA = {
+            width: Math.abs(toA.computedX - fromA.computedX),
+            height: Math.abs(toA.computedY - fromA.computedY),
+          };
+          const bboxB = {
+            width: Math.abs(toB.computedX - fromB.computedX),
+            height: Math.abs(toB.computedY - fromB.computedY),
+          };
+
+          // Determine primary axis for each connection
+          const isHorizontalA = bboxA.width > bboxA.height;
+          const isHorizontalB = bboxB.width > bboxB.height;
+
+          // If both have the same dominant direction, sort by that axis
+          if (isHorizontalA && isHorizontalB) {
+            // Both horizontal: sort by source X (left to right)
+            return fromA.computedX - fromB.computedX;
+          } else if (!isHorizontalA && !isHorizontalB) {
+            // Both vertical: sort by target Y (top to bottom)
+            return toA.computedY - toB.computedY;
+          } else {
+            // Different directions: horizontal connections first (they typically need more space)
+            return isHorizontalA ? -1 : 1;
+          }
+        });
+
+      default:
+        return sorted;
+    }
   }
 
   /**
@@ -840,68 +1129,60 @@ ${gradients.join('\n')}
     const result = new Map<number, ConnectionAnchorInfo>();
     if (!this.diagram.connections) return result;
 
-    // Count connections per node per side
-    // Key format: "nodeId:side" -> list of connection indices
-    const fromSideConnections = new Map<string, number[]>();
-    const toSideConnections = new Map<string, number[]>();
+    // 統合アンカーポイント管理: 同じノードの同じ側への全接続（入り・出り両方）を一緒に管理
+    // Key format: "nodeId:side" -> list of { index, isFrom, otherNodePos }
+    type AnchorEntry = { index: number; isFrom: boolean; otherNodeX: number; otherNodeY: number };
+    const nodeSideAnchors = new Map<string, AnchorEntry[]>();
 
-    // First pass: determine sides and count
-    // 明示的な指定がある場合はそれを優先、なければ自動決定
+    // First pass: determine sides and register all anchor points
     this.diagram.connections.forEach((conn, index) => {
       const fromNode = this.nodeMap.get(conn.from);
       const toNode = this.nodeMap.get(conn.to);
       if (!fromNode || !toNode) return;
 
+      // 兄弟ノードと親グループ境界を取得（グループ内ノードの場合）
+      const { siblingNodes, parentGroupBounds } = this.getSiblingNodesAndParentBounds(fromNode);
+
       // 明示的な指定を優先、なければ自動決定
-      const autoSides = determineAnchorSide(fromNode, toNode);
+      const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds);
       const fromSide = conn.fromSide || autoSides.fromSide;
       const toSide = conn.toSide || autoSides.toSide;
 
+      // fromノードの接続点を登録
       const fromKey = `${conn.from}:${fromSide}`;
+      if (!nodeSideAnchors.has(fromKey)) {
+        nodeSideAnchors.set(fromKey, []);
+      }
+      nodeSideAnchors.get(fromKey)!.push({
+        index,
+        isFrom: true,
+        otherNodeX: toNode.computedX,
+        otherNodeY: toNode.computedY,
+      });
+
+      // toノードの接続点を登録
       const toKey = `${conn.to}:${toSide}`;
-
-      if (!fromSideConnections.has(fromKey)) {
-        fromSideConnections.set(fromKey, []);
+      if (!nodeSideAnchors.has(toKey)) {
+        nodeSideAnchors.set(toKey, []);
       }
-      fromSideConnections.get(fromKey)!.push(index);
-
-      if (!toSideConnections.has(toKey)) {
-        toSideConnections.set(toKey, []);
-      }
-      toSideConnections.get(toKey)!.push(index);
+      nodeSideAnchors.get(toKey)!.push({
+        index,
+        isFrom: false,
+        otherNodeX: fromNode.computedX,
+        otherNodeY: fromNode.computedY,
+      });
     });
 
-    // Sort connections on each side by target position
-    // For bottom/top sides: sort by target's X position (left to right)
-    // For left/right sides: sort by target's Y position (top to bottom)
-    for (const [key, indices] of fromSideConnections) {
+    // Sort all anchors on each side by the other node's position
+    // For bottom/top sides: sort by other node's X position (left to right)
+    // For left/right sides: sort by other node's Y position (top to bottom)
+    for (const [key, entries] of nodeSideAnchors) {
       const side = key.split(':')[1];
-      indices.sort((a, b) => {
-        const toNodeA = this.nodeMap.get(this.diagram.connections![a].to);
-        const toNodeB = this.nodeMap.get(this.diagram.connections![b].to);
-        if (!toNodeA || !toNodeB) return 0;
-
+      entries.sort((a, b) => {
         if (side === 'bottom' || side === 'top') {
-          // Sort by X position
-          return toNodeA.computedX - toNodeB.computedX;
+          return a.otherNodeX - b.otherNodeX;
         } else {
-          // Sort by Y position
-          return toNodeA.computedY - toNodeB.computedY;
-        }
-      });
-    }
-
-    for (const [key, indices] of toSideConnections) {
-      const side = key.split(':')[1];
-      indices.sort((a, b) => {
-        const fromNodeA = this.nodeMap.get(this.diagram.connections![a].from);
-        const fromNodeB = this.nodeMap.get(this.diagram.connections![b].from);
-        if (!fromNodeA || !fromNodeB) return 0;
-
-        if (side === 'bottom' || side === 'top') {
-          return fromNodeA.computedX - fromNodeB.computedX;
-        } else {
-          return fromNodeA.computedY - fromNodeB.computedY;
+          return a.otherNodeY - b.otherNodeY;
         }
       });
     }
@@ -912,28 +1193,72 @@ ${gradients.join('\n')}
       const toNode = this.nodeMap.get(conn.to);
       if (!fromNode || !toNode) return;
 
+      // 兄弟ノードと親グループ境界を取得（グループ内ノードの場合）
+      const { siblingNodes, parentGroupBounds } = this.getSiblingNodesAndParentBounds(fromNode);
+
       // 明示的な指定を優先、なければ自動決定
-      const autoSides = determineAnchorSide(fromNode, toNode);
+      const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds);
       const fromSide = conn.fromSide || autoSides.fromSide;
       const toSide = conn.toSide || autoSides.toSide;
 
       const fromKey = `${conn.from}:${fromSide}`;
       const toKey = `${conn.to}:${toSide}`;
 
-      const fromConnections = fromSideConnections.get(fromKey)!;
-      const toConnections = toSideConnections.get(toKey)!;
+      const fromAnchors = nodeSideAnchors.get(fromKey)!;
+      const toAnchors = nodeSideAnchors.get(toKey)!;
+
+      // この接続のfrom側のインデックスを統合リストから取得
+      const fromEntryIndex = fromAnchors.findIndex(e => e.index === index && e.isFrom);
+      // この接続のto側のインデックスを統合リストから取得
+      const toEntryIndex = toAnchors.findIndex(e => e.index === index && !e.isFrom);
 
       result.set(index, {
         fromSide,
         toSide,
-        fromIndex: fromConnections.indexOf(index),
-        fromTotal: fromConnections.length,
-        toIndex: toConnections.indexOf(index),
-        toTotal: toConnections.length,
+        fromIndex: fromEntryIndex,
+        fromTotal: fromAnchors.length,
+        toIndex: toEntryIndex,
+        toTotal: toAnchors.length,
       });
     });
 
     return result;
+  }
+
+  /**
+   * Get sibling nodes and parent group bounds for a node
+   * Used for cross-group connection routing
+   */
+  private getSiblingNodesAndParentBounds(node: ComputedNode): {
+    siblingNodes: ComputedNode[];
+    parentGroupBounds: { top: number; bottom: number; left: number; right: number } | undefined;
+  } {
+    if (!node.parentId) {
+      return { siblingNodes: [], parentGroupBounds: undefined };
+    }
+
+    const parentGroup = this.nodeMap.get(node.parentId);
+    if (!parentGroup) {
+      return { siblingNodes: [], parentGroupBounds: undefined };
+    }
+
+    // 兄弟ノードを取得（同じ親を持つノード）
+    const siblingNodes: ComputedNode[] = [];
+    for (const [, n] of this.nodeMap) {
+      if (n.parentId === node.parentId && n.id !== node.id) {
+        siblingNodes.push(n);
+      }
+    }
+
+    // 親グループの境界を取得
+    const parentGroupBounds = {
+      top: parentGroup.computedY,
+      bottom: parentGroup.computedY + parentGroup.computedHeight,
+      left: parentGroup.computedX,
+      right: parentGroup.computedX + parentGroup.computedWidth,
+    };
+
+    return { siblingNodes, parentGroupBounds };
   }
 
   /**
@@ -945,9 +1270,11 @@ ${gradients.join('\n')}
     toNode: ComputedNode,
     anchorInfo?: ConnectionAnchorInfo,
     allNodes?: ComputedNode[],
-    minY?: number
+    minY?: number,
+    reservedVerticalLines?: ReservedVerticalLines,
+    reservedHorizontalLines?: ReservedHorizontalLines
   ): string {
-    const path = generateConnectionPath(conn, fromNode, toNode, anchorInfo, allNodes, minY);
+    const path = generateConnectionPath(conn, fromNode, toNode, anchorInfo, allNodes, minY, reservedVerticalLines, reservedHorizontalLines);
     const color = this.resolveColor(conn.color) ||
       (conn.type === 'auth' ? DEFAULT_COLORS.orange : DEFAULT_COLORS.blue);
     const width = conn.width || 2;
@@ -1518,7 +1845,9 @@ ${gradients.join('\n')}
       let fromSide = conn.fromSide;
       let toSide = conn.toSide;
       if (fromNode && toNode && (!fromSide || !toSide)) {
-        const autoSides = determineAnchorSide(fromNode, toNode);
+        // 兄弟ノードと親グループ境界を取得（グループ内ノードの場合）
+        const { siblingNodes, parentGroupBounds } = this.getSiblingNodesAndParentBounds(fromNode);
+        const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds);
         fromSide = fromSide || autoSides.fromSide;
         toSide = toSide || autoSides.toSide;
       }
