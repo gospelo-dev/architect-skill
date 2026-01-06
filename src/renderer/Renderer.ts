@@ -32,6 +32,7 @@ import {
   ReservedVerticalLines,
   ReservedHorizontalLines,
   calculatePathLength,
+  LayoutType,
 } from '../layout/connections';
 import {
   detectBidirectionalConnections,
@@ -60,7 +61,7 @@ export class Renderer {
   constructor(diagram: DiagramDefinition, options: RenderOptions = {}) {
     this.diagram = diagram;
     this.options = { ...DEFAULT_RENDER_OPTIONS, ...options };
-    this.computedNodes = computeLayout(diagram);
+    this.computedNodes = computeLayout(diagram, { viewportWidth: this.options.width });
     this.nodeMap = this.buildNodeMap(this.computedNodes);
   }
 
@@ -946,15 +947,37 @@ ${gradients.join('\n')}
   ): string {
     if (!this.diagram.connections) return '';
 
+    // レイアウトタイプを決定: width > height なら landscape、そうでなければ portrait
+    const layoutType: LayoutType = this.options.width > this.options.height ? 'landscape' : 'portrait';
+
     // Sort connections based on strategy
-    const sortedConnections = sortConnectionsByStrategy(
+    let sortedConnections = sortConnectionsByStrategy(
       this.diagram.connections,
       strategy,
       this.nodeMap
     );
 
-    // First pass: calculate anchor info for all connections
-    const anchorInfoMap = calculateAnchorDistribution(this.diagram.connections, this.nodeMap);
+    // First pass: calculate anchor info for all connections (レイアウト優先度を適用)
+    const anchorInfoMap = calculateAnchorDistribution(this.diagram.connections, this.nodeMap, layoutType);
+
+    // I字（straight）接続を先に処理するためにソート
+    // I字は中央を使うべきで、L字やZ字がオフセットされるべき
+    sortedConnections = sortedConnections.sort((a, b) => {
+      const fromA = this.nodeMap.get(a.from);
+      const toA = this.nodeMap.get(a.to);
+      const fromB = this.nodeMap.get(b.from);
+      const toB = this.nodeMap.get(b.to);
+      if (!fromA || !toA || !fromB || !toB) return 0;
+
+      // I字判定: X座標またはY座標がほぼ同じ（差が10未満）
+      const isStraightA = Math.abs(fromA.computedX - toA.computedX) < 50 || Math.abs(fromA.computedY - toA.computedY) < 50;
+      const isStraightB = Math.abs(fromB.computedX - toB.computedX) < 50 || Math.abs(fromB.computedY - toB.computedY) < 50;
+
+      // I字を先に（-1: aが先、1: bが先、0: 同じ）
+      if (isStraightA && !isStraightB) return -1;
+      if (!isStraightA && isStraightB) return 1;
+      return 0;
+    });
 
     // 双方向接続の検出: A→B と B→A が両方存在する場合、1つの双方向接続として扱う
     const bidirectionalPairs = detectBidirectionalConnections(sortedConnections);
@@ -988,7 +1011,7 @@ ${gradients.join('\n')}
       // Find original index for anchor info lookup
       const originalIndex = this.diagram.connections!.indexOf(conn);
       const anchorInfo = anchorInfoMap.get(originalIndex);
-      return this.renderConnection(effectiveConn, fromNode, toNode, anchorInfo, allNodes, minY, reservedVerticalLines, reservedHorizontalLines);
+      return this.renderConnection(effectiveConn, fromNode, toNode, anchorInfo, allNodes, minY, reservedVerticalLines, reservedHorizontalLines, layoutType);
     }).join('\n');
   }
 
@@ -1003,9 +1026,10 @@ ${gradients.join('\n')}
     allNodes?: ComputedNode[],
     minY?: number,
     reservedVerticalLines?: ReservedVerticalLines,
-    reservedHorizontalLines?: ReservedHorizontalLines
+    reservedHorizontalLines?: ReservedHorizontalLines,
+    layout: LayoutType = 'portrait'
   ): string {
-    const path = generateConnectionPath(conn, fromNode, toNode, anchorInfo, allNodes, minY, reservedVerticalLines, reservedHorizontalLines);
+    const path = generateConnectionPath(conn, fromNode, toNode, anchorInfo, allNodes, minY, reservedVerticalLines, reservedHorizontalLines, layout);
     const color = this.resolveColor(conn.color) ||
       (conn.type === 'auth' ? DEFAULT_COLORS.orange : DEFAULT_COLORS.blue);
     const width = conn.width || 2;

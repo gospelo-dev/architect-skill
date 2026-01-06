@@ -233,8 +233,8 @@ interface Options {
   scale?: number;
 }
 
-const DEFAULT_WIDTH = 800;
-const DEFAULT_HEIGHT = 600;
+const DEFAULT_WIDTH = 1920;
+const DEFAULT_HEIGHT = 1080;
 
 function parseOptions(args: string[]): Options {
   const options: Options = {
@@ -458,13 +458,21 @@ function getEffectiveRenderOptions(diagram: any): RenderOptions {
       height = Math.round(paperSize.height * scale);
     }
   } else {
-    // Priority: CLI options > diagram.render > defaults
+    // Priority: CLI options > diagram.render > layout-aware defaults
+    // For portrait layout, swap default width/height
+    const diagramLayout = isGospeloFormat(diagram)
+      ? diagram.documents?.[0]?.layout
+      : diagram.layout;
+    const isPortrait = diagramLayout === 'portrait';
+    const defaultWidth = isPortrait ? DEFAULT_HEIGHT : DEFAULT_WIDTH;
+    const defaultHeight = isPortrait ? DEFAULT_WIDTH : DEFAULT_HEIGHT;
+
     width = options.widthSpecified
       ? options.width!
-      : (diagramRender.width ?? DEFAULT_WIDTH);
+      : (diagramRender.width ?? defaultWidth);
     height = options.heightSpecified
       ? options.height!
-      : (diagramRender.height ?? DEFAULT_HEIGHT);
+      : (diagramRender.height ?? defaultHeight);
   }
 
   return { width, height, paperOrientation };
