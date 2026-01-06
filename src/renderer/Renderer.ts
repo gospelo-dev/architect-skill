@@ -33,6 +33,20 @@ import {
   ReservedHorizontalLines,
   calculatePathLength,
 } from '../layout/connections';
+import {
+  detectBidirectionalConnections,
+  sortConnectionsByStrategy,
+  registerIconAreaReservations,
+  calculateAnchorDistribution,
+  getSiblingNodesAndParentBounds,
+} from '../utils/connection-utils';
+import {
+  getBaseCss,
+  getShareableCss,
+  getPreviewCss,
+  getViewerScript,
+  getInteractiveScript,
+} from './templates';
 
 /**
  * Main diagram renderer class
@@ -269,9 +283,9 @@ export class Renderer {
       this.renderTitle(),
       needsTransform ? `<g ${transform}>` : '',
       this.renderGroupBackgrounds(this.computedNodes),  // 1. グループ背景（一番下）
-      this.renderConnections(),        // 2. コネクター
-      this.renderNodes(this.computedNodes),  // 3. ノード（アイコン部分）
-      this.renderNodeLabels(this.computedNodes),  // 4. ラベル（一番上）
+      this.renderNodes(this.computedNodes),  // 2. ノード（アイコン部分）
+      this.renderNodeLabels(this.computedNodes),  // 3. ラベル
+      this.renderConnections(),        // 4. コネクター（一番上・ルーティング確認用）
       needsTransform ? '</g>' : '',
       '</svg>',
     ];
@@ -933,26 +947,30 @@ ${gradients.join('\n')}
     if (!this.diagram.connections) return '';
 
     // Sort connections based on strategy
-    const sortedConnections = this.sortConnectionsByStrategy(
+    const sortedConnections = sortConnectionsByStrategy(
       this.diagram.connections,
-      strategy
+      strategy,
+      this.nodeMap
     );
 
     // First pass: calculate anchor info for all connections
-    const anchorInfoMap = this.calculateAnchorDistribution();
+    const anchorInfoMap = calculateAnchorDistribution(this.diagram.connections, this.nodeMap);
 
     // 双方向接続の検出: A→B と B→A が両方存在する場合、1つの双方向接続として扱う
-    const bidirectionalPairs = this.detectBidirectionalConnections(sortedConnections);
+    const bidirectionalPairs = detectBidirectionalConnections(sortedConnections);
     // スキップすべき逆方向接続のセット (例: B→A をスキップして A→B を双方向として描画)
     const skipConnections = new Set<Connection>();
     for (const [, reverseConn] of bidirectionalPairs) {
       skipConnections.add(reverseConn);
     }
 
-    // 縦線予約セット: 同じ縦線を複数の接続が使用しないようにする（横長ダイアグラム向け）
-    const reservedVerticalLines: ReservedVerticalLines = new Set();
-    // 水平線予約セット: 同じ水平線を複数の接続が使用しないようにする（縦長ダイアグラム向け）
-    const reservedHorizontalLines: ReservedHorizontalLines = new Set();
+    // 縦線予約リスト: X座標とY区間のペアで管理（Y区間が重ならなければ同じX座標を使用可能）
+    const reservedVerticalLines: ReservedVerticalLines = [];
+    // 水平線予約リスト: Y座標とX区間のペアで管理（X区間が重ならなければ同じY座標を使用可能）
+    const reservedHorizontalLines: ReservedHorizontalLines = [];
+
+    // アイコン面予約（最優先）: 全ノードのアイコン領域を予約として登録
+    registerIconAreaReservations(allNodes, reservedVerticalLines, reservedHorizontalLines);
 
     return sortedConnections.map((conn) => {
       // スキップすべき逆方向接続は描画しない
@@ -972,293 +990,6 @@ ${gradients.join('\n')}
       const anchorInfo = anchorInfoMap.get(originalIndex);
       return this.renderConnection(effectiveConn, fromNode, toNode, anchorInfo, allNodes, minY, reservedVerticalLines, reservedHorizontalLines);
     }).join('\n');
-  }
-
-  /**
-   * Detect bidirectional connections (A→B and B→A pairs)
-   * Returns a Map where key is the first connection and value is its reverse
-   */
-  private detectBidirectionalConnections(connections: Connection[]): Map<Connection, Connection> {
-    const result = new Map<Connection, Connection>();
-    const processed = new Set<Connection>();
-
-    for (const conn of connections) {
-      if (processed.has(conn)) continue;
-
-      // Find reverse connection (B→A for A→B)
-      const reverse = connections.find(
-        c => c !== conn && c.from === conn.to && c.to === conn.from && !processed.has(c)
-      );
-
-      if (reverse) {
-        result.set(conn, reverse);
-        processed.add(conn);
-        processed.add(reverse);
-      }
-    }
-
-    return result;
-  }
-
-  /**
-   * Sort connections based on the specified strategy
-   */
-  private sortConnectionsByStrategy(
-    connections: Connection[],
-    strategy: ConnectionSortStrategy
-  ): Connection[] {
-    const sorted = [...connections];
-
-    switch (strategy) {
-      case 'original':
-        // No sorting, keep original order
-        return sorted;
-
-      case 'vertical_length_desc':
-        // Sort by vertical distance (longest first)
-        return sorted.sort((a, b) => {
-          const fromA = this.nodeMap.get(a.from);
-          const toA = this.nodeMap.get(a.to);
-          const fromB = this.nodeMap.get(b.from);
-          const toB = this.nodeMap.get(b.to);
-          if (!fromA || !toA || !fromB || !toB) return 0;
-
-          const lengthA = Math.abs(toA.computedY - fromA.computedY);
-          const lengthB = Math.abs(toB.computedY - fromB.computedY);
-          return lengthB - lengthA;
-        });
-
-      case 'vertical_length_asc':
-        // Sort by vertical distance (shortest first)
-        return sorted.sort((a, b) => {
-          const fromA = this.nodeMap.get(a.from);
-          const toA = this.nodeMap.get(a.to);
-          const fromB = this.nodeMap.get(b.from);
-          const toB = this.nodeMap.get(b.to);
-          if (!fromA || !toA || !fromB || !toB) return 0;
-
-          const lengthA = Math.abs(toA.computedY - fromA.computedY);
-          const lengthB = Math.abs(toB.computedY - fromB.computedY);
-          return lengthA - lengthB;
-        });
-
-      case 'target_y_asc':
-        // Sort by target Y coordinate (top to bottom)
-        return sorted.sort((a, b) => {
-          const toA = this.nodeMap.get(a.to);
-          const toB = this.nodeMap.get(b.to);
-          if (!toA || !toB) return 0;
-          return toA.computedY - toB.computedY;
-        });
-
-      case 'target_y_desc':
-        // Sort by target Y coordinate (bottom to top)
-        return sorted.sort((a, b) => {
-          const toA = this.nodeMap.get(a.to);
-          const toB = this.nodeMap.get(b.to);
-          if (!toA || !toB) return 0;
-          return toB.computedY - toA.computedY;
-        });
-
-      case 'source_x_asc':
-        // Sort by source X coordinate (left to right)
-        return sorted.sort((a, b) => {
-          const fromA = this.nodeMap.get(a.from);
-          const fromB = this.nodeMap.get(b.from);
-          if (!fromA || !fromB) return 0;
-          return fromA.computedX - fromB.computedX;
-        });
-
-      case 'source_x_desc':
-        // Sort by source X coordinate (right to left)
-        return sorted.sort((a, b) => {
-          const fromA = this.nodeMap.get(a.from);
-          const fromB = this.nodeMap.get(b.from);
-          if (!fromA || !fromB) return 0;
-          return fromB.computedX - fromA.computedX;
-        });
-
-      case 'bounding_box_aware':
-        // Sort based on bounding box shape:
-        // - If bounding box is horizontally long (width > height), prioritize left X (source_x_asc)
-        // - If bounding box is vertically long (height > width), prioritize top Y (target_y_asc)
-        return sorted.sort((a, b) => {
-          const fromA = this.nodeMap.get(a.from);
-          const toA = this.nodeMap.get(a.to);
-          const fromB = this.nodeMap.get(b.from);
-          const toB = this.nodeMap.get(b.to);
-          if (!fromA || !toA || !fromB || !toB) return 0;
-
-          // Calculate bounding box for each connection
-          const bboxA = {
-            width: Math.abs(toA.computedX - fromA.computedX),
-            height: Math.abs(toA.computedY - fromA.computedY),
-          };
-          const bboxB = {
-            width: Math.abs(toB.computedX - fromB.computedX),
-            height: Math.abs(toB.computedY - fromB.computedY),
-          };
-
-          // Determine primary axis for each connection
-          const isHorizontalA = bboxA.width > bboxA.height;
-          const isHorizontalB = bboxB.width > bboxB.height;
-
-          // If both have the same dominant direction, sort by that axis
-          if (isHorizontalA && isHorizontalB) {
-            // Both horizontal: sort by source X (left to right)
-            return fromA.computedX - fromB.computedX;
-          } else if (!isHorizontalA && !isHorizontalB) {
-            // Both vertical: sort by target Y (top to bottom)
-            return toA.computedY - toB.computedY;
-          } else {
-            // Different directions: horizontal connections first (they typically need more space)
-            return isHorizontalA ? -1 : 1;
-          }
-        });
-
-      default:
-        return sorted;
-    }
-  }
-
-  /**
-   * Calculate anchor distribution for all connections
-   * Returns a map of connection index -> anchor info
-   */
-  private calculateAnchorDistribution(): Map<number, ConnectionAnchorInfo> {
-    const result = new Map<number, ConnectionAnchorInfo>();
-    if (!this.diagram.connections) return result;
-
-    // 統合アンカーポイント管理: 同じノードの同じ側への全接続（入り・出り両方）を一緒に管理
-    // Key format: "nodeId:side" -> list of { index, isFrom, otherNodePos }
-    type AnchorEntry = { index: number; isFrom: boolean; otherNodeX: number; otherNodeY: number };
-    const nodeSideAnchors = new Map<string, AnchorEntry[]>();
-
-    // First pass: determine sides and register all anchor points
-    this.diagram.connections.forEach((conn, index) => {
-      const fromNode = this.nodeMap.get(conn.from);
-      const toNode = this.nodeMap.get(conn.to);
-      if (!fromNode || !toNode) return;
-
-      // 兄弟ノードと親グループ境界を取得（グループ内ノードの場合）
-      const { siblingNodes, parentGroupBounds } = this.getSiblingNodesAndParentBounds(fromNode);
-
-      // 明示的な指定を優先、なければ自動決定
-      const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds);
-      const fromSide = conn.fromSide || autoSides.fromSide;
-      const toSide = conn.toSide || autoSides.toSide;
-
-      // fromノードの接続点を登録
-      const fromKey = `${conn.from}:${fromSide}`;
-      if (!nodeSideAnchors.has(fromKey)) {
-        nodeSideAnchors.set(fromKey, []);
-      }
-      nodeSideAnchors.get(fromKey)!.push({
-        index,
-        isFrom: true,
-        otherNodeX: toNode.computedX,
-        otherNodeY: toNode.computedY,
-      });
-
-      // toノードの接続点を登録
-      const toKey = `${conn.to}:${toSide}`;
-      if (!nodeSideAnchors.has(toKey)) {
-        nodeSideAnchors.set(toKey, []);
-      }
-      nodeSideAnchors.get(toKey)!.push({
-        index,
-        isFrom: false,
-        otherNodeX: fromNode.computedX,
-        otherNodeY: fromNode.computedY,
-      });
-    });
-
-    // Sort all anchors on each side by the other node's position
-    // For bottom/top sides: sort by other node's X position (left to right)
-    // For left/right sides: sort by other node's Y position (top to bottom)
-    for (const [key, entries] of nodeSideAnchors) {
-      const side = key.split(':')[1];
-      entries.sort((a, b) => {
-        if (side === 'bottom' || side === 'top') {
-          return a.otherNodeX - b.otherNodeX;
-        } else {
-          return a.otherNodeY - b.otherNodeY;
-        }
-      });
-    }
-
-    // Second pass: build anchor info for each connection
-    this.diagram.connections.forEach((conn, index) => {
-      const fromNode = this.nodeMap.get(conn.from);
-      const toNode = this.nodeMap.get(conn.to);
-      if (!fromNode || !toNode) return;
-
-      // 兄弟ノードと親グループ境界を取得（グループ内ノードの場合）
-      const { siblingNodes, parentGroupBounds } = this.getSiblingNodesAndParentBounds(fromNode);
-
-      // 明示的な指定を優先、なければ自動決定
-      const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds);
-      const fromSide = conn.fromSide || autoSides.fromSide;
-      const toSide = conn.toSide || autoSides.toSide;
-
-      const fromKey = `${conn.from}:${fromSide}`;
-      const toKey = `${conn.to}:${toSide}`;
-
-      const fromAnchors = nodeSideAnchors.get(fromKey)!;
-      const toAnchors = nodeSideAnchors.get(toKey)!;
-
-      // この接続のfrom側のインデックスを統合リストから取得
-      const fromEntryIndex = fromAnchors.findIndex(e => e.index === index && e.isFrom);
-      // この接続のto側のインデックスを統合リストから取得
-      const toEntryIndex = toAnchors.findIndex(e => e.index === index && !e.isFrom);
-
-      result.set(index, {
-        fromSide,
-        toSide,
-        fromIndex: fromEntryIndex,
-        fromTotal: fromAnchors.length,
-        toIndex: toEntryIndex,
-        toTotal: toAnchors.length,
-      });
-    });
-
-    return result;
-  }
-
-  /**
-   * Get sibling nodes and parent group bounds for a node
-   * Used for cross-group connection routing
-   */
-  private getSiblingNodesAndParentBounds(node: ComputedNode): {
-    siblingNodes: ComputedNode[];
-    parentGroupBounds: { top: number; bottom: number; left: number; right: number } | undefined;
-  } {
-    if (!node.parentId) {
-      return { siblingNodes: [], parentGroupBounds: undefined };
-    }
-
-    const parentGroup = this.nodeMap.get(node.parentId);
-    if (!parentGroup) {
-      return { siblingNodes: [], parentGroupBounds: undefined };
-    }
-
-    // 兄弟ノードを取得（同じ親を持つノード）
-    const siblingNodes: ComputedNode[] = [];
-    for (const [, n] of this.nodeMap) {
-      if (n.parentId === node.parentId && n.id !== node.id) {
-        siblingNodes.push(n);
-      }
-    }
-
-    // 親グループの境界を取得
-    const parentGroupBounds = {
-      top: parentGroup.computedY,
-      bottom: parentGroup.computedY + parentGroup.computedHeight,
-      left: parentGroup.computedX,
-      right: parentGroup.computedX + parentGroup.computedWidth,
-    };
-
-    return { siblingNodes, parentGroupBounds };
   }
 
   /**
@@ -1301,190 +1032,32 @@ ${gradients.join('\n')}
    * Get embedded CSS (viewer only)
    */
   protected getCss(): string {
-    return `.gospelo-diagram {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-.gospelo-diagram svg {
-  max-width: 100%;
-  height: auto;
-}
-.node-label { font-weight: 500; }
-.group-box { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }
-.connection { stroke-linecap: round; stroke-linejoin: round; }
-.resize-handle { cursor: nwse-resize; }
-.resize-handle:hover { fill: #AAAAAA; }`;
+    return getBaseCss();
   }
 
   /**
    * Get JavaScript for viewer functionality (resize only)
    */
   protected getViewerScript(): string {
-    return `
-(function() {
-  var svg = document.querySelector('.gospelo-svg');
-  if (!svg) return;
-
-  var handle = svg.querySelector('.resize-handle');
-  if (!handle) return;
-
-  var isResizing = false;
-  var startX, startY, startWidth, startHeight;
-
-  var viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
-  var originalWidth = viewBox[2];
-  var originalHeight = viewBox[3];
-  var aspectRatio = originalWidth / originalHeight;
-
-  handle.addEventListener('mousedown', function(e) {
-    e.preventDefault();
-    isResizing = true;
-    startX = e.clientX;
-    startY = e.clientY;
-    startWidth = parseFloat(svg.getAttribute('width'));
-    startHeight = parseFloat(svg.getAttribute('height'));
-    document.body.style.cursor = 'nwse-resize';
-    document.body.style.userSelect = 'none';
-  });
-
-  document.addEventListener('mousemove', function(e) {
-    if (!isResizing) return;
-    var dx = e.clientX - startX;
-    var dy = e.clientY - startY;
-    var delta = (dx + dy) / 2;
-    var newWidth = Math.max(400, startWidth + delta);
-    var newHeight = newWidth / aspectRatio;
-    if (newHeight < 300) {
-      newHeight = 300;
-      newWidth = newHeight * aspectRatio;
-    }
-    svg.setAttribute('width', newWidth);
-    svg.setAttribute('height', newHeight);
-  });
-
-  document.addEventListener('mouseup', function() {
-    if (isResizing) {
-      isResizing = false;
-      document.body.style.cursor = '';
-      document.body.style.userSelect = '';
-    }
-  });
-})();
-`;
+    return getViewerScript();
   }
 
   /**
    * Get CSS for shareable HTML (interactive features)
    */
   private getShareableCss(): string {
-    // Determine @page size based on paperOrientation option
     const orientation = this.options.paperOrientation;
     const pageSize = orientation ? `A4 ${orientation}` : 'auto';
-
-    return `body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-.gospelo-diagram {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-  background: #f5f5f5;
-}
-.gospelo-diagram svg {
-  width: 100%;
-  height: auto;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 4px;
-}
-/* Print styles */
-@media print {
-  @page {
-    margin: 0;
-    size: ${pageSize};
-  }
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: white !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow: hidden !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-  .gospelo-diagram {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    background: white;
-    display: block;
-    overflow: hidden;
-  }
-  .gospelo-diagram svg {
-    display: block;
-    max-width: 100vw !important;
-    max-height: 100vh !important;
-    width: auto !important;
-    height: auto !important;
-    box-shadow: none;
-    border-radius: 0;
-  }
-  .copy-toast, .hover-tooltip, .selection-rect, .copy-btn { display: none !important; }
-}
-.node-label { font-weight: 500; }
-.group-box { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }
-.connection { stroke-linecap: round; stroke-linejoin: round; }
-/* Hide UI elements */
-.boundary-box { display: none; }
-/* Node hover effect */
-.node, .composite-icon { cursor: pointer; }
-.node:hover, .composite-icon:hover { filter: brightness(1.1); }
-/* Selected node highlight */
-.node.selected, .composite-icon.selected { filter: drop-shadow(0 0 6px #0078D7); }
-/* Copy toast */
-.copy-toast {
-  position: fixed;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #333;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 13px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 1001;
-  pointer-events: none;
-}
-/* Hover tooltip */
-.hover-tooltip {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.85);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  line-height: 1.5;
-  opacity: 0;
-  transition: opacity 0.2s;
-  z-index: 1002;
-  pointer-events: none;
-  max-width: 300px;
-}`;
+    return getShareableCss(pageSize);
   }
 
   /**
-   * Get JavaScript for shareable HTML (hover, click-to-copy, area selection)
+   * Build node icon and bounds data for interactive scripts
    */
-  private getShareableScript(): string {
-    // Build node ID to icon/desc mapping (use computedNodes which has resolved icons from resources)
+  private buildInteractiveScriptData(): {
+    nodeIconMap: Record<string, { icon: string; desc?: string; license: string }>;
+    nodeBoundsMap: Record<string, { left: number; top: number; right: number; bottom: number }>;
+  } {
     const nodeIconMap: Record<string, { icon: string; desc?: string; license: string }> = {};
     const resources = this.diagram.resources || {};
 
@@ -1511,7 +1084,6 @@ ${gradients.join('\n')}
             license: getLicense(node.icon),
           };
         }
-        // Collect composite node's icons
         if (node.type === 'composite' && node.icons) {
           for (const iconRef of node.icons) {
             const iconId = iconRef.icon || resources[iconRef.id]?.icon;
@@ -1531,7 +1103,6 @@ ${gradients.join('\n')}
     };
     collectNodes(this.computedNodes);
 
-    // Build node bounds map for area selection
     const nodeBoundsMap: Record<string, { left: number; top: number; right: number; bottom: number }> = {};
     for (const [id, node] of this.nodeMap) {
       if (node.bounds) {
@@ -1542,7 +1113,6 @@ ${gradients.join('\n')}
           bottom: node.bounds.bottom,
         };
       }
-      // Add composite node's icons bounds
       if (node.type === 'composite' && node.icons) {
         const iconSize = 36;
         const labelHeight = 14;
@@ -1564,183 +1134,15 @@ ${gradients.join('\n')}
       }
     }
 
-    return `
-(function() {
-  var nodeInfo = ${JSON.stringify(nodeIconMap)};
-  var nodeBounds = ${JSON.stringify(nodeBoundsMap)};
-  var tooltip = document.getElementById('hover-tooltip');
-  var toast = document.getElementById('copy-toast');
-  var nodes = document.querySelectorAll('.node, .composite-icon');
-  var svg = document.querySelector('.gospelo-svg');
-  var selectionRect = document.getElementById('selection-rect');
-  var copyBtn = document.getElementById('copy-btn');
-
-  // Area selection state
-  var isSelecting = false;
-  var startX = 0, startY = 0;
-  var selectedNodeIds = [];
-
-  // Tooltip and click-to-copy for individual nodes
-  nodes.forEach(function(node) {
-    var nodeId = node.id;
-    var info = nodeInfo[nodeId];
-
-    node.addEventListener('mouseenter', function(e) {
-      if (isSelecting) return;
-      var html = '<strong>ID:</strong> ' + nodeId;
-      if (info && info.icon) {
-        html += '<br><strong>Icon:</strong> ' + info.icon;
-      }
-      if (info && info.license) {
-        html += '<br><strong>License:</strong> ' + info.license;
-      }
-      if (info && info.desc) {
-        html += '<br><strong>Desc:</strong> ' + info.desc;
-      }
-      tooltip.innerHTML = html;
-      tooltip.style.opacity = '1';
-      updateTooltipPosition(e);
-    });
-
-    node.addEventListener('mousemove', function(e) {
-      if (!isSelecting) updateTooltipPosition(e);
-    });
-
-    node.addEventListener('mouseleave', function() {
-      tooltip.style.opacity = '0';
-    });
-
-    node.addEventListener('click', function(e) {
-      if (selectedNodeIds.length > 0) return;
-      navigator.clipboard.writeText(nodeId).then(function() {
-        toast.textContent = 'Copied: ' + nodeId;
-        toast.style.opacity = '1';
-        setTimeout(function() { toast.style.opacity = '0'; }, 1500);
-      });
-    });
-  });
-
-  function updateTooltipPosition(e) {
-    var x = e.clientX + 15;
-    var y = e.clientY + 15;
-    if (x + tooltip.offsetWidth > window.innerWidth - 10) {
-      x = e.clientX - tooltip.offsetWidth - 15;
-    }
-    if (y + tooltip.offsetHeight > window.innerHeight - 10) {
-      y = e.clientY - tooltip.offsetHeight - 15;
-    }
-    tooltip.style.left = x + 'px';
-    tooltip.style.top = y + 'px';
+    return { nodeIconMap, nodeBoundsMap };
   }
 
-  function screenToSvg(clientX, clientY) {
-    var pt = svg.createSVGPoint();
-    pt.x = clientX;
-    pt.y = clientY;
-    var svgPt = pt.matrixTransform(svg.getScreenCTM().inverse());
-    return { x: svgPt.x, y: svgPt.y };
-  }
-
-  function rectsIntersect(r1, r2) {
-    return !(r1.right < r2.left || r1.left > r2.right || r1.bottom < r2.top || r1.top > r2.bottom);
-  }
-
-  function clearSelection() {
-    selectedNodeIds = [];
-    nodes.forEach(function(n) { n.classList.remove('selected'); });
-    copyBtn.style.display = 'none';
-    selectionRect.style.display = 'none';
-  }
-
-  function showCopyBtn(x, y) {
-    copyBtn.setAttribute('transform', 'translate(' + x + ',' + y + ')');
-    copyBtn.style.display = 'block';
-  }
-
-  svg.addEventListener('mousedown', function(e) {
-    if (e.target === copyBtn || copyBtn.contains(e.target)) {
-      return;
-    }
-    if (!e.shiftKey) {
-      clearSelection();
-      return;
-    }
-    e.preventDefault();
-    isSelecting = true;
-    tooltip.style.opacity = '0';
-    var svgPt = screenToSvg(e.clientX, e.clientY);
-    startX = svgPt.x;
-    startY = svgPt.y;
-    selectionRect.setAttribute('x', startX);
-    selectionRect.setAttribute('y', startY);
-    selectionRect.setAttribute('width', 0);
-    selectionRect.setAttribute('height', 0);
-    selectionRect.style.display = 'block';
-    svg.style.cursor = 'crosshair';
-  });
-
-  document.addEventListener('mousemove', function(e) {
-    if (!isSelecting) return;
-    var svgPt = screenToSvg(e.clientX, e.clientY);
-    var x = Math.min(startX, svgPt.x);
-    var y = Math.min(startY, svgPt.y);
-    var w = Math.abs(svgPt.x - startX);
-    var h = Math.abs(svgPt.y - startY);
-    selectionRect.setAttribute('x', x);
-    selectionRect.setAttribute('y', y);
-    selectionRect.setAttribute('width', w);
-    selectionRect.setAttribute('height', h);
-
-    var selRect = { left: x, top: y, right: x + w, bottom: y + h };
-    nodes.forEach(function(n) {
-      var bounds = nodeBounds[n.id];
-      var inCurrentRect = bounds && rectsIntersect(selRect, bounds);
-      var alreadySelected = selectedNodeIds.indexOf(n.id) !== -1;
-      if (inCurrentRect || alreadySelected) {
-        n.classList.add('selected');
-      } else {
-        n.classList.remove('selected');
-      }
-    });
-  });
-
-  document.addEventListener('mouseup', function(e) {
-    if (!isSelecting) return;
-    isSelecting = false;
-    svg.style.cursor = '';
-
-    nodes.forEach(function(n) {
-      if (n.classList.contains('selected') && selectedNodeIds.indexOf(n.id) === -1) {
-        selectedNodeIds.push(n.id);
-      }
-    });
-
-    if (selectedNodeIds.length > 0) {
-      var svgPt = screenToSvg(e.clientX, e.clientY);
-      showCopyBtn(svgPt.x + 10, svgPt.y - 16);
-    }
-    selectionRect.style.display = 'none';
-  });
-
-  copyBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    if (selectedNodeIds.length === 0) return;
-    var text = selectedNodeIds.join('\\n');
-    navigator.clipboard.writeText(text).then(function() {
-      toast.textContent = 'Copied ' + selectedNodeIds.length + ' IDs';
-      toast.style.opacity = '1';
-      setTimeout(function() { toast.style.opacity = '0'; }, 1500);
-      clearSelection();
-    });
-  });
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      clearSelection();
-    }
-  });
-})();
-`;
+  /**
+   * Get JavaScript for shareable HTML (hover, click-to-copy, area selection)
+   */
+  private getShareableScript(): string {
+    const { nodeIconMap, nodeBoundsMap } = this.buildInteractiveScriptData();
+    return getInteractiveScript(nodeIconMap, nodeBoundsMap);
   }
 
   /**
@@ -1846,7 +1248,7 @@ ${gradients.join('\n')}
       let toSide = conn.toSide;
       if (fromNode && toNode && (!fromSide || !toSide)) {
         // 兄弟ノードと親グループ境界を取得（グループ内ノードの場合）
-        const { siblingNodes, parentGroupBounds } = this.getSiblingNodesAndParentBounds(fromNode);
+        const { siblingNodes, parentGroupBounds } = getSiblingNodesAndParentBounds(fromNode, this.nodeMap);
         const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds);
         fromSide = fromSide || autoSides.fromSide;
         toSide = toSide || autoSides.toSide;
@@ -2130,418 +1532,14 @@ Third-Party Icon Attributions:
    * Get JavaScript for preview hover tooltip, copy functionality, and area selection
    */
   private getPreviewScript(): string {
-    // Build node ID to icon/desc mapping (use computedNodes which has resolved icons from resources)
-    const nodeIconMap: Record<string, { icon: string; desc?: string; license: string }> = {};
-    const resources = this.diagram.resources || {};
-
-    const getLicense = (icon: string): string => {
-      if (icon.startsWith('aws:')) return 'AWS Architecture Icons - Apache License 2.0';
-      if (icon.startsWith('azure:')) return 'Azure Icons - MIT License';
-      if (icon.startsWith('gcp:')) return 'Google Cloud Icons - Apache License 2.0';
-      if (icon.startsWith('tech-stack:')) return 'Simple Icons - CC0 1.0 Universal';
-      return '';
-    };
-
-    const truncate = (text: string, maxLen: number): string => {
-      if (text.length <= maxLen) return text;
-      return text.slice(0, maxLen - 3) + '...';
-    };
-
-    const collectNodes = (nodes: ComputedNode[]) => {
-      for (const node of nodes) {
-        if (node.icon) {
-          const resource = resources[node.id];
-          nodeIconMap[node.id] = {
-            icon: node.icon,
-            desc: resource?.desc ? truncate(resource.desc, 50) : undefined,
-            license: getLicense(node.icon),
-          };
-        }
-        // Collect composite node's icons
-        if (node.type === 'composite' && node.icons) {
-          for (const iconRef of node.icons) {
-            // Resolve icon from resources if iconRef.icon is not set
-            const iconId = iconRef.icon || resources[iconRef.id]?.icon;
-            if (iconId) {
-              nodeIconMap[iconRef.id] = {
-                icon: iconId,
-                desc: resources[iconRef.id]?.desc ? truncate(resources[iconRef.id].desc!, 50) : undefined,
-                license: getLicense(iconId),
-              };
-            }
-          }
-        }
-        if (node.children) {
-          collectNodes(node.children as ComputedNode[]);
-        }
-      }
-    };
-    collectNodes(this.computedNodes);
-
-    // Build node bounds map for area selection
-    const nodeBoundsMap: Record<string, { left: number; top: number; right: number; bottom: number }> = {};
-    for (const [id, node] of this.nodeMap) {
-      if (node.bounds) {
-        nodeBoundsMap[id] = {
-          left: node.bounds.left,
-          top: node.bounds.top,
-          right: node.bounds.right,
-          bottom: node.bounds.bottom,
-        };
-      }
-      // Add composite node's icons bounds
-      if (node.type === 'composite' && node.icons) {
-        const iconSize = 36;
-        const labelHeight = 14;
-        const iconGap = 12;
-        const nodeAbsX = node.computedX;
-        const nodeAbsY = node.computedY;
-        const w = node.computedWidth || 100;
-        for (let i = 0; i < node.icons.length; i++) {
-          const iconRef = node.icons[i];
-          const iconY = 20 + i * (iconSize + labelHeight + iconGap);
-          const iconX = (w - iconSize) / 2;
-          nodeBoundsMap[iconRef.id] = {
-            left: nodeAbsX + iconX,
-            top: nodeAbsY + iconY,
-            right: nodeAbsX + iconX + iconSize,
-            bottom: nodeAbsY + iconY + iconSize,
-          };
-        }
-      }
-    }
-
-    return `
-(function() {
-  var nodeInfo = ${JSON.stringify(nodeIconMap)};
-  var nodeBounds = ${JSON.stringify(nodeBoundsMap)};
-  var tooltip = document.getElementById('hover-tooltip');
-  var toast = document.getElementById('copy-toast');
-  var nodes = document.querySelectorAll('.node, .composite-icon');
-  var svg = document.querySelector('.gospelo-svg');
-  var selectionRect = document.getElementById('selection-rect');
-  var copyBtn = document.getElementById('copy-btn');
-
-  // Area selection state
-  var isSelecting = false;
-  var startX = 0, startY = 0;
-  var selectedNodeIds = [];
-
-  // Tooltip and click-to-copy for individual nodes
-  nodes.forEach(function(node) {
-    var nodeId = node.id;
-    var info = nodeInfo[nodeId];
-
-    node.addEventListener('mouseenter', function(e) {
-      if (isSelecting) return;
-      var html = '<strong>ID:</strong> ' + nodeId;
-      if (info && info.icon) {
-        html += '<br><strong>Icon:</strong> ' + info.icon;
-      }
-      if (info && info.license) {
-        html += '<br><strong>License:</strong> ' + info.license;
-      }
-      if (info && info.desc) {
-        html += '<br><strong>Desc:</strong> ' + info.desc;
-      }
-      tooltip.innerHTML = html;
-      tooltip.style.opacity = '1';
-      updateTooltipPosition(e);
-    });
-
-    node.addEventListener('mousemove', function(e) {
-      if (!isSelecting) updateTooltipPosition(e);
-    });
-
-    node.addEventListener('mouseleave', function() {
-      tooltip.style.opacity = '0';
-    });
-
-    node.addEventListener('click', function(e) {
-      if (selectedNodeIds.length > 0) return; // Don't copy single node if area selection is active
-      navigator.clipboard.writeText(nodeId).then(function() {
-        toast.textContent = 'Copied: ' + nodeId;
-        toast.style.opacity = '1';
-        setTimeout(function() { toast.style.opacity = '0'; }, 1500);
-      });
-    });
-  });
-
-  function updateTooltipPosition(e) {
-    var x = e.clientX + 15;
-    var y = e.clientY + 15;
-    if (x + tooltip.offsetWidth > window.innerWidth - 10) {
-      x = e.clientX - tooltip.offsetWidth - 15;
-    }
-    if (y + tooltip.offsetHeight > window.innerHeight - 10) {
-      y = e.clientY - tooltip.offsetHeight - 15;
-    }
-    tooltip.style.left = x + 'px';
-    tooltip.style.top = y + 'px';
-  }
-
-  // Convert screen coordinates to SVG coordinates
-  function screenToSvg(clientX, clientY) {
-    var pt = svg.createSVGPoint();
-    pt.x = clientX;
-    pt.y = clientY;
-    var svgPt = pt.matrixTransform(svg.getScreenCTM().inverse());
-    return { x: svgPt.x, y: svgPt.y };
-  }
-
-  // Check if rectangle intersects with node bounds
-  function rectsIntersect(r1, r2) {
-    return !(r1.right < r2.left || r1.left > r2.right || r1.bottom < r2.top || r1.top > r2.bottom);
-  }
-
-  // Clear selection
-  function clearSelection() {
-    selectedNodeIds = [];
-    nodes.forEach(function(n) { n.classList.remove('selected'); });
-    copyBtn.style.display = 'none';
-    selectionRect.style.display = 'none';
-  }
-
-  // Show copy button near selection
-  function showCopyBtn(x, y) {
-    copyBtn.setAttribute('transform', 'translate(' + x + ',' + y + ')');
-    copyBtn.style.display = 'block';
-  }
-
-  // Area selection with Shift+drag
-  svg.addEventListener('mousedown', function(e) {
-    // Ignore if clicking on copy button
-    if (e.target === copyBtn || copyBtn.contains(e.target)) {
-      return;
-    }
-    if (!e.shiftKey) {
-      clearSelection();
-      return;
-    }
-    e.preventDefault();
-    isSelecting = true;
-    tooltip.style.opacity = '0';
-    var svgPt = screenToSvg(e.clientX, e.clientY);
-    startX = svgPt.x;
-    startY = svgPt.y;
-    selectionRect.setAttribute('x', startX);
-    selectionRect.setAttribute('y', startY);
-    selectionRect.setAttribute('width', 0);
-    selectionRect.setAttribute('height', 0);
-    selectionRect.style.display = 'block';
-    svg.style.cursor = 'crosshair';
-  });
-
-  document.addEventListener('mousemove', function(e) {
-    if (!isSelecting) return;
-    var svgPt = screenToSvg(e.clientX, e.clientY);
-    var x = Math.min(startX, svgPt.x);
-    var y = Math.min(startY, svgPt.y);
-    var w = Math.abs(svgPt.x - startX);
-    var h = Math.abs(svgPt.y - startY);
-    selectionRect.setAttribute('x', x);
-    selectionRect.setAttribute('y', y);
-    selectionRect.setAttribute('width', w);
-    selectionRect.setAttribute('height', h);
-
-    // Highlight nodes in current selection rectangle (preview only, don't modify selectedNodeIds yet)
-    var selRect = { left: x, top: y, right: x + w, bottom: y + h };
-    nodes.forEach(function(n) {
-      var bounds = nodeBounds[n.id];
-      var inCurrentRect = bounds && rectsIntersect(selRect, bounds);
-      var alreadySelected = selectedNodeIds.indexOf(n.id) !== -1;
-      if (inCurrentRect || alreadySelected) {
-        n.classList.add('selected');
-      } else {
-        n.classList.remove('selected');
-      }
-    });
-  });
-
-  document.addEventListener('mouseup', function(e) {
-    if (!isSelecting) return;
-    isSelecting = false;
-    svg.style.cursor = '';
-
-    // Add newly selected nodes to accumulated selection (avoid duplicates)
-    nodes.forEach(function(n) {
-      if (n.classList.contains('selected') && selectedNodeIds.indexOf(n.id) === -1) {
-        selectedNodeIds.push(n.id);
-      }
-    });
-
-    if (selectedNodeIds.length > 0) {
-      // Show copy button at end of selection
-      var svgPt = screenToSvg(e.clientX, e.clientY);
-      showCopyBtn(svgPt.x + 10, svgPt.y - 16);
-    }
-    selectionRect.style.display = 'none';
-  });
-
-  // Copy button click
-  copyBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    if (selectedNodeIds.length === 0) return;
-    var text = selectedNodeIds.join('\\n');
-    navigator.clipboard.writeText(text).then(function() {
-      toast.textContent = 'Copied ' + selectedNodeIds.length + ' IDs';
-      toast.style.opacity = '1';
-      setTimeout(function() { toast.style.opacity = '0'; }, 1500);
-      clearSelection();
-    });
-  });
-
-  // Cancel selection on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      clearSelection();
-    }
-  });
-})();
-`;
+    const { nodeIconMap, nodeBoundsMap } = this.buildInteractiveScriptData();
+    return getInteractiveScript(nodeIconMap, nodeBoundsMap);
   }
 
   /**
    * Get minimal CSS for preview (no edit panel styles)
    */
   private getPreviewCss(): string {
-    return `.gospelo-diagram {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
-  background: #f5f5f5;
-}
-.gospelo-diagram svg {
-  max-width: 100%;
-  height: auto;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 4px;
-}
-.node-label { font-weight: 500; }
-.group-box { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }
-.connection { stroke-linecap: round; stroke-linejoin: round; }
-/* Hide UI elements in preview */
-.boundary-box { display: none; }
-/* Node hover effect */
-.node, .composite-icon { cursor: pointer; }
-.node:hover, .composite-icon:hover { filter: brightness(1.1); }
-/* Selected node highlight */
-.node.selected, .composite-icon.selected { filter: drop-shadow(0 0 6px #0078D7); }
-/* Copy toast */
-.copy-toast {
-  position: fixed;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #333;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 13px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 1001;
-  pointer-events: none;
-}
-/* Hover tooltip */
-.hover-tooltip {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.85);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  line-height: 1.5;
-  opacity: 0;
-  transition: opacity 0.2s;
-  z-index: 1002;
-  pointer-events: none;
-  max-width: 300px;
-}
-/* Confidential badge */
-.confidential-badge {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  padding: 4px 10px;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 11px;
-  font-weight: 300;
-  font-style: italic;
-  color: #333;
-  border: 1px solid #333;
-  border-radius: 2px;
-  letter-spacing: 0.5px;
-  background: rgba(255, 255, 255, 0.9);
-  cursor: pointer;
-}
-.confidential-badge:hover {
-  background: rgba(240, 240, 240, 0.95);
-}
-/* License popup */
-.license-popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-.license-popup-overlay.visible {
-  display: flex;
-}
-.license-popup {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-  max-height: 80vh;
-  display: flex;
-  flex-direction: column;
-}
-.license-popup-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-  border-bottom: 1px solid #eee;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-}
-.license-popup-close {
-  border: none;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #666;
-  padding: 0 4px;
-}
-.license-popup-close:hover {
-  color: #333;
-}
-.license-popup-content {
-  padding: 16px;
-  overflow-y: auto;
-}
-.license-popup-content pre {
-  margin: 0;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 12px;
-  line-height: 1.6;
-  color: #444;
-  white-space: pre-wrap;
-}`;
+    return getPreviewCss();
   }
 }
