@@ -71,10 +71,18 @@ function computeNodeLayout(
     computed.computedX = node.position[0];
     computed.computedY = node.position[1];
   } else if (parent) {
-    // Calculate position relative to parent
-    const offset = calculateChildOffset(index, parent, node.layout || 'horizontal');
+    // Calculate position relative to parent using parent's layout direction
+    const layout = parent.layout || 'horizontal';
+    const offset = calculateChildOffset(index, parent, layout);
     computed.computedX = offset.x;
     computed.computedY = offset.y;
+  }
+
+  // For group nodes, process children first to calculate bounding box
+  if (node.type === 'group' && node.children && node.children.length > 0) {
+    computed.children = node.children.map((child, i) =>
+      computeNodeLayout(child, i, computed, resources)
+    );
   }
 
   // Calculate size based on node type
@@ -94,8 +102,8 @@ function computeNodeLayout(
       computed.computedHeight = node.size?.[1] || DEFAULT_ICON_SIZE + DEFAULT_LABEL_HEIGHT;
   }
 
-  // Process children recursively
-  if (node.children && node.children.length > 0) {
+  // Process children recursively (for non-group nodes)
+  if (node.type !== 'group' && node.children && node.children.length > 0) {
     computed.children = node.children.map((child, i) =>
       computeNodeLayout(child, i, computed, resources)
     );
@@ -122,35 +130,75 @@ function calculateChildOffset(
       y: padding + 20, // Account for group label
     };
   } else {
+    // Vertical layout: zigzag diagonal placement to reduce height and avoid connection overlap
+    const staggerOffset = (index % 2) * (iconSize + spacing);
+    // Reduce vertical spacing by overlapping rows (diagonal layout)
+    const reducedVerticalSpacing = (iconSize + DEFAULT_LABEL_HEIGHT) * 0.6;
     return {
-      x: padding,
-      y: padding + 20 + index * (iconSize + DEFAULT_LABEL_HEIGHT + spacing),
+      x: padding + staggerOffset,
+      y: padding + 20 + index * reducedVerticalSpacing,
     };
   }
 }
 
 /**
  * Compute size for group nodes
+ * If size is not explicitly set, calculate minimum bounding box from children
  */
 function computeGroupSize(node: ComputedNode): void {
+  // If explicit size is provided, use it
   if (node.size) {
     node.computedWidth = node.size[0];
     node.computedHeight = node.size[1];
     return;
   }
 
-  const childCount = node.children?.length || 0;
-  const padding = DEFAULT_GROUP_PADDING * 2;
-  const spacing = DEFAULT_SPACING;
-  const iconSize = DEFAULT_ICON_SIZE;
-
-  if (node.layout === 'vertical') {
-    node.computedWidth = iconSize + padding + 20;
-    node.computedHeight = padding + 30 + childCount * (iconSize + DEFAULT_LABEL_HEIGHT + spacing);
-  } else {
-    node.computedWidth = padding + childCount * (iconSize + spacing);
-    node.computedHeight = iconSize + DEFAULT_LABEL_HEIGHT + padding + 30;
+  // Calculate minimum bounding box from children
+  const children = node.children as ComputedNode[] | undefined;
+  if (!children || children.length === 0) {
+    // No children, use default size
+    const padding = DEFAULT_GROUP_PADDING * 2;
+    node.computedWidth = DEFAULT_ICON_SIZE + padding;
+    node.computedHeight = DEFAULT_ICON_SIZE + DEFAULT_LABEL_HEIGHT + padding + 30;
+    return;
   }
+
+  // Find bounding box of all children (relative positions)
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+
+  for (const child of children) {
+    const childX = child.computedX;
+    const childY = child.computedY;
+    const childW = child.computedWidth || DEFAULT_ICON_SIZE;
+    const childH = child.computedHeight || DEFAULT_ICON_SIZE + DEFAULT_LABEL_HEIGHT;
+
+    minX = Math.min(minX, childX);
+    minY = Math.min(minY, childY);
+    maxX = Math.max(maxX, childX + childW);
+    maxY = Math.max(maxY, childY + childH);
+  }
+
+  // Adjust children positions to minimize group size
+  // Offset children so minimum position starts at padding
+  const padding = DEFAULT_GROUP_PADDING;
+  const offsetX = minX - padding;
+  const offsetY = minY - padding;
+
+  if (offsetX !== 0 || offsetY !== 0) {
+    for (const child of children) {
+      child.computedX -= offsetX;
+      child.computedY -= offsetY;
+    }
+    // Update maxX/maxY after offset
+    maxX -= offsetX;
+    maxY -= offsetY;
+  }
+
+  node.computedWidth = maxX + padding;
+  node.computedHeight = maxY + padding;
 }
 
 /**
