@@ -8,6 +8,7 @@ import type {
   ReservedVerticalLines,
   ReservedHorizontalLines,
   ConnectionAnchorInfo,
+  LayoutType,
 } from '../layout/connections';
 import { determineAnchorSide } from '../layout/connections';
 
@@ -162,25 +163,38 @@ export function sortConnectionsByStrategy(
 }
 
 /**
- * Register icon areas as reserved lines to prevent connections from passing through icons
+ * Register node areas as reserved lines to prevent connections from passing through nodes
  * This is the highest priority reservation (registered before any connection routing)
+ * Uses inscribed circle (内接円) for icon nodes to allow corner passages
+ * Includes: icon nodes, text_box nodes (group and composite are skipped)
  */
 export function registerIconAreaReservations(
   allNodes: ComputedNode[],
   reservedVerticalLines: ReservedVerticalLines,
   reservedHorizontalLines: ReservedHorizontalLines
 ): void {
-  const margin = 5;
+  const iconMargin = 5;
 
   for (const node of allNodes) {
-    if (node.type === 'group') continue;
     const bounds = node.bounds;
     if (!bounds) continue;
 
-    const left = bounds.left - margin;
-    const right = bounds.right + margin;
-    const top = bounds.top - margin;
-    const bottom = bounds.bottom + margin;
+    // グループとCompositeは予約をスキップ（子ノードが個別に予約するため）
+    if (node.type === 'group' || node.type === 'composite') continue;
+
+    // 内接円の半径を計算（幅と高さの小さい方の半分）
+    const baseRadius = Math.min(bounds.width, bounds.height) / 2;
+    // 予約領域は実際のマージンより1ピクセル内側にする
+    const reserveRadius = baseRadius + iconMargin - 1;
+
+    const cx = bounds.centerX;
+    const cy = bounds.centerY;
+
+    // 円に外接する正方形の4辺を予約
+    const left = cx - reserveRadius;
+    const right = cx + reserveRadius;
+    const top = cy - reserveRadius;
+    const bottom = cy + reserveRadius;
 
     // Register left and right edges as vertical lines (prevent horizontal crossing)
     reservedVerticalLines.push({ x: left, yMin: top, yMax: bottom });
@@ -237,7 +251,8 @@ export function getSiblingNodesAndParentBounds(
  */
 export function calculateAnchorDistribution(
   connections: Connection[],
-  nodeMap: Map<string, ComputedNode>
+  nodeMap: Map<string, ComputedNode>,
+  layout: LayoutType = 'portrait'
 ): Map<number, ConnectionAnchorInfo> {
   const result = new Map<number, ConnectionAnchorInfo>();
   if (!connections || connections.length === 0) return result;
@@ -256,8 +271,8 @@ export function calculateAnchorDistribution(
     // 兄弟ノードと親グループ境界を取得（グループ内ノードの場合）
     const { siblingNodes, parentGroupBounds } = getSiblingNodesAndParentBounds(fromNode, nodeMap);
 
-    // 明示的な指定を優先、なければ自動決定
-    const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds);
+    // 明示的な指定を優先、なければ自動決定（レイアウト優先度を適用）
+    const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds, layout);
     const fromSide = conn.fromSide || autoSides.fromSide;
     const toSide = conn.toSide || autoSides.toSide;
 
@@ -309,8 +324,8 @@ export function calculateAnchorDistribution(
     // 兄弟ノードと親グループ境界を取得（グループ内ノードの場合）
     const { siblingNodes, parentGroupBounds } = getSiblingNodesAndParentBounds(fromNode, nodeMap);
 
-    // 明示的な指定を優先、なければ自動決定
-    const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds);
+    // 明示的な指定を優先、なければ自動決定（レイアウト優先度を適用）
+    const autoSides = determineAnchorSide(fromNode, toNode, siblingNodes, parentGroupBounds, layout);
     const fromSide = conn.fromSide || autoSides.fromSide;
     const toSide = conn.toSide || autoSides.toSide;
 
