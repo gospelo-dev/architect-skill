@@ -97,7 +97,13 @@ fi
 
 echo ""
 echo -e "${GREEN}=== Setup Complete ===${NC}"
+
+# Create semaphore file to indicate cli-ext.sh is ready
+touch "$SCRIPT_DIR/.is-ext-ready"
+echo -e "  ${GREEN}✓ Created: $SCRIPT_DIR/.is-ext-ready${NC}"
+
 echo ""
 echo "You can now use:"
 echo -e "  ${CYAN}./bin/cli-ext.sh html2png <input.html> [output.png]${NC}"
+echo -e "  ${CYAN}bun bin/cli.ts preview <input.json> --png${NC}"
 echo ""

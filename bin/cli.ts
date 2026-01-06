@@ -31,7 +31,7 @@
  *   --help             - Show help
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from 'fs';
 import { dirname, basename, join } from 'path';
 import { enrichDiagram, generateMeta, renderStandalone, renderSvg, renderSvgEmbed, renderPreviewHtml, createBuilder, IconCatalogClient, loadIconUrlMap, validateDiagram, parseDiagram } from '../src/index';
 import { createZip } from '../src/utils/zip';
@@ -93,6 +93,8 @@ Usage:
   svg <input.json> [output.svg]      Render diagram to SVG only
   meta <input.json>                  Output metadata only (JSON to stdout)
   preview <input.json> [output.html] Generate HTML with Base64 embedded icons ({name}_preview.html)
+                                     --png: Output PNG instead of HTML (requires cli-ext.sh)
+                                     --scale <n>: PNG scale factor (default: 2)
   markdown <input.json> [output.zip]  Generate ZIP with markdown and Base64 SVG
 
 Edit Commands:
@@ -226,6 +228,9 @@ interface Options {
   listResources?: boolean;
   resourceIcon?: string;
   resourceDesc?: string;
+  // Preview options
+  png?: boolean;
+  scale?: number;
 }
 
 const DEFAULT_WIDTH = 800;
@@ -340,6 +345,11 @@ function parseOptions(args: string[]): Options {
       i++;
     } else if (arg === '--desc' && next) {
       options.resourceDesc = next;
+      i++;
+    } else if (arg === '--png') {
+      options.png = true;
+    } else if (arg === '--scale' && next) {
+      options.scale = parseFloat(next);
       i++;
     }
   }
@@ -1023,13 +1033,11 @@ switch (command) {
   case 'preview': {
     if (positionalArgs.length < 1) {
       console.error('Error: Input file required');
-      console.error('Usage: gospelo-architect preview <input.json> [output.html]');
+      console.error('Usage: gospelo-architect preview <input.json> [output.html] [--png]');
       process.exit(1);
     }
 
     const inputPath = positionalArgs[0];
-    const outputPath = positionalArgs[1] || inputPath.replace('.json', '_preview.html');
-
     const diagram = readJsonFile(inputPath) as any;
     const effectiveOptions = getEffectiveRenderOptions(diagram);
 
@@ -1045,12 +1053,73 @@ switch (command) {
       console.log('');
     }
 
-    console.log('Fetching icons and generating preview HTML...');
-    const html = await renderPreviewHtml(diagram, effectiveOptions);
+    // PNG output via cli-ext.sh
+    if (options.png) {
+      const binDir = dirname(import.meta.path);
+      const cliExtPath = join(binDir, 'cli-ext.sh');
+      const isExtReady = join(binDir, '.is-ext-ready');
 
-    writeFile(outputPath, html);
-    console.log('Icons are embedded as Base64 data URIs.');
-    console.log('[AI] Display in Artifact, then ask user: "Would you like to edit anything?"');
+      if (!existsSync(cliExtPath) || !existsSync(isExtReady)) {
+        console.error('Error: cli-ext.sh is not initialized. PNG output requires Puppeteer setup.');
+        console.error('Run: ./bin/cli-ext.sh init');
+        process.exit(1);
+      }
+
+      const outputPath = positionalArgs[1] || inputPath.replace('.json', '_preview.png');
+      const tempHtmlPath = inputPath.replace('.json', '_temp_preview.html');
+
+      console.log('Fetching icons and generating embedded SVG...');
+      const svgContent = await renderSvgEmbed(diagram, effectiveOptions);
+
+      // Create minimal HTML wrapper for SVG
+      const tempHtml = `<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><style>
+body { margin: 0; padding: 0; background: white; }
+svg { display: block; }
+</style></head><body>${svgContent}</body></html>`;
+
+      writeFileSync(tempHtmlPath, tempHtml, 'utf-8');
+      console.log(`Temporary HTML: ${tempHtmlPath}`);
+
+      // Build cli-ext.sh command
+      const scale = options.scale || 2;
+      const cmdArgs = ['html2png', tempHtmlPath, outputPath, '--scale', String(scale)];
+      if (effectiveOptions.width) cmdArgs.push('--width', String(effectiveOptions.width));
+      if (effectiveOptions.height) cmdArgs.push('--height', String(effectiveOptions.height));
+
+      console.log(`Converting to PNG (scale: ${scale}x)...`);
+
+      try {
+        const proc = Bun.spawn([cliExtPath, ...cmdArgs], {
+          stdout: 'inherit',
+          stderr: 'inherit',
+        });
+        await proc.exited;
+
+        if (proc.exitCode !== 0) {
+          console.error('Error: PNG conversion failed');
+          process.exit(1);
+        }
+      } finally {
+        // Clean up temp file
+        if (existsSync(tempHtmlPath)) {
+          unlinkSync(tempHtmlPath);
+          console.log('Cleaned up temporary HTML file.');
+        }
+      }
+
+      console.log(`Done: ${outputPath}`);
+    } else {
+      // Default: HTML output
+      const outputPath = positionalArgs[1] || inputPath.replace('.json', '_preview.html');
+
+      console.log('Fetching icons and generating preview HTML...');
+      const html = await renderPreviewHtml(diagram, effectiveOptions);
+
+      writeFile(outputPath, html);
+      console.log('Icons are embedded as Base64 data URIs.');
+      console.log('[AI] Display in Artifact, then ask user: "Would you like to edit anything?"');
+    }
     break;
   }
 

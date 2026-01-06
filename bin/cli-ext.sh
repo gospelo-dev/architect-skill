@@ -116,6 +116,9 @@ Commands:
     First-time setup: install Bun, Puppeteer, and Chrome
     Run this before using html2png/html2jpg/html2pdf on a new environment
 
+  status
+    Check if cli-ext.sh is ready (Bun, Puppeteer, Chrome installed)
+
   html2png <input.html> [output.png]
     Convert HTML file to PNG image (lossless)
 
@@ -512,10 +515,64 @@ html2pdf() {
     fi
 }
 
+# Check if cli-ext is ready
+check_status() {
+    local ready_file="$SCRIPT_DIR/.is-ext-ready"
+    local all_ok=true
+
+    echo -e "${CYAN}=== cli-ext.sh Status ===${NC}"
+    echo ""
+
+    # Check Bun
+    if command -v bun &> /dev/null; then
+        echo -e "  ${GREEN}✓${NC} Bun: $(bun --version)"
+    else
+        echo -e "  ${RED}✗${NC} Bun: not installed"
+        all_ok=false
+    fi
+
+    # Check puppeteer in package.json
+    if grep -q '"puppeteer"' "$PROJECT_DIR/package.json" 2>/dev/null; then
+        echo -e "  ${GREEN}✓${NC} Puppeteer: installed"
+    else
+        echo -e "  ${RED}✗${NC} Puppeteer: not installed"
+        all_ok=false
+    fi
+
+    # Check Chrome
+    local chrome_path="$HOME/.cache/puppeteer/chrome"
+    if [[ -d "$chrome_path" ]] && [[ -n "$(ls -A "$chrome_path" 2>/dev/null)" ]]; then
+        echo -e "  ${GREEN}✓${NC} Chrome: downloaded"
+    else
+        echo -e "  ${RED}✗${NC} Chrome: not downloaded"
+        all_ok=false
+    fi
+
+    # Check semaphore file
+    if [[ -f "$ready_file" ]]; then
+        echo -e "  ${GREEN}✓${NC} Ready: $ready_file"
+    else
+        echo -e "  ${RED}✗${NC} Ready: not initialized"
+        all_ok=false
+    fi
+
+    echo ""
+    if [[ "$all_ok" == true ]]; then
+        echo -e "${GREEN}Status: Ready${NC}"
+        exit 0
+    else
+        echo -e "${YELLOW}Status: Not ready - run './bin/cli-ext.sh init'${NC}"
+        exit 1
+    fi
+}
+
 # Main
 case "${1:-}" in
     init)
         run_init
+        ;;
+    status)
+        check_status
         ;;
     html2png)
         check_bun

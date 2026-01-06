@@ -19,7 +19,7 @@
     "!src/data"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "rm -f bin/.is-ext-ready && tsc",
     "dev": "tsc --watch",
     "test": "bun test",
     "lint": "eslint src/**/*.ts",

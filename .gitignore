@@ -46,3 +46,6 @@ bin/editor-cli.ts
 # Example files
 examples/
 examples_ja/
+
+# Extension readiness flag
+bin/.is-ext-ready

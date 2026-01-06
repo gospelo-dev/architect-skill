@@ -102,9 +102,19 @@ Consider:
 ### Step 4: Generate Preview
 
 ```bash
+# HTML preview (default)
 bun bin/cli.ts preview diagram.json
 open diagram_preview.html
+
+# PNG preview (for visual verification in AI context)
+bun bin/cli.ts preview diagram.json --png
+# → diagram_preview.png (requires: ./bin/cli-ext.sh init)
 ```
+
+**When to use `--png`**:
+- When AI needs to visually verify the diagram result
+- When sharing the diagram in environments that don't support HTML
+- When the user requests image output directly
 
 ## Adding Nodes to Existing Diagram
 
@@ -120,6 +130,7 @@ open diagram_preview.html
 | Command | Description |
 |---------|-------------|
 | `preview <input>` | Preview HTML (Base64 embedded) |
+| `preview <input> --png` | Preview PNG image (requires cli-ext.sh init) |
 | `html <input>` | Interactive HTML with tooltips |
 | `svg <input>` | Clean SVG |
 | `svg-embed <input>` | SVG with embedded icons (offline) |
