@@ -92,16 +92,68 @@ export interface ConnectionAnchorInfo {
 }
 
 /**
- * 予約済み縦線のX座標を管理するセット
- * 同じ縦線を複数の接続が使用しないようにする（横長ダイアグラム向け）
+ * 予約済み縦線: X座標とY区間のペア
+ * 同じX座標でもY区間が重ならなければ同じ座標を使用可能
  */
-export type ReservedVerticalLines = Set<number>;
+export interface ReservedVerticalLine {
+  x: number;
+  yMin: number;
+  yMax: number;
+}
+export type ReservedVerticalLines = ReservedVerticalLine[];
 
 /**
- * 予約済み水平線のY座標を管理するセット
- * 同じ水平線を複数の接続が使用しないようにする（縦長ダイアグラム向け）
+ * 予約済み水平線: Y座標とX区間のペア
+ * 同じY座標でもX区間が重ならなければ同じ座標を使用可能
  */
-export type ReservedHorizontalLines = Set<number>;
+export interface ReservedHorizontalLine {
+  y: number;
+  xMin: number;
+  xMax: number;
+}
+export type ReservedHorizontalLines = ReservedHorizontalLine[];
+
+/**
+ * 縦線が既存の予約と重なるかチェック
+ */
+function isVerticalLineConflict(
+  x: number,
+  yMin: number,
+  yMax: number,
+  reserved: ReservedVerticalLines
+): boolean {
+  const TOLERANCE = 5; // 同じX座標とみなす許容範囲
+  for (const line of reserved) {
+    if (Math.abs(line.x - x) < TOLERANCE) {
+      // X座標が近い場合、Y区間の重なりをチェック
+      if (!(yMax < line.yMin || yMin > line.yMax)) {
+        return true; // 重なりあり
+      }
+    }
+  }
+  return false;
+}
+
+/**
+ * 水平線が既存の予約と重なるかチェック
+ */
+function isHorizontalLineConflict(
+  y: number,
+  xMin: number,
+  xMax: number,
+  reserved: ReservedHorizontalLines
+): boolean {
+  const TOLERANCE = 5; // 同じY座標とみなす許容範囲
+  for (const line of reserved) {
+    if (Math.abs(line.y - y) < TOLERANCE) {
+      // Y座標が近い場合、X区間の重なりをチェック
+      if (!(xMax < line.xMin || xMin > line.xMax)) {
+        return true; // 重なりあり
+      }
+    }
+  }
+  return false;
+}
 
 /**
  * 接続処理順序のソート戦略
@@ -330,11 +382,17 @@ export function determineAnchorSide(
       // Apply penalties for unnatural directions
       let penalty = 0;
 
-      // Penalty for exiting opposite to target direction
-      if (fromSide === 'left' && dx > 0) penalty += 100;
-      if (fromSide === 'right' && dx < 0) penalty += 100;
-      if (fromSide === 'top' && dy > 0) penalty += 100;
-      if (fromSide === 'bottom' && dy < 0) penalty += 100;
+      // Heavy penalty for U-shape paths (exiting and entering from same direction)
+      // These paths go around the target node unnecessarily
+      if (fromSide === toSide) {
+        penalty += 500;
+      }
+
+      // Penalty for exiting opposite to target direction (causes U-shape or long detour)
+      if (fromSide === 'left' && dx > 0) penalty += 200;
+      if (fromSide === 'right' && dx < 0) penalty += 200;
+      if (fromSide === 'top' && dy > 0) penalty += 200;
+      if (fromSide === 'bottom' && dy < 0) penalty += 200;
 
       // Penalty for entering from the wrong side
       if (toSide === 'right' && dx > 0) penalty += 100;
@@ -386,6 +444,47 @@ export function determineAnchorSide(
         const isNearby = Math.abs(dx) < 150 && Math.abs(dy) < 150;
         if (naturalL && isNearby) {
           penalty -= 10; // Prefer L-shape over Z-shape for nearby targets
+        }
+      }
+
+      // Penalty for paths that would cross sibling nodes
+      // (グループ内の兄弟間接続で中間ノードを避ける)
+      if (siblingNodes && siblingNodes.length > 0) {
+        for (const sibling of siblingNodes) {
+          if (sibling.id === fromNode.id || sibling.id === toNode.id) continue;
+          const sibBounds = getNodeBounds(sibling);
+
+          // Check if sibling is between from and to nodes
+          const sibCenterX = sibBounds.centerX;
+          const sibCenterY = sibBounds.centerY;
+
+          // For vertical paths (bottom→top or top→bottom)
+          if ((fromSide === 'bottom' && toSide === 'top') || (fromSide === 'top' && toSide === 'bottom')) {
+            // Check if sibling is vertically between the nodes
+            const minY = Math.min(fromBounds.centerY, toBounds.centerY);
+            const maxY = Math.max(fromBounds.centerY, toBounds.centerY);
+            if (sibCenterY > minY && sibCenterY < maxY) {
+              // And horizontally overlapping (would cross the vertical path)
+              const pathX = (fromBounds.centerX + toBounds.centerX) / 2;
+              if (Math.abs(sibCenterX - pathX) < (sibBounds.width / 2 + 20)) {
+                penalty += 300; // Heavy penalty for crossing sibling
+              }
+            }
+          }
+
+          // For horizontal paths (left→right or right→left)
+          if ((fromSide === 'right' && toSide === 'left') || (fromSide === 'left' && toSide === 'right')) {
+            // Check if sibling is horizontally between the nodes
+            const minX = Math.min(fromBounds.centerX, toBounds.centerX);
+            const maxX = Math.max(fromBounds.centerX, toBounds.centerX);
+            if (sibCenterX > minX && sibCenterX < maxX) {
+              // And vertically overlapping (would cross the horizontal path)
+              const pathY = (fromBounds.centerY + toBounds.centerY) / 2;
+              if (Math.abs(sibCenterY - pathY) < (sibBounds.height / 2 + 20)) {
+                penalty += 300; // Heavy penalty for crossing sibling
+              }
+            }
+          }
         }
       }
 
@@ -974,31 +1073,37 @@ function generateOrthogonalPath(
       // シンプルな直線パスを生成（障害物回避なし - グループ内の接続で問題を起こすため）
       // 水平直線の場合はY座標を揃える（斜めにならないように）
       if (Math.abs(from.y - to.y) < 10) {
-        let lineY = from.y;
-        // 水平線予約
+        // 水平直線: Y座標は目的地側を優先（目的地の中央に入るように）
+        let lineY = to.y;
+        const xMin = Math.min(from.x, to.x);
+        const xMax = Math.max(from.x, to.x);
+        // 水平線予約（X区間との重なりをチェック）
         if (reservedHorizontalLines) {
           const HORIZONTAL_LINE_SPACING = 15;
           let roundedY = Math.round(lineY);
-          while (reservedHorizontalLines.has(roundedY)) {
+          while (isHorizontalLineConflict(roundedY, xMin, xMax, reservedHorizontalLines)) {
             roundedY += HORIZONTAL_LINE_SPACING;
           }
           lineY = roundedY;
-          reservedHorizontalLines.add(roundedY);
+          reservedHorizontalLines.push({ y: roundedY, xMin, xMax });
         }
         return `M ${from.x} ${lineY} L ${to.x} ${lineY}`;
       }
       // 垂直直線の場合はX座標を揃える
       if (Math.abs(from.x - to.x) < 10) {
-        let lineX = from.x;
-        // 縦線予約
+        // 垂直直線: X座標は目的地側を優先（目的地の中央に入るように）
+        let lineX = to.x;
+        const yMin = Math.min(from.y, to.y);
+        const yMax = Math.max(from.y, to.y);
+        // 縦線予約（Y区間との重なりをチェック）
         if (reservedVerticalLines) {
           const VERTICAL_LINE_SPACING = 15;
           let roundedX = Math.round(lineX);
-          while (reservedVerticalLines.has(roundedX)) {
+          while (isVerticalLineConflict(roundedX, yMin, yMax, reservedVerticalLines)) {
             roundedX += VERTICAL_LINE_SPACING;
           }
           lineX = roundedX;
-          reservedVerticalLines.add(roundedX);
+          reservedVerticalLines.push({ x: roundedX, yMin, yMax });
         }
         return `M ${lineX} ${from.y} L ${lineX} ${to.y}`;
       }
@@ -1008,32 +1113,48 @@ function generateOrthogonalPath(
 
     case 'L_horizontal': {
       // 水平→垂直のL字: まず水平に進み、次に垂直
-      // 最初の水平線のY座標を予約
       let lineY = from.y;
+      const xMin = Math.min(from.x, to.x);
+      const xMax = Math.max(from.x, to.x);
+
+      // 障害物回避: 水平線が障害物と交差する場合、上か下に迂回
+      if (obstacles && obstacles.length > 0) {
+        lineY = findSafeHorizontalY(lineY, xMin, xMax, obstacles, from.y, to.y, minY);
+      }
+
+      // 水平線予約（X区間との重なりをチェック）
       if (reservedHorizontalLines) {
         const HORIZONTAL_LINE_SPACING = 15;
         let roundedY = Math.round(lineY);
-        while (reservedHorizontalLines.has(roundedY)) {
+        while (isHorizontalLineConflict(roundedY, xMin, xMax, reservedHorizontalLines)) {
           roundedY += HORIZONTAL_LINE_SPACING;
         }
         lineY = roundedY;
-        reservedHorizontalLines.add(roundedY);
+        reservedHorizontalLines.push({ y: roundedY, xMin, xMax });
       }
       return `M ${from.x} ${lineY} L ${to.x} ${lineY} L ${to.x} ${to.y}`;
     }
 
     case 'L_vertical': {
       // 垂直→水平のL字: まず垂直に進み、次に水平
-      // 最後の水平線のY座標を予約
       let lineY = to.y;
+      const xMin = Math.min(from.x, to.x);
+      const xMax = Math.max(from.x, to.x);
+
+      // 障害物回避: 水平線が障害物と交差する場合、上か下に迂回
+      if (obstacles && obstacles.length > 0) {
+        lineY = findSafeHorizontalY(lineY, xMin, xMax, obstacles, from.y, to.y, minY);
+      }
+
+      // 水平線予約（X区間との重なりをチェック）
       if (reservedHorizontalLines) {
         const HORIZONTAL_LINE_SPACING = 15;
         let roundedY = Math.round(lineY);
-        while (reservedHorizontalLines.has(roundedY)) {
+        while (isHorizontalLineConflict(roundedY, xMin, xMax, reservedHorizontalLines)) {
           roundedY += HORIZONTAL_LINE_SPACING;
         }
         lineY = roundedY;
-        reservedHorizontalLines.add(roundedY);
+        reservedHorizontalLines.push({ y: roundedY, xMin, xMax });
       }
       return `M ${from.x} ${from.y} L ${from.x} ${lineY} L ${to.x} ${lineY}`;
     }
@@ -1041,38 +1162,55 @@ function generateOrthogonalPath(
     case 'Z_horizontal': {
       // 水平-垂直-水平のZ字: from.yで水平 → midXで垂直 → to.yで水平
       let midX = (from.x + to.x) / 2;
-      let startY = from.y;
-      let endY = to.y;
+      const startY = from.y;
+      const endY = to.y;
+      const yMin = Math.min(startY, endY);
+      const yMax = Math.max(startY, endY);
 
-      // 縦線予約: 同じX座標を複数の接続が使用しないようにずらす
+      // 障害物回避: 縦線が障害物と交差する場合、左右にオフセット
+      if (obstacles && obstacles.length > 0) {
+        const margin = 15;
+        for (const node of obstacles) {
+          const bounds = node.bounds || {
+            left: node.computedX,
+            top: node.computedY,
+            right: node.computedX + (node.computedWidth || 48),
+            bottom: node.computedY + (node.computedHeight || 48),
+          };
+          // 縦線が障害物と交差するかチェック
+          if (!(yMax < bounds.top - margin || yMin > bounds.bottom + margin)) {
+            if (midX >= bounds.left - margin && midX <= bounds.right + margin) {
+              // 左右どちらに避けるか決定（目的地に近い方）
+              const leftX = bounds.left - margin - 5;
+              const rightX = bounds.right + margin + 5;
+              midX = Math.abs(to.x - leftX) < Math.abs(to.x - rightX) ? leftX : rightX;
+            }
+          }
+        }
+      }
+
+      // 縦線予約: Y区間との重なりをチェック
       if (reservedVerticalLines) {
         const VERTICAL_LINE_SPACING = 15;
         let roundedMidX = Math.round(midX);
-        while (reservedVerticalLines.has(roundedMidX)) {
+        while (isVerticalLineConflict(roundedMidX, yMin, yMax, reservedVerticalLines)) {
           roundedMidX += VERTICAL_LINE_SPACING;
         }
         midX = roundedMidX;
-        reservedVerticalLines.add(roundedMidX);
+        reservedVerticalLines.push({ x: roundedMidX, yMin, yMax });
       }
 
-      // 水平線予約: 開始と終了の水平線も予約
+      // 水平線予約（開始水平線: from.x から midX まで）
       if (reservedHorizontalLines) {
-        const HORIZONTAL_LINE_SPACING = 15;
-        // 開始水平線（from.y）
-        let roundedStartY = Math.round(startY);
-        while (reservedHorizontalLines.has(roundedStartY)) {
-          roundedStartY += HORIZONTAL_LINE_SPACING;
-        }
-        startY = roundedStartY;
-        reservedHorizontalLines.add(roundedStartY);
+        const xMinStart = Math.min(from.x, midX);
+        const xMaxStart = Math.max(from.x, midX);
+        // 開始水平線は移動せず、そのまま予約（ノードの位置に固定）
+        reservedHorizontalLines.push({ y: Math.round(startY), xMin: xMinStart, xMax: xMaxStart });
 
-        // 終了水平線（to.y）
-        let roundedEndY = Math.round(endY);
-        while (reservedHorizontalLines.has(roundedEndY)) {
-          roundedEndY += HORIZONTAL_LINE_SPACING;
-        }
-        endY = roundedEndY;
-        reservedHorizontalLines.add(roundedEndY);
+        // 終了水平線: midX から to.x まで
+        const xMinEnd = Math.min(midX, to.x);
+        const xMaxEnd = Math.max(midX, to.x);
+        reservedHorizontalLines.push({ y: Math.round(endY), xMin: xMinEnd, xMax: xMaxEnd });
       }
 
       return `M ${from.x} ${startY} L ${midX} ${startY} L ${midX} ${endY} L ${to.x} ${endY}`;
@@ -1081,56 +1219,109 @@ function generateOrthogonalPath(
     case 'Z_vertical': {
       // 垂直-水平-垂直のZ字: from.xで垂直 → midYで水平 → to.xで垂直
       let midY = (from.y + to.y) / 2;
-      let startX = from.x;
-      let endX = to.x;
+      const startX = from.x;
+      const endX = to.x;
+      const xMin = Math.min(startX, endX);
+      const xMax = Math.max(startX, endX);
 
-      // 水平線予約: 同じY座標を複数の接続が使用しないようにずらす
+      // 障害物回避: 水平線が障害物と交差する場合、上下にオフセット
+      if (obstacles && obstacles.length > 0) {
+        midY = findSafeHorizontalY(midY, xMin, xMax, obstacles, from.y, to.y, minY);
+      }
+
+      // 水平線予約: X区間との重なりをチェック
       if (reservedHorizontalLines) {
         const HORIZONTAL_LINE_SPACING = 15;
         let roundedMidY = Math.round(midY);
-        while (reservedHorizontalLines.has(roundedMidY)) {
+        while (isHorizontalLineConflict(roundedMidY, xMin, xMax, reservedHorizontalLines)) {
           roundedMidY += HORIZONTAL_LINE_SPACING;
         }
         midY = roundedMidY;
-        reservedHorizontalLines.add(roundedMidY);
+        reservedHorizontalLines.push({ y: roundedMidY, xMin, xMax });
       }
 
-      // 縦線予約: 開始と終了の縦線も予約
+      // 縦線予約（開始縦線: from.y から midY まで）
       if (reservedVerticalLines) {
-        const VERTICAL_LINE_SPACING = 15;
-        // 開始縦線（from.x）
-        let roundedStartX = Math.round(startX);
-        while (reservedVerticalLines.has(roundedStartX)) {
-          roundedStartX += VERTICAL_LINE_SPACING;
-        }
-        startX = roundedStartX;
-        reservedVerticalLines.add(roundedStartX);
+        const yMinStart = Math.min(from.y, midY);
+        const yMaxStart = Math.max(from.y, midY);
+        // 開始縦線は移動せず、そのまま予約（ノードの位置に固定）
+        reservedVerticalLines.push({ x: Math.round(startX), yMin: yMinStart, yMax: yMaxStart });
 
-        // 終了縦線（to.x）
-        let roundedEndX = Math.round(endX);
-        while (reservedVerticalLines.has(roundedEndX)) {
-          roundedEndX += VERTICAL_LINE_SPACING;
-        }
-        endX = roundedEndX;
-        reservedVerticalLines.add(roundedEndX);
+        // 終了縦線: midY から to.y まで
+        const yMinEnd = Math.min(midY, to.y);
+        const yMaxEnd = Math.max(midY, to.y);
+        reservedVerticalLines.push({ x: Math.round(endX), yMin: yMinEnd, yMax: yMaxEnd });
       }
 
       return `M ${startX} ${from.y} L ${startX} ${midY} L ${endX} ${midY} L ${endX} ${to.y}`;
     }
 
     case 'U_horizontal': {
-      // 水平迂回のU字
-      const detourX = fromSide === 'right'
+      // 水平迂回のU字: 水平→垂直→水平
+      let detourX = fromSide === 'right'
         ? Math.max(from.x, to.x) + DETOUR_DISTANCE
         : Math.min(from.x, to.x) - DETOUR_DISTANCE;
+
+      // 障害物回避: 迂回の縦線が障害物と交差する場合、さらに外側に迂回
+      if (obstacles && obstacles.length > 0) {
+        const yMin = Math.min(from.y, to.y);
+        const yMax = Math.max(from.y, to.y);
+        const margin = 15;
+        for (const node of obstacles) {
+          const bounds = node.bounds || {
+            left: node.computedX,
+            top: node.computedY,
+            right: node.computedX + (node.computedWidth || 48),
+            bottom: node.computedY + (node.computedHeight || 48),
+          };
+          // 縦線が障害物と交差するかチェック
+          if (!(yMax < bounds.top - margin || yMin > bounds.bottom + margin)) {
+            if (fromSide === 'right' && detourX >= bounds.left - margin && detourX <= bounds.right + margin) {
+              detourX = bounds.right + margin + DETOUR_DISTANCE;
+            } else if (fromSide === 'left' && detourX >= bounds.left - margin && detourX <= bounds.right + margin) {
+              detourX = bounds.left - margin - DETOUR_DISTANCE;
+            }
+          }
+        }
+      }
+
       return `M ${from.x} ${from.y} L ${detourX} ${from.y} L ${detourX} ${to.y} L ${to.x} ${to.y}`;
     }
 
     case 'U_vertical': {
-      // 垂直迂回のU字
-      const detourY = fromSide === 'bottom'
+      // 垂直迂回のU字: 垂直→水平→垂直
+      let detourY = fromSide === 'bottom'
         ? Math.max(from.y, to.y) + DETOUR_DISTANCE
         : Math.min(from.y, to.y) - DETOUR_DISTANCE;
+
+      // 障害物回避: 迂回の水平線が障害物と交差する場合、さらに外側に迂回
+      if (obstacles && obstacles.length > 0) {
+        const xMin = Math.min(from.x, to.x);
+        const xMax = Math.max(from.x, to.x);
+        const margin = 15;
+        for (const node of obstacles) {
+          const bounds = node.bounds || {
+            left: node.computedX,
+            top: node.computedY,
+            right: node.computedX + (node.computedWidth || 48),
+            bottom: node.computedY + (node.computedHeight || 48),
+          };
+          // 水平線が障害物と交差するかチェック
+          if (!(xMax < bounds.left - margin || xMin > bounds.right + margin)) {
+            if (fromSide === 'bottom' && detourY >= bounds.top - margin && detourY <= bounds.bottom + margin) {
+              detourY = bounds.bottom + margin + DETOUR_DISTANCE;
+            } else if (fromSide === 'top' && detourY >= bounds.top - margin && detourY <= bounds.bottom + margin) {
+              detourY = bounds.top - margin - DETOUR_DISTANCE;
+            }
+          }
+        }
+      }
+
+      // minY制約を適用（上方向迂回の場合）
+      if (fromSide === 'top' && minY !== undefined && detourY < minY) {
+        detourY = minY;
+      }
+
       return `M ${from.x} ${from.y} L ${from.x} ${detourY} L ${to.x} ${detourY} L ${to.x} ${to.y}`;
     }
 
