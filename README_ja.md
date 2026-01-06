@@ -32,7 +32,7 @@ gospelo-architect は様々なユースケースに対応した複数の出力�
 | **SVG**                | `svg`           | CDN アイコン参照のクリーンな SVG                                                       |
 | **SVG（埋め込み）**    | `svg-embed`     | Base64 埋め込みアイコンの SVG（オフライン対応）                                        |
 | **プレビュー HTML**    | `preview`       | オフライン表示用の Base64 埋め込みアイコン HTML                                        |
-| **プレビュー PNG**     | `preview --png` | オフライン表示用の Base64 埋め込みアイコン HTML                                        |
+| **プレビュー PNG**     | `preview --png` | オフライン表示用の アイコン埋め込み済み PNG 画像                                       |
 | **Markdown ZIP**       | `markdown`      | Markdown + 埋め込み SVG を含む ZIP                                                     |
 | **JSON（エンリッチ）** | `enrich`        | オリジナル JSON + 計算されたメタデータ（位置、サイズ）                                 |
 | **JSON（メタのみ）**   | `meta`          | AI 消費用のメタデータのみ                                                              |
