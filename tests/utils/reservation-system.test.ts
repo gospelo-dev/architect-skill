@@ -367,11 +367,11 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
-      // Left edge: x = 100 - margin(5) = 95
-      const leftEdge = verticalLines.find((l) => l.x === 95);
+      // Left edge: x = 100 - reserveMargin(4) = 96
+      const leftEdge = verticalLines.find((l) => l.x === 96);
       expect(leftEdge).toBeDefined();
-      expect(leftEdge!.yMin).toBe(95); // 100 - 5
-      expect(leftEdge!.yMax).toBe(153); // 100 + 48 + 5
+      expect(leftEdge!.yMin).toBe(96); // 100 - 4
+      expect(leftEdge!.yMax).toBe(152); // 100 + 48 + 4
     });
 
     test('should register right edge as vertical line with correct Y interval', () => {
@@ -381,11 +381,11 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
-      // Right edge: x = 100 + 48 + margin(5) = 153
-      const rightEdge = verticalLines.find((l) => l.x === 153);
+      // Right edge: x = 100 + 48 + reserveMargin(4) = 152
+      const rightEdge = verticalLines.find((l) => l.x === 152);
       expect(rightEdge).toBeDefined();
-      expect(rightEdge!.yMin).toBe(95); // 100 - 5
-      expect(rightEdge!.yMax).toBe(153); // 100 + 48 + 5
+      expect(rightEdge!.yMin).toBe(96); // 100 - 4
+      expect(rightEdge!.yMax).toBe(152); // 100 + 48 + 4
     });
 
     test('should register top edge as horizontal line with correct X interval', () => {
@@ -395,11 +395,11 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
-      // Top edge: y = 100 - margin(5) = 95
-      const topEdge = horizontalLines.find((l) => l.y === 95);
+      // Top edge: y = 100 - reserveMargin(4) = 96
+      const topEdge = horizontalLines.find((l) => l.y === 96);
       expect(topEdge).toBeDefined();
-      expect(topEdge!.xMin).toBe(95); // 100 - 5
-      expect(topEdge!.xMax).toBe(153); // 100 + 48 + 5
+      expect(topEdge!.xMin).toBe(96); // 100 - 4
+      expect(topEdge!.xMax).toBe(152); // 100 + 48 + 4
     });
 
     test('should register bottom edge as horizontal line with correct X interval', () => {
@@ -409,27 +409,28 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
-      // Bottom edge: y = 100 + 48 + margin(5) = 153
-      const bottomEdge = horizontalLines.find((l) => l.y === 153);
+      // Bottom edge: y = 100 + 48 + reserveMargin(4) = 152
+      const bottomEdge = horizontalLines.find((l) => l.y === 152);
       expect(bottomEdge).toBeDefined();
-      expect(bottomEdge!.xMin).toBe(95); // 100 - 5
-      expect(bottomEdge!.xMax).toBe(153); // 100 + 48 + 5
+      expect(bottomEdge!.xMin).toBe(96); // 100 - 4
+      expect(bottomEdge!.xMax).toBe(152); // 100 + 48 + 4
     });
   });
 
   describe('group nodes', () => {
-    test('should skip group nodes (no reservation)', () => {
+    test('should skip group nodes (children register individually)', () => {
       const groupNode = createMockNode('group1', 50, 50, 200, 200, 'group');
       const verticalLines: ReservedVerticalLines = [];
       const horizontalLines: ReservedHorizontalLines = [];
 
       registerIconAreaReservations([groupNode], verticalLines, horizontalLines);
 
+      // Group nodes are skipped (children should register individually)
       expect(verticalLines.length).toBe(0);
       expect(horizontalLines.length).toBe(0);
     });
 
-    test('should register children inside group but not group itself', () => {
+    test('should only register children inside group, not the group itself', () => {
       const groupNode = createMockNode('group1', 50, 50, 200, 200, 'group');
       const childNode = createMockNode('icon1', 100, 100, 48, 48);
       const verticalLines: ReservedVerticalLines = [];
@@ -437,7 +438,7 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([groupNode, childNode], verticalLines, horizontalLines);
 
-      // Only child node should be registered (4 edges)
+      // Only child node should be registered (2 edges each)
       expect(verticalLines.length).toBe(2);
       expect(horizontalLines.length).toBe(2);
     });
@@ -469,9 +470,9 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node1, node2, node3], verticalLines, horizontalLines);
 
-      // All horizontal lines should have same Y values (95 and 153)
-      const topEdges = horizontalLines.filter((l) => l.y === 95);
-      const bottomEdges = horizontalLines.filter((l) => l.y === 153);
+      // All horizontal lines should have same Y values (96 and 152) with reserveMargin=4
+      const topEdges = horizontalLines.filter((l) => l.y === 96);
+      const bottomEdges = horizontalLines.filter((l) => l.y === 152);
       expect(topEdges.length).toBe(3);
       expect(bottomEdges.length).toBe(3);
     });
@@ -486,15 +487,15 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node1, node2, node3], verticalLines, horizontalLines);
 
-      // All vertical lines should have same X values (95 and 153)
-      const leftEdges = verticalLines.filter((l) => l.x === 95);
-      const rightEdges = verticalLines.filter((l) => l.x === 153);
+      // All vertical lines should have same X values (96 and 152) with reserveMargin=4
+      const leftEdges = verticalLines.filter((l) => l.x === 96);
+      const rightEdges = verticalLines.filter((l) => l.x === 152);
       expect(leftEdges.length).toBe(3);
       expect(rightEdges.length).toBe(3);
 
       // But Y intervals should differ
       const yMins = leftEdges.map((l) => l.yMin).sort((a, b) => a - b);
-      expect(yMins).toEqual([95, 195, 295]); // Each node's top - margin
+      expect(yMins).toEqual([96, 196, 296]); // Each node's top - reserveMargin(4)
     });
   });
 
@@ -519,24 +520,20 @@ describe('registerIconAreaReservations', () => {
   });
 
   describe('composite and text_box nodes', () => {
-    test('should register composite node edges', () => {
+    test('should skip composite nodes (children register individually)', () => {
       const compositeNode = createMockNode('composite1', 100, 100, 80, 200, 'composite');
       const verticalLines: ReservedVerticalLines = [];
       const horizontalLines: ReservedHorizontalLines = [];
 
       registerIconAreaReservations([compositeNode], verticalLines, horizontalLines);
 
-      // Composite nodes should be registered (not skipped like groups)
-      expect(verticalLines.length).toBe(2);
-      expect(horizontalLines.length).toBe(2);
-
-      // Check dimensions reflect composite size
-      const leftEdge = verticalLines.find((l) => l.x === 95); // 100 - 5
-      expect(leftEdge!.yMin).toBe(95); // 100 - 5
-      expect(leftEdge!.yMax).toBe(305); // 100 + 200 + 5
+      // Composite nodes are skipped (children should register individually)
+      expect(verticalLines.length).toBe(0);
+      expect(horizontalLines.length).toBe(0);
     });
 
     test('should register text_box node edges', () => {
+      // text_box: 120x40 at (100, 100)
       const textBoxNode = createMockNode('textbox1', 100, 100, 120, 40, 'text_box');
       const verticalLines: ReservedVerticalLines = [];
       const horizontalLines: ReservedHorizontalLines = [];
@@ -546,10 +543,14 @@ describe('registerIconAreaReservations', () => {
       expect(verticalLines.length).toBe(2);
       expect(horizontalLines.length).toBe(2);
 
-      // Check dimensions reflect text_box size
-      const topEdge = horizontalLines.find((l) => l.y === 95); // 100 - 5
-      expect(topEdge!.xMin).toBe(95); // 100 - 5
-      expect(topEdge!.xMax).toBe(225); // 100 + 120 + 5
+      // 内接円の半径 = min(120, 40) / 2 = 20
+      // reserveRadius = 20 + 5 - 1 = 24
+      // centerX = 100 + 120/2 = 160, centerY = 100 + 40/2 = 120
+      // top = 120 - 24 = 96, left = 160 - 24 = 136, right = 160 + 24 = 184, bottom = 120 + 24 = 144
+      const topEdge = horizontalLines.find((l) => l.y === 96);
+      expect(topEdge).toBeDefined();
+      expect(topEdge!.xMin).toBe(136);
+      expect(topEdge!.xMax).toBe(184);
     });
   });
 
@@ -561,19 +562,18 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
-      // Vertical line at X=120 (inside icon) should conflict
-      // Icon bounds: left=100, right=148, with margin: 95-153
-      // Y interval covering icon should conflict
+      // Vertical line at X=120 (inside icon) should not conflict (only edges are reserved)
+      // Icon bounds: left=100, right=148, with reserveMargin=4: 96-152
       expect(isVerticalLineConflict(120, 90, 160, verticalLines)).toBe(false);
       // But at the exact edge X should conflict
-      expect(isVerticalLineConflict(95, 90, 160, verticalLines)).toBe(true);
-      expect(isVerticalLineConflict(153, 90, 160, verticalLines)).toBe(true);
+      expect(isVerticalLineConflict(96, 90, 160, verticalLines)).toBe(true);
+      expect(isVerticalLineConflict(152, 90, 160, verticalLines)).toBe(true);
 
-      // Horizontal line at Y=120 (inside icon) should conflict
+      // Horizontal line at Y=120 (inside icon) should not conflict
       expect(isHorizontalLineConflict(120, 90, 160, horizontalLines)).toBe(false);
       // But at the exact edge Y should conflict
-      expect(isHorizontalLineConflict(95, 90, 160, horizontalLines)).toBe(true);
-      expect(isHorizontalLineConflict(153, 90, 160, horizontalLines)).toBe(true);
+      expect(isHorizontalLineConflict(96, 90, 160, horizontalLines)).toBe(true);
+      expect(isHorizontalLineConflict(152, 90, 160, horizontalLines)).toBe(true);
     });
 
     test('should not cause conflicts for lines outside icon area', () => {
@@ -600,9 +600,9 @@ describe('registerIconAreaReservations', () => {
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
       // Vertical line at same X as left edge but Y interval above icon
-      expect(isVerticalLineConflict(95, 10, 80, verticalLines)).toBe(false);
+      expect(isVerticalLineConflict(96, 10, 80, verticalLines)).toBe(false);
       // Vertical line at same X as left edge but Y interval below icon
-      expect(isVerticalLineConflict(95, 170, 250, verticalLines)).toBe(false);
+      expect(isVerticalLineConflict(96, 170, 250, verticalLines)).toBe(false);
     });
 
     test('should allow horizontal lines to pass left or right of icon', () => {
@@ -613,9 +613,9 @@ describe('registerIconAreaReservations', () => {
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
       // Horizontal line at same Y as top edge but X interval left of icon
-      expect(isHorizontalLineConflict(95, 10, 80, horizontalLines)).toBe(false);
+      expect(isHorizontalLineConflict(96, 10, 80, horizontalLines)).toBe(false);
       // Horizontal line at same Y as top edge but X interval right of icon
-      expect(isHorizontalLineConflict(95, 170, 250, horizontalLines)).toBe(false);
+      expect(isHorizontalLineConflict(96, 170, 250, horizontalLines)).toBe(false);
     });
   });
 
@@ -653,11 +653,11 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
-      // Left edge: x = 0 - 5 = -5
-      const leftEdge = verticalLines.find((l) => l.x === -5);
+      // Left edge: x = 0 - reserveMargin(4) = -4
+      const leftEdge = verticalLines.find((l) => l.x === -4);
       expect(leftEdge).toBeDefined();
-      expect(leftEdge!.yMin).toBe(-5);
-      expect(leftEdge!.yMax).toBe(53);
+      expect(leftEdge!.yMin).toBe(-4);
+      expect(leftEdge!.yMax).toBe(52);
     });
 
     test('should handle large nodes', () => {
@@ -667,11 +667,11 @@ describe('registerIconAreaReservations', () => {
 
       registerIconAreaReservations([node], verticalLines, horizontalLines);
 
-      // Right edge: x = 100 + 500 + 5 = 605
-      const rightEdge = verticalLines.find((l) => l.x === 605);
+      // Right edge: x = 100 + 500 + reserveMargin(4) = 604
+      const rightEdge = verticalLines.find((l) => l.x === 604);
       expect(rightEdge).toBeDefined();
-      expect(rightEdge!.yMin).toBe(95);
-      expect(rightEdge!.yMax).toBe(605);
+      expect(rightEdge!.yMin).toBe(96);
+      expect(rightEdge!.yMax).toBe(604);
     });
   });
 });
