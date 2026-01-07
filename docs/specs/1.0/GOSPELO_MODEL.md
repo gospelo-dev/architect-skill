@@ -348,18 +348,18 @@ Nodes are the fundamental building blocks of diagrams.
 
 ### 8.2 Common Node Properties
 
-| Property      | Type             | Required | Description                                                    |
-| ------------- | ---------------- | -------- | -------------------------------------------------------------- |
-| `id`          | string           | **Yes**  | Unique identifier (MUST start with `@` and match a resource)   |
-| `type`        | NodeType         | No       | Node type (default: `"icon"`)                                  |
-| `label`       | string           | No       | Primary label text                                             |
-| `sublabel`    | string           | No       | Secondary label text                                           |
-| `position`    | [number, number] | No       | [x, y] position                                                |
-| `size`        | [number, number] | No       | [width, height] size                                           |
-| `parentId`    | string           | No       | Parent node ID (required for children of group nodes)          |
-| `borderColor` | string           | No       | Border color (hex code or color name)                          |
-| `extensions`  | object           | No       | Extension-specific data                                        |
-| `extras`      | any              | No       | Application-specific data                                      |
+| Property      | Type             | Required | Description                                                  |
+| ------------- | ---------------- | -------- | ------------------------------------------------------------ |
+| `id`          | string           | **Yes**  | Unique identifier (MUST start with `@` and match a resource) |
+| `type`        | NodeType         | No       | Node type (default: `"icon"`)                                |
+| `label`       | string           | No       | Primary label text                                           |
+| `sublabel`    | string           | No       | Secondary label text                                         |
+| `position`    | [number, number] | No       | [x, y] position                                              |
+| `size`        | [number, number] | No       | [width, height] size                                         |
+| `parentId`    | string           | No       | Parent node ID (required for children of group nodes)        |
+| `borderColor` | string           | No       | Border color (hex code or color name)                        |
+| `extensions`  | object           | No       | Extension-specific data                                      |
+| `extras`      | any              | No       | Application-specific data                                    |
 
 ### 8.3 Node Types
 
@@ -689,8 +689,8 @@ Rendering hints for the document.
 
 ```json
 {
-  "width": 1200,
-  "height": 800,
+  "width": 1920,
+  "height": 1080,
   "iconSize": 48,
   "fontSize": 11
 }
@@ -698,8 +698,8 @@ Rendering hints for the document.
 
 | Property   | Type   | Default | Description                 |
 | ---------- | ------ | ------- | --------------------------- |
-| `width`    | number | 1200    | Canvas width in pixels      |
-| `height`   | number | 800     | Canvas height in pixels     |
+| `width`    | number | 1920    | Canvas width in pixels      |
+| `height`   | number | 1080    | Canvas height in pixels     |
 | `iconSize` | number | 48      | Default icon size in pixels |
 | `fontSize` | number | 11      | Default font size in pixels |
 
