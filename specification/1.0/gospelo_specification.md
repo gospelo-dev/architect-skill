@@ -648,8 +648,8 @@ Rendering hints for the document.
 
 ```json
 {
-  "width": 1200,
-  "height": 800,
+  "width": 1280,
+  "height": 720,
   "iconSize": 48,
   "fontSize": 11
 }
@@ -657,8 +657,8 @@ Rendering hints for the document.
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
-| `width` | number | 1200 | Canvas width in pixels |
-| `height` | number | 800 | Canvas height in pixels |
+| `width` | number | 1280 | Canvas width in pixels |
+| `height` | number | 720 | Canvas height in pixels |
 | `iconSize` | number | 48 | Default icon size in pixels |
 | `fontSize` | number | 11 | Default font size in pixels |
 

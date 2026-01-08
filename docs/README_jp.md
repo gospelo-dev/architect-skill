@@ -69,7 +69,7 @@ const diagram = {
 };
 
 // HTMLにレンダリング
-const html = renderShareable(diagram, { width: 800, height: 600 });
+const html = renderShareable(diagram, { width: 1280, height: 720 });
 
 // SVGにレンダリング
 const svg = renderSvg(diagram);
@@ -145,8 +145,8 @@ const enriched = enrichDiagram(diagram);
 
 | オプション        | 説明                                |
 | ----------------- | ----------------------------------- |
-| `--width <数値>`  | ダイアグラム幅（デフォルト: 800）   |
-| `--height <数値>` | ダイアグラム高さ（デフォルト: 600） |
+| `--width <数値>`  | ダイアグラム幅（デフォルト: 1280）  |
+| `--height <数値>` | ダイアグラム高さ（デフォルト: 720） |
 | `--pretty`        | JSON 出力を整形                     |
 | `--in-place`      | 入力ファイルを直接変更              |
 
@@ -241,8 +241,8 @@ createBuilder(diagram: DiagramDefinition): DiagramBuilder
 
 ```typescript
 interface RenderOptions {
-  width?: number; // デフォルト: 1200
-  height?: number; // デフォルト: 800
+  width?: number; // デフォルト: 1280
+  height?: number; // デフォルト: 720
   iconSize?: number; // デフォルト: 48
   fontSize?: number; // デフォルト: 11
   embedCss?: boolean; // デフォルト: true

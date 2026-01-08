@@ -83,8 +83,8 @@ bun bin/cli.ts add-connection diagram.json @api @lambda
 
 | オプション | 説明 |
 |-----------|------|
-| `--width <number>` | 図の幅（デフォルト: 1920） |
-| `--height <number>` | 図の高さ（デフォルト: 1080） |
+| `--width <number>` | 図の幅（デフォルト: 1280） |
+| `--height <number>` | 図の高さ（デフォルト: 720） |
 | `--paper <size>` | 印刷用の用紙/画面サイズを指定 |
 | `--pretty` | JSON 出力を整形 |
 | `--in-place` | 入力ファイルを直接変更 |

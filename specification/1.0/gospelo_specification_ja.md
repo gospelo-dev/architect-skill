@@ -615,8 +615,8 @@ gospelo はコア仕様を超えた機能を追加するための拡張をサポ
 #### RenderOptions
 ```json
 {
-  "width": 1200,
-  "height": 800,
+  "width": 1280,
+  "height": 720,
   "iconSize": 48,
   "fontSize": 11
 }

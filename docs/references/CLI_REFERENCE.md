@@ -83,8 +83,8 @@ bun bin/cli.ts add-connection diagram.json @api @lambda
 
 | Option | Description |
 |--------|-------------|
-| `--width <number>` | Diagram width (default: 1920) |
-| `--height <number>` | Diagram height (default: 1080) |
+| `--width <number>` | Diagram width (default: 1280) |
+| `--height <number>` | Diagram height (default: 720) |
 | `--paper <size>` | Paper/screen size for print-optimized output |
 | `--pretty` | Pretty-print JSON output |
 | `--in-place` | Modify input file in place |

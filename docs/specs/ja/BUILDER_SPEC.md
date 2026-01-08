@@ -60,14 +60,14 @@ builder.setColor('primary', '#0073BB');
 #### setRender(render: Partial<RenderOptions>)
 
 ```typescript
-builder.setRender({ width: 1200, height: 800 });
+builder.setRender({ width: 1280, height: 720 });
 ```
 
 #### getRender(): RenderOptions | undefined
 
 ```typescript
 const render = builder.getRender();
-console.log(render?.width); // 1200
+console.log(render?.width); // 1280
 ```
 
 ### ノード操作
@@ -417,7 +417,7 @@ import { createBuilder } from 'gospelo-architect';
 
 const builder = createBuilder()
   .setTitle('AWS Architecture')
-  .setRender({ width: 1200, height: 800 })
+  .setRender({ width: 1280, height: 720 })
   .addNode({ id: '@api', icon: 'aws:api_gateway', label: 'API Gateway', position: [100, 200] })
   .addNode({ id: '@lambda', icon: 'aws:lambda', label: 'Lambda', position: [300, 200] })
   .addNode({ id: '@db', icon: 'aws:dynamodb', label: 'DynamoDB', position: [500, 200] })
