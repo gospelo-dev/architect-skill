@@ -106,11 +106,13 @@ Edit Commands:
   add-connection <input.json> <from> <to> [output]   Add a connection
 
 Options:
-  --width <number>   Diagram width (default: 1920)
-  --height <number>  Diagram height (default: 1080)
+  --width <number>   Diagram width (default: 1280)
+  --height <number>  Diagram height (default: 720)
   --paper <size>     Paper/screen size (a1-a4, b1-b4, hd, fhd, 4k, 8k with -landscape or -portrait)
   --fit-width <n%>   Fit to percentage of paper width (e.g., 100%, 80%)
   --fit-height <n%>  Fit to percentage of paper height (e.g., 100%, 80%)
+  --portrait         Override diagram layout to portrait (top-to-bottom flow)
+  --landscape        Override diagram layout to landscape (left-to-right flow)
   --pretty           Pretty-print JSON output
   --in-place         Modify input file in place
   --diagram <file>   Target diagram file (for flag-style commands)
@@ -231,10 +233,13 @@ interface Options {
   // Preview options
   png?: boolean;
   scale?: number;
+  // Layout options
+  portrait?: boolean;
+  landscape?: boolean;
 }
 
-const DEFAULT_WIDTH = 1920;
-const DEFAULT_HEIGHT = 1080;
+const DEFAULT_WIDTH = 1280;
+const DEFAULT_HEIGHT = 720;
 
 function parseOptions(args: string[]): Options {
   const options: Options = {
@@ -351,6 +356,10 @@ function parseOptions(args: string[]): Options {
     } else if (arg === '--scale' && next) {
       options.scale = parseFloat(next);
       i++;
+    } else if (arg === '--portrait') {
+      options.portrait = true;
+    } else if (arg === '--landscape') {
+      options.landscape = true;
     }
   }
 
@@ -458,12 +467,12 @@ function getEffectiveRenderOptions(diagram: any): RenderOptions {
       height = Math.round(paperSize.height * scale);
     }
   } else {
-    // Priority: CLI options > diagram.render > layout-aware defaults
+    // Priority: CLI --portrait option > diagram.layout > default (landscape)
     // For portrait layout, swap default width/height
     const diagramLayout = isGospeloFormat(diagram)
       ? diagram.documents?.[0]?.layout
       : diagram.layout;
-    const isPortrait = diagramLayout === 'portrait';
+    const isPortrait = options.portrait || diagramLayout === 'portrait';
     const defaultWidth = isPortrait ? DEFAULT_HEIGHT : DEFAULT_WIDTH;
     const defaultHeight = isPortrait ? DEFAULT_WIDTH : DEFAULT_HEIGHT;
 
@@ -476,6 +485,63 @@ function getEffectiveRenderOptions(diagram: any): RenderOptions {
   }
 
   return { width, height, paperOrientation };
+}
+
+// Helper to apply --portrait or --landscape CLI option to diagram layout
+// Also removes position from all nodes to force auto-layout
+// And swaps render width/height based on layout orientation
+function applyLayoutOption(diagram: any): void {
+  const layoutValue = options.portrait ? 'portrait' : options.landscape ? 'landscape' : null;
+  if (layoutValue) {
+    if (isGospeloFormat(diagram)) {
+      if (diagram.documents?.[0]) {
+        diagram.documents[0].layout = layoutValue;
+        // Remove positions to force auto-layout
+        removeNodePositions(diagram.documents[0].nodes);
+        // Swap render dimensions based on layout
+        swapRenderDimensions(diagram.documents[0].render, layoutValue);
+      }
+    } else {
+      diagram.layout = layoutValue;
+      // Remove positions to force auto-layout
+      removeNodePositions(diagram.nodes);
+      // Swap render dimensions based on layout
+      swapRenderDimensions(diagram.render, layoutValue);
+    }
+  }
+}
+
+// Helper to swap render dimensions based on layout orientation
+// Portrait: shorter dimension becomes width, longer becomes height
+// Landscape: longer dimension becomes width, shorter becomes height
+function swapRenderDimensions(render: any, layout: 'portrait' | 'landscape'): void {
+  if (!render || render.width === undefined || render.height === undefined) {
+    return; // No dimensions specified, let defaults apply
+  }
+
+  const w = render.width;
+  const h = render.height;
+
+  if (layout === 'portrait') {
+    // Portrait: width should be shorter than height
+    render.width = Math.min(w, h);
+    render.height = Math.max(w, h);
+  } else {
+    // Landscape: width should be longer than height
+    render.width = Math.max(w, h);
+    render.height = Math.min(w, h);
+  }
+}
+
+// Helper to recursively remove position from nodes
+function removeNodePositions(nodes: any[]): void {
+  if (!nodes) return;
+  for (const node of nodes) {
+    delete node.position;
+    if (node.children) {
+      removeNodePositions(node.children);
+    }
+  }
 }
 
 // Helper to save render options to diagram JSON if CLI specified them
@@ -732,6 +798,7 @@ if (options.removeResource && options.diagram) {
 // Handle --output html/svg --diagram <file> [--output-dir <dir>]
 if (options.output && options.diagram) {
   const diagram = readJsonFile(options.diagram) as any;
+  applyLayoutOption(diagram);
   const effectiveOptions = getEffectiveRenderOptions(diagram);
 
   // Save render options to JSON if specified via CLI
@@ -950,6 +1017,7 @@ switch (command) {
     const outputPath = positionalArgs[1] || inputPath.replace('.json', '.enriched.json');
 
     const diagram = readJsonFile(inputPath) as any;
+    applyLayoutOption(diagram);
     const effectiveOptions = getEffectiveRenderOptions(diagram);
     const enriched = enrichDiagram(diagram, effectiveOptions);
 
@@ -970,6 +1038,7 @@ switch (command) {
 
     const inputPath = positionalArgs[0];
     const diagram = readJsonFile(inputPath) as any;
+    applyLayoutOption(diagram);
     const effectiveOptions = getEffectiveRenderOptions(diagram);
     const meta = generateMeta(diagram, effectiveOptions);
 
@@ -992,6 +1061,7 @@ switch (command) {
     const outputPath = positionalArgs[1] || inputPath.replace('.json', '.html');
 
     const diagram = readJsonFile(inputPath) as any;
+    applyLayoutOption(diagram);
     const effectiveOptions = getEffectiveRenderOptions(diagram);
 
     // Override diagram.render with paper size if specified
@@ -1025,6 +1095,7 @@ switch (command) {
     const outputPath = positionalArgs[1] || inputPath.replace('.json', '.svg');
 
     const diagram = readJsonFile(inputPath) as any;
+    applyLayoutOption(diagram);
     const effectiveOptions = getEffectiveRenderOptions(diagram);
 
     // Save render options to JSON if specified via CLI
@@ -1047,6 +1118,7 @@ switch (command) {
 
     const inputPath = positionalArgs[0];
     const diagram = readJsonFile(inputPath) as any;
+    applyLayoutOption(diagram);
     const effectiveOptions = getEffectiveRenderOptions(diagram);
 
     // Run validation and show warnings/hints for AI
@@ -1142,6 +1214,7 @@ svg { display: block; }
     const outputPath = positionalArgs[1] || inputPath.replace('.json', '_embed.svg');
 
     const diagram = readJsonFile(inputPath) as any;
+    applyLayoutOption(diagram);
     const effectiveOptions = getEffectiveRenderOptions(diagram);
 
     console.log('Fetching icons and generating embedded SVG...');
@@ -1355,6 +1428,7 @@ svg { display: block; }
 
     // Generate SVG with Base64 embedded icons
     const diagram = readJsonFile(inputPath) as any;
+    applyLayoutOption(diagram);
     const effectiveOptions = getEffectiveRenderOptions(diagram);
     const svgContent = await renderSvgEmbed(diagram, effectiveOptions);
 
