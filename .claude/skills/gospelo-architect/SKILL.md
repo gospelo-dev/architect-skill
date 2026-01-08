@@ -155,6 +155,37 @@ gospelo-architect --update-node @lambda --node '{"label":"New Label"}' --diagram
 gospelo-architect --remove-node @old --diagram system.json
 ```
 
+## Layout Options
+
+Control diagram flow direction with `--portrait` or `--landscape` options:
+
+| Option | Description |
+|--------|-------------|
+| `--portrait` | Top-to-bottom flow (720x1280 default) |
+| `--landscape` | Left-to-right flow (1280x720 default) |
+
+```bash
+# Portrait layout (top-to-bottom)
+bun bin/cli.ts preview diagram.json --portrait
+
+# Landscape layout (left-to-right, default)
+bun bin/cli.ts preview diagram.json --landscape
+
+# Override JSON's layout setting
+gospelo-architect --output html --diagram system.json --portrait
+```
+
+You can also set layout in the JSON file:
+```json
+{
+  "title": "My Architecture",
+  "layout": "portrait",
+  "nodes": [...]
+}
+```
+
+CLI options (`--portrait`, `--landscape`) override the JSON `layout` property.
+
 ## Supported Icon Providers
 
 | Provider | Prefix | Example |

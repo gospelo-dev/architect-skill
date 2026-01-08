@@ -72,8 +72,8 @@ bun bin/cli.ts edit <input.json> <patch.json> [output.json]
 
 | Option             | Description                          |
 | ------------------ | ------------------------------------ |
-| `--width <number>` | Diagram width (default: 800)         |
-| `--height <number>`| Diagram height (default: 600)        |
+| `--width <number>` | Diagram width (default: 1280)        |
+| `--height <number>`| Diagram height (default: 720)        |
 | `--pretty`         | Pretty-print JSON output             |
 | `--in-place`       | Modify input file in place           |
 | `--help`           | Show help                            |
